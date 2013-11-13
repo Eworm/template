@@ -1,0 +1,33 @@
+/* Calculate the fluid grid width */
+@function margin-width() {
+    @return 100% / ($max-width / $gutter);
+}
+
+/* The grid
+=================================================================*/
+.column {
+    width: 100%;
+    margin-bottom: $gutter;
+    clear: both;
+    
+    @include respond-min($break-medium) {
+        float: left;
+        margin-right: margin-width();
+        clear: none;
+        
+        @for $i from 1 through $nr-of-columns {
+            &.column-#{$i} {
+                width: 100% / ($max-width / (((($max-width - (($nr-of-columns - 1) * $gutter)) / $nr-of-columns) * $i) + (($i - 1) * $gutter)));
+                margin-bottom: $gutter;
+            }
+        }
+        
+        &.no-margin {
+            margin-right: 0;
+        }
+    }
+}
+
+.plus-margin {
+    margin-right: margin-width();
+}

@@ -1,0 +1,20 @@
+{
+    "name": "bower-test",
+    "version": "1.0.0",
+    "authors": [
+        "Wout Mager"
+    ],
+    "description": "blabla",
+    "homepage": "www.woutmager.nl",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components"
+    ],
+    "dependencies": {
+        "zepto": "1.0.0",
+        "picturefill": "1.2.0",
+        "hideShowPassword": "1.0.2",
+        "on-media-query": ""
+    }
+}

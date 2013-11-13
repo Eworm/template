@@ -1,0 +1,12 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+/* TEAM */
+    Design & html: Wout Mager
+    Site: www.woutmager.nl
+    Twitter: @eworm_
+    Locatie: Groningen, the Netherlands
+  
+/* SITE */
+    Standaarden: HTML5, CSS3, jQuery, Sass, Compass
+    Software: Photoshop, Coda, Chrome, Firebug, Codekit
