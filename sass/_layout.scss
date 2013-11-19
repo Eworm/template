@@ -1,12 +1,12 @@
 @import "compass/css3";
-@import "_partials/functions";
-@import "_partials/normalize";
-@import "_partials/variables";
-@import "_partials/extendables";
-@import "_partials/mixins";
-@import "_partials/responsive-js";
-@import "_partials/rem";
-@import "_partials/grid";
+@import "functions";
+@import "normalize";
+@import "variables";
+@import "extendables";
+@import "mixins";
+@import "responsive-js";
+@import "rem";
+@import "grid";
 
 /* General rules
 =================================================================*/

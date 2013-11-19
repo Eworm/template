@@ -17,7 +17,6 @@
         "grunt-svg2png": ">=0.2.x",
         "grunt-svgmin": ">=0.2.x",
         "grunt-notify": ">=0.2.x",
-        "grunt-newer": ">=0.5.x",
         "load-grunt-tasks": ">=0.1.x",
         "install": ">=0.1.x",
         "grunt-modernizr": ">=0.3.x"

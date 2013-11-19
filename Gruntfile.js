@@ -21,7 +21,7 @@ module.exports = function(grunt) {
                     mangle: false
                 },
                 files: [{
-                    'js/functions.min.js': ['bower_components/hideShowPassword/hideShowPassword.js','js-org/onmediaquery.js','bower_components/picturefill/picturefill.js','js-org/functions.js'],
+                    'js/functions.min.js': ['bower_components/hideShowPassword/hideShowPassword.js','bower_components/on-media-query/js/onmediaquery.js','bower_components/picturefill/picturefill.js','js-org/functions.js'],
                     'js/zepto.min.js': ['bower_components/zepto/zepto.js'],
                     //Modernizr is compiled and uglified using grunt modernizr
                 }],
@@ -137,11 +137,11 @@ module.exports = function(grunt) {
         watch: {
             compass: {
                 files: ['sass/*.scss'],
-                tasks: ['newer:compass:build', 'notify:compass'],
+                tasks: ['compass:build', 'notify:compass'],
             },
             uglify: {
                 files: ['js-org/*.js'],
-                tasks: ['newer:uglify:build', 'notify:uglify'],
+                tasks: ['uglify:build', 'notify:uglify'],
             },
         },
         notify: {

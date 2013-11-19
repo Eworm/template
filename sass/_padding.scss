@@ -1,0 +1,36 @@
+/* Padding
+=================================================================*/
+.p-small {
+    padding: $gutter-small;
+}
+
+.p-skinny {
+    padding: $gutter-skinny;
+}
+
+.p {
+    padding: $gutter;
+}
+
+.p-large {
+    padding: $gutter-large;
+}
+
+
+/* Padding bottom
+=================================================================*/
+.pb-small {
+    padding-bottom: $gutter-small;
+}
+
+.pb-skinny {
+    padding-bottom: $gutter-skinny;
+}
+
+.pb {
+    padding-bottom: $gutter;
+}
+
+.pb-large {
+    padding-bottom: $gutter-large;
+}

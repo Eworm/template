@@ -1,0 +1,16 @@
+%postimage {
+    width: 100%;
+    margin: $gutter/2 0;
+    height: auto;
+    display: block;
+    @include border-radius();
+    @include box-shadow($default-box-shadow);
+}
+
+%navfeedback {
+    width: 0;
+    height: 0;
+    content: '';
+    border: 8px solid transparent;
+    position: absolute;
+}

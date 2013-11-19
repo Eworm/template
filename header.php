@@ -96,7 +96,7 @@
         <!--<![endif]-->
         
         <!-- Custom Modernizr build -->
-        <script src="<?php bloginfo('template_url'); ?>/js/modernizr.custom-ck.js"></script>
+        <script src="<?php bloginfo('template_url'); ?>/js/modernizr.min.js"></script>
         
     </head>
     <body>

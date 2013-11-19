@@ -1,0 +1,44 @@
+/*
+-----------------------------------------------------------
+This is a hack. It works in:
+FF 3.6+, Anroid 2.2+, Safari, Chrome, IE7, IE8, IE9+
+-----------------------------------------------------------
+*/
+
+html {
+	font-family: 'mobile';
+}
+
+* html { /* IE6 */
+	font-family: 'desktop'
+}
+
+*+html { /* IE7 */
+	font-family: 'desktop'
+}
+
+@media \0screen {
+	html {  /* IE8 */
+		font-family: 'desktop'
+	}
+}
+
+/* Queries for supported browsers.       
+----------------------------------- */
+@media screen and (min-width: $break-skinny) {
+	html {
+		font-family: "skinny";
+	}
+}
+
+@media screen and (min-width: $break-medium) {
+	html {
+		font-family: "medium";
+	}
+}
+
+@media screen and (min-width: $break-desktop) {
+	html {
+		font-family: "desktop";
+	}
+}

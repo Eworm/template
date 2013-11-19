@@ -1,12 +1,3 @@
-/*
-@codekit-prepend "onmediaquery.js", "baseliner.js"
-*/
-
-
-window.onload = function() {
-    baseliner = new Baseliner(8);
-}
-
 $(document).ready(function() {
 
     // Animation class
