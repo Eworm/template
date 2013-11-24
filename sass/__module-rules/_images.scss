@@ -1,0 +1,149 @@
+/* Images
+=================================================================*/
+.alignnone {
+    @extend %postimage;
+
+    @include respond-min($break-skinny) {
+        width: auto;
+        margin: $gutter $gutter $gutter 0;
+    }
+}
+
+.aligncenter,
+div.aligncenter {
+    @extend %postimage;
+
+    @include respond-min($break-skinny) {
+        display: block;
+        margin: $gutter auto;
+    }
+}
+
+.alignright {
+    @extend %postimage;
+
+    @include respond-min($break-skinny) {
+        width: auto;
+        float:right;
+        margin: 0 0 $gutter $gutter;
+    }
+}
+
+.alignleft {
+    @extend %postimage;
+
+    @include respond-min($break-skinny) {
+        width: auto;
+        float: left;
+        margin: 0 $gutter $gutter 0;
+    }
+}
+
+a img.alignright {
+    @extend %postimage;
+
+    @include respond-min($break-skinny) {
+        width: auto;
+        float: right;
+        margin: $gutter 0 $gutter $gutter;
+    }
+}
+
+a img.alignnone {
+    @extend %postimage;
+
+    @include respond-min($break-skinny) {
+        width: auto;
+        margin: $gutter $gutter $gutter 0;
+    }
+}
+
+a img.alignleft {
+    @extend %postimage;
+
+    @include respond-min($break-skinny) {
+        width: auto;
+        float: left;
+        margin: $gutter $gutter $gutter 0;
+    }
+}
+
+a img.aligncenter {
+    @extend %postimage;
+
+    @include respond-min($break-skinny) {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.wp-caption {
+    @extend %postimage;
+    background: #fff;
+    border: 1px solid $border-color;
+    padding: $gutter/2;
+    text-align: center;
+    margin: $gutter/2 0;
+    @include border-radius();
+
+    img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border: 0 none;
+        margin: 0 0 $gutter/2;
+        padding: 0;
+        display: block;
+
+        @include respond-min($break-medium) {
+            max-width: auto;
+        }
+    }
+
+    @include respond-min($break-medium) {
+        width: auto;
+        max-width: none;
+    }
+
+    p.wp-caption-text {
+        display: block;
+        margin: $gutter/2 0 0 0;
+        @include rem('font-size', $smalltext-size);
+    }
+}
+
+.wp-caption.alignnone {
+
+    @include respond-min($break-skinny) {
+        margin: $gutter $gutter $gutter 0;
+    }
+}
+
+.wp-caption.alignleft {
+
+    @include respond-min($break-skinny) {
+        margin: 0 $gutter $gutter 0;
+    }
+}
+
+.wp-caption.alignright {
+
+    @include respond-min($break-skinny) {
+        margin: 0 0 $gutter $gutter;
+    }
+}
+
+.post-thumbnail {
+    @extend %postimage;
+
+    @include respond-min($break-skinny) {
+        width: auto;
+        margin: $gutter 0;
+    }
+    
+    @include respond-min($break-medium) {
+        float: right;
+        margin: 0 0 $gutter $gutter;
+    }
+}

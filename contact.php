@@ -71,11 +71,11 @@ if(isset($_POST['submitted'])) {
 
 <?php get_header(); ?>
 <?php if($emailSent == true) { ?>
-<div id="content" class="wrapper">
+<div id="maincontent" class="wrapper">
     <div class="holder">
-        <div id="contentholder" class="column column-5">
-            <header id="pageheader">
-                <h1><?php _e( 'Bedankt voor uw e-mail', 'thema_vertalingen' ); ?>, <?=$name;?></h1>
+        <div class="column column-5">
+            <header class="page-header">
+                <h1 class="page-title"><?php _e( 'Bedankt voor uw e-mail', 'thema_vertalingen' ); ?>, <?=$name;?></h1>
             </header>
             <p><?php _e( 'Uw e-mail is verstuurd. Ik neem zo snel mogelijk contact met u op.', 'thema_vertalingen' ); ?></p>
             <p><a href="<?php echo get_settings('home'); ?>"><?php _e( 'Terug naar de homepage', 'thema_vertalingen' ); ?></a></p>
@@ -83,34 +83,34 @@ if(isset($_POST['submitted'])) {
     </div>
 </div>
 <?php } else { ?>
-<div id="content" class="wrapper">
+<div id="maincontent" class="wrapper">
     <div class="holder">
         <div class="column column-5">
-            <form action="#contactform" id="contactform" method="post">
-                <header>
+            <form action="#contactform" id="contactform" method="post" class="form">
+                <header class="formheader">
                     <h1><?php the_title(); ?></h1>
                 </header>
-                <fieldset>
-                    <div>
+                <fieldset class="formcontainer">
+                    <div class="formrow">
                         <label for="naam"><?php _e( 'Uw naam', 'thema_vertalingen' ); ?></label>
                         <input value="<?php if(isset($_POST['naam'])) echo $_POST['naam'];?>" type="text" name="naam" id="naam" class="text" title="<?php _e( 'Uw naam', 'thema_vertalingen' ); ?>" required="required">
                         <?php if($nameError != '') { ?><div class="error"><?=$nameError;?></div><?php } ?>
                     </div>
-                    <div>
+                    <div class="formrow">
                         <label for="emailadres"><?php _e( 'Uw e-mailadres', 'thema_vertalingen' ); ?></label>
                         <input value="<?php if(isset($_POST['emailadres'])) echo $_POST['emailadres'];?>" type="email" name="emailadres" id="emailadres" class="text" title="<?php _e( 'Uw e-mailadres', 'thema_vertalingen' ); ?>" required="required">
                         <?php if($emailError != '') { ?><div class="error"><?=$emailError;?></div><?php } ?>
                     </div>
-                    <div>
+                    <div class="formrow">
                         <label for="message" id="message_label"><?php _e( 'Omschrijf kort uw vraag', 'thema_vertalingen' ); ?></label>
                         <textarea id="message" name="message" class="textarea" required="required"></textarea>
                         <?php if($messageError != '') { ?><div class="error"><?=$messageError;?></div><?php } ?>
                     </div>
-                    <div id="screenReader">
+                    <div id="screenReader" class="formrow">
                         <label for="checking"><?php _e( 'Als u dit formulier wilt versturen moet u dit invoerveld leeg laten', 'thema_vertalingen' ); ?></label>
                         <input type="text" name="checking" id="checking" value="<?php if(isset($_POST['checking']))  echo $_POST['checking'];?>">
                     </div>
-                    <div>
+                    <div class="formrow">
                         <input type="hidden" name="submitted" id="submitted" value="true">
                         <input type="hidden" name="about" value="<?php the_title(); ?>">
                         <input type="submit" value="<?php _e( 'Verzenden', 'thema_vertalingen' ); ?>" class="submit">

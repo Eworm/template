@@ -1,8 +1,0 @@
-/* Calculate the fluid grid width */
-@function margin-width() {
-    @return 100% / ($max-width / $gutter);
-}
-
-.plus-margin {
-    margin-right: margin-width();
-}

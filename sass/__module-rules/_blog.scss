@@ -1,0 +1,282 @@
+/* The blog
+=================================================================*/
+.post {
+    width: 100%;
+    margin-bottom: $gutter;
+    
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include respond-min($break-medium) {
+        float: left;
+    }
+
+    header h1 {
+        margin: 0;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    ul {
+        padding-left: 40px;
+    }
+
+    .blog-thumb {
+        display: none;
+
+        @include respond-min($break-medium) {
+            width: 87px;
+            height: 68px;
+            margin-right: $gutter/2;
+            overflow: hidden;
+            float: left;
+            display: block;
+            position: relative;
+
+            img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                @include border-radius(0);
+            }
+        }
+    }
+
+    .blog-post {
+
+        @include respond-min($break-medium) {
+            float: left;
+        }
+    }
+}
+
+.post-nav {
+    text-align: center;
+
+    @include respond-min($break-medium) {
+        text-align: left;
+    }
+}
+
+time, .postdate {
+    color: $lesser-color;
+    @include rem('font-size',$smalltext-size);
+
+    a {
+        color: $lesser-color;
+        text-decoration: none;
+
+        &:hover, &:focus {
+            color: $lesser-color-hover;
+            text-decoration: underline;
+        }
+    }
+}
+
+.post-options {
+    @include rem('font-size',$smalltext-size);
+
+    a {
+        text-decoration: none;
+
+        &:hover, &:focus {
+            text-decoration: underline;
+        }
+    }
+}
+
+
+.navigation {
+    width: 100%;
+    margin-bottom: $gutter;
+    padding: 0;
+    list-style-type: none;
+    clear: both;
+    float: left;
+    
+    li {
+        margin-right: 20px;
+        float: left;
+        
+        a {
+            white-space: nowrap;
+        }
+    }
+    
+}
+
+#toggle-comments {
+    width: 100%;
+    padding: $gutter/2 0;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    background: #fff;
+    @include border-radius();
+    @include box-shadow(rgba(darken($border-color,20%),1) 0 1px 1px);
+
+    @include respond-min($break-medium) {
+        display: none;
+    }
+}
+
+#comments-holder {
+    display: none;
+    margin-top: $gutter/2;
+
+    &.toggle {
+        display: block;
+    }
+
+    @include respond-min($break-medium) {
+        padding: 0;
+        padding-top: $gutter;
+        margin: $gutter 0;
+        display: block;
+    }
+
+    h3 {
+        display: none;
+
+        @include respond-min($break-medium) {
+            color: $body-color;
+            display: block;
+        }
+    }
+
+    .commentlist {
+        padding: 0;
+        list-style-type: none;
+        clear: both;
+    }
+
+    .comment-author {
+        width: 100%;
+        float: left;
+        font-weight: bold;
+        line-height: 32px;
+
+        @include respond-min($break-medium) {
+            margin-bottom: $gutter;
+            font-weight: normal;
+        }
+    }
+
+    .avatar {
+        width: auto;
+        height: auto;
+        float: right;
+        @include border-radius();
+        @include box-shadow($default-box-shadow);
+
+        @include respond-min($break-medium) {
+            margin-right: $gutter/2;
+            vertical-align: top;
+            float: none;
+        }
+    }
+
+    .comment, .trackback, .pingback {
+        width: 100%;
+        padding: $gutter 0;
+        float: left;
+        background: transparent;
+        position: relative;
+        border-bottom: 2px solid $border-color;
+
+        .children .comment.depth-2 {
+            margin-bottom: $gutter;
+        }
+
+        @include respond-min($break-medium) {
+            padding: $gutter/2;
+            margin: 0 0 $gutter/2 0;
+            border: 1px solid $border-color;
+            @include border-radius();
+        }
+
+        cite {
+            font-style: normal;
+
+            a {
+                text-decoration: none;
+                color: $lesser-color-hover;
+
+                &:hover, &:focus {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .comment-meta {
+            @include rem('font-size',$smalltext-size);
+
+            @include respond-min($break-medium) {
+                position: absolute;
+                right: $gutter;
+                top: 0;
+                padding-top: 20px;
+                line-height: 32px;
+            }
+
+            a {
+                color: $lesser-color;
+                text-decoration: none;
+
+                &:hover, &:focus {
+                    color: $lesser-color-hover;
+                }
+            }
+        }
+    }
+
+    .comment-author-admin, .bypostauthor {
+    }
+
+    .children {
+        list-style-type: none;
+        padding: 0;
+        margin-bottom: 0;
+
+        .comment {
+            margin: 0;
+            padding: $gutter/2 0 0 $gutter/2;
+            border-bottom: none;
+            border-top: 1px solid $border-color;
+
+            @include respond-min($break-medium) {
+                padding: $gutter/2;
+                border-bottom: 1px solid $border-color;
+            }
+        }
+    }
+
+    .comment-reply-link {
+        text-decoration: none;
+
+        &:hover, &:focus {
+            text-decoration: underline;
+        }
+    }
+}
+
+#respond {
+    @extend .comment;
+    margin-bottom: 0;
+
+    h3 {
+        margin-bottom: $gutter;
+        color: $body-color;
+    }
+}
+
+#comments-holder #respond {
+    border-bottom: none;
+
+    @include respond-min($break-medium) {
+        border: 1px solid $border-color;
+    }
+}

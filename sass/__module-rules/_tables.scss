@@ -1,0 +1,16 @@
+/* Tables
+=================================================================*/
+table {
+    width: 100%;
+    margin: $gutter 0;
+    border: 1px solid $border-color;
+
+    tr {
+    }
+
+    th, td {
+        text-align: left;
+        vertical-align: top;
+        border-bottom: 1px solid $border-color;
+    }
+}

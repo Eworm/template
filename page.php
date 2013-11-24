@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div id="content" class="wrapper">
+<div id="maincontent" class="wrapper">
     <div class="holder">
         <?php
             if(!$post->post_parent){
@@ -33,8 +33,8 @@
 
             <article class="column column-6 <?php if ($children) { ?>no-margin<?php } ?>">
 
-                <header>
-                    <h1><?php the_title(); ?></h1>
+                <header class="page-header">
+                    <h1 class="page-title"><?php the_title(); ?></h1>
                 </header>
                 <?php the_content('Lees meer &raquo;'); ?>
                 
@@ -67,9 +67,9 @@
 
         <?php endwhile; ?>
         <?php else : ?>
-            <article id="post-0" class="post no-results not-found">
-				<header>
-					<h1 class="entry-title"><?php _e( 'Deze pagina bestaat niet', 'thema_vertalingen' ); ?></h1>
+            <article class="no-results not-found">
+				<header class="page-header">
+					<h1 class="page-title"><?php _e( 'Deze pagina bestaat niet', 'thema_vertalingen' ); ?></h1>
 				</header>
 
 				<div class="entry">

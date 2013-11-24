@@ -1,0 +1,25 @@
+/* Search results
+=================================================================*/
+.search-result {
+
+    .page-header {
+        margin-bottom: $gutter;
+    }
+
+    section {
+        margin-bottom: $gutter;
+        
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        h1, p {
+            margin: 0;
+        }
+
+        h1 {
+            font-weight: bold;
+            @include rem('font-size',$body-size);
+        }
+    }
+}

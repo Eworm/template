@@ -21,7 +21,7 @@ module.exports = function(grunt) {
                     mangle: false
                 },
                 files: [{
-                    'js/functions.min.js': ['bower_components/hideShowPassword/hideShowPassword.js','bower_components/on-media-query/js/onmediaquery.js','bower_components/picturefill/picturefill.js','js-org/functions.js'],
+                    'js/functions.min.js': ['bower_components/hideShowPassword/hideShowPassword.js','bower_components/on-media-query/js/onmediaquery.js','bower_components/picturefill/picturefill.js','js-src/functions.js'],
                     'js/zepto.min.js': ['bower_components/zepto/zepto.js'],
                     //Modernizr is compiled and uglified using grunt modernizr
                 }],
@@ -136,49 +136,53 @@ module.exports = function(grunt) {
         },
         watch: {
             compass: {
-                files: ['sass/*.scss'],
+                files: ['sass/*.scss','sass/**/*'],
                 tasks: ['compass:build', 'notify:compass'],
             },
             uglify: {
                 files: ['js-org/*.js'],
                 tasks: ['uglify:build', 'notify:uglify'],
             },
+            svg2png: {
+                files: ['img/*.svg'],
+                tasks: ['svg2png:build', 'notify:svg2png'],
+            },
         },
         notify: {
             compass: {
                 options: {
-                    title: 'Compass complete',
-                    message: 'Compass',
+                    title: 'Compass',
+                    message: 'Complete',
                 },
             },
             svgmin: {
                 options: {
                     title: 'SVGmin complete',
-                    message: 'SVGmin',
+                    message: 'Complete',
                 },
             },
             svg2png: {
                 options: {
-                    title: 'Svg2png complete',
-                    message: 'Svg2png',
+                    title: 'Svg2png',
+                    message: 'Complete',
                 },
             },
             imagemin: {
                 options: {
-                    title: 'Imagemin complete',
-                    message: 'Imagemin',
+                    title: 'Imagemin',
+                    message: 'Complete',
                 },
             },
             imageoptim: {
                 options: {
-                    title: 'Imageoptim complete',
-                    message: 'Imageoptim'
+                    title: 'Imageoptim',
+                    message: 'Complete',
                 }
             },
             uglify: {
                 options: {
-                    title: 'Uglify complete',
-                    message: 'Uglify',
+                    title: 'Uglify',
+                    message: 'Complete',
                 },
             },
         },
@@ -191,7 +195,7 @@ module.exports = function(grunt) {
     grunt.registerTask('default', ['watch']);
     
     // Run at the start of every new project
-    grunt.registerTask('init', ['modernizr','uglify']);
+    grunt.registerTask('init', ['modernizr:build','uglify:build']);
     
     // Image optimization. Best to run at the end of a project
     grunt.registerTask('imgtask', ['svgmin:build', 'svg2png:build', 'imageoptim:build', 'imagemin:build']);

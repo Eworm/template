@@ -1,0 +1,159 @@
+* {
+    -webkit-tap-highlight-color:rgba(#000,0);
+    outline: 0;
+    @include box-sizing(border-box);
+}
+
+html {
+    /* Enable font-size zoom for old ies */
+    font-size: 100%;
+
+    &.active-menu {
+        height: 100%;
+        overflow: hidden;
+    }
+    
+    &.touch.no-overflow-scroll.active-menu {
+        overflow: visible;
+    }
+}
+
+body {
+    font: #{$body-size}/#{$line-height} #{$body-font};
+    background: $body-bg-color;
+    color: $body-color;
+
+    .active-menu & {
+        height: 100%;
+        overflow: hidden;
+        @include userselect();
+    }
+    
+    .touch.no-overflow-scroll.active-menu & {
+        overflow: visible;
+    }
+}
+
+#container {
+    /* Fix for IOS rotation bug */
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    float: left;
+
+    .active-menu & {
+        overflow: hidden;
+    }
+    
+    .touch.no-overflow-scroll.active-menu & {
+        overflow: visible;
+    }
+}
+
+#content-toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: $mobile-menu-width;
+    background: $body-bg-color;
+    z-index: 10000;
+    @include opacity(0);
+    
+    @include respond-min($break-skinny) {
+        left: $skinny-menu-width;
+    }
+}
+
+#container-transition {
+    width: 100%;
+    height: 100%;
+    float: left;
+	@include transition-property(all);
+    @include transition-duration(.18s);
+    @include transition-timing-function(ease-in-out);
+    
+    .touch.no-overflow-scroll & {
+        height: auto;
+    }
+
+    .toggle-menu & {
+        position: relative;
+        left: $mobile-menu-width;
+        
+        @include respond-min($break-skinny) {
+            left: $skinny-menu-width;    
+        }
+        
+        @include respond-min($break-medium) {
+            left: 0;
+        }
+    }
+
+    .csstransforms3d.toggle-menu & {
+        left: 0;
+        -webkit-backface-visibility: hidden;
+        @include transform3d(translate3d($mobile-menu-width, 0, 0) scale3d(1, 1, 1));
+
+        .wrapper {
+            @include transform-style(flat);
+        }
+
+        @include respond-min($break-skinny) {
+            @include transform3d(translate3d($skinny-menu-width, 0, 0) scale3d(1, 1, 1));
+        }
+
+        @include respond-min($break-medium) {
+            left: 0;
+            @include transform3d(translate3d(0, 0, 0));
+        }
+    }
+}
+
+a {
+    color: $link-color;
+    text-decoration: underline;
+    @include transition-property(all);
+    @include transition-duration(0.1s);
+    @include transition-timing-function(ease-in);
+
+    &:hover, &:focus {
+        text-decoration: none;
+    }
+}
+
+.wrapper {
+    width: 100%;
+    float: left;
+    -webkit-backface-visibility: hidden;
+    @include transform-style(flat);
+
+    @include respond-min($break-medium) {
+        padding: 0;
+
+        @include old-ie {
+            width: auto;
+            min-width: 100%;
+        }
+    }
+}
+
+.holder {
+    padding: $gutter;
+    margin: 0 auto;
+    clear: both;
+
+    @include respond-min($break-medium) {
+        width: $width;
+        max-width: $max-width;
+        padding: 0;
+        position: relative;
+
+        @include old-ie {
+            /* Disable max-width for old IE */
+            width: 100%;
+            width: 980px;
+        }
+    }
+}

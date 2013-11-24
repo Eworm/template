@@ -1,0 +1,51 @@
+/* Headers
+=================================================================*/
+h1 {
+    font-weight: normal;
+    margin-bottom: 0 0 $gutter/2;
+    @include rem('font-size',$header-2);
+
+    @include respond-min($break-medium) {
+        margin-bottom: $gutter;
+        @include rem('font-size',$header-1);
+    }
+
+    a {
+        text-decoration: none;
+
+        &:hover, &:focus {
+        }
+    }
+}
+
+h2 {
+    margin: 0;
+    font-weight: bold;
+    @include rem('font-size',$header-3);
+
+    @include respond-min($break-medium) {
+        font-weight: normal;
+        @include rem('font-size',$header-2);
+    }
+}
+
+h3 {
+    margin: 0;
+    @include rem('font-size',$header-3);
+}
+
+h4 {
+    margin: 0;
+    font-weight: normal;
+    @include rem('font-size',$header-4);
+}
+
+.page-header {
+
+    h1 {
+        padding-bottom: $gutter;
+        margin-bottom: $gutter;
+        border-bottom: 1px solid $border-color;
+        @include rem('font-size',$header-2);
+    }
+}

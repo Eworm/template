@@ -10,11 +10,11 @@
     get_header();
 ?>
 
-<div id="content" class="wrapper">
+<div id="maincontent" class="wrapper">
     <div class="holder">
-        <article id="contentholder" class="column column-5 notfound">
-            <header>
-                <h1><?php _e( 'Deze pagina bestaat niet (meer)', 'thema_vertalingen' ); ?></h1>
+        <article class="column column-5 not-found">
+            <header class="page-header">
+                <h1 class="page-title"><?php _e( 'Deze pagina bestaat niet (meer)', 'thema_vertalingen' ); ?></h1>
             </header>
             <p><?php _e( 'Misschien helpt het als je een kijkje op onze', 'oldambtmeer_vertalingen' ); ?> <a href="<?php echo get_settings('home'); ?>"><?php _e( 'homepage', 'thema_vertalingen' ); ?></a> <?php _e( 'neemt? Of probeer anders te zoeken', 'oldambtmeer_vertalingen' ); ?>:</p>
             <?php get_search_form(); ?>

@@ -1,0 +1,14 @@
+/* Footer
+=================================================================*/
+footer {
+    background: #fff;
+    border-top: 1px solid $border-color;
+
+    .holder {
+        padding: $gutter;
+
+        @include respond-min($break-medium) {
+            padding: $gutter 0;
+        }
+    }
+}

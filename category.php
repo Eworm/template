@@ -1,21 +1,21 @@
 <?php get_header(); ?>
 
-<div id="content" class="wrapper">
+<div id="maincontent" class="wrapper">
     <div class="holder">
         <div class="column column-5">
             <?php if ( have_posts() ) : ?>
     
     			<header class="page-header">
-    				<h1>
+    				<h1 class="page-title">
     				    <?php _e( 'Categorie', 'thema_vertalingen' ); ?>: <?php single_cat_title() ?>
     				</h1>
     			</header>
     
     			<?php /* Start the Loop */ ?>
     			<?php while (have_posts()) : the_post(); ?>
-                    <article class="posts blogpost">
-            			<header>
-                            <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Directe link naar', 'thema_vertalingen' ); ?> <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+                    <article class="post blogpost">
+            			<header class="post-header">
+                            <h1 class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Directe link naar', 'thema_vertalingen' ); ?> <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
                             <time datetime="<?php the_time('Y-m-d') ?>" pubdate="pubdate">
                                 <?php the_time('j F Y') ?> &mdash; <?php the_time('g:ia') ?> <?php edit_post_link('Edit','<strong> |</strong> ',''); ?>
                             </time>
@@ -35,8 +35,8 @@
     		<?php else : ?>
     
     			<article id="post-0" class="post no-results not-found">
-    				<header>
-    					<h1><?php _e( 'Deze pagina bestaat niet', 'thema_vertalingen' ); ?></h1>
+    				<header class="post-header">
+    					<h1 class="post-title"><?php _e( 'Deze pagina bestaat niet', 'thema_vertalingen' ); ?></h1>
     				</header>
     
     				<div class="entry">

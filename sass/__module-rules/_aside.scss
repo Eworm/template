@@ -1,0 +1,57 @@
+/* Aside
+=================================================================*/
+aside {
+
+    section {
+        width: 100%;
+        padding: $gutter/2;
+        margin-bottom: $gutter;
+        background: #fff;
+        border: 1px solid $border-color;
+        float: left;
+
+        @include respond-min($break-desktop) {
+            padding: $gutter;
+        }
+
+        &.no-padding {
+            padding: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+    }
+
+    img {
+        margin-bottom: $gutter;
+        @include border-radius();
+    }
+
+    h1 {
+        margin-bottom: $gutter/2;
+        font-weight: bold;
+        @include rem('font-size',$body-size);
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    ul {
+        margin: 0;
+    }
+
+    a {
+        text-decoration: none;
+
+        &:hover, &:focus {
+            text-decoration: underline;
+        }
+    }
+
+    iframe {
+        float: left;
+    }
+}
