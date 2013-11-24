@@ -1,11 +1,4 @@
 #header {
-    margin-bottom: $gutter;
-
-    @include respond-min($break-medium) {
-        background: #fff;
-        padding: $gutter 0;
-        border-bottom: 1px solid $border-color;
-    }
 }
 
 #logo {

@@ -16,7 +16,7 @@
                     </div>
                 </div>
                 
-                <footer class="wrapper wrapper-footer">
+                <footer id="footer" class="wrapper wrapper-footer">
                     <div class="holder holder-footer">
                         &copy; <?php echo date("Y") ?>
                     </div>

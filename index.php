@@ -6,10 +6,10 @@
             <?php if (have_posts()) : ?>
     		  
     			<?php while (have_posts()) : the_post(); ?>
-                    <article class="post">
-            			<header class="post-header">
-                            <h1 class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Directe link naar', 'thema_vertalingen' ); ?> <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-                            <p class="postdate">
+                    <article class="l-post">
+            			<header class="l-post-header">
+                            <h1 class="l-post-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Directe link naar', 'thema_vertalingen' ); ?> <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+                            <p class="l-postdate">
                                 <?php the_time('j F Y') ?> &mdash; <?php the_time('g:ia') ?> <?php edit_post_link('Artikel aanpassen','<strong> |</strong> ',''); ?>
                                 <br>
                                 <?php /* pages don't have categories or tags */ if (!is_page()) { ?> Categorie&euml;n: <?php the_category(', '); ?>. <?php /* } */?>
@@ -17,7 +17,7 @@
             				    <?php if (get_the_tags()) the_tags('Tags: ', ', ', '.'); ?><?php } ?>
                             </p>
                         </header>
-                        <div class="entry">
+                        <div class="l-post-entry">
             				<?php the_excerpt(); ?>
             				<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Directe link naar', 'thema_vertalingen' ); ?> <?php the_title_attribute(); ?>"><?php _e( 'Verder lezen', 'thema_vertalingen' ); ?> &raquo;</a>
                             <p>
@@ -28,7 +28,7 @@
     			<?php endwhile; ?>
     			
     			<?php if (!is_single() && !is_page()) { ?>
-        			<ul class="navigation">
+        			<ul class="l-post-navigation">
                         <li class="goforward"><?php previous_posts_link('&laquo; Nieuwere posts'); ?></li>
         				<li class="goback"><?php next_posts_link('Oudere posts &raquo;'); ?></li>						
         			</ul>

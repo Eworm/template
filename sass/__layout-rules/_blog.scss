@@ -1,4 +1,4 @@
-.post {
+.l-post {
     width: 100%;
     float: left;
     margin-bottom: $gutter;
@@ -37,12 +37,16 @@
     }
 }
 
-.post-header {
+.l-post-header {
     
 }
 
-.post-title {
+.l-post-title {
     margin: 0;
+}
+
+l-post-entry {
+    
 }
 
 .post-nav {
@@ -68,7 +72,7 @@ time, .postdate {
     }
 }
 
-.post-options {
+.l-post-options {
     @include rem('font-size',$smalltext-size);
 
     a {
@@ -81,7 +85,7 @@ time, .postdate {
 }
 
 
-.navigation {
+.l-post-navigation {
     width: 100%;
     margin-bottom: $gutter;
     padding: 0;

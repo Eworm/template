@@ -55,39 +55,6 @@ input[type=submit] {
         }
     }
 
-    .formrow {
-        width: 100%;
-        margin-bottom: $gutter;
-        clear: both;
-        
-        &:last-child {
-            margin-bottom: 0;
-        }
-
-        @include respond-min($break-medium) {
-            float: left;
-        }
-        
-        &.error {
-            padding: $gutter-skinny;
-            margin-bottom: 0;
-            background: #f00;
-            color: #fff;
-            @include border-radius();
-            @include border-top-left-radius(0);
-            @include border-top-right-radius(0);
-            @include box-shadow($default-box-shadow);
-            
-            @include respond-min($break-medium) {
-                width: 50%;
-            }
-        }
-        
-        .textarea + div.error {
-            width: 100%;
-        }
-    }
-
     label, .label {
         width: 100%;
         display: block;
@@ -131,41 +98,47 @@ input[type=submit] {
         text-align: center;
         text-decoration: none;
         cursor: pointer;
-/*
-        border: none;
-        color: #fff;
-        border-top: 1px solid lighten($border-color,5%);
-        border-right: 1px solid darken($border-color,3%);
-        border-bottom: 1px solid darken($border-color,6%);
-        border-left: 1px solid darken($border-color,3%);
-        background-color: $border-color;
-        @include background-image(linear-gradient($border-color, darken($border-color,10%)));
-        @include border-radius();
-        @include box-shadow($default-box-shadow, inset rgba(255,255,255,0.2) 0 1px 0, inset rgba(0,0,0,.1) 0 -1px 0);
-        @include text-shadow(rgba(0,0,0,1) 0 1px 1px);
-        @include rem('padding',12px 0);
-*/
 
         @include respond-min($break-medium) {
             width: auto;
-            /* @include rem('padding',8px 12px); */
-        }
-
-        &:active {
-            position: relative;
-            top: 1px;
         }
 
         &:hover, &:focus {
-/*
-            background-color: lighten($border-color,5%);
-            @include background-image(linear-gradient(lighten($border-color,6%), lighten($border-color,2%)));
-*/
         }
     }
 
     a.submit {
         @include inline-block;
+    }
+}
+
+.formrow {
+    width: 100%;
+    margin-bottom: $gutter;
+    float: left;
+    clear: both;
+    
+    &:last-child {
+        margin-bottom: 0;
+    }
+    
+    &.error {
+        padding: $gutter-skinny;
+        margin-bottom: 0;
+        background: #f00;
+        color: #fff;
+        @include border-radius();
+        @include border-top-left-radius(0);
+        @include border-top-right-radius(0);
+        @include box-shadow($default-box-shadow);
+        
+        @include respond-min($break-medium) {
+            width: 50%;
+        }
+    }
+    
+    .textarea + div.error {
+        width: 100%;
     }
 }
 
@@ -175,4 +148,3 @@ input[type=submit] {
 {
     display: none;
 }
-
