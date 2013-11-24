@@ -71,11 +71,11 @@ if(isset($_POST['submitted'])) {
 
 <?php get_header(); ?>
 <?php if($emailSent == true) { ?>
-<div id="maincontent" class="wrapper">
-    <div class="holder">
-        <div class="column column-5">
-            <header class="page-header">
-                <h1 class="page-title"><?php _e( 'Bedankt voor uw e-mail', 'thema_vertalingen' ); ?>, <?=$name;?></h1>
+<div id="content" class="wrapper wrapper-content">
+    <div class="holder holder-content">
+        <div id="maincontent" class="grid-column grid-column-5">
+            <header class="maincontent-header">
+                <h1 class="maincontent-title"><?php _e( 'Bedankt voor uw e-mail', 'thema_vertalingen' ); ?>, <?=$name;?></h1>
             </header>
             <p><?php _e( 'Uw e-mail is verstuurd. Ik neem zo snel mogelijk contact met u op.', 'thema_vertalingen' ); ?></p>
             <p><a href="<?php echo get_settings('home'); ?>"><?php _e( 'Terug naar de homepage', 'thema_vertalingen' ); ?></a></p>
@@ -83,9 +83,9 @@ if(isset($_POST['submitted'])) {
     </div>
 </div>
 <?php } else { ?>
-<div id="maincontent" class="wrapper">
-    <div class="holder">
-        <div class="column column-5">
+<div id="content" class="wrapper wrapper-content">
+    <div class="holder holder-content">
+        <div id="maincontent" class="grid-column grid-column-5">
             <form action="#contactform" id="contactform" method="post" class="form">
                 <header class="formheader">
                     <h1><?php the_title(); ?></h1>
@@ -118,7 +118,7 @@ if(isset($_POST['submitted'])) {
                 </fieldset>
             </form>
         </div>
-        <aside class="column column-3 no-margin">
+        <aside id="sidebar" class="grid-column grid-column-3 no-margin">
             <?php $options = get_option('template_theme_options');
                 if (($options['theme_address'])) { ?>
                 <section class="no-padding mob-hide">

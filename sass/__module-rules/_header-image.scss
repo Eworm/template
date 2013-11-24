@@ -1,0 +1,8 @@
+#header-image {
+    margin-bottom: $gutter;
+    @include border-radius();
+
+    @include respond-min($break-medium) {
+        width: 100%;
+    }
+}

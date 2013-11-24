@@ -1,14 +1,14 @@
 <?php get_header(); ?>
 
-<div id="maincontent" class="wrapper">
-    <div class="holder">
-        <div class="column column-5">
+<div id="content" class="wrapper wrapper-content">
+    <div class="holder holder-content">
+        <div id="maincontent" class="grid-column grid-column-5">
             <?php if (have_posts()) : ?>
     		  
     			<?php while (have_posts()) : the_post(); ?>
-                    <article class="post blogpost">
-            			<header class="page-header">
-                            <h1 class="page-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Directe link naar', 'thema_vertalingen' ); ?> <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+                    <article class="post">
+            			<header class="post-header">
+                            <h1 class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Directe link naar', 'thema_vertalingen' ); ?> <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
                             <p class="postdate">
                                 <?php the_time('j F Y') ?> &mdash; <?php the_time('g:ia') ?> <?php edit_post_link('Artikel aanpassen','<strong> |</strong> ',''); ?>
                                 <br>
@@ -36,7 +36,7 @@
 		
     		<?php endif; ?>
         </div>
-        <aside class="column column-3 no-margin">
+        <aside id="sidebar" class="grid-column grid-column-3 no-margin">
             <?php if ( !function_exists('dynamic_sidebar')
                 || !dynamic_sidebar('Blog') ) : ?>
             <?php endif; ?>

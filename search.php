@@ -1,11 +1,11 @@
 <?php get_header(); ?>
 
 <?php $search_query = get_search_query(); ?>
-<div id="maincontent" class="wrapper">
-    <div class="holder">
-        <div class="column column-8 no-margin">
+<div id="content" class="wrapper wrapper-content">
+    <div class="holder holder-content">
+        <div id="maincontent" class="grid-column grid-column-8 no-margin">
             <?php if (have_posts()) : ?>
-                <header class="page-header">
+                <header class="maincontent-header">
                     <h1><?php _e( 'Zoekresultaten voor', 'thema_vertalingen' ); ?> <em>&#8216;<?php echo $search_query ?>&#8217;</em></h1>
                 </header>
                 <?php while (have_posts()) : the_post(); ?>

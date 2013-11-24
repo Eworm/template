@@ -1,5 +1,5 @@
-                <div id="doormat" class="wrapper">
-                    <div class="holder">
+                <div id="doormat" class="wrapper wrapper-doormat">
+                    <div class="holder holder-doormat">
                         <section class="vcard">
                             <ul class="adr">
                                 <li class="org"><strong>Wout Mager</strong></li>
@@ -16,11 +16,12 @@
                     </div>
                 </div>
                 
-                <footer class="wrapper">
-                    <div class="holder">
+                <footer class="wrapper wrapper-footer">
+                    <div class="holder holder-footer">
                         &copy; <?php echo date("Y") ?>
                     </div>
                 </footer>
+                
             </div>    
         </div>
         

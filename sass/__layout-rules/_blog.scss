@@ -1,19 +1,10 @@
-/* The blog
-=================================================================*/
 .post {
     width: 100%;
+    float: left;
     margin-bottom: $gutter;
     
     &:last-child {
         margin-bottom: 0;
-    }
-
-    @include respond-min($break-medium) {
-        float: left;
-    }
-
-    header h1 {
-        margin: 0;
     }
 
     p {
@@ -30,7 +21,7 @@
         @include respond-min($break-medium) {
             width: 87px;
             height: 68px;
-            margin-right: $gutter/2;
+            margin-right: $gutter-skinny;
             overflow: hidden;
             float: left;
             display: block;
@@ -44,13 +35,14 @@
             }
         }
     }
+}
 
-    .blog-post {
+.post-header {
+    
+}
 
-        @include respond-min($break-medium) {
-            float: left;
-        }
-    }
+.post-title {
+    margin: 0;
 }
 
 .post-nav {
@@ -110,7 +102,7 @@ time, .postdate {
 
 #toggle-comments {
     width: 100%;
-    padding: $gutter/2 0;
+    padding: $gutter-skinny 0;
     text-align: center;
     display: block;
     text-decoration: none;
@@ -125,7 +117,7 @@ time, .postdate {
 
 #comments-holder {
     display: none;
-    margin-top: $gutter/2;
+    margin-top: $gutter-skinny;
 
     &.toggle {
         display: block;
@@ -173,13 +165,13 @@ time, .postdate {
         @include box-shadow($default-box-shadow);
 
         @include respond-min($break-medium) {
-            margin-right: $gutter/2;
+            margin-right: $gutter-skinny;
             vertical-align: top;
             float: none;
         }
     }
 
-    .comment, .trackback, .pingback {
+    .comment, .trackback, .pingback, #respond {
         width: 100%;
         padding: $gutter 0;
         float: left;
@@ -192,8 +184,8 @@ time, .postdate {
         }
 
         @include respond-min($break-medium) {
-            padding: $gutter/2;
-            margin: 0 0 $gutter/2 0;
+            padding: $gutter-skinny;
+            margin: 0 0 $gutter-skinny 0;
             border: 1px solid $border-color;
             @include border-radius();
         }
@@ -243,12 +235,12 @@ time, .postdate {
 
         .comment {
             margin: 0;
-            padding: $gutter/2 0 0 $gutter/2;
+            padding: $gutter-skinny 0 0 $gutter-skinny;
             border-bottom: none;
             border-top: 1px solid $border-color;
 
             @include respond-min($break-medium) {
-                padding: $gutter/2;
+                padding: $gutter-skinny;
                 border-bottom: 1px solid $border-color;
             }
         }
@@ -260,23 +252,5 @@ time, .postdate {
         &:hover, &:focus {
             text-decoration: underline;
         }
-    }
-}
-
-#respond {
-    @extend .comment;
-    margin-bottom: 0;
-
-    h3 {
-        margin-bottom: $gutter;
-        color: $body-color;
-    }
-}
-
-#comments-holder #respond {
-    border-bottom: none;
-
-    @include respond-min($break-medium) {
-        border: 1px solid $border-color;
     }
 }

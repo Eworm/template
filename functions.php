@@ -31,9 +31,9 @@ remove_action('wp_head', 'wlwmanifest_link');
 ==================================================================================================================================*/
 if ( function_exists('register_sidebar') )
 register_sidebar(array('name'=>'Widget',
-    'before_widget' => '<section>',
+    'before_widget' => '<section class="sidebar-section">',
     'after_widget' => '</section>',
-    'before_title' => '<header><h1>',
+    'before_title' => '<header class="sidebar-section-header"><h1 class="sidebar-section-title">',
     'after_title' => '</h1></header>',
 ));
 

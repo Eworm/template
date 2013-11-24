@@ -102,12 +102,12 @@
     <body>
         <div id="container">
             <div id="container-transition">
-                <header id="header" class="wrapper">
-                    <div class="holder">
-                        <div id="togglers">
-                            <ul>
-                                <li id="menu-toggler"><a href="#mainmenu"><span>Menu</span></a></li>
-                                <li id="content-toggler"><a href="#content"><span>Content</span></a></li>
+                <header id="header" class="wrapper wrapper-header">
+                    <div class="holder holder-header">
+                        <div class="mobile-header">
+                            <ul class="mobile-header-menu">
+                                <li id="menu-toggler" class="mobile-header-menuitem"><a href="#mainmenu"><span>Menu</span></a></li>
+                                <li id="content-toggler" class="mobile-header-menuitem"><a href="#content"><span>Content</span></a></li>
                             </ul>
                         </div>
                         <a href="<?php echo get_option('home'); ?>" id="logo" rel="home" title="<?php _e( 'Terug naar de homepage', 'thema_vertalingen' ); ?>">
@@ -117,8 +117,8 @@
                             <?php bloginfo( 'description' ); ?>
                         </p>
                         <?php get_search_form(); ?>              
-                        <nav id="menu">
-                            <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container' => '','menu_id' => 'mainmenu','menu_class' => 'inline', 'depth' => '2' ) ); ?>
+                        <nav id="mainmenu">
+                            <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container' => '','menu_id' => 'main-menu','menu_class' => 'inline', 'depth' => '2' ) ); ?>
                         </nav>  
                     </div>
                 </header>

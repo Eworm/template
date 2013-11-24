@@ -117,7 +117,7 @@ module.exports = function(grunt) {
             'uglify' : true,
         
             // Define any tests you want to implicitly include.
-            'tests' : ['boxshadow','csstransforms','csstransforms3d','csstransitions','svg'],
+            'tests' : ['boxshadow','csstransforms','csstransforms3d','csstransitions','svg','input','geolocation','forms_fileinput'],
         
             // By default, this task will crawl your project for references to Modernizr tests.
             // Set to false to disable.

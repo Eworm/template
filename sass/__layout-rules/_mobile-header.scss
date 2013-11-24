@@ -1,8 +1,6 @@
-/* Mobile togglers
-=================================================================*/
-#togglers {
+.mobile-header {
     width: 100%;
-    padding: 0 $gutter/2;
+    padding: 0 $gutter-skinny;
     height: auto;
     border-bottom: 1px solid $border-color;
     position: absolute;
@@ -14,23 +12,21 @@
     @include respond-min($break-medium) {
         display: none;
     }
+}
 
-    ul {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        @include inline-block;
-    }
+.mobile-header-menu {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    @include inline-block;
+}
 
-    li {
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-        @include inline-block;
-    }
-
+.mobile-header-menuitem {
+    @extend %ul-nostyling;
+    @include inline-block;
+    
     a {
-        padding: $gutter/2;
+        padding: $gutter-skinny;
         text-decoration: none;
         display: block;
 
@@ -38,11 +34,10 @@
             text-decoration: none;
         }
     }
+}
 
-    #content-toggler {
-        display: none;
-    }
-
+#content-toggler {
+    display: none;
 }
 
 .mob-hide {

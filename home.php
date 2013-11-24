@@ -1,14 +1,14 @@
 <?php get_header(); ?>
 
-<div id="maincontent" class="wrapper">
-    <div class="holder">
+<div id="content" class="wrapper wrapper-content">
+    <div class="holder holder-content">
         <!-- <img src="<?php header_image(); ?>"> -->
-        <article class="column column-5">
+        <article id="maincontent" class="grid-column grid-column-5">
             <?php if (have_posts()) : ?>
                 <?php while (have_posts()) : the_post(); ?>
                 
-                    <header class="page-header">
-                        <h1 class="page-title"><?php the_title(); ?></h1>
+                    <header class="maincontent-header">
+                        <h1 class="maincontent-title"><?php the_title(); ?></h1>
                     </header>
                     
                     <?php the_content('Weiterlesen &raquo;'); ?>

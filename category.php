@@ -1,19 +1,19 @@
 <?php get_header(); ?>
 
-<div id="maincontent" class="wrapper">
-    <div class="holder">
-        <div class="column column-5">
+<div id="content" class="wrapper wrapper-content">
+    <div class="holder holder-content">
+        <div id="maincontent" class="grid-column grid-column-5">
             <?php if ( have_posts() ) : ?>
     
-    			<header class="page-header">
-    				<h1 class="page-title">
+    			<header class="maincontent-header">
+    				<h1 class="maincontent-title">
     				    <?php _e( 'Categorie', 'thema_vertalingen' ); ?>: <?php single_cat_title() ?>
     				</h1>
     			</header>
     
     			<?php /* Start the Loop */ ?>
     			<?php while (have_posts()) : the_post(); ?>
-                    <article class="post blogpost">
+                    <article class="post">
             			<header class="post-header">
                             <h1 class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Directe link naar', 'thema_vertalingen' ); ?> <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
                             <time datetime="<?php the_time('Y-m-d') ?>" pubdate="pubdate">
@@ -34,7 +34,7 @@
     
     		<?php else : ?>
     
-    			<article id="post-0" class="post no-results not-found">
+    			<article class="post no-results not-found">
     				<header class="post-header">
     					<h1 class="post-title"><?php _e( 'Deze pagina bestaat niet', 'thema_vertalingen' ); ?></h1>
     				</header>
@@ -47,7 +47,7 @@
     
     		<?php endif; ?>
         </div>
-        <aside class="column column-3 no-margin">
+        <aside id="sidebar" class="grid-column grid-column-3 no-margin">
             <?php if ( !function_exists('dynamic_sidebar')
                 || !dynamic_sidebar('Blog') ) : ?>
             <?php endif; ?>

@@ -1,6 +1,6 @@
 %postimage {
     width: 100%;
-    margin: $gutter/2 0;
+    margin: $gutter-skinny 0;
     height: auto;
     display: block;
     @include border-radius();
@@ -13,4 +13,10 @@
     content: '';
     border: 8px solid transparent;
     position: absolute;
+}
+
+%ul-nostyling {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }

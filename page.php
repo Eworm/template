@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
-<div id="maincontent" class="wrapper">
-    <div class="holder">
+<div id="content" class="wrapper wrapper-content">
+    <div class="holder holder-content">
         <?php
             if(!$post->post_parent){
                 // will display the subpages of this top level page
@@ -21,7 +21,7 @@
             }
 
             if ($children) { ?>
-            <div id="submenu" class="column column-2">
+            <div id="submenu" class="grid-column grid-column-2">
                 <ul>
                     <?php echo $children; ?>
                 </ul>
@@ -31,10 +31,10 @@
         <?php if (have_posts()) : ?>
         <?php while (have_posts()) : the_post(); ?>
 
-            <article class="column column-6 <?php if ($children) { ?>no-margin<?php } ?>">
+            <article id="maincontent" class="grid-column grid-column-6 <?php if ($children) { ?>no-margin<?php } ?>">
 
-                <header class="page-header">
-                    <h1 class="page-title"><?php the_title(); ?></h1>
+                <header class="maincontent-header">
+                    <h1 class="maincontent-title"><?php the_title(); ?></h1>
                 </header>
                 <?php the_content('Lees meer &raquo;'); ?>
                 
@@ -67,9 +67,9 @@
 
         <?php endwhile; ?>
         <?php else : ?>
-            <article class="no-results not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php _e( 'Deze pagina bestaat niet', 'thema_vertalingen' ); ?></h1>
+            <article id="maincontent" class="no-results not-found">
+				<header class="maincontent-header">
+					<h1 class="maincontent-title"><?php _e( 'Deze pagina bestaat niet', 'thema_vertalingen' ); ?></h1>
 				</header>
 
 				<div class="entry">

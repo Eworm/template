@@ -1,43 +1,58 @@
 // This is the container for all seperate scss files
 // No styles should be included here, only imports of other (smaller) parts
 
+/* Variables for color, fonts, sizes, etc
+=================================================================*/
+@import "__variables/colors";
+@import "__variables/defaults";
+@import "__variables/fonts";
+@import "__variables/grid-variables";
+@import "__variables/headers";
+@import "__variables/margins-paddings";
+@import "__variables/mobile";
+@import "__variables/responsive-breakpoints";
+
 /* Sass & extra's
 =================================================================*/
 @import "compass/css3";
 @import "__sass-extras/functions";
-@import "__sass-extras/variables";
+@import "__sass-extras/grid";
 @import "__sass-extras/extendables";
 @import "__sass-extras/mixins";
-@import "__sass-extras/responsive-js";
 @import "__sass-extras/rem";
-@import "__sass-extras/grid";
+@import "__sass-extras/responsive-js";
 
-/* Base rules
+/* Base rules. Normalize and other basic element styles.
 =================================================================*/
 @import "__base-rules/normalize";
 @import "__base-rules/base";
 @import "__base-rules/headers";
 
-/* Modules
+/* Layout rules. Styling of page sections that contain modules.
 =================================================================*/
-@import "__module-rules/mobile-header";
-@import "__module-rules/header";
-@import "__module-rules/nav";
-@import "__module-rules/maincontent";
-@import "__module-rules/aside";
-@import "__module-rules/blog";
-@import "__module-rules/images";
+@import "__layout-rules/blog";
+@import "__layout-rules/doormat";
+@import "__layout-rules/footer";
+@import "__layout-rules/forms";
+@import "__layout-rules/header";
+@import "__layout-rules/images";
+@import "__layout-rules/maincontent";
+@import "__layout-rules/mainmenu";
+@import "__layout-rules/mobile-header";
+@import "__layout-rules/sidebar";
+@import "__layout-rules/submenu";
+@import "__layout-rules/tables";
+
+/* Module rules. Styling of reusable, modular parts of the design.
+=================================================================*/
+@import "__module-rules/header-image";
 @import "__module-rules/search-results";
-@import "__module-rules/doormat";
-@import "__module-rules/footer";
-@import "__module-rules/tables";
-@import "__module-rules/forms";
+@import "__module-rules/search-form";
+@import "__module-rules/sidebar-section";
+@import "__module-rules/vcard";
 
-/* Layout
+/* State rules
 =================================================================*/
 
-/* States
-=================================================================*/
-
-/* Theme
+/* Theme rules
 =================================================================*/

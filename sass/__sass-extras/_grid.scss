@@ -1,11 +1,12 @@
-/* Calculate the fluid grid width */
+/* Calculate fluid margins
+=================================================================*/
 @function margin-width() {
     @return 100% / ($max-width / $gutter);
 }
 
-/* The grid
+/* Generate grid css for the right amount of columns
 =================================================================*/
-.column {
+.grid-column {
     width: 100%;
     margin-bottom: $gutter;
     clear: both;
@@ -18,7 +19,6 @@
         @for $i from 1 through $nr-of-columns {
             &.column-#{$i} {
                 width: 100% / ($max-width / (((($max-width - (($nr-of-columns - 1) * $gutter)) / $nr-of-columns) * $i) + (($i - 1) * $gutter)));
-                margin-bottom: $gutter;
             }
         }
         

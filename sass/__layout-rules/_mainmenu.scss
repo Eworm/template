@@ -1,6 +1,4 @@
-/* Main menu
-=================================================================*/
-nav {
+#mainmenu {
     width: $mobile-menu-width;
     height: 100%;
     position: absolute;
@@ -126,18 +124,18 @@ nav {
 
     a {
         display: block;
-        padding: $gutter/2 $gutter;
+        padding: $gutter-skinny $gutter;
         text-decoration: none;
         border-bottom: 1px solid $border-color;
         position: relative;
 
         @include respond-min($break-medium) {
-            padding: $gutter/2;
+            padding: $gutter-skinny;
             border-bottom: none;
         }
 
         @include respond-min($break-desktop) {
-            padding: $gutter/2 $gutter;
+            padding: $gutter-skinny $gutter;
             float: left;
         }
 
@@ -246,7 +244,7 @@ nav {
             border-bottom: 1px solid $border-color;
 
             @include respond-min($break-medium) {
-                padding: 8px $gutter/2;
+                padding: 8px $gutter-skinny;
                 white-space: nowrap;
                 border: none;
                 color: $body-color;
