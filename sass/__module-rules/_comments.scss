@@ -1,0 +1,167 @@
+#toggle-comments {
+    width: 100%;
+    padding: $gutter-skinny 0;
+    display: block;
+    background: #fff;
+    text-decoration: none;
+    text-align: center;
+    @include border-radius();
+    @include box-shadow(rgba(darken($border-color,20%),1) 0 1px 1px);
+
+    @include respond-min($break-medium) {
+        display: none;
+    }
+}
+
+#comments-holder {
+    margin-top: $margin-skinny;
+    display: none;
+
+    &.toggle {
+        display: block;
+    }
+
+    @include respond-min($break-medium) {
+        margin: $margin 0;
+        padding: $gutter 0 0 0;
+        display: block;
+    }
+}
+
+#reply-title {
+    margin: 0 0 $gutter;
+}
+
+.comment, .trackback, .pingback, #respond {
+    width: 100%;
+    padding: $gutter-skinny 0;
+    float: left;
+    position: relative;
+    border-bottom: 2px solid $border-color;
+    background: transparent;
+
+    .children .comment.depth-2 {
+        margin-bottom: $gutter;
+    }
+
+    @include respond-min($break-medium) {
+        margin: 0 0 $margin-skinny 0;
+        padding: $gutter;
+        border: 1px solid $border-color;
+        @include border-radius();
+    }
+}
+
+.fn {
+    font-style: normal;
+
+    a {
+        text-decoration: none;
+        color: $lesser-color-hover;
+
+        &:hover, &:focus {
+            text-decoration: underline;
+        }
+    }
+}
+
+.comment-body {
+    
+}
+
+.comment-author {
+    width: 100%;
+    float: left;
+    font-weight: bold;
+    line-height: 32px;
+
+    @include respond-min($break-medium) {
+        margin-bottom: $gutter;
+        font-weight: normal;
+    }
+}
+
+.avatar {
+    width: auto;
+    height: auto;
+    float: right;
+    @include border-radius();
+    @include box-shadow($default-box-shadow);
+
+    @include respond-min($break-medium) {
+        margin-right: $gutter-skinny;
+        vertical-align: top;
+        float: none;
+    }
+}
+
+.says {
+    
+}
+
+.comment-meta {
+    @include rem('font-size',$text-skinny);
+
+    @include respond-min($break-medium) {
+        padding-top: 20px;
+        position: absolute;
+        top: 0;
+        right: $gutter;
+        line-height: 32px;
+    }
+
+    a {
+        color: $lesser-color;
+        text-decoration: none;
+
+        &:hover, &:focus {
+            color: $lesser-color-hover;
+        }
+    }
+}
+
+.comments-title {
+    
+}
+
+.comment-list {
+    @extend %ul-nostyling;
+}
+
+.comment-author-admin, .bypostauthor {
+}
+
+.children {
+    margin-bottom: 0;
+    padding: 0;
+    list-style-type: none;
+
+    .comment {
+        margin: 0;
+        padding: $gutter-skinny 0 0 $gutter-skinny;
+        border-bottom: none;
+        border-top: 1px solid $border-color;
+
+        @include respond-min($break-medium) {
+            padding: $gutter-skinny;
+            border-bottom: 1px solid $border-color;
+        }
+    }
+}
+
+.comment-reply-link {
+    text-decoration: none;
+
+    &:hover, &:focus {
+        text-decoration: underline;
+    }
+}
+
+.logged-in-as {
+    
+}
+
+.form-submit {
+    @extend %formrow;
+    margin: 0;
+}

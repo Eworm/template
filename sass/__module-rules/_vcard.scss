@@ -1,6 +1,10 @@
 .vcard {
 
-    ul {
+    .vcard-section {
         @extend %ul-nostyling;
+    }
+    
+    .adr {
+        
     }
 }

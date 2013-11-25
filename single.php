@@ -2,14 +2,14 @@
 
 <div id="content" class="wrapper wrapper-content">
     <div class="holder holder-content">
-        <div id="maincontent" class="grid-column grid-column-5">
+        <div class="grid-column grid-column-5">
             <?php if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>
     
-                <article class="single-article">
+                <article id="maincontent" class="single-post">
     
-                    <header class="maincontent-header single-article-header">
-                        <h1 class="maincontent-titlesingle-article-title"><?php the_title(); ?></h1>
+                    <header class="maincontent-header single-post-header">
+                        <h1 class="maincontent-title single-post-title"><?php the_title(); ?></h1>
                     </header>
                     
                     <div class="entry">
@@ -24,32 +24,32 @@
     				    <?php if (get_the_tags()) the_tags('Tags: ', ', ', '.'); ?><?php } ?>
                     </p>
                     
-                    <a id="toggle-comments" href="#comments-holder">
-                        <?php
-                            $comments_count = get_comments_number( $post_id );
-                            if ($comments_count >= 1) {
-                                _e( 'Alle reacties tonen', 'thema_vertalingen' );
-                                echo ' (';
-                                echo $comments_count;
-                                echo ')';
-                            } else {
-                                _e( 'Er zijn nog geen reacties', 'thema_vertalingen' );
-                            }
-                        ?>
-                    </a>
-                    
-                    <div id="comments-holder">
-                        <?php comments_template(); ?>
-                    </div>
-                    
                 </article>
+                
+                <a id="toggle-comments" href="#comments-holder">
+                    <?php
+                        $comments_count = get_comments_number( $post_id );
+                        if ($comments_count >= 1) {
+                            _e( 'Alle reacties tonen', 'thema_vertalingen' );
+                            echo ' (';
+                            echo $comments_count;
+                            echo ')';
+                        } else {
+                            _e( 'Er zijn nog geen reacties', 'thema_vertalingen' );
+                        }
+                    ?>
+                </a>
+                
+                <div id="comments-holder">
+                    <?php comments_template(); ?>
+                </div>
     
             <?php endwhile; ?>
             <?php else : ?>
                 
-                <article class="single-article no-results not-found">
-    				<header class="maincontent-header single-article-header">
-    					<h1 class="maincontent-title single-article-title"><?php _e( 'Deze pagina bestaat niet', 'thema_vertalingen' ); ?></h1>
+                <article class="single-post no-results not-found">
+    				<header class="maincontent-header single-post-header">
+    					<h1 class="maincontent-title single-post-title"><?php _e( 'Deze pagina bestaat niet', 'thema_vertalingen' ); ?></h1>
     				</header>
     
     				<div class="entry">

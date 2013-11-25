@@ -20,3 +20,37 @@
     padding: 0;
     list-style-type: none;
 }
+
+%formrow {
+    width: 100%;
+    margin-bottom: $margin-skinny;
+    float: left;
+    clear: both;
+    
+    @include respond-min($break-medium) {
+        margin-bottom: $margin;
+    }
+    
+    &:last-child {
+        margin-bottom: 0;
+    }
+    
+    &.error {
+        padding: $gutter-skinny;
+        margin-bottom: 0;
+        background: $alert;
+        color: #fff;
+        @include border-radius();
+        @include border-top-left-radius(0);
+        @include border-top-right-radius(0);
+        @include box-shadow($default-box-shadow);
+        
+        @include respond-min($break-medium) {
+            width: 50%;
+        }
+    }
+    
+    .textarea + div.error {
+        width: 100%;
+    }
+}

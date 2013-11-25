@@ -85,12 +85,6 @@ input[type=submit] {
         }
     }
 
-    .req {
-        font-family: $sec-font;
-        color: $body-color;
-        @include rem('font-size',$body-size);
-    }
-
     .submit, #submit, #searchsubmit {
         text-align: center;
         text-decoration: none;
@@ -110,37 +104,7 @@ input[type=submit] {
 }
 
 .formrow {
-    width: 100%;
-    margin-bottom: $margin-skinny;
-    float: left;
-    clear: both;
-    
-    @include respond-min($break-medium) {
-        margin-bottom: $margin;
-    }
-    
-    &:last-child {
-        margin-bottom: 0;
-    }
-    
-    &.error {
-        padding: $gutter-skinny;
-        margin-bottom: 0;
-        background: $alert;
-        color: #fff;
-        @include border-radius();
-        @include border-top-left-radius(0);
-        @include border-top-right-radius(0);
-        @include box-shadow($default-box-shadow);
-        
-        @include respond-min($break-medium) {
-            width: 50%;
-        }
-    }
-    
-    .textarea + div.error {
-        width: 100%;
-    }
+    @extend %formrow;
 }
 
 #screenReader
@@ -148,4 +112,9 @@ input[type=submit] {
 , #loading
 {
     display: none;
+}
+
+.req {
+    color: $lesser-color;
+    @include rem('font-size',$body-size);
 }

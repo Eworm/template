@@ -55,6 +55,7 @@ Version: 1.0
 
 /* Module rules. Styling of reusable, modular parts of the design.
 =================================================================*/
+@import "__module-rules/comments";
 @import "__module-rules/header-image";
 @import "__module-rules/search-results";
 @import "__module-rules/search-form";
