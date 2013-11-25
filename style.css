@@ -860,21 +860,21 @@ a {
     .maincontent-title a:hover, .maincontent-title a:focus {
       text-decoration: underline; }
 
-#maincontent h2 {
+.maincontent-body h2 {
   margin: 0;
   font-weight: bold;
   font-size: 16.38px;
   font-size: 1.02375rem; }
   @media screen and (min-width: 48em) {
-    #maincontent h2 {
+    .maincontent-body h2 {
       font-weight: normal;
       font-size: 21px;
       font-size: 1.3125rem; } }
-#maincontent h3 {
+.maincontent-body h3 {
   margin: 0;
   font-size: 16.38px;
   font-size: 1.02375rem; }
-#maincontent h4 {
+.maincontent-body h4 {
   margin: 0;
   font-weight: normal;
   font-size: 14px;
@@ -1200,6 +1200,11 @@ input[type=checkbox], input[type=radio] {
   @media screen and (min-width: 48em) {
     #maincontent {
       padding: 0 0 20px; } }
+
+.maincontent-body p {
+  margin: 0 0 20px; }
+  .maincontent-body p:last-child {
+    margin-bottom: 0; }
 
 #mainmenu {
   width: 85%;

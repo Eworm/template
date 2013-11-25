@@ -8,3 +8,14 @@
 
 .maincontent-header {
 }
+
+.maincontent-body {
+
+    p {
+        margin: 0 0 $gutter;
+        
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

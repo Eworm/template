@@ -11,7 +11,9 @@
                         <h1 class="maincontent-title"><?php the_title(); ?></h1>
                     </header>
                     
-                    <?php the_content('Weiterlesen &raquo;'); ?>
+                    <div class="maincontent-body">
+                        <?php the_content('Weiterlesen &raquo;'); ?>
+                    </div>
                     
                 <?php endwhile; ?>
             <?php endif; ?>

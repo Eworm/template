@@ -36,7 +36,9 @@
                 <header class="maincontent-header">
                     <h1 class="maincontent-title"><?php the_title(); ?></h1>
                 </header>
-                <?php the_content('Lees meer &raquo;'); ?>
+                <div class="maincontent-body">
+                    <?php the_content('Lees meer &raquo;'); ?>
+                </div>
                 
                 <div id="thumbs">
                     <?php

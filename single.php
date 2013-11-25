@@ -12,7 +12,7 @@
                         <h1 class="maincontent-title single-post-title"><?php the_title(); ?></h1>
                     </header>
                     
-                    <div class="entry">
+                    <div class="maincontent-body">
                         <?php the_content('Lees meer &raquo;'); ?>
                     </div>
                     
