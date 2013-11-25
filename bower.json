@@ -15,6 +15,7 @@
         "zepto": "1.0.0",
         "picturefill": "1.2.0",
         "hideShowPassword": "1.0.2",
-        "on-media-query": ""
+        "on-media-query": "",
+        "zepto-sources": "~1.0.2"
     }
 }
