@@ -125,6 +125,7 @@ div.aligncenter, .alignright, .alignleft, a img.alignright, a img.alignnone, a i
 
 /* Flexbox stuff
 =================================================================*/
+/* On media query: https://github.com/JoshBarr/on-media-query */
 /*
 -----------------------------------------------------------
 This is a hack. It works in:

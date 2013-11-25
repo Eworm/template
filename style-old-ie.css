@@ -1,3 +1,5 @@
+/* No need to edit anything here, this stylesheet generates a css file without media queries
+=================================================================*/
 /* 992px */
 /*!
 Theme Name: Repsonsive mobile nav left
@@ -124,6 +126,7 @@ div.aligncenter, .alignright, .alignleft, a img.alignright, a img.alignnone, a i
 
 /* Flexbox stuff
 =================================================================*/
+/* On media query: https://github.com/JoshBarr/on-media-query */
 /*
 -----------------------------------------------------------
 This is a hack. It works in:
