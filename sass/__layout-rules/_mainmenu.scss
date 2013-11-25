@@ -6,9 +6,9 @@
     left: -$mobile-menu-width;
     z-index: 1000;
     background: $nav-bg-color;
-    -webkit-perspective: 1000;
-    -webkit-backface-visibility: hidden;
     border-right: 1px solid $border-color;
+    @include backface-visibility(hidden);
+    @include perspective(1000);
     
     .csstransforms3d & {
         left: 0;
@@ -38,7 +38,6 @@
 
     @include respond-min($break-medium) {
         width: 100%;
-        left: 0;
         height: auto;
         float: left;
         position: static;
@@ -56,7 +55,6 @@
     
     @include old-ie {
         width: 100%;
-        left: 0;
         height: auto;
         float: left;
         position: static;
@@ -64,8 +62,8 @@
 
     #main-menu {
         width: 100%;
-        padding: 0;
         margin: 0;
+        padding: 0;
         display: block;
         border-top: 1px solid $border-color;
 
@@ -77,8 +75,8 @@
             width: 50px;
             height: 100%;
             position: absolute;
-            right: 0;
             top: 0;
+            right: 0;
             z-index: 1200;
             cursor: pointer;
             display: block;
@@ -91,8 +89,8 @@
                 border: 8px solid transparent;
                 border-top: 8px solid #000;
                 position: absolute;
-                left: 50%;
                 top: 50%;
+                left: 50%;
                 margin-left: -8px;
                 margin-top: -4px;
             }
@@ -280,8 +278,8 @@
             width: 200px;
             margin-top: -4px;
             position: absolute;
-            left: 0;
             top: 100%;
+            left: 0;
             background: #fff;
             border: 1px solid $border-color;
         }

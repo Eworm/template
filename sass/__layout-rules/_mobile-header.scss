@@ -4,8 +4,8 @@
     padding: 0 $gutter-skinny;
     border-bottom: 1px solid $border-color;
     position: absolute;
-    left: 0;
     top: 0;
+    left: 0;
     z-index: 1000;
     @include transform3d(translate3d(0, 0, 0));
 

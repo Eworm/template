@@ -93,7 +93,7 @@ body {
 
     .csstransforms3d.toggle-menu & {
         left: 0;
-        -webkit-backface-visibility: hidden;
+        @include backface-visibility(hidden);
         @include transform3d(translate3d($mobile-menu-width, 0, 0) scale3d(1, 1, 1));
 
         .wrapper {
@@ -130,7 +130,7 @@ a {
 .wrapper {
     width: 100%;
     float: left;
-    -webkit-backface-visibility: hidden;
+    @include backface-visibility(hidden);
     @include transform-style(flat);
 
     @include respond-min($break-medium) {

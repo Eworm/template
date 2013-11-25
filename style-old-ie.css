@@ -13,7 +13,6 @@ Version: 1.0
 =================================================================*/
 /* Layout colors
 =================================================================*/
-/* Defaults */
 /* Font sizes
 =================================================================*/
 /* Font families
@@ -688,6 +687,10 @@ body {
   .csstransforms3d.toggle-menu #container-transition {
     left: 0;
     -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
     -webkit-transform: translate3d(85%, 0, 0) scale3d(1, 1, 1);
     -moz-transform: translate3d(85%, 0, 0) scale3d(1, 1, 1);
     -ms-transform: translate3d(85%, 0, 0) scale3d(1, 1, 1);
@@ -740,6 +743,10 @@ a {
   width: 100%;
   float: left;
   -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
   -webkit-transform-style: flat;
   -moz-transform-style: flat;
   -ms-transform-style: flat;
@@ -828,8 +835,8 @@ a {
     position: relative; }
     .l-post .blog-thumb img {
       position: absolute;
-      left: 0;
       top: 0;
+      left: 0;
       -webkit-border-radius: 0;
       -moz-border-radius: 0;
       -ms-border-radius: 0;
@@ -959,8 +966,8 @@ time, .postdate {
       font-size: 12px;
       font-size: 0.75rem;
       position: absolute;
-      right: 20px;
       top: 0;
+      right: 20px;
       padding-top: 20px;
       line-height: 32px; }
       #comments-holder .comment .comment-meta a, #comments-holder .trackback .comment-meta a, #comments-holder .pingback .comment-meta a, #comments-holder #respond .comment-meta a {
@@ -1059,7 +1066,6 @@ input[type=submit] {
     font-size: 14px;
     font-size: 0.875rem; }
   #content form .submit, #content form #submit, #content form #searchsubmit {
-    width: 100%;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
@@ -1116,8 +1122,8 @@ input[type=submit] {
   height: 48px;
   margin-left: -36px;
   position: absolute;
-  left: 50%;
   top: 4px;
+  left: 50%;
   text-indent: -9999px;
   display: block;
   background-repeat: no-repeat;
@@ -1235,14 +1241,21 @@ a img.aligncenter {
   left: -85%;
   z-index: 1000;
   background: white;
-  -webkit-perspective: 1000;
-  -webkit-backface-visibility: hidden;
   border-right: 1px solid #eeeeee;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  -o-perspective: 1000;
+  perspective: 1000;
   width: 50%;
   left: -50%;
   z-index: 10;
   width: 100%;
-  left: 0;
   height: auto;
   float: left;
   position: static;
@@ -1252,7 +1265,6 @@ a img.aligncenter {
   box-shadow: none;
   float: none;
   width: 100%;
-  left: 0;
   height: auto;
   float: left;
   position: static; }
@@ -1279,8 +1291,8 @@ a img.aligncenter {
     transform: translate3d(0, 0, 0); }
   #mainmenu #main-menu {
     width: 100%;
-    padding: 0;
     margin: 0;
+    padding: 0;
     display: block;
     border-top: 1px solid #eeeeee;
     border-top: none; }
@@ -1288,8 +1300,8 @@ a img.aligncenter {
       width: 50px;
       height: 100%;
       position: absolute;
-      right: 0;
       top: 0;
+      right: 0;
       z-index: 1200;
       cursor: pointer;
       display: block;
@@ -1301,8 +1313,8 @@ a img.aligncenter {
         border: 8px solid transparent;
         border-top: 8px solid #000;
         position: absolute;
-        left: 50%;
         top: 50%;
+        left: 50%;
         margin-left: -8px;
         margin-top: -4px; }
     #mainmenu #main-menu .toggle-sub-close:after {
@@ -1359,8 +1371,8 @@ a img.aligncenter {
     width: 200px;
     margin-top: -4px;
     position: absolute;
-    left: 0;
     top: 100%;
+    left: 0;
     background: #fff;
     border: 1px solid #eeeeee; }
     .current_page_parent #mainmenu .sub-menu, .current-menu-parent #mainmenu .sub-menu {
@@ -1411,8 +1423,8 @@ a img.aligncenter {
   padding: 0 10px;
   border-bottom: 1px solid #eeeeee;
   position: absolute;
-  left: 0;
   top: 0;
+  left: 0;
   z-index: 1000;
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);

@@ -29,8 +29,8 @@
 
             img {
                 position: absolute;
-                left: 0;
                 top: 0;
+                left: 0;
                 @include border-radius(0);
             }
         }
@@ -212,8 +212,8 @@ time, .postdate {
 
             @include respond-min($break-medium) {
                 position: absolute;
-                right: $gutter;
                 top: 0;
+                right: $gutter;
                 padding-top: 20px;
                 line-height: 32px;
             }
