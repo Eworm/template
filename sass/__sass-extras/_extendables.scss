@@ -1,7 +1,7 @@
 %postimage {
     width: 100%;
-    margin: $gutter-skinny 0;
     height: auto;
+    margin: $gutter-skinny 0;
     display: block;
     @include border-radius();
     @include box-shadow($default-box-shadow);

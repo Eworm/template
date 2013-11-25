@@ -1,4 +1,9 @@
 #maincontent {
+    padding: $gutter-skinny 0;
+
+    @include respond-min($break-medium) {
+        padding: 0 0 $gutter;
+    }
 }
 
 .maincontent-header {

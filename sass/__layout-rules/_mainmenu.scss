@@ -62,7 +62,7 @@
         position: static;
     }
 
-    ul {
+    #main-menu {
         width: 100%;
         padding: 0;
         margin: 0;
@@ -110,7 +110,7 @@
             
     }
 
-    li {
+    .menu-item {
         width: 100%;
         float: left;
         position: relative;
@@ -159,7 +159,6 @@
         @include respond-min($break-medium) {
             @include box-shadow(none);
             @include background-image(none);
-            /* @include text-shadow(rgba(#000,.25) 0 1px 1px); */
         }
     }
 
@@ -204,102 +203,104 @@
             }
         }
     }
-}
-
-.sub-menu {
-    width: 100%;
-    border: none;
-    display: none;
-    float: left;
-    background: #fff;
-    position: relative;
-    z-index: 10000;
-
-    .current_page_parent &, .current-menu-parent & {
-        display: block;
-    }
-
-    .current_page_ancestor &, .current-menu-item & {
-        display: block;
-        
-        @include respond-min($break-medium) {
+    
+    .sub-menu {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border: none;
+        display: none;
+        float: left;
+        background: #fff;
+        position: relative;
+        z-index: 10000;
+    
+        .current_page_parent &, .current-menu-parent & {
+            display: block;
+        }
+    
+        .current_page_ancestor &, .current-menu-item & {
+            display: block;
+            
+            @include respond-min($break-medium) {
+                display: none;
+            }
+        }
+    
+        .current_page_ancestor .menu-item & {
             display: none;
         }
-    }
-
-    .current_page_ancestor .menu-item & {
-        display: none;
-    }
-
-    .current_page_ancestor .current_page_ancestor & {
-        display: block;
-    }
-
-    li {    
-        width: 100%;
-
-        a {
-            width: 100%;
-            float: left;
-            border-bottom: 1px solid $border-color;
-
-            @include respond-min($break-medium) {
-                padding: 8px $gutter-skinny;
-                white-space: nowrap;
-                border: none;
-                color: $body-color;
-                border-bottom: 1px solid $border-color;
-            }
-            
-            &:hover, &:focus {
-                background: $border-color;
-            }
+    
+        .current_page_ancestor .current_page_ancestor & {
+            display: block;
         }
-        
-        &:last-child {
-            
+    
+        .menu-item {    
+            width: 100%;
+    
             a {
-            
+                width: 100%;
+                float: left;
+                border-bottom: 1px solid $border-color;
+    
                 @include respond-min($break-medium) {
+                    padding: 8px $gutter-skinny;
+                    white-space: nowrap;
                     border: none;
+                    color: $body-color;
+                    border-bottom: 1px solid $border-color;
+                }
+                
+                &:hover, &:focus {
+                    background: $border-color;
+                }
+            }
+            
+            &:last-child {
+                
+                a {
+                
+                    @include respond-min($break-medium) {
+                        border: none;
+                    }
                 }
             }
         }
-    }
-
-    &.active-sub {
-        display: block !important;
-        float: left;
-    }
-
-    &.closed-sub {
-        display: none !important;
-    }
-
-    @include respond-min($break-medium) {
-        width: 200px;
-        position: absolute;
-        left: 0;
-        top: 100%;
-        margin-top: -4px;
-        background: #fff;
-        border: 1px solid $border-color;
-    }
     
-    &:before {
-        
+        &.active-sub {
+            display: block !important;
+            float: left;
+        }
+    
+        &.closed-sub {
+            display: none !important;
+        }
+    
         @include respond-min($break-medium) {
-/*
-            content: '';
-            width: 0;
-            height: 0;
-            border: 6px solid transparent;
-            border-bottom: 6px solid #fff;
+            width: 200px;
+            margin-top: -4px;
             position: absolute;
-            margin-left: -3px;
-            left: 50%;
-            top: -12px;
-*/
+            left: 0;
+            top: 100%;
+            background: #fff;
+            border: 1px solid $border-color;
+        }
+        
+        &:before {
+            
+            @include respond-min($break-medium) {
+    /*
+                content: '';
+                width: 0;
+                height: 0;
+                border: 6px solid transparent;
+                border-bottom: 6px solid #fff;
+                position: absolute;
+                margin-left: -3px;
+                left: 50%;
+                top: -12px;
+    */
+            }
         }
     }
 }

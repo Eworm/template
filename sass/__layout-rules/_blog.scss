@@ -1,7 +1,7 @@
 .l-post {
     width: 100%;
-    float: left;
     margin-bottom: $gutter;
+    float: left;
     
     &:last-child {
         margin-bottom: 0;
@@ -59,7 +59,7 @@ l-post-entry {
 
 time, .postdate {
     color: $lesser-color;
-    @include rem('font-size',$smalltext-size);
+    @include rem('font-size',$text-skinny);
 
     a {
         color: $lesser-color;
@@ -73,7 +73,7 @@ time, .postdate {
 }
 
 .l-post-options {
-    @include rem('font-size',$smalltext-size);
+    @include rem('font-size',$text-skinny);
 
     a {
         text-decoration: none;
@@ -128,9 +128,9 @@ time, .postdate {
     }
 
     @include respond-min($break-medium) {
+        margin: $gutter 0;
         padding: 0;
         padding-top: $gutter;
-        margin: $gutter 0;
         display: block;
     }
 
@@ -188,8 +188,8 @@ time, .postdate {
         }
 
         @include respond-min($break-medium) {
-            padding: $gutter-skinny;
             margin: 0 0 $gutter-skinny 0;
+            padding: $gutter-skinny;
             border: 1px solid $border-color;
             @include border-radius();
         }
@@ -208,7 +208,7 @@ time, .postdate {
         }
 
         .comment-meta {
-            @include rem('font-size',$smalltext-size);
+            @include rem('font-size',$text-skinny);
 
             @include respond-min($break-medium) {
                 position: absolute;
@@ -233,9 +233,9 @@ time, .postdate {
     }
 
     .children {
-        list-style-type: none;
-        padding: 0;
         margin-bottom: 0;
+        padding: 0;
+        list-style-type: none;
 
         .comment {
             margin: 0;

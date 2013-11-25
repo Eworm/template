@@ -17,24 +17,27 @@
     }
 }
 
-h2 {
-    margin: 0;
-    font-weight: bold;
-    @include rem('font-size',$header-3);
+#maincontent {
 
-    @include respond-min($break-medium) {
-        font-weight: normal;
-        @include rem('font-size',$header-2);
+    h2 {
+        margin: 0;
+        font-weight: bold;
+        @include rem('font-size',$header-3);
+    
+        @include respond-min($break-medium) {
+            font-weight: normal;
+            @include rem('font-size',$header-2);
+        }
     }
-}
-
-h3 {
-    margin: 0;
-    @include rem('font-size',$header-3);
-}
-
-h4 {
-    margin: 0;
-    font-weight: normal;
-    @include rem('font-size',$header-4);
+    
+    h3 {
+        margin: 0;
+        @include rem('font-size',$header-3);
+    }
+    
+    h4 {
+        margin: 0;
+        font-weight: normal;
+        @include rem('font-size',$header-4);
+    }
 }

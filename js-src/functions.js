@@ -112,15 +112,11 @@ $(document).ready(function() {
             match: function() {
 
                 // Submenu
-                $('.has-submenu').mouseenter(
-                    function() {
-                        $('.sub-menu', this).fadeIn('fast');
-                    }
-                ).mouseleave(
-                    function() {
-                        $('.sub-menu', this).fadeOut('fast');
-                    }
-                );
+                $('.has-submenu').on('mouseenter', function() {
+                    $('.sub-menu', this).show();
+                }).on('mouseleave',function() {
+                    $('.sub-menu', this).hide();
+                });
 
                 // The map for the company address
                 if (typeof company_address != 'undefined') {

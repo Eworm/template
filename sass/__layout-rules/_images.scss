@@ -107,7 +107,7 @@ a img.aligncenter {
     p.wp-caption-text {
         display: block;
         margin: $gutter-skinny 0 0 0;
-        @include rem('font-size', $smalltext-size);
+        @include rem('font-size', $text-skinny);
     }
 }
 

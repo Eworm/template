@@ -24,7 +24,6 @@ textarea {
 }
 
 input[type=file] {
-    width: 100%;
     padding: 0;
 }
 
@@ -34,7 +33,6 @@ input[type=checkbox], input[type=radio] {
 }
 
 input[type=submit] {
-    width: 100%;
     
     @include respond-min($break-medium) {
         width: auto;
@@ -46,8 +44,8 @@ input[type=submit] {
     z-index: 1;
 
     .formcontainer {
-        clear: both;
         padding: 0;
+        clear: both;
 
         @include respond-min($break-medium) {
             width: 100%;
@@ -70,9 +68,9 @@ input[type=submit] {
     }
 
     li {
+        margin-right: 12px;
         padding: 0;
         background: none;
-        margin-right: 12px;
         @include inline-block;
 
         input {

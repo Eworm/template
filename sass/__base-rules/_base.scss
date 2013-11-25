@@ -125,7 +125,7 @@ a {
     }
 }
 
-/* Class to divide sections
+/* Section divider
 =================================================================*/
 .wrapper {
     width: 100%;
@@ -134,7 +134,6 @@ a {
     @include transform-style(flat);
 
     @include respond-min($break-medium) {
-        padding: 0;
 
         @include old-ie {
             width: auto;
@@ -143,37 +142,11 @@ a {
     }
 }
 
-.wrapper-header {
-    margin-bottom: $gutter;
-
-    @include respond-min($break-medium) {
-        background: #fff;
-        padding: $gutter 0;
-        border-bottom: 1px solid $border-color;
-    }
-}
-
-.wrapper-content {
-    padding: $gutter-skinny 0;
-
-    @include respond-min($break-medium) {
-        padding: 0 0 $gutter;
-    }
-}
-
-.wrapper-doormat {
-    
-}
-
-.wrapper-footer {
-    
-}
-
-/* Class to center a site
+/* Center site
 =================================================================*/
 .holder {
-    padding: $gutter;
     margin: 0 auto;
+    padding: $gutter;
     clear: both;
 
     @include respond-min($break-medium) {

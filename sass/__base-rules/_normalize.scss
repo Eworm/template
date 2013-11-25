@@ -30,7 +30,7 @@ $h5-font-size: 0.83 * $base-font-size !default;
 $h6-font-size: 0.67 * $base-font-size !default;
 
 // The amount lists and blockquotes are indented.
-$indent-amount: 40px !default;
+$indent-amount: 20px !default;
 
 // Set this to true to add support for IE 6.
 $legacy-support-for-ie6: false !default; // Override default set in Compass' Support partial.
@@ -112,7 +112,6 @@ audio:not([controls]) {
  */
 
 html {
-    font-family: $base-font-family; /* 1 */
     @if not $strict-normalize or $legacy-support-for-ie6 or $legacy-support-for-ie7 {
         font-size: 100% * ($base-font-size / 16px); /* 3 */
     }

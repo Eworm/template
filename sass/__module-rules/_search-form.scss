@@ -17,10 +17,10 @@
 
         @include respond-min($break-medium) {
             width: 20%;
+            padding: 0;
             float: right;
             background: transparent;
             text-align: left;
-            padding: 0;
             clear: none;
             display: block;
         }

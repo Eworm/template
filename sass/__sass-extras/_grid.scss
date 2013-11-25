@@ -4,7 +4,7 @@
     @return 100% / ($max-width / $gutter);
 }
 
-/* Generate grid css for the right amount of columns
+/* Base grid styles
 =================================================================*/
 .grid-column {
     width: 100%;
@@ -15,19 +15,23 @@
     @include respond-min($break-medium) {
         margin-right: margin-width();
         clear: none;
-        
-        @for $i from 1 through $nr-of-columns {
-            &.column-#{$i} {
-                width: 100% / ($max-width / (((($max-width - (($nr-of-columns - 1) * $gutter)) / $nr-of-columns) * $i) + (($i - 1) * $gutter)));
-            }
-        }
-        
-        &.no-margin {
-            margin-right: 0;
-        }
     }
 }
 
+.no-margin {
+    margin-right: 0;
+}
+        
 .plus-margin {
     margin-right: margin-width();
+}
+
+/* Use the nr-of-columns variable to generate the grid widths
+=================================================================*/
+@include respond-min($break-medium) {
+    @for $i from 1 through $nr-of-columns {
+        .grid-column-#{$i} {
+            width: 100% / ($max-width / (((($max-width - (($nr-of-columns - 1) * $gutter)) / $nr-of-columns) * $i) + (($i - 1) * $gutter)));
+        }
+    }
 }
