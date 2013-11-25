@@ -5,21 +5,39 @@ $(document).ready(function() {
         $('html').addClass('start-animatin');
     }, 50);
 
+
     // Sniffing for android lower then 2.3
     var ua = navigator.userAgent.toLowerCase();
     var isAndroid = ua.indexOf("android") > -1;
     if(isAndroid) {
-      var androidversion = parseFloat(ua.slice(ua.indexOf("android")+8)); 
-      if (androidversion <= 2.3) {
-          $('html').addClass('no-overflow-scroll');
-      }
+        var androidversion = parseFloat(ua.slice(ua.indexOf("android")+8)); 
+        if (androidversion <= 2.3) {
+            $('html').addClass('no-overflow-scroll');
+        }
     }
+    
+    
+    // Show initial password
+    $('#LoginPassword').hideShowPassword({
+        show: true
+    });
+    // Toggle password
+    $('#show-password').on('change', function () {
+        // When the '#show-password' checkbox changes its value,
+        // set the visibility of the password field to whatever
+        // its 'checked' attribute is.
+        $('#LoginPassword').hideShowPassword(
+            $(this).prop('checked')
+        );
+    });
+
 
     // Toggle the menu
     $('#menu-toggler a').on('click touchstart', function(e) {
         e.preventDefault();
         openMenu('toggle-menu','active-menu','content-toggle',true);
     });
+
 
     // Close the menu when clickin' on the content
     $('html').on('click touchstart', '#content-toggle', function(e) {
@@ -28,11 +46,13 @@ $(document).ready(function() {
         $(this).remove();
     });
 
+
     // Toggle the doormat
     $('#doormat-toggler a').on('click touchstart', function(e) {
         e.preventDefault();
         openMenu('toggle-doormat','active-doormat','doormat-toggle',false);
     });
+
 
     // Close the menu when clickin' on the content
     $('html').on('click touchstart', '#doormat-toggle', function(e) {
@@ -40,6 +60,7 @@ $(document).ready(function() {
         closeMenu('toggle-doormat','active-doormat');
         $(this).remove();
     });
+
 
     // Function to open something
     function openMenu(toggleClass,activeClass,contentToggle,scrollTop) {
@@ -50,6 +71,7 @@ $(document).ready(function() {
         }, 180);
     };
 
+
     // Function to close something
     function closeMenu(toggleClass,activeClass) {
         $('html').removeClass(toggleClass);
@@ -57,6 +79,7 @@ $(document).ready(function() {
             $('html').removeClass(activeClass);
         }, 180);
     };
+
 
     /* Responsive javascript: https://github.com/JoshBarr/js-media-queries */
     var queries = [
@@ -67,6 +90,7 @@ $(document).ready(function() {
 
                 // Put the search in the menu
                 $('#header #searchform').prependTo('#menu');
+
 
                 // Add the submenu toggle
                 $('.sub-menu').each(function() {
@@ -83,12 +107,14 @@ $(document).ready(function() {
                     $(this).prev().width(parentHeight);
                 })
 
+
                 // Attach click events to submenu toggle
                 $('.toggle-sub').on('click', function() {
                     $(this).toggleClass('toggle-sub-close');
                     //$(this).next().toggleClass('active-sub');
                     $(this).next().toggle();
                 })
+
 
                 // Toggle the comments
                 $('#toggle-comments').on('click touchstart', function(e) {
@@ -101,6 +127,7 @@ $(document).ready(function() {
 
                 // Put the search back
                 $('#searchform').insertAfter('#logo');
+
 
                 // Remove the submenu toggle
                 $('.toggle-sub').remove();
@@ -118,11 +145,13 @@ $(document).ready(function() {
                     $('.sub-menu', this).hide();
                 });
 
+
                 // The map for the company address
                 if (typeof company_address != 'undefined') {
                     initialize_single(company_address);
                     var bounds = new google.maps.LatLngBounds();
                 }
+
 
                 // Initialize a single marker
                 function initialize_single(v) {
