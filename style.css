@@ -6,7 +6,7 @@ Author URI: http://www.woutmager.nl
 Version: 1.0
 */
 /* Function to remove media queries for old ie's: http://jakearchibald.github.com/sass-ie/ */
-/* Variables for color, fonts, sizes, etc
+/* Theme rules (variables)
 =================================================================*/
 /* Base colors
 =================================================================*/
@@ -44,7 +44,7 @@ Version: 1.0
 /* 992px */
 /* Extra intermediate breakpoints
 =================================================================*/
-/* Sass & extra's
+/* Sass functions, extendables & mixins.
 =================================================================*/
 /* Pixels to em
 =================================================================*/
@@ -1728,6 +1728,4 @@ table {
     */ }
 
 /* State rules
-=================================================================*/
-/* Theme rules
 =================================================================*/
