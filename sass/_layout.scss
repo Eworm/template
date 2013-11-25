@@ -3,14 +3,14 @@
 
 /* Variables for color, fonts, sizes, etc
 =================================================================*/
-@import "__variables/colors";
-@import "__variables/defaults";
-@import "__variables/fonts";
-@import "__variables/grid-variables";
-@import "__variables/headers";
-@import "__variables/margins-paddings";
-@import "__variables/mobile";
-@import "__variables/responsive-breakpoints";
+@import "__theme-rules/colors";
+@import "__theme-rules/defaults";
+@import "__theme-rules/fonts";
+@import "__theme-rules/grid-variables";
+@import "__theme-rules/headers";
+@import "__theme-rules/margins-paddings";
+@import "__theme-rules/mobile";
+@import "__theme-rules/responsive-breakpoints";
 
 /* Sass & extra's
 =================================================================*/
