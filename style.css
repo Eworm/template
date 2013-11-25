@@ -10,16 +10,28 @@ Version: 1.0
 =================================================================*/
 /* Base colors
 =================================================================*/
+/* Should not be #000 for people with dyslexia: http://uxmovement.com/content/6-surprising-bad-practices-that-hurt-dyslexic-users/ */
+/* Should be a blue so people will know links are links */
 /* Layout colors
 =================================================================*/
 /* Font sizes
 =================================================================*/
 /* Font families
 =================================================================*/
-/* The grid */
+/* Websafe font family */
+/* Special font, for example a google font */
+/* Grid variables.
+=================================================================*/
+/* The fluid site width if the screen is smaller then the max size */
+/* The max-size of the site */
+/* How many grid columns we have */
 /* Header sizes
 =================================================================*/
 /* Gutters
+=================================================================*/
+/* Margins
+=================================================================*/
+/* Paddings
 =================================================================*/
 /* Other sizes
 =================================================================*/
@@ -30,6 +42,8 @@ Version: 1.0
 /* 480px */
 /* 768px */
 /* 992px */
+/* Extra intermediate breakpoints
+=================================================================*/
 /* Sass & extra's
 =================================================================*/
 /* Pixels to em
@@ -101,8 +115,8 @@ div.aligncenter, .alignright, .alignleft, a img.alignright, a img.alignnone, a i
   width: 0;
   height: 0;
   content: '';
-  border: 8px solid transparent;
-  position: absolute; }
+  position: absolute;
+  border: 8px solid transparent; }
 
 .mobile-header-menuitem, .vcard ul {
   margin: 0;
@@ -617,9 +631,9 @@ html {
     overflow: visible; }
 
 body {
-  font: 14px/1.8 Arial, Verdana, sans-serif;
+  color: #222222;
   background: white;
-  color: #222222; }
+  font: 14px/1.8 Arial, Verdana, sans-serif; }
   .active-menu body {
     height: 100%;
     overflow: hidden;
@@ -653,8 +667,8 @@ body {
   right: 0;
   bottom: 0;
   left: 85%;
-  background: white;
   z-index: 10000;
+  background: white;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0; }
   @media screen and (min-width: 30em) {
@@ -793,12 +807,11 @@ a {
 
 .maincontent-title {
   font-weight: normal;
-  margin-bottom: 0 0 10px;
+  margin: 0 0 20px;
   font-size: 21px;
   font-size: 1.3125rem; }
   @media screen and (min-width: 48em) {
     .maincontent-title {
-      margin-bottom: 20px;
       font-size: 28px;
       font-size: 1.75rem; } }
   .maincontent-title a {
@@ -903,10 +916,10 @@ time, .postdate {
 #toggle-comments {
   width: 100%;
   padding: 10px 0;
-  text-align: center;
   display: block;
-  text-decoration: none;
   background: #fff;
+  text-decoration: none;
+  text-align: center;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
@@ -920,15 +933,14 @@ time, .postdate {
       display: none; } }
 
 #comments-holder {
-  display: none;
-  margin-top: 10px; }
+  margin-top: 10px;
+  display: none; }
   #comments-holder.toggle {
     display: block; }
   @media screen and (min-width: 48em) {
     #comments-holder {
       margin: 20px 0;
-      padding: 0;
-      padding-top: 20px;
+      padding: 20px 0 0 0;
       display: block; } }
   #comments-holder h3 {
     display: none; }
@@ -970,9 +982,9 @@ time, .postdate {
     width: 100%;
     padding: 20px 0;
     float: left;
-    background: transparent;
     position: relative;
-    border-bottom: 2px solid #eeeeee; }
+    border-bottom: 2px solid #eeeeee;
+    background: transparent; }
     #comments-holder .comment .children .comment.depth-2, #comments-holder .trackback .children .comment.depth-2, #comments-holder .pingback .children .comment.depth-2, #comments-holder #respond .children .comment.depth-2 {
       margin-bottom: 20px; }
     @media screen and (min-width: 48em) {
@@ -997,10 +1009,10 @@ time, .postdate {
       font-size: 0.75rem; }
       @media screen and (min-width: 48em) {
         #comments-holder .comment .comment-meta, #comments-holder .trackback .comment-meta, #comments-holder .pingback .comment-meta, #comments-holder #respond .comment-meta {
+          padding-top: 20px;
           position: absolute;
           top: 0;
           right: 20px;
-          padding-top: 20px;
           line-height: 32px; } }
       #comments-holder .comment .comment-meta a, #comments-holder .trackback .comment-meta a, #comments-holder .pingback .comment-meta a, #comments-holder #respond .comment-meta a {
         color: #828282;
@@ -1026,12 +1038,12 @@ time, .postdate {
       text-decoration: underline; }
 
 #doormat {
-  background: #fff;
-  border-top: 1px solid #eeeeee; }
+  border-top: 1px solid #eeeeee;
+  background: #fff; }
 
 #footer {
-  background: #fff;
-  border-top: 1px solid #eeeeee; }
+  border-top: 1px solid #eeeeee;
+  background: #fff; }
 
 input {
   width: 100%;
@@ -1119,15 +1131,18 @@ input[type=checkbox], input[type=radio] {
 
 .formrow {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   float: left;
   clear: both; }
+  @media screen and (min-width: 48em) {
+    .formrow {
+      margin-bottom: 20px; } }
   .formrow:last-child {
     margin-bottom: 0; }
   .formrow.error {
     padding: 10px;
     margin-bottom: 0;
-    background: #f00;
+    background: red;
     color: #fff;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -1246,11 +1261,11 @@ input[type=checkbox], input[type=radio] {
     margin-right: auto; } }
 
 .wp-caption {
-  background: #fff;
-  border: 1px solid #eeeeee;
-  padding: 10px;
-  text-align: center;
   margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #eeeeee;
+  background: #fff;
+  text-align: center;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
@@ -1260,10 +1275,10 @@ input[type=checkbox], input[type=radio] {
     width: 100%;
     max-width: 100%;
     height: auto;
-    border: 0 none;
     margin: 0 0 10px;
     padding: 0;
-    display: block; }
+    display: block;
+    border: 0 none; }
     @media screen and (min-width: 48em) {
       .wp-caption img {
         max-width: auto; } }
@@ -1311,8 +1326,8 @@ input[type=checkbox], input[type=radio] {
   top: 0;
   left: -85%;
   z-index: 1000;
-  background: white;
   border-right: 1px solid #eeeeee;
+  background: white;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
@@ -1407,9 +1422,9 @@ input[type=checkbox], input[type=radio] {
   #mainmenu a {
     display: block;
     padding: 10px 20px;
-    text-decoration: none;
+    position: relative;
     border-bottom: 1px solid #eeeeee;
-    position: relative; }
+    text-decoration: none; }
     @media screen and (min-width: 48em) {
       #mainmenu a {
         padding: 10px;
@@ -1446,12 +1461,12 @@ input[type=checkbox], input[type=radio] {
     width: 100%;
     margin: 0;
     padding: 0;
-    border: none;
     display: none;
     float: left;
-    background: #fff;
     position: relative;
-    z-index: 10000; }
+    z-index: 10000;
+    border: none;
+    background: #fff; }
     .current_page_parent #mainmenu .sub-menu, .current-menu-parent #mainmenu .sub-menu {
       display: block; }
     .current_page_ancestor #mainmenu .sub-menu, .current-menu-item #mainmenu .sub-menu {
@@ -1472,10 +1487,10 @@ input[type=checkbox], input[type=radio] {
         @media screen and (min-width: 48em) {
           #mainmenu .sub-menu .menu-item a {
             padding: 8px 10px;
-            white-space: nowrap;
-            border: none;
             color: #222222;
-            border-bottom: 1px solid #eeeeee; } }
+            border: none;
+            border-bottom: 1px solid #eeeeee;
+            white-space: nowrap; } }
         #mainmenu .sub-menu .menu-item a:hover, #mainmenu .sub-menu .menu-item a:focus {
           background: #eeeeee; }
       @media screen and (min-width: 48em) {
@@ -1493,8 +1508,8 @@ input[type=checkbox], input[type=radio] {
         position: absolute;
         top: 100%;
         left: 0;
-        background: #fff;
-        border: 1px solid #eeeeee; } }
+        border: 1px solid #eeeeee;
+        background: #fff; } }
     @media screen and (min-width: 48em) {
       #mainmenu .sub-menu:before {
         /*
@@ -1513,11 +1528,11 @@ input[type=checkbox], input[type=radio] {
   width: 100%;
   height: auto;
   padding: 0 10px;
-  border-bottom: 1px solid #eeeeee;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1000;
+  border-bottom: 1px solid #eeeeee;
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
@@ -1583,9 +1598,9 @@ input[type=checkbox], input[type=radio] {
     width: 100%;
     margin: 0;
     padding: 0;
-    background: transparent;
     float: left;
-    display: block; }
+    display: block;
+    background: transparent; }
     @media screen and (min-width: 48em) {
       #submenu li {
         margin-bottom: 0; } }
@@ -1596,8 +1611,8 @@ input[type=checkbox], input[type=radio] {
     padding: 10px; }
     @media screen and (min-width: 48em) {
       #submenu a {
-        background: transparent;
-        border-bottom: 1px solid #eeeeee; } }
+        border-bottom: 1px solid #eeeeee;
+        background: transparent; } }
     #submenu a:hover, #submenu a:focus {
       background: #eeeeee; }
   #submenu .current_page_item a {
@@ -1608,9 +1623,9 @@ table {
   margin: 20px 0;
   border: 1px solid #eeeeee; }
   table th, table td {
+    border-bottom: 1px solid #eeeeee;
     text-align: left;
-    vertical-align: top;
-    border-bottom: 1px solid #eeeeee; }
+    vertical-align: top; }
 
 /* Module rules. Styling of reusable, modular parts of the design.
 =================================================================*/
@@ -1643,17 +1658,17 @@ table {
   nav .searchform {
     display: block; }
   #content .searchform {
-    display: block;
-    padding: 0; }
+    padding: 0;
+    display: block; }
   @media screen and (min-width: 48em) {
     #header .searchform {
       width: 20%;
       padding: 0;
       float: right;
-      background: transparent;
-      text-align: left;
       clear: none;
-      display: block; } }
+      display: block;
+      background: transparent;
+      text-align: left; } }
   #header .searchform #s {
     width: 100%;
     clear: both; }
@@ -1670,9 +1685,9 @@ table {
   width: 100%;
   margin-bottom: 20px;
   padding: 10px;
-  background: #fff;
+  float: left;
   border: 1px solid #eeeeee;
-  float: left; }
+  background: #fff; }
   @media screen and (min-width: 62em) {
     .sidebar-section {
       padding: 20px; } }
@@ -1688,19 +1703,29 @@ table {
   .sidebar-section ul {
     margin: 0; }
   .sidebar-section a {
-    text-decoration: none; }
-    .sidebar-section a:hover, .sidebar-section a:focus {
-      text-decoration: underline; }
+    /*
+            text-decoration: none;
+    
+            &:hover, &:focus {
+                text-decoration: underline;
+            }
+    */ }
   .sidebar-section iframe {
     float: left; }
 
 .sidebar-section-title {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-weight: bold;
   font-size: 14px;
   font-size: 0.875rem; }
   .sidebar-section-title a {
-    text-decoration: none; }
+    /*
+            text-decoration: none;
+            
+            &:hover, &:focus {
+                text-decoration: underline;
+            }
+    */ }
 
 /* State rules
 =================================================================*/

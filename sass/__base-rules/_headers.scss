@@ -1,10 +1,9 @@
 .maincontent-title {
     font-weight: normal;
-    margin-bottom: 0 0 $gutter-skinny;
+    margin: 0 0 $margin;
     @include rem('font-size',$header-2);
 
     @include respond-min($break-medium) {
-        margin-bottom: $gutter;
         @include rem('font-size',$header-1);
     }
 

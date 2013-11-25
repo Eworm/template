@@ -1,7 +1,7 @@
 %postimage {
     width: 100%;
     height: auto;
-    margin: $gutter-skinny 0;
+    margin: $margin-skinny 0;
     display: block;
     @include border-radius();
     @include box-shadow($default-box-shadow);
@@ -11,8 +11,8 @@
     width: 0;
     height: 0;
     content: '';
-    border: 8px solid transparent;
     position: absolute;
+    border: 8px solid transparent;
 }
 
 %ul-nostyling {

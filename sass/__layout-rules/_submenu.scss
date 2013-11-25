@@ -3,7 +3,7 @@
     float: none;
 
     @include respond-min($break-medium) {
-        margin-bottom: $gutter;
+        margin-bottom: $margin;
         float: left;
         clear: none;
         display: block;
@@ -26,9 +26,9 @@
         width: 100%;
         margin: 0;
         padding: 0;
-        background: transparent;
         float: left;
         display: block;
+        background: transparent;
 
         @include respond-min($break-medium) {
             margin-bottom: 0;
@@ -47,8 +47,8 @@
         padding: $gutter-skinny;
 
         @include respond-min($break-medium) {
-            background: transparent;
             border-bottom: 1px solid $border-color;
+            background: transparent;
         }
 
         &:active {

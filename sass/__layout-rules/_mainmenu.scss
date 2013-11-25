@@ -5,8 +5,8 @@
     top: 0;
     left: -$mobile-menu-width;
     z-index: 1000;
-    background: $nav-bg-color;
     border-right: 1px solid $border-color;
+    background: $nav-bg-color;
     @include backface-visibility(hidden);
     @include perspective(1000);
     
@@ -123,9 +123,9 @@
     a {
         display: block;
         padding: $gutter-skinny $gutter;
-        text-decoration: none;
-        border-bottom: 1px solid $border-color;
         position: relative;
+        border-bottom: 1px solid $border-color;
+        text-decoration: none;
 
         @include respond-min($break-medium) {
             padding: $gutter-skinny;
@@ -206,12 +206,12 @@
         width: 100%;
         margin: 0;
         padding: 0;
-        border: none;
         display: none;
         float: left;
-        background: #fff;
         position: relative;
         z-index: 10000;
+        border: none;
+        background: #fff;
     
         .current_page_parent &, .current-menu-parent & {
             display: block;
@@ -243,10 +243,10 @@
     
                 @include respond-min($break-medium) {
                     padding: 8px $gutter-skinny;
-                    white-space: nowrap;
-                    border: none;
                     color: $body-color;
+                    border: none;
                     border-bottom: 1px solid $border-color;
+                    white-space: nowrap;
                 }
                 
                 &:hover, &:focus {
@@ -280,8 +280,8 @@
             position: absolute;
             top: 100%;
             left: 0;
-            background: #fff;
             border: 1px solid $border-color;
+            background: #fff;
         }
         
         &:before {

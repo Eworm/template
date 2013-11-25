@@ -1,6 +1,6 @@
 .l-post {
     width: 100%;
-    margin-bottom: $gutter;
+    margin-bottom: $margin;
     float: left;
     
     &:last-child {
@@ -87,7 +87,7 @@ time, .postdate {
 
 .l-post-navigation {
     width: 100%;
-    margin-bottom: $gutter;
+    margin-bottom: $margin;
     padding: 0;
     list-style-type: none;
     clear: both;
@@ -107,10 +107,10 @@ time, .postdate {
 #toggle-comments {
     width: 100%;
     padding: $gutter-skinny 0;
-    text-align: center;
     display: block;
-    text-decoration: none;
     background: #fff;
+    text-decoration: none;
+    text-align: center;
     @include border-radius();
     @include box-shadow(rgba(darken($border-color,20%),1) 0 1px 1px);
 
@@ -120,17 +120,16 @@ time, .postdate {
 }
 
 #comments-holder {
+    margin-top: $margin-skinny;
     display: none;
-    margin-top: $gutter-skinny;
 
     &.toggle {
         display: block;
     }
 
     @include respond-min($break-medium) {
-        margin: $gutter 0;
-        padding: 0;
-        padding-top: $gutter;
+        margin: $margin 0;
+        padding: $gutter 0 0 0;
         display: block;
     }
 
@@ -179,16 +178,16 @@ time, .postdate {
         width: 100%;
         padding: $gutter 0;
         float: left;
-        background: transparent;
         position: relative;
         border-bottom: 2px solid $border-color;
+        background: transparent;
 
         .children .comment.depth-2 {
             margin-bottom: $gutter;
         }
 
         @include respond-min($break-medium) {
-            margin: 0 0 $gutter-skinny 0;
+            margin: 0 0 $margin-skinny 0;
             padding: $gutter-skinny;
             border: 1px solid $border-color;
             @include border-radius();
@@ -211,10 +210,10 @@ time, .postdate {
             @include rem('font-size',$text-skinny);
 
             @include respond-min($break-medium) {
+                padding-top: 20px;
                 position: absolute;
                 top: 0;
                 right: $gutter;
-                padding-top: 20px;
                 line-height: 32px;
             }
 

@@ -1,10 +1,10 @@
 .sidebar-section {
     width: 100%;
-    margin-bottom: $gutter;
+    margin-bottom: $margin;
     padding: $gutter-skinny;
-    background: #fff;
-    border: 1px solid $border-color;
     float: left;
+    border: 1px solid $border-color;
+    background: #fff;
 
     @include respond-min($break-desktop) {
         padding: $gutter;
@@ -15,7 +15,7 @@
     }
     
     img {
-        margin-bottom: $gutter;
+        margin-bottom: $margin;
         @include border-radius();
     }
 
@@ -24,11 +24,13 @@
     }
 
     a {
+/*
         text-decoration: none;
 
         &:hover, &:focus {
             text-decoration: underline;
         }
+*/
     }
 
     iframe {
@@ -42,11 +44,17 @@
 }
 
 .sidebar-section-title {
-    margin-bottom: $gutter-skinny;
+    margin-bottom: $margin;
     font-weight: bold;
     @include rem('font-size',$body-size);
 
     a {
+/*
         text-decoration: none;
+        
+        &:hover, &:focus {
+            text-decoration: underline;
+        }
+*/
     }
 }

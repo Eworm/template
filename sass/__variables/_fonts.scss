@@ -11,5 +11,6 @@ $text-large: 16px;
 
 /* Font families
 =================================================================*/
-$body-font: Arial, Verdana, sans-serif;
+$body-font: Arial, Verdana, sans-serif; /* Websafe font family */
+$special-font: Arial, Verdana, sans-serif; /* Special font, for example a google font */
 $sec-font: Georgia, "Times new roman", serif;

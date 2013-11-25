@@ -4,6 +4,7 @@
     @return ($target-px / $context) * 1em;
 }
 
+
 /* SVG background with png fallback
 =================================================================*/
 @mixin svg-or-not($image) {

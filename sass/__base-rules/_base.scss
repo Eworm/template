@@ -19,9 +19,9 @@ html {
 }
 
 body {
-    font: #{$body-size}/#{$line-height} #{$body-font};
-    background: $body-bg-color;
     color: $body-color;
+    background: $body-bg-color;
+    font: #{$body-size}/#{$line-height} #{$body-font};
 
     .active-menu & {
         height: 100%;
@@ -57,8 +57,8 @@ body {
     right: 0;
     bottom: 0;
     left: $mobile-menu-width;
-    background: $body-bg-color;
     z-index: 10000;
+    background: $body-bg-color;
     @include opacity(0);
     
     @include respond-min($break-skinny) {

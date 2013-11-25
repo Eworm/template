@@ -9,8 +9,8 @@
 	}
 
 	#content & {
-	   display: block;
-	   padding: 0;
+	    padding: 0;
+        display: block;
 	}
 
 	#header & {
@@ -19,10 +19,10 @@
             width: 20%;
             padding: 0;
             float: right;
-            background: transparent;
-            text-align: left;
             clear: none;
             display: block;
+            background: transparent;
+            text-align: left;
         }
 
         #s {

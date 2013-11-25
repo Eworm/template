@@ -2,11 +2,11 @@
     width: 100%;
     height: auto;
     padding: 0 $gutter-skinny;
-    border-bottom: 1px solid $border-color;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1000;
+    border-bottom: 1px solid $border-color;
     @include transform3d(translate3d(0, 0, 0));
 
     @include respond-min($break-medium) {

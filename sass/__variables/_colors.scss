@@ -1,8 +1,8 @@
 /* Base colors
 =================================================================*/
 $body-bg-color: #fff;
-$body-color: #222;
-$link-color: #0000ee;
+$body-color: #222; /* Should not be #000 for people with dyslexia: http://uxmovement.com/content/6-surprising-bad-practices-that-hurt-dyslexic-users/ */
+$link-color: #0000ee; /* Should be a blue so people will know links are links */
 
 
 /* Layout colors
@@ -11,3 +11,4 @@ $nav-bg-color: #fff;
 $border-color: #eee;
 $lesser-color: #828282;
 $lesser-color-hover: #2c2c2c;
+$alert: #f00;
