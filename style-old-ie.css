@@ -1470,6 +1470,9 @@ table {
   .comment .children .comment.depth-2, .trackback .children .comment.depth-2, .pingback .children .comment.depth-2, #respond .children .comment.depth-2 {
     margin-bottom: 20px; }
 
+#respond {
+  margin-bottom: 0; }
+
 .fn {
   font-style: normal; }
   .fn a {

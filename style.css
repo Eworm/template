@@ -1564,6 +1564,9 @@ table {
       -o-border-radius: 3px;
       border-radius: 3px; } }
 
+#respond {
+  margin-bottom: 0; }
+
 .fn {
   font-style: normal; }
   .fn a {

@@ -52,6 +52,10 @@
     }
 }
 
+#respond {
+    margin-bottom: 0;
+}
+
 .fn {
     font-style: normal;
 
@@ -118,6 +122,10 @@
             color: $lesser-color-hover;
         }
     }
+}
+
+.reply {
+    
 }
 
 .comments-title {
