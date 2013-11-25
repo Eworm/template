@@ -39,7 +39,7 @@ module.exports = function(grunt) {
                 },
                 files: [{
                     expand: true,
-                    cwd: 'img-src',
+                    cwd: 'img',
                     src: '*.svg',
                     dest: 'img',
                     ext: '.svg'
@@ -52,7 +52,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     flatter: true,
-                    src: 'img-src/*.svg',
+                    src: 'img/*.svg',
                     dest: 'img'
                 }],
                 tasks: ['notify:svg2png'],
