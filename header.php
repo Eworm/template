@@ -68,7 +68,7 @@
         } ?>
         
         <!-- Pinned tyle for Windows8 -->
-        <meta name="msapplication-TileImage" content="<?php bloginfo('template_url'); ?>/img/windows8-tile.png">
+        <meta name="msapplication-TileImage" content="<?php bloginfo('url'); ?>/img/windows8-tile.png">
         <meta name="msapplication-TileColor" content="#000">
         
         <!-- Mobile viewport optimized: h5bp.com/viewport -->
