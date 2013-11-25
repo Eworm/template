@@ -1523,11 +1523,6 @@ table {
   background: #fff;
   text-decoration: none;
   text-align: center;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
   -webkit-box-shadow: #bbbbbb 0 1px 1px;
   -moz-box-shadow: #bbbbbb 0 1px 1px;
   box-shadow: #bbbbbb 0 1px 1px; }
@@ -1562,12 +1557,7 @@ table {
     .comment, .trackback, .pingback, #respond {
       margin: 0 0 10px 0;
       padding: 20px;
-      border: 1px solid #eeeeee;
-      -webkit-border-radius: 3px;
-      -moz-border-radius: 3px;
-      -ms-border-radius: 3px;
-      -o-border-radius: 3px;
-      border-radius: 3px; } }
+      border: 1px solid #eeeeee; } }
 
 #respond {
   margin-bottom: 0; }

@@ -5,7 +5,6 @@
     background: #fff;
     text-decoration: none;
     text-align: center;
-    @include border-radius();
     @include box-shadow(rgba(darken($border-color,20%),1) 0 1px 1px);
 
     @include respond-min($break-medium) {
@@ -48,7 +47,6 @@
         margin: 0 0 $margin-skinny 0;
         padding: $gutter;
         border: 1px solid $border-color;
-        @include border-radius();
     }
 }
 
