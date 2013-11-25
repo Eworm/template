@@ -191,7 +191,7 @@ module.exports = function(grunt) {
     // Automatic notifications when tasks fail.
     grunt.loadNpmTasks('grunt-notify');
     
-    // Default task
+    // Default task. Includes compass, uglify & svg2png
     grunt.registerTask('default', ['watch']);
     
     // Run at the start of every new project
