@@ -1056,7 +1056,7 @@ input[type=checkbox], input[type=radio] {
   @media screen and (min-width: 48em) {
     #header {
       background: #fff;
-      padding: 20px 0;
+      padding: 20px 0 0;
       border-bottom: 1px solid #eeeeee; } }
 
 #logo {
@@ -1327,6 +1327,7 @@ input[type=checkbox], input[type=radio] {
     , #mainmenu .current-menu-item
     , #mainmenu .current-page-ancestor
     , #mainmenu .current_page_parent {
+      background: #eeeeee;
       -webkit-box-shadow: none;
       -moz-box-shadow: none;
       box-shadow: none;

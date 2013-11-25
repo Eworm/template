@@ -1027,7 +1027,7 @@ input[type=submit] {
 #header {
   margin-bottom: 20px;
   background: #fff;
-  padding: 20px 0;
+  padding: 20px 0 0;
   border-bottom: 1px solid #eeeeee; }
 
 #logo {
@@ -1262,6 +1262,7 @@ a img.aligncenter {
   , #mainmenu .current-menu-item
   , #mainmenu .current-page-ancestor
   , #mainmenu .current_page_parent {
+    background: #eeeeee;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;

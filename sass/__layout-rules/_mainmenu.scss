@@ -155,6 +155,7 @@
         }
 
         @include respond-min($break-medium) {
+            background: $border-color;
             @include box-shadow(none);
             @include background-image(none);
         }
