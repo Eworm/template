@@ -40,8 +40,8 @@ bower_components
 **All done!**
 Als alles goed is gegaan heb je nu alle software en dependencies ge&iuml;nstalleerd.
 
-### Zelf javascript en stylesheet aanpassen
-Als je in je terminal naar de projectdirectory gaat en ```grunt``` uitvoert wordt de default Grunt taak uitgevoerd, in dit geval de watch taak. Deze taak zorgt ervoor dat de javascript en scss bestanden automatisch gecompileerd worden als je die wijzigt.
+### Zelf javascript, stylesheet, en afbeeldingen aanpassen
+Als je in je terminal naar de projectdirectory gaat en ```grunt``` uitvoert wordt de default Grunt taak uitgevoerd, in dit geval de watch taak. Deze taak zorgt ervoor dat de javascript, .scss bestanden en afbeeldingen automatisch gecompileerd worden als je die wijzigt.
 
 ## De mappenstructuur
 **Afbeeldingen**
