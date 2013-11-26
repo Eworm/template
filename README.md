@@ -48,7 +48,7 @@ Als je in je terminal naar de projectdirectory gaat en ```grunt``` uitvoert word
 De 'img-src' map is bedoelt voor photoshop of illustratorbestanden. De 'img' map is bedoelt voor afbeeldingen die in de site worden gebruikt. Van .svg bestanden wordt via Grunt automatisch een .png kopie gemaakt.
 
 **Javascript**
-De 'js-src' map is bedoelt voor de bestanden waar je in werkt. D.m.v. een Grunt taak worden deze bestanden samengevoegd en geminified en in de 'js' map geplaatst.
+De 'js-src' map is bedoelt voor de bestanden waar je in werkt. D.m.v. een Grunt taak worden deze bestanden samengevoegd en geminified en in de 'js' map geplaatst. De uglify taak in Gruntfile.js zorgt hiervoor. Hier geef je aan welke bestanden samengevoegd moeten worden.
 
 **SASS**
 In de 'sass' map staan alle .scss bestanden. Elk onderdeel heeft zijn eigen bestand, hierdoor is het gemakkelijker werken met deze bestanden. De structuur van deze bestanden is ge&iuml;nspireerd door https://smacss.com/

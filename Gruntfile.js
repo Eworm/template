@@ -6,6 +6,7 @@ module.exports = function(grunt) {
     // Config & tasks
     grunt.initConfig({
         compass: {
+            // Compile all scss files
             build: {
                 options: {
                     sassDir: 'sass',
@@ -16,6 +17,7 @@ module.exports = function(grunt) {
             },
         },
         uglify: {
+            // Joins & minifies the javascriptfiles below
             build: {
                 options: {
                     mangle: false
@@ -29,6 +31,7 @@ module.exports = function(grunt) {
             },
         },
         svgmin: {
+            // Optimizes svg files
             build: {
                 options: {
                     plugins: [{
@@ -48,6 +51,7 @@ module.exports = function(grunt) {
             },
         },
         svg2png: {
+            // Generates a png file from an svg file. Used for svg fallback
             build: {
                 files: [{
                     expand: true,
@@ -59,6 +63,7 @@ module.exports = function(grunt) {
             },
         },
         imageoptim: {
+            // Image optimization
             build: {
                 options: {
                     jpegMini: true,
@@ -72,6 +77,7 @@ module.exports = function(grunt) {
             },
         },
         imagemin: {
+            // Image optimization
             build: {
                 options: {
                     optimizationLevel: 3
@@ -135,6 +141,7 @@ module.exports = function(grunt) {
             'customTests' : ['js-src/modernizr.touch.js']
         },
         watch: {
+            // The default task. This will keep an eye on the folders you're working in
             compass: {
                 files: ['sass/*.scss','sass/**/*'],
                 tasks: ['compass:build', 'notify:compass'],
@@ -149,6 +156,7 @@ module.exports = function(grunt) {
             },
         },
         notify: {
+            // Notifier for task completion
             compass: {
                 options: {
                     title: 'Compass',
