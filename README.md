@@ -23,7 +23,7 @@ Ga in de terminal naar de projectdirectory
 
 **Stap 7**
 Installeer de grunt modules met:
-```sudo npm install```
+```npm install``` of ```sudo npm install```
 *De grunt modules staan straks in de map 'node_modules'*
 
 **Stap 8**
