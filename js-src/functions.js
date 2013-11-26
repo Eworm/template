@@ -117,9 +117,9 @@ $(document).ready(function() {
 
 
                 // Toggle the comments
-                $('#toggle-comments').on('click touchstart', function(e) {
+                $('#l-toggle-comments').on('click touchstart', function(e) {
                     e.preventDefault();
-                    $('#comments-holder').toggleClass('toggle');
+                    $('#l-comments-holder').toggleClass('toggle');
                 })
 
             }, unmatch: function()

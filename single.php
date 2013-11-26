@@ -26,7 +26,7 @@
                     
                 </article>
                 
-                <a id="toggle-comments" href="#comments-holder">
+                <a id="l-toggle-comments" href="#l-comments-holder">
                     <?php
                         $comments_count = get_comments_number( $post_id );
                         if ($comments_count >= 1) {
@@ -40,7 +40,7 @@
                     ?>
                 </a>
                 
-                <div id="comments-holder">
+                <div id="l-comments-holder">
                     <?php comments_template(); ?>
                 </div>
     

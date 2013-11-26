@@ -5,9 +5,10 @@ setlocale(LC_TIME, 'nl_NL');
 /* Optional code to change the url
 ==================================================================================================================================*/
 /*
-update_option('siteurl','http://192.168.4.131/_htmltemplate');
-update_option('home','http://192.168.4.131/_htmltemplate');
+update_option('siteurl','http://192.168.2.3/_htmltemplate');
+update_option('home','http://192.168.2.3/_htmltemplate');
 */
+
 
 
 /* Deregister jquery
