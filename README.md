@@ -17,7 +17,7 @@ SASS: http://sass-lang.com/install
 **Stap 5**
 Compass: http://compass-style.org/install/
 
-## Je hebt nu alle benodigde software ge&iuml;nstalleerd. Nu moeten de dependencies nog worden ge&iumlnstalleerd. Deze staan niet in git zodat de repo schoon blijft.
+## Je hebt nu alle benodigde software ge&iuml;nstalleerd. Nu moeten de dependencies nog worden ge&iuml;nstalleerd. Deze staan niet in git zodat de repo schoon blijft.
 **Stap 6**
 Ga in de terminal naar de projectdirectory
 
@@ -37,20 +37,20 @@ Zet deze regels in je .gitignore, zodat de repo netjes blijft. Het is het handig
 bower_components
 .sass-cache```
 
-## Gefeliciteerd!
+## All done!
 Als alles goed is gegaan heb je nu alle software en dependencies ge&iuml;nstalleerd.
 
-## Wijzigingen bijhouden
-Als je in je terminal naar de projectdirectory gaat en ```grunt``` uitvoert wordt de default Grunt taak uitgevoerd, in dit geval de watch taak.  Deze taak zorgt ervoor dat de javascript en scss bestanden automatisch gecompileerd worden als je die wijzigt.
+## Zelf javascript en stylesheet aanpassen
+Als je in je terminal naar de projectdirectory gaat en ```grunt``` uitvoert wordt de default Grunt taak uitgevoerd, in dit geval de watch taak. Deze taak zorgt ervoor dat de javascript en scss bestanden automatisch gecompileerd worden als je die wijzigt.
 
-## De mappenstructuur
+# De mappenstructuur
 **Afbeeldingen**
 De 'img-src' map is bedoelt voor photoshop of illustratorbestanden. De 'img' map is bedoelt voor afbeeldingen die in de site worden gebruikt. Van .svg bestanden wordt via Grunt automatisch een .png kopie gemaakt.
 
-**Javascript**
+## Javascript
 De 'js-src' map is bedoelt voor de bestanden waar je in werkt. D.m.v. een Grunt taak worden deze bestanden samengevoegd en geminified en in de 'js' map geplaatst.
 
-**SASS**
-In de 'sass' map staan alle .scss bestanden. Elk onderdeel heeft zijn eigen bestand, hierdoor is gemakkelijker te werken met deze bestanden. De structuur van deze bestanden is ge&iumlnspireerd door https://smacss.com/
+## SASS
+In de 'sass' map staan alle .scss bestanden. Elk onderdeel heeft zijn eigen bestand, hierdoor is het gemakkelijker werken met deze bestanden. De structuur van deze bestanden is ge&iuml;nspireerd door https://smacss.com/
 
 Voor vragen kun je contact met me opnemen: 06 - 4641 2770, of wout@woutmager.nl
