@@ -1,7 +1,7 @@
 # Volg onderstaande stappen voordat je met het project begint
 Ik maak gebruik van verschillende open-source software om sneller en effici&euml;nter te werken. Om verder met het project te kunnen werken is het nodig dat je die software installeert. Ik leg niet in detail uit hoe je de verschillende software installeert, dat wordt op de verschillende sites duidelijker uitgelegd dan ik dat kan.
 
-## Voordat je kunt beginnen moet je deze software installeren
+### Voordat je kunt beginnen moet je deze software installeren
 **Stap 1**
 Nodejs: http://nodejs.org/
 
@@ -17,7 +17,7 @@ SASS: http://sass-lang.com/install
 **Stap 5**
 Compass: http://compass-style.org/install/
 
-## Je hebt nu alle benodigde software ge&iuml;nstalleerd. Nu moeten de dependencies nog worden ge&iuml;nstalleerd. Deze staan niet in git zodat de repo schoon blijft.
+### Je hebt nu alle benodigde software ge&iuml;nstalleerd. Nu moeten de dependencies nog worden ge&iuml;nstalleerd. Deze staan niet in git zodat de repo schoon blijft.
 **Stap 6**
 Ga in de terminal naar de projectdirectory
 
@@ -40,10 +40,10 @@ bower_components
 **All done!**
 Als alles goed is gegaan heb je nu alle software en dependencies ge&iuml;nstalleerd.
 
-## Zelf javascript en stylesheet aanpassen
+### Zelf javascript en stylesheet aanpassen
 Als je in je terminal naar de projectdirectory gaat en ```grunt``` uitvoert wordt de default Grunt taak uitgevoerd, in dit geval de watch taak. Deze taak zorgt ervoor dat de javascript en scss bestanden automatisch gecompileerd worden als je die wijzigt.
 
-# De mappenstructuur
+## De mappenstructuur
 **Afbeeldingen**
 De 'img-src' map is bedoelt voor photoshop of illustratorbestanden. De 'img' map is bedoelt voor afbeeldingen die in de site worden gebruikt. Van .svg bestanden wordt via Grunt automatisch een .png kopie gemaakt.
 
