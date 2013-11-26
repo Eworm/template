@@ -34,6 +34,6 @@ bower_components
 .sass-cache```
 
 ## Gefeliciteerd!
-Als alles goed is gegaan heb je nu alle software en dependencies ge&iuml;nstalleerd. Als je nu ```grunt``` in je commandline gebruikt worden de javascript en scss bestanden automatisch gecompileerd als je die wijzigt.
+Als alles goed is gegaan heb je nu alle software en dependencies ge&iuml;nstalleerd. Als je in je terminal naar de projectdirectory gaat en ```grunt``` intypt worden de javascript en scss bestanden automatisch gecompileerd als je die wijzigt.
 
 Voor vragen kun je contact met me opnemen: 06 - 4641 2770, of wout@woutmager.nl
