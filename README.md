@@ -44,6 +44,12 @@ Als alles goed is gegaan heb je nu alle software en dependencies ge&iuml;nstalle
 Als je in je terminal naar de projectdirectory gaat en ```grunt``` uitvoert wordt de default Grunt taak uitgevoerd, in dit geval de watch taak. Deze taak zorgt ervoor dat de javascript, .scss bestanden en afbeeldingen automatisch gecompileerd worden als je die wijzigt.
 
 ## De mappenstructuur
+**De _root map**
+Hier staan de bestanden die in de root van de site moeten worden gezet.
+
+**Fonts**
+Hier staan de niet-standaard fonts die gebruikt worden.
+
 **Afbeeldingen**
 De 'img-src' map is bedoelt voor photoshop of illustratorbestanden. De 'img' map is bedoelt voor afbeeldingen die in de site worden gebruikt. Van .svg bestanden wordt via Grunt automatisch een .png kopie gemaakt.
 
