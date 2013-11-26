@@ -37,7 +37,7 @@ Zet deze regels in je .gitignore, zodat de repo netjes blijft. Het is het handig
 bower_components
 .sass-cache```
 
-## All done!
+**All done!**
 Als alles goed is gegaan heb je nu alle software en dependencies ge&iuml;nstalleerd.
 
 ## Zelf javascript en stylesheet aanpassen
