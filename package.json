@@ -1,24 +1,25 @@
 {
-    "name": "grunt-test-project",
-    "version": "1.0.0",
-    "authors": [
-        "Wout Mager"
-    ],
-    "description": "Blabla",
-    "homepage": "www.woutmager.nl",
-    "devDependencies": {
-        "grunt": ">=0.4.x",
-        "grunt-contrib-uglify": ">=0.2.x",
-        "grunt-contrib-sass": ">=0.5.x",
-        "grunt-contrib-compass": ">=0.5.x",
-        "grunt-contrib-watch": ">=0.5.x",
-        "grunt-contrib-imagemin": ">=0.3.x",
-        "grunt-imageoptim": ">=1.4.x",
-        "grunt-svg2png": ">=0.2.x",
-        "grunt-svgmin": ">=0.2.x",
-        "grunt-notify": ">=0.2.x",
-        "load-grunt-tasks": ">=0.1.x",
-        "install": ">=0.1.x",
-        "grunt-modernizr": ">=0.3.x"
-    }
+  "name": "grunt-test-project",
+  "version": "1.0.0",
+  "authors": [
+    "Wout Mager"
+  ],
+  "description": "Blabla",
+  "homepage": "www.woutmager.nl",
+  "devDependencies": {
+    "grunt": ">=0.4.x",
+    "grunt-contrib-uglify": ">=0.2.x",
+    "grunt-contrib-sass": ">=0.5.x",
+    "grunt-contrib-compass": ">=0.5.x",
+    "grunt-contrib-watch": ">=0.5.x",
+    "grunt-contrib-imagemin": ">=0.3.x",
+    "grunt-imageoptim": ">=1.4.x",
+    "grunt-svg2png": ">=0.2.x",
+    "grunt-svgmin": ">=0.2.x",
+    "grunt-notify": ">=0.2.x",
+    "load-grunt-tasks": ">=0.1.x",
+    "install": ">=0.1.x",
+    "grunt-modernizr": ">=0.3.x",
+    "grunt-bake": ">=0.3.3"
+  }
 }

@@ -5,6 +5,16 @@ module.exports = function(grunt) {
 
     // Config & tasks
     grunt.initConfig({
+        bake: {
+            build: {
+                options: {
+                },
+                files: {    
+                    //'index.html': 'bake/index.bake'
+                },
+                tasks: ['notify:bake'],
+            },
+        },
         compass: {
             // Compile all scss files
             build: {
@@ -14,66 +24,6 @@ module.exports = function(grunt) {
                     environment: 'production'
                 },
                 tasks: ['notify:compass'],
-            },
-        },
-        uglify: {
-            // Joins & minifies the javascriptfiles below
-            build: {
-                options: {
-                    mangle: false
-                },
-                files: [{
-                    'js/functions.min.js': ['bower_components/hideShowPassword/hideShowPassword.js','bower_components/picturefill/picturefill.js','bower_components/on-media-query/js/onmediaquery.js','js-src/functions.js'],
-                    'js/zepto.min.js': ['bower_components/zepto/zepto.js'],
-                    //Modernizr is compiled and uglified using grunt modernizr
-                }],
-                tasks: ['notify:uglify'],
-            },
-        },
-        svgmin: {
-            // Optimizes svg files
-            build: {
-                options: {
-                    plugins: [{
-                        removeViewBox: false,
-                        removeUselessStrokeAndFill: true,
-                        removeEmptyAttrs: true
-                    }],
-                },
-                files: [{
-                    expand: true,
-                    cwd: 'img',
-                    src: '*.svg',
-                    dest: 'img',
-                    ext: '.svg'
-                }],
-                tasks: ['notify:svgmin'],
-            },
-        },
-        svg2png: {
-            // Generates a png file from an svg file. Used for svg fallback
-            build: {
-                files: [{
-                    expand: true,
-                    flatter: true,
-                    src: 'img/*.svg',
-                    dest: 'img'
-                }],
-                tasks: ['notify:svg2png'],
-            },
-        },
-        imageoptim: {
-            // Image optimization
-            build: {
-                options: {
-                    jpegMini: true,
-                    imageAlpha: true,
-                    quitAfter: false
-                },
-                files: [{
-                    src: ['**/*.{png,jpg,gif}'],
-                }],
-                tasks: ['notify:imageoptim'],
             },
         },
         imagemin: {
@@ -89,6 +39,20 @@ module.exports = function(grunt) {
                     dest: 'img'
                 }],
                 tasks: ['notify:imagemin'],
+            },
+        },
+        imageoptim: {
+            // Image optimization
+            build: {
+                options: {
+                    jpegMini: true,
+                    imageAlpha: true,
+                    quitAfter: false
+                },
+                files: [{
+                    src: ['**/*.{png,jpg,gif}'],
+                }],
+                tasks: ['notify:imageoptim'],
             },
         },
         modernizr: {
@@ -140,10 +104,60 @@ module.exports = function(grunt) {
             // Have custom Modernizr tests? Add paths to their location here.
             'customTests' : ['js-src/modernizr.touch.js']
         },
+        svg2png: {
+            // Generates a png file from an svg file. Used for svg fallback
+            build: {
+                files: [{
+                    expand: true,
+                    flatter: true,
+                    src: 'img/*.svg',
+                    dest: 'img'
+                }],
+                tasks: ['notify:svg2png'],
+            },
+        },
+        svgmin: {
+            // Optimizes svg files
+            build: {
+                options: {
+                    plugins: [{
+                        removeViewBox: false,
+                        removeUselessStrokeAndFill: true,
+                        removeEmptyAttrs: true
+                    }],
+                },
+                files: [{
+                    expand: true,
+                    cwd: 'img',
+                    src: '*.svg',
+                    dest: 'img',
+                    ext: '.svg'
+                }],
+                tasks: ['notify:svgmin'],
+            },
+        },
+        uglify: {
+            // Joins & minifies the javascriptfiles below
+            build: {
+                options: {
+                    mangle: false
+                },
+                files: [{
+                    'js/functions.min.js': ['bower_components/hideShowPassword/hideShowPassword.js','bower_components/picturefill/picturefill.js','bower_components/on-media-query/js/onmediaquery.js','js-src/functions.js'],
+                    'js/zepto.min.js': ['bower_components/zepto/zepto.js'],
+                    //Modernizr is compiled and uglified using grunt modernizr
+                }],
+                tasks: ['notify:uglify'],
+            },
+        },
         watch: {
             // The default task. This will keep an eye on the folders you're working in
+            bake: {
+                files: ['bake/**/*'],
+                tasks: ['bake:build', 'notify:bake'],
+            },
             compass: {
-                files: ['sass/*.scss','sass/**/*'],
+                files: ['sass/**/*'],
                 tasks: ['compass:build', 'notify:compass'],
             },
             uglify: {
@@ -157,40 +171,46 @@ module.exports = function(grunt) {
         },
         notify: {
             // Notifier for task completion
+            bake: {
+                options: {
+                    title: 'Bake',
+                    message: 'Done!',
+                },
+            },
             compass: {
                 options: {
                     title: 'Compass',
-                    message: 'Complete',
+                    message: 'Done!',
                 },
             },
             svgmin: {
                 options: {
-                    title: 'SVGmin complete',
-                    message: 'Complete',
+                    title: 'SVGmin',
+                    message: 'Done!',
                 },
             },
             svg2png: {
                 options: {
                     title: 'Svg2png',
-                    message: 'Complete',
+                    message: 'Done!',
                 },
             },
             imagemin: {
                 options: {
                     title: 'Imagemin',
-                    message: 'Complete',
+                    message: 'Done!',
                 },
             },
             imageoptim: {
                 options: {
                     title: 'Imageoptim',
-                    message: 'Complete',
+                    message: 'Done!',
                 }
             },
             uglify: {
                 options: {
                     title: 'Uglify',
-                    message: 'Complete',
+                    message: 'Done!',
                 },
             },
         },
@@ -199,7 +219,7 @@ module.exports = function(grunt) {
     // Automatic notifications when tasks fail.
     grunt.loadNpmTasks('grunt-notify');
     
-    // Default task. Includes compass, uglify & svg2png
+    // Default task.
     grunt.registerTask('default', ['watch']);
     
     // Run at the start of every new project
