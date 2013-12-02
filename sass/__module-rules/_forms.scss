@@ -84,23 +84,23 @@ input[type=submit] {
             display: inline;
         }
     }
+}
 
-    .submit, #submit, #searchsubmit {
-        text-align: center;
-        text-decoration: none;
-        cursor: pointer;
+.submit, #submit {
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
 
-        @include respond-min($break-medium) {
-            width: auto;
-        }
-
-        &:hover, &:focus {
-        }
+    @include respond-min($break-medium) {
+        width: auto;
     }
 
-    a.submit {
-        @include inline-block;
+    &:hover, &:focus {
     }
+}
+
+a.submit {
+    @include inline-block;
 }
 
 .formrow {
