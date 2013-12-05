@@ -588,7 +588,7 @@ input[type="radio"] {
 
 input[type="search"] {
     -webkit-appearance: textfield; /* 1 */
-    @include box-sizing(content-box); /* 2 */
+    //@include box-sizing(content-box); /* 2 */
 }
 
 /**

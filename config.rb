@@ -15,7 +15,7 @@ environment = :production
 
 line_comments = false
 color_output = false
-cache = false
+cache = true
 
 
 # If you prefer the indented syntax, you might want to regenerate this

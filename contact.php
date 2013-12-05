@@ -92,17 +92,17 @@ if(isset($_POST['submitted'])) {
                 </header>
                 <fieldset class="formcontainer">
                     <div class="formrow">
-                        <label for="naam"><?php _e( 'Uw naam', 'thema_vertalingen' ); ?></label>
+                        <label for="naam"><?php _e( 'Uw naam', 'thema_vertalingen' ); ?> <span class="req">(Verplicht)</span></label>
                         <input value="<?php if(isset($_POST['naam'])) echo $_POST['naam'];?>" type="text" name="naam" id="naam" class="text" title="<?php _e( 'Uw naam', 'thema_vertalingen' ); ?>" required="required">
                         <?php if($nameError != '') { ?><div class="error"><?=$nameError;?></div><?php } ?>
                     </div>
                     <div class="formrow">
-                        <label for="emailadres"><?php _e( 'Uw e-mailadres', 'thema_vertalingen' ); ?></label>
+                        <label for="emailadres"><?php _e( 'Uw e-mailadres', 'thema_vertalingen' ); ?> <span class="req">(Verplicht)</span></label>
                         <input value="<?php if(isset($_POST['emailadres'])) echo $_POST['emailadres'];?>" type="email" name="emailadres" id="emailadres" class="text" title="<?php _e( 'Uw e-mailadres', 'thema_vertalingen' ); ?>" required="required">
                         <?php if($emailError != '') { ?><div class="error"><?=$emailError;?></div><?php } ?>
                     </div>
                     <div class="formrow">
-                        <label for="message" id="message_label"><?php _e( 'Omschrijf kort uw vraag', 'thema_vertalingen' ); ?></label>
+                        <label for="message" id="message_label"><?php _e( 'Omschrijf kort uw vraag', 'thema_vertalingen' ); ?> <span class="req">(Verplicht)</span></label>
                         <textarea id="message" name="message" class="textarea" required="required"></textarea>
                         <?php if($messageError != '') { ?><div class="error"><?=$messageError;?></div><?php } ?>
                     </div>

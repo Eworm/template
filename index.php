@@ -19,10 +19,10 @@
                         </header>
                         <div class="l-post-entry">
             				<?php the_excerpt(); ?>
-            				<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Directe link naar', 'thema_vertalingen' ); ?> <?php the_title_attribute(); ?>"><?php _e( 'Verder lezen', 'thema_vertalingen' ); ?> &raquo;</a>
-                            <p>
-                                <?php comments_popup_link('Er zijn nog geen reacties... &#187;', '1 reactie... &#187;', '% reacties... &#187;', 'comments-link', ''); ?>
-                            </p>
+            				<span class="l-post-options">
+                				<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Directe link naar', 'thema_vertalingen' ); ?> <?php the_title_attribute(); ?>"><?php _e( 'Verder lezen', 'thema_vertalingen' ); ?></a>&nbsp;|&nbsp;
+                				<?php comments_popup_link('Reageer als eerste', 'Er is 1 reactie', 'Er zijn % reacties'); ?>
+                            </span>
                         </div>
                     </article>
     			<?php endwhile; ?>
