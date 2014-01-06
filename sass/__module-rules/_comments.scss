@@ -41,6 +41,10 @@
 
     .children .comment.depth-2 {
         margin-bottom: $gutter;
+        
+        &:last-child {
+            margin: 0;
+        }
     }
 
     @include respond-min($break-medium) {

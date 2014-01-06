@@ -161,11 +161,15 @@ module.exports = function(grunt) {
                 tasks: ['compass:build', 'notify:compass'],
             },
             uglify: {
-                files: ['js-src/*.js'],
+                files: ['js-src/**/*'],
                 tasks: ['uglify:build', 'notify:uglify'],
             },
+            svgmin : {
+                files: ['img-src/*.svg'],
+                tasks: ['svgmin:build', 'notify:svgmin'],
+            },
             svg2png: {
-                files: ['img/*.svg'],
+                files: ['img-src/*.svg'],
                 tasks: ['svg2png:build', 'notify:svg2png'],
             },
         },
