@@ -83,7 +83,7 @@ gulp.task('tasks.watch', function() {
 			return console.log(err)
 		}
     	gulp.watch(paths.compass, ['tasks.compass']);
-    	gulp.watch(paths.scripts, ['tasks.uglify']);
+    	gulp.watch(paths.uglify, ['tasks.uglify']);
     	gulp.watch(paths.svgmin, ['tasks.svgmin']);
     	gulp.watch(paths.svg2png, ['tasks.svg2png']);
     })
