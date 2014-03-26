@@ -15,7 +15,7 @@ var paths = {
     compass: './sass/**/*.scss',
     svgmin: './img-src/*.svg',
     svg2png: './img-src/*.svg',
-    scripts: ['./bower_components/picturefill/external/matchmedia.js',
+    uglify: ['./bower_components/picturefill/external/matchmedia.js',
                 './bower_components/picturefill/picturefill.js',
                 './bower_components/on-media-query/js/onmediaquery.js',
                 './js-src/functions.js']
@@ -60,7 +60,7 @@ gulp.task('tasks.svg2png', function () {
 
 // Uglify
 gulp.task('tasks.uglify', function() {
-    gulp.src(paths.scripts)
+    gulp.src(paths.uglify)
         .pipe(tasks.concat('functions.min.js'))
         //.pipe(tasks.stripDebug())
         .pipe(tasks.uglify())
