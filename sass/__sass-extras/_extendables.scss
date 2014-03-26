@@ -3,8 +3,8 @@
     height: auto;
     margin: $margin-skinny 0;
     display: block;
-    @include border-radius();
-    @include box-shadow($default-box-shadow);
+    border-radius: 0;
+    box-shadow: $default-box-shadow;
 }
 
 %navfeedback {
@@ -40,10 +40,10 @@
         margin-bottom: 0;
         background: $alert;
         color: #fff;
-        @include border-radius();
-        @include border-top-left-radius(0);
-        @include border-top-right-radius(0);
-        @include box-shadow($default-box-shadow);
+        border-radius: $default-border-radius;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        box-shadow: $default-box-shadow;
         
         @include respond-min($break-medium) {
             width: 50%;

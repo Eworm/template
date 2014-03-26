@@ -7,7 +7,7 @@
     left: 0;
     z-index: 1000;
     border-bottom: 1px solid $border-color;
-    @include transform3d(translate3d(0, 0, 0));
+    transform: translate3d(0,0,0);
 
     @include respond-min($break-medium) {
         display: none;

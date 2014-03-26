@@ -16,7 +16,7 @@
     
     img {
         margin-bottom: $margin;
-        @include border-radius();
+        border-radius: 0;
     }
 
     ul {

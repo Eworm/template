@@ -83,7 +83,7 @@ a img.aligncenter {
     border: 1px solid $border-color;
     background: #fff;
     text-align: center;
-    @include border-radius();
+    border-radius: 0;
 
     img {
         width: 100%;

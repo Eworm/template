@@ -13,9 +13,11 @@ server = lr();
 // Set standard paths
 var paths = {
     compass: './sass/**/*.scss',
+    autoprefixer: '*.css',
     svgmin: './img-src/*.svg',
     svg2png: './img-src/*.svg',
     uglify: ['./bower_components/picturefill/external/matchmedia.js',
+                './bower_components/hideShowPassword/hideShowPassword.js',
                 './bower_components/picturefill/picturefill.js',
                 './bower_components/on-media-query/js/onmediaquery.js',
                 './js-src/functions.js']
@@ -32,7 +34,10 @@ gulp.task('tasks.compass', function() {
             image: 'img',
             font: 'fonts'
         }))
-        .pipe(gulp.dest('.'))
+        
+        .pipe(tasks.autoprefixer("last 2 versions", "> 1%", "ie 8"))
+		.pipe(gulp.dest('.'))
+        
         .pipe(tasks.livereload(server))
         .pipe(tasks.notify({ message: 'Sass complete' }))
 });
@@ -43,6 +48,8 @@ gulp.task('tasks.autoprefixer', function() {
     gulp.src('*.css')
     .pipe(tasks.autoprefixer("last 2 versions", "> 1%", "ie 8"))
     .pipe(gulp.dest('.'))
+    .pipe(tasks.livereload(server))
+    .pipe(tasks.notify({ message: 'Autoprefixer complete' }))
 });
 
 
@@ -86,6 +93,7 @@ gulp.task('tasks.watch', function() {
 			return console.log(err)
 		}
     	gulp.watch(paths.compass, ['tasks.compass']);
+    	//gulp.watch(paths.autoprefixer, ['tasks.autoprefixer']);
     	gulp.watch(paths.scripts, ['tasks.uglify']);
     	gulp.watch(paths.svgmin, ['tasks.svgmin']);
     	gulp.watch(paths.svg2png, ['tasks.svg2png']);

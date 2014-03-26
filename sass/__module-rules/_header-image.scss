@@ -1,6 +1,6 @@
 #header-image {
     margin-bottom: $margin;
-    @include border-radius();
+    border-radius: 0;
 
     @include respond-min($break-medium) {
         width: 100%;

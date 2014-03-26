@@ -5,7 +5,7 @@
     background: #fff;
     text-decoration: none;
     text-align: center;
-    @include box-shadow(rgba(darken($border-color,20%),1) 0 1px 1px);
+    box-shadow: rgba(darken($border-color,20%),1) 0 1px 1px;
 
     @include respond-min($break-medium) {
         display: none;
@@ -91,8 +91,8 @@
     width: auto;
     height: auto;
     float: right;
-    @include border-radius();
-    @include box-shadow($default-box-shadow);
+    border-radius: 0;
+    box-shadow: $default-box-shadow;
 
     @include respond-min($break-medium) {
         margin-right: $gutter-skinny;
