@@ -11,11 +11,15 @@ Version: 1.0
 /* Function to remove media queries for old ie's: http://jakearchibald.github.com/sass-ie/ */
 /* Theme rules (variables)
 =================================================================*/
+/* Define colors here, use them later on
+=================================================================*/
 /* Base colors
 =================================================================*/
 /* Should not be #000 for people with dyslexia: http://uxmovement.com/content/6-surprising-bad-practices-that-hurt-dyslexic-users/ */
 /* Should be a blue so people will know links are links */
 /* Layout colors
+=================================================================*/
+/* Default SASS values
 =================================================================*/
 /* Font sizes
 =================================================================*/
@@ -45,6 +49,7 @@ Version: 1.0
 /* 480px */
 /* 768px */
 /* 992px */
+/* 1400px */
 /* Extra intermediate breakpoints
 =================================================================*/
 /* Sass functions, extendables & mixins.
@@ -610,11 +615,7 @@ input[type="radio"] {
  */
 input[type="search"] {
   -webkit-appearance: textfield;
-  /* 1 */
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  /* 2 */ }
+  /* 1 */ }
 
 /**
  * Remove inner padding and search cancel button in Safari 5 and Chrome
@@ -841,10 +842,17 @@ a {
   font-size: 1.3125rem;
   font-size: 28px;
   font-size: 1.75rem; }
-  .maincontent-title a {
+
+h1, h2, h3, h4, h5 {
+  line-height: normal; }
+  h1 a, h2 a, h3 a, h4 a, h5 a {
     text-decoration: none; }
-    .maincontent-title a:hover, .maincontent-title a:focus {
+    h1 a:hover, h1 a:focus, h2 a:hover, h2 a:focus, h3 a:hover, h3 a:focus, h4 a:hover, h4 a:focus, h5 a:hover, h5 a:focus {
       text-decoration: underline; }
+
+.sec-title {
+  padding-bottom: 20px;
+  border-bottom: 1px dashed #eeeeee; }
 
 .maincontent-body h2 {
   margin: 0;
@@ -1233,7 +1241,7 @@ time, .postdate {
     color: #828282;
     text-decoration: none; }
     time a:hover, time a:focus, .postdate a:hover, .postdate a:focus {
-      color: #2c2c2c;
+      color: #5c5c5c;
       text-decoration: underline; }
 
 .l-post-options {
@@ -1293,6 +1301,8 @@ time, .postdate {
   border: 1px solid #eeeeee; }
   .comment .children .comment.depth-2, .trackback .children .comment.depth-2, .pingback .children .comment.depth-2, #respond .children .comment.depth-2 {
     margin-bottom: 20px; }
+    .comment .children .comment.depth-2:last-child, .trackback .children .comment.depth-2:last-child, .pingback .children .comment.depth-2:last-child, #respond .children .comment.depth-2:last-child {
+      margin: 0; }
 
 #respond {
   margin-bottom: 0; }
@@ -1301,7 +1311,7 @@ time, .postdate {
   font-style: normal; }
   .fn a {
     text-decoration: none;
-    color: #2c2c2c; }
+    color: #5c5c5c; }
     .fn a:hover, .fn a:focus {
       text-decoration: underline; }
 
@@ -1341,7 +1351,7 @@ time, .postdate {
     color: #828282;
     text-decoration: none; }
     .comment-meta a:hover, .comment-meta a:focus {
-      color: #2c2c2c; }
+      color: #5c5c5c; }
 
 .comments-title {
   margin: 0 0 20px; }
@@ -1427,16 +1437,18 @@ input[type=submit] {
       width: auto;
       clear: none;
       display: inline; }
-  #content form .submit, #content form #submit, #content form #searchsubmit {
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    width: auto; }
-  #content form a.submit {
-    display: inline-block;
-    zoom: 1;
-    *display: inline;
-    vertical-align: top; }
+
+.submit, #submit {
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  width: auto; }
+
+a.submit {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  vertical-align: top; }
 
 #screenReader
 , #dialog-message

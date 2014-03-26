@@ -3,7 +3,6 @@
 Template Name: Contactformulier
 */
 ?>
-
 <?php
 
 $emailSent = false;

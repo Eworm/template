@@ -119,6 +119,6 @@
                         <?php get_search_form(); ?>              
                         <nav id="mainmenu">
                             <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container' => '','menu_id' => 'main-menu','menu_class' => 'inline', 'depth' => '2' ) ); ?>
-                        </nav>  
+                        </nav>
                     </div>
                 </header>

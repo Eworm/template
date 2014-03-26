@@ -1,25 +1,24 @@
 {
-  "name": "grunt-test-project",
+  "name": "Fyzigo",
   "version": "1.0.0",
   "authors": [
     "Wout Mager"
   ],
-  "description": "Blabla",
-  "homepage": "www.woutmager.nl",
+  "homepage": "http://www.fyzigo.nl",
+  "repository": "gitlab.com/fyzigo",
   "devDependencies": {
-    "grunt": ">=0.4.x",
-    "grunt-contrib-uglify": ">=0.2.x",
-    "grunt-contrib-sass": ">=0.5.x",
-    "grunt-contrib-compass": ">=0.5.x",
-    "grunt-contrib-watch": ">=0.5.x",
-    "grunt-contrib-imagemin": ">=0.3.x",
-    "grunt-imageoptim": ">=1.4.x",
-    "grunt-svg2png": ">=0.2.x",
-    "grunt-svgmin": ">=0.2.x",
-    "grunt-notify": ">=0.2.x",
-    "load-grunt-tasks": ">=0.1.x",
-    "install": ">=0.1.x",
-    "grunt-modernizr": ">=0.3.x",
-    "grunt-bake": ">=0.3.3"
+    "gulp-concat": "~2.2.0",
+    "gulp-strip-debug": "~0.3.0",
+    "gulp-compass": "~1.1.6",
+    "gulp-imagemin": "~0.1.5",
+    "gulp-notify": "~1.2.1",
+    "gulp-plumber": "~0.5.6",
+    "gulp-sass": "~0.7.1",
+    "gulp-svg2png": "~0.2.2",
+    "gulp-svgmin": "~0.4.4",
+    "gulp-uglify": "~0.2.1",
+    "gulp-watch": "~0.5.2",
+    "gulp-livereload": "~1.2.0",
+    "tiny-lr": "0.0.5"
   }
 }
