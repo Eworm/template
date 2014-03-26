@@ -1,19 +1,16 @@
 var gulp = require('gulp');
 
-var compass = require('gulp-compass'),
-    plumber = require('gulp-plumber'),
-    sass = require('gulp-sass');
-    notify = require('gulp-notify'),
-    svg2png = require('gulp-svg2png'),
-    svgmin = require('gulp-svgmin'),
-    concat = require('gulp-concat'),
-    stripDebug = require('gulp-strip-debug'),
-    uglify = require('gulp-uglify'),
-    livereload = require('gulp-livereload');
-    lr = require('tiny-lr'),
-    server = lr();
+
+// Get packages from package.json
+var tasks = require("gulp-load-tasks")();
 
 
+// Tiny-lr server stuff
+lr = require('tiny-lr'),
+server = lr();
+
+
+// Set standard paths
 var paths = {
     compass: './sass/**/*.scss',
     svgmin: './img-src/*.svg',
@@ -26,9 +23,9 @@ var paths = {
 
 
 // Compass
-gulp.task('compass', function() {
+gulp.task('tasks.compass', function() {
     gulp.src(paths.compass)
-        .pipe(compass({
+        .pipe(tasks.compass({
             config_file: './config.rb',
             css: '.',
             sass: 'sass',
@@ -36,56 +33,56 @@ gulp.task('compass', function() {
             font: 'fonts'
         }))
         .pipe(gulp.dest('.'))
-        .pipe(livereload(server))
-        .pipe(notify({ message: 'Sass complete' }))
+        .pipe(tasks.livereload(server))
+        .pipe(tasks.notify({ message: 'Sass complete' }))
 });
 
 
 // SVG optim
-gulp.task('svgmin', function() {
+gulp.task('tasks.svgmin', function() {
     gulp.src(paths.svgmin)
-        .pipe(svgmin())
+        .pipe(tasks.svgmin())
         .pipe(gulp.dest('./img'))
-        .pipe(livereload(server))
-        .pipe(notify({ message: 'Svgoptim complete' }))
+        .pipe(tasks.livereload(server))
+        .pipe(tasks.notify({ message: 'Svgoptim complete' }))
 });
 
 
 // SVG 2 png
-gulp.task('svg2png', function () {
+gulp.task('tasks.svg2png', function () {
     gulp.src(paths.svg2png)
-        .pipe(svg2png())
+        .pipe(tasks.svg2png())
         .pipe(gulp.dest('./img'))
-        .pipe(livereload(server))
-        .pipe(notify({ message: 'Svg2png complete' }))
+        .pipe(tasks.livereload(server))
+        .pipe(tasks.notify({ message: 'Svg2png complete' }))
 });
 
 
 // Uglify
-gulp.task('scripts', function() {
+gulp.task('tasks.uglify', function() {
     gulp.src(paths.scripts)
-        .pipe(concat('functions.min.js'))
-        .pipe(stripDebug())
-        .pipe(uglify())
+        .pipe(tasks.concat('functions.min.js'))
+        //.pipe(tasks.stripDebug())
+        .pipe(tasks.uglify())
         .pipe(gulp.dest('./js'))
-        .pipe(livereload(server))
-        .pipe(notify({ message: 'Uglify complete' }));
+        .pipe(tasks.livereload(server))
+        .pipe(tasks.notify({ message: 'Uglify complete' }));
 });
 
 
 // Watch
-gulp.task('watch', function() {
+gulp.task('tasks.watch', function() {
     server.listen(35729, function(err) {
 		if (err) {
 			return console.log(err)
 		}
-    	gulp.watch(paths.compass, ['compass']);
-    	gulp.watch(paths.scripts, ['scripts']);
-    	gulp.watch(paths.svgmin, ['svgmin']);
-    	gulp.watch(paths.svg2png, ['svg2png']);
+    	gulp.watch(paths.compass, ['tasks.compass']);
+    	gulp.watch(paths.scripts, ['tasks.uglify']);
+    	gulp.watch(paths.svgmin, ['tasks.svgmin']);
+    	gulp.watch(paths.svg2png, ['tasks.svg2png']);
     })
 });
 
 
 // Default
-gulp.task('default', ['compass', 'scripts', 'svgmin', 'svg2png', 'watch']);
+gulp.task('default', ['tasks.compass', 'tasks.uglify', 'tasks.svgmin', 'tasks.svg2png', 'tasks.watch']);
