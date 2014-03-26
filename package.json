@@ -19,6 +19,7 @@
     "gulp-watch": "~0.5.2",
     "gulp-livereload": "~1.2.0",
     "tiny-lr": "0.0.5",
-    "gulp-load-tasks": "~0.1.1"
+    "gulp-load-tasks": "~0.1.1",
+    "gulp": "~3.5.6"
   }
 }

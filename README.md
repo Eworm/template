@@ -6,7 +6,7 @@ Ik maak gebruik van verschillende open-source software om sneller en effici&euml
 Nodejs: http://nodejs.org/
 
 **Stap 2**
-Grunt: http://gruntjs.com/getting-started
+Gulp: ```npm install -g gulp```
 
 **Stap 3**
 Bower: http://bower.io/
@@ -22,9 +22,9 @@ Compass: http://compass-style.org/install/
 Ga in de terminal naar de projectdirectory
 
 **Stap 7**
-Installeer de grunt modules met:
+Installeer de gulp modules met:
 ```npm install``` of ```sudo npm install```
-*De grunt modules staan straks in de map 'node_modules'*
+*De gulp modules staan straks in de map 'node_modules'*
 
 **Stap 8**
 Installeer de bower dependencies met:
@@ -41,7 +41,7 @@ bower_components
 Als alles goed is gegaan heb je nu alle software en dependencies ge&iuml;nstalleerd.
 
 ### Zelf javascript, stylesheet, en afbeeldingen aanpassen
-Als je in je terminal naar de projectdirectory gaat en ```grunt``` uitvoert wordt de default Grunt taak uitgevoerd, in dit geval de watch taak. Deze taak zorgt ervoor dat de javascript, .scss bestanden en afbeeldingen automatisch gecompileerd worden als je die wijzigt.
+Als je in je terminal naar de projectdirectory gaat en ```gulp``` uitvoert wordt de default Gulp taak uitgevoerd, in dit geval de watch taak. Deze taak zorgt ervoor dat de javascript, .scss bestanden en afbeeldingen automatisch gecompileerd worden als je die wijzigt.
 
 ## De mappenstructuur
 **De _root map**
@@ -51,10 +51,10 @@ Hier staan de bestanden die in de root van de site moeten worden gezet.
 Hier staan de niet-standaard fonts die gebruikt worden.
 
 **Afbeeldingen**
-De 'img-src' map is bedoelt voor photoshop of illustratorbestanden. De 'img' map is bedoelt voor afbeeldingen die in de site worden gebruikt. Van .svg bestanden wordt via Grunt automatisch een .png kopie gemaakt.
+De 'img-src' map is bedoelt voor photoshop of illustratorbestanden. De 'img' map is bedoelt voor afbeeldingen die in de site worden gebruikt. Van .svg bestanden wordt via Gulp automatisch een .png kopie gemaakt.
 
 **Javascript**
-De 'js-src' map is bedoelt voor de bestanden waar je in werkt. D.m.v. een Grunt taak worden deze bestanden samengevoegd en geminified en in de 'js' map geplaatst. De uglify taak in Gruntfile.js zorgt hiervoor. Hier geef je aan welke bestanden samengevoegd moeten worden.
+De 'js-src' map is bedoelt voor de bestanden waar je in werkt. D.m.v. een Gulp taak worden deze bestanden samengevoegd en geminified en in de 'js' map geplaatst. De uglify taak in gulpfile.js zorgt hiervoor. Hier geef je aan welke bestanden samengevoegd moeten worden.
 
 **SASS**
 In de 'sass' map staan alle .scss bestanden. Elk onderdeel heeft zijn eigen bestand, hierdoor is het gemakkelijker werken met deze bestanden. De structuur van deze bestanden is ge&iuml;nspireerd door https://smacss.com/
