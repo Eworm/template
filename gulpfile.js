@@ -5,7 +5,7 @@ var gulp = require('gulp');
 var tasks = require("gulp-load-tasks")();
 
 
-// Tiny-lr server stuff
+// Livereload stuff
 lr = require('tiny-lr'),
 server = lr();
 
