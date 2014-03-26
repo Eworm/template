@@ -38,6 +38,14 @@ gulp.task('tasks.compass', function() {
 });
 
 
+// Add prefixes
+gulp.task('tasks.autoprefixer', function() {
+    gulp.src('*.css')
+    .pipe(tasks.autoprefixer("last 2 versions", "> 1%", "ie 8"))
+    .pipe(gulp.dest('.'))
+});
+
+
 // SVG optim
 gulp.task('tasks.svgmin', function() {
     gulp.src(paths.svgmin)

@@ -1,11 +1,11 @@
 {
-  "name": "Fyzigo",
+  "name": "HTML Template",
   "version": "1.0.0",
   "authors": [
     "Wout Mager"
   ],
-  "homepage": "http://www.fyzigo.nl",
-  "repository": "gitlab.com/fyzigo",
+  "homepage": "http://www.woutmager.nl",
+  "repository": "",
   "devDependencies": {
     "gulp-concat": "~2.2.0",
     "gulp-strip-debug": "~0.3.0",
@@ -20,6 +20,7 @@
     "gulp-livereload": "~1.2.0",
     "tiny-lr": "0.0.5",
     "gulp-load-tasks": "~0.1.1",
-    "gulp": "~3.5.6"
+    "gulp": "~3.5.6",
+    "gulp-autoprefixer": "0.0.6"
   }
 }
