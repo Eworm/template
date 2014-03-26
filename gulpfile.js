@@ -43,16 +43,6 @@ gulp.task('tasks.compass', function() {
 });
 
 
-// Add prefixes
-gulp.task('tasks.autoprefixer', function() {
-    gulp.src('*.css')
-    .pipe(tasks.autoprefixer("last 2 versions", "> 1%", "ie 8"))
-    .pipe(gulp.dest('.'))
-    .pipe(tasks.livereload(server))
-    .pipe(tasks.notify({ message: 'Autoprefixer complete' }))
-});
-
-
 // SVG optim
 gulp.task('tasks.svgmin', function() {
     gulp.src(paths.svgmin)
@@ -93,7 +83,6 @@ gulp.task('tasks.watch', function() {
 			return console.log(err)
 		}
     	gulp.watch(paths.compass, ['tasks.compass']);
-    	//gulp.watch(paths.autoprefixer, ['tasks.autoprefixer']);
     	gulp.watch(paths.scripts, ['tasks.uglify']);
     	gulp.watch(paths.svgmin, ['tasks.svgmin']);
     	gulp.watch(paths.svg2png, ['tasks.svg2png']);
