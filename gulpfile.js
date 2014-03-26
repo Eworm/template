@@ -16,6 +16,7 @@ var paths = {
     autoprefixer: '*.css',
     svgmin: './img-src/*.svg',
     svg2png: './img-src/*.svg',
+    imagemin: './img/*.*',
     uglify: ['./bower_components/picturefill/external/matchmedia.js',
                 './bower_components/hideShowPassword/hideShowPassword.js',
                 './bower_components/picturefill/picturefill.js',
@@ -60,6 +61,15 @@ gulp.task('tasks.svg2png', function () {
         .pipe(gulp.dest('./img'))
         .pipe(tasks.livereload(server))
         .pipe(tasks.notify({ message: 'Svg2png complete' }))
+});
+
+
+// Imagemin - run just before uploading
+gulp.task('tasks.imagemin', function () {
+    gulp.src(paths.imagemin)
+        .pipe(tasks.imagemin())
+        .pipe(gulp.dest('./img'))
+        .pipe(tasks.notify({ message: 'Imagemin complete' }))
 });
 
 
