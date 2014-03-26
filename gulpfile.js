@@ -62,7 +62,8 @@ gulp.task('tasks.svg2png', function () {
 gulp.task('tasks.uglify', function() {
     gulp.src(paths.uglify)
         .pipe(tasks.concat('functions.min.js'))
-        //.pipe(tasks.stripDebug())
+        // Strip console and debugger statements from JavaScript code
+        .pipe(tasks['strip-debug']())
         .pipe(tasks.uglify())
         .pipe(gulp.dest('./js'))
         .pipe(tasks.livereload(server))

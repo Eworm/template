@@ -10,7 +10,6 @@
     "gulp-concat": "~2.2.0",
     "gulp-strip-debug": "~0.3.0",
     "gulp-compass": "~1.1.6",
-    "gulp-imagemin": "~0.1.5",
     "gulp-notify": "~1.2.1",
     "gulp-plumber": "~0.5.6",
     "gulp-sass": "~0.7.1",
