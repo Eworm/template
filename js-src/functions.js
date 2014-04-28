@@ -1,5 +1,21 @@
 $(document).ready(function() {
 
+
+    // Optimize scrolling
+    (function() {
+        var timer;
+        $(window).on('scroll resize',function () {
+            fixLogo();
+            $('html').addClass('avoid-clicks');
+            clearTimeout(timer);
+            timer = setTimeout( refresh , 150 );
+        });
+        var refresh = function () {
+            $('html').removeClass('avoid-clicks');
+        };
+    })();
+    
+
     // Animation class
     setTimeout(function() {
         $('html').addClass('start-animatin');
