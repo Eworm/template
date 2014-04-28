@@ -101,4 +101,4 @@ gulp.task('tasks.watch', function() {
 
 
 // Default
-gulp.task('default', ['tasks.compass', 'tasks.uglify', 'tasks.svgmin', 'tasks.svg2png', 'tasks.watch']);
+gulp.task('default', ['tasks.watch']);
