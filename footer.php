@@ -25,6 +25,9 @@
             </div>    
         </div>
         
+        <!-- Custom Modernizr build -->
+        <script src="<?php bloginfo('template_url'); ?>/js/modernizr.min.js" async></script>
+        
         <script>
             // jQuery vs Zepto
             document.write('<script src=' +

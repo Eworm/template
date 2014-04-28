@@ -95,9 +95,6 @@
             <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" media="screen">
         <!--<![endif]-->
         
-        <!-- Custom Modernizr build -->
-        <script src="<?php bloginfo('template_url'); ?>/js/modernizr.min.js"></script>
-        
     </head>
     <body>
         <div id="container">
