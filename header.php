@@ -112,16 +112,22 @@
         
     </head>
     <body>
+    
         <div id="container">
+        
             <div id="container-transition">
+            
                 <header id="header" class="wrapper wrapper-header">
+                
                     <div class="holder holder-header">
+                        
                         <div class="mobile-header">
                             <ul class="mobile-header-menu">
                                 <li id="menu-toggler" class="mobile-header-menuitem"><a href="#mainmenu"><span>Menu</span></a></li>
                                 <li id="content-toggler" class="mobile-header-menuitem"><a href="#content"><span>Content</span></a></li>
                             </ul>
                         </div>
+                        
                         <a href="<?php echo get_option('home'); ?>" id="logo" rel="home" title="<?php _e( 'Terug naar de homepage', 'thema_vertalingen' ); ?>">
                             <?php bloginfo('name'); ?>
                         </a>
