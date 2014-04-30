@@ -25,8 +25,10 @@
             </div>    
         </div>
         
+        <!-- So we can use the template url in our javascript -->
         <script>var templateUrl = "<?php bloginfo('template_url'); ?>";</script>
         
+        <!-- This will load and inject all js & css -->
         <script src="<?php bloginfo('template_url'); ?>/js/yepnope.min.js" async></script>
         
         <?php if(is_page_template('contact.php')) { ?>
