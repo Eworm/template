@@ -61,3 +61,11 @@ Version: 1.0
 @import "__module-rules/sidebar-section";
 @import "__module-rules/tables";
 @import "__module-rules/vcard";
+
+/* Elements above the fold using sprites should be here for an optimal pagespeed score
+=================================================================*/
+@import "__base-rules/sprites";
+
+/* Set the container opacity back to 1
+=================================================================*/
+@import "__module-rules/pagespeed-optimize";

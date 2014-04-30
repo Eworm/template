@@ -34,7 +34,7 @@ function handleError(err) {
 
 
 // Compass
-gulp.task('plugins.compass', function() {
+gulp.task('compass', function() {
     gulp.src(paths.compass)
         .pipe(plugins.compass({
             config_file: './config.rb',
@@ -53,27 +53,29 @@ gulp.task('plugins.compass', function() {
 
 
 // SVG optim
-gulp.task('plugins.svgmin', function() {
+gulp.task('svgmin', function() {
     gulp.src(paths.svgmin)
         .pipe(plugins.svgmin())
         .pipe(gulp.dest('./img'))
+        
         .pipe(plugins.livereload(server))
         .pipe(plugins.notify({ message: 'Svgoptim complete' }))
 });
 
 
 // SVG 2 png
-gulp.task('plugins.svg2png', function () {
+gulp.task('svg2png', function () {
     gulp.src(paths.svg2png)
         .pipe(plugins.svg2png())
         .pipe(gulp.dest('./img'))
+        
         .pipe(plugins.livereload(server))
         .pipe(plugins.notify({ message: 'Svg2png complete' }))
 });
 
 
 // Imagemin - run just before uploading
-gulp.task('plugins.imagemin', function () {
+gulp.task('imagemin', function () {
     gulp.src(paths.imagemin)
         .pipe(plugins.imagemin())
         .pipe(gulp.dest('./img'))
@@ -82,40 +84,37 @@ gulp.task('plugins.imagemin', function () {
 
 
 // Uglify
-gulp.task('plugins.uglify', function() {
+gulp.task('uglify', function() {
     gulp.src(paths.uglify)
         .pipe(plugins.concat('functions.min.js'))
         // Strip console and debugger statements from JavaScript code
-        //.pipe(plugins['strip-debug']())
+        .pipe(plugins.stripDebug())
         .pipe(plugins.uglify())
         .pipe(gulp.dest('./js'))
+        
         .pipe(plugins.livereload(server))
         .pipe(plugins.notify({ message: 'Uglify complete' }));
     gulp.src(paths.yepnope)
         .pipe(plugins.concat('yepnope.min.js'))
-        //.pipe(plugins['strip-debug']())
+        .pipe(plugins.stripDebug())
         .pipe(plugins.uglify())
         .pipe(gulp.dest('./js'))
+        
         .pipe(plugins.livereload(server))
         .pipe(plugins.notify({ message: 'Uglify complete' }));
 });
 
 
 // Watch
-gulp.task('plugins.watch', function() {
+gulp.task('watch', function() {
     server.listen(35729, function(err) {
-/*
-		if (err) {
-			return console.log(err)
-		}
-*/
-    	gulp.watch(paths.compass, ['plugins.compass']);
-    	gulp.watch([paths.uglify, paths.yepnope], ['plugins.uglify']);
-    	gulp.watch(paths.svgmin, ['plugins.svgmin']);
-    	gulp.watch(paths.svg2png, ['plugins.svg2png']);
+    	gulp.watch(paths.compass, ['compass']);
+    	gulp.watch([paths.uglify, paths.yepnope], ['uglify']);
+    	gulp.watch(paths.svgmin, ['svgmin']);
+    	gulp.watch(paths.svg2png, ['svg2png']);
     })
 });
 
 
 // Default
-gulp.task('default', ['plugins.watch']);
+gulp.task('default', ['watch']);

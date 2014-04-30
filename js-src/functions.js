@@ -1,9 +1,6 @@
 $(document).ready(function() {
 
 
-    $('html').addClass('async-done');
-
-
     // Optimize scrolling
     (function() {
         var timer;

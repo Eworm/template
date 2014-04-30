@@ -88,9 +88,7 @@
         
         <?php wp_head(); ?>
         
-        <!-- Replace the .no-js class with the .js class so visitors without javascript will be able to see all html -->
-        <script>with(document.documentElement){className=className.replace(/\bno-js\b/,'js')}</script>
-        
+        <!-- Include the above the fold css and replace all relative urls with the theme url -->
         <style>
             <?php
             
@@ -106,6 +104,11 @@
                 
             ?>
         </style>
+        
+        <!-- Visitors without javascript will get the rest of the stylesheet the normal way -->
+        <noscript>
+            <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" media="screen">
+        </noscript>
         
     </head>
     <body>

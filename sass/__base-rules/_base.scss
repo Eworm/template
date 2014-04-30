@@ -41,20 +41,10 @@ body {
     overflow: hidden;
     position: relative;
     float: left;
-/*
     transition-property: opacity;
     transition-duration: .05s;
     transition-timing-function: ease-in;
-*/
     opacity: 0;
-    
-    .no-js & {
-        opacity: 1;
-    }
-    
-    .async-done & {
-        opacity: 1;
-    }
 
     .active-menu & {
         overflow: hidden;
