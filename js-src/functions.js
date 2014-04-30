@@ -8,7 +8,6 @@ $(document).ready(function() {
     (function() {
         var timer;
         $(window).on('scroll resize',function () {
-            fixLogo();
             $('html').addClass('avoid-clicks');
             clearTimeout(timer);
             timer = setTimeout( refresh , 150 );

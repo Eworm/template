@@ -41,18 +41,11 @@ body {
     overflow: hidden;
     position: relative;
     float: left;
-
-    .active-menu & {
-        overflow: hidden;
-    }
-    
-    .touch.no-overflow-scroll.active-menu & {
-        overflow: visible;
-    }
-    
+/*
     transition-property: opacity;
     transition-duration: .05s;
     transition-timing-function: ease-in;
+*/
     opacity: 0;
     
     .no-js & {
@@ -61,6 +54,14 @@ body {
     
     .async-done & {
         opacity: 1;
+    }
+
+    .active-menu & {
+        overflow: hidden;
+    }
+    
+    .touch.no-overflow-scroll.active-menu & {
+        overflow: visible;
     }
 }
 
