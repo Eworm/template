@@ -26,7 +26,7 @@ Version: 1.0
 =================================================================*/
 @import "compass/css3";
 @import "__sass-extras/functions";
-@import "__sass-extras/grid";
+//@import "__sass-extras/grid";
 @import "__sass-extras/extendables";
 @import "__sass-extras/mixins";
 @import "__sass-extras/rem";
@@ -34,20 +34,20 @@ Version: 1.0
 
 /* Base rules. Normalize and other basic element styles.
 =================================================================*/
-@import "__base-rules/normalize";
-@import "__base-rules/base";
-@import "__base-rules/headers";
+//@import "__base-rules/normalize";
+//@import "__base-rules/base";
+//@import "__base-rules/headers";
 
 /* Layout rules. Styling of page sections that contain modules.
 =================================================================*/
 @import "__layout-rules/doormat";
 @import "__layout-rules/footer";
-@import "__layout-rules/header";
-@import "__layout-rules/maincontent";
-@import "__layout-rules/mainmenu";
-@import "__layout-rules/mobile-header";
-@import "__layout-rules/sidebar";
-@import "__layout-rules/submenu";
+//@import "__layout-rules/header";
+//@import "__layout-rules/maincontent";
+//@import "__layout-rules/mainmenu";
+//@import "__layout-rules/mobile-header";
+//@import "__layout-rules/sidebar";
+//@import "__layout-rules/submenu";
 
 /* Module rules. Styling of reusable, modular parts of the design.
 =================================================================*/

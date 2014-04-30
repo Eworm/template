@@ -88,12 +88,24 @@
         
         <?php wp_head(); ?>
         
-        <!--[if lte IE 8]>
-            <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style-old-ie.css" media="screen">
-        <![endif]-->
-        <!--[if gt IE 8]><!-->
-            <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" media="screen">
-        <!--<![endif]-->
+        <!-- Replace the .no-js class with the .js class so visitors without javascript will be able to see all html -->
+        <script>with(document.documentElement){className=className.replace(/\bno-js\b/,'js')}</script>
+        
+        <style>
+            <?php
+            
+                // Add the theme url to external files
+                function callback($buffer) {
+                    return (str_replace('url("', 'url("' . get_bloginfo('template_url') . '/', $buffer));
+                }
+                
+                // Include the above the fold css
+                ob_start('callback');
+                include 'style-above-the-fold.css';
+                ob_end_flush();
+                
+            ?>
+        </style>
         
     </head>
     <body>

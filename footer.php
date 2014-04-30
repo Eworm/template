@@ -25,21 +25,13 @@
             </div>    
         </div>
         
-        <!-- Custom Modernizr build -->
-        <script src="<?php bloginfo('template_url'); ?>/js/modernizr.min.js" async></script>
+        <script>var templateUrl = "<?php bloginfo('template_url'); ?>";</script>
         
-        <script>
-            // jQuery vs Zepto
-            document.write('<script src=' +
-            ('__proto__' in {} ? '<?php bloginfo('template_url'); ?>/js/zepto.min' : 'https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min') +
-            '.js><\/script>')
-        </script>
+        <script src="<?php bloginfo('template_url'); ?>/js/yepnope.min.js" async></script>
         
         <?php if(is_page_template('contact.php')) { ?>
             <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBgU-OMTQXQwUwOyNRZB5jh1cFgY5z_L2A&sensor=false"></script>
         <?php } ?>
-        
-        <script src="<?php bloginfo('template_url'); ?>/js/functions.min.js"></script>
         
         <?php wp_footer(); ?>
   

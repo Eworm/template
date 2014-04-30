@@ -2,7 +2,7 @@ var gulp = require('gulp');
 
 
 // Get packages from package.json
-var tasks = require("gulp-load-tasks")();
+var plugins = require("gulp-load-plugins")();
 
 
 // Livereload stuff
@@ -21,84 +21,101 @@ var paths = {
                 './bower_components/hideShowPassword/hideShowPassword.js',
                 './bower_components/picturefill/picturefill.js',
                 './bower_components/on-media-query/js/onmediaquery.js',
-                './js-src/functions.js']
+                './js-src/functions.js'],
+    yepnope: ['./bower_components/yepnope/yepnope.1.5.4-min.js',
+                './js-src/yepnope-loader.js']
 };
 
 
+// Make sure Gulp doesn't crash on Sass errors
+function handleError(err) {
+  this.emit('end');
+}
+
+
 // Compass
-gulp.task('tasks.compass', function() {
+gulp.task('plugins.compass', function() {
     gulp.src(paths.compass)
-        .pipe(tasks.compass({
+        .pipe(plugins.compass({
             config_file: './config.rb',
             css: '.',
             sass: 'sass',
             image: 'img',
             font: 'fonts'
-        }))
+        }).on('error', handleError))
         
-        .pipe(tasks.autoprefixer("last 2 versions", "> 1%", "ie 8"))
+        .pipe(plugins.autoprefixer("last 2 versions", "> 1%", "ie 8"))
 		.pipe(gulp.dest('.'))
         
-        .pipe(tasks.livereload(server))
-        .pipe(tasks.notify({ message: 'Sass complete' }))
+        .pipe(plugins.livereload(server))
+        .pipe(plugins.notify({ message: 'Sass complete' }))
 });
 
 
 // SVG optim
-gulp.task('tasks.svgmin', function() {
+gulp.task('plugins.svgmin', function() {
     gulp.src(paths.svgmin)
-        .pipe(tasks.svgmin())
+        .pipe(plugins.svgmin())
         .pipe(gulp.dest('./img'))
-        .pipe(tasks.livereload(server))
-        .pipe(tasks.notify({ message: 'Svgoptim complete' }))
+        .pipe(plugins.livereload(server))
+        .pipe(plugins.notify({ message: 'Svgoptim complete' }))
 });
 
 
 // SVG 2 png
-gulp.task('tasks.svg2png', function () {
+gulp.task('plugins.svg2png', function () {
     gulp.src(paths.svg2png)
-        .pipe(tasks.svg2png())
+        .pipe(plugins.svg2png())
         .pipe(gulp.dest('./img'))
-        .pipe(tasks.livereload(server))
-        .pipe(tasks.notify({ message: 'Svg2png complete' }))
+        .pipe(plugins.livereload(server))
+        .pipe(plugins.notify({ message: 'Svg2png complete' }))
 });
 
 
 // Imagemin - run just before uploading
-gulp.task('tasks.imagemin', function () {
+gulp.task('plugins.imagemin', function () {
     gulp.src(paths.imagemin)
-        .pipe(tasks.imagemin())
+        .pipe(plugins.imagemin())
         .pipe(gulp.dest('./img'))
-        .pipe(tasks.notify({ message: 'Imagemin complete' }))
+        .pipe(plugins.notify({ message: 'Imagemin complete' }))
 });
 
 
 // Uglify
-gulp.task('tasks.uglify', function() {
+gulp.task('plugins.uglify', function() {
     gulp.src(paths.uglify)
-        .pipe(tasks.concat('functions.min.js'))
+        .pipe(plugins.concat('functions.min.js'))
         // Strip console and debugger statements from JavaScript code
-        .pipe(tasks['strip-debug']())
-        .pipe(tasks.uglify())
+        //.pipe(plugins['strip-debug']())
+        .pipe(plugins.uglify())
         .pipe(gulp.dest('./js'))
-        .pipe(tasks.livereload(server))
-        .pipe(tasks.notify({ message: 'Uglify complete' }));
+        .pipe(plugins.livereload(server))
+        .pipe(plugins.notify({ message: 'Uglify complete' }));
+    gulp.src(paths.yepnope)
+        .pipe(plugins.concat('yepnope.min.js'))
+        //.pipe(plugins['strip-debug']())
+        .pipe(plugins.uglify())
+        .pipe(gulp.dest('./js'))
+        .pipe(plugins.livereload(server))
+        .pipe(plugins.notify({ message: 'Uglify complete' }));
 });
 
 
 // Watch
-gulp.task('tasks.watch', function() {
+gulp.task('plugins.watch', function() {
     server.listen(35729, function(err) {
+/*
 		if (err) {
 			return console.log(err)
 		}
-    	gulp.watch(paths.compass, ['tasks.compass']);
-    	gulp.watch(paths.uglify, ['tasks.uglify']);
-    	gulp.watch(paths.svgmin, ['tasks.svgmin']);
-    	gulp.watch(paths.svg2png, ['tasks.svg2png']);
+*/
+    	gulp.watch(paths.compass, ['plugins.compass']);
+    	gulp.watch([paths.uglify, paths.yepnope], ['plugins.uglify']);
+    	gulp.watch(paths.svgmin, ['plugins.svgmin']);
+    	gulp.watch(paths.svg2png, ['plugins.svg2png']);
     })
 });
 
 
 // Default
-gulp.task('default', ['tasks.watch']);
+gulp.task('default', ['plugins.watch']);

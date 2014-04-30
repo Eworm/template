@@ -49,6 +49,19 @@ body {
     .touch.no-overflow-scroll.active-menu & {
         overflow: visible;
     }
+    
+    transition-property: opacity;
+    transition-duration: .05s;
+    transition-timing-function: ease-in;
+    opacity: 0;
+    
+    .no-js & {
+        opacity: 1;
+    }
+    
+    .async-done & {
+        opacity: 1;
+    }
 }
 
 #content-toggle {
