@@ -7,7 +7,7 @@
     text-align: center;
     box-shadow: rgba(darken($border-color,20%),1) 0 1px 1px;
 
-    @include respond-min($break-medium) {
+    @include respond-min($palm) {
         display: none;
     }
 }
@@ -20,7 +20,7 @@
         display: block;
     }
 
-    @include respond-min($break-medium) {
+    @include respond-min($palm) {
         margin: $margin 0;
         padding: $gutter 0 0 0;
         display: block;
@@ -47,7 +47,7 @@
         }
     }
 
-    @include respond-min($break-medium) {
+    @include respond-min($palm) {
         margin: 0 0 $margin-skinny 0;
         padding: $gutter;
         border: 1px solid $border-color;
@@ -81,7 +81,7 @@
     font-weight: bold;
     line-height: 32px;
 
-    @include respond-min($break-medium) {
+    @include respond-min($palm) {
         margin-bottom: $gutter;
         font-weight: normal;
     }
@@ -94,7 +94,7 @@
     border-radius: 0;
     box-shadow: $default-box-shadow;
 
-    @include respond-min($break-medium) {
+    @include respond-min($palm) {
         margin-right: $gutter-skinny;
         vertical-align: top;
         float: none;
@@ -108,7 +108,7 @@
 .comment-meta {
     @include rem('font-size',$text-skinny);
 
-    @include respond-min($break-medium) {
+    @include respond-min($palm) {
         padding-top: 20px;
         position: absolute;
         top: 0;
@@ -152,7 +152,7 @@
         border-bottom: none;
         border-top: 1px solid $border-color;
 
-        @include respond-min($break-medium) {
+        @include respond-min($palm) {
             padding: $gutter-skinny;
             border-bottom: 1px solid $border-color;
         }

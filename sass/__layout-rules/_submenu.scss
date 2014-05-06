@@ -2,7 +2,7 @@
     display: table-caption;
     float: none;
 
-    @include respond-min($break-medium) {
+    @include respond-min($palm) {
         margin-bottom: $margin;
         float: left;
         clear: none;
@@ -17,7 +17,7 @@
         border: 1px solid $border-color;
         @include inline-block;
         
-        @include respond-min($break-medium) {
+        @include respond-min($palm) {
             border: none;
         }
     }
@@ -30,7 +30,7 @@
         display: block;
         background: transparent;
 
-        @include respond-min($break-medium) {
+        @include respond-min($palm) {
             margin-bottom: 0;
         }
         
@@ -46,7 +46,7 @@
         display: block;
         padding: $gutter-skinny;
 
-        @include respond-min($break-medium) {
+        @include respond-min($palm) {
             border-bottom: 1px solid $border-color;
             background: transparent;
         }

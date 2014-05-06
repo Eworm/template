@@ -6,7 +6,7 @@
     border: 1px solid $border-color;
     background: #fff;
 
-    @include respond-min($break-desktop) {
+    @include respond-min($lap) {
         padding: $gutter;
     }
 

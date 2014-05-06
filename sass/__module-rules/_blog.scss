@@ -18,7 +18,7 @@
     .blog-thumb {
         display: none;
 
-        @include respond-min($break-medium) {
+        @include respond-min($palm) {
             width: 87px;
             height: 68px;
             margin-right: $gutter-skinny;
@@ -52,7 +52,7 @@
 .l-post-nav {
     text-align: center;
 
-    @include respond-min($break-medium) {
+    @include respond-min($palm) {
         text-align: left;
     }
 }

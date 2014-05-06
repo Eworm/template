@@ -5,7 +5,7 @@ input {
     font-family: $body-font;
     @include rem('font-size',$body-size);
     
-    @include respond-min($break-medium) {
+    @include respond-min($palm) {
         width: 50%;
         
         aside section & {
@@ -34,7 +34,7 @@ input[type=checkbox], input[type=radio] {
 
 input[type=submit] {
     
-    @include respond-min($break-medium) {
+    @include respond-min($palm) {
         width: auto;
     }
 }
@@ -47,7 +47,7 @@ input[type=submit] {
         padding: 0;
         clear: both;
 
-        @include respond-min($break-medium) {
+        @include respond-min($palm) {
             width: 100%;
             float: left;
         }
@@ -91,7 +91,7 @@ input[type=submit] {
     text-decoration: none;
     cursor: pointer;
 
-    @include respond-min($break-medium) {
+    @include respond-min($palm) {
         width: auto;
     }
 

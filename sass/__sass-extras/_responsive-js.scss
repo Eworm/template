@@ -27,19 +27,19 @@ html {
 
 /* Queries for supported browsers.       
 ----------------------------------- */
-@media screen and (min-width: $break-skinny) {
+@media screen and (min-width: $wrist) {
 	html {
 		font-family: "skinny";
 	}
 }
 
-@media screen and (min-width: $break-medium) {
+@media screen and (min-width: $palm) {
 	html {
 		font-family: "medium";
 	}
 }
 
-@media screen and (min-width: $break-desktop) {
+@media screen and (min-width: $lap) {
 	html {
 		font-family: "desktop";
 	}

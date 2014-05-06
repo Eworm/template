@@ -1,9 +1,10 @@
 /* Responsive breakpoints
 =================================================================*/
-$break-skinny: 30.000em; /* 480px */
-$break-medium: 48.000em; /* 768px */
-$break-desktop: 62.000em; /* 992px */
-$break-widescreen: 87.500em; /* 1400px */
+$wrist: 30.000em; /* 480px */
+$palm: 48.000em; /* 768px */
+$lap: 62.000em; /* 992px */
+$desk: 80.000em; /* 1280px */
+$wall: 100.000em; /* 1600px */
 
 /* Extra intermediate breakpoints
 =================================================================*/

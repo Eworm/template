@@ -21,7 +21,7 @@
         -ms-overflow-style: -ms-autohiding-scrollbar;
         -webkit-overflow-scrolling: touch;
 
-        @include respond-min($break-medium) {
+        @include respond-min($palm) {
             overflow: visible;
         }
     }
@@ -30,13 +30,13 @@
         overflow: visible;
     }
 
-    @include respond-min($break-skinny) {
+    @include respond-min($wrist) {
         width: $skinny-menu-width;
         left: -$skinny-menu-width;
         z-index: 10;
     }
 
-    @include respond-min($break-medium) {
+    @include respond-min($palm) {
         width: 100%;
         height: auto;
         float: left;
@@ -67,7 +67,7 @@
         display: block;
         border-top: 1px solid $border-color;
 
-        @include respond-min($break-medium) {
+        @include respond-min($palm) {
             border-top: none;
         }
 
@@ -114,7 +114,7 @@
         position: relative;
         display: block;
 
-        @include respond-min($break-medium) {
+        @include respond-min($palm) {
             width: auto;
             float: left;
         }
@@ -127,12 +127,12 @@
         border-bottom: 1px solid $border-color;
         text-decoration: none;
 
-        @include respond-min($break-medium) {
+        @include respond-min($palm) {
             padding: $gutter-skinny;
             border-bottom: none;
         }
 
-        @include respond-min($break-desktop) {
+        @include respond-min($lap) {
             padding: $gutter-skinny $gutter;
             float: left;
         }
@@ -140,7 +140,7 @@
         &:hover, &:focus {
             background: $border-color;
 
-            @include respond-min($break-medium) {
+            @include respond-min($palm) {
             }
         }
     }
@@ -154,7 +154,7 @@
         a {
         }
 
-        @include respond-min($break-medium) {
+        @include respond-min($palm) {
             background: $border-color;
             box-shadow: none;
             @include background-image(none);
@@ -172,13 +172,13 @@
                 top: 50%;
                 margin-top: -8px;
 
-                @include respond-min($break-medium) {
+                @include respond-min($palm) {
                     display: none;
                 }
             }
         }
 
-        @include respond-min($break-medium) {
+        @include respond-min($palm) {
             &:after {
                 display: none;
             }
@@ -197,7 +197,7 @@
 
     .current_page_ancestor {
 
-        @include respond-min($break-medium) {
+        @include respond-min($palm) {
             a {
             }
         }
@@ -221,7 +221,7 @@
         .current_page_ancestor &, .current-menu-item & {
             display: block;
             
-            @include respond-min($break-medium) {
+            @include respond-min($palm) {
                 display: none;
             }
         }
@@ -242,7 +242,7 @@
                 float: left;
                 border-bottom: 1px solid $border-color;
     
-                @include respond-min($break-medium) {
+                @include respond-min($palm) {
                     padding: 8px $gutter-skinny;
                     color: $body-color;
                     border: none;
@@ -259,7 +259,7 @@
                 
                 a {
                 
-                    @include respond-min($break-medium) {
+                    @include respond-min($palm) {
                         border: none;
                     }
                 }
@@ -275,7 +275,7 @@
             display: none !important;
         }
     
-        @include respond-min($break-medium) {
+        @include respond-min($palm) {
             width: 200px;
             margin-top: -4px;
             position: absolute;
@@ -287,7 +287,7 @@
         
         &:before {
             
-            @include respond-min($break-medium) {
+            @include respond-min($palm) {
     /*
                 content: '';
                 width: 0;

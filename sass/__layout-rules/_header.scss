@@ -1,7 +1,7 @@
 #header {
     margin-bottom: $margin;
 
-    @include respond-min($break-medium) {
+    @include respond-min($palm) {
         background: $body-bg-color;
         padding: $gutter 0 0;
         border-bottom: 1px solid $border-color;
@@ -11,7 +11,7 @@
 #cp {
     display: none;
 
-    @include respond-min($break-medium) {
+    @include respond-min($palm) {
         display: block;
     }
 }

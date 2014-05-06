@@ -1,7 +1,7 @@
 .alignnone {
     @extend %postimage;
 
-    @include respond-min($break-skinny) {
+    @include respond-min($wrist) {
         width: auto;
         margin: $margin $gutter $margin 0;
     }
@@ -11,7 +11,7 @@
 div.aligncenter {
     @extend %postimage;
 
-    @include respond-min($break-skinny) {
+    @include respond-min($wrist) {
         display: block;
         margin: $margin auto;
     }
@@ -20,7 +20,7 @@ div.aligncenter {
 .alignright {
     @extend %postimage;
 
-    @include respond-min($break-skinny) {
+    @include respond-min($wrist) {
         width: auto;
         float:right;
         margin: 0 0 $margin $gutter;
@@ -30,7 +30,7 @@ div.aligncenter {
 .alignleft {
     @extend %postimage;
 
-    @include respond-min($break-skinny) {
+    @include respond-min($wrist) {
         width: auto;
         float: left;
         margin: 0 $gutter $margin 0;
@@ -40,7 +40,7 @@ div.aligncenter {
 a img.alignright {
     @extend %postimage;
 
-    @include respond-min($break-skinny) {
+    @include respond-min($wrist) {
         width: auto;
         float: right;
         margin: $gutter 0 $margin $gutter;
@@ -50,7 +50,7 @@ a img.alignright {
 a img.alignnone {
     @extend %postimage;
 
-    @include respond-min($break-skinny) {
+    @include respond-min($wrist) {
         width: auto;
         margin: $gutter $gutter $margin 0;
     }
@@ -59,7 +59,7 @@ a img.alignnone {
 a img.alignleft {
     @extend %postimage;
 
-    @include respond-min($break-skinny) {
+    @include respond-min($wrist) {
         width: auto;
         float: left;
         margin: $gutter $gutter $margin 0;
@@ -69,7 +69,7 @@ a img.alignleft {
 a img.aligncenter {
     @extend %postimage;
 
-    @include respond-min($break-skinny) {
+    @include respond-min($wrist) {
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -94,12 +94,12 @@ a img.aligncenter {
         display: block;
         border: 0 none;
 
-        @include respond-min($break-medium) {
+        @include respond-min($palm) {
             max-width: auto;
         }
     }
 
-    @include respond-min($break-medium) {
+    @include respond-min($palm) {
         width: auto;
         max-width: none;
     }
@@ -113,21 +113,21 @@ a img.aligncenter {
 
 .wp-caption.alignnone {
 
-    @include respond-min($break-skinny) {
+    @include respond-min($wrist) {
         margin: $gutter $gutter $margin 0;
     }
 }
 
 .wp-caption.alignleft {
 
-    @include respond-min($break-skinny) {
+    @include respond-min($wrist) {
         margin: 0 $gutter $margin 0;
     }
 }
 
 .wp-caption.alignright {
 
-    @include respond-min($break-skinny) {
+    @include respond-min($wrist) {
         margin: 0 0 $margin $gutter;
     }
 }
@@ -135,12 +135,12 @@ a img.aligncenter {
 .post-thumbnail {
     @extend %postimage;
 
-    @include respond-min($break-skinny) {
+    @include respond-min($wrist) {
         width: auto;
         margin: $margin 0;
     }
     
-    @include respond-min($break-medium) {
+    @include respond-min($palm) {
         float: right;
         margin: 0 0 $margin $gutter;
     }

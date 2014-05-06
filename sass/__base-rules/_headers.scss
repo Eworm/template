@@ -3,7 +3,7 @@
     margin: 0 0 $margin;
     @include rem('font-size',$header-2);
 
-    @include respond-min($break-medium) {
+    @include respond-min($palm) {
         @include rem('font-size',$header-1);
     }
 }
@@ -32,7 +32,7 @@ h1, h2, h3, h4, h5 {
         font-weight: bold;
         @include rem('font-size',$header-3);
     
-        @include respond-min($break-medium) {
+        @include respond-min($palm) {
             font-weight: normal;
             @include rem('font-size',$header-2);
         }

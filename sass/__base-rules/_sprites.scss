@@ -10,11 +10,11 @@
     @include svg-or-not('img/sprite');    
     transform: translate3d(0,0,0);
     
-    @include respond-min($break-skinny) {
+    @include respond-min($wrist) {
         left: 35%;
     }
 
-    @include respond-min($break-medium) {
+    @include respond-min($palm) {
         width: 156px;
         height: 87px;
         margin: 0 20px 0 0;
