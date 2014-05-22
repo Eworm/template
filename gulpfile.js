@@ -82,6 +82,9 @@ gulp.task('imagemin', function () {
 
 // Uglify
 gulp.task('uglify', function() {
+
+    .pipe(plugins.plumber({errorHandler: plugins.notify.onError("Error: <%= error.message %>")}))
+    
     gulp.src(paths.uglify)
         .pipe(plugins.concat('functions.min.js'))
         // Strip console and debugger statements from JavaScript code
