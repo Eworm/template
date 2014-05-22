@@ -84,7 +84,13 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
         <link type="text/plain" rel="author" href="/humans.txt">
         
-        <!-- Insert Google analytics here -->
+        <?php
+            $whitelist = array('localhost', '10.0.1.17');
+            if ($link = (!in_array($_SERVER['HTTP_HOST'], $whitelist))) {
+        ?>
+            <!-- Insert Google analytics here -->
+            
+        <?php } ?>
         
         <?php wp_head(); ?>
         

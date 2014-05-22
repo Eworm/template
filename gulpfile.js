@@ -94,6 +94,7 @@ gulp.task('uglify', function() {
         
         .pipe(plugins.livereload(server))
         .pipe(plugins.notify({ message: 'Uglify complete' }));
+        
     gulp.src(paths.yepnope)
         .pipe(plugins.concat('yepnope.min.js'))
         .pipe(plugins.stripDebug())
