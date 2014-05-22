@@ -82,10 +82,11 @@ gulp.task('imagemin', function () {
 
 // Uglify
 gulp.task('uglify', function() {
-
-    .pipe(plugins.plumber({errorHandler: plugins.notify.onError("Error: <%= error.message %>")}))
     
     gulp.src(paths.uglify)
+    
+        .pipe(plugins.plumber({errorHandler: plugins.notify.onError("Error: <%= error.message %>")}))
+    
         .pipe(plugins.concat('functions.min.js'))
         // Strip console and debugger statements from JavaScript code
         .pipe(plugins.stripDebug())
@@ -93,16 +94,19 @@ gulp.task('uglify', function() {
         .pipe(gulp.dest('./js'))
         
         .pipe(plugins.livereload(server))
-        .pipe(plugins.notify({ message: 'Uglify complete' }));
+        .pipe(plugins.notify({ message: 'Uglify complete' }))
         
     gulp.src(paths.yepnope)
+    
+        .pipe(plugins.plumber({errorHandler: plugins.notify.onError("Error: <%= error.message %>")}))
+    
         .pipe(plugins.concat('yepnope.min.js'))
         .pipe(plugins.stripDebug())
         .pipe(plugins.uglify())
         .pipe(gulp.dest('./js'))
         
         .pipe(plugins.livereload(server))
-        .pipe(plugins.notify({ message: 'Uglify complete' }));
+        .pipe(plugins.notify({ message: 'Uglify complete' }))
 });
 
 
