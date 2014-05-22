@@ -27,22 +27,19 @@ var paths = {
 };
 
 
-// Make sure Gulp doesn't crash on Sass errors
-function handleError(err) {
-  this.emit('end');
-}
-
-
 // Compass
 gulp.task('compass', function() {
     gulp.src(paths.compass)
+    
+        .pipe(plugins.plumber({errorHandler: plugins.notify.onError("Error: <%= error.message %>")}))
+        
         .pipe(plugins.compass({
             config_file: './config.rb',
             css: '.',
             sass: 'sass',
             image: 'img',
             font: 'fonts'
-        }).on('error', handleError))
+        }))
         
         .pipe(plugins.autoprefixer("last 2 versions", "> 1%", "ie 8"))
 		.pipe(gulp.dest('.'))
