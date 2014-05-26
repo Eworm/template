@@ -99,12 +99,12 @@
             <?php
             
                 // Add the theme url to external files
-                function callback($buffer) {
+                function replaceUrl($buffer) {
                     return (str_replace('url("', 'url("' . get_bloginfo('template_url') . '/', $buffer));
                 }
                 
                 // Include the above the fold css
-                ob_start('callback');
+                ob_start('replaceUrl');
                 include 'style-above-the-fold.css';
                 ob_end_flush();
                 
