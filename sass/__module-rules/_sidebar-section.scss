@@ -24,13 +24,12 @@
     }
 
     a {
-/*
         text-decoration: none;
 
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
             text-decoration: underline;
         }
-*/
     }
 
     iframe {
@@ -46,15 +45,14 @@
 .sidebar-section-title {
     margin-bottom: $margin;
     font-weight: bold;
-    @include rem('font-size',$body-size);
+    @include rem('font-size', $body-size);
 
     a {
-/*
         text-decoration: none;
         
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
             text-decoration: underline;
         }
-*/
     }
 }

@@ -1,24 +1,24 @@
-/* Define colors here, use them later on
-=================================================================*/
+// Define colors here, use them later on
+// =================================================================
 $white: #fff;
 $light-grey: #eee;
 $grey: #828282;
 $dark-grey: #222;
-$blue: #0000ee;
+$blue: #00e;
 $red: #f00;
 
 
-/* Base colors
-=================================================================*/
+// Base colors
+// =================================================================
 $body-bg-color: $white;
-$body-color: $dark-grey; /* Should not be #000 for people with dyslexia: http://uxmovement.com/content/6-surprising-bad-practices-that-hurt-dyslexic-users/ */
-$link-color: $blue; /* Should be a blue so people will know links are links */
+$body-color: $dark-grey;    // Should not be #000 for people with dyslexia: http://uxmovement.com/content/6-surprising-bad-practices-that-hurt-dyslexic-users/
+$link-color: $blue;         // Should be a blue so people will know links are links
 
 
-/* Layout colors
-=================================================================*/
+// Layout colors
+// =================================================================
 $nav-bg-color: $white;
 $border-color: $light-grey;
 $lesser-color: $grey;
-$lesser-color-hover: darken($grey,15%);
+$lesser-color-hover: darken($grey, 15%);
 $alert: $red;

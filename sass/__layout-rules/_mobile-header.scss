@@ -7,7 +7,7 @@
     left: 0;
     z-index: 1000;
     border-bottom: 1px solid $border-color;
-    transform: translate3d(0,0,0);
+    transform: translate3d(0, 0, 0);
 
     @include respond-min($palm) {
         display: none;
@@ -30,7 +30,9 @@
         text-decoration: none;
         display: block;
 
-        &:active, &:focus, &:hover {
+        &:active,
+        &:focus,
+        &:hover {
             text-decoration: none;
         }
     }

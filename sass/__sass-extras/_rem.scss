@@ -5,21 +5,21 @@
 $baseline-px: $base-size;
 
 @mixin rem($property, $px-values) {
-  // Convert the baseline into rems
-  $baseline-rem: $baseline-px / 1rem;
-  // Print the first line in pixel values
-  #{$property}: $px-values;
-  // If there is only one (numeric) value, return the property/value line for it.
-  @if type-of($px-values) == "number" {
-    #{$property}: $px-values / $baseline-rem; }
-  @else {
-    // Create an empty list that we can dump values into
-    $rem-values: unquote("");
-    @each $value in $px-values {
-      // If the value is zero, return 0
-      @if $value == 0 {
-        $rem-values: append($rem-values, $value); }
-      @else {
-        $rem-values: append($rem-values, $value / $baseline-rem); } }
-    // Return the property and its list of converted values
-    #{$property}: $rem-values; } }
+    // Convert the baseline into rems
+    $baseline-rem: $baseline-px / 1rem;
+    // Print the first line in pixel values
+    #{$property}: $px-values;
+    // If there is only one (numeric) value, return the property/value line for it.
+    @if type-of($px-values) == 'number' {
+        #{$property}: $px-values / $baseline-rem; }
+    @else {
+        // Create an empty list that we can dump values into
+        $rem-values: unquote('');
+        @each $value in $px-values {
+            // If the value is zero, return 0
+            @if $value == 0 {
+                $rem-values: append($rem-values, $value); }
+            @else {
+                $rem-values: append($rem-values, $value / $baseline-rem); } }
+        // Return the property and its list of converted values
+        #{$property}: $rem-values; } }

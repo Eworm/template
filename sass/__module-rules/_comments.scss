@@ -5,7 +5,7 @@
     background: #fff;
     text-decoration: none;
     text-align: center;
-    box-shadow: rgba(darken($border-color,20%),1) 0 1px 1px;
+    box-shadow: rgba(darken($border-color, 20%), 1) 0 1px 1px;
 
     @include respond-min($palm) {
         display: none;
@@ -22,7 +22,7 @@
 
     @include respond-min($palm) {
         margin: $margin 0;
-        padding: $gutter 0 0 0;
+        padding: $gutter 0 0;
         display: block;
     }
 }
@@ -31,7 +31,10 @@
     margin: 0 0 $gutter;
 }
 
-.comment, .trackback, .pingback, #respond {
+.comment,
+.trackback,
+.pingback,
+#respond {
     width: 100%;
     padding: $gutter-skinny 0;
     float: left;
@@ -48,7 +51,7 @@
     }
 
     @include respond-min($palm) {
-        margin: 0 0 $margin-skinny 0;
+        margin: 0 0 $margin-skinny;
         padding: $gutter;
         border: 1px solid $border-color;
     }
@@ -65,7 +68,8 @@
         text-decoration: none;
         color: $lesser-color-hover;
 
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
             text-decoration: underline;
         }
     }
@@ -106,7 +110,7 @@
 }
 
 .comment-meta {
-    @include rem('font-size',$text-skinny);
+    @include rem('font-size', $text-skinny);
 
     @include respond-min($palm) {
         padding-top: 20px;
@@ -120,7 +124,8 @@
         color: $lesser-color;
         text-decoration: none;
 
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
             color: $lesser-color-hover;
         }
     }
@@ -131,14 +136,15 @@
 }
 
 .comments-title {
-   margin: 0 0 $gutter; 
+    margin: 0 0 $gutter; 
 }
 
 .comment-list {
     @extend %ul-nostyling;
 }
 
-.comment-author-admin, .bypostauthor {
+.comment-author-admin,
+.bypostauthor {
 }
 
 .children {
@@ -149,7 +155,7 @@
     .comment {
         margin: 0;
         padding: $gutter-skinny 0 0 $gutter-skinny;
-        border-bottom: none;
+        border-bottom: 0;
         border-top: 1px solid $border-color;
 
         @include respond-min($palm) {
@@ -162,7 +168,8 @@
 .comment-reply-link {
     text-decoration: none;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
         text-decoration: underline;
     }
 }

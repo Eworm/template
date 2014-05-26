@@ -1,52 +1,51 @@
-/* Font families
-=================================================================*/
+// Font families
+// =================================================================
 @font-face {
-  font-family: 'Raleway';
-  src: url('fonts/Raleway-Regular.eot'); /* IE9 Compat Modes */
-  src: url('fonts/Raleway-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('fonts/Raleway-Regular.woff') format('woff'), /* Modern Browsers */
-       url('fonts/Raleway-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('fonts/Raleway-Regular.svg#f8ac7b0ae9ec6d45be568052f50b9149') format('svg'); /* Legacy iOS */
-       
-  font-style:   normal;
-  font-weight:  400;
+    font-family: 'Raleway';
+    src: url('fonts/Raleway-Regular.eot'); // IE9 Compat Modes
+    src: url('fonts/Raleway-Regular.eot?#iefix') format('embedded-opentype'), // IE6-IE8 */
+        url('fonts/Raleway-Regular.woff') format('woff'), // Modern Browsers */
+        url('fonts/Raleway-Regular.ttf')  format('truetype'), // Safari, Android, iOS */
+        url('fonts/Raleway-Regular.svg#f8ac7b0ae9ec6d45be568052f50b9149') format('svg'); // Legacy iOS
+    font-style: normal;
+    font-weight: 400;
 }
 
-@import "__sass-extras/utils";
+@import '__sass-extras/utils';
 
-/* Theme rules (variables)
-=================================================================*/
-@import "__theme-rules/colors";
-@import "__theme-rules/defaults";
-@import "__theme-rules/fonts";
-@import "__theme-rules/grid-variables";
-@import "__theme-rules/headers";
-@import "__theme-rules/mobile";
-@import "__theme-rules/responsive-breakpoints";
-@import "__theme-rules/margins-paddings";
+// Theme rules (variables)
+// =================================================================
+@import '__theme-rules/colors';
+@import '__theme-rules/defaults';
+@import '__theme-rules/fonts';
+@import '__theme-rules/grid-variables';
+@import '__theme-rules/headers';
+@import '__theme-rules/mobile';
+@import '__theme-rules/responsive-breakpoints';
+@import '__theme-rules/margins-paddings';
 
-/* Sass functions, extendables & mixins.
-=================================================================*/
-@import "compass/css3";
-@import "__sass-extras/functions";
-@import "__sass-extras/grid";
-@import "__sass-extras/extendables";
-@import "__sass-extras/mixins";
-@import "__sass-extras/rem";
-@import "__sass-extras/responsive-js";
+// Sass functions, extendables & mixins.
+// =================================================================
+@import 'compass/css3';
+@import '__sass-extras/functions';
+@import '__sass-extras/grid';
+@import '__sass-extras/extendables';
+@import '__sass-extras/mixins';
+@import '__sass-extras/rem';
+@import '__sass-extras/responsive-js';
 
-/* Base rules. Normalize and other basic element styles.
-=================================================================*/
-@import "__base-rules/normalize";
-@import "__base-rules/base";
-@import "__base-rules/headers";
+// Base rules. Normalize and other basic element styles.
+// =================================================================
+@import '__base-rules/normalize';
+@import '__base-rules/base';
+@import '__base-rules/headers';
 
-/* Layout rules. Styling of page sections that contain modules.
-=================================================================*/
-@import "__layout-rules/header";
-@import "__layout-rules/maincontent";
-@import "__layout-rules/mainmenu";
-@import "__layout-rules/mobile-header";
+// Layout rules. Styling of page sections that contain modules.
+// =================================================================
+@import '__layout-rules/header';
+@import '__layout-rules/maincontent';
+@import '__layout-rules/mainmenu';
+@import '__layout-rules/mobile-header';
 
-/* Module rules. Styling of reusable, modular parts of the design.
-=================================================================*/
+// Module rules. Styling of reusable, modular parts of the design.
+// =================================================================

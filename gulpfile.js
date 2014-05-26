@@ -110,6 +110,14 @@ gulp.task('uglify', function() {
 });
 
 
+// SCSS lint
+gulp.task('lint', function() {
+    gulp.src('./sass/**/*.scss')
+        .pipe(plugins.scsslint())
+        .pipe(plugins.scsslint.reporter());
+});
+
+
 // Watch
 gulp.task('watch', function() {
     server.listen(35729, function(err) {

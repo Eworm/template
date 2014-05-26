@@ -1,0 +1,7 @@
+exclude: 'sass/__base-rules/_normalize.scss'
+
+linters:
+
+  Indentation:
+    enabled: true
+    width: 4

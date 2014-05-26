@@ -57,15 +57,17 @@
     }
 }
 
-time, .postdate {
+time,
+.postdate {
     color: $lesser-color;
-    @include rem('font-size',$text-skinny);
+    @include rem('font-size', $text-skinny);
 
     a {
         color: $lesser-color;
         text-decoration: none;
 
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
             color: $lesser-color-hover;
             text-decoration: underline;
         }
@@ -73,12 +75,13 @@ time, .postdate {
 }
 
 .l-post-options {
-    @include rem('font-size',$text-skinny);
+    @include rem('font-size', $text-skinny);
 
     a {
         text-decoration: none;
 
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
             text-decoration: underline;
         }
     }

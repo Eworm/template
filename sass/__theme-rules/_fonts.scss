@@ -1,5 +1,5 @@
-/* Font sizes
-=================================================================*/
+// Font sizes
+// =================================================================
 $base-size: 16px;
 $body-size: 14px;
 $line-height: 1.8;
@@ -10,8 +10,8 @@ $text-medium: 14px;
 $text-large: 16px;
 
 
-/* Font families
-=================================================================*/
-$body-font: Arial, Verdana, sans-serif; /* Websafe font family */
-$special-font: Arial, Verdana, sans-serif; /* Special font, for example a google font */
+// Font families
+// =================================================================
+$body-font: Arial, Verdana, sans-serif;         // Websafe font family
+$special-font: Arial, Verdana, sans-serif;      // Special font, for example a google font. Use google fonts locally for a better pagespeed score
 $sec-font: Georgia, "Times new roman", serif;

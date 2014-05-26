@@ -12,7 +12,7 @@
     
     .csstransforms3d & {
         left: 0;
-        transform: translate3d(-100%,0,0);
+        transform: translate3d(-100%, 0, 0);
     }
 
     .active-menu & {
@@ -41,11 +41,11 @@
         height: auto;
         float: left;
         position: static;
-        border: none;
+        border: 0;
         box-shadow: none;
 
         .csstransforms3d & {
-            transform: translate3d(0,0,0);
+            transform: translate3d(0, 0, 0);
         }
 
         @include old-ie {
@@ -68,7 +68,7 @@
         border-top: 1px solid $border-color;
 
         @include respond-min($palm) {
-            border-top: none;
+            border-top: 0;
         }
 
         .toggle-sub {
@@ -129,7 +129,7 @@
 
         @include respond-min($palm) {
             padding: $gutter-skinny;
-            border-bottom: none;
+            border-bottom: 0;
         }
 
         @include respond-min($lap) {
@@ -137,7 +137,8 @@
             float: left;
         }
 
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
             background: $border-color;
 
             @include respond-min($palm) {
@@ -145,11 +146,10 @@
         }
     }
 
-    .current_page_item
-    , .current-menu-item
-    , .current-page-ancestor
-    , .current_page_parent
-    {
+    .current_page_item,
+    .current-menu-item,
+    .current-page-ancestor,
+    .current_page_parent {
 
         a {
         }
@@ -198,6 +198,7 @@
     .current_page_ancestor {
 
         @include respond-min($palm) {
+        
             a {
             }
         }
@@ -211,14 +212,16 @@
         float: left;
         position: relative;
         z-index: 10000;
-        border: none;
+        border: 0;
         background: #fff;
     
-        .current_page_parent &, .current-menu-parent & {
+        .current_page_parent &,
+        .current-menu-parent & {
             display: block;
         }
     
-        .current_page_ancestor &, .current-menu-item & {
+        .current_page_ancestor &,
+        .current-menu-item & {
             display: block;
             
             @include respond-min($palm) {
@@ -245,12 +248,13 @@
                 @include respond-min($palm) {
                     padding: 8px $gutter-skinny;
                     color: $body-color;
-                    border: none;
+                    border: 0;
                     border-bottom: 1px solid $border-color;
                     white-space: nowrap;
                 }
                 
-                &:hover, &:focus {
+                &:hover,
+                &:focus {
                     background: $border-color;
                 }
             }
@@ -260,7 +264,7 @@
                 a {
                 
                     @include respond-min($palm) {
-                        border: none;
+                        border: 0;
                     }
                 }
             }
@@ -288,7 +292,6 @@
         &:before {
             
             @include respond-min($palm) {
-    /*
                 content: '';
                 width: 0;
                 height: 0;
@@ -298,7 +301,6 @@
                 margin-left: -3px;
                 left: 50%;
                 top: -12px;
-    */
             }
         }
     }

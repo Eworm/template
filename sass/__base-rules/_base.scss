@@ -1,11 +1,11 @@
 * {
-    -webkit-tap-highlight-color:rgba(#000,0);
+    -webkit-tap-highlight-color: rgba(#000, 0);
     outline: 0;
     box-sizing: border-box;
 }
 
 html {
-    /* Enable font-size zoom for old ies */
+    // Enable font-size zoom for old ies
     font-size: 100%;
 
     &.active-menu {
@@ -35,7 +35,7 @@ body {
 }
 
 #container {
-    /* Fix for IOS rotation bug */
+    // Fix for IOS rotation bug
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -115,8 +115,8 @@ body {
     }
 }
 
-/* General links
-=================================================================*/
+// General links
+// =================================================================
 a {
     color: $link-color;
     text-decoration: underline;
@@ -124,13 +124,14 @@ a {
     transition-duration: .1s;
     transition-timing-function: ease-in;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
         text-decoration: none;
     }
 }
 
-/* Section divider
-=================================================================*/
+// Section divider
+// =================================================================
 .wrapper {
     width: 100%;
     float: left;    
@@ -146,8 +147,8 @@ a {
     }
 }
 
-/* Center site
-=================================================================*/
+// Center site
+// =================================================================
 .holder {
     margin: 0 auto;
     padding: $gutter;
@@ -160,7 +161,7 @@ a {
         position: relative;
 
         @include old-ie {
-            /* Disable max-width for old IE */
+            // Disable max-width for old IE
             width: 100%;
             width: 980px;
         }

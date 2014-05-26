@@ -3,7 +3,7 @@ input {
     padding: $input-padding;
     line-height: $line-height;
     font-family: $body-font;
-    @include rem('font-size',$body-size);
+    @include rem('font-size', $body-size);
     
     @include respond-min($palm) {
         width: 50%;
@@ -20,14 +20,15 @@ textarea {
     padding: $input-padding;
     line-height: $line-height;
     font-family: $body-font;
-    @include rem('font-size',$body-size);
+    @include rem('font-size', $body-size);
 }
 
 input[type=file] {
     padding: 0;
 }
 
-input[type=checkbox], input[type=radio] {
+input[type=checkbox],
+input[type=radio] {
     width: auto;
     margin-right: $gutter-skinny;
 }
@@ -53,12 +54,14 @@ input[type=submit] {
         }
     }
 
-    label, .label {
+    label,
+    .label {
         width: 100%;
         display: block;
         clear: both;
 
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
             cursor: pointer;
         }
 
@@ -86,7 +89,8 @@ input[type=submit] {
     }
 }
 
-.submit, #submit {
+.submit,
+#submit {
     text-align: center;
     text-decoration: none;
     cursor: pointer;
@@ -95,7 +99,8 @@ input[type=submit] {
         width: auto;
     }
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
     }
 }
 
@@ -107,14 +112,13 @@ a.submit {
     @extend %formrow;
 }
 
-#screenReader
-, #dialog-message
-, #loading
-{
+#screenreader,
+#dialog-message,
+#loading {
     display: none;
 }
 
 .req {
     color: $lesser-color;
-    @include rem('font-size',$body-size);
+    @include rem('font-size', $body-size);
 }

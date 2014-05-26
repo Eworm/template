@@ -1,19 +1,19 @@
 .searchform {
     width: 100%;
     padding: $gutter-skinny;
-	clear: both;
-	display: none;
+    clear: both;
+    display: none;
 
-	nav & {
-	   display: block;
-	}
-
-	#content & {
-	    padding: 0;
+    nav & {
         display: block;
-	}
+    }
 
-	#header & {
+    #content & {
+        padding: 0;
+        display: block;
+    }
+
+    #header & {
 
         @include respond-min($palm) {
             width: 20%;

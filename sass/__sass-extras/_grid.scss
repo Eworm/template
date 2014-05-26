@@ -1,12 +1,12 @@
-/* Calculate fluid margins
-=================================================================*/
+// Calculate fluid margins
+// =================================================================
 @function margin-width() {
     @return 100% / ($max-width / $gutter);
 }
 
 
-/* Base grid styles
-=================================================================*/
+// Base grid styles
+// =================================================================
 .grid-column {
     width: 100%;
     margin-bottom: $margin;
@@ -28,8 +28,8 @@
 }
 
 
-/* Use the nr-of-columns variable to generate the grid widths
-=================================================================*/
+// Use the nr-of-columns variable to generate the grid widths
+// =================================================================
 @include respond-min($palm) {
     @for $i from 1 through $nr-of-columns {
         .grid-column-#{$i} {

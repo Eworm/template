@@ -8,23 +8,22 @@
 @mixin wordwrap() {
     -ms-word-break: break-all;
     word-break: break-all;
-    word-break: break-word;
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
     hyphens: auto;
 }
 
 @mixin userselect() {
-    -webkit-user-select: none;  /* Chrome all / Safari all */
-    -moz-user-select: none;     /* Firefox all */
-    -ms-user-select: none;      /* IE 10+ */
-    /* No support for these yet, use at own risk */
+    -webkit-user-select: none;  // Chrome all / Safari all
+    -moz-user-select: none;     // Firefox all
+    -ms-user-select: none;      // IE 10+
+    // No support for these yet, use at own risk
     -o-user-select: none;
     user-select: none;
 }
 
-/* Flexbox stuff
-=================================================================*/
+// Flexbox stuff
+// =================================================================
 @mixin flexbox-display-flex {
     display: -webkit-box;
     display: -moz-box;
@@ -32,6 +31,7 @@
     display: -webkit-flex;
     display: flex;
 }
+
 @mixin flexbox-flex($width) {
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
@@ -40,6 +40,7 @@
     -ms-flex: 1;
     flex: 1;
 }
+
 @mixin flexbox-order($order) {
     -webkit-box-ordinal-group: $order;
     -moz-box-ordinal-group: $order;

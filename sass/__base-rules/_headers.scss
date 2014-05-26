@@ -1,20 +1,25 @@
 .maincontent-title {
     font-weight: normal;
     margin: 0 0 $margin;
-    @include rem('font-size',$header-2);
+    @include rem('font-size', $header-2);
 
     @include respond-min($palm) {
-        @include rem('font-size',$header-1);
+        @include rem('font-size', $header-1);
     }
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
     line-height: normal;
     
     a {
         text-decoration: none;
 
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
             text-decoration: underline;
         }
     }
@@ -30,22 +35,22 @@ h1, h2, h3, h4, h5 {
     h2 {
         margin: 0;
         font-weight: bold;
-        @include rem('font-size',$header-3);
+        @include rem('font-size', $header-3);
     
         @include respond-min($palm) {
             font-weight: normal;
-            @include rem('font-size',$header-2);
+            @include rem('font-size', $header-2);
         }
     }
     
     h3 {
         margin: 0;
-        @include rem('font-size',$header-3);
+        @include rem('font-size', $header-3);
     }
     
     h4 {
         margin: 0;
         font-weight: normal;
-        @include rem('font-size',$header-4);
+        @include rem('font-size', $header-4);
     }
 }

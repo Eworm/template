@@ -1,17 +1,18 @@
-/* Pixels to em
-=================================================================*/
+// Pixels to em
+// =================================================================
 @function calc-em($target-px, $context: $body-size) {
     @return ($target-px / $context) * 1em;
 }
 
 
-/* SVG background with png fallback
-=================================================================*/
+// SVG background with png fallback
+// =================================================================
 @mixin svg-or-not($image) {
     background-repeat: no-repeat;
     background-image: url($image + '.png');
+    
     .svg & {
-        /* On svg capable browsers, use an svg */
+        // On svg capable browsers, use an svg
         background-image: url($image + '.svg');
     }    
 }

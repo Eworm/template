@@ -22,7 +22,7 @@ div.aligncenter {
 
     @include respond-min($wrist) {
         width: auto;
-        float:right;
+        float: right;
         margin: 0 0 $margin $gutter;
     }
 }
@@ -106,29 +106,30 @@ a img.aligncenter {
 
     p.wp-caption-text {
         display: block;
-        margin: $gutter-skinny 0 0 0;
+        margin: $gutter-skinny 0 0;
         @include rem('font-size', $text-skinny);
     }
-}
 
-.wp-caption.alignnone {
 
-    @include respond-min($wrist) {
-        margin: $gutter $gutter $margin 0;
+    &.alignnone {
+    
+        @include respond-min($wrist) {
+            margin: $gutter $gutter $margin 0;
+        }
     }
-}
-
-.wp-caption.alignleft {
-
-    @include respond-min($wrist) {
-        margin: 0 $gutter $margin 0;
+    
+    &.alignleft {
+    
+        @include respond-min($wrist) {
+            margin: 0 $gutter $margin 0;
+        }
     }
-}
-
-.wp-caption.alignright {
-
-    @include respond-min($wrist) {
-        margin: 0 0 $margin $gutter;
+    
+    &.alignright {
+    
+        @include respond-min($wrist) {
+            margin: 0 0 $margin $gutter;
+        }
     }
 }
 
@@ -145,3 +146,4 @@ a img.aligncenter {
         margin: 0 0 $margin $gutter;
     }
 }
+

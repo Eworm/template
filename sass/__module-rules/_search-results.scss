@@ -12,5 +12,5 @@
 
 .search-result-title {
     font-weight: bold;
-    @include rem('font-size',$body-size);
+    @include rem('font-size', $body-size);
 }
