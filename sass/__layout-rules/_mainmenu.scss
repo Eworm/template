@@ -5,8 +5,8 @@
     top: 0;
     left: -$mobile-menu-width;
     z-index: 1000;
-    border-right: 1px solid $border-color;
     background: $nav-bg-color;
+    border-right: 1px solid $border-color;
     backface-visibility: hidden;
     transform: perspective(100);
     
@@ -74,34 +74,34 @@
         .toggle-sub {
             width: 50px;
             height: 100%;
+            display: block;
             position: absolute;
             top: 0;
             right: 0;
             z-index: 1200;
-            cursor: pointer;
-            display: block;
             border-left: 1px solid $border-color;
+            cursor: pointer;
             
             &:after {
                 content: '';
                 width: 0;
                 height: 0;
-                border: 8px solid transparent;
-                border-top: 8px solid #000;
+                margin-top: -4px;
+                margin-left: -8px;
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                margin-left: -8px;
-                margin-top: -4px;
+                border: 8px solid transparent;
+                border-top: 8px solid #000;
             }
         }
         
         .toggle-sub-close {
             
             &:after {
+                margin-top: -12px;
                 border: 8px solid transparent;
                 border-bottom: 8px solid #000;
-                margin-top: -12px;
             }
         }
         
@@ -110,9 +110,9 @@
 
     .menu-item {
         width: 100%;
+        display: block;
         float: left;
         position: relative;
-        display: block;
 
         @include respond-min($palm) {
             width: auto;
@@ -121,8 +121,8 @@
     }
 
     a {
-        display: block;
         padding: $gutter-skinny $gutter;
+        display: block;
         position: relative;
         border-bottom: 1px solid $border-color;
         text-decoration: none;
@@ -167,10 +167,10 @@
 
             &:after {
                 @extend %navfeedback;
-                border-right: 8px solid $border-color;
-                right: 0;
-                top: 50%;
                 margin-top: -8px;
+                top: 50%;
+                right: 0;
+                border-right: 8px solid $border-color;
 
                 @include respond-min($palm) {
                     display: none;
@@ -212,8 +212,8 @@
         float: left;
         position: relative;
         z-index: 10000;
-        border: 0;
         background: #fff;
+        border: 0;
     
         .current_page_parent &,
         .current-menu-parent & {

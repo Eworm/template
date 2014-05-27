@@ -26,8 +26,8 @@
         width: 100%;
         margin: 0;
         padding: 0;
-        float: left;
         display: block;
+        float: left;
         background: transparent;
 
         @include respond-min($palm) {
@@ -43,8 +43,8 @@
     }
 
     a {
-        display: block;
         padding: $gutter-skinny;
+        display: block;
 
         @include respond-min($palm) {
             border-bottom: 1px solid $border-color;

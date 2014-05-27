@@ -3,9 +3,9 @@
     padding: $gutter-skinny 0;
     display: block;
     background: #fff;
+    box-shadow: rgba(darken($border-color, 20%), 1) 0 1px 1px;
     text-decoration: none;
     text-align: center;
-    box-shadow: rgba(darken($border-color, 20%), 1) 0 1px 1px;
 
     @include respond-min($palm) {
         display: none;
@@ -39,8 +39,8 @@
     padding: $gutter-skinny 0;
     float: left;
     position: relative;
-    border-bottom: 2px solid $border-color;
     background: transparent;
+    border-bottom: 2px solid $border-color;
 
     .children .comment.depth-2 {
         margin-bottom: $gutter;
@@ -65,8 +65,8 @@
     font-style: normal;
 
     a {
-        text-decoration: none;
         color: $lesser-color-hover;
+        text-decoration: none;
 
         &:hover,
         &:focus {
@@ -155,8 +155,8 @@
     .comment {
         margin: 0;
         padding: $gutter-skinny 0 0 $gutter-skinny;
-        border-bottom: 0;
         border-top: 1px solid $border-color;
+        border-bottom: 0;
 
         @include respond-min($palm) {
             padding: $gutter-skinny;

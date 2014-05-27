@@ -1,10 +1,11 @@
-exclude: 'sass/__base-rules/_normalize.scss'
-
 linters:
 
-  Indentation:
-    enabled: true
-    width: 4
+    Indentation:
+        enabled: true
+        width: 4
     
-  EmptyRule:
-    enabled: false
+    EmptyRule:
+        enabled: false
+        
+    PropertySortOrder:
+        order: ['content', 'width', 'min-width', 'max-width', 'height', 'min-height', 'max-height', 'margin', 'margin-top', 'margin-right', 'margin-bottom', 'margin-left', 'padding', 'padding-top', 'padding-right', 'padding-bottom', 'padding-left', 'list-style-type', 'display', 'vertical-align', 'caption-side', 'float', 'clear', 'position', 'top', 'right', 'bottom', 'left', 'z-index', 'overflow', 'overflow-x', 'overflow-y', 'background', 'color', 'opacity', 'border', 'border-top', 'border-right', 'border-bottom', 'border-left', 'border-radius', 'border-top-right-radius', 'border-bottom-right-radius', 'border-bottom-left-radius', 'border-top-left-radius', 'box-shadow', 'text-shadow', 'font', 'font-family', 'font-size', 'font-weight', 'text-decoration', 'line-height', 'text-align', 'text-indent', 'cursor', 'backface-visibility', 'transform', 'transition', 'transition-property', 'transition-duration', 'transition-timing-function']

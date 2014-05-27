@@ -80,10 +80,10 @@ a img.aligncenter {
     @extend %postimage;
     margin: $margin-skinny 0;
     padding: $gutter-skinny;
-    border: 1px solid $border-color;
     background: #fff;
-    text-align: center;
+    border: 1px solid $border-color;
     border-radius: 0;
+    text-align: center;
 
     img {
         width: 100%;
@@ -105,8 +105,8 @@ a img.aligncenter {
     }
 
     p.wp-caption-text {
-        display: block;
         margin: $gutter-skinny 0 0;
+        display: block;
         @include rem('font-size', $text-skinny);
     }
 

@@ -1,6 +1,6 @@
 .maincontent-title {
-    font-weight: normal;
     margin: 0 0 $margin;
+    font-weight: normal;
     @include rem('font-size', $header-2);
 
     @include respond-min($palm) {

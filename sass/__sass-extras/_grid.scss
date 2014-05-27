@@ -10,8 +10,8 @@
 .grid-column {
     width: 100%;
     margin-bottom: $margin;
-    clear: both;
     float: left;
+    clear: both;
     
     @include respond-min($palm) {
         margin-right: margin-width();

@@ -1,8 +1,8 @@
 .searchform {
     width: 100%;
     padding: $gutter-skinny;
-    clear: both;
     display: none;
+    clear: both;
 
     nav & {
         display: block;
@@ -37,7 +37,7 @@
 }
 
 .searchform-container {
-    line-height: 40px;
     margin: 0;
     padding: 0;
+    line-height: 40px;
 }

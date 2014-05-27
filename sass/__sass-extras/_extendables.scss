@@ -8,9 +8,9 @@
 }
 
 %navfeedback {
+    content: '';
     width: 0;
     height: 0;
-    content: '';
     position: absolute;
     border: 8px solid transparent;
 }
@@ -36,13 +36,13 @@
     }
     
     &.error {
-        padding: $gutter-skinny;
         margin-bottom: 0;
+        padding: $gutter-skinny;
         background: $alert;
         color: #fff;
         border-radius: $default-border-radius;
-        border-top-left-radius: 0;
         border-top-right-radius: 0;
+        border-top-left-radius: 0;
         box-shadow: $default-box-shadow;
         
         @include respond-min($palm) {
