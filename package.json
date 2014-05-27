@@ -21,7 +21,6 @@
     "tiny-lr": "0.0.5",
     "gulp": "~3.5.6",
     "gulp-autoprefixer": "0.0.6",
-    "gulp-imagemin": "~0.1.5",
     "gulp-load-plugins": "~0.5.0",
     "gulp-scsslint": "0.0.4"
   }

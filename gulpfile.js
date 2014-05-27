@@ -16,7 +16,7 @@ var src_paths = {
     autoprefixer: '*.css',
     svgmin: './img-src/*.svg',
     svg2png: './img-src/*.svg',
-    imagemin: './img/*.*',
+    imagemin: './img/portfolio/*.*',
     uglify: ['./bower_components/picturefill/external/matchmedia.js',
                 './bower_components/hideShowPassword/hideShowPassword.js',
                 './bower_components/picturefill/picturefill.js',
@@ -81,15 +81,6 @@ gulp.task('svg2png', function () {
         
         .pipe(plugins.livereload(server))
         .pipe(plugins.notify({ message: 'Svg2png complete' }))
-});
-
-
-// Imagemin - run just before uploading
-gulp.task('imagemin', function () {
-    gulp.src(src_paths.imagemin)
-        .pipe(plugins.imagemin())
-        .pipe(gulp.dest(dest_paths.imagemin))
-        .pipe(plugins.notify({ message: 'Imagemin complete' }))
 });
 
 
