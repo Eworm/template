@@ -5,3 +5,6 @@ linters:
   Indentation:
     enabled: true
     width: 4
+    
+  EmptyRule:
+    enabled: false
