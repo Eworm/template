@@ -10,7 +10,7 @@ lr = require('tiny-lr'),
 server = lr();
 
 
-// Set standard src_paths
+// Set source paths
 var src_paths = {
     compass: './sass/**/*.scss',
     autoprefixer: '*.css',
@@ -26,6 +26,8 @@ var src_paths = {
                 './js-src/yepnope-loader.js']
 };
 
+
+// Set destination paths
 var dest_paths = {
     compass: '.',
     svgmin: './img',
