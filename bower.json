@@ -1,22 +1,23 @@
 {
-    "name": "bower-test",
-    "version": "1.0.0",
-    "authors": [
-        "Wout Mager"
-    ],
-    "description": "blabla",
-    "homepage": "www.woutmager.nl",
-    "ignore": [
-        "**/.*",
-        "node_modules",
-        "bower_components"
-    ],
-    "dependencies": {
-        "zepto": "1.0.0",
-        "picturefill": "1.2.0",
-        "hideShowPassword": "1.0.2",
-        "on-media-query": "",
-        "zepto-sources": "~1.0.2",
-        "yepnope": "~1.5.4"
-    }
+  "name": "bower-test",
+  "version": "1.0.0",
+  "authors": [
+    "Wout Mager"
+  ],
+  "description": "blabla",
+  "homepage": "www.woutmager.nl",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "zepto": "1.0.0",
+    "picturefill": "1.2.0",
+    "hideShowPassword": "1.0.2",
+    "on-media-query": "",
+    "zepto-sources": "~1.0.2",
+    "yepnope": "~1.5.4",
+    "normalize.scss": "~2.2.0+normalize.2.1.3"
+  }
 }

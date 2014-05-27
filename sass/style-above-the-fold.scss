@@ -36,7 +36,8 @@
 
 // Base rules. Normalize and other basic element styles.
 // =================================================================
-@import '__base-rules/normalize';
+// Normalize is being imported via Bower
+@import 'normalize';
 @import '__base-rules/base';
 @import '__base-rules/headers';
 

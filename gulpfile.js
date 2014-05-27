@@ -50,7 +50,7 @@ gulp.task('compass', function() {
             css: dest_paths.compass,
             image: 'img',
             font: 'fonts',
-            import_path: 'bower_components',
+            import_path: 'bower_components/normalize.scss',
             sourcemap: true
         }))
         
