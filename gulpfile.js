@@ -35,10 +35,13 @@ gulp.task('compass', function() {
         
         .pipe(plugins.compass({
             config_file: './config.rb',
+            project: '.',
             css: '.',
-            sass: 'sass',
             image: 'img',
             font: 'fonts',
+            //style: 'compressed',
+            //comments: false,
+            import_path: 'bower_components',
             sourcemap: true
         }))
         

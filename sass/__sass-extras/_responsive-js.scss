@@ -10,16 +10,16 @@ html {
 	font-family: 'wrist';
 }
 
-* html { /* IE6 */
+* html { // IE6
 	font-family: 'desktop'
 }
 
-*+html { /* IE7 */
+*+html { // IE7
 	font-family: 'desktop'
 }
 
 @media \0screen {
-	html {  /* IE8 */
+	html {  // IE8
 		font-family: 'desktop'
 	}
 }
