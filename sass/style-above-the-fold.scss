@@ -13,6 +13,7 @@
 
 @import '__sass-extras/utils';
 
+
 // Theme rules (variables)
 // =================================================================
 @import '__theme-rules/colors';
@@ -24,6 +25,7 @@
 @import '__theme-rules/responsive-breakpoints';
 @import '__theme-rules/margins-paddings';
 
+
 // Sass functions, extendables & mixins.
 // =================================================================
 @import 'compass/css3';
@@ -34,6 +36,7 @@
 @import '__sass-extras/rem';
 @import '__sass-extras/responsive-js';
 
+
 // Base rules. Normalize and other basic element styles.
 // =================================================================
 // Normalize is being imported via Bower
@@ -41,12 +44,14 @@
 @import '__base-rules/base';
 @import '__base-rules/headers';
 
+
 // Layout rules. Styling of page sections that contain modules.
 // =================================================================
 @import '__layout-rules/header';
 @import '__layout-rules/maincontent';
 @import '__layout-rules/mainmenu';
 @import '__layout-rules/mobile-header';
+
 
 // Module rules. Styling of reusable, modular parts of the design.
 // =================================================================
