@@ -7,51 +7,51 @@
 // =================================================================
 
 html {
-	font-family: 'wrist';
+    font-family: 'wrist';
 }
 
 * html { // IE6
-	font-family: 'desktop'
+    font-family: 'desktop'
 }
 
 *+html { // IE7
-	font-family: 'desktop'
+    font-family: 'desktop'
 }
 
 @media \0screen {
-	html {  // IE8
-		font-family: 'desktop'
-	}
+    html {  // IE8
+        font-family: 'desktop'
+    }
 }
 
 // Queries for supported browsers.       
 // =================================================================
 @media screen and (min-width: $wrist) {
-	html {
-		font-family: 'wrist';
-	}
+    html {
+        font-family: 'wrist';
+    }
 }
 
 @media screen and (min-width: $palm) {
-	html {
-		font-family: 'palm';
-	}
+    html {
+        font-family: 'palm';
+    }
 }
 
 @media screen and (min-width: $lap) {
-	html {
-		font-family: 'lap';
-	}
+    html {
+        font-family: 'lap';
+    }
 }
 
 @media screen and (min-width: $desk) {
-	html {
-		font-family: 'desk';
-	}
+    html {
+        font-family: 'desk';
+    }
 }
 
 @media screen and (min-width: $cinema) {
-	html {
-		font-family: 'cinema';
-	}
+    html {
+        font-family: 'cinema';
+    }
 }
