@@ -43,16 +43,20 @@ input[type=submit] {
 #content form {
     position: relative;
     z-index: 1;
+}
 
-    .formcontainer {
-        padding: 0;
-        clear: both;
+.formcontainer {
+    padding: 0;
+    clear: both;
 
-        @include respond-min($palm) {
-            width: 100%;
-            float: left;
-        }
+    @include respond-min($palm) {
+        width: 100%;
+        float: left;
     }
+}
+
+.formrow {
+    @extend %formrow;
 
     label,
     .label {
@@ -106,10 +110,6 @@ input[type=submit] {
 
 a.submit {
     @include inline-block;
-}
-
-.formrow {
-    @extend %formrow;
 }
 
 #screenreader,
