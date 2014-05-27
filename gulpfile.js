@@ -38,7 +38,8 @@ gulp.task('compass', function() {
             css: '.',
             sass: 'sass',
             image: 'img',
-            font: 'fonts'
+            font: 'fonts',
+            sourcemap: true
         }))
         
         .pipe(plugins.autoprefixer("last 2 versions", "> 1%", "ie 8"))

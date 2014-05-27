@@ -99,7 +99,7 @@ $(document).ready(function() {
     /* Responsive javascript: https://github.com/JoshBarr/js-media-queries */
     var queries = [
         {
-            context: ['mobile','skinny'],
+            context: ['wrist', 'palm'],
             match: function()
             {
 
@@ -150,7 +150,7 @@ $(document).ready(function() {
             }
         },
         {
-            context: ['medium','desktop'],
+            context: ['lap', 'desk', 'wall', 'cinema'],
             match: function() {
 
                 // Submenu
