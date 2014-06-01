@@ -54,7 +54,9 @@
                             <?php the_excerpt(); ?>
 
                             <span class="l-post-options">
-                                <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Directe link naar', 'thema_vertalingen' ); ?> <?php the_title_attribute(); ?>"><?php _e( 'Verder lezen', 'thema_vertalingen' ); ?></a>&nbsp;|&nbsp;
+                                <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Directe link naar', 'thema_vertalingen' ); ?> <?php the_title_attribute(); ?>">
+                                    <?php _e( 'Verder lezen', 'thema_vertalingen' ); ?>
+                                </a>&nbsp;|&nbsp;
                                 <?php comments_popup_link('Reageer als eerste', 'Er is 1 reactie', 'Er zijn % reacties'); ?>
                             </span>
 
@@ -64,8 +66,15 @@
                 <?php endwhile; ?>
                 
                 <ul class="l-post-navigation">
-                    <li class="goforward"><?php previous_posts_link('&laquo; Nieuwere posts'); ?></li>
-                    <li class="goback"><?php next_posts_link('Oudere posts &raquo;'); ?></li>                        
+                    
+                    <li class="goforward">
+                        <?php previous_posts_link('&laquo; Nieuwere posts'); ?>
+                    </li>
+                    
+                    <li class="goback">
+                        <?php next_posts_link('Oudere posts &raquo;'); ?>
+                    </li>
+                    
                 </ul>
     
             <?php else : ?>

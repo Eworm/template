@@ -4,10 +4,11 @@
 
     <div class="holder holder-content">
 
-        <?php
-            if (!$post->post_parent) {
+        <?php if (!$post->post_parent) {
+            
                 // will display the subpages of this top level page
                 $children = wp_list_pages("title_li=&child_of=".$post->ID."&echo=0");
+            
             } else {
                 // diplays only the subpages of parent level
                 //$children = wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0");
@@ -19,19 +20,20 @@
                     $children = wp_list_pages("title_li=&child_of=".$ancestors."&echo=0");
                     // you will always get the whole subpages list
                 }
+            
             }
 
             if ($children) { ?>
 
-            <div id="submenu" class="grid-column grid-column-2">
-            
-                <ul>
-                    <?php echo $children; ?>
-                </ul>
-            
-            </div>
+                <div id="submenu" class="grid-column grid-column-2">
+                
+                    <ul>
+                        <?php echo $children; ?>
+                    </ul>
+                
+                </div>
 
-        <?php } ?>
+            <?php } ?>
 
         <?php if (have_posts()) : ?>
         <?php while (have_posts()) : the_post(); ?>
@@ -83,7 +85,7 @@
 
         <?php else : ?>
 
-            <article class="no-results not-found">
+            <article class="maincontent grid-column grid-column-6 no-results not-found">
 
                 <header class="maincontent-header">
                     
@@ -93,7 +95,7 @@
 
                 </header>
 
-                <div class="entry">
+                <div class="maincontent-body">
 
                     <p><?php _e( 'Sorry, we hebben deze pagina niet gevonden. Maar misschien kun je zoeken om de juiste pagina te vinden:', 'thema_vertalingen' ); ?></p>
 
@@ -101,7 +103,7 @@
 
                 </div>
 
-            </article>
+            </article> <!-- .maincontent -->
 
         <?php endif; ?>
 

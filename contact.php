@@ -118,10 +118,12 @@ if(isset($_POST['submitted'])) {
                                 <?php _e( 'Uw naam', 'thema_vertalingen' ); ?> <span class="req">(Verplicht)</span>
                             </label>
                             
-                            <input value="<?php if(isset($_POST['naam'])) echo $_POST['naam'];?>" type="text" name="naam" id="naam" class="text" title="<?php _e( 'Uw naam', 'thema_vertalingen' ); ?>" required="required">
+                            <input value="<?php if(isset($_POST['naam'])) echo $_POST['naam'];?>" type="text" name="naam" id="naam" required="required">
                             
                             <?php if($nameError != '') { ?>
-                                <div class="error"><?=$nameError;?></div>
+                                <div class="error">
+                                    <?=$nameError;?>
+                                </div>
                             <?php } ?>
 
                         </div>
@@ -132,10 +134,12 @@ if(isset($_POST['submitted'])) {
                                 <?php _e( 'Uw e-mailadres', 'thema_vertalingen' ); ?> <span class="req">(Verplicht)</span>
                             </label>
                             
-                            <input value="<?php if(isset($_POST['emailadres'])) echo $_POST['emailadres'];?>" type="email" name="emailadres" id="emailadres" class="text" title="<?php _e( 'Uw e-mailadres', 'thema_vertalingen' ); ?>" required="required">
+                            <input value="<?php if(isset($_POST['emailadres'])) echo $_POST['emailadres'];?>" type="email" name="emailadres" id="emailadres" required="required">
 
                             <?php if($emailError != '') { ?>
-                                <div class="error"><?=$emailError;?></div>
+                                <div class="error">
+                                    <?=$emailError;?>
+                                </div>
                             <?php } ?>
 
                         </div>
@@ -149,7 +153,9 @@ if(isset($_POST['submitted'])) {
                             <textarea id="message" name="message" class="textarea" required="required"></textarea>
 
                             <?php if($messageError != '') { ?>
-                                <div class="error"><?=$messageError;?></div>
+                                <div class="error">
+                                    <?=$messageError;?>
+                                </div>
                             <?php } ?>
 
                         </div>
