@@ -42,11 +42,18 @@
             
                     </section>
                 <?php endwhile; ?>
-                
-                    <p align="center">
-                        <?php next_posts_link('&laquo; Previous Entries') ?>
-                        <?php previous_posts_link('Next Entries &raquo;') ?>
-                    </p>
+                    
+                    <ul class="l-post-navigation">
+                        
+                        <li class="goforward">
+                            <?php previous_posts_link('&laquo; Nieuwere posts'); ?>
+                        </li>
+                        
+                        <li class="goback">
+                            <?php next_posts_link('Oudere posts &raquo;'); ?>
+                        </li>
+
+                    </ul>
                 
                 <?php else : ?>
                 

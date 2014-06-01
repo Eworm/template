@@ -14,7 +14,7 @@ function theme_options_init(){
  * Load up the menu page
  */
 function theme_options_add_page() {
-    add_theme_page( __( 'Thema opties', 'templatetheme' ), __( 'Thema opties', 'templatetheme' ), 'edit_theme_options', 'theme_options', 'theme_options_do_page' );
+    add_theme_page( __( 'Thema opties', 'thema_vertalingen' ), __( 'Thema opties', 'thema_vertalingen' ), 'edit_theme_options', 'theme_options', 'theme_options_do_page' );
 }
 
 /**
@@ -28,10 +28,10 @@ function theme_options_do_page() {
 
     ?>
     <div class="wrap">
-        <?php screen_icon(); echo "<h2>" . get_current_theme() . __( ' Thema opties', 'templatetheme' ) . "</h2>"; ?>
+        <?php screen_icon(); echo "<h2>" . get_current_theme() . __( ' Thema opties', 'thema_vertalingen' ) . "</h2>"; ?>
 
         <?php if ( false !== $_REQUEST['settings-updated'] ) : ?>
-        <div class="updated fade"><p><strong><?php _e( 'De wijzigingen zijn opgeslagen', 'templatetheme' ); ?></strong></p></div>
+        <div class="updated fade"><p><strong><?php _e( 'De wijzigingen zijn opgeslagen', 'thema_vertalingen' ); ?></strong></p></div>
         <?php endif; ?>
 
         <form method="post" action="options.php">
@@ -49,7 +49,7 @@ function theme_options_do_page() {
                  * Address
                  */
                 ?>                
-                <tr valign="top"><th scope="row"><?php _e( 'Bedrijfsadres', 'templatetheme' ); ?></th>
+                <tr valign="top"><th scope="row"><?php _e( 'Bedrijfsadres', 'thema_vertalingen' ); ?></th>
                     <td>
                         <input id="template_theme_options[theme_address]" class="regular-text" type="text" name="template_theme_options[theme_address]" value="<?php esc_attr_e( $options['theme_address'] ); ?>" />
                     </td>
@@ -66,7 +66,7 @@ function theme_options_do_page() {
                  * Address
                  */
                 ?>                
-                <tr valign="top"><th scope="row"><?php _e( 'SEO keywords', 'templatetheme' ); ?></th>
+                <tr valign="top"><th scope="row"><?php _e( 'SEO keywords', 'thema_vertalingen' ); ?></th>
                     <td>
                         <input id="template_theme_options[seo_keywords]" class="regular-text" type="text" name="template_theme_options[seo_keywords]" value="<?php esc_attr_e( $options['seo_keywords'] ); ?>" />
                     </td>
@@ -74,7 +74,7 @@ function theme_options_do_page() {
             </table>
 
             <p class="submit">
-                <input type="submit" class="button-primary" value="<?php _e( 'Opties opslaan', 'templatetheme' ); ?>" />
+                <input type="submit" class="button-primary" value="<?php _e( 'Opties opslaan', 'thema_vertalingen' ); ?>" />
             </p>
         </form>
     </div>

@@ -115,7 +115,7 @@ if(isset($_POST['submitted'])) {
                         <div class="formrow">
                         
                             <label for="naam">
-                                <?php _e( 'Uw naam', 'thema_vertalingen' ); ?> <span class="req">(Verplicht)</span>
+                                <?php _e( 'Uw naam', 'thema_vertalingen' ); ?> <span class="req"><?php _e( '(Verplicht)', 'thema_vertalingen' ); ?></span>
                             </label>
                             
                             <input value="<?php if(isset($_POST['naam'])) echo $_POST['naam'];?>" type="text" name="naam" id="naam" required="required">
@@ -131,7 +131,7 @@ if(isset($_POST['submitted'])) {
                         <div class="formrow">
                         
                             <label for="emailadres">
-                                <?php _e( 'Uw e-mailadres', 'thema_vertalingen' ); ?> <span class="req">(Verplicht)</span>
+                                <?php _e( 'Uw e-mailadres', 'thema_vertalingen' ); ?> <span class="req"><?php _e( '(Verplicht)', 'thema_vertalingen' ); ?></span>
                             </label>
                             
                             <input value="<?php if(isset($_POST['emailadres'])) echo $_POST['emailadres'];?>" type="email" name="emailadres" id="emailadres" required="required">
@@ -147,7 +147,7 @@ if(isset($_POST['submitted'])) {
                         <div class="formrow">
                         
                             <label for="message" id="message_label">
-                                <?php _e( 'Omschrijf kort uw vraag', 'thema_vertalingen' ); ?> <span class="req">(Verplicht)</span>
+                                <?php _e( 'Omschrijf kort uw vraag', 'thema_vertalingen' ); ?> <span class="req"><?php _e( '(Verplicht)', 'thema_vertalingen' ); ?></span>
                             </label>
                             
                             <textarea id="message" name="message" class="textarea" required="required"></textarea>
