@@ -12,7 +12,11 @@
                 <article class="maincontent single-post">
     
                     <header class="maincontent-header single-post-header">
-                        <h1 class="maincontent-title single-post-title"><?php the_title(); ?></h1>
+
+                        <h1 class="maincontent-title single-post-title">
+                            <?php the_title(); ?>
+                        </h1>
+
                     </header>
                     
                     <div class="maincontent-body">
@@ -23,8 +27,8 @@
                         <?php the_time('j F Y')?>. <?php edit_post_link('Dit artikel aanpassen.', '', ''); ?>
                         <br>
                         <?php /* pages don't have categories or tags */ if (!is_page()) { ?> <?php _e( 'Categorie&euml;n', 'thema_vertalingen' ); ?>: <?php the_category(', '); ?>. <?php /* } */?>
-    				    <br>
-    				    <?php if (get_the_tags()) the_tags('Tags: ', ', ', '.'); ?><?php } ?>
+                        <br>
+                        <?php if (get_the_tags()) the_tags('Tags: ', ', ', '.'); ?><?php } ?>
                     </p>
                     
                 </article> <!-- .maincontent -->
@@ -52,17 +56,21 @@
                 
                 <article class="maincontent single-post no-results not-found">
 
-    				<header class="maincontent-header single-post-header">
-    					<h1 class="maincontent-title single-post-title"><?php _e( 'Deze pagina bestaat niet', 'thema_vertalingen' ); ?></h1>
-    				</header>
-    
-    				<div class="entry">
-    					<p><?php _e( 'Sorry, we hebben deze pagina niet gevonden. Maar misschien kun je zoeken om de juiste pagina te vinden:', 'thema_vertalingen' ); ?></p>
-    					<?php get_search_form(); ?>
-    				</div>
+                    <header class="maincontent-header single-post-header">
+                        
+                        <h1 class="maincontent-title single-post-title">
+                            <?php _e( 'Deze pagina bestaat niet', 'thema_vertalingen' ); ?>
+                        </h1>
 
-    			</article> <!-- .maincontent -->
-    			
+                    </header>
+    
+                    <div class="entry">
+                        <p><?php _e( 'Sorry, we hebben deze pagina niet gevonden. Maar misschien kun je zoeken om de juiste pagina te vinden:', 'thema_vertalingen' ); ?></p>
+                        <?php get_search_form(); ?>
+                    </div>
+
+                </article> <!-- .maincontent -->
+                
             <?php endif; ?>
 
         </div>

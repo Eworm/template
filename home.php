@@ -13,7 +13,11 @@
                 <?php while (have_posts()) : the_post(); ?>
                 
                     <header class="maincontent-header">
-                        <h1 class="maincontent-title"><?php the_title(); ?></h1>
+                        
+                        <h1 class="maincontent-title">
+                            <?php the_title(); ?>
+                        </h1>
+                        
                     </header>
                     
                     <div class="maincontent-body">

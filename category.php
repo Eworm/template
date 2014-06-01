@@ -8,19 +8,19 @@
 
             <?php if ( have_posts() ) : ?>
     
-    			<header class="maincontent-header">
-    				<h1 class="maincontent-title">
-    				    <?php _e( 'Categorie', 'thema_vertalingen' ); ?>: <?php single_cat_title() ?>
-    				</h1>
-    			</header>
+                <header class="maincontent-header">
+                    <h1 class="maincontent-title">
+                        <?php _e( 'Categorie', 'thema_vertalingen' ); ?>: <?php single_cat_title() ?>
+                    </h1>
+                </header>
     
-    			<?php /* Start the Loop */ ?>
-    			<?php while (have_posts()) : the_post(); ?>
+                <?php /* Start the Loop */ ?>
+                <?php while (have_posts()) : the_post(); ?>
 
                     <article class="l-post">
 
-            			<header class="l-post-header">
-            			
+                        <header class="l-post-header">
+                        
                             <h1 class="l-post-title">
                                 <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Directe link naar', 'thema_vertalingen' ); ?> <?php the_title_attribute(); ?>">
                                     <?php the_title(); ?>
@@ -35,10 +35,10 @@
                         
                         <div class="l-post-entry">
                             
-            				<?php the_excerpt(); ?>
-            				
-            				<span class="l-post-options">
-                				<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Directe link naar', 'thema_vertalingen' ); ?> <?php the_title_attribute(); ?>"><?php _e( 'Verder lezen', 'thema_vertalingen' ); ?></a>&nbsp;|&nbsp;
+                            <?php the_excerpt(); ?>
+                            
+                            <span class="l-post-options">
+                                <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Directe link naar', 'thema_vertalingen' ); ?> <?php the_title_attribute(); ?>"><?php _e( 'Verder lezen', 'thema_vertalingen' ); ?></a>&nbsp;|&nbsp;
                                 <?php comments_popup_link('Reageer als eerste', 'Er is 1 reactie', 'Er zijn % reacties'); ?>
                             </span>
 
@@ -46,25 +46,29 @@
                         
                     </article>
 
-    			<?php endwhile; ?>
+                <?php endwhile; ?>
     
-    		<?php else : ?>
+            <?php else : ?>
     
-    			<article class="l-post no-results not-found">
-    			
-    				<header class="l-post-header">
-    					<h1 class="l-post-title"><?php _e( 'Deze pagina bestaat niet', 'thema_vertalingen' ); ?></h1>
-    				</header>
-    
-    				<div class="l-post-entry">
-    					<p><?php _e( 'Sorry, we hebben deze pagina niet gevonden. Maar misschien kun je zoeken om de juiste pagina te vinden:', 'thema_vertalingen' ); ?></p>
-    					<?php get_search_form(); ?>
-    				</div>
+                <article class="l-post no-results not-found">
+                
+                    <header class="l-post-header">
+                        
+                        <h1 class="l-post-title">
+                            <?php _e( 'Deze pagina bestaat niet', 'thema_vertalingen' ); ?>
+                        </h1>
 
-    			</article>
+                    </header>
     
-    		<?php endif; ?>
-    		
+                    <div class="l-post-entry">
+                        <p><?php _e( 'Sorry, we hebben deze pagina niet gevonden. Maar misschien kun je zoeken om de juiste pagina te vinden:', 'thema_vertalingen' ); ?></p>
+                        <?php get_search_form(); ?>
+                    </div>
+
+                </article>
+    
+            <?php endif; ?>
+            
         </div> <!-- .maincontent -->
 
         <aside class="sidebar grid-column grid-column-3 no-margin">

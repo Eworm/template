@@ -8,35 +8,35 @@
 
             <?php if ( have_posts() ) : ?>
     
-    			<header class="maincontent-header">
-    			
-    				<h1 class="maincontent-title">
-    				
-    					<?php if ( is_day() ) : ?>
-    						<?php printf( __( 'Dagarchief: %s', 'thema_vertalingen' ), '<span>' . get_the_date() . '</span>' ); ?>
-    					
-    					<?php elseif ( is_month() ) : ?>
-    						<?php printf( __( 'Maandarchief: %s', 'thema_vertalingen' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'thema_vertalingen' ) ) . '</span>' ); ?>
-    					
-    					<?php elseif ( is_year() ) : ?>
-    						<?php printf( __( 'Jaararchief: %s', 'thema_vertalingen' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'thema_vertalingen' ) ) . '</span>' ); ?>
-    					
-    					<?php else : ?>
-    						<?php _e( 'Blogarchief', 'thema_vertalingen' ); ?>
-    					
-    					<?php endif; ?>
-    					
-    				</h1>
-    				
-    			</header>
+                <header class="maincontent-header">
+                
+                    <h1 class="maincontent-title">
+                    
+                        <?php if ( is_day() ) : ?>
+                            <?php printf( __( 'Dagarchief: %s', 'thema_vertalingen' ), '<span>' . get_the_date() . '</span>' ); ?>
+                        
+                        <?php elseif ( is_month() ) : ?>
+                            <?php printf( __( 'Maandarchief: %s', 'thema_vertalingen' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'thema_vertalingen' ) ) . '</span>' ); ?>
+                        
+                        <?php elseif ( is_year() ) : ?>
+                            <?php printf( __( 'Jaararchief: %s', 'thema_vertalingen' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'thema_vertalingen' ) ) . '</span>' ); ?>
+                        
+                        <?php else : ?>
+                            <?php _e( 'Blogarchief', 'thema_vertalingen' ); ?>
+                        
+                        <?php endif; ?>
+                        
+                    </h1>
+                    
+                </header>
     
-    			<?php /* Start the Loop */ ?>
-    			<?php while (have_posts()) : the_post(); ?>
+                <?php /* Start the Loop */ ?>
+                <?php while (have_posts()) : the_post(); ?>
 
                     <article class="l-post">
 
-            			<header class="l-post-header">
-            			
+                        <header class="l-post-header">
+                        
                             <h1 class="l-post-title">
                                 <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Directe link naar', 'thema_vertalingen' ); ?> <?php the_title_attribute(); ?>">
                                     <?php the_title(); ?>
@@ -51,40 +51,44 @@
                         
                         <div class="l-post-entry">
 
-            				<?php the_excerpt(); ?>
+                            <?php the_excerpt(); ?>
 
-            				<span class="l-post-options">
-                				<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Directe link naar', 'thema_vertalingen' ); ?> <?php the_title_attribute(); ?>"><?php _e( 'Verder lezen', 'thema_vertalingen' ); ?></a>&nbsp;|&nbsp;
+                            <span class="l-post-options">
+                                <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Directe link naar', 'thema_vertalingen' ); ?> <?php the_title_attribute(); ?>"><?php _e( 'Verder lezen', 'thema_vertalingen' ); ?></a>&nbsp;|&nbsp;
                                 <?php comments_popup_link('Reageer als eerste', 'Er is 1 reactie', 'Er zijn % reacties'); ?>
                             </span>
 
                         </div>
                         
                     </article>
-    			<?php endwhile; ?>
-    			
-    			<ul class="l-post-navigation">
+                <?php endwhile; ?>
+                
+                <ul class="l-post-navigation">
                     <li class="goforward"><?php previous_posts_link('&laquo; Nieuwere posts'); ?></li>
-    				<li class="goback"><?php next_posts_link('Oudere posts &raquo;'); ?></li>						
-    			</ul>
+                    <li class="goback"><?php next_posts_link('Oudere posts &raquo;'); ?></li>                        
+                </ul>
     
-    		<?php else : ?>
+            <?php else : ?>
     
-    			<article class="l-post no-results not-found">
+                <article class="l-post no-results not-found">
 
-    				<header class="l-post-header">
-    					<h1 class="l-post-title"><?php _e( 'Deze pagina bestaat niet', 'thema_vertalingen' ); ?></h1>
-    				</header>
-    
-    				<div class="entry">
-    					<p><?php _e( 'Sorry, we hebben deze pagina niet gevonden. Maar misschien kun je zoeken om de juiste pagina te vinden:', 'thema_vertalingen' ); ?></p>
-    					<?php get_search_form(); ?>
-    				</div>
+                    <header class="l-post-header">
 
-    			</article>
+                        <h1 class="l-post-title">
+                            <?php _e( 'Deze pagina bestaat niet', 'thema_vertalingen' ); ?>
+                        </h1>
+
+                    </header>
     
-    		<?php endif; ?>
-    		
+                    <div class="entry">
+                        <p><?php _e( 'Sorry, we hebben deze pagina niet gevonden. Maar misschien kun je zoeken om de juiste pagina te vinden:', 'thema_vertalingen' ); ?></p>
+                        <?php get_search_form(); ?>
+                    </div>
+
+                </article>
+    
+            <?php endif; ?>
+            
         </div> <!-- .maincontent -->
 
         <aside class="sidebar grid-column grid-column-3 no-margin">
