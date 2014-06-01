@@ -1,13 +1,28 @@
+// Font size variables
+// =================================================================
+$f-wrist: 11px;
+$f-palm: 12px;
+$f-lap: 14px;
+$f-desk: 16px;
+$f-wall: 18px;
+$f-cinema: 20px;
+
+
 // Font sizes
 // =================================================================
-$base-size: 16px;
-$body-size: 14px;
-$line-height: 1.8;
+$text-wrist: $f-wrist;
+$text-palm: $f-palm;
+$text-lap: $f-lap;
+$text-desk: $f-desk;
+$text-wall: $f-desk;
+$text-cinema: $f-desk;
 
-$text-small: 11px;
-$text-skinny: 12px;
-$text-medium: 14px;
-$text-large: 16px;
+
+// Standard site sizes
+// =================================================================
+$base-size: $text-desk;
+$body-size: $text-lap;
+$line-height: 1.8;
 
 
 // Font families

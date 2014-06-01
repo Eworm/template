@@ -1,25 +1,35 @@
+// Different sizes. Use these variables later on for other ones.
+// =================================================================
+$s-wrist: 5px;
+$s-palm: 10px;
+$s-lap: 20px;
+$s-desk: 30px;
+$s-wall: 40px;
+$s-cinema: 60px;
+
+
 // Gutters
 // =================================================================
-$gutter-small: 5px;
-$gutter-skinny: 10px;
-$gutter: 20px;
-$gutter-large: 30px;
+$gutter-small: $s-wrist;
+$gutter-skinny: $s-palm;
+$gutter: $s-lap;
+$gutter-large: $s-desk;
 
 
 // Margins
 // =================================================================
-$margin-small: 5px;
-$margin-skinny: 10px;
-$margin: 20px;
-$margin-large: 30px;
+$margin-small: $s-wrist;
+$margin-skinny: $s-palm;
+$margin: $s-lap;
+$margin-large: $s-desk;
 
 
 // Paddings
 // =================================================================
-$padding-small: 5px;
-$padding-skinny: 10px;
-$padding: 20px;
-$padding-large: 30px;
+$padding-small: $s-wrist;
+$padding-skinny: $s-palm;
+$padding: $s-lap;
+$padding-large: $s-desk;
 
 
 // Other sizes

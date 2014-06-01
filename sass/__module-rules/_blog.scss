@@ -60,7 +60,7 @@
 time,
 .postdate {
     color: $lesser-color;
-    @include rem('font-size', $text-skinny);
+    @include rem('font-size', $text-palm);
 
     a {
         color: $lesser-color;
@@ -75,7 +75,7 @@ time,
 }
 
 .l-post-options {
-    @include rem('font-size', $text-skinny);
+    @include rem('font-size', $text-palm);
 
     a {
         text-decoration: none;

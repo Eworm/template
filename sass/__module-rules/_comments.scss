@@ -110,7 +110,7 @@
 }
 
 .comment-meta {
-    @include rem('font-size', $text-skinny);
+    @include rem('font-size', $text-palm);
 
     @include respond-min($lap) {
         padding-top: 20px;
