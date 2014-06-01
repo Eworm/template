@@ -88,11 +88,11 @@ if(isset($_POST['submitted'])) {
     
                 <p><a href="<?php echo get_settings('home'); ?>"><?php _e( 'Terug naar de homepage', 'thema_vertalingen' ); ?></a></p>
     
-            </div> <!-- #maincontent -->
+            </div> <!-- .maincontent -->
     
-        </div> <!-- #holder-content -->
+        </div> <!-- .holder -->
     
-    </div> <!-- #wrapper-content -->
+    </div> <!-- #content -->
 
 <?php } else { ?>
 
@@ -176,7 +176,7 @@ if(isset($_POST['submitted'])) {
     
                 </form>
     
-            </div> <!-- #maincontent -->
+            </div> <!-- .maincontent -->
     
             <aside class="sidebar grid-column grid-column-3 no-margin">
     
@@ -195,9 +195,9 @@ if(isset($_POST['submitted'])) {
     
                 <?php } ?>
     
-            </aside> <!-- #sidebar -->
+            </aside> <!-- .sidebar -->
     
-        </div> <!-- #holder-content -->
+        </div> <!-- .holder -->
     
         <div id="dialog-message" title="Foutmelding">
         
@@ -205,7 +205,7 @@ if(isset($_POST['submitted'])) {
         
         </div>
     
-    </div> <!-- #wrapper-content -->
+    </div> <!-- #content -->
 
 <?php } ?>
 

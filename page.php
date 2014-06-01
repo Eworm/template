@@ -74,7 +74,7 @@
                     
                 </div>
 
-            </article> <!-- #maincontent -->
+            </article> <!-- .maincontent -->
 
         <?php endwhile; ?>
 
@@ -95,8 +95,8 @@
 
         <?php endif; ?>
 
-    </div> <!-- #holder-content -->
+    </div> <!-- .holder -->
 
-</div> <!-- #wrapper-content -->
+</div> <!-- #content -->
 
 <?php get_footer(); ?>

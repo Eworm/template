@@ -7,7 +7,8 @@
         <div class="maincontent grid-column grid-column-5">
 
             <?php if (have_posts()) : ?>
-    		  
+
+                <?php /* Start the Loop */ ?>    		  
     			<?php while (have_posts()) : the_post(); ?>
 
                     <article class="l-post">
@@ -46,7 +47,7 @@
 		
     		<?php endif; ?>
     		
-        </div> <!-- #maincontent -->
+        </div> <!-- .maincontent -->
 
         <aside class="sidebar grid-column grid-column-3 no-margin">
 
@@ -54,10 +55,10 @@
                 || !dynamic_sidebar('Blog') ) : ?>
             <?php endif; ?>
 
-        </aside> <!-- #sidebar -->
+        </aside> <!-- .sidebar -->
 
-    </div> <!-- #holder-content -->
+    </div> <!-- .holder -->
 
-</div> <!-- #wrapper-content -->
+</div> <!-- #content -->
 
 <?php get_footer(); ?>

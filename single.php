@@ -27,7 +27,7 @@
     				    <?php if (get_the_tags()) the_tags('Tags: ', ', ', '.'); ?><?php } ?>
                     </p>
                     
-                </article> <!-- #maincontent -->
+                </article> <!-- .maincontent -->
                 
                 <a id="l-toggle-comments" href="#l-comments-holder">
                     <?php
@@ -61,14 +61,14 @@
     					<?php get_search_form(); ?>
     				</div>
 
-    			</article> <!-- #maincontent -->
+    			</article> <!-- .maincontent -->
     			
             <?php endif; ?>
 
         </div>
 
-    </div> <!-- #holder-content -->
+    </div> <!-- .holder -->
 
-</div> <!-- #wrapper-content -->
+</div> <!-- #content -->
 
 <?php get_footer(); ?>

@@ -24,10 +24,10 @@
 
             <?php endif; ?>
 
-        </article> <!-- #maincontent -->
+        </article> <!-- .maincontent -->
 
-    </div> <!-- #holder-content -->
+    </div> <!-- .holder -->
 
-</div> <!-- #wrapper-content -->
+</div> <!-- #content -->
 
 <?php get_footer(); ?>
