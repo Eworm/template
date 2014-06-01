@@ -47,6 +47,14 @@ if(isset($_POST['submitted'])) {
 
             require("class.phpmailer.php");
             $mail = new PHPMailer();
+            
+            // Add mails to the database
+            $row = array(   'from' => $name,
+                            'email' => $email,
+                            'message' => $message
+            );
+			
+			$wpdb->insert('maillog', $row);
 
             $mail->From         = $email;
             $mail->FromName     = $name;
@@ -160,7 +168,7 @@ if(isset($_POST['submitted'])) {
 
                         </div>
     
-                        <div id="screenReader" class="formrow">
+                        <div id="screenreader" class="formrow">
                         
                             <label for="checking">
                                 <?php _e( 'Als u dit formulier wilt versturen moet u dit invoerveld leeg laten', 'thema_vertalingen' ); ?>
