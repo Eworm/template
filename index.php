@@ -24,9 +24,11 @@
                             <p class="l-postdate">
                                 <?php the_time('j F Y') ?> &mdash; <?php the_time('g:ia') ?> <?php edit_post_link('Artikel aanpassen','<strong> |</strong> ',''); ?>
                                 <br>
-                                <?php /* pages don't have categories or tags */ if (!is_page()) { ?> Categorie&euml;n: <?php the_category(', '); ?>. <?php /* } */?>
-                                <br>
-                                <?php if (get_the_tags()) the_tags('Tags: ', ', ', '.'); ?><?php } ?>
+                                <?php /* pages don't have categories or tags */ if (!is_page()) : ?>
+                                    <?php _e( 'Categorie&euml;n', 'thema_vertalingen' ); ?>: <?php the_category(', '); ?>.
+                                    <br>
+                                    <?php if (get_the_tags()) the_tags('Tags: ', ', ', '.'); ?>
+                                <?php endif; ?>
                             </p>
 
                         </header>

@@ -9,26 +9,28 @@
             <?php if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>
     
-                <article class="maincontent single-post">
+                <article class="maincontent single-post l-post">
     
-                    <header class="maincontent-header single-post-header">
+                    <header class="l-post-header single-post-header">
 
-                        <h1 class="maincontent-title single-post-title">
+                        <h1 class="l-post-title maincontent-title single-post-title">
                             <?php the_title(); ?>
                         </h1>
 
                     </header>
                     
-                    <div class="maincontent-body">
+                    <div class="l-post-entry">
                         <?php the_content('Lees meer &raquo;'); ?>
                     </div>
                     
-                    <p class="postdate">
-                        <?php the_time('j F Y')?>. <?php edit_post_link('Dit artikel aanpassen.', '', ''); ?>
+                    <p class="l-postdate">
+                        <?php the_time('j F Y') ?> &mdash; <?php the_time('g:ia') ?> <?php edit_post_link('Artikel aanpassen','<strong> |</strong> ',''); ?>
                         <br>
-                        <?php /* pages don't have categories or tags */ if (!is_page()) { ?> <?php _e( 'Categorie&euml;n', 'thema_vertalingen' ); ?>: <?php the_category(', '); ?>. <?php /* } */?>
-                        <br>
-                        <?php if (get_the_tags()) the_tags('Tags: ', ', ', '.'); ?><?php } ?>
+                        <?php /* pages don't have categories or tags */ if (!is_page()) : ?>
+                            <?php _e( 'Categorie&euml;n', 'thema_vertalingen' ); ?>: <?php the_category(', '); ?>.
+                            <br>
+                            <?php if (get_the_tags()) the_tags('Tags: ', ', ', '.'); ?>
+                        <?php endif; ?>
                     </p>
                     
                 </article> <!-- .maincontent -->
@@ -36,14 +38,18 @@
                 <a id="l-toggle-comments" href="#l-comments-holder">
                     <?php
                         $comments_count = get_comments_number( $post_id );
-                        if ($comments_count >= 1) {
+                        
+                        if ($comments_count >= 1) :
+                        
                             _e( 'Alle reacties tonen', 'thema_vertalingen' );
                             echo ' (';
                             echo $comments_count;
                             echo ')';
-                        } else {
+                        
+                        else :
                             _e( 'Er zijn nog geen reacties', 'thema_vertalingen' );
-                        }
+                        
+                        endif;
                     ?>
                 </a>
                 
@@ -54,17 +60,17 @@
             <?php endwhile; ?>
             <?php else : ?>
                 
-                <article class="maincontent single-post no-results not-found">
+                <article class="maincontent l-post single-post no-results not-found">
 
-                    <header class="maincontent-header single-post-header">
+                    <header class="l-post-header maincontent-header single-post-header">
                         
-                        <h1 class="maincontent-title single-post-title">
+                        <h1 class="l-post-title maincontent-title single-post-title">
                             <?php _e( 'Deze pagina bestaat niet', 'thema_vertalingen' ); ?>
                         </h1>
 
                     </header>
     
-                    <div class="entry">
+                    <div class="l-post-entry">
                         <p><?php _e( 'Sorry, we hebben deze pagina niet gevonden. Maar misschien kun je zoeken om de juiste pagina te vinden:', 'thema_vertalingen' ); ?></p>
                         <?php get_search_form(); ?>
                     </div>

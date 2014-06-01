@@ -2,7 +2,8 @@
 <html lang="en" class="no-js">
     <head>
         <meta charset="utf-8">
-        <title><?php
+        <title>
+        <?php
             /*
              * Print the <title> tag based on what is being viewed.
              */
@@ -21,7 +22,8 @@
             // Add a page number if necessary:
             if ( $paged >= 2 || $page >= 2 )
                 echo ' | ' . sprintf( __( 'Page %s', 'twentyten' ), max( $paged, $page ) );
-            ?></title>
+        ?>
+        </title>
         
         <?php if (is_single() || is_page() ) : if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
             <meta name="description" content="<?php the_excerpt_rss(); ?>">
@@ -30,20 +32,21 @@
         <?php endif; ?>
         
         <?php
-        // Use tags or the theme options seo keywords otherwise
-        if (is_single()) {
-            $posttags = get_the_tags();
-            if ($posttags)
-                foreach((get_the_tags()) as $tag) {
-                    $keywords[] = strtolower($tag->name);
-                }
-                echo '<meta name="keywords" content="' . implode(", ", array_unique($keywords)) . '">';
-        } else {
-            $options = get_option('template_theme_options');
-            echo '<meta name="description" content="';
-            echo $options['seo_keywords'];
-            echo '">';
-        } ?>
+            // Use tags or the theme options seo keywords otherwise
+            if (is_single()) :
+                $posttags = get_the_tags();
+                if ($posttags)
+                    foreach((get_the_tags()) as $tag) {
+                        $keywords[] = strtolower($tag->name);
+                    }
+                    echo '<meta name="keywords" content="' . implode(", ", array_unique($keywords)) . '">';
+            else :
+                $options = get_option('template_theme_options');
+                echo '<meta name="description" content="';
+                echo $options['seo_keywords'];
+                echo '">';
+            endif;
+        ?>
         
         <meta name="language" content="nl">
         <meta name="revisit-after" content="15 days">
@@ -54,18 +57,20 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <meta name="apple-mobile-web-app-title" content="<?php bloginfo('name'); ?>">
         
-        <?php if (is_single()) {
-            // Twitter cards meta info
-            $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail' );
-            $url = $thumb['0'];
-            echo '<meta name="twitter:card" content="summary">';
-            echo '<meta name="twitter:site" content="' . bloginfo('name') . '">';
-            echo '<meta name="twitter:title" content="' . get_the_title() . '">';
-            echo '<meta name="twitter:description" content="' . get_the_excerpt() . '">';
-            if ( has_post_thumbnail() ) {
-                echo '<meta name="twitter:image:src" content="' . $url . '">';
-            }
-        } ?>
+        <?php
+            if (is_single()) :
+                // Twitter cards meta info
+                $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail' );
+                $url = $thumb['0'];
+                echo '<meta name="twitter:card" content="summary">';
+                echo '<meta name="twitter:site" content="' . bloginfo('name') . '">';
+                echo '<meta name="twitter:title" content="' . get_the_title() . '">';
+                echo '<meta name="twitter:description" content="' . get_the_excerpt() . '">';
+                if ( has_post_thumbnail() ) {
+                    echo '<meta name="twitter:image:src" content="' . $url . '">';
+                }
+            endif;
+        ?>
         
         <!-- Pinned tyle for Windows8 -->
         <meta name="msapplication-TileImage" content="<?php bloginfo('url'); ?>/img/windows8-tile.png">
@@ -86,11 +91,10 @@
         
         <?php
             $whitelist = array('localhost', '10.0.1.17');
-            if ($link = (!in_array($_SERVER['HTTP_HOST'], $whitelist))) {
+            if ($link = (!in_array($_SERVER['HTTP_HOST'], $whitelist))) :
         ?>
-            <!-- Insert Google analytics here -->
-            
-        <?php } ?>
+        <!-- Insert Google analytics here -->
+        <?php endif; ?>
         
         <?php wp_head(); ?>
         

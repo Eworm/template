@@ -4,26 +4,28 @@
 
     <div class="holder holder-content">
 
-        <?php if (!$post->post_parent) {
+        <?php if (!$post->post_parent) :
             
                 // will display the subpages of this top level page
                 $children = wp_list_pages("title_li=&child_of=".$post->ID."&echo=0");
             
-            } else {
+            else :
                 // diplays only the subpages of parent level
                 //$children = wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0");
 
-                if ($post->ancestors) {
+                if ($post->ancestors) :
+                
                     // now you can get the the top ID of this page
                     // wp is putting the ids DESC, thats why the top level ID is the last one
                     $ancestors = end($post->ancestors);
                     $children = wp_list_pages("title_li=&child_of=".$ancestors."&echo=0");
                     // you will always get the whole subpages list
-                }
+                
+                endif;
             
-            }
+            endif;
 
-            if ($children) { ?>
+            if ($children) : ?>
 
                 <div id="submenu" class="grid-column grid-column-2">
                 
@@ -33,7 +35,7 @@
                 
                 </div>
 
-            <?php } ?>
+            <?php endif; ?>
 
         <?php if (have_posts()) : ?>
         <?php while (have_posts()) : the_post(); ?>
@@ -64,8 +66,11 @@
                             'post_parent' => $post->ID,
                             'exclude'     => get_post_thumbnail_id()
                             );
+                            
                         $attachments = get_posts( $args );
-                        if ( $attachments ) {
+                        
+                        if ( $attachments ) :
+                        
                             foreach ( $attachments as $attachment ) {
                                 $image_attributes = wp_get_attachment_image_src( $attachment->ID, 'large' );
                                 echo '<a class="fancybox" rel="gallery" href="';
@@ -74,7 +79,8 @@
                                 echo wp_get_attachment_image( $attachment->ID ); 
                                 echo '</a>';
                             }
-                        }
+                        
+                        endif;
                     ?>
                     
                 </div>

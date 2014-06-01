@@ -6,7 +6,7 @@
 
         <div class="maincontent grid-column grid-column-5">
 
-            <?php if ( have_posts() ) : ?>
+            <?php if (have_posts()) : ?>
     
                 <header class="maincontent-header">
                     <h1 class="maincontent-title">

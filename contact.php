@@ -8,42 +8,57 @@ Template Name: Contactformulier
 $emailSent = false;
 
 //If the form is submitted
-if(isset($_POST['submitted'])) {
+if (isset($_POST['submitted'])) :
 
     //Check to see if the honeypot captcha field was filled in
-    if(trim($_POST['checking']) !== '') {
+    if (trim($_POST['checking']) !== '') :
         $captchaError = true;
-    } else {
+    else :
 
         //Check to make sure that the name field is not empty
-        if(trim($_POST['naam']) === '') {
+        if (trim($_POST['naam']) === '') :
+        
             $nameError = _e( 'U bent vergeten uw naam in te vullen', 'thema_vertalingen' );
             $hasError = true;
-        } else {
+        
+        else :
+        
             $name = trim($_POST['naam']);
-        }
+        
+        endif;
 
         //Check to make sure sure that a valid email address is submitted
-        if(trim($_POST['emailadres']) === '')  {
+        if (trim($_POST['emailadres']) === '')  :
+        
             $emailError = _e( 'U bent vergeten uw e-mailadres in te vullen', 'thema_vertalingen' );
             $hasError = true;
-        } else if (!eregi("^[A-Z0-9._%-]+@[A-Z0-9._%-]+\.[A-Z]{2,4}$", trim($_POST['emailadres']))) {
+        
+        elseif (!eregi("^[A-Z0-9._%-]+@[A-Z0-9._%-]+\.[A-Z]{2,4}$", trim($_POST['emailadres']))) :
+        
             $emailError = _e( 'U heeft een ongeldig e-mailadres ingevuld', 'thema_vertalingen' );
             $hasError = true;
-        } else {
+        
+        else :
+        
             $email = trim($_POST['emailadres']);
-        }
+        
+        endif;
 
         //Check to make sure that the message field is not empty
-        if(trim($_POST['message']) === '') {
+        if (trim($_POST['message']) === '') :
+
             $messageError = _e( 'U bent vergeten een bericht in te vullen', 'thema_vertalingen' );
             $hasError = true;
-        } else {
+
+        else :
+
             $message = trim($_POST['message']);
-        }
+
+        endif;
+
 
         //If there is no error, send the email
-        if(!isset($hasError)) {
+        if (!isset($hasError)) :
 
             require("class.phpmailer.php");
             $mail = new PHPMailer();
@@ -56,6 +71,7 @@ if(isset($_POST['submitted'])) {
 			
 			$wpdb->insert('maillog', $row);
 
+            // Info for the actual email
             $mail->From         = $email;
             $mail->FromName     = $name;
             $mail->AddAddress("wout@woutmager.nl");
@@ -64,21 +80,30 @@ if(isset($_POST['submitted'])) {
             $mail->Subject      = "Contactformulier verstuurd door " . $name;
             $mail->Body         = "Naam: $name \n\nEmail: $email \n\nBericht: $message";
 
-            error_reporting(E_ALL);
-            if(!$mail->Send()) {
+            //error_reporting(E_ALL);
+            
+            if (!$mail->Send()) :
+            
                 //echo "Mailer Error: " . $mail->ErrorInfo;
-            } else {
+            
+            else :
+            
                 //echo "Message sent!";
                 $emailSent = true;
-            }
+            
+            endif;
 
-        }
-    }
-} ?>
+        endif;
+        
+    endif;
+    
+endif;
+
+?>
 
 <?php get_header(); ?>
 
-<?php if($emailSent == true) { ?>
+<?php if ($emailSent == true) : ?>
     
     <!-- Thanks page -->
 
@@ -102,7 +127,7 @@ if(isset($_POST['submitted'])) {
     
     </div> <!-- #content -->
 
-<?php } else { ?>
+<?php else : ?>
 
     <!-- The contact form -->
 
@@ -126,13 +151,13 @@ if(isset($_POST['submitted'])) {
                                 <?php _e( 'Uw naam', 'thema_vertalingen' ); ?> <span class="req"><?php _e( '(Verplicht)', 'thema_vertalingen' ); ?></span>
                             </label>
                             
-                            <input value="<?php if(isset($_POST['naam'])) echo $_POST['naam'];?>" type="text" name="naam" id="naam" required="required">
+                            <input value="<?php if (isset($_POST['naam'])) echo $_POST['naam'];?>" type="text" name="naam" id="naam" required="required">
                             
-                            <?php if($nameError != '') { ?>
+                            <?php if ($nameError != '') : ?>
                                 <div class="error">
                                     <?=$nameError;?>
                                 </div>
-                            <?php } ?>
+                            <?php endif; ?>
 
                         </div>
     
@@ -142,13 +167,13 @@ if(isset($_POST['submitted'])) {
                                 <?php _e( 'Uw e-mailadres', 'thema_vertalingen' ); ?> <span class="req"><?php _e( '(Verplicht)', 'thema_vertalingen' ); ?></span>
                             </label>
                             
-                            <input value="<?php if(isset($_POST['emailadres'])) echo $_POST['emailadres'];?>" type="email" name="emailadres" id="emailadres" required="required">
+                            <input value="<?php if (isset($_POST['emailadres'])) echo $_POST['emailadres'];?>" type="email" name="emailadres" id="emailadres" required="required">
 
-                            <?php if($emailError != '') { ?>
+                            <?php if ($emailError != '') : ?>
                                 <div class="error">
                                     <?=$emailError;?>
                                 </div>
-                            <?php } ?>
+                            <?php endif; ?>
 
                         </div>
     
@@ -160,11 +185,11 @@ if(isset($_POST['submitted'])) {
                             
                             <textarea id="message" name="message" class="textarea" required="required"></textarea>
 
-                            <?php if($messageError != '') { ?>
+                            <?php if ($messageError != '') : ?>
                                 <div class="error">
                                     <?=$messageError;?>
                                 </div>
-                            <?php } ?>
+                            <?php endif; ?>
 
                         </div>
     
@@ -174,7 +199,7 @@ if(isset($_POST['submitted'])) {
                                 <?php _e( 'Als u dit formulier wilt versturen moet u dit invoerveld leeg laten', 'thema_vertalingen' ); ?>
                             </label>
                             
-                            <input type="text" name="checking" id="checking" value="<?php if(isset($_POST['checking']))  echo $_POST['checking'];?>">
+                            <input type="text" name="checking" id="checking" value="<?php if (isset($_POST['checking'])) echo $_POST['checking'];?>">
                         
                         </div>
     
@@ -195,7 +220,7 @@ if(isset($_POST['submitted'])) {
             <aside class="sidebar grid-column grid-column-3 no-margin">
     
                 <?php $options = get_option('template_theme_options');
-                    if (($options['theme_address'])) { ?>
+                    if (($options['theme_address'])) : ?>
     
                     <section class="no-padding mob-hide">
                     
@@ -207,7 +232,7 @@ if(isset($_POST['submitted'])) {
                     
                     </section>
     
-                <?php } ?>
+                <?php endif; ?>
     
             </aside> <!-- .sidebar -->
     
@@ -221,6 +246,6 @@ if(isset($_POST['submitted'])) {
     
     </div> <!-- #content -->
 
-<?php } ?>
+<?php endif; ?>
 
 <?php get_footer(); ?>

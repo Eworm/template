@@ -70,6 +70,7 @@
                         </div>
                         
                     </article>
+                    
                 <?php endwhile; ?>
                 
                 <ul class="l-post-navigation">
