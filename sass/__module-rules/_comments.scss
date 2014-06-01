@@ -2,10 +2,10 @@
     width: 100%;
     padding: $gutter-skinny 0;
     display: block;
-    background: #fff;
     box-shadow: rgba(darken($border-color, 20%), 1) 0 1px 1px;
-    text-decoration: none;
+    background: #fff;
     text-align: center;
+    text-decoration: none;
 
     @include respond-min($palm) {
         display: none;
@@ -37,10 +37,10 @@
 #respond {
     width: 100%;
     padding: $gutter-skinny 0;
-    float: left;
     position: relative;
-    background: transparent;
+    float: left;
     border-bottom: 2px solid $border-color;
+    background: transparent;
 
     .children .comment.depth-2 {
         margin-bottom: $gutter;

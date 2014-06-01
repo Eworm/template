@@ -3,8 +3,8 @@
     margin-bottom: $margin;
     padding: $gutter-skinny;
     float: left;
-    background: #fff;
     border: 1px solid $border-color;
+    background: #fff;
 
     @include respond-min($lap) {
         padding: $gutter;

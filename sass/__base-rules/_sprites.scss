@@ -2,10 +2,10 @@
     width: 72px;
     height: 48px;
     margin-left: -36px;
-    display: block;
     position: absolute;
     top: 4px;
     left: 50%;
+    display: block;
     text-indent: -9999px;
     @include svg-or-not('img/sprite');    
     transform: translate3d(0, 0, 0);

@@ -5,10 +5,10 @@
     top: 0;
     left: -$mobile-menu-width;
     z-index: 1000;
-    background: $nav-bg-color;
     border-right: 1px solid $border-color;
-    backface-visibility: hidden;
+    background: $nav-bg-color;
     transform: perspective(100);
+    backface-visibility: hidden;
     
     .csstransforms3d & {
         left: 0;
@@ -74,20 +74,20 @@
         .toggle-sub {
             width: 50px;
             height: 100%;
-            display: block;
             position: absolute;
             top: 0;
             right: 0;
             z-index: 1200;
+            display: block;
             border-left: 1px solid $border-color;
             cursor: pointer;
             
             &:after {
-                content: '';
                 width: 0;
                 height: 0;
                 margin-top: -4px;
                 margin-left: -8px;
+                content: '';
                 position: absolute;
                 top: 50%;
                 left: 50%;
@@ -110,9 +110,9 @@
 
     .menu-item {
         width: 100%;
+        position: relative;
         display: block;
         float: left;
-        position: relative;
 
         @include respond-min($palm) {
             width: auto;
@@ -122,8 +122,8 @@
 
     a {
         padding: $gutter-skinny $gutter;
-        display: block;
         position: relative;
+        display: block;
         border-bottom: 1px solid $border-color;
         text-decoration: none;
 
@@ -208,12 +208,12 @@
         width: 100%;
         margin: 0;
         padding: 0;
-        display: none;
-        float: left;
         position: relative;
         z-index: 10000;
-        background: #fff;
+        display: none;
+        float: left;
         border: 0;
+        background: #fff;
     
         .current_page_parent &,
         .current-menu-parent & {

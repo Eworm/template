@@ -95,8 +95,8 @@ input[type=submit] {
 
 .submit,
 #submit {
-    text-decoration: none;
     text-align: center;
+    text-decoration: none;
     cursor: pointer;
 
     @include respond-min($palm) {

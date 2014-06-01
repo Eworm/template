@@ -80,15 +80,15 @@ a img.aligncenter {
     @extend %postimage;
     margin: $margin-skinny 0;
     padding: $gutter-skinny;
-    background: #fff;
     border: 1px solid $border-color;
     border-radius: 0;
+    background: #fff;
     text-align: center;
 
     img {
         width: 100%;
-        max-width: 100%;
         height: auto;
+        max-width: 100%;
         margin: 0 0 $gutter-skinny;
         padding: 0;
         display: block;
