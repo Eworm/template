@@ -1,12 +1,15 @@
 <?php get_header(); ?>
 
 <div id="content" class="wrapper wrapper-content">
+
     <div class="holder holder-content">
+
         <div class="grid-column grid-column-5">
+
             <?php if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>
     
-                <article id="maincontent" class="single-post">
+                <article class="maincontent single-post">
     
                     <header class="maincontent-header single-post-header">
                         <h1 class="maincontent-title single-post-title"><?php the_title(); ?></h1>
@@ -24,7 +27,7 @@
     				    <?php if (get_the_tags()) the_tags('Tags: ', ', ', '.'); ?><?php } ?>
                     </p>
                     
-                </article>
+                </article> <!-- #maincontent -->
                 
                 <a id="l-toggle-comments" href="#l-comments-holder">
                     <?php
@@ -47,7 +50,8 @@
             <?php endwhile; ?>
             <?php else : ?>
                 
-                <article class="single-post no-results not-found">
+                <article class="maincontent single-post no-results not-found">
+
     				<header class="maincontent-header single-post-header">
     					<h1 class="maincontent-title single-post-title"><?php _e( 'Deze pagina bestaat niet', 'thema_vertalingen' ); ?></h1>
     				</header>
@@ -56,11 +60,15 @@
     					<p><?php _e( 'Sorry, we hebben deze pagina niet gevonden. Maar misschien kun je zoeken om de juiste pagina te vinden:', 'thema_vertalingen' ); ?></p>
     					<?php get_search_form(); ?>
     				</div>
-    			</article>
+
+    			</article> <!-- #maincontent -->
     			
             <?php endif; ?>
+
         </div>
-    </div>
-</div>
+
+    </div> <!-- #holder-content -->
+
+</div> <!-- #wrapper-content -->
 
 <?php get_footer(); ?>

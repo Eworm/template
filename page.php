@@ -1,7 +1,9 @@
 <?php get_header(); ?>
 
 <div id="content" class="wrapper wrapper-content">
+
     <div class="holder holder-content">
+
         <?php
             if(!$post->post_parent){
                 // will display the subpages of this top level page
@@ -21,26 +23,32 @@
             }
 
             if ($children) { ?>
+
             <div id="submenu" class="grid-column grid-column-2">
+            
                 <ul>
                     <?php echo $children; ?>
                 </ul>
+            
             </div>
+
         <?php } ?>
 
         <?php if (have_posts()) : ?>
         <?php while (have_posts()) : the_post(); ?>
 
-            <article id="maincontent" class="grid-column grid-column-6 <?php if ($children) { ?>no-margin<?php } ?>">
+            <article class="maincontent grid-column grid-column-6 <?php if ($children) { ?>no-margin<?php } ?>">
 
                 <header class="maincontent-header">
                     <h1 class="maincontent-title"><?php the_title(); ?></h1>
                 </header>
+
                 <div class="maincontent-body">
                     <?php the_content('Lees meer &raquo;'); ?>
                 </div>
                 
                 <div id="thumbs">
+                
                     <?php
                         $args = array(
                             'order'          => 'ASC',
@@ -63,13 +71,17 @@
                         	}
                         }
                     ?>
+                    
                 </div>
 
-            </article>
+            </article> <!-- #maincontent -->
 
         <?php endwhile; ?>
+
         <?php else : ?>
-            <article id="maincontent" class="no-results not-found">
+
+            <article class="no-results not-found">
+
 				<header class="maincontent-header">
 					<h1 class="maincontent-title"><?php _e( 'Deze pagina bestaat niet', 'thema_vertalingen' ); ?></h1>
 				</header>
@@ -78,9 +90,13 @@
 					<p><?php _e( 'Sorry, we hebben deze pagina niet gevonden. Maar misschien kun je zoeken om de juiste pagina te vinden:', 'thema_vertalingen' ); ?></p>
 					<?php get_search_form(); ?>
 				</div>
+
 			</article>
+
         <?php endif; ?>
-    </div>
-</div>
+
+    </div> <!-- #holder-content -->
+
+</div> <!-- #wrapper-content -->
 
 <?php get_footer(); ?>

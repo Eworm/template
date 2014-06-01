@@ -1,4 +1,4 @@
-#maincontent {
+.maincontent {
     padding: $gutter-skinny 0;
 
     @include respond-min($lap) {

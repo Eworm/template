@@ -1,10 +1,15 @@
 <?php get_header(); ?>
 
 <div id="content" class="wrapper wrapper-content">
+
     <div class="holder holder-content">
+
         <!-- <img src="<?php header_image(); ?>"> -->
-        <article id="maincontent" class="grid-column grid-column-5">
+
+        <article class="maincontent grid-column grid-column-5">
+
             <?php if (have_posts()) : ?>
+
                 <?php while (have_posts()) : the_post(); ?>
                 
                     <header class="maincontent-header">
@@ -16,9 +21,13 @@
                     </div>
                     
                 <?php endwhile; ?>
+
             <?php endif; ?>
-        </article>
-    </div>
-</div>
+
+        </article> <!-- #maincontent -->
+
+    </div> <!-- #holder-content -->
+
+</div> <!-- #wrapper-content -->
 
 <?php get_footer(); ?>
