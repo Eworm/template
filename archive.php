@@ -13,15 +13,19 @@
                     <h1 class="maincontent-title">
                     
                         <?php if ( is_day() ) : ?>
+                        
                             <?php printf( __( 'Dagarchief: %s', 'thema_vertalingen' ), '<span>' . get_the_date() . '</span>' ); ?>
                         
                         <?php elseif ( is_month() ) : ?>
+                        
                             <?php printf( __( 'Maandarchief: %s', 'thema_vertalingen' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'thema_vertalingen' ) ) . '</span>' ); ?>
                         
                         <?php elseif ( is_year() ) : ?>
+                        
                             <?php printf( __( 'Jaararchief: %s', 'thema_vertalingen' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'thema_vertalingen' ) ) . '</span>' ); ?>
                         
                         <?php else : ?>
+                        
                             <?php _e( 'Blogarchief', 'thema_vertalingen' ); ?>
                         
                         <?php endif; ?>
@@ -54,10 +58,13 @@
                             <?php the_excerpt(); ?>
 
                             <span class="l-post-options">
+                            
                                 <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Directe link naar', 'thema_vertalingen' ); ?> <?php the_title_attribute(); ?>">
                                     <?php _e( 'Verder lezen', 'thema_vertalingen' ); ?>
                                 </a>&nbsp;|&nbsp;
+                            
                                 <?php comments_popup_link('Reageer als eerste', 'Er is 1 reactie', 'Er zijn % reacties'); ?>
+                            
                             </span>
 
                         </div>
