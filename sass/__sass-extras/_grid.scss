@@ -13,7 +13,7 @@
     float: left;
     clear: both;
     
-    @include respond-min($palm) {
+    @include respond-min($lap) {
         margin-right: margin-width();
         clear: none;
     }
@@ -30,10 +30,14 @@
 
 // Use the nr-of-columns variable to generate the grid widths
 // =================================================================
-@include respond-min($palm) {
+@include respond-min($lap) {
+
     @for $i from 1 through $nr-of-columns {
+    
         .grid-column-#{$i} {
             width: 100% / ($max-width / (((($max-width - (($nr-of-columns - 1) * $gutter)) / $nr-of-columns) * $i) + (($i - 1) * $gutter)));
         }
+        
     }
+    
 }

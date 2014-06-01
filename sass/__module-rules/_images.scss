@@ -1,7 +1,7 @@
 .alignnone {
     @extend %postimage;
 
-    @include respond-min($wrist) {
+    @include respond-min($palm) {
         width: auto;
         margin: $margin $gutter $margin 0;
     }
@@ -11,7 +11,7 @@
 div.aligncenter {
     @extend %postimage;
 
-    @include respond-min($wrist) {
+    @include respond-min($palm) {
         display: block;
         margin: $margin auto;
     }
@@ -20,7 +20,7 @@ div.aligncenter {
 .alignright {
     @extend %postimage;
 
-    @include respond-min($wrist) {
+    @include respond-min($palm) {
         width: auto;
         float: right;
         margin: 0 0 $margin $gutter;
@@ -30,7 +30,7 @@ div.aligncenter {
 .alignleft {
     @extend %postimage;
 
-    @include respond-min($wrist) {
+    @include respond-min($palm) {
         width: auto;
         float: left;
         margin: 0 $gutter $margin 0;
@@ -40,7 +40,7 @@ div.aligncenter {
 a img.alignright {
     @extend %postimage;
 
-    @include respond-min($wrist) {
+    @include respond-min($palm) {
         width: auto;
         float: right;
         margin: $gutter 0 $margin $gutter;
@@ -50,7 +50,7 @@ a img.alignright {
 a img.alignnone {
     @extend %postimage;
 
-    @include respond-min($wrist) {
+    @include respond-min($palm) {
         width: auto;
         margin: $gutter $gutter $margin 0;
     }
@@ -59,7 +59,7 @@ a img.alignnone {
 a img.alignleft {
     @extend %postimage;
 
-    @include respond-min($wrist) {
+    @include respond-min($palm) {
         width: auto;
         float: left;
         margin: $gutter $gutter $margin 0;
@@ -69,7 +69,7 @@ a img.alignleft {
 a img.aligncenter {
     @extend %postimage;
 
-    @include respond-min($wrist) {
+    @include respond-min($palm) {
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -113,21 +113,21 @@ a img.aligncenter {
 
     &.alignnone {
     
-        @include respond-min($wrist) {
+        @include respond-min($palm) {
             margin: $gutter $gutter $margin 0;
         }
     }
     
     &.alignleft {
     
-        @include respond-min($wrist) {
+        @include respond-min($palm) {
             margin: 0 $gutter $margin 0;
         }
     }
     
     &.alignright {
     
-        @include respond-min($wrist) {
+        @include respond-min($palm) {
             margin: 0 0 $margin $gutter;
         }
     }
@@ -136,7 +136,7 @@ a img.aligncenter {
 .post-thumbnail {
     @extend %postimage;
 
-    @include respond-min($wrist) {
+    @include respond-min($palm) {
         width: auto;
         margin: $margin 0;
     }

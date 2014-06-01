@@ -9,7 +9,7 @@
     border-bottom: 1px solid $border-color;
     transform: translate3d(0, 0, 0);
 
-    @include respond-min($palm) {
+    @include respond-min($lap) {
         display: none;
     }
 }
@@ -45,7 +45,7 @@
 .mob-hide {
     display: none;
 
-    @include respond-min($palm) {
+    @include respond-min($lap) {
         display: block;
     }
 }

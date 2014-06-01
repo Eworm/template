@@ -11,27 +11,21 @@ html {
 }
 
 * html { // IE6
-    font-family: 'desktop';
+    font-family: 'desk';
 }
 
 *+html { // IE7
-    font-family: 'desktop';
+    font-family: 'desk';
 }
 
 @media \0screen {
     html {  // IE8
-        font-family: 'desktop';
+        font-family: 'desk';
     }
 }
 
 // Queries for supported browsers.       
 // =================================================================
-@media screen and (min-width: $wrist) {
-    html {
-        font-family: 'wrist';
-    }
-}
-
 @media screen and (min-width: $palm) {
     html {
         font-family: 'palm';

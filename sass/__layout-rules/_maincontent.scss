@@ -1,7 +1,7 @@
 #maincontent {
     padding: $gutter-skinny 0;
 
-    @include respond-min($palm) {
+    @include respond-min($lap) {
         padding: 0 0 $gutter;
     }
 }

@@ -65,7 +65,7 @@ body {
     opacity: 0;
     background: $body-bg-color;
     
-    @include respond-min($wrist) {
+    @include respond-min($palm) {
         left: $skinny-menu-width;
     }
 }
@@ -86,11 +86,11 @@ body {
         position: relative;
         left: $mobile-menu-width;
         
-        @include respond-min($wrist) {
+        @include respond-min($palm) {
             left: $skinny-menu-width;    
         }
         
-        @include respond-min($palm) {
+        @include respond-min($lap) {
             left: 0;
         }
     }
@@ -104,11 +104,11 @@ body {
             transform-style: flat;
         }
 
-        @include respond-min($wrist) {
+        @include respond-min($palm) {
             transform: translate3d($skinny-menu-width, 0, 0) scale3d(1, 1, 1);
         }
 
-        @include respond-min($palm) {
+        @include respond-min($lap) {
             left: 0;
             transform: translate3d(0, 0, 0);
         }
@@ -154,7 +154,7 @@ a {
     padding: $gutter;
     clear: both;
 
-    @include respond-min($palm) {
+    @include respond-min($lap) {
         width: $width;
         max-width: $max-width;
         padding: $gutter 0;
@@ -179,7 +179,7 @@ a {
     display: table;
     caption-side: bottom;
     
-    @include respond-min($palm) {
+    @include respond-min($lap) {
         width: $width;
         display: block;
     }

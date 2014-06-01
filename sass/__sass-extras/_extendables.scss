@@ -27,7 +27,7 @@
     float: left;
     clear: both;
     
-    @include respond-min($palm) {
+    @include respond-min($lap) {
         margin-bottom: $margin;
     }
     
@@ -45,7 +45,7 @@
         background: $alert;
         color: #fff;
         
-        @include respond-min($palm) {
+        @include respond-min($lap) {
             width: 50%;
         }
     }
