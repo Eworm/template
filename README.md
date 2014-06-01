@@ -1,5 +1,5 @@
 # Volg onderstaande stappen voordat je met het project begint
-Ik maak gebruik van verschillende open-source software om sneller en effici&euml;nter te werken. Om verder met het project te kunnen werken is het nodig dat je die software installeert. Ik leg niet in detail uit hoe je de verschillende software installeert, dat wordt op de verschillende sites duidelijker uitgelegd dan ik dat kan.
+Ik maak gebruik van open-source software om sneller en effici&euml;nter te werken. Om verder met het project te kunnen werken is het nodig dat je die software installeert. Ik leg niet in detail uit hoe je de verschillende software installeert, dat wordt op de verschillende sites duidelijker uitgelegd dan ik dat kan.
 
 ### Voordat je kunt beginnen moet je deze software installeren
 **Stap 1**
