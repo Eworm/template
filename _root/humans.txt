@@ -9,8 +9,8 @@
   
 /* SITE */
     Standaarden: HTML5, CSS3, jQuery
-    Software: Photoshop, Coda, Chrome, Firebug, Codekit
-    Efficiency tools: Sass, Compass, Grunt, Bower
+    Software: Photoshop, Coda, Chrome, Wordpress
+    Efficiency tools: Sass, Compass, Gulp, Bower
     
                `,,,               
              :.......,            
