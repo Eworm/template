@@ -1,4 +1,4 @@
-#header {
+.header {
     margin-bottom: $margin;
 
     @include respond-min($lap) {
@@ -8,7 +8,7 @@
     }
 }
 
-#cp {
+.cp {
     display: none;
 
     @include respond-min($lap) {

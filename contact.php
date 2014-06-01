@@ -74,7 +74,7 @@ if(isset($_POST['submitted'])) {
     
     <!-- Thanks page -->
 
-    <div id="content" class="wrapper wrapper-content">
+    <div id="content" class="content wrapper wrapper-content">
     
         <div class="holder holder-content">
     
@@ -98,7 +98,7 @@ if(isset($_POST['submitted'])) {
 
     <!-- The contact form -->
 
-    <div id="content" class="wrapper wrapper-content">
+    <div id="content" class="content wrapper wrapper-content">
     
         <div class="holder holder-content">
     

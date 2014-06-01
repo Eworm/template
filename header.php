@@ -119,11 +119,11 @@
     </head>
     <body>
     
-        <div id="container">
+        <div id="container" class="container">
         
-            <div id="container-transition">
+            <div id="container-transition" class="container-transition">
             
-                <header id="header" class="wrapper wrapper-header">
+                <header id="header" class="header wrapper wrapper-header">
                 
                     <div class="holder holder-header">
                         
@@ -137,7 +137,8 @@
                         <a href="<?php echo get_option('home'); ?>" id="logo" rel="home" title="<?php _e( 'Terug naar de homepage', 'thema_vertalingen' ); ?>">
                             <?php bloginfo('name'); ?>
                         </a>
-                        <p id="cp">
+                        
+                        <p class="cp">
                             <?php bloginfo( 'description' ); ?>
                         </p>
                         

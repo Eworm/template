@@ -8,12 +8,12 @@
         display: block;
     }
 
-    #content & {
+    .content & {
         padding: 0;
         display: block;
     }
 
-    #header & {
+    .header & {
 
         @include respond-min($lap) {
             width: 20%;

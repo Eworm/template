@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div id="content" class="wrapper wrapper-content">
+<div id="content" class="content wrapper wrapper-content">
 
     <div class="holder holder-content">
 
@@ -15,6 +15,7 @@
     			</header>
     
     			<?php /* Start the Loop */ ?>
+    			
     			<?php while (have_posts()) : the_post(); ?>
 
                     <article class="l-post">

@@ -12,7 +12,7 @@
     get_header();
 ?>
 
-<div id="content" class="wrapper wrapper-content">
+<div id="content" class="content wrapper wrapper-content">
 
     <div class="holder holder-content">
 
