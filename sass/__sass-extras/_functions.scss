@@ -7,7 +7,7 @@
 
 // SVG background with png fallback
 // =================================================================
-@mixin svg-or-not($image) {
+@mixin svgbg($image) {
     background-repeat: no-repeat;
     background-image: url($image + '.png');
     
