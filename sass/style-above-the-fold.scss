@@ -28,7 +28,7 @@
 
 // Sass functions, extendables & mixins.
 // =================================================================
-@import 'compass/css3';
+//@import 'compass/css3';
 @import '__sass-extras/functions';
 @import '__sass-extras/grid';
 @import '__sass-extras/extendables';
@@ -40,7 +40,7 @@
 // Base rules. Normalize and other basic element styles.
 // =================================================================
 // Normalize is being imported via Bower
-@import 'normalize';
+//@import 'normalize';
 @import '__base-rules/base';
 @import '__base-rules/headers';
 

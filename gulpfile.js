@@ -1,40 +1,46 @@
-var gulp = require('gulp');
+// var gulp = require('gulp'),
+    // Get packages from package.json
+    // plugins = require("gulp-load-plugins")(),
+    // Livereload stuff
+    // lr = require('tiny-lr'),
+    // server = lr();
 
 
-// Get packages from package.json
-var plugins = require("gulp-load-plugins")();
+var gulp = require('gulp'),
 
+    // compass = require('gulp-compass'), // https://github.com/appleboy/gulp-compass
+    // livereload = require('gulp-livereload'),
 
-// Livereload stuff
-lr = require('tiny-lr'),
-server = lr();
-
+    plugins = require('gulp-load-plugins')(),
+    lr = require('tiny-lr'),
+    server = lr();
+    
 
 // Set source paths
 var src_paths = {
-    compass: './sass/**/*.scss',
+    compass: 'sass/**/*.scss',
     autoprefixer: '*.css',
-    svgmin: './img-src/*.svg',
-    svg2png: './img-src/*.svg',
-    imagemin: './img/portfolio/*.*',
-    uglify: ['./bower_components/picturefill/external/matchmedia.js',
-                './bower_components/hideShowPassword/hideShowPassword.js',
-                './bower_components/picturefill/picturefill.js',
-                './bower_components/on-media-query/js/onmediaquery.js',
-                './js-src/functions.js'],
-    yepnope: ['./bower_components/yepnope/yepnope.1.5.4-min.js',
-                './js-src/yepnope-loader.js']
+    svgmin: 'img-src/*.svg',
+    svg2png: 'img-src/*.svg',
+    imagemin: 'img/portfolio/*.*',
+    uglify: ['bower_components/picturefill/external/matchmedia.js',
+                'bower_components/hideShowPassword/hideShowPassword.js',
+                'bower_components/picturefill/picturefill.js',
+                'bower_components/on-media-query/js/onmediaquery.js',
+                'js-src/functions.js'],
+    yepnope: ['bower_components/yepnope/yepnope.1.5.4-min.js',
+                'js-src/yepnope-loader.js']
 };
 
 
 // Set destination paths
 var dest_paths = {
     compass: '.',
-    svgmin: './img',
-    svg2png: './img',
-    imagemin: './img',
-    uglify: './js',
-    yepnope: './js'
+    svgmin: 'img',
+    svg2png: 'img',
+    imagemin: 'img',
+    uglify: 'js',
+    yepnope: 'js'
 };
 
 
@@ -45,20 +51,19 @@ gulp.task('compass', function() {
         .pipe(plugins.plumber({errorHandler: plugins.notify.onError("Error: <%= error.message %>")}))
         
         .pipe(plugins.compass({
-            config_file: './config.rb',
-            project: '.',
+            config_file: 'config.rb',
+            sourcemap: true,
+            debug: true,
             css: dest_paths.compass,
-            image: 'img',
-            font: 'fonts',
-            import_path: 'bower_components/normalize.scss',
-            sourcemap: true
+            sass: 'sass',
+            import_path: 'bower_components/normalize.scss'
         }))
         
         .pipe(plugins.autoprefixer("last 2 versions", "> 1%", "ie 8"))
 		.pipe(gulp.dest('.'))
         
         .pipe(plugins.livereload(server))
-        .pipe(plugins.notify({ message: 'Sass complete' }))
+        .pipe(plugins.notify({ message: 'Compass complete' }))
 });
 
 

@@ -18,7 +18,7 @@ if (isset($_POST['submitted'])) :
         //Check to make sure that the name field is not empty
         if (trim($_POST['naam']) === '') :
         
-            $nameError = _e( 'U bent vergeten uw naam in te vullen', 'thema_vertalingen' );
+            $nameError = __( 'U bent vergeten uw naam in te vullen', 'thema_vertalingen' );
             $hasError = true;
         
         else :
@@ -28,14 +28,14 @@ if (isset($_POST['submitted'])) :
         endif;
 
         //Check to make sure sure that a valid email address is submitted
-        if (trim($_POST['emailadres']) === '')  :
+        if (trim($_POST['emailadres']) === '') :
         
-            $emailError = _e( 'U bent vergeten uw e-mailadres in te vullen', 'thema_vertalingen' );
+            $emailError = __( 'U bent vergeten uw e-mailadres in te vullen', 'thema_vertalingen' );
             $hasError = true;
         
         elseif (!eregi("^[A-Z0-9._%-]+@[A-Z0-9._%-]+\.[A-Z]{2,4}$", trim($_POST['emailadres']))) :
         
-            $emailError = _e( 'U heeft een ongeldig e-mailadres ingevuld', 'thema_vertalingen' );
+            $emailError = __( 'U heeft een ongeldig e-mailadres ingevuld', 'thema_vertalingen' );
             $hasError = true;
         
         else :
@@ -47,7 +47,7 @@ if (isset($_POST['submitted'])) :
         //Check to make sure that the message field is not empty
         if (trim($_POST['message']) === '') :
 
-            $messageError = _e( 'U bent vergeten een bericht in te vullen', 'thema_vertalingen' );
+            $messageError = __( 'U bent vergeten een bericht in te vullen', 'thema_vertalingen' );
             $hasError = true;
 
         else :
