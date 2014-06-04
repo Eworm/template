@@ -7,7 +7,7 @@
     left: 50%;
     display: block;
     text-indent: -9999px;
-    @include svg-or-not('img/sprite');    
+    @include svgbg('img/sprite');    
     transform: translate3d(0, 0, 0);
     
     @include respond-min($palm) {
