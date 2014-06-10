@@ -2,7 +2,7 @@
     display: none;
     float: none;
 
-    @include respond-min($lap) {
+    @include min-screen($lap) {
         margin-bottom: $margin;
         float: left;
         clear: none;
@@ -17,7 +17,7 @@
         border: 1px solid $border-color;
         @include inline-block;
         
-        @include respond-min($lap) {
+        @include min-screen($lap) {
             border: 0;
         }
     }
@@ -30,7 +30,7 @@
         float: left;
         background: transparent;
 
-        @include respond-min($lap) {
+        @include min-screen($lap) {
             margin-bottom: 0;
         }
         
@@ -46,7 +46,7 @@
         padding: $gutter-skinny;
         display: block;
 
-        @include respond-min($lap) {
+        @include min-screen($lap) {
             border-bottom: 1px solid $border-color;
             background: transparent;
         }

@@ -18,7 +18,7 @@
     .blog-thumb {
         display: none;
 
-        @include respond-min($lap) {
+        @include min-screen($lap) {
             width: 87px;
             height: 68px;
             margin-right: $gutter-skinny;
@@ -52,7 +52,7 @@
 .blogpost-nav {
     text-align: center;
 
-    @include respond-min($lap) {
+    @include min-screen($lap) {
         text-align: left;
     }
 }

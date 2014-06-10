@@ -13,24 +13,16 @@
     float: left;
     clear: both;
     
-    @include respond-min($lap) {
+    @include min-screen($lap) {
         margin-right: margin-width();
         clear: none;
     }
 }
 
-.no-margin {
-    margin-right: 0;
-}
-        
-.plus-margin {
-    margin-right: margin-width();
-}
-
 
 // Use the nr-of-columns variable to generate the grid widths
 // =================================================================
-@include respond-min($lap) {
+@include min-screen($lap) {
 
     @for $i from 1 through $nr-of-columns {
     
@@ -40,4 +32,29 @@
         
     }
     
+}
+
+@include screen($palm, $lap) {
+
+    @for $i from 1 through $nr-of-columns {
+    
+        .grid-column-sm-#{$i} {
+            width: 100% / ($max-width / (((($max-width - (($nr-of-columns - 1) * $gutter)) / $nr-of-columns) * $i) + (($i - 1) * $gutter)));
+            margin-right: margin-width();
+            clear: none;
+        }
+        
+    }
+    
+}
+
+
+// Extra or no margins
+// =================================================================
+.no-margin {
+    margin-right: 0;
+}
+        
+.plus-margin {
+    margin-right: margin-width();
 }

@@ -5,7 +5,7 @@ input {
     line-height: $line-height;
     @include rem('font-size', $body-size);
     
-    @include respond-min($lap) {
+    @include min-screen($lap) {
         width: 50%;
         
         aside section & {
@@ -35,7 +35,7 @@ input[type=radio] {
 
 input[type=submit] {
     
-    @include respond-min($lap) {
+    @include min-screen($lap) {
         width: auto;
     }
 }
@@ -49,7 +49,7 @@ input[type=submit] {
     padding: 0;
     clear: both;
 
-    @include respond-min($lap) {
+    @include min-screen($lap) {
         width: 100%;
         float: left;
     }
@@ -99,7 +99,7 @@ input[type=submit] {
     text-decoration: none;
     cursor: pointer;
 
-    @include respond-min($lap) {
+    @include min-screen($lap) {
         width: auto;
     }
 

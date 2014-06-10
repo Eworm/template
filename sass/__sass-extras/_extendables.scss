@@ -27,7 +27,7 @@
     float: left;
     clear: both;
     
-    @include respond-min($lap) {
+    @include min-screen($lap) {
         margin-bottom: $margin;
     }
     
@@ -45,7 +45,7 @@
         background: $alert;
         color: #fff;
         
-        @include respond-min($lap) {
+        @include min-screen($lap) {
             width: 50%;
         }
     }

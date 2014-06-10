@@ -7,7 +7,9 @@ Version: 1.0
 */
 
 
-@import '__sass-extras/utils';
+// Responsive utilitites
+@import '__sass-extras/responsive-utils';
+
 
 // This is the container for all seperate scss files
 // No styles should be included here, only imports of other (smaller) parts
@@ -77,6 +79,3 @@ Version: 1.0
 // Set the container opacity back to 1
 // =================================================================
 @import '__module-rules/pagespeed-optimize';
-
-
-/*# sourceMappingURL=style.css.map */

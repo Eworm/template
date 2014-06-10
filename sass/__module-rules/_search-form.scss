@@ -15,7 +15,7 @@
 
     .header & {
 
-        @include respond-min($lap) {
+        @include min-screen($lap) {
             width: 20%;
             padding: 0;
             float: right;
@@ -29,7 +29,7 @@
             width: 100%;
             clear: both;
 
-            @include respond-min($lap) {
+            @include min-screen($lap) {
                 width: 100%;
             }
         }

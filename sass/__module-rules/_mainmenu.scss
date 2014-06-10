@@ -21,7 +21,7 @@
         -ms-overflow-style: -ms-autohiding-scrollbar;
         -webkit-overflow-scrolling: touch;
 
-        @include respond-min($palm) {
+        @include min-screen($palm) {
             overflow: visible;
         }
     }
@@ -30,13 +30,13 @@
         overflow: visible;
     }
 
-    @include respond-min($palm) {
+    @include min-screen($palm) {
         width: $skinny-menu-width;
         left: -$skinny-menu-width;
         z-index: 10;
     }
 
-    @include respond-min($lap) {
+    @include min-screen($lap) {
         width: 100%;
         height: auto;
         float: left;
@@ -47,17 +47,6 @@
         .csstransforms3d & {
             transform: translate3d(0, 0, 0);
         }
-
-        @include old-ie {
-            float: none;
-        }
-    }
-    
-    @include old-ie {
-        width: 100%;
-        height: auto;
-        float: left;
-        position: static;
     }
 }
 
@@ -68,7 +57,7 @@
     display: block;
     border-top: 1px solid $border-color;
 
-    @include respond-min($lap) {
+    @include min-screen($lap) {
         border-top: 0;
     }
 }
@@ -79,7 +68,7 @@
     display: block;
     float: left;
 
-    @include respond-min($lap) {
+    @include min-screen($lap) {
         width: auto;
         float: left;
     }
@@ -91,12 +80,12 @@
         border-bottom: 1px solid $border-color;
         text-decoration: none;
 
-        @include respond-min($palm) {
+        @include min-screen($palm) {
             padding: $gutter-skinny;
             border-bottom: 0;
         }
 
-        @include respond-min($lap) {
+        @include min-screen($lap) {
             padding: $gutter-skinny $gutter;
             float: left;
         }
@@ -105,7 +94,7 @@
         &:focus {
             background: $border-color;
 
-            @include respond-min($lap) {
+            @include min-screen($lap) {
             }
         }
     }
@@ -119,7 +108,7 @@
     a {
     }
 
-    @include respond-min($lap) {
+    @include min-screen($lap) {
         background: $border-color;
         box-shadow: none;
         @include background-image(none);
@@ -137,13 +126,13 @@
             right: 0;
             border-right: 8px solid $border-color;
 
-            @include respond-min($lap) {
+            @include min-screen($lap) {
                 display: none;
             }
         }
     }
 
-    @include respond-min($lap) {
+    @include min-screen($lap) {
     
         &:after {
             display: none;
@@ -163,7 +152,7 @@
 
 .current_page_ancestor {
 
-    @include respond-min($lap) {
+    @include min-screen($lap) {
     
         a {
         }
@@ -190,7 +179,7 @@
     .current-menu-item & {
         display: block;
         
-        @include respond-min($lap) {
+        @include min-screen($lap) {
             display: none;
         }
     }
@@ -211,7 +200,7 @@
             float: left;
             border-bottom: 1px solid $border-color;
 
-            @include respond-min($lap) {
+            @include min-screen($lap) {
                 padding: 8px $gutter-skinny;
                 color: $body-color;
                 border: 0;
@@ -229,7 +218,7 @@
             
             a {
             
-                @include respond-min($lap) {
+                @include min-screen($lap) {
                     border: 0;
                 }
             }
@@ -245,7 +234,7 @@
         display: none !important;
     }
 
-    @include respond-min($lap) {
+    @include min-screen($lap) {
         width: 200px;
         margin-top: -4px;
         position: absolute;
@@ -257,7 +246,7 @@
     
     &:before {
         
-        @include respond-min($lap) {
+        @include min-screen($lap) {
             content: '';
             width: 0;
             height: 0;
@@ -282,7 +271,7 @@
     border-left: 1px solid $border-color;
     cursor: pointer;
     
-    @include respond-min($lap) {
+    @include min-screen($lap) {
         display: none;
     }
     

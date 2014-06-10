@@ -65,7 +65,7 @@ body {
     opacity: 0;
     background: $body-bg-color;
     
-    @include respond-min($palm) {
+    @include min-screen($palm) {
         left: $skinny-menu-width;
     }
 }
@@ -86,11 +86,11 @@ body {
         position: relative;
         left: $mobile-menu-width;
         
-        @include respond-min($palm) {
+        @include min-screen($palm) {
             left: $skinny-menu-width;    
         }
         
-        @include respond-min($lap) {
+        @include min-screen($lap) {
             left: 0;
         }
     }
@@ -104,11 +104,11 @@ body {
             transform-style: flat;
         }
 
-        @include respond-min($palm) {
+        @include min-screen($palm) {
             transform: translate3d($skinny-menu-width, 0, 0) scale3d(1, 1, 1);
         }
 
-        @include respond-min($lap) {
+        @include min-screen($lap) {
             left: 0;
             transform: translate3d(0, 0, 0);
         }
@@ -138,12 +138,7 @@ a {
     backface-visibility: hidden;
     transform-style: flat;
 
-    @include respond-min($palm) {
-
-        @include old-ie {
-            width: auto;
-            min-width: 100%;
-        }
+    @include min-screen($palm) {
     }
 }
 
@@ -154,17 +149,11 @@ a {
     padding: $gutter;
     clear: both;
 
-    @include respond-min($lap) {
+    @include min-screen($lap) {
         width: $width;
         max-width: $max-width;
         padding: $gutter 0;
         position: relative;
-
-        @include old-ie {
-            // Disable max-width for old IE
-            width: 100%;
-            width: 980px;
-        }
     }
 }
 
@@ -179,7 +168,7 @@ a {
     display: table;
     caption-side: bottom;
     
-    @include respond-min($lap) {
+    @include min-screen($lap) {
         width: $width;
         display: block;
     }

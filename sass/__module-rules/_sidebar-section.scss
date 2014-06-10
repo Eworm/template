@@ -6,7 +6,7 @@
     border: 1px solid $border-color;
     background: #fff;
 
-    @include respond-min($lap) {
+    @include min-screen($lap) {
         padding: $gutter;
     }
 

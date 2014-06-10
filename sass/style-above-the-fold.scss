@@ -1,8 +1,9 @@
-// Font families
-// =================================================================
+// Responsive utilitites
+@import '__sass-extras/responsive-utils';
 
 
-@import '__sass-extras/utils';
+// This is the container for all seperate scss files
+// No styles should be included here, only imports of other (smaller) parts
 
 
 // Theme rules (variables)

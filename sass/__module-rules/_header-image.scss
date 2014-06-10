@@ -2,7 +2,7 @@
     margin-bottom: $margin;
     border-radius: 0;
 
-    @include respond-min($lap) {
+    @include min-screen($lap) {
         width: 100%;
     }
 }

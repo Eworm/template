@@ -54,6 +54,16 @@
                     <?php the_content('Lees meer &raquo;'); ?>
                 </div>
                 
+                <p class="maincontent grid-column grid-column-sm-4 grid-column-12">
+                    <strong>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Excepteur sint obcaecat cupiditat non proident culpa. Mercedem aut nummos unde unde extricat, amaras. Praeterea iter est quasdam res quas ex communi.</strong>
+                </p>
+                
+                <p class="maincontent grid-column grid-column-sm-4 grid-column-12 no-margin">
+                    <strong>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Excepteur sint obcaecat cupiditat non proident culpa. Mercedem aut nummos unde unde extricat, amaras. Praeterea iter est quasdam res quas ex communi.</strong>
+                </p>
+                    
+
+                
                 <div id="thumbs">
                 
                     <?php

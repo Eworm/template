@@ -7,7 +7,7 @@
     text-align: center;
     text-decoration: none;
 
-    @include respond-min($lap) {
+    @include min-screen($lap) {
         display: none;
     }
 }
@@ -20,7 +20,7 @@
         display: block;
     }
 
-    @include respond-min($lap) {
+    @include min-screen($lap) {
         margin: $margin 0;
         padding: $gutter 0 0;
         display: block;
@@ -50,7 +50,7 @@
         }
     }
 
-    @include respond-min($lap) {
+    @include min-screen($lap) {
         margin: 0 0 $margin-skinny;
         padding: $gutter;
         border: 1px solid $border-color;
@@ -85,7 +85,7 @@
     font-weight: bold;
     line-height: 32px;
 
-    @include respond-min($lap) {
+    @include min-screen($lap) {
         margin-bottom: $gutter;
         font-weight: normal;
     }
@@ -98,7 +98,7 @@
     border-radius: 0;
     box-shadow: $default-box-shadow;
 
-    @include respond-min($lap) {
+    @include min-screen($lap) {
         margin-right: $gutter-skinny;
         vertical-align: top;
         float: none;
@@ -112,7 +112,7 @@
 .comment-meta {
     @include rem('font-size', $text-palm);
 
-    @include respond-min($lap) {
+    @include min-screen($lap) {
         padding-top: 20px;
         position: absolute;
         top: 0;
@@ -158,7 +158,7 @@
         border-top: 1px solid $border-color;
         border-bottom: 0;
 
-        @include respond-min($lap) {
+        @include min-screen($lap) {
             padding: $gutter-skinny;
             border-bottom: 1px solid $border-color;
         }
