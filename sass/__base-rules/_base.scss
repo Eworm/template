@@ -26,7 +26,7 @@ body {
     .active-menu & {
         height: 100%;
         overflow: hidden;
-        @include userselect();
+        user-select: none;
     }
     
     .touch.no-overflow-scroll.active-menu & {

@@ -50,7 +50,7 @@ gulp.task('compass', function() {
         }))
         
         .pipe(plugins.autoprefixer("last 2 versions", "> 1%", "ie 8"))
-        // .pipe(plugins.csso())
+        .pipe(plugins.csso())
         // .pipe(plugins.minifyCss({noAdvanced: true}))
 		.pipe(gulp.dest('.'))
         
