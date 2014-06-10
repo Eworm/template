@@ -6,7 +6,7 @@
 
     <div class="holder holder-content">
 
-        <div class="maincontent grid-column grid-column-8 no-margin">
+        <div class="maincontent col col-8 no-margin">
         
             <?php if (have_posts()) : ?>
             

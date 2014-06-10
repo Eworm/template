@@ -6,7 +6,7 @@
 
         <!-- <img src="<?php header_image(); ?>"> -->
 
-        <article class="maincontent grid-column grid-column-5">
+        <article class="maincontent col col-5">
 
             <?php if (have_posts()) : ?>
 

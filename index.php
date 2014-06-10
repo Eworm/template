@@ -4,7 +4,7 @@
 
     <div class="holder holder-content">
 
-        <div class="maincontent grid-column grid-column-5">
+        <div class="maincontent col col-5">
 
             <?php if (have_posts()) : ?>
 
@@ -73,7 +73,7 @@
             
         </div> <!-- .maincontent -->
 
-        <aside class="sidebar grid-column grid-column-3 no-margin">
+        <aside class="sidebar col col-3 no-margin">
 
             <?php if ( !function_exists('dynamic_sidebar')
                 || !dynamic_sidebar('Blog') ) : ?>

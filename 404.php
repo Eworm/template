@@ -16,7 +16,7 @@
 
     <div class="holder holder-content">
 
-        <article class="maincontent grid-column grid-column-5 not-found">
+        <article class="maincontent col col-5 not-found">
 
             <header class="maincontent-header">
 

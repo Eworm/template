@@ -7,7 +7,7 @@
 
 // Base grid styles
 // =================================================================
-.grid-column {
+.col {
     width: 100%;
     margin-bottom: $margin;
     float: left;
@@ -26,7 +26,7 @@
     
     @include min-screen($lap) {
     
-        .grid-column-#{$i} {
+        .col-#{$i} {
             width: 100% / ($max-width / (((($max-width - (($nr-of-columns - 1) * $gutter)) / $nr-of-columns) * $i) + (($i - 1) * $gutter)));
         }
     }
@@ -37,7 +37,7 @@
 // =================================================================
 @for $i from 1 through $nr-of-columns {
 
-    .grid-column-palm-#{$i} {
+    .col-palm-#{$i} {
     
         @include screen($palm, $lap) {
             width: 100% / ($max-width / (((($max-width - (($nr-of-columns - 1) * $gutter)) / $nr-of-columns) * $i) + (($i - 1) * $gutter)));
@@ -56,7 +56,7 @@
 // =================================================================
 @for $i from 1 through $nr-of-columns {
 
-    .grid-column-lap-#{$i} {
+    .col-lap-#{$i} {
     
         @include screen($lap, $desk) {
             width: 100% / ($max-width / (((($max-width - (($nr-of-columns - 1) * $gutter)) / $nr-of-columns) * $i) + (($i - 1) * $gutter)));

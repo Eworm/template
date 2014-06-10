@@ -27,7 +27,7 @@
 
             if ($children) : ?>
 
-                <div id="submenu" class="grid-column grid-column-2">
+                <div id="submenu" class="col col-2">
                 
                     <ul>
                         <?php echo $children; ?>
@@ -40,7 +40,7 @@
         <?php if (have_posts()) : ?>
         <?php while (have_posts()) : the_post(); ?>
 
-            <article class="maincontent grid-column grid-column-6 <?php if ($children) { ?>no-margin<?php } ?>">
+            <article class="maincontent col col-6 <?php if ($children) { ?>no-margin<?php } ?>">
 
                 <header class="maincontent-header">
                     
@@ -54,11 +54,11 @@
                     <?php the_content('Lees meer &raquo;'); ?>
                 </div>
                 
-                <p class="maincontent grid-column grid-column-palm-4 grid-column-lap-6 grid-column-12">
+                <p class="maincontent col col-palm-4 col-lap-6 col-12">
                     <strong>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Excepteur sint obcaecat cupiditat non proident culpa. Mercedem aut nummos unde unde extricat, amaras. Praeterea iter est quasdam res quas ex communi.</strong>
                 </p>
                 
-                <p class="maincontent grid-column grid-column-palm-4 grid-column-lap-2 grid-column-12 no-margin">
+                <p class="maincontent col col-palm-4 col-lap-2 col-12 no-margin">
                     <strong>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Excepteur sint obcaecat cupiditat non proident culpa. Mercedem aut nummos unde unde extricat, amaras. Praeterea iter est quasdam res quas ex communi.</strong>
                 </p>
                     
@@ -101,7 +101,7 @@
 
         <?php else : ?>
 
-            <article class="maincontent grid-column grid-column-6 no-results not-found">
+            <article class="maincontent col col-6 no-results not-found">
 
                 <header class="maincontent-header">
                     

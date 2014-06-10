@@ -4,7 +4,7 @@
 
     <div class="holder holder-content">
 
-        <div class="grid-column grid-column-5">
+        <div class="col col-5">
 
             <?php if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>

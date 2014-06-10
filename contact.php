@@ -111,7 +111,7 @@ endif;
     
         <div class="holder holder-content">
     
-            <div class="maincontent grid-column grid-column-5">
+            <div class="maincontent col col-5">
     
                 <header class="maincontent-header">
                     <h1 class="maincontent-title"><?php _e( 'Bedankt voor uw e-mail', 'thema_vertalingen' ); ?>, <?=$name;?></h1>
@@ -135,7 +135,7 @@ endif;
     
         <div class="holder holder-content">
     
-            <div class="maincontent grid-column grid-column-5">
+            <div class="maincontent col col-5">
     
                 <form action="#contactform" id="contactform" method="post" class="form">
     
@@ -217,7 +217,7 @@ endif;
     
             </div> <!-- .maincontent -->
     
-            <aside class="sidebar grid-column grid-column-3 no-margin">
+            <aside class="sidebar col col-3 no-margin">
     
                 <?php $options = get_option('template_theme_options');
                     if (($options['theme_address'])) : ?>
