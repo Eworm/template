@@ -22,30 +22,52 @@
 
 // Use the nr-of-columns variable to generate the grid widths
 // =================================================================
-@include min-screen($lap) {
-
-    @for $i from 1 through $nr-of-columns {
+@for $i from 1 through $nr-of-columns {
+    
+    @include min-screen($lap) {
     
         .grid-column-#{$i} {
             width: 100% / ($max-width / (((($max-width - (($nr-of-columns - 1) * $gutter)) / $nr-of-columns) * $i) + (($i - 1) * $gutter)));
         }
-        
     }
-    
 }
 
-@include screen($palm, $lap) {
 
-    @for $i from 1 through $nr-of-columns {
+// Specific widths for palm to lap
+// =================================================================
+@for $i from 1 through $nr-of-columns {
+
+    .grid-column-palm-#{$i} {
     
-        .grid-column-palm-#{$i} {
+        @include screen($palm, $lap) {
             width: 100% / ($max-width / (((($max-width - (($nr-of-columns - 1) * $gutter)) / $nr-of-columns) * $i) + (($i - 1) * $gutter)));
             margin-right: margin-width();
             clear: none;
         }
         
+        @include min-screen($lap) {
+            margin-right: 0;
+        }
     }
+}
+
+
+// Specific widths for lap to desk
+// =================================================================
+@for $i from 1 through $nr-of-columns {
+
+    .grid-column-lap-#{$i} {
     
+        @include screen($lap, $desk) {
+            width: 100% / ($max-width / (((($max-width - (($nr-of-columns - 1) * $gutter)) / $nr-of-columns) * $i) + (($i - 1) * $gutter)));
+            margin-right: margin-width();
+            clear: none;
+        }
+        
+        @include min-screen($desk) {
+            margin-right: 0;
+        }
+    }
 }
 
 
