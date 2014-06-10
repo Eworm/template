@@ -12,8 +12,8 @@
 @import '__theme-rules/defaults';
 @import '__theme-rules/fonts';
 @import '__theme-rules/grid-variables';
-@import '__theme-rules/headers';
-@import '__theme-rules/mobile';
+@import '__theme-rules/header-sizes';
+@import '__theme-rules/mobile-widths';
 @import '__theme-rules/responsive-breakpoints';
 @import '__theme-rules/margins-paddings';
 
@@ -25,7 +25,6 @@
 @import '__sass-extras/responsive-grid';
 @import '__sass-extras/extendables';
 @import '__sass-extras/mixins';
-@import '__sass-extras/rem';
 @import '__sass-extras/responsive-js';
 
 
@@ -45,5 +44,3 @@
 
 // Module rules. Styling of reusable, modular parts of the design.
 // =================================================================
-@import '__module-rules/mainmenu';
-@import '__module-rules/mobile-header';

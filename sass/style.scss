@@ -21,9 +21,9 @@ Version: 1.0
 @import '__theme-rules/defaults';
 @import '__theme-rules/fonts';
 @import '__theme-rules/grid-variables';
-@import '__theme-rules/headers';
+@import '__theme-rules/header-sizes';
 @import '__theme-rules/margins-paddings';
-@import '__theme-rules/mobile';
+@import '__theme-rules/mobile-widths';
 @import '__theme-rules/responsive-breakpoints';
 
 
@@ -33,7 +33,6 @@ Version: 1.0
 @import '__sass-extras/functions';
 @import '__sass-extras/extendables';
 @import '__sass-extras/mixins';
-@import '__sass-extras/rem';
 @import '__sass-extras/responsive-js';
 
 
@@ -50,6 +49,8 @@ Version: 1.0
 @import '__module-rules/forms';
 @import '__module-rules/header-image';
 @import '__module-rules/images';
+@import '__module-rules/mainmenu';
+@import '__module-rules/mobile-header';
 @import '__module-rules/search-results';
 @import '__module-rules/search-form';
 @import '__module-rules/sidebar-section';
