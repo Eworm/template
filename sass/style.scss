@@ -6,10 +6,12 @@ Author URI: http://www.woutmager.nl
 Version: 1.0
 */
 
+
 @import '__sass-extras/utils';
 
 // This is the container for all seperate scss files
 // No styles should be included here, only imports of other (smaller) parts
+
 
 // Theme rules (variables)
 // =================================================================
@@ -22,32 +24,32 @@ Version: 1.0
 @import '__theme-rules/mobile';
 @import '__theme-rules/responsive-breakpoints';
 
+
 // Sass functions, extendables & mixins.
 // =================================================================
 @import 'compass/css3';
 @import '__sass-extras/functions';
-//@import '__sass-extras/grid';
+// @import '__sass-extras/grid';
 @import '__sass-extras/extendables';
 @import '__sass-extras/mixins';
 @import '__sass-extras/rem';
 @import '__sass-extras/responsive-js';
 
+
 // Base rules. Normalize and other basic element styles.
 // =================================================================
-//@import '__base-rules/normalize';
-//@import '__base-rules/base';
-//@import '__base-rules/headers';
+// @import '__base-rules/normalize';
+// @import '__base-rules/base';
+// @import '__base-rules/headers';
+
 
 // Layout rules. Styling of page sections that contain modules.
 // =================================================================
 @import '__layout-rules/doormat';
 @import '__layout-rules/footer';
-//@import '__layout-rules/header';
-//@import '__layout-rules/maincontent';
-//@import '__layout-rules/mainmenu';
-//@import '__layout-rules/mobile-header';
-//@import '__layout-rules/sidebar';
-@import '__layout-rules/submenu';
+// @import '__layout-rules/header';
+// @import '__layout-rules/maincontent';
+
 
 // Module rules. Styling of reusable, modular parts of the design.
 // =================================================================
@@ -59,15 +61,22 @@ Version: 1.0
 @import '__module-rules/search-results';
 @import '__module-rules/search-form';
 @import '__module-rules/sidebar-section';
+@import '__module-rules/submenu';
 @import '__module-rules/tables';
 @import '__module-rules/vcard';
+// @import '__module-rules/mainmenu';
+// @import '__module-rules/mobile-header';
+// @import '__module-rules/sidebar';
+
 
 // Elements above the fold using sprites should be here for an optimal pagespeed score
 // =================================================================
 @import '__base-rules/sprites';
 
+
 // Set the container opacity back to 1
 // =================================================================
 @import '__module-rules/pagespeed-optimize';
+
 
 /*# sourceMappingURL=style.css.map */

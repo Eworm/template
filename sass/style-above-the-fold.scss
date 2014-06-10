@@ -40,9 +40,9 @@
 // =================================================================
 @import '__layout-rules/header';
 @import '__layout-rules/maincontent';
-@import '__layout-rules/mainmenu';
-@import '__layout-rules/mobile-header';
 
 
 // Module rules. Styling of reusable, modular parts of the design.
 // =================================================================
+@import '__module-rules/mainmenu';
+@import '__module-rules/mobile-header';

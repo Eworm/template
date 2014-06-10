@@ -1,4 +1,4 @@
-.l-post {
+.blogpost {
     width: 100%;
     margin-bottom: $margin;
     float: left;
@@ -37,19 +37,19 @@
     }
 }
 
-.l-post-header {
+.blogpost-header {
     
 }
 
-.l-post-title {
+.blogpost-title {
     margin: 0;
 }
 
-.l-post-entry {
+.blogpost-entry {
     
 }
 
-.l-post-nav {
+.blogpost-nav {
     text-align: center;
 
     @include respond-min($lap) {
@@ -74,7 +74,7 @@ time,
     }
 }
 
-.l-post-options {
+.blogpost-options {
     @include rem('font-size', $text-palm);
 
     a {
@@ -88,7 +88,7 @@ time,
 }
 
 
-.l-post-navigation {
+.blogpost-navigation {
     width: 100%;
     margin-bottom: $margin;
     padding: 0;

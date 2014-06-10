@@ -43,7 +43,7 @@
                     </section>
                 <?php endwhile; ?>
                     
-                    <ul class="l-post-navigation">
+                    <ul class="blogpost-navigation">
                         
                         <li class="goforward">
                             <?php previous_posts_link('&laquo; Nieuwere posts'); ?>
