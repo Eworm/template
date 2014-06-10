@@ -1,17 +1,7 @@
-// var gulp = require('gulp'),
-    // Get packages from package.json
-    // plugins = require("gulp-load-plugins")(),
-    // Livereload stuff
-    // lr = require('tiny-lr'),
-    // server = lr();
-
-
 var gulp = require('gulp'),
-
-    // compass = require('gulp-compass'), // https://github.com/appleboy/gulp-compass
-    // livereload = require('gulp-livereload'),
-
-    plugins = require('gulp-load-plugins')(),
+    // Get packages from package.json
+    plugins = require("gulp-load-plugins")(),
+    // Livereload stuff
     lr = require('tiny-lr'),
     server = lr();
     
@@ -53,13 +43,15 @@ gulp.task('compass', function() {
         .pipe(plugins.compass({
             config_file: 'config.rb',
             sourcemap: true,
-            debug: true,
+            //debug: true,
             css: dest_paths.compass,
             sass: 'sass',
             import_path: 'bower_components/normalize.scss'
         }))
         
         .pipe(plugins.autoprefixer("last 2 versions", "> 1%", "ie 8"))
+        .pipe(plugins.csso())
+        // .pipe(plugins.minifyCss({noAdvanced: true}))
 		.pipe(gulp.dest('.'))
         
         .pipe(plugins.livereload(server))
@@ -122,8 +114,7 @@ gulp.task('uglify', function() {
 // SCSS lint
 gulp.task('lint', function() {
     gulp.src(src_paths.compass)
-        .pipe(plugins.scsslint())
-        .pipe(plugins.scsslint.reporter());
+        .pipe(plugins.scssLint())
 });
 
 

@@ -14,7 +14,7 @@ environment = :production
 # relative_assets = true
 
 line_comments = false
-color_output = false
+color_output = true
 cache = true
 
 

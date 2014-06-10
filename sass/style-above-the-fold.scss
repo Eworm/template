@@ -1,15 +1,6 @@
 // Font families
 // =================================================================
-@font-face {
-    font-family: 'Raleway';
-    src: url('fonts/Raleway-Regular.eot'); // IE9 Compat Modes
-    src: url('fonts/Raleway-Regular.eot?#iefix') format('embedded-opentype'), // IE6-IE8
-        url('fonts/Raleway-Regular.woff') format('woff'), // Modern Browsers
-        url('fonts/Raleway-Regular.ttf')  format('truetype'), // Safari, Android, iOS
-        url('fonts/Raleway-Regular.svg#f8ac7b0ae9ec6d45be568052f50b9149') format('svg'); // Legacy iOS
-    font-style: normal;
-    font-weight: 400;
-}
+
 
 @import '__sass-extras/utils';
 
