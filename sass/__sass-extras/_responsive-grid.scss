@@ -76,8 +76,7 @@
         }
     }
     
-    // Widths for all screen widths
-    // Use the nr-of-columns variable to generate the grid widths
+    // All screen widths
     // =================================================================
     @for $i from 1 through $nr-of-columns {
     
@@ -90,7 +89,7 @@
     }
     
     
-    // Specific widths for palm to lap
+    // Palm to lap
     // Non-flexbox browsers will use the standard col widths for this small screen to prevent columns becoming too small
     // =================================================================
     @for $i from 1 through $nr-of-columns {
@@ -104,7 +103,7 @@
     }
     
     
-    // Specific widths for lap to desk 
+    // Lap to desk 
     // =================================================================
     @for $i from 1 through $nr-of-columns {
     
@@ -117,7 +116,7 @@
     }
     
     
-    // Specific widths for desk to wall 
+    // Desk to wall 
     // =================================================================
     @for $i from 1 through $nr-of-columns {
     

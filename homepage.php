@@ -56,6 +56,20 @@ Template Name: Homepage
                         
                         <div class="row">
                         
+                            <p class="col col-palm-4 col-lap-2 col-desk-6 col-2">
+                                <strong>col-palm-4 col-lap-2 col-desk-6 col-2</strong>
+                                Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Excepteur sint obcaecat cupiditat non proident culpa. Mercedem aut nummos unde unde extricat, amaras. Praeterea iter est quasdam res quas ex communi.
+                            </p>
+                            
+                            <p class="col col-palm-4 col-lap-6 col-desk-2 col-6">
+                                <strong>col-palm-4 col-lap-6 col-desk-2 col-6</strong>
+                                Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Excepteur sint obcaecat cupiditat non proident culpa. Mercedem aut nummos unde unde extricat, amaras. Praeterea iter est quasdam res quas ex communi.
+                            </p>
+                                
+                        </div>
+                        
+                        <div class="row">
+                        
                             <p class="col col-palm-4 col-8">
                                 <strong>col-palm-4 col-8</strong>
                                 Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Excepteur sint obcaecat cupiditat non proident culpa. Mercedem aut nummos unde unde extricat, amaras. Praeterea iter est quasdam res quas ex communi.
