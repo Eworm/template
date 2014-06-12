@@ -49,6 +49,7 @@ input[type=submit] {
     margin: 0;
     padding: 0;
     clear: both;
+    border: 0;
 
     @include min-screen($lap) {
         width: 100%;
