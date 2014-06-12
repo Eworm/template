@@ -19,8 +19,8 @@ html {
 }
 
 body {
-    background: $body-bg-color;
-    font: #{$body-size}/#{$line-height} #{$body-font};
+    background: $body-bg-color url('img/vertical-rhythm.png');
+    font: #{$body-size}/#{$line-height/$body-size} #{$body-font};
     color: $body-color;
 
     .active-menu & {

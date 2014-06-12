@@ -4,7 +4,6 @@
     padding: $gutter-skinny;
     float: left;
     border: 1px solid $border-color;
-    background: #fff;
 
     @include min-screen($lap) {
         padding: $gutter;

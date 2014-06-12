@@ -2,7 +2,7 @@
     padding: $gutter-skinny 0;
 
     @include min-screen($lap) {
-        padding: 0 0 $gutter;
+        padding: 0;
     }
 }
 
@@ -10,12 +10,12 @@
 }
 
 .maincontent-body {
+}
 
-    p {
-        margin: 0 0 $gutter;
-        
-        &:last-child {
-            margin-bottom: 0;
-        }
+p {
+    margin: $line-height 0;
+    
+    &:last-child {
+        margin-bottom: 0;
     }
 }

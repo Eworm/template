@@ -1,19 +1,11 @@
-.maincontent-title {
-    margin: 0 0 $margin;
-    font-weight: normal;
-    @include rem('font-size', $header-2);
-
-    @include min-screen($lap) {
-        @include rem('font-size', $header-1);
-    }
-}
-
+// Common stuff for all headers
+// =================================================================
 h1,
 h2,
 h3,
 h4,
 h5 {
-    line-height: normal;
+    line-height: 1;
     
     a {
         text-decoration: none;
@@ -25,6 +17,46 @@ h5 {
     }
 }
 
+
+// Vertical rhythm
+// Google Chrome doesn't seem to use the calculated line-heigth properly
+// =================================================================
+h1 {
+    @include rem('margin-top', $line-height, $header-1);
+    @include rem('margin-bottom', $line-height, $header-1);
+}
+
+h2 {
+    @include rem('margin-top', $line-height, $header-2);
+    @include rem('margin-bottom', $line-height, $header-2);
+}
+
+h3 {
+    @include rem('margin-top', $line-height, $header-3);
+    @include rem('margin-bottom', $line-height, $header-3);
+}
+
+h4 {
+    @include rem('margin-top', $line-height, $header-4);
+    @include rem('margin-bottom', $line-height, $header-4);
+}
+
+h5 {
+    @include rem('margin-top', $line-height, $header-5);
+    @include rem('margin-bottom', $line-height, $header-5);
+}
+
+
+// Other titles
+// =================================================================
+.maincontent-title {
+    font-weight: normal;
+    @include rem('font-size', $header-1);
+
+    @include min-screen($lap) {
+    }
+}
+
 .sec-title {
     padding-bottom: $margin;
     border-bottom: 1px dashed $border-color;
@@ -33,23 +65,18 @@ h5 {
 .maincontent-body {
 
     h2 {
-        margin: 0;
-        font-weight: bold;
-        @include rem('font-size', $header-3);
+        font-weight: normal;
+        @include rem('font-size', $header-2);
     
         @include min-screen($lap) {
-            font-weight: normal;
-            @include rem('font-size', $header-2);
         }
     }
     
     h3 {
-        margin: 0;
         @include rem('font-size', $header-3);
     }
     
     h4 {
-        margin: 0;
         font-weight: normal;
         @include rem('font-size', $header-4);
     }
