@@ -19,7 +19,7 @@ html {
 }
 
 body {
-    background: $body-bg-color url('img/vertical-rhythm.png');
+    background: $body-bg-color;
     font: #{$body-size}/#{$line-height/$body-size} #{$body-font};
     color: $body-color;
 
