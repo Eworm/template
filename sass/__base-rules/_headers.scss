@@ -19,7 +19,7 @@ h5 {
 
 
 // Vertical rhythm
-// Google Chrome doesn't seem to use the calculated line-heigth properly
+// Google Chrome doesn't seem to use the calculated line-height on the body properly
 // =================================================================
 h1 {
     @include rem('margin-top', $line-height, $header-1);
