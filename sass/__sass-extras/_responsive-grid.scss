@@ -44,6 +44,7 @@
     
     > .col {
         width: 100%;
+        margin-bottom: $line-height;
         float: left;
         
         .flexbox &,

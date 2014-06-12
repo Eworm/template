@@ -73,10 +73,12 @@ h5 {
     }
     
     h3 {
+        margin: 0;
         @include rem('font-size', $header-3);
     }
     
     h4 {
+        margin: 0;
         font-weight: normal;
         @include rem('font-size', $header-4);
     }
