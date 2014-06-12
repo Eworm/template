@@ -5,6 +5,24 @@
 }
 
 
+// Calucalte the grid widths
+// =================================================================
+@mixin col-width($i, $value: true) {
+    
+    // The standard width is optional
+    @if $value == true {
+        width: 100% / ($max-width / (((($max-width - (($nr-of-columns - 1) * $gutter)) / $nr-of-columns) * $i) + (($i - 1) * $gutter)));
+    }
+
+    // But there's alway a flexbox width    
+    .flexbox &,
+    .flexboxlegacy &
+    {
+        @include flex(0 0 (100% / ($max-width / (((($max-width - (($nr-of-columns - 1) * $gutter)) / $nr-of-columns) * $i) + (($i - 1) * $gutter)))));
+    }
+}
+
+
 // Every column should have a row as it's parent
 // =================================================================
 .row {
@@ -21,7 +39,7 @@
     }
     
     @include min-screen($lap) {
-        //@include flex-flow(row nowrap);
+        // @include flex-flow(row nowrap);
     }
     
     > .col {
@@ -66,32 +84,21 @@
         @include min-screen($lap) {
         
             .col-#{$i} {
-                width: 100% / ($max-width / (((($max-width - (($nr-of-columns - 1) * $gutter)) / $nr-of-columns) * $i) + (($i - 1) * $gutter)));
-                
-                .flexbox &,
-                .flexboxlegacy &
-                {
-                    @include flex(0 0 (100% / ($max-width / (((($max-width - (($nr-of-columns - 1) * $gutter)) / $nr-of-columns) * $i) + (($i - 1) * $gutter)))));
-                }
+                @include col-width($i, true);
             }
         }
     }
     
     
     // Specific widths for palm to lap
-    // Non-flexbox browsers will use the standard col widths for this small screen
+    // Non-flexbox browsers will use the standard col widths for this small screen to prevent columns becoming too small
     // =================================================================
     @for $i from 1 through $nr-of-columns {
     
         .col-palm-#{$i} {
         
             @include screen($palm, $lap) {
-            
-                .flexbox &,
-                .flexboxlegacy &
-                {
-                    @include flex(0 0 (100% / ($max-width / (((($max-width - (($nr-of-columns - 1) * $gutter)) / $nr-of-columns) * $i) + (($i - 1) * $gutter)))));
-                }
+                @include col-width($i, false);
             }
         }
     }
@@ -104,13 +111,7 @@
         .col-lap-#{$i} {
         
             @include screen($lap, $desk) {
-                width: 100% / ($max-width / (((($max-width - (($nr-of-columns - 1) * $gutter)) / $nr-of-columns) * $i) + (($i - 1) * $gutter)));
-                
-                .flexbox &,
-                .flexboxlegacy &
-                {
-                    @include flex(0 0 (100% / ($max-width / (((($max-width - (($nr-of-columns - 1) * $gutter)) / $nr-of-columns) * $i) + (($i - 1) * $gutter)))));
-                }
+                @include col-width($i, true);
             }
         }
     }
@@ -123,13 +124,7 @@
         .col-desk-#{$i} {
         
             @include screen($desk, $wall) {
-                width: 100% / ($max-width / (((($max-width - (($nr-of-columns - 1) * $gutter)) / $nr-of-columns) * $i) + (($i - 1) * $gutter)));
-                
-                .flexbox &,
-                .flexboxlegacy &
-                {
-                    @include flex(0 0 (100% / ($max-width / (((($max-width - (($nr-of-columns - 1) * $gutter)) / $nr-of-columns) * $i) + (($i - 1) * $gutter)))));
-                }
+                @include col-width($i, true);
             }
         }
     }
