@@ -10,6 +10,7 @@ if ( post_password_required() )
 <div id="comments" class="comments-area">
 
     <?php if ( have_comments() ) : ?>
+    
         <h2 class="comments-title">
             <?php
                 printf( _nx( 'E&eacute;n reactie op &ldquo;%2$s&rdquo;', '%1$s reacties op &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'thema_vertalingen' ),
@@ -31,15 +32,17 @@ if ( post_password_required() )
             // Are there comments to navigate through?
             if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
         ?>
+        
         <nav class="navigation comment-navigation" role="navigation">
             <h1 class="screen-reader-text section-heading"><?php _e( 'Navigatie', 'thema_vertalingen' ); ?></h1>
             <div class="nav-previous"><?php previous_comments_link( __( 'Oudere reacties', 'thema_vertalingen' ) ); ?></div>
             <div class="nav-next"><?php next_comments_link( __( 'Nieuwere reacties', 'thema_vertalingen' ) ); ?></div>
         </nav><!-- .comment-navigation -->
+        
         <?php endif; // Check for comment navigation ?>
 
         <?php if ( ! comments_open() && get_comments_number() ) : ?>
-        <p class="no-comments"><?php _e( 'Het reageren is gesloten.' , 'thema_vertalingen' ); ?></p>
+            <p class="no-comments"><?php _e( 'Het reageren is gesloten.' , 'thema_vertalingen' ); ?></p>
         <?php endif; ?>
 
     <?php endif; // have_comments() ?>

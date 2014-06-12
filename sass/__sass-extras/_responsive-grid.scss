@@ -1,71 +1,136 @@
-// Calculate fluid margins
+// Calculate the fluid margins in percentages
 // =================================================================
 @function margin-width() {
     @return 100% / ($max-width / $gutter);
 }
 
 
-// Base grid styles
+// Every column should have a row as it's parent
 // =================================================================
-.col {
+.row {
     width: 100%;
-    margin-bottom: $margin;
     float: left;
-    clear: both;
+    
+    .flexbox &,
+    .flexboxlegacy &
+    {
+        @include flexbox;
+        @include flex-flow(row wrap);
+        @include align-items(flex-start);
+        @include justify-content(space-between);
+    }
     
     @include min-screen($lap) {
-        margin-right: margin-width();
-        clear: none;
+        //@include flex-flow(row nowrap);
     }
-}
-
-
-// Use the nr-of-columns variable to generate the grid widths
-// =================================================================
-@for $i from 1 through $nr-of-columns {
     
-    @include min-screen($lap) {
-    
-        .col-#{$i} {
-            width: 100% / ($max-width / (((($max-width - (($nr-of-columns - 1) * $gutter)) / $nr-of-columns) * $i) + (($i - 1) * $gutter)));
-        }
-    }
-}
-
-
-// Specific widths for palm to lap
-// =================================================================
-@for $i from 1 through $nr-of-columns {
-
-    .col-palm-#{$i} {
-    
-        @include screen($palm, $lap) {
-            width: 100% / ($max-width / (((($max-width - (($nr-of-columns - 1) * $gutter)) / $nr-of-columns) * $i) + (($i - 1) * $gutter)));
-            margin-right: margin-width();
-            clear: none;
+    > .col {
+        width: 100%;
+        margin-bottom: $margin;
+        float: left;
+        
+        .flexbox &,
+        .flexboxlegacy &
+        {
+            @include flex-direction(column);
         }
         
         @include min-screen($lap) {
-            margin-right: 0;
-        }
-    }
-}
-
-
-// Specific widths for lap to desk
-// =================================================================
-@for $i from 1 through $nr-of-columns {
-
-    .col-lap-#{$i} {
-    
-        @include screen($lap, $desk) {
-            width: 100% / ($max-width / (((($max-width - (($nr-of-columns - 1) * $gutter)) / $nr-of-columns) * $i) + (($i - 1) * $gutter)));
             margin-right: margin-width();
-            clear: none;
+            
+            // Flexbox browsers don't need the margin
+            // The width of the flexbox columns is calculated minus the gutters
+            // They're positioned using justify-content: space between
+            .flexbox &,
+            .flexboxlegacy &
+            {
+                margin-right: 0;
+                @include flex(1 1 0);
+            }
         }
         
-        @include min-screen($desk) {
-            margin-right: 0;
+        &:last-child {
+        
+            // Flexbox browsers don't need this, but we'll keep it anyway
+            @include min-screen($lap) {
+                margin-right: 0;
+            }
+        }
+    }
+    
+    // Widths for all screen widths
+    // Use the nr-of-columns variable to generate the grid widths
+    // =================================================================
+    @for $i from 1 through $nr-of-columns {
+    
+        @include min-screen($lap) {
+        
+            .col-#{$i} {
+                width: 100% / ($max-width / (((($max-width - (($nr-of-columns - 1) * $gutter)) / $nr-of-columns) * $i) + (($i - 1) * $gutter)));
+                
+                .flexbox &,
+                .flexboxlegacy &
+                {
+                    @include flex(0 0 (100% / ($max-width / (((($max-width - (($nr-of-columns - 1) * $gutter)) / $nr-of-columns) * $i) + (($i - 1) * $gutter)))));
+                }
+            }
+        }
+    }
+    
+    
+    // Specific widths for palm to lap
+    // Non-flexbox browsers will use the standard col widths for this small screen
+    // =================================================================
+    @for $i from 1 through $nr-of-columns {
+    
+        .col-palm-#{$i} {
+        
+            @include screen($palm, $lap) {
+            
+                .flexbox &,
+                .flexboxlegacy &
+                {
+                    @include flex(0 0 (100% / ($max-width / (((($max-width - (($nr-of-columns - 1) * $gutter)) / $nr-of-columns) * $i) + (($i - 1) * $gutter)))));
+                }
+            }
+        }
+    }
+    
+    
+    // Specific widths for lap to desk 
+    // =================================================================
+    @for $i from 1 through $nr-of-columns {
+    
+        .col-lap-#{$i} {
+        
+            @include screen($lap, $desk) {
+                width: 100% / ($max-width / (((($max-width - (($nr-of-columns - 1) * $gutter)) / $nr-of-columns) * $i) + (($i - 1) * $gutter)));
+                
+                .flexbox &,
+                .flexboxlegacy &
+                {
+                    @include flex(0 0 (100% / ($max-width / (((($max-width - (($nr-of-columns - 1) * $gutter)) / $nr-of-columns) * $i) + (($i - 1) * $gutter)))));
+                }
+            }
+        }
+    }
+    
+    
+    // Specific widths for desk to wall 
+    // =================================================================
+    @for $i from 1 through $nr-of-columns {
+    
+        .col-desk-#{$i} {
+        
+            @include screen($desk, $wall) {
+                width: 100% / ($max-width / (((($max-width - (($nr-of-columns - 1) * $gutter)) / $nr-of-columns) * $i) + (($i - 1) * $gutter)));
+                
+                .flexbox &,
+                .flexboxlegacy &
+                {
+                    @include flex(0 0 (100% / ($max-width / (((($max-width - (($nr-of-columns - 1) * $gutter)) / $nr-of-columns) * $i) + (($i - 1) * $gutter)))));
+                }
+            }
         }
     }
 }

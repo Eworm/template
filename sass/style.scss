@@ -30,6 +30,7 @@ Version: 1.0
 // Sass functions, extendables & mixins.
 // =================================================================
 @import 'compass/css3';
+@import '__sass-extras/flex';
 @import '__sass-extras/functions';
 @import '__sass-extras/extendables';
 @import '__sass-extras/mixins';

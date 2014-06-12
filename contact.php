@@ -110,18 +110,22 @@ endif;
     <div id="content" class="content wrapper wrapper-content">
     
         <div class="holder holder-content">
+        
+            <div class="row">
     
-            <div class="maincontent col col-5">
-    
-                <header class="maincontent-header">
-                    <h1 class="maincontent-title"><?php _e( 'Bedankt voor uw e-mail', 'thema_vertalingen' ); ?>, <?=$name;?></h1>
-                </header>
-    
-                <p><?php _e( 'Uw e-mail is verstuurd. Ik neem zo snel mogelijk contact met u op.', 'thema_vertalingen' ); ?></p>
-    
-                <p><a href="<?php echo get_settings('home'); ?>"><?php _e( 'Terug naar de homepage', 'thema_vertalingen' ); ?></a></p>
-    
-            </div> <!-- .maincontent -->
+                <div class="maincontent col col-5">
+        
+                    <header class="maincontent-header">
+                        <h1 class="maincontent-title"><?php _e( 'Bedankt voor uw e-mail', 'thema_vertalingen' ); ?>, <?=$name;?></h1>
+                    </header>
+        
+                    <p><?php _e( 'Uw e-mail is verstuurd. Ik neem zo snel mogelijk contact met u op.', 'thema_vertalingen' ); ?></p>
+        
+                    <p><a href="<?php echo get_settings('home'); ?>"><?php _e( 'Terug naar de homepage', 'thema_vertalingen' ); ?></a></p>
+        
+                </div> <!-- .maincontent -->
+                
+            </div> <!-- .row -->
     
         </div> <!-- .holder -->
     
@@ -134,107 +138,111 @@ endif;
     <div id="content" class="content wrapper wrapper-content">
     
         <div class="holder holder-content">
+        
+            <div class="row">
     
-            <div class="maincontent col col-5">
-    
-                <form action="#contactform" id="contactform" method="post" class="form">
-    
-                    <header class="formheader">
-                        <h1><?php the_title(); ?></h1>
-                    </header>
-    
-                    <fieldset class="formcontainer">
-    
-                        <div class="formrow">
-                        
-                            <label for="naam">
-                                <?php _e( 'Uw naam', 'thema_vertalingen' ); ?> <span class="req"><?php _e( '(Verplicht)', 'thema_vertalingen' ); ?></span>
-                            </label>
+                <div class="maincontent col col-5">
+        
+                    <form action="#contactform" id="contactform" method="post" class="form">
+        
+                        <header class="formheader">
+                            <h1><?php the_title(); ?></h1>
+                        </header>
+        
+                        <fieldset class="formcontainer">
+        
+                            <div class="formrow">
                             
-                            <input value="<?php if (isset($_POST['naam'])) echo $_POST['naam'];?>" type="text" name="naam" id="naam" required="required">
+                                <label for="naam">
+                                    <?php _e( 'Uw naam', 'thema_vertalingen' ); ?> <span class="req"><?php _e( '(Verplicht)', 'thema_vertalingen' ); ?></span>
+                                </label>
+                                
+                                <input value="<?php if (isset($_POST['naam'])) echo $_POST['naam'];?>" type="text" name="naam" id="naam" required="required">
+                                
+                                <?php if ($nameError != '') : ?>
+                                    <div class="error">
+                                        <?=$nameError;?>
+                                    </div>
+                                <?php endif; ?>
+    
+                            </div>
+        
+                            <div class="formrow">
                             
-                            <?php if ($nameError != '') : ?>
-                                <div class="error">
-                                    <?=$nameError;?>
-                                </div>
-                            <?php endif; ?>
-
-                        </div>
+                                <label for="emailadres">
+                                    <?php _e( 'Uw e-mailadres', 'thema_vertalingen' ); ?> <span class="req"><?php _e( '(Verplicht)', 'thema_vertalingen' ); ?></span>
+                                </label>
+                                
+                                <input value="<?php if (isset($_POST['emailadres'])) echo $_POST['emailadres'];?>" type="email" name="emailadres" id="emailadres" required="required">
     
-                        <div class="formrow">
-                        
-                            <label for="emailadres">
-                                <?php _e( 'Uw e-mailadres', 'thema_vertalingen' ); ?> <span class="req"><?php _e( '(Verplicht)', 'thema_vertalingen' ); ?></span>
-                            </label>
+                                <?php if ($emailError != '') : ?>
+                                    <div class="error">
+                                        <?=$emailError;?>
+                                    </div>
+                                <?php endif; ?>
+    
+                            </div>
+        
+                            <div class="formrow">
                             
-                            <input value="<?php if (isset($_POST['emailadres'])) echo $_POST['emailadres'];?>" type="email" name="emailadres" id="emailadres" required="required">
-
-                            <?php if ($emailError != '') : ?>
-                                <div class="error">
-                                    <?=$emailError;?>
-                                </div>
-                            <?php endif; ?>
-
-                        </div>
+                                <label for="message" id="message_label">
+                                    <?php _e( 'Omschrijf kort uw vraag', 'thema_vertalingen' ); ?> <span class="req"><?php _e( '(Verplicht)', 'thema_vertalingen' ); ?></span>
+                                </label>
+                                
+                                <textarea id="message" name="message" class="textarea" required="required"></textarea>
     
-                        <div class="formrow">
-                        
-                            <label for="message" id="message_label">
-                                <?php _e( 'Omschrijf kort uw vraag', 'thema_vertalingen' ); ?> <span class="req"><?php _e( '(Verplicht)', 'thema_vertalingen' ); ?></span>
-                            </label>
+                                <?php if ($messageError != '') : ?>
+                                    <div class="error">
+                                        <?=$messageError;?>
+                                    </div>
+                                <?php endif; ?>
+    
+                            </div>
+        
+                            <div id="screenreader" class="formrow">
                             
-                            <textarea id="message" name="message" class="textarea" required="required"></textarea>
-
-                            <?php if ($messageError != '') : ?>
-                                <div class="error">
-                                    <?=$messageError;?>
-                                </div>
-                            <?php endif; ?>
-
-                        </div>
-    
-                        <div id="screenreader" class="formrow">
-                        
-                            <label for="checking">
-                                <?php _e( 'Als u dit formulier wilt versturen moet u dit invoerveld leeg laten', 'thema_vertalingen' ); ?>
-                            </label>
+                                <label for="checking">
+                                    <?php _e( 'Als u dit formulier wilt versturen moet u dit invoerveld leeg laten', 'thema_vertalingen' ); ?>
+                                </label>
+                                
+                                <input type="text" name="checking" id="checking" value="<?php if (isset($_POST['checking'])) echo $_POST['checking'];?>">
                             
-                            <input type="text" name="checking" id="checking" value="<?php if (isset($_POST['checking'])) echo $_POST['checking'];?>">
+                            </div>
+        
+                            <div class="formrow">
+                            
+                                <input type="hidden" name="submitted" id="submitted" value="true">
+                                <input type="hidden" name="about" value="<?php the_title(); ?>">
+                                <input type="submit" value="<?php _e( 'Verzenden', 'thema_vertalingen' ); ?>" class="submit">
+                            
+                            </div>
+        
+                        </fieldset>
+        
+                    </form>
+        
+                </div> <!-- .maincontent -->
+        
+                <aside class="sidebar col col-3">
+        
+                    <?php $options = get_option('template_theme_options');
+                        if (($options['theme_address'])) : ?>
+        
+                        <section class="no-padding mob-hide">
                         
-                        </div>
-    
-                        <div class="formrow">
+                            <script>
+                                var company_address = [{location:"<?php echo $options["theme_address"]; ?>"}];
+                            </script>
                         
-                            <input type="hidden" name="submitted" id="submitted" value="true">
-                            <input type="hidden" name="about" value="<?php the_title(); ?>">
-                            <input type="submit" value="<?php _e( 'Verzenden', 'thema_vertalingen' ); ?>" class="submit">
+                            <div id="map_address" style="width:100%;height:250px;"></div>
                         
-                        </div>
-    
-                    </fieldset>
-    
-                </form>
-    
-            </div> <!-- .maincontent -->
-    
-            <aside class="sidebar col col-3 no-margin">
-    
-                <?php $options = get_option('template_theme_options');
-                    if (($options['theme_address'])) : ?>
-    
-                    <section class="no-padding mob-hide">
-                    
-                        <script>
-                            var company_address = [{location:"<?php echo $options["theme_address"]; ?>"}];
-                        </script>
-                    
-                        <div id="map_address" style="width:100%;height:250px;"></div>
-                    
-                    </section>
-    
-                <?php endif; ?>
-    
-            </aside> <!-- .sidebar -->
+                        </section>
+        
+                    <?php endif; ?>
+        
+                </aside> <!-- .sidebar -->
+            
+            </div> <!-- .row -->
     
         </div> <!-- .holder -->
     

@@ -15,22 +15,26 @@
 <div id="content" class="content wrapper wrapper-content">
 
     <div class="holder holder-content">
+    
+        <div class="row">
 
-        <article class="maincontent col col-5 not-found">
-
-            <header class="maincontent-header">
-
-                <h1 class="maincontent-title">
-                    <?php _e( 'Deze pagina bestaat niet (meer)', 'thema_vertalingen' ); ?>
-                </h1>
-
-            </header>
-
-            <p><?php _e( 'Misschien helpt het als je een kijkje op onze', 'thema_vertalingen' ); ?> <a href="<?php echo get_settings('home'); ?>"><?php _e( 'homepage', 'thema_vertalingen' ); ?></a> <?php _e( 'neemt? Of probeer anders te zoeken', 'thema_vertalingen' ); ?>:</p>
-
-            <?php get_search_form(); ?>
-
-        </article> <!-- .maincontent -->
+            <article class="maincontent col col-5 not-found">
+    
+                <header class="maincontent-header">
+    
+                    <h1 class="maincontent-title">
+                        <?php _e( 'Deze pagina bestaat niet (meer)', 'thema_vertalingen' ); ?>
+                    </h1>
+    
+                </header>
+    
+                <p><?php _e( 'Misschien helpt het als je een kijkje op onze', 'thema_vertalingen' ); ?> <a href="<?php echo get_settings('home'); ?>"><?php _e( 'homepage', 'thema_vertalingen' ); ?></a> <?php _e( 'neemt? Of probeer anders te zoeken', 'thema_vertalingen' ); ?>:</p>
+    
+                <?php get_search_form(); ?>
+    
+            </article> <!-- .maincontent -->
+        
+        </div> <!-- .row -->
 
     </div> <!-- .holder -->
 

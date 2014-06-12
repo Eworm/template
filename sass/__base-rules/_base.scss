@@ -120,9 +120,6 @@ body {
 a {
     color: $link-color;
     text-decoration: underline;
-    transition-timing-function: ease-in;
-    transition-duration: .1s;
-    transition-property: all;
 
     &:hover,
     &:focus {
@@ -165,8 +162,8 @@ a {
     width: 100%;
     padding-top: 0;
     padding-bottom: 0;
-    display: table;
-    caption-side: bottom;
+    // display: table;
+    // caption-side: bottom;
     
     @include min-screen($lap) {
         width: $width;

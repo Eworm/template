@@ -3,118 +3,122 @@
 <div id="content" class="content wrapper wrapper-content">
 
     <div class="holder holder-content">
-
-        <div class="maincontent col col-5">
-
-            <?php if ( have_posts() ) : ?>
     
-                <header class="maincontent-header">
-                
-                    <h1 class="maincontent-title">
-                    
-                        <?php if ( is_day() ) : ?>
-                        
-                            <?php printf( __( 'Dagarchief: %s', 'thema_vertalingen' ), '<span>' . get_the_date() . '</span>' ); ?>
-                        
-                        <?php elseif ( is_month() ) : ?>
-                        
-                            <?php printf( __( 'Maandarchief: %s', 'thema_vertalingen' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'thema_vertalingen' ) ) . '</span>' ); ?>
-                        
-                        <?php elseif ( is_year() ) : ?>
-                        
-                            <?php printf( __( 'Jaararchief: %s', 'thema_vertalingen' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'thema_vertalingen' ) ) . '</span>' ); ?>
-                        
-                        <?php else : ?>
-                        
-                            <?php _e( 'Blogarchief', 'thema_vertalingen' ); ?>
-                        
-                        <?php endif; ?>
-                        
-                    </h1>
-                    
-                </header>
+        <div class="row">
+
+            <div class="maincontent col col-5">
     
-                <?php /* Start the Loop */ ?>
-                <?php while (have_posts()) : the_post(); ?>
-
-                    <article class="blogpost">
-
-                        <header class="blogpost-header">
+                <?php if ( have_posts() ) : ?>
+        
+                    <header class="maincontent-header">
+                    
+                        <h1 class="maincontent-title">
                         
-                            <h1 class="blogpost-title">
-                                <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Directe link naar', 'thema_vertalingen' ); ?> <?php the_title_attribute(); ?>">
-                                    <?php the_title(); ?>
-                                </a>
-                            </h1>
+                            <?php if ( is_day() ) : ?>
                             
-                            <time datetime="<?php the_time('Y-m-d') ?>" pubdate="pubdate">
-                                <?php the_time('j F Y') ?> &mdash; <?php the_time('g:ia') ?> <?php edit_post_link('Edit','<strong> |</strong> ',''); ?>
-                            </time>
+                                <?php printf( __( 'Dagarchief: %s', 'thema_vertalingen' ), '<span>' . get_the_date() . '</span>' ); ?>
                             
-                        </header>
-                        
-                        <div class="blogpost-entry">
-
-                            <?php the_excerpt(); ?>
-
-                            <span class="blogpost-options">
+                            <?php elseif ( is_month() ) : ?>
                             
-                                <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Directe link naar', 'thema_vertalingen' ); ?> <?php the_title_attribute(); ?>">
-                                    <?php _e( 'Verder lezen', 'thema_vertalingen' ); ?>
-                                </a>&nbsp;|&nbsp;
+                                <?php printf( __( 'Maandarchief: %s', 'thema_vertalingen' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'thema_vertalingen' ) ) . '</span>' ); ?>
                             
-                                <?php comments_popup_link('Reageer als eerste', 'Er is 1 reactie', 'Er zijn % reacties'); ?>
+                            <?php elseif ( is_year() ) : ?>
                             
-                            </span>
-
-                        </div>
-                        
-                    </article>
-                    
-                <?php endwhile; ?>
-                
-                <ul class="blogpost-navigation">
-                    
-                    <li class="goforward">
-                        <?php previous_posts_link('&laquo; Nieuwere posts'); ?>
-                    </li>
-                    
-                    <li class="goback">
-                        <?php next_posts_link('Oudere posts &raquo;'); ?>
-                    </li>
-                    
-                </ul>
-    
-            <?php else : ?>
-    
-                <article class="blogpost no-results not-found">
-
-                    <header class="blogpost-header">
-
-                        <h1 class="blogpost-title">
-                            <?php _e( 'Deze pagina bestaat niet', 'thema_vertalingen' ); ?>
+                                <?php printf( __( 'Jaararchief: %s', 'thema_vertalingen' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'thema_vertalingen' ) ) . '</span>' ); ?>
+                            
+                            <?php else : ?>
+                            
+                                <?php _e( 'Blogarchief', 'thema_vertalingen' ); ?>
+                            
+                            <?php endif; ?>
+                            
                         </h1>
-
+                        
                     </header>
+        
+                    <?php /* Start the Loop */ ?>
+                    <?php while (have_posts()) : the_post(); ?>
     
-                    <div class="entry">
-                        <p><?php _e( 'Sorry, we hebben deze pagina niet gevonden. Maar misschien kun je zoeken om de juiste pagina te vinden:', 'thema_vertalingen' ); ?></p>
-                        <?php get_search_form(); ?>
-                    </div>
-
-                </article>
+                        <article class="blogpost">
     
-            <?php endif; ?>
+                            <header class="blogpost-header">
+                            
+                                <h1 class="blogpost-title">
+                                    <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Directe link naar', 'thema_vertalingen' ); ?> <?php the_title_attribute(); ?>">
+                                        <?php the_title(); ?>
+                                    </a>
+                                </h1>
+                                
+                                <time datetime="<?php the_time('Y-m-d') ?>" pubdate="pubdate">
+                                    <?php the_time('j F Y') ?> &mdash; <?php the_time('g:ia') ?> <?php edit_post_link('Edit','<strong> |</strong> ',''); ?>
+                                </time>
+                                
+                            </header>
+                            
+                            <div class="blogpost-entry">
+    
+                                <?php the_excerpt(); ?>
+    
+                                <span class="blogpost-options">
+                                
+                                    <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Directe link naar', 'thema_vertalingen' ); ?> <?php the_title_attribute(); ?>">
+                                        <?php _e( 'Verder lezen', 'thema_vertalingen' ); ?>
+                                    </a>&nbsp;|&nbsp;
+                                
+                                    <?php comments_popup_link('Reageer als eerste', 'Er is 1 reactie', 'Er zijn % reacties'); ?>
+                                
+                                </span>
+    
+                            </div>
+                            
+                        </article>
+                        
+                    <?php endwhile; ?>
+                    
+                    <ul class="blogpost-navigation">
+                        
+                        <li class="goforward">
+                            <?php previous_posts_link('&laquo; Nieuwere posts'); ?>
+                        </li>
+                        
+                        <li class="goback">
+                            <?php next_posts_link('Oudere posts &raquo;'); ?>
+                        </li>
+                        
+                    </ul>
+        
+                <?php else : ?>
+        
+                    <article class="blogpost no-results not-found">
+    
+                        <header class="blogpost-header">
+    
+                            <h1 class="blogpost-title">
+                                <?php _e( 'Deze pagina bestaat niet', 'thema_vertalingen' ); ?>
+                            </h1>
+    
+                        </header>
+        
+                        <div class="entry">
+                            <p><?php _e( 'Sorry, we hebben deze pagina niet gevonden. Maar misschien kun je zoeken om de juiste pagina te vinden:', 'thema_vertalingen' ); ?></p>
+                            <?php get_search_form(); ?>
+                        </div>
+    
+                    </article>
+        
+                <?php endif; ?>
+                
+            </div> <!-- .maincontent -->
+    
+            <aside class="sidebar col col-3">
+    
+                <?php if ( !function_exists('dynamic_sidebar')
+                    || !dynamic_sidebar('Blog') ) : ?>
+                <?php endif; ?>
+    
+            </aside> <!-- .sidebar -->
             
-        </div> <!-- .maincontent -->
-
-        <aside class="sidebar col col-3 no-margin">
-
-            <?php if ( !function_exists('dynamic_sidebar')
-                || !dynamic_sidebar('Blog') ) : ?>
-            <?php endif; ?>
-
-        </aside> <!-- .sidebar -->
+        </div> <!-- .row -->
 
     </div> <!-- .holder -->
 

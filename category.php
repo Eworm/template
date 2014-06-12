@@ -79,7 +79,7 @@
             
         </div> <!-- .maincontent -->
 
-        <aside class="sidebar col col-3 no-margin">
+        <aside class="sidebar col col-3">
 
             <?php if ( !function_exists('dynamic_sidebar')
                 || !dynamic_sidebar('Blog') ) : ?>

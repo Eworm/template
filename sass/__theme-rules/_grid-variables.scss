@@ -1,5 +1,5 @@
 // Grid variables.
 // =================================================================
-$width: 95%;            // The fluid site width if the screen is smaller then the max size
+$width: 95%;            // The site width if the screen is smaller then the max size
 $max-width: 1152px;     // The max-size of the site
-$nr-of-columns: 8;      // How many grid columns we have
+$nr-of-columns: 8;      // How many grid columns we have. Dont' forget to change your classnames when changing this!
