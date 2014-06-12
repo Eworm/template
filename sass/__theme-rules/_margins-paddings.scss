@@ -1,18 +1,18 @@
 // Define sizes here, use them later on
 // =================================================================
-$s-wrist: 5px;
-$s-palm: 10px;
-$s-lap: 20px;
-$s-desk: 30px;
-$s-wall: 40px;
-$s-cinema: 60px;
+$s-wrist: 7px;
+$s-palm: 14px;
+$s-lap: 28px;
+$s-desk: 35px;
+$s-wall: 42px;
+$s-cinema: 56px;
 
 
 // Gutters
 // =================================================================
 $gutter-small: $s-wrist;
 $gutter-skinny: $s-palm;
-$gutter: $line-height;
+$gutter: $s-lap;
 $gutter-large: $s-desk;
 
 
