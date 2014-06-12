@@ -1,8 +1,7 @@
 .maincontent {
-    padding: $gutter-skinny 0;
+    padding: 0;
 
     @include min-screen($lap) {
-        padding: 0;
     }
 }
 

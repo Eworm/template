@@ -1,12 +1,13 @@
 .sidebar-section {
     width: 100%;
-    margin-bottom: $margin;
-    padding: $gutter-skinny;
+    margin-bottom: $line-height/2;
+    padding: $line-height/2;
     float: left;
     border: 1px solid $border-color;
 
     @include min-screen($lap) {
-        padding: $gutter;
+        margin-bottom: $line-height;
+        padding: $line-height;
     }
 
     &:last-child {
@@ -42,7 +43,7 @@
 }
 
 .sidebar-section-title {
-    margin-bottom: $margin;
+    margin-bottom: $line-height;
     font-weight: bold;
     @include rem('font-size', $body-size);
 

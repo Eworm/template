@@ -1,5 +1,6 @@
 .header {
     margin-bottom: $margin;
+    display: none;
 
     @include min-screen($lap) {
         background: $body-bg-color;

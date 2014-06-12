@@ -19,11 +19,10 @@ h5 {
 
 
 // Vertical rhythm
-// Google Chrome doesn't seem to use the calculated line-height on the body properly
 // =================================================================
 h1 {
-    @include rem('margin-top', $line-height, $header-1);
-    @include rem('margin-bottom', $line-height, $header-1);
+    @include rem('margin-top', $line-height/$header-1);
+    @include rem('margin-bottom', ($line-height/$header-1));
 }
 
 h2 {
@@ -37,13 +36,11 @@ h3 {
 }
 
 h4 {
-    @include rem('margin-top', $line-height, $header-4);
-    @include rem('margin-bottom', $line-height, $header-4);
+    margin: 0;
 }
 
 h5 {
-    @include rem('margin-top', $line-height, $header-5);
-    @include rem('margin-bottom', $line-height, $header-5);
+    margin: 0;
 }
 
 
@@ -65,21 +62,14 @@ h5 {
 .maincontent-body {
 
     h2 {
-        font-weight: normal;
         @include rem('font-size', $header-2);
-    
-        @include min-screen($lap) {
-        }
     }
     
     h3 {
-        margin: 0;
         @include rem('font-size', $header-3);
     }
     
     h4 {
-        margin: 0;
-        font-weight: normal;
         @include rem('font-size', $header-4);
     }
 }

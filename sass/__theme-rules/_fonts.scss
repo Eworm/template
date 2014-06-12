@@ -23,7 +23,8 @@ $text-cinema: $f-desk;
 $base-size: $text-desk;
 $body-size: $text-lap;
 // Tool to calculate line-heights in unitless heights: http://cssleading.com/
-$line-height: 26px;
+// Or calculate the right line-height according to the golden ratio: http://www.pearsonified.com/typography/
+$line-height: 28px;
 
 
 // Font families
