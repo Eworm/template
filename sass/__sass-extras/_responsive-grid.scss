@@ -16,8 +16,7 @@
 
     // But there's alway a flexbox width    
     .flexbox &,
-    .flexboxlegacy &
-    {
+    .flexboxlegacy & {
         @include flex(0 0 (100% / ($max-width / (((($max-width - (($nr-of-columns - 1) * $gutter)) / $nr-of-columns) * $i) + (($i - 1) * $gutter)))));
     }
 }
@@ -30,8 +29,7 @@
     float: left;
     
     .flexbox &,
-    .flexboxlegacy &
-    {
+    .flexboxlegacy & {
         @include flexbox;
         @include flex-flow(row wrap);
         @include align-items(flex-start);
@@ -44,8 +42,7 @@
         float: left;
         
         .flexbox &,
-        .flexboxlegacy &
-        {
+        .flexboxlegacy & {
             @include flex-direction(column);
         }
         
@@ -56,8 +53,7 @@
             // The width of the flexbox columns is calculated minus the gutters
             // They're positioned using justify-content: space between
             .flexbox &,
-            .flexboxlegacy &
-            {
+            .flexboxlegacy & {
                 margin-right: 0;
                 @include flex(1 1 0);
             }
