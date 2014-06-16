@@ -38,10 +38,6 @@
         @include justify-content(space-between);
     }
     
-    @include min-screen($lap) {
-        // @include flex-flow(row nowrap);
-    }
-    
     > .col {
         width: 100%;
         margin-bottom: $line-height;
