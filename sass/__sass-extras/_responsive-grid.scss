@@ -125,6 +125,19 @@
     }
     
     
+    // Wall to cinema
+    // =================================================================
+    @for $i from 1 through $nr-of-columns {
+    
+        .col-wall-#{$i} {
+        
+            @include screen($wall, $cinema) {
+                @include col-width($i, true);
+            }
+        }
+    }
+    
+    
     // Offset
     // =================================================================
     @for $i from 1 through $nr-of-columns {
