@@ -10,9 +10,9 @@ var gulp = require('gulp'),
 var src_paths = {
     compass: 'sass/**/*.scss',
     autoprefixer: '*.css',
-    svgmin: 'img-src/*.svg',
-    svg2png: 'img-src/*.svg',
-    imagemin: 'img/portfolio/*.*',
+    svgmin: 'images-src/*.svg',
+    svg2png: 'images-src/*.svg',
+    imagemin: 'images/portfolio/*.*',
     uglify: ['bower_components/picturefill/external/matchmedia.js',
                 'bower_components/hideShowPassword/hideShowPassword.js',
                 'bower_components/picturefill/picturefill.js',
@@ -26,9 +26,9 @@ var src_paths = {
 // Set destination paths
 var dest_paths = {
     compass: '.',
-    svgmin: 'img',
-    svg2png: 'img',
-    imagemin: 'img',
+    svgmin: 'images',
+    svg2png: 'images',
+    imagemin: 'images',
     uglify: 'js',
     yepnope: 'js'
 };
