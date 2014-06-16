@@ -6,8 +6,7 @@
 }
 
 html {
-    // Enable font-size zoom for old ies
-    font-size: $base-size/$body-size;
+    font-size: $base-size/$body-size; // Enable font-size zoom for old ies
 
     &.active-menu {
         height: 100%;
