@@ -4,7 +4,7 @@
 
     <div class="holder holder-content">
 
-        <div class="maincontent col col-5">
+        <div class="main-content col col-5">
 
             <?php if (have_posts()) : ?>
 
@@ -71,7 +71,7 @@
         
             <?php endif; ?>
             
-        </div> <!-- .maincontent -->
+        </div> <!-- .main-content -->
 
         <aside class="sidebar col col-3">
 

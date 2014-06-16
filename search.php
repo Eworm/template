@@ -8,11 +8,11 @@
     
         <div class="row">
 
-            <div class="maincontent col col-8 no-margin">
+            <div class="main-content col col-8 no-margin">
             
                 <?php if (have_posts()) : ?>
                 
-                    <header class="maincontent-header">
+                    <header class="main-content-header">
                         
                         <h1>
                             <?php _e( 'Zoekresultaten voor', 'thema_vertalingen' ); ?> <em>&#8216;<?php echo $search_query ?>&#8217;</em>
@@ -75,7 +75,7 @@
               
                 <?php endif; ?>
                 
-            </div> <!-- .maincontent -->
+            </div> <!-- .main-content -->
             
         </div> <!-- .row -->
         

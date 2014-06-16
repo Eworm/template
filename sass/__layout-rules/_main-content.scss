@@ -1,14 +1,14 @@
-.maincontent {
+.main-content {
     padding: 0;
 
     @include min-screen($lap) {
     }
 }
 
-.maincontent-header {
+.main-content-header {
 }
 
-.maincontent-body {
+.main-content-body {
 }
 
 p {

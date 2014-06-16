@@ -6,13 +6,13 @@
     
         <div class="row">
 
-            <div class="maincontent col col-5">
+            <div class="main-content col col-5">
     
                 <?php if ( have_posts() ) : ?>
         
-                    <header class="maincontent-header">
+                    <header class="main-content-header">
                     
-                        <h1 class="maincontent-title">
+                        <h1 class="main-content-title">
                         
                             <?php if ( is_day() ) : ?>
                             
@@ -108,7 +108,7 @@
         
                 <?php endif; ?>
                 
-            </div> <!-- .maincontent -->
+            </div> <!-- .main-content -->
     
             <aside class="sidebar col col-3">
     

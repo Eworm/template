@@ -42,17 +42,17 @@
             <?php if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>
     
-                <article class="maincontent col col-6">
+                <article class="main-content col col-6">
     
-                    <header class="maincontent-header">
+                    <header class="main-content-header">
                         
-                        <h1 class="maincontent-title">
+                        <h1 class="main-content-title">
                             <?php the_title(); ?>
                         </h1>
     
                     </header>
     
-                    <div class="maincontent-body">
+                    <div class="main-content-body">
                         <?php the_content('Lees meer &raquo;'); ?>
                     </div>
                     
@@ -89,23 +89,23 @@
                     </div>
     -->
     
-                </article> <!-- .maincontent -->
+                </article> <!-- .main-content -->
     
             <?php endwhile; ?>
     
             <?php else : ?>
     
-                <article class="maincontent col col-6 no-results not-found">
+                <article class="main-content col col-6 no-results not-found">
     
-                    <header class="maincontent-header">
+                    <header class="main-content-header">
                         
-                        <h1 class="maincontent-title">
+                        <h1 class="main-content-title">
                             <?php _e( 'Deze pagina bestaat niet', 'thema_vertalingen' ); ?>
                         </h1>
     
                     </header>
     
-                    <div class="maincontent-body">
+                    <div class="main-content-body">
     
                         <p><?php _e( 'Sorry, we hebben deze pagina niet gevonden. Maar misschien kun je zoeken om de juiste pagina te vinden:', 'thema_vertalingen' ); ?></p>
     
@@ -113,7 +113,7 @@
     
                     </div>
     
-                </article> <!-- .maincontent -->
+                </article> <!-- .main-content -->
     
             <?php endif; ?>
         

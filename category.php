@@ -4,12 +4,12 @@
 
     <div class="holder holder-content">
 
-        <div class="maincontent col col-5">
+        <div class="main-content col col-5">
 
             <?php if (have_posts()) : ?>
     
-                <header class="maincontent-header">
-                    <h1 class="maincontent-title">
+                <header class="main-content-header">
+                    <h1 class="main-content-title">
                         <?php _e( 'Categorie', 'thema_vertalingen' ); ?>: <?php single_cat_title() ?>
                     </h1>
                 </header>
@@ -77,7 +77,7 @@
     
             <?php endif; ?>
             
-        </div> <!-- .maincontent -->
+        </div> <!-- .main-content -->
 
         <aside class="sidebar col col-3">
 

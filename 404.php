@@ -18,11 +18,11 @@
     
         <div class="row">
 
-            <article class="maincontent col col-5 not-found">
+            <article class="main-content col col-5 not-found">
     
-                <header class="maincontent-header">
+                <header class="main-content-header">
     
-                    <h1 class="maincontent-title">
+                    <h1 class="main-content-title">
                         <?php _e( 'Deze pagina bestaat niet (meer)', 'thema_vertalingen' ); ?>
                     </h1>
     
@@ -32,7 +32,7 @@
     
                 <?php get_search_form(); ?>
     
-            </article> <!-- .maincontent -->
+            </article> <!-- .main-content -->
         
         </div> <!-- .row -->
 

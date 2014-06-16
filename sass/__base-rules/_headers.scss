@@ -1,52 +1,14 @@
-// Common stuff for all headers
-// =================================================================
-h1,
-h2,
-h3,
-h4,
-h5 {
-    line-height: 2;
-    
-    a {
-        text-decoration: none;
-
-        &:hover,
-        &:focus {
-            text-decoration: underline;
-        }
-    }
-}
-
-
 // Vertical rhythm
 // =================================================================
-h1 {
+.main-content-title {
     @include rem('margin-top', $line-height/$header-1);
     @include rem('margin-bottom', ($line-height/$header-1));
 }
 
-h2 {
-    @include rem('margin-top', $line-height, $header-2);
-    @include rem('margin-bottom', $line-height, $header-2);
-}
 
-h3 {
-    @include rem('margin-top', $line-height, $header-3);
-    @include rem('margin-bottom', $line-height, $header-3);
-}
-
-h4 {
-    margin: 0;
-}
-
-h5 {
-    margin: 0;
-}
-
-
-// Other titles
+// Headers in the main content
 // =================================================================
-.maincontent-title {
+.main-content-title {
     font-weight: normal;
     @include rem('font-size', $header-1);
 
@@ -59,17 +21,44 @@ h5 {
     border-bottom: 1px dashed $border-color;
 }
 
-.maincontent-body {
+.main-content-body {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        line-height: 2;
+        
+        a {
+            text-decoration: none;
+    
+            &:hover,
+            &:focus {
+                text-decoration: underline;
+            }
+        }
+    }
 
     h2 {
+        @include rem('margin-top', $line-height, $header-2);
+        @include rem('margin-bottom', $line-height, $header-2);
         @include rem('font-size', $header-2);
     }
     
     h3 {
+        @include rem('margin-top', $line-height, $header-3);
+        @include rem('margin-bottom', $line-height, $header-3);
         @include rem('font-size', $header-3);
     }
     
     h4 {
+        margin: 0;
         @include rem('font-size', $header-4);
+    }
+    
+    h5 {
+        margin: 0;
+        @include rem('font-size', $body-size);
     }
 }

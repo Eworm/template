@@ -113,17 +113,17 @@ endif;
         
             <div class="row">
     
-                <div class="maincontent col col-5">
+                <div class="main-content col col-5">
         
-                    <header class="maincontent-header">
-                        <h1 class="maincontent-title"><?php _e( 'Bedankt voor uw e-mail', 'thema_vertalingen' ); ?>, <?=$name;?></h1>
+                    <header class="main-content-header">
+                        <h1 class="main-content-title"><?php _e( 'Bedankt voor uw e-mail', 'thema_vertalingen' ); ?>, <?=$name;?></h1>
                     </header>
         
                     <p><?php _e( 'Uw e-mail is verstuurd. Ik neem zo snel mogelijk contact met u op.', 'thema_vertalingen' ); ?></p>
         
                     <p><a href="<?php echo get_settings('home'); ?>"><?php _e( 'Terug naar de homepage', 'thema_vertalingen' ); ?></a></p>
         
-                </div> <!-- .maincontent -->
+                </div> <!-- .main-content -->
                 
             </div> <!-- .row -->
     
@@ -141,7 +141,7 @@ endif;
         
             <div class="row">
     
-                <div class="maincontent col col-5">
+                <div class="main-content col col-5">
         
                     <form action="#contactform" id="contactform" method="post" class="form">
         
@@ -221,7 +221,7 @@ endif;
         
                     </form>
         
-                </div> <!-- .maincontent -->
+                </div> <!-- .main-content -->
         
                 <aside class="sidebar col col-3">
         

@@ -11,7 +11,7 @@
                 <?php if (have_posts()) : ?>
                 <?php while (have_posts()) : the_post(); ?>
         
-                    <article class="maincontent single-post blogpost">
+                    <article class="main-content single-post blogpost">
         
                         <header class="blogpost-header single-post-header">
     
@@ -35,7 +35,7 @@
                             <?php endif; ?>
                         </p>
                         
-                    </article> <!-- .maincontent -->
+                    </article> <!-- .main-content -->
                     
                     <a id="l-toggle-comments" href="#l-comments-holder">
                         <?php
@@ -62,7 +62,7 @@
                 <?php endwhile; ?>
                 <?php else : ?>
                     
-                    <article class="maincontent blogpost single-post no-results not-found">
+                    <article class="main-content blogpost single-post no-results not-found">
     
                         <header class="blogpost-header maincontent-header single-post-header">
                             
@@ -77,7 +77,7 @@
                             <?php get_search_form(); ?>
                         </div>
     
-                    </article> <!-- .maincontent -->
+                    </article> <!-- .main-content -->
                     
                 <?php endif; ?>
     
