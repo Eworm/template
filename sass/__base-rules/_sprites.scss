@@ -1,3 +1,6 @@
+// Because modernizr is added later we want to prevent the browser downloading the png and svg background
+// That's why elements above the fold with a sprite background are here
+// =================================================================
 #logo {
     width: 72px;
     height: 48px;

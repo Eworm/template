@@ -1,3 +1,5 @@
+// The menu
+// =================================================================
 #mainmenu {
     width: $mobile-menu-width;
     height: 100%;
@@ -62,6 +64,8 @@
     }
 }
 
+// A single item
+// =================================================================
 .menu-item {
     width: 100%;
     position: relative;
@@ -100,6 +104,8 @@
     }
 }
 
+// For nav feedback
+// =================================================================
 .current_page_item,
 .current-menu-item,
 .current-page-ancestor,
@@ -115,6 +121,8 @@
     }
 }
 
+// The current item
+// =================================================================
 .current_page_item {
 
     a {
@@ -159,6 +167,8 @@
     }
 }
 
+// The submenu
+// =================================================================
 .sub-menu {
     width: 100%;
     margin: 0;
@@ -260,6 +270,8 @@
     }
 }
 
+// To show or hide the submenu on small devices
+// =================================================================
 .toggle-sub {
     width: 50px;
     height: 100%;
