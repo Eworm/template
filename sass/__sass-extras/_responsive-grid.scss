@@ -50,9 +50,10 @@
         }
         
         @include min-screen($lap) {
+            // This is the gutter
             margin-right: gutter-width();
             
-            // Flexbox browsers don't need the margin
+            // Flexbox browsers don't need the gutter
             // The width of the flexbox columns is calculated minus the gutters
             // They're positioned using justify-content: space between
             .flexbox &,
