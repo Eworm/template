@@ -40,7 +40,7 @@
     
     > .col {
         width: 100%;
-        margin-bottom: $line-height;
+        margin-bottom: $line-height; // For the vertical rhythm
         float: left;
         
         .flexbox &,
@@ -50,8 +50,7 @@
         }
         
         @include min-screen($lap) {
-            // This is the gutter
-            margin-right: gutter-width();
+            margin-right: gutter-width(); // This is the gutter
             
             // Flexbox browsers don't need the gutter
             // The width of the flexbox columns is calculated minus the gutters
