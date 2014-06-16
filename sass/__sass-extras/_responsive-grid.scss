@@ -103,7 +103,7 @@
     }
     
     
-    // Lap to desk 
+    // Lap to desk
     // =================================================================
     @for $i from 1 through $nr-of-columns {
     
@@ -116,7 +116,7 @@
     }
     
     
-    // Desk to wall 
+    // Desk to wall
     // =================================================================
     @for $i from 1 through $nr-of-columns {
     
@@ -124,6 +124,19 @@
         
             @include screen($desk, $wall) {
                 @include col-width($i, true);
+            }
+        }
+    }
+    
+    
+    // Offset
+    // =================================================================
+    @for $i from 1 through $nr-of-columns {
+    
+        .col-push-#{$i} {
+        
+            @include min-screen($lap) {
+                margin-left: 100% / ($max-width / (((($max-width - (($nr-of-columns + 1) * $gutter)) / $nr-of-columns) * $i) + (($i + 1) * $gutter)));
             }
         }
     }

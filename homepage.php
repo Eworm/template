@@ -42,6 +42,15 @@ Template Name: Homepage
                         
                         <div class="row">
                         
+                            <div class="col col-4 col-push-4">
+                                <strong>col-4 col-push-4</strong>
+                                Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Excepteur sint obcaecat cupiditat non proident culpa. Mercedem aut nummos unde unde extricat, amaras. Praeterea iter est quasdam res quas ex communi.
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="row">
+                        
                             <div class="col col-4">
                                 <strong>col-4</strong>
                                 Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Excepteur sint obcaecat cupiditat non proident culpa. Mercedem aut nummos unde unde extricat, amaras. Praeterea iter est quasdam res quas ex communi.
