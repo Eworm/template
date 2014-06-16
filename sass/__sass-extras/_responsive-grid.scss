@@ -1,11 +1,11 @@
-// Calculate the fluid margins in percentages
+// Calculate the fluid gutters in percentages
 // =================================================================
-@function margin-width() {
+@function gutter-width() {
     @return 100% / ($max-width / $gutter);
 }
 
 
-// Calucalte the grid widths
+// Calculate the grid widths
 // =================================================================
 @mixin col-width($i, $value: true) {
     
@@ -54,7 +54,7 @@
         }
         
         @include min-screen($lap) {
-            margin-right: margin-width();
+            margin-right: gutter-width();
             
             // Flexbox browsers don't need the margin
             // The width of the flexbox columns is calculated minus the gutters
@@ -150,5 +150,5 @@
 }
         
 .plus-margin {
-    margin-right: margin-width();
+    margin-right: gutter-width();
 }
