@@ -120,6 +120,10 @@
             <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" media="screen">
         </noscript>
         
+        <!--[if lt IE 9]>
+            <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+        
     </head>
     <body>
     
