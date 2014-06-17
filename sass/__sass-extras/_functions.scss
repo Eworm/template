@@ -1,12 +1,12 @@
 // Pixels to em
-// =================================================================
+// -----------------------------------------------------------------
 @function calc-em($target-px, $context: $body-size) {
     @return ($target-px / $context) * 1em;
 }
 
 
 // SVG background with png fallback
-// =================================================================
+// -----------------------------------------------------------------
 @mixin svgbg($image) {
     background-repeat: no-repeat;
     background-image: url($image + '.png');

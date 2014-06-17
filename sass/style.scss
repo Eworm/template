@@ -16,7 +16,7 @@ Version: 1.0
 
 
 // Theme rules (variables)
-// =================================================================
+// -----------------------------------------------------------------
 @import '__theme-rules/colors';
 @import '__theme-rules/defaults';
 @import '__theme-rules/fonts';
@@ -28,7 +28,7 @@ Version: 1.0
 
 
 // Sass functions, extendables & mixins.
-// =================================================================
+// -----------------------------------------------------------------
 @import 'compass/css3';
 @import '__sass-extras/flex';
 @import '__sass-extras/functions';
@@ -38,13 +38,13 @@ Version: 1.0
 
 
 // Layout rules. Styling of page sections that contain modules.
-// =================================================================
+// -----------------------------------------------------------------
 @import '__layout-rules/doormat';
 @import '__layout-rules/footer';
 
 
 // Module rules. Styling of reusable, modular parts of the design.
-// =================================================================
+// -----------------------------------------------------------------
 @import '__module-rules/blog';
 @import '__module-rules/comments';
 @import '__module-rules/forms';
@@ -61,10 +61,10 @@ Version: 1.0
 
 
 // Elements above the fold using sprites should be here for an optimal pagespeed score
-// =================================================================
+// -----------------------------------------------------------------
 @import '__base-rules/sprites';
 
 
 // Set the container opacity back to 1
-// =================================================================
+// -----------------------------------------------------------------
 @import '__module-rules/pagespeed-optimize';

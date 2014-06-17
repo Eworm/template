@@ -1,5 +1,5 @@
 // Define sizes here, use them later on
-// =================================================================
+// -----------------------------------------------------------------
 $f-wrist: 11px;
 $f-palm: 12px;
 $f-lap: 14px;
@@ -9,7 +9,7 @@ $f-cinema: 20px;
 
 
 // Font sizes
-// =================================================================
+// -----------------------------------------------------------------
 $text-wrist: $f-wrist;
 $text-palm: $f-palm;
 $text-lap: $f-lap;
@@ -19,7 +19,7 @@ $text-cinema: $f-desk;
 
 
 // Standard site sizes
-// =================================================================
+// -----------------------------------------------------------------
 $base-size: $text-desk;
 $body-size: $text-lap;
 // Tool to calculate line-heights in unitless heights: http://cssleading.com/
@@ -28,7 +28,7 @@ $line-height: 28px;
 
 
 // Font families
-// =================================================================
+// -----------------------------------------------------------------
 $body-font: Arial, Verdana, sans-serif;         // Websafe font family
 $special-font: Arial, Verdana, sans-serif;      // Special font, for example a google font. Use google fonts locally for a better pagespeed score
 $sec-font: Georgia, "Times new roman", serif;

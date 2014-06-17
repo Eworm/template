@@ -7,7 +7,7 @@
 
 
 // Theme rules (variables)
-// =================================================================
+// -----------------------------------------------------------------
 @import '__theme-rules/colors';
 @import '__theme-rules/defaults';
 @import '__theme-rules/fonts';
@@ -19,7 +19,7 @@
 
 
 // Sass functions, extendables & mixins.
-// =================================================================
+// -----------------------------------------------------------------
 @import 'compass/css3';
 @import '__sass-extras/flex';
 @import '__sass-extras/functions';
@@ -30,7 +30,7 @@
 
 
 // Base rules. Normalize and other basic element styles.
-// =================================================================
+// -----------------------------------------------------------------
 // Normalize is being imported via Bower
 @import 'normalize';
 @import '__base-rules/base';
@@ -38,10 +38,10 @@
 
 
 // Layout rules. Styling of page sections that contain modules.
-// =================================================================
+// -----------------------------------------------------------------
 @import '__layout-rules/header';
 @import '__layout-rules/main-content';
 
 
 // Module rules. Styling of reusable, modular parts of the design.
-// =================================================================
+// -----------------------------------------------------------------
