@@ -56,7 +56,7 @@
                         <?php the_content('Lees meer &raquo;'); ?>
                     </div>
                     
-    <!--
+<!--
                     <div id="thumbs">
                     
                         <?php
@@ -87,7 +87,7 @@
                         ?>
                         
                     </div>
-    -->
+-->
     
                 </article> <!-- .main-content -->
     
