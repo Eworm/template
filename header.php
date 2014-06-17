@@ -93,7 +93,9 @@
             $whitelist = array('localhost', '10.0.1.17');
             if ($link = (!in_array($_SERVER['HTTP_HOST'], $whitelist))) :
         ?>
-        <!-- Insert Google analytics here -->
+        
+            <!-- Insert Google analytics here -->
+        
         <?php endif; ?>
         
         <?php wp_head(); ?>
