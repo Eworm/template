@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-<div id="content" class="content wrapper wrapper-content">
+<div id="content" class="content divider divider-content">
 
-    <div class="holder holder-content">
+    <div class="core core-content">
 
         <div class="main-content col col-5">
 
@@ -87,7 +87,7 @@
 
         </aside> <!-- .sidebar -->
 
-    </div> <!-- .holder -->
+    </div> <!-- .core -->
 
 </div> <!-- #content -->
 

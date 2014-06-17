@@ -107,9 +107,9 @@ endif;
     
     <!-- Thanks page -->
 
-    <div id="content" class="content wrapper wrapper-content">
+    <div id="content" class="content divider divider-content">
     
-        <div class="holder holder-content">
+        <div class="core core-content">
         
             <div class="row">
     
@@ -127,7 +127,7 @@ endif;
                 
             </div> <!-- .row -->
     
-        </div> <!-- .holder -->
+        </div> <!-- .core -->
     
     </div> <!-- #content -->
 
@@ -135,9 +135,9 @@ endif;
 
     <!-- The contact form -->
 
-    <div id="content" class="content wrapper wrapper-content">
+    <div id="content" class="content divider divider-content">
     
-        <div class="holder holder-content">
+        <div class="core core-content">
         
             <div class="row">
     
@@ -244,7 +244,7 @@ endif;
             
             </div> <!-- .row -->
     
-        </div> <!-- .holder -->
+        </div> <!-- .core -->
     
         <div id="dialog-message" title="Foutmelding">
         

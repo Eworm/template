@@ -5,9 +5,9 @@ Template Name: Homepage
 ?>
 <?php get_header(); ?>
 
-<div id="content" class="content wrapper wrapper-content">
+<div id="content" class="content divider divider-content">
 
-    <div class="holder holder-content">
+    <div class="core core-content">
 
         <!-- <img src="<?php header_image(); ?>"> -->
         
@@ -175,7 +175,7 @@ Template Name: Homepage
             
         </div> <!-- .row -->
 
-    </div> <!-- .holder -->
+    </div> <!-- .core -->
 
 </div> <!-- #content -->
 

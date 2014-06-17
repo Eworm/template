@@ -131,9 +131,9 @@
         
             <div id="container-transition" class="container-transition">
             
-                <header id="header" class="header wrapper wrapper-header">
+                <header id="header" class="header divider divider-header">
                 
-                    <div class="holder holder-header">
+                    <div class="core core-header">
                         
                         <div class="mobile-header">
                             <ul class="mobile-header-menu">

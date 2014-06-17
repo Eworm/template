@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-<div id="content" class="content wrapper wrapper-content">
+<div id="content" class="content divider divider-content">
 
-    <div class="holder holder-content">
+    <div class="core core-content">
     
         <div class="row">
 
@@ -37,7 +37,7 @@
                         
                     </article> <!-- .main-content -->
                     
-                    <a id="l-toggle-comments" href="#l-comments-holder">
+                    <a id="l-toggle-comments" href="#l-comments-core">
                         <?php
                             $comments_count = get_comments_number( $post_id );
                             
@@ -55,7 +55,7 @@
                         ?>
                     </a>
                     
-                    <div id="l-comments-holder">
+                    <div id="l-comments-core">
                         <?php comments_template(); ?>
                     </div>
         
@@ -85,7 +85,7 @@
             
         </div> <!-- .row -->
 
-    </div> <!-- .holder -->
+    </div> <!-- .core -->
 
 </div> <!-- #content -->
 

@@ -1,6 +1,6 @@
-                <div id="doormat" class="wrapper wrapper-doormat">
+                <div id="doormat" class="divider divider-doormat">
                 
-                    <div class="holder holder-doormat">
+                    <div class="core core-doormat">
                     
                         <section class="vcard">
                         
@@ -23,9 +23,9 @@
                     
                 </div>
                 
-                <footer id="footer" class="wrapper wrapper-footer">
+                <footer id="footer" class="divider divider-footer">
                 
-                    <div class="holder holder-footer">
+                    <div class="core core-footer">
                         &copy; <?php echo date("Y") ?>
                     </div>
                     

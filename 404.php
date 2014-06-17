@@ -12,9 +12,9 @@
     get_header();
 ?>
 
-<div id="content" class="content wrapper wrapper-content">
+<div id="content" class="content divider divider-content">
 
-    <div class="holder holder-content">
+    <div class="core core-content">
     
         <div class="row">
 
@@ -36,7 +36,7 @@
         
         </div> <!-- .row -->
 
-    </div> <!-- .holder -->
+    </div> <!-- .core -->
 
 </div> <!-- #content -->
 

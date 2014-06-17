@@ -100,7 +100,7 @@ body {
         transform: translate3d($mobile-menu-width, 0, 0) scale3d(1, 1, 1);
         backface-visibility: hidden;
 
-        .wrapper {
+        .divider {
             transform-style: flat;
         }
 
@@ -129,7 +129,7 @@ a {
 
 // Section divider
 // =================================================================
-.wrapper {
+.divider {
     width: 100%;
     float: left;    
     backface-visibility: hidden;
@@ -141,7 +141,7 @@ a {
 
 // Center site
 // =================================================================
-.holder {
+.core {
     margin: 0 auto;
     padding: $gutter;
     clear: both;
@@ -154,11 +154,11 @@ a {
     }
 }
 
-.holder-header {
+.core-header {
     z-index: 1200;
 }
 
-.holder-content {
+.core-content {
     width: 100%;
     padding-top: 0;
     padding-bottom: 0;
@@ -169,10 +169,10 @@ a {
     }
 }
 
-.holder-doormat {
+.core-doormat {
     
 }
 
-.holder-footer {
+.core-footer {
     
 }
