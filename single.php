@@ -87,6 +87,6 @@
 
     </div> <!-- .core -->
 
-</div> <!-- #content -->
+</div> <!-- .divider -->
 
 <?php get_footer(); ?>

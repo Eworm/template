@@ -129,7 +129,7 @@ endif;
     
         </div> <!-- .core -->
     
-    </div> <!-- #content -->
+    </div> <!-- .divider -->
 
 <?php else : ?>
 
@@ -252,7 +252,7 @@ endif;
         
         </div>
     
-    </div> <!-- #content -->
+    </div> <!-- .divider -->
 
 <?php endif; ?>
 
