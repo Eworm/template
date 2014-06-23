@@ -16,6 +16,7 @@ var src_paths = {
     uglify: ['bower_components/picturefill/external/matchmedia.js',
                 'bower_components/hideShowPassword/hideShowPassword.js',
                 'bower_components/picturefill/picturefill.js',
+                'bower_components/parsleyjs/dist/parsley.js',
                 'bower_components/on-media-query/js/onmediaquery.js',
                 'js-src/functions.js'],
     yepnope: ['bower_components/yepnope/yepnope.1.5.4-min.js',

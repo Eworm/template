@@ -18,6 +18,7 @@
     "on-media-query": "",
     "zepto-sources": "~1.0.2",
     "yepnope": "~1.5.4",
-    "normalize.scss": "~2.2.0+normalize.2.1.3"
+    "normalize.scss": "~2.2.0+normalize.2.1.3",
+    "parsleyjs": "~2.0.2"
   }
 }

@@ -136,3 +136,21 @@ a.submit {
     color: $lesser-color;
     @include rem('font-size', $body-size);
 }
+
+// Error messages
+// -----------------------------------------------------------------
+.parsley-errors-list {
+    display: none;
+}
+
+.error,
+.filled {
+    padding: $padding-small 0 0;
+    margin: 0;
+    display: block;
+    color: $error;
+    
+    > li {
+        margin: 0;
+    }
+}

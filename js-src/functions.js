@@ -94,6 +94,10 @@ $(document).ready(function() {
             $('html').removeClass(activeClass);
         }, 180);
     };
+    
+    
+    // Form validation
+    // $('#contactform').parsley();
 
 
     /* Responsive javascript: https://github.com/JoshBarr/js-media-queries */
