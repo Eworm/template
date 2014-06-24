@@ -1,4 +1,4 @@
-// Headers in the main content
+// Page title
 // -----------------------------------------------------------------
 .main-content-title {
     font-weight: normal;
@@ -10,11 +10,15 @@
     }
 }
 
+// Page title with a border
+// -----------------------------------------------------------------
 .sec-title {
     padding-bottom: $margin;
     border-bottom: 1px dashed $border-color;
 }
 
+// Headers in the main content
+// -----------------------------------------------------------------
 .main-content-body {
 
     h1,
