@@ -43,7 +43,7 @@ body {
     overflow: hidden;
     opacity: 0;
     transition-timing-function: ease;
-    transition-duration: .05s;
+    transition-duration: .025s;
     transition-property: opacity;
 
     .active-menu & {
@@ -76,8 +76,8 @@ body {
     width: 100%;
     height: 100%;
     float: left;
-    transition-timing-function: ease-in-out;
-    transition-duration: .18s;
+    transition-timing-function: ease;
+    transition-duration: .5s;
     transition-property: all;
     
     .touch.no-overflow-scroll & {
