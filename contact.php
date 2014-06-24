@@ -5,7 +5,17 @@ Template Name: Contactformulier
 ?>
 <?php
 
+
+// The default sent variable
 $emailSent = false;
+
+
+// Error messages
+$nameError_message = 'U bent vergeten uw naam in te vullen';
+$emailRequired_message = 'U bent vergeten uw e-mailadres in te vullen';
+$emailError_message = 'U heeft een ongeldig e-mailadres ingevuld';
+$messageError_message = 'U bent vergeten een bericht in te vullen';
+
 
 // If the form is submitted
 if (isset($_POST['submitted'])) :
@@ -15,10 +25,11 @@ if (isset($_POST['submitted'])) :
         $captchaError = true;
     else :
 
+
         //Check to make sure that the name field is not empty
         if (trim($_POST['naam']) === '') :
         
-            $nameError = __( 'U bent vergeten uw naam in te vullen', 'thema_vertalingen' );
+            $nameError = __( $nameError_message, 'thema_vertalingen' );
             $hasError = true;
         
         else :
@@ -27,15 +38,16 @@ if (isset($_POST['submitted'])) :
         
         endif;
 
+
         // Check to make sure sure that a valid email address is submitted
         if (trim($_POST['emailadres']) === '') :
         
-            $emailError = __( 'U bent vergeten uw e-mailadres in te vullen', 'thema_vertalingen' );
+            $emailError = __( $emailRequired_message, 'thema_vertalingen' );
             $hasError = true;
         
         elseif (!eregi("^[A-Z0-9._%-]+@[A-Z0-9._%-]+\.[A-Z]{2,4}$", trim($_POST['emailadres']))) :
         
-            $emailError = __( 'U heeft een ongeldig e-mailadres ingevuld', 'thema_vertalingen' );
+            $emailError = __( $emailError_message, 'thema_vertalingen' );
             $hasError = true;
         
         else :
@@ -44,10 +56,11 @@ if (isset($_POST['submitted'])) :
         
         endif;
 
+
         // Check to make sure that the message field is not empty
         if (trim($_POST['message']) === '') :
 
-            $messageError = __( 'U bent vergeten een bericht in te vullen', 'thema_vertalingen' );
+            $messageError = __( $messageError_message, 'thema_vertalingen' );
             $hasError = true;
 
         else :
@@ -63,7 +76,7 @@ if (isset($_POST['submitted'])) :
             require("class.phpmailer.php");
             $mail = new PHPMailer();
             
-            // Add mails to the database
+            // Add mail to the database
             $row = array(   'from' => $name,
                             'email' => $email,
                             'message' => $message
@@ -157,7 +170,7 @@ endif;
                                 <label for="naam">
                                     <?php _e( 'Uw naam', 'thema_vertalingen' ); ?> <span class="req"><?php _e( '(Verplicht)', 'thema_vertalingen' ); ?></span>
                                 </label>
-                                <input value="<?php if (isset($_POST['naam'])) echo $_POST['naam'];?>" type="text" name="naam" id="naam" data-parsley-error-message="<?php _e( 'U bent vergeten uw naam in te vullen', 'thema_vertalingen' ); ?>" required>
+                                <input value="<?php if (isset($_POST['naam'])) echo $_POST['naam'];?>" type="text" name="naam" id="naam" data-parsley-error-message="<?php _e( $nameError_message, 'thema_vertalingen' ); ?>" required>
                                 
                                 <?php if ($nameError != '') : ?>
                                     <div class="error">
@@ -173,7 +186,7 @@ endif;
                                 <label for="emailadres">
                                     <?php _e( 'Uw e-mailadres', 'thema_vertalingen' ); ?> <span class="req"><?php _e( '(Verplicht)', 'thema_vertalingen' ); ?></span>
                                 </label>
-                                <input value="<?php if (isset($_POST['emailadres'])) echo $_POST['emailadres'];?>" type="email" name="emailadres" id="emailadres" data-parsley-trigger="change" data-parsley-required-message="<?php _e( 'U bent vergeten uw e-mailadres in te vullen', 'thema_vertalingen' ); ?>" data-parsley-error-message="<?php _e( 'U heeft een ongeldig e-mailadres ingevuld', 'thema_vertalingen' ); ?>" required>
+                                <input value="<?php if (isset($_POST['emailadres'])) echo $_POST['emailadres'];?>" type="email" name="emailadres" id="emailadres" data-parsley-trigger="change" data-parsley-required-message="<?php _e( $emailError_message, 'thema_vertalingen' ); ?>" data-parsley-error-message="<?php _e( $emailError_message, 'thema_vertalingen' ); ?>" required>
     
                                 <?php if ($emailError != '') : ?>
                                     <div class="error">
@@ -189,7 +202,7 @@ endif;
                                 <label for="message">
                                     <?php _e( 'Omschrijf kort uw vraag', 'thema_vertalingen' ); ?> <span class="req"><?php _e( '(Verplicht)', 'thema_vertalingen' ); ?></span>
                                 </label>
-                                <textarea id="message" name="message" class="textarea" data-parsley-error-message="<?php _e( 'U bent vergeten een bericht in te vullen', 'thema_vertalingen' ); ?>" required></textarea>
+                                <textarea id="message" name="message" class="textarea" data-parsley-error-message="<?php _e( $messageError_message, 'thema_vertalingen' ); ?>" required></textarea>
     
                                 <?php if ($messageError != '') : ?>
                                     <div class="error">
