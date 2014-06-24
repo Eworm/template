@@ -1,4 +1,4 @@
-                <div id="doormat" class="divider divider-doormat">
+                <div class="doormat divider divider-doormat">
                 
                     <div class="core core-doormat">
                     
@@ -23,7 +23,7 @@
                     
                 </div>
                 
-                <footer id="footer" class="divider divider-footer">
+                <footer class="footer divider divider-footer">
                 
                     <div class="core core-footer">
                         &copy; <?php echo date("Y") ?>

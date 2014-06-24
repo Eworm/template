@@ -1,3 +1,5 @@
+// Section
+// -----------------------------------------------------------------
 .mobile-header {
     width: 100%;
     height: auto;
@@ -14,6 +16,8 @@
     }
 }
 
+// Unordered list
+// -----------------------------------------------------------------
 .mobile-header-menu {
     width: 100%;
     margin: 0;
@@ -21,6 +25,8 @@
     @include inline-block;
 }
 
+// Single item
+// -----------------------------------------------------------------
 .mobile-header-menuitem {
     @extend %ul-nostyling;
     @include inline-block;
@@ -38,10 +44,14 @@
     }
 }
 
+// Jump to content
+// -----------------------------------------------------------------
 #content-toggler {
     display: none;
 }
 
+// Class for hiding stuff on mobile
+// -----------------------------------------------------------------
 .mob-hide {
     display: none;
 

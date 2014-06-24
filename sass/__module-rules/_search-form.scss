@@ -1,18 +1,26 @@
+// The form
+// -----------------------------------------------------------------
 .searchform {
     width: 100%;
     padding: $gutter-skinny;
     display: none;
     clear: both;
 
+    // When in nav
+    // -----------------------------------------------------------------
     nav & {
         display: block;
     }
 
+    // When in content
+    // -----------------------------------------------------------------
     .content & {
         padding: 0;
         display: block;
     }
 
+    // When in header
+    // -----------------------------------------------------------------
     .header & {
 
         @include min-screen($lap) {
@@ -25,6 +33,8 @@
             text-align: left;
         }
 
+        // The search input
+        // -----------------------------------------------------------------
         #s {
             width: 100%;
             clear: both;
@@ -36,6 +46,8 @@
     }
 }
 
+// Search form fieldset
+// -----------------------------------------------------------------
 .searchform-container {
     margin: 0;
     padding: 0;

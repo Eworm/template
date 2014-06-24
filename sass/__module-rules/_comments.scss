@@ -1,3 +1,5 @@
+// Toggle comments
+// -----------------------------------------------------------------
 #l-toggle-comments {
     width: 100%;
     padding: $gutter-skinny 0;
@@ -12,6 +14,8 @@
     }
 }
 
+// Container for comments
+// -----------------------------------------------------------------
 #l-comments-holder {
     margin-top: $margin-skinny;
     display: none;
@@ -31,6 +35,8 @@
     margin: 0 0 $gutter;
 }
 
+// A comment, trackback, pingback or response
+// -----------------------------------------------------------------
 .comment,
 .trackback,
 .pingback,
@@ -75,10 +81,14 @@
     }
 }
 
+// The comment body
+// -----------------------------------------------------------------
 .comment-body {
     
 }
 
+// The author name
+// -----------------------------------------------------------------
 .comment-author {
     width: 100%;
     float: left;
@@ -91,6 +101,8 @@
     }
 }
 
+// The avatar
+// -----------------------------------------------------------------
 .avatar {
     width: auto;
     height: auto;
@@ -105,10 +117,14 @@
     }
 }
 
+// Text
+// -----------------------------------------------------------------
 .says {
     
 }
 
+// Comment meta info
+// -----------------------------------------------------------------
 .comment-meta {
     @include rem('font-size', $text-palm);
 
@@ -147,6 +163,8 @@
 .bypostauthor {
 }
 
+// Replies
+// -----------------------------------------------------------------
 .children {
     margin-bottom: 0;
     padding: 0;
@@ -165,6 +183,8 @@
     }
 }
 
+// Link for replying
+// -----------------------------------------------------------------
 .comment-reply-link {
     text-decoration: none;
 
@@ -174,6 +194,8 @@
     }
 }
 
+// Text
+// -----------------------------------------------------------------
 .logged-in-as {
     
 }

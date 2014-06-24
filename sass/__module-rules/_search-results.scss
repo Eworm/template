@@ -1,3 +1,5 @@
+// Actual result
+// -----------------------------------------------------------------
 .search-result {
     margin-bottom: $margin;
     
@@ -6,10 +8,14 @@
     }
 }
 
+// Result header
+// -----------------------------------------------------------------
 .search-result-header {
     
 }
 
+// Result title
+// -----------------------------------------------------------------
 .search-result-title {
     font-weight: bold;
     @include rem('font-size', $body-size);
