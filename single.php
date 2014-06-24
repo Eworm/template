@@ -80,8 +80,16 @@
                     </article> <!-- .main-content -->
                     
                 <?php endif; ?>
-    
+            
             </div>
+            
+            <aside class="sidebar col col-3">
+
+                <?php if ( !function_exists('dynamic_sidebar')
+                    || !dynamic_sidebar('Widget') ) : ?>
+                <?php endif; ?>
+    
+            </aside> <!-- .sidebar -->
             
         </div> <!-- .row -->
 

@@ -49,7 +49,7 @@
 // Section title
 // -----------------------------------------------------------------
 .sidebar-section-title {
-    margin-bottom: $margin;
+    margin: 0 0 $margin;
     font-weight: bold;
     @include rem('font-size', $body-size);
 

@@ -82,7 +82,7 @@
         <aside class="sidebar col col-3">
 
             <?php if ( !function_exists('dynamic_sidebar')
-                || !dynamic_sidebar('Blog') ) : ?>
+                || !dynamic_sidebar('Widget') ) : ?>
             <?php endif; ?>
 
         </aside> <!-- .sidebar -->
