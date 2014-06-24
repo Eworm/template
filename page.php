@@ -13,7 +13,7 @@
                 
                 else :
                     // diplays only the subpages of parent level
-                    //$children = wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0");
+                    // $children = wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0");
     
                     if ($post->ancestors) :
                     
