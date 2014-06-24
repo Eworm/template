@@ -1,34 +1,7 @@
-// Toggle comments
-// -----------------------------------------------------------------
-#l-toggle-comments {
-    width: 100%;
-    padding: $gutter-skinny 0;
-    display: block;
-    box-shadow: rgba(darken($border-color, 20%), 1) 0 1px 1px;
-    background: #fff;
-    text-align: center;
-    text-decoration: none;
-
-    @include min-screen($lap) {
-        display: none;
-    }
-}
-
 // Container for comments
 // -----------------------------------------------------------------
-#l-comments-holder {
-    margin-top: $margin-skinny;
-    display: none;
-
-    &.toggle {
-        display: block;
-    }
-
-    @include min-screen($lap) {
-        margin: $margin 0;
-        padding: $gutter 0 0;
-        display: block;
-    }
+.comments-area {
+    
 }
 
 #reply-title {

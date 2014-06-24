@@ -31,11 +31,23 @@
                                     </a>
                                 </h1>
                                 
-                                <time datetime="<?php the_time('Y-m-d') ?>" pubdate="pubdate">
-                                    <?php the_time('j F Y') ?> &mdash; <?php the_time('g:ia') ?> <?php edit_post_link('Edit','<strong> |</strong> ',''); ?>
-                                </time>
-                                
                             </header>
+                            
+                            <div class="post-date">
+                            
+                                <time datetime="<?php the_time('Y-m-d') ?>" pubdate="pubdate">
+                                    <?php the_time('j F Y') ?>
+                                </time>
+                                <?php edit_post_link('Aanpassen', ' | ',''); ?>
+                                
+                                <br>
+                                <?php /* pages don't have categories or tags */ if (!is_page()) : ?>
+                                    <?php _e( 'Categorie&euml;n', 'thema_vertalingen' ); ?>: <?php the_category(', '); ?>.
+                                    <br>
+                                    <?php if (get_the_tags()) the_tags('Tags: ', ', ', '.'); ?>
+                                <?php endif; ?>
+                            
+                            </div>
                             
                             <div class="post-entry">
                                 

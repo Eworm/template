@@ -25,39 +25,25 @@
                             <?php the_content('Lees meer &raquo;'); ?>
                         </div>
                         
-                        <p class="post-date">
-                            <?php the_time('j F Y') ?> &mdash; <?php the_time('g:ia') ?> <?php edit_post_link('Artikel aanpassen','<strong> |</strong> ',''); ?>
+                        <div class="post-date">
+                                
+                            <time datetime="<?php the_time('Y-m-d') ?>" pubdate="pubdate">
+                                <?php the_time('j F Y') ?>
+                            </time>
+                            <?php edit_post_link('Aanpassen', ' | ',''); ?>
+                            
                             <br>
                             <?php /* pages don't have categories or tags */ if (!is_page()) : ?>
                                 <?php _e( 'Categorie&euml;n', 'thema_vertalingen' ); ?>: <?php the_category(', '); ?>.
                                 <br>
                                 <?php if (get_the_tags()) the_tags('Tags: ', ', ', '.'); ?>
                             <?php endif; ?>
-                        </p>
+                        
+                        </div>
                         
                     </article> <!-- .main-content -->
                     
-                    <a id="l-toggle-comments" href="#l-comments-core">
-                        <?php
-                            $comments_count = get_comments_number( $post_id );
-                            
-                            if ($comments_count >= 1) :
-                            
-                                _e( 'Alle reacties tonen', 'thema_vertalingen' );
-                                echo ' (';
-                                echo $comments_count;
-                                echo ')';
-                            
-                            else :
-                                _e( 'Er zijn nog geen reacties', 'thema_vertalingen' );
-                            
-                            endif;
-                        ?>
-                    </a>
-                    
-                    <div id="l-comments-core">
-                        <?php comments_template(); ?>
-                    </div>
+                    <?php comments_template(); ?>
         
                 <?php endwhile; ?>
                 <?php else : ?>

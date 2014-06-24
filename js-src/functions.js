@@ -134,13 +134,6 @@ $(document).ready(function() {
                     $(this).next().toggle();
                 })
 
-
-                // Toggle the comments
-                $('#l-toggle-comments').on('click touchstart', function(e) {
-                    e.preventDefault();
-                    $('#l-comments-holder').toggleClass('toggle');
-                })
-
             }, unmatch: function()
             {
 

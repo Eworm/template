@@ -48,11 +48,11 @@
                         <ul class="post-navigation">
                             
                             <li class="goforward">
-                                <?php previous_posts_link('&laquo; Nieuwere posts'); ?>
+                                <?php previous_posts_link('&laquo; Nieuwere artikelen'); ?>
                             </li>
                             
                             <li class="goback">
-                                <?php next_posts_link('Oudere posts &raquo;'); ?>
+                                <?php next_posts_link('Oudere artikelen &raquo;'); ?>
                             </li>
     
                         </ul>

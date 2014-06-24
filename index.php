@@ -22,18 +22,24 @@
                                         <?php the_title(); ?>
                                     </a>
                                 </h1>
-                                
-                                <p class="post-date">
-                                    <?php the_time('j F Y') ?> &mdash; <?php the_time('g:ia') ?> <?php edit_post_link('Artikel aanpassen','<strong> |</strong> ',''); ?>
-                                    <br>
-                                    <?php /* pages don't have categories or tags */ if (!is_page()) : ?>
-                                        <?php _e( 'Categorie&euml;n', 'thema_vertalingen' ); ?>: <?php the_category(', '); ?>.
-                                        <br>
-                                        <?php if (get_the_tags()) the_tags('Tags: ', ', ', '.'); ?>
-                                    <?php endif; ?>
-                                </p>
     
                             </header>
+                            
+                            <div class="post-date">
+                                
+                                <time datetime="<?php the_time('Y-m-d') ?>" pubdate="pubdate">
+                                    <?php the_time('j F Y') ?>
+                                </time>
+                                <?php edit_post_link('Aanpassen', ' | ',''); ?>
+                                
+                                <br>
+                                <?php /* pages don't have categories or tags */ if (!is_page()) : ?>
+                                    <?php _e( 'Categorie&euml;n', 'thema_vertalingen' ); ?>: <?php the_category(', '); ?>.
+                                    <br>
+                                    <?php if (get_the_tags()) the_tags('Tags: ', ', ', '.'); ?>
+                                <?php endif; ?>
+                            
+                            </div>
     
                             <div class="post-entry">
     
@@ -60,11 +66,11 @@
                         <ul class="post-navigation">
                             
                             <li class="goforward">
-                                <?php previous_posts_link('&laquo; Nieuwere posts'); ?>
+                                <?php previous_posts_link('&laquo; Nieuwere artikelen'); ?>
                             </li>
                             
                             <li class="goback">
-                                <?php next_posts_link('Oudere posts &raquo;'); ?>
+                                <?php next_posts_link('Oudere artikelen &raquo;'); ?>
                             </li>
     
                         </ul>
