@@ -34,7 +34,7 @@ Template Name: Homepage
                         <div class="row">
                         
                             <div class="col col-palm-8 col-8">
-                                <strong>col-palm-8 col-8</strong>
+                                <h3>col-palm-8 col-8</h3>
                                 Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Excepteur sint obcaecat cupiditat non proident culpa. Mercedem aut nummos unde unde extricat, amaras. Praeterea iter est quasdam res quas ex communi.
                             </div>
                             
@@ -43,7 +43,7 @@ Template Name: Homepage
                         <div class="row">
                         
                             <div class="col col-4 col-push-4">
-                                <strong>col-4 col-push-4</strong>
+                                <h3>col-4 col-push-4</h3>
                                 Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Excepteur sint obcaecat cupiditat non proident culpa. Mercedem aut nummos unde unde extricat, amaras. Praeterea iter est quasdam res quas ex communi.
                             </div>
                             
@@ -52,12 +52,12 @@ Template Name: Homepage
                         <div class="row">
                         
                             <div class="col col-4">
-                                <strong>col-4</strong>
+                                <h3>col-4</h3>
                                 Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Excepteur sint obcaecat cupiditat non proident culpa. Mercedem aut nummos unde unde extricat, amaras. Praeterea iter est quasdam res quas ex communi.
                             </div>
                             
                             <div class="col col-4">
-                                <strong>col-4</strong>
+                                <h3>col-4</h3>
                                 Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Excepteur sint obcaecat cupiditat non proident culpa. Mercedem aut nummos unde unde extricat, amaras. Praeterea iter est quasdam res quas ex communi.
                             </div>
                                 
@@ -66,12 +66,12 @@ Template Name: Homepage
                         <div class="row">
                         
                             <div class="col col-palm-4 col-lap-2 col-desk-6 col-2">
-                                <strong>col-palm-4 col-lap-2 col-desk-6 col-2</strong>
+                                <h3>col-palm-4 col-lap-2 col-desk-6 col-2</h3>
                                 Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Excepteur sint obcaecat cupiditat non proident culpa. Mercedem aut nummos unde unde extricat, amaras. Praeterea iter est quasdam res quas ex communi.
                             </div>
                             
                             <div class="col col-palm-4 col-lap-6 col-desk-2 col-6">
-                                <strong>col-palm-4 col-lap-6 col-desk-2 col-6</strong>
+                                <h3>col-palm-4 col-lap-6 col-desk-2 col-6</h3>
                                 Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Excepteur sint obcaecat cupiditat non proident culpa. Mercedem aut nummos unde unde extricat, amaras. Praeterea iter est quasdam res quas ex communi.
                             </div>
                                 
@@ -80,12 +80,12 @@ Template Name: Homepage
                         <div class="row">
                         
                             <div class="col col-palm-4 col-8">
-                                <strong>col-palm-4 col-8</strong>
+                                <h3>col-palm-4 col-8</h3>
                                 Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Excepteur sint obcaecat cupiditat non proident culpa. Mercedem aut nummos unde unde extricat, amaras. Praeterea iter est quasdam res quas ex communi.
                             </div>
                             
                             <div class="col col-palm-4 col-8">
-                                <strong>col-palm-4 col-8</strong>
+                                <h3>col-palm-4 col-8</h3>
                                 Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Excepteur sint obcaecat cupiditat non proident culpa. Mercedem aut nummos unde unde extricat, amaras. Praeterea iter est quasdam res quas ex communi.
                             </div>
                                 
@@ -94,22 +94,22 @@ Template Name: Homepage
                         <div class="row">
                         
                             <div class="col col-palm-4 col-lap-2 col-2">
-                                <strong>col-palm-4 col-lap-2 col-2</strong>
+                                <h3>col-palm-4 col-lap-2 col-2</h3>
                                 Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Excepteur sint obcaecat cupiditat non proident culpa. Mercedem aut nummos unde unde extricat, amaras. Praeterea iter est quasdam res quas ex communi.
                             </div>
                             
                             <div class="col col-palm-4 col-lap-2 col-2">
-                                <strong>col-palm-4 col-lap-2 col-2</strong>
+                                <h3>col-palm-4 col-lap-2 col-2</h3>
                                 Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Excepteur sint obcaecat cupiditat non proident culpa. Mercedem aut nummos unde unde extricat, amaras. Praeterea iter est quasdam res quas ex communi.
                             </div>
                             
                             <div class="col col-palm-4 col-lap-2 col-2">
-                                <strong>col-palm-4 col-lap-2 col-2</strong>
+                                <h3>col-palm-4 col-lap-2 col-2</h3>
                                 Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Excepteur sint obcaecat cupiditat non proident culpa. Mercedem aut nummos unde unde extricat, amaras. Praeterea iter est quasdam res quas ex communi.
                             </div>
                             
                             <div class="col col-palm-4 col-lap-2 col-2">
-                                <strong>col-palm-4 col-lap-2 col-2</strong>
+                                <h3>col-palm-4 col-lap-2 col-2</h3>
                                 Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Excepteur sint obcaecat cupiditat non proident culpa. Mercedem aut nummos unde unde extricat, amaras. Praeterea iter est quasdam res quas ex communi.
                             </div>
                             
@@ -118,42 +118,42 @@ Template Name: Homepage
                         <div class="row">
                         
                             <div class="col col-palm-2 col-lap-1 col-1">
-                                <strong>col-palm-2 col-lap-1 col-1</strong>
+                                <h3>col-palm-2 col-lap-1 col-1</h3>
                                 Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Excepteur sint obcaecat cupiditat non proident culpa. Mercedem aut nummos unde unde extricat, amaras. Praeterea iter est quasdam res quas ex communi.
                             </div>
                             
                             <div class="col col-palm-2 col-lap-1 col-1">
-                                <strong>col-palm-2 col-lap-1 col-1</strong>
+                                <h3>col-palm-2 col-lap-1 col-1</h3>
                                 Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Excepteur sint obcaecat cupiditat non proident culpa. Mercedem aut nummos unde unde extricat, amaras. Praeterea iter est quasdam res quas ex communi.
                             </div>
                             
                             <div class="col col-palm-2 col-lap-1 col-1">
-                                <strong>col-palm-2 col-lap-1 col-1</strong>
+                                <h3>col-palm-2 col-lap-1 col-1</h3>
                                 Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Excepteur sint obcaecat cupiditat non proident culpa. Mercedem aut nummos unde unde extricat, amaras. Praeterea iter est quasdam res quas ex communi.
                             </div>
                             
                             <div class="col col-palm-2 col-lap-1 col-1">
-                                <strong>col-palm-2 col-lap-1 col-1</strong>
+                                <h3>col-palm-2 col-lap-1 col-1</h3>
                                 Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Excepteur sint obcaecat cupiditat non proident culpa. Mercedem aut nummos unde unde extricat, amaras. Praeterea iter est quasdam res quas ex communi.
                             </div>
                             
                             <div class="col col-palm-2 col-lap-1 col-1">
-                                <strong>col-palm-2 col-lap-1 col-1</strong>
+                                <h3>col-palm-2 col-lap-1 col-1</h3>
                                 Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Excepteur sint obcaecat cupiditat non proident culpa. Mercedem aut nummos unde unde extricat, amaras. Praeterea iter est quasdam res quas ex communi.
                             </div>
                             
                             <div class="col col-palm-2 col-lap-1 col-1">
-                                <strong>col-palm-2 col-lap-1 col-1</strong>
+                                <h3>col-palm-2 col-lap-1 col-1</h3>
                                 Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Excepteur sint obcaecat cupiditat non proident culpa. Mercedem aut nummos unde unde extricat, amaras. Praeterea iter est quasdam res quas ex communi.
                             </div>
                             
                             <div class="col col-palm-2 col-lap-1 col-1">
-                                <strong>col-palm-2 col-lap-1 col-1</strong>
+                                <h3>col-palm-2 col-lap-1 col-1</h3>
                                 Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Excepteur sint obcaecat cupiditat non proident culpa. Mercedem aut nummos unde unde extricat, amaras. Praeterea iter est quasdam res quas ex communi.
                             </div>
                             
                             <div class="col col-palm-2 col-lap-1 col-1">
-                                <strong>col-palm-2 col-lap-1 col-1</strong>
+                                <h3>col-palm-2 col-lap-1 col-1</h3>
                                 Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Excepteur sint obcaecat cupiditat non proident culpa. Mercedem aut nummos unde unde extricat, amaras. Praeterea iter est quasdam res quas ex communi.
                             </div>
                             
