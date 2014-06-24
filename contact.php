@@ -220,7 +220,8 @@ endif;
                                 </label>                                
                                 <input type="text" name="checking" id="checking" value="<?php if (isset($_POST['checking'])) echo $_POST['checking'];?>">
                             
-                            </div>
+                            </div> <!-- .formrow -->
+                            
         
                             <div class="formrow">
                             
@@ -228,7 +229,8 @@ endif;
                                 <input type="hidden" name="about" value="<?php the_title(); ?>">
                                 <input type="submit" value="<?php _e( 'Verzenden', 'thema_vertalingen' ); ?>" class="submit">
                             
-                            </div>
+                            </div> <!-- .formrow -->
+        
         
                         </fieldset>
         
