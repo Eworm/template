@@ -25,7 +25,7 @@ yepnope([{
             //console.log('jQuery is here');
             
             if (!window.jQuery) {
-                yepnope(templateUrl + '/js/jquery-2.1.1.min.js');
+                yepnope(templateUrl + '/js/jquery.min.js');
             }
             
         }
