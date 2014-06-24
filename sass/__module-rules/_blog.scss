@@ -1,3 +1,5 @@
+// Single post
+// -----------------------------------------------------------------
 .blogpost {
     width: 100%;
     margin-bottom: $margin;
@@ -41,14 +43,20 @@
     
 }
 
+// Post title
+// -----------------------------------------------------------------
 .blogpost-title {
     margin: 0;
 }
 
+// Post content
+// -----------------------------------------------------------------
 .blogpost-entry {
     
 }
 
+// Blog nav
+// -----------------------------------------------------------------
 .blogpost-nav {
     text-align: center;
 
@@ -57,6 +65,8 @@
     }
 }
 
+// Post meta
+// -----------------------------------------------------------------
 time,
 .postdate {
     color: $lesser-color;
@@ -74,6 +84,8 @@ time,
     }
 }
 
+// Post options
+// -----------------------------------------------------------------
 .blogpost-options {
     @include rem('font-size', $text-palm);
 
@@ -87,7 +99,8 @@ time,
     }
 }
 
-
+// Post navigation
+// -----------------------------------------------------------------
 .blogpost-navigation {
     width: 100%;
     margin-bottom: $margin;
