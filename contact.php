@@ -7,10 +7,10 @@ Template Name: Contactformulier
 
 $emailSent = false;
 
-//If the form is submitted
+// If the form is submitted
 if (isset($_POST['submitted'])) :
 
-    //Check to see if the honeypot captcha field was filled in
+    // Check to see if the honeypot captcha field was filled in
     if (trim($_POST['checking']) !== '') :
         $captchaError = true;
     else :
@@ -27,7 +27,7 @@ if (isset($_POST['submitted'])) :
         
         endif;
 
-        //Check to make sure sure that a valid email address is submitted
+        // Check to make sure sure that a valid email address is submitted
         if (trim($_POST['emailadres']) === '') :
         
             $emailError = __( 'U bent vergeten uw e-mailadres in te vullen', 'thema_vertalingen' );
@@ -44,7 +44,7 @@ if (isset($_POST['submitted'])) :
         
         endif;
 
-        //Check to make sure that the message field is not empty
+        // Check to make sure that the message field is not empty
         if (trim($_POST['message']) === '') :
 
             $messageError = __( 'U bent vergeten een bericht in te vullen', 'thema_vertalingen' );
@@ -57,7 +57,7 @@ if (isset($_POST['submitted'])) :
         endif;
 
 
-        //If there is no error, send the email
+        // If there is no error, send the email
         if (!isset($hasError)) :
 
             require("class.phpmailer.php");
@@ -80,15 +80,15 @@ if (isset($_POST['submitted'])) :
             $mail->Subject      = "Contactformulier verstuurd door " . $name;
             $mail->Body         = "Naam: $name \n\nEmail: $email \n\nBericht: $message";
 
-            //error_reporting(E_ALL);
+            // error_reporting(E_ALL);
             
             if (!$mail->Send()) :
             
-                //echo "Mailer Error: " . $mail->ErrorInfo;
+                // echo "Mailer Error: " . $mail->ErrorInfo;
             
             else :
             
-                //echo "Message sent!";
+                // echo "Message sent!";
                 $emailSent = true;
             
             endif;
@@ -150,14 +150,14 @@ endif;
                         </header>
         
                         <fieldset class="formcontainer">
+                        
         
                             <div class="formrow">
                             
                                 <label for="naam">
                                     <?php _e( 'Uw naam', 'thema_vertalingen' ); ?> <span class="req"><?php _e( '(Verplicht)', 'thema_vertalingen' ); ?></span>
                                 </label>
-                                
-                                <input value="<?php if (isset($_POST['naam'])) echo $_POST['naam'];?>" type="text" name="naam" id="naam" data-parsley-error-message="U bent vergeten uw naam in te vullen" required>
+                                <input value="<?php if (isset($_POST['naam'])) echo $_POST['naam'];?>" type="text" name="naam" id="naam" data-parsley-error-message="<?php _e( 'U bent vergeten uw naam in te vullen', 'thema_vertalingen' ); ?>" required>
                                 
                                 <?php if ($nameError != '') : ?>
                                     <div class="error">
@@ -165,15 +165,15 @@ endif;
                                     </div>
                                 <?php endif; ?>
     
-                            </div>
+                            </div> <!-- .formrow -->
+                            
         
                             <div class="formrow">
                             
                                 <label for="emailadres">
                                     <?php _e( 'Uw e-mailadres', 'thema_vertalingen' ); ?> <span class="req"><?php _e( '(Verplicht)', 'thema_vertalingen' ); ?></span>
                                 </label>
-                                
-                                <input value="<?php if (isset($_POST['emailadres'])) echo $_POST['emailadres'];?>" type="email" name="emailadres" id="emailadres" data-parsley-trigger="change" data-parsley-required-message="U bent vergeten uw e-mailadres in te vullen" data-parsley-error-message="U heeft een ongeldig e-mailadres ingevuld" required>
+                                <input value="<?php if (isset($_POST['emailadres'])) echo $_POST['emailadres'];?>" type="email" name="emailadres" id="emailadres" data-parsley-trigger="change" data-parsley-required-message="<?php _e( 'U bent vergeten uw e-mailadres in te vullen', 'thema_vertalingen' ); ?>" data-parsley-error-message="<?php _e( 'U heeft een ongeldig e-mailadres ingevuld', 'thema_vertalingen' ); ?>" required>
     
                                 <?php if ($emailError != '') : ?>
                                     <div class="error">
@@ -181,15 +181,15 @@ endif;
                                     </div>
                                 <?php endif; ?>
     
-                            </div>
+                            </div> <!-- .formrow -->
+                            
         
                             <div class="formrow">
                             
-                                <label for="message" id="message_label">
+                                <label for="message">
                                     <?php _e( 'Omschrijf kort uw vraag', 'thema_vertalingen' ); ?> <span class="req"><?php _e( '(Verplicht)', 'thema_vertalingen' ); ?></span>
                                 </label>
-                                
-                                <textarea id="message" name="message" class="textarea" data-parsley-error-message="U bent vergeten een bericht in te vullen" required></textarea>
+                                <textarea id="message" name="message" class="textarea" data-parsley-error-message="<?php _e( 'U bent vergeten een bericht in te vullen', 'thema_vertalingen' ); ?>" required></textarea>
     
                                 <?php if ($messageError != '') : ?>
                                     <div class="error">
@@ -197,14 +197,14 @@ endif;
                                     </div>
                                 <?php endif; ?>
     
-                            </div>
+                            </div> <!-- .formrow -->
+                            
         
                             <div id="screenreader" class="formrow">
                             
                                 <label for="checking">
                                     <?php _e( 'Als u dit formulier wilt versturen moet u dit invoerveld leeg laten', 'thema_vertalingen' ); ?>
-                                </label>
-                                
+                                </label>                                
                                 <input type="text" name="checking" id="checking" value="<?php if (isset($_POST['checking'])) echo $_POST['checking'];?>">
                             
                             </div>
@@ -234,7 +234,7 @@ endif;
                                 var company_address = [{location:"<?php echo $options["theme_address"]; ?>"}];
                             </script>
                         
-                            <div id="map_address" style="width:100%;height:250px;"></div>
+                            <div id="map_address" style="width:100%; height:250px;"></div>
                         
                         </section>
         
@@ -245,12 +245,6 @@ endif;
             </div> <!-- .row -->
     
         </div> <!-- .core -->
-    
-        <div id="dialog-message" title="Foutmelding">
-        
-            <p><?php _e( 'Er ging iets niet goed met het versturen van het formulier. Probeert u het nog eens.', 'thema_vertalingen' ); ?></p>
-        
-        </div>
     
     </div> <!-- .divider -->
 
