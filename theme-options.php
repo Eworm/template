@@ -41,7 +41,7 @@ function theme_options_do_page() {
             <table class="form-table">
                 <tr valign="top">
                     <td colspan="2">
-                        <h2>Algemene opties</h2>
+                        <h2><?php _e( 'Algemene opties', 'thema_vertalingen' ); ?></h2>
                     </td>
                 </tr>
                 <?php
@@ -58,7 +58,7 @@ function theme_options_do_page() {
             <table class="form-table">
                 <tr valign="top">
                     <td colspan="2">
-                        <h2>SEO</h2>
+                        <h2><?php _e( 'SEO', 'thema_vertalingen' ); ?></h2>
                     </td>
                 </tr>
                 <?php

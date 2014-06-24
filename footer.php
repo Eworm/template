@@ -21,30 +21,41 @@
                         
                     </div>
                     
-                </div>
+                </div> <!-- .doormat -->
                 
                 <footer class="footer divider divider-footer">
                 
                     <div class="core core-footer">
+                    
                         &copy; <?php echo date("Y") ?>
+                        
                     </div>
                     
-                </footer>
+                </footer> <!-- .footer -->
                 
-            </div>    
-        </div>
+            </div> <!-- .container-transition -->
+            
+        </div> <!-- .container -->
+        
         
         <!-- So we can use the template url in  javascript -->
         <script>var templateUrl = "<?php bloginfo('template_url'); ?>";</script>
         
+        
         <!-- This will load and inject all js & css -->
         <script src="<?php bloginfo('template_url'); ?>/js/yepnope.min.js" async></script>
         
-        <?php if(is_page_template('contact.php')) { ?>
+        
+        <!-- Add google maps only when necessary -->
+        <?php if (is_page_template('contact.php')) { ?>
+        
             <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBgU-OMTQXQwUwOyNRZB5jh1cFgY5z_L2A&sensor=false"></script>
+        
         <?php } ?>
         
+        
         <?php wp_footer(); ?>
+  
   
     </body>
 </html>
