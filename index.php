@@ -13,17 +13,17 @@
                     <?php /* Start the Loop */ ?>              
                     <?php while (have_posts()) : the_post(); ?>
     
-                        <article class="blogpost">
+                        <article <?php post_class(); ?>>
     
-                            <header class="blogpost-header">
+                            <header class="post-header">
                             
-                                <h1 class="blogpost-title">
+                                <h1 class="post-title">
                                     <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Directe link naar', 'thema_vertalingen' ); ?><?php the_title_attribute(); ?>">
                                         <?php the_title(); ?>
                                     </a>
                                 </h1>
                                 
-                                <p class="blogpost-date">
+                                <p class="post-date">
                                     <?php the_time('j F Y') ?> &mdash; <?php the_time('g:ia') ?> <?php edit_post_link('Artikel aanpassen','<strong> |</strong> ',''); ?>
                                     <br>
                                     <?php /* pages don't have categories or tags */ if (!is_page()) : ?>
@@ -35,11 +35,11 @@
     
                             </header>
     
-                            <div class="blogpost-entry">
+                            <div class="post-entry">
     
                                 <?php the_excerpt(); ?>
     
-                                <span class="blogpost-options">
+                                <span class="post-options">
     
                                     <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Directe link naar', 'thema_vertalingen' ); ?>
                                         <?php the_title_attribute(); ?>"><?php _e( 'Verder lezen', 'thema_vertalingen' ); ?>
@@ -57,7 +57,7 @@
                     
                     <?php if (!is_single() && !is_page()) { ?>
     
-                        <ul class="blogpost-navigation">
+                        <ul class="post-navigation">
                             
                             <li class="goforward">
                                 <?php previous_posts_link('&laquo; Nieuwere posts'); ?>

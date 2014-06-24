@@ -13,19 +13,19 @@
         
                     <article class="main-content single-post blogpost">
         
-                        <header class="blogpost-header single-post-header">
+                        <header class="post-header single-post-header">
     
-                            <h1 class="blogpost-title maincontent-title single-post-title">
+                            <h1 class="post-title maincontent-title single-post-title">
                                 <?php the_title(); ?>
                             </h1>
     
                         </header>
                         
-                        <div class="blogpost-entry">
+                        <div class="post-entry">
                             <?php the_content('Lees meer &raquo;'); ?>
                         </div>
                         
-                        <p class="blogpost-date">
+                        <p class="post-date">
                             <?php the_time('j F Y') ?> &mdash; <?php the_time('g:ia') ?> <?php edit_post_link('Artikel aanpassen','<strong> |</strong> ',''); ?>
                             <br>
                             <?php /* pages don't have categories or tags */ if (!is_page()) : ?>
@@ -64,15 +64,15 @@
                     
                     <article class="main-content blogpost single-post no-results not-found">
     
-                        <header class="blogpost-header maincontent-header single-post-header">
+                        <header class="post-header maincontent-header single-post-header">
                             
-                            <h1 class="blogpost-title maincontent-title single-post-title">
+                            <h1 class="post-title maincontent-title single-post-title">
                                 <?php _e( 'Deze pagina bestaat niet', 'thema_vertalingen' ); ?>
                             </h1>
     
                         </header>
         
-                        <div class="blogpost-entry">
+                        <div class="post-entry">
                             <p><?php _e( 'Sorry, we hebben deze pagina niet gevonden. Maar misschien kun je zoeken om de juiste pagina te vinden:', 'thema_vertalingen' ); ?></p>
                             <?php get_search_form(); ?>
                         </div>

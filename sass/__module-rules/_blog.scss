@@ -1,6 +1,6 @@
 // Single post
 // -----------------------------------------------------------------
-.blogpost {
+.post {
     width: 100%;
     margin-bottom: $margin;
     float: left;
@@ -17,7 +17,7 @@
         padding-left: 40px;
     }
 
-    .blog-thumb {
+    .post-thumb {
         display: none;
 
         @include min-screen($lap) {
@@ -39,24 +39,27 @@
     }
 }
 
-.blogpost-header {
+.sticky {   // Sticky post
+}
+
+.post-header {
     
 }
 
 // Post title
 // -----------------------------------------------------------------
-.blogpost-title {
+.post-title {
     margin: 0;
 }
 
 // Post content
 // -----------------------------------------------------------------
-.blogpost-entry {
+.post-entry {
 }
 
 // Blog nav
 // -----------------------------------------------------------------
-.blogpost-nav {
+.post-nav {
     text-align: center;
 
     @include min-screen($lap) {
@@ -67,7 +70,7 @@
 // Post meta
 // -----------------------------------------------------------------
 time,
-.postdate {
+.post-date {
     color: $lesser-color;
     @include rem('font-size', $text-palm);
 
@@ -83,9 +86,9 @@ time,
     }
 }
 
-// Post options
+// Continue reading & nr. of comments
 // -----------------------------------------------------------------
-.blogpost-options {
+.post-options {
     @include rem('font-size', $text-palm);
 
     a {
@@ -100,7 +103,7 @@ time,
 
 // Post navigation
 // -----------------------------------------------------------------
-.blogpost-navigation {
+.post-navigation {
     width: 100%;
     margin-bottom: $margin;
     padding: 0;

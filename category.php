@@ -17,11 +17,11 @@
                 <?php /* Start the Loop */ ?>
                 <?php while (have_posts()) : the_post(); ?>
 
-                    <article class="blogpost">
+                    <article <?php post_class(); ?>>
 
-                        <header class="blogpost-header">
+                        <header class="post-header">
                         
-                            <h1 class="blogpost-title">
+                            <h1 class="post-title">
                                 <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Directe link naar', 'thema_vertalingen' ); ?> <?php the_title_attribute(); ?>">
                                     <?php the_title(); ?>
                                 </a>
@@ -33,11 +33,11 @@
                             
                         </header>
                         
-                        <div class="blogpost-entry">
+                        <div class="post-entry">
                             
                             <?php the_excerpt(); ?>
                             
-                            <span class="blogpost-options">
+                            <span class="post-options">
                             
                                 <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Directe link naar', 'thema_vertalingen' ); ?> <?php the_title_attribute(); ?>">
                                     <?php _e( 'Verder lezen', 'thema_vertalingen' ); ?>
@@ -57,15 +57,15 @@
     
                 <article class="blogpost no-results not-found">
                 
-                    <header class="blogpost-header">
+                    <header class="post-header">
                         
-                        <h1 class="blogpost-title">
+                        <h1 class="post-title">
                             <?php _e( 'Deze pagina bestaat niet', 'thema_vertalingen' ); ?>
                         </h1>
 
                     </header>
     
-                    <div class="blogpost-entry">
+                    <div class="post-entry">
                     
                         <p><?php _e( 'Sorry, we hebben deze pagina niet gevonden. Maar misschien kun je zoeken om de juiste pagina te vinden:', 'thema_vertalingen' ); ?></p>
                     
