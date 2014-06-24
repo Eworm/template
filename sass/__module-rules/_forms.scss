@@ -80,7 +80,7 @@ input[type=submit] {
         }
     }
 
-    li {
+    li { // List with radio/checkboxes
         margin-right: 12px;
         padding: 0;
         background: none;
@@ -96,6 +96,11 @@ input[type=submit] {
             display: inline;
             clear: none;
         }
+    }
+    
+    small { // Form field explanation
+        display: block;
+        font-size: $text-palm;
     }
 }
 

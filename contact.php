@@ -187,6 +187,7 @@ endif;
                                     <?php _e( 'Uw e-mailadres', 'thema_vertalingen' ); ?> <span class="req"><?php _e( '(Verplicht)', 'thema_vertalingen' ); ?></span>
                                 </label>
                                 <input value="<?php if (isset($_POST['emailadres'])) echo $_POST['emailadres'];?>" type="email" name="emailadres" id="emailadres" data-parsley-trigger="change" data-parsley-required-message="<?php _e( $emailError_message, 'thema_vertalingen' ); ?>" data-parsley-error-message="<?php _e( $emailError_message, 'thema_vertalingen' ); ?>" required>
+                                <small><?php _e( 'We gebruiken uw e-mailadres om contact met u op te kunnen nemen', 'thema_vertalingen' ); ?></small>
     
                                 <?php if ($emailError != '') : ?>
                                     <div class="error">
