@@ -1,10 +1,9 @@
 // Page title
 // -----------------------------------------------------------------
 .main-content-title {
+    margin: 0 0 $margin;
     font-weight: normal;
     @include rem('font-size', $header-1);
-    @include rem('margin-top', $line-height/$header-1);
-    @include rem('margin-bottom', ($line-height/$header-1));
 
     @include min-screen($lap) {
     }
@@ -39,14 +38,12 @@
     }
 
     h2 {
-        @include rem('margin-top', $line-height, $header-2);
-        @include rem('margin-bottom', $line-height, $header-2);
+        margin: 0 0 $margin;
         @include rem('font-size', $header-2);
     }
     
     h3 {
-        @include rem('margin-top', $line-height, $header-3);
-        @include rem('margin-bottom', $line-height, $header-3);
+        margin: 0 0 $margin-skinny;
         @include rem('font-size', $header-3);
     }
     
