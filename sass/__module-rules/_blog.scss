@@ -72,6 +72,10 @@
 .post-date {
     color: $lesser-color;
     @include rem('font-size', $text-palm);
+    
+    .single-post & {
+        margin-top: $margin;
+    }
 
     a {
         color: $lesser-color;

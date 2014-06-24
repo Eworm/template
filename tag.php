@@ -71,7 +71,7 @@
     
                 <?php else : ?>
     
-                    <article class="blogpost no-results not-found">
+                    <article <?php post_class(); ?>>
     
                         <header class="post-header">
     

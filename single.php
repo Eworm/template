@@ -11,7 +11,7 @@
                 <?php if (have_posts()) : ?>
                 <?php while (have_posts()) : the_post(); ?>
         
-                    <article class="main-content single-post blogpost">
+                    <article <?php post_class('main-content single-post'); ?>>
         
                         <header class="post-header single-post-header">
     
@@ -48,7 +48,7 @@
                 <?php endwhile; ?>
                 <?php else : ?>
                     
-                    <article class="main-content blogpost single-post no-results not-found">
+                    <article <?php post_class('main-content single-post no-results not-found'); ?>>
     
                         <header class="post-header maincontent-header single-post-header">
                             
