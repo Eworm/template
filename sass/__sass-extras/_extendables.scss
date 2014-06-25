@@ -58,3 +58,43 @@
         width: 100%;
     }
 }
+
+// Summary
+%post {
+    width: 100%;
+    margin-bottom: $margin;
+    float: left;
+    
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    ul {
+        padding-left: 40px;
+    }
+
+    .post-thumb {
+        display: none;
+
+        @include min-screen($lap) {
+            width: 87px;
+            height: 68px;
+            margin-right: $gutter-skinny;
+            overflow: hidden;
+            float: left;
+            display: block;
+            position: relative;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 0;
+            }
+        }
+    }
+}

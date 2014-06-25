@@ -1,0 +1,57 @@
+// Unordered list
+// -----------------------------------------------------------------
+.paging {
+    @extend %ul-nostyling;
+    
+    > li {
+        float: left;
+        
+        > a {
+            padding: $gutter/4 $gutter/2;
+            margin-right: $gutter/4;
+            display: block;
+            float: left;
+            border: 1px solid $border-color;
+            text-decoration: none;
+            color: $body-color;
+            
+            &:hover,
+            &:focus {
+                background: $border-color;
+            }
+        }
+    }
+}
+
+// Next & prev
+// -----------------------------------------------------------------
+.paging-navigation {
+    
+}
+
+.paging-next {
+    
+}
+
+.paging-left {
+    
+}
+
+// A list item
+// -----------------------------------------------------------------
+.page-number {
+    display: none;
+            
+    @include min-screen($lap) {
+        display: block;
+    }
+}
+
+// Extra current class on page-number
+// -----------------------------------------------------------------
+.active-page {
+    
+    > a {
+        background: $border-color;
+    }
+}

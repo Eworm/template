@@ -1,11 +1,7 @@
 // Actual result
 // -----------------------------------------------------------------
 .search-result {
-    margin-bottom: $margin;
-    
-    &:last-child {
-        margin-bottom: 0;
-    }
+    @extend %post;
 }
 
 // Result header
@@ -17,6 +13,13 @@
 // Result title
 // -----------------------------------------------------------------
 .search-result-title {
-    font-weight: bold;
-    @include rem('font-size', $body-size);
+}
+
+// Result
+// -----------------------------------------------------------------
+.search-result-entry {
+    
+    p {
+        margin: 0;
+    } 
 }

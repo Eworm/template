@@ -8,7 +8,7 @@
     
         <div class="row">
 
-            <div class="main-content col col-8 no-margin">
+            <div class="main-content col col-5">
             
                 <?php if (have_posts()) : ?>
                 
@@ -22,11 +22,11 @@
                 
                     <?php while (have_posts()) : the_post(); ?>
                 
-                        <section class="search-result">
+                        <section <?php post_class('search-result'); ?>>
                         
                             <header class="search-result-header">
     
-                                <h1 class="search-result-title">
+                                <h1 class="search-result-title post-title">
                                     <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Permanente link naar', 'thema_vertalingen' ); ?><?php the_title(); ?>">
                                         <?php the_title(); ?>
                                     </a>
@@ -34,7 +34,9 @@
     
                             </header>
                         
-                            <?php the_excerpt('Continue reading &raquo;'); ?>
+                            <div class="search-result-entry post-entry">
+                                <?php the_excerpt('Continue reading &raquo;'); ?>
+                            </div>
                         
                             <span class="post-options">
                                 <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Directe link naar', 'thema_vertalingen' ); ?> <?php the_title_attribute(); ?>">

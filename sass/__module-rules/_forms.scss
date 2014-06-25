@@ -23,21 +23,25 @@ textarea {
     @include rem('font-size', $body-size);
 }
 
-input[type=file] {
+input[type="file"] {
     padding: 0;
 }
 
-input[type=checkbox],
-input[type=radio] {
+input[type="checkbox"],
+input[type="radio"] {
     width: auto;
     margin-right: $gutter-skinny;
 }
 
-input[type=submit] {
+input[type="submit"] {
     
     @include min-screen($lap) {
         width: auto;
     }
+}
+
+input[type="search"] {
+    box-sizing: border-box;
 }
 
 // The form
