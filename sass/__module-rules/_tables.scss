@@ -8,6 +8,7 @@ table {
 
     th,
     td {
+        padding: $padding-small;
         border-bottom: 1px solid $border-color;
         text-align: left;
         vertical-align: top;

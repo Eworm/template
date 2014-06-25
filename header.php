@@ -21,7 +21,7 @@
         
             // Add a page number if necessary:
             if ( $paged >= 2 || $page >= 2 )
-                echo ' | ' . sprintf( __( 'Page %s', 'twentyten' ), max( $paged, $page ) );
+                echo ' | ' . sprintf( __( 'Pagina %s', 'thema_vertalingen' ), max( $paged, $page ) );
         ?>
         </title>
         
