@@ -806,10 +806,13 @@ a.submit {
     float: left; }
 
 .sidebar-section-title {
-  margin: 0 0 28px;
+  margin: 0 0 14px;
   font-weight: bold;
   font-size: 14px;
   font-size: 0.875rem; }
+  @media screen and (min-width: 46.875em) {
+    .sidebar-section-title {
+      margin-bottom: 28px; } }
   .sidebar-section-title a {
     text-decoration: none; }
     .sidebar-section-title a:hover, .sidebar-section-title a:focus {
