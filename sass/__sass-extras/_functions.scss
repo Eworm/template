@@ -1,6 +1,6 @@
 // Pixels to em
 // -----------------------------------------------------------------
-@function calc-em($target-px, $context: $body-size) {
+@function calc-em($target-px, $context: $size) {
     @return ($target-px / $context) * 1em;
 }
 

@@ -33,6 +33,7 @@ $body-size: $text-lap;
     @return $number / ($number * 0 + 1);
 }
 
+// Or let SASS calculate it for you using the max-width & font-size
 // http://www.pearsonified.com/2011/12/golden-ratio-typography.php
 $golden-ratio: 1.61803398875;
 $line-height: $golden-ratio - (1 - ((strip-units($max-width)) / (((strip-units($body-size)) * $golden-ratio) * ((strip-units($body-size)) * $golden-ratio)))) * (1 / (2 * $golden-ratio));
