@@ -14,17 +14,28 @@ $text-wrist: $f-wrist;
 $text-palm: $f-palm;
 $text-lap: $f-lap;
 $text-desk: $f-desk;
-$text-wall: $f-desk;
-$text-cinema: $f-desk;
+$text-wall: $f-wall;
+$text-cinema: $f-cinema;
 
 
 // Standard site sizes
 // -----------------------------------------------------------------
 $base-size: $text-desk;
 $body-size: $text-lap;
-// Tool to calculate line-heights in unitless heights: http://cssleading.com/
-// Or calculate the right line-height according to the golden ratio: http://www.pearsonified.com/typography/
-$line-height: 28px;
+
+// Calculate the line-height according to the golden ratio
+// http://www.pearsonified.com/typography/
+// $line-height: 28px;
+
+// Remove units
+// -----------------------------------------------------------------
+@function strip-units($number) {
+    @return $number / ($number * 0 + 1);
+}
+
+// http://www.pearsonified.com/2011/12/golden-ratio-typography.php
+$golden-ratio: 1.61803398875;
+$line-golden: $golden-ratio - (1 - ((strip-units($max-width)) / (((strip-units($body-size)) * $golden-ratio) * ((strip-units($body-size)) * $golden-ratio)))) * (1 / (2 * $golden-ratio));
 
 
 // Font families

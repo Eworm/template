@@ -74,6 +74,7 @@
         
                             // Permalink set to default
                             if ($permalink == 'Default') {
+                            
                                 $req_uri = explode('paged=', $req_uri);
         
                                 if ($_GET['paged']) {
@@ -81,24 +82,30 @@
                                 } else {
                                     $uri = $req_uri[0] . '&paged=';
                                 }
+                                
                             // Permalink is set to Post name
                             } elseif ($permalink == 'Post name') {
+                            
                                 if (strpos($req_uri, 'page/') !== false) {
                                     $req_uri = explode('page/', $req_uri);
                                     $req_uri = $req_uri[0];
                                 }
                                 $uri = $req_uri . 'page/';
+                                
                             }
         
                             // The query
-                            $wp_query->query('showposts=' . $show_posts . '&post_type=post'.'&paged='.$paged);
+                            $wp_query->query('showposts=' . $show_posts . '&post_type=post&paged=' . $paged);
                             $count_posts = wp_count_posts('post');
         
                             // Determine number of posts
                             $count_post = round($count_posts->publish / $show_posts);
+                            
                             if ($count_posts->publish % $show_posts == 1) {
+                            
                                 $count_post++;
                                 $count_post = intval($count_post);
+                                
                             }
         
                             // The navigation

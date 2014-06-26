@@ -8,10 +8,10 @@
 
 // Theme rules (variables)
 // -----------------------------------------------------------------
+@import '__theme-rules/grid-variables';
 @import '__theme-rules/colors';
 @import '__theme-rules/defaults';
 @import '__theme-rules/fonts';
-@import '__theme-rules/grid-variables';
 @import '__theme-rules/header-sizes';
 @import '__theme-rules/mobile-widths';
 @import '__theme-rules/responsive-breakpoints';

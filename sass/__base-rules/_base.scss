@@ -21,7 +21,7 @@ html {
 
 body {
     background: $body-bg-color;
-    font: #{$body-size}/#{$line-height/$body-size} #{$body-font};
+    font: #{$body-size}/#{$line-golden} #{$body-font};
     color: $body-color;
 
     .active-menu & {
