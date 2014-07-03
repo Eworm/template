@@ -80,12 +80,14 @@ table {
         overflow-x: auto;
         font-size: 0;
         white-space: nowrap;
+        word-wrap: normal;
         
         @include min-screen($lap) {
             display: table-row-group;
             overflow: visible;
             border: 1px solid $border-color;
             white-space: normal;
+            word-wrap: break-word;
             font-size: $body-size;
         }
         
