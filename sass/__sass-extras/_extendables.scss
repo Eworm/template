@@ -27,13 +27,9 @@
 // Row in a form
 %formrow {
     width: 100%;
-    margin-bottom: $margin-skinny;
+    margin-bottom: $margin/2;
     float: left;
     clear: both;
-    
-    @include min-screen($lap) {
-        margin-bottom: $margin;
-    }
     
     &:last-child {
         margin-bottom: 0;
