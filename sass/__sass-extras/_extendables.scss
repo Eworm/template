@@ -1,3 +1,13 @@
+// Underline hover
+%hover-underline {
+    text-decoration: none;
+    
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
+}
+
 // Images used in posts
 %postimage {
     width: 100%;
@@ -18,7 +28,7 @@
 }
 
 // Remove styling of lists
-%ul-nostyling {
+%remove-style {
     margin: 0;
     padding: 0;
     list-style-type: none;

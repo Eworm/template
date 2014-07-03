@@ -28,7 +28,7 @@
 // Single item
 // -----------------------------------------------------------------
 .mobile-header-menuitem {
-    @extend %ul-nostyling;
+    @extend %remove-style;
     @include inline-block;
     
     a {

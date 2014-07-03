@@ -16,6 +16,10 @@
 // -----------------------------------------------------------------
 .post-title {
     margin: 0;
+    
+    a {
+        @extend %hover-underline;
+    }
 }
 
 .single-post-title {
@@ -65,11 +69,6 @@
     @include rem('font-size', $text-palm);
 
     a {
-        text-decoration: none;
-
-        &:hover,
-        &:focus {
-            text-decoration: underline;
-        }
+        @extend %hover-underline;
     }
 }

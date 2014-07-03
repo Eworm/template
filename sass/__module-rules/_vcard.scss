@@ -3,7 +3,7 @@
 .vcard {
 
     .vcard-section {
-        @extend %ul-nostyling;
+        @extend %remove-style;
     }
     
     .adr {

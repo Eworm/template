@@ -130,7 +130,7 @@
 }
 
 .comment-list {
-    @extend %ul-nostyling;
+    @extend %remove-style;
 }
 
 .comment-author-admin,
@@ -160,12 +160,7 @@
 // Link for replying
 // -----------------------------------------------------------------
 .comment-reply-link {
-    text-decoration: none;
-
-    &:hover,
-    &:focus {
-        text-decoration: underline;
-    }
+    @extend %hover-underline;
 }
 
 // Text

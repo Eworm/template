@@ -22,16 +22,11 @@
     }
 
     ul {
-        margin: 0;
+        @extend %remove-style;
     }
 
     a {
-        text-decoration: none;
-
-        &:hover,
-        &:focus {
-            text-decoration: underline;
-        }
+        @extend %hover-underline;
     }
 
     iframe {
@@ -58,11 +53,6 @@
     }
 
     a {
-        text-decoration: none;
-        
-        &:hover,
-        &:focus {
-            text-decoration: underline;
-        }
+        @extend %hover-underline;
     }
 }
