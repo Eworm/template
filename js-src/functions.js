@@ -96,8 +96,8 @@ $(document).ready(function() {
     };
     
     
-    // Form validation
-    // $('#contactform').parsley();
+    // Commentform validation
+    // $('#comment-form').parsley();
 
 
     /* Responsive javascript: https://github.com/JoshBarr/js-media-queries */

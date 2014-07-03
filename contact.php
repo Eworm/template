@@ -10,13 +10,6 @@ Template Name: Contactformulier
 $emailSent = false;
 
 
-// Error messages
-$nameError_message = 'U bent vergeten uw naam in te vullen';
-$emailRequired_message = 'U bent vergeten uw e-mailadres in te vullen';
-$emailError_message = 'U heeft een ongeldig e-mailadres ingevuld';
-$messageError_message = 'U bent vergeten een bericht in te vullen';
-
-
 // If the form is submitted
 if (isset($_POST['submitted'])) :
 
@@ -129,10 +122,10 @@ endif;
                 <div class="main-content col col-5">
         
                     <header class="main-content-header">
-                        <h1 class="main-content-title"><?php _e( 'Bedankt voor uw e-mail', 'thema_vertalingen' ); ?>, <?=$name;?></h1>
+                        <h1 class="main-content-title"><?php _e( 'Bedankt voor Je e-mail', 'thema_vertalingen' ); ?>, <?=$name;?></h1>
                     </header>
         
-                    <p><?php _e( 'Uw e-mail is verstuurd. Ik neem zo snel mogelijk contact met u op.', 'thema_vertalingen' ); ?></p>
+                    <p><?php _e( 'Je e-mail is verstuurd. Ik neem zo snel mogelijk contact met u op.', 'thema_vertalingen' ); ?></p>
         
                     <p><a href="<?php echo get_settings('home'); ?>"><?php _e( 'Terug naar de homepage', 'thema_vertalingen' ); ?></a></p>
         
@@ -168,7 +161,7 @@ endif;
                             <div class="formrow">
                             
                                 <label for="naam">
-                                    <?php _e( 'Uw naam', 'thema_vertalingen' ); ?> <span class="req"><?php _e( '(Verplicht)', 'thema_vertalingen' ); ?></span>
+                                    <?php _e( 'Je naam', 'thema_vertalingen' ); ?> <span class="req"><?php _e( '(Verplicht)', 'thema_vertalingen' ); ?></span>
                                 </label>
                                 <input value="<?php if (isset($_POST['naam'])) echo $_POST['naam'];?>" type="text" name="naam" id="naam" data-parsley-error-message="<?php _e( $nameError_message, 'thema_vertalingen' ); ?>" required>
                                 
@@ -184,10 +177,10 @@ endif;
                             <div class="formrow">
                             
                                 <label for="emailadres">
-                                    <?php _e( 'Uw e-mailadres', 'thema_vertalingen' ); ?> <span class="req"><?php _e( '(Verplicht)', 'thema_vertalingen' ); ?></span>
+                                    <?php _e( 'Je e-mailadres', 'thema_vertalingen' ); ?> <span class="req"><?php _e( '(Verplicht)', 'thema_vertalingen' ); ?></span>
                                 </label>
                                 <input value="<?php if (isset($_POST['emailadres'])) echo $_POST['emailadres'];?>" type="email" name="emailadres" id="emailadres" data-parsley-trigger="change" data-parsley-required-message="<?php _e( $emailError_message, 'thema_vertalingen' ); ?>" data-parsley-error-message="<?php _e( $emailError_message, 'thema_vertalingen' ); ?>" required>
-                                <small><?php _e( 'We gebruiken uw e-mailadres om contact met u op te kunnen nemen', 'thema_vertalingen' ); ?></small>
+                                <small><?php _e( 'We gebruiken Je e-mailadres om contact met u op te kunnen nemen', 'thema_vertalingen' ); ?></small>
     
                                 <?php if ($emailError != '') : ?>
                                     <div class="error">
@@ -201,7 +194,7 @@ endif;
                             <div class="formrow">
                             
                                 <label for="message">
-                                    <?php _e( 'Omschrijf kort uw vraag', 'thema_vertalingen' ); ?> <span class="req"><?php _e( '(Verplicht)', 'thema_vertalingen' ); ?></span>
+                                    <?php _e( 'Omschrijf kort Je vraag', 'thema_vertalingen' ); ?> <span class="req"><?php _e( '(Verplicht)', 'thema_vertalingen' ); ?></span>
                                 </label>
                                 <textarea id="message" name="message" class="textarea" data-parsley-error-message="<?php _e( $messageError_message, 'thema_vertalingen' ); ?>" required></textarea>
     
