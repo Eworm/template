@@ -53,8 +53,3 @@ Version: 1.0
 @import '__module-rules/paging';
 @import '__module-rules/search-results';
 @import '__module-rules/vcard';
-
-
-// Elements above the fold using sprites should be here for an optimal pagespeed score
-// -----------------------------------------------------------------
-@import '__base-rules/sprites';
