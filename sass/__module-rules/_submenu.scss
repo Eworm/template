@@ -1,12 +1,9 @@
 // A submenu on a page
 // -----------------------------------------------------------------
-#submenu {
+.page-sub-menu {
     display: none;
-    float: none;
 
     @include min-screen($lap) {
-        margin-bottom: $margin;
-        float: left;
         clear: none;
         display: block;
         border: 1px solid $border-color;
