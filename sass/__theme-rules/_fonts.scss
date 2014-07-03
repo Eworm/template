@@ -39,8 +39,17 @@ $golden-ratio: 1.61803398875;
 $line-height: $golden-ratio - (1 - ((strip-units($max-width)) / (((strip-units($body-size)) * $golden-ratio) * ((strip-units($body-size)) * $golden-ratio)))) * (1 / (2 * $golden-ratio));
 
 
+
+
+// Define font names here, use them later on
+// -----------------------------------------------------------------
+$websafe: Arial, Verdana, sans-serif;
+$fontface: Arial, Verdana, sans-serif;
+$serif: Georgia, "Times new roman", serif;
+
+
 // Font families
 // -----------------------------------------------------------------
-$body-font: Arial, Verdana, sans-serif;         // Websafe font family
-$special-font: Arial, Verdana, sans-serif;      // Special font, for example a google font. Use google fonts locally for a better pagespeed score
-$sec-font: Georgia, "Times new roman", serif;
+$body-font: $websafe;                           // Websafe font family
+$special-font: $fontface;      // Special font, for example a google font. Use google fonts locally for a better pagespeed score
+$sec-font: $serif;

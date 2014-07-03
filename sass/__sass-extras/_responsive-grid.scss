@@ -8,17 +8,13 @@
 // Calculate the grid widths
 // -----------------------------------------------------------------
 @mixin col-width($i, $value: true) {
-    
+
     // The standard width is optional
     @if $value == true {
         width: 100% / ($max-width / (((($max-width - (($nr-of-columns - 1) * $gutter)) / $nr-of-columns) * $i) + (($i - 1) * $gutter)));
     }
-
-    // But there's alway a flexbox width    
-    .flexbox &,
-    .flexboxlegacy & {
-        @include flex(0 0 (100% / ($max-width / (((($max-width - (($nr-of-columns - 1) * $gutter)) / $nr-of-columns) * $i) + (($i - 1) * $gutter)))));
-    }
+    // But there's alway a flexbox width
+    @include flex(0 0 (100% / ($max-width / (((($max-width - (($nr-of-columns - 1) * $gutter)) / $nr-of-columns) * $i) + (($i - 1) * $gutter)))));
 }
 
 
@@ -27,120 +23,116 @@
 .row {
     width: 100%;
     float: left;
-    
-    .flexbox &,
-    .flexboxlegacy & {
-        @include flexbox;
-        @include flex-flow(row wrap);
-        @include align-items(flex-start);
-        @include justify-content(space-between);
-    }
-    
+    @include flexbox;
+    @include flex-flow(row wrap);
+    @include align-items(flex-start);
+    @include justify-content(space-between);
+
     > .col {
         width: 100%;
         margin-bottom: $margin/2; // For the vertical rhythm
         float: left;
-        
-        .flexbox &,
-        .flexboxlegacy & {
-            @include flex-direction(column);
-        }
-        
+        @include flex-direction(column);
+
         @include min-screen($lap) {
             margin-right: gutter-width(); // This is the gutter
             margin-bottom: $margin;
-            
+            @include flex(1 1 0);
+
             // Flexbox browsers don't need the gutter
             // The width of the flexbox columns is calculated minus the gutters
             // They're positioned using justify-content: space between
             .flexbox &,
             .flexboxlegacy & {
                 margin-right: 0;
-                @include flex(1 1 0);
             }
         }
-        
+
         &:last-child {
-        
+
             // Flexbox browsers don't need this, but we'll keep it anyway
             @include min-screen($lap) {
                 margin-right: 0;
             }
         }
     }
-    
+
     // All screen widths
     // -----------------------------------------------------------------
     @for $i from 1 through $nr-of-columns {
-    
+
         @include min-screen($lap) {
-        
+
             .col-#{$i} {
                 @include col-width($i, true);
             }
         }
     }
-    
-    
+
+
     // Palm to lap
     // Non-flexbox browsers will use the standard col widths for this small screen to prevent columns becoming too small
+    // You can remove this when unused to minimize the css
     // -----------------------------------------------------------------
     @for $i from 1 through $nr-of-columns {
-    
+
         .col-palm-#{$i} {
-        
+
             @include screen($palm, $lap) {
                 @include col-width($i, false);
             }
         }
     }
-    
-    
+
+
     // Lap to desk
+    // You can remove this when unused to minimize the css
     // -----------------------------------------------------------------
     @for $i from 1 through $nr-of-columns {
-    
+
         .col-lap-#{$i} {
-        
+
             @include screen($lap, $desk) {
                 @include col-width($i, true);
             }
         }
     }
-    
-    
+
+
     // Desk to wall
+    // You can remove this when unused to minimize the css
     // -----------------------------------------------------------------
     @for $i from 1 through $nr-of-columns {
-    
+
         .col-desk-#{$i} {
-        
+
             @include screen($desk, $wall) {
                 @include col-width($i, true);
             }
         }
     }
-    
-    
+
+
     // Wall to cinema
+    // You can remove this when unused to minimize the css
     // -----------------------------------------------------------------
     @for $i from 1 through $nr-of-columns {
-    
+
         .col-wall-#{$i} {
-        
+
             @include screen($wall, $cinema) {
                 @include col-width($i, true);
             }
         }
     }
-    
-    
+
+
     // Offset
     // -----------------------------------------------------------------
     @for $i from 1 through $nr-of-columns {
-    
+
         .col-push-#{$i} {
-        
+
             @include min-screen($lap) {
                 margin-left: 100% / ($max-width / (((($max-width - (($nr-of-columns + 1) * $gutter)) / $nr-of-columns) * $i) + (($i + 1) * $gutter)));
             }
@@ -154,7 +146,7 @@
 .no-margin {
     margin-right: 0;
 }
-        
+
 .plus-margin {
     margin-right: gutter-width();
 }

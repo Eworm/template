@@ -9,11 +9,11 @@
 // -----------------------------------------------------------------
 @mixin svgbg($image) {
     background-repeat: no-repeat;
-    background-image: url($image + '.png');
+    background-image: url($image + '.svg');
     
-    .svg & {
+    .no-svg & {
         // On svg capable browsers, use an svg
-        background-image: url($image + '.svg');
+        background-image: url($image + '.png');
     }    
 }
 
@@ -22,6 +22,7 @@
 // The value should be the same as the font-size value for the html element
 // If the html element's font-size is set to 62.5% (of the browser's default font-size of 16px),
 // then the variable below would be 10px.
+// -----------------------------------------------------------------
 $baseline-px: $base-size;
 
 @mixin rem($property, $px-values) {

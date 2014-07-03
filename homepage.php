@@ -29,6 +29,86 @@ Template Name: Homepage
                         
                         <div class="main-content-body">
                             <?php the_content('Weiterlesen &raquo;'); ?>
+                            
+                            <table border="0" cellspacing="0" class="responsive-table">
+                                <thead>
+                                    <tr>
+                                        <th>Header 1</th>
+                                        <th>Header 2</th>
+                                        <th>Header 3</th>
+                                        <th>Header 4</th>
+                                        <th>Header 5</th>
+                                        <th>Header 6</th>
+                                        <th>Header 7</th>
+                                        <th>Header 8</th>
+                                        <th>Header 9</th>
+                                        <th>Header 10</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Cell 1</td>
+                                        <td>Cell 2</td>
+                                        <td>Cell 3</td>
+                                        <td>Cell 4</td>
+                                        <td>Cell 5</td>
+                                        <td>Cell 6</td>
+                                        <td>Cell 7</td>
+                                        <td>Cell 8</td>
+                                        <td>Cell 9</td>
+                                        <td>Cell 10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cell 1</td>
+                                        <td>Cell 2</td>
+                                        <td>Cell 3</td>
+                                        <td>Cell 4</td>
+                                        <td>Cell 5</td>
+                                        <td>Cell 6</td>
+                                        <td>Cell 7</td>
+                                        <td>Cell 8</td>
+                                        <td>Cell 9</td>
+                                        <td>Cell 10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cell 1</td>
+                                        <td>Cell 2</td>
+                                        <td>Cell 3</td>
+                                        <td>Cell 4</td>
+                                        <td>Cell 5</td>
+                                        <td>Cell 6</td>
+                                        <td>Cell 7</td>
+                                        <td>Cell 8</td>
+                                        <td>Cell 9</td>
+                                        <td>Cell 10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cell 1</td>
+                                        <td>Cell 2</td>
+                                        <td>Cell 3</td>
+                                        <td>Cell 4</td>
+                                        <td>Cell 5</td>
+                                        <td>Cell 6</td>
+                                        <td>Cell 7</td>
+                                        <td>Cell 8</td>
+                                        <td>Cell 9</td>
+                                        <td>Cell 10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cell 1</td>
+                                        <td>Cell 2</td>
+                                        <td>Cell 3</td>
+                                        <td>Cell 4</td>
+                                        <td>Cell 5</td>
+                                        <td>Cell 6</td>
+                                        <td>Cell 7</td>
+                                        <td>Cell 8</td>
+                                        <td>Cell 9</td>
+                                        <td>Cell 10</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
                         </div>
                         
                         <div class="row">

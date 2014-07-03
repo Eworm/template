@@ -43,7 +43,7 @@
         
         
         <!-- This will load and inject all js & css -->
-        <script src="<?php bloginfo('template_url'); ?>/js/yepnope.min.js" async></script>
+        <!-- <script src="<?php bloginfo('template_url'); ?>/js/yepnope.min.js" async></script> -->
         
         
         <!-- Add google maps only when necessary -->

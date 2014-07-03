@@ -10,15 +10,6 @@ yepnope([{
     
     } , {
 
-        load: templateUrl + '/style.css',
-        complete: function() {
-        
-            //console.log('the stylesheet is here');
-            
-        }
-
-    } , {
-
         load: 'https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js',
         complete: function() {
         

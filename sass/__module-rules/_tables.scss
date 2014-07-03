@@ -1,3 +1,5 @@
+// Regular table
+// -----------------------------------------------------------------
 table {
     width: 100%;
     margin: $margin 0;
@@ -12,5 +14,110 @@ table {
         border-bottom: 1px solid $border-color;
         text-align: left;
         vertical-align: top;
+    }
+    
+    th {
+        background-color: #f5f5f5;
+    }
+}
+
+// Responsive table
+// -----------------------------------------------------------------
+.responsive-table {
+    position: relative;
+    display: block;
+    clear: both;
+    border: 0;
+    border-spacing: 0;
+    border-collapse: collapse;
+    
+    @include min-screen($lap) {
+        display: table;
+    }
+
+    thead {
+        display: block;
+        float: left;
+        border: 1px solid $border-color;
+        vertical-align: middle;
+        
+        @include min-screen($lap) {
+            display: table-header-group;
+            float: none;
+        }
+        
+        tr {
+            display: block;
+            
+            @include min-screen($lap) {
+                display: table-row;
+                border-right: 0;
+            }
+        }
+        
+        th {
+            display: block;
+            border-bottom: 1px solid $border-color;
+            
+            @include min-screen($lap) {
+                display: table-cell;
+            }
+            
+            &:last-child {
+                border-bottom: 0;
+                
+                @include min-screen($lap) {
+                    border-bottom: 1px solid $border-color;
+                }
+            }
+        }
+    }
+    
+    tbody {
+        width: auto;
+        position: relative;
+        display: block;
+        overflow-x: auto;
+        font-size: 0;
+        white-space: nowrap;
+        
+        @include min-screen($lap) {
+            display: table-row-group;
+            overflow: visible;
+            border: 1px solid $border-color;
+            white-space: normal;
+            font-size: $body-size;
+        }
+        
+        tr {
+            display: inline-block;
+            vertical-align: top;
+            border: 1px solid $border-color;
+            border-left: 0;
+            font-size: $body-size;
+            
+            @include min-screen($lap) {
+                margin: 0;
+                display: table-row;
+                border-right: 0;
+            }
+            
+            td {
+                display: block;
+                border-bottom: 1px solid $border-color;
+                
+                @include min-screen($lap) {
+                    display: table-cell;
+                }
+                
+                &:last-child {
+                    border-bottom: 0;
+                    
+                    @include min-screen($lap) {
+                        border-bottom: 1px solid $border-color;
+                    }
+                }
+            }
+        }
     }
 }

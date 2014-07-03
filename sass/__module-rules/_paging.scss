@@ -7,13 +7,13 @@
         float: left;
         
         > a {
-            padding: $gutter/4 $gutter/2;
             margin-right: $gutter/4;
+            padding: $gutter/4 $gutter/2;
             display: block;
             float: left;
             border: 1px solid $border-color;
-            text-decoration: none;
             color: $body-color;
+            text-decoration: none;
             
             &:hover,
             &:focus {

@@ -45,3 +45,8 @@
 
 // Module rules. Styling of reusable, modular parts of the design.
 // -----------------------------------------------------------------
+@import '__module-rules/mainmenu';
+@import '__module-rules/mobile-header';
+@import '__module-rules/search-form';
+@import '__module-rules/sidebar-section';
+@import '__module-rules/tables';

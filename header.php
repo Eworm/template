@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
     <head>
+    
         <meta charset="utf-8">
+        
         <title>
         <?php
             /*
@@ -93,12 +95,34 @@
             $whitelist = array('localhost', '10.0.1.17');
             if ($link = (!in_array($_SERVER['HTTP_HOST'], $whitelist))) :
         ?>
-        
-            <!-- Insert Google analytics here -->
-        
+        <!-- Insert Google analytics here -->
         <?php endif; ?>
         
         <?php wp_head(); ?>
+        
+        <!-- Script suggestion from google on how to insert the stylesheet -->
+        <script>
+            var cb = function() {
+                
+                var l = document.createElement('link'); l.rel = 'stylesheet';
+                l.href = '<?php bloginfo('stylesheet_url'); ?>';
+                
+                var y = document.createElement('script');
+                y.src = '<?php bloginfo('template_url'); ?>/js/yepnope.min.js';
+                
+                var h = document.getElementsByTagName('body')[0];
+                h.parentNode.insertBefore(l, h);
+                h.parentNode.insertBefore(y, h);
+            };
+            
+            var raf = false;
+            try {
+                raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
+            } catch(e) {}
+            
+            if (raf) raf(cb);
+            else window.addEventListener('load', cb);
+        </script>
         
         <!-- Include the above the fold css and replace all relative urls with the theme url -->
         <style>
