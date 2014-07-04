@@ -157,7 +157,7 @@
         
             <div id="container-transition" class="container-transition">
             
-                <header id="header" class="header divider divider-header">
+                <header id="header" class="header divider divider-header" role="banner">
                 
                     <div class="core core-header">
                         

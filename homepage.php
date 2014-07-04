@@ -5,7 +5,7 @@ Template Name: Homepage
 ?>
 <?php get_header(); ?>
 
-<div id="content" class="content divider divider-content">
+<main id="content" class="content divider divider-content" role="main">
 
     <div class="core core-content">
 
@@ -257,6 +257,6 @@ Template Name: Homepage
 
     </div> <!-- .core -->
 
-</div> <!-- .divider -->
+</main> <!-- .divider -->
 
 <?php get_footer(); ?>

@@ -2,7 +2,7 @@
 
 <?php $search_query = get_search_query(); ?>
 
-<div id="content" class="content divider divider-content">
+<main id="content" class="content divider divider-content" role="main">
 
     <div class="core core-content">
     
@@ -83,6 +83,6 @@
         
     </div> <!-- .core -->
     
-</div> <!-- .divider -->
+</main> <!-- .divider -->
 
 <?php get_footer(); ?>

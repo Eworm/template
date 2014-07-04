@@ -23,7 +23,7 @@
                     
                 </div> <!-- .doormat -->
                 
-                <footer class="footer divider divider-footer">
+                <footer class="footer divider divider-footer" role="contentinfo">
                 
                     <div class="core core-footer">
                     

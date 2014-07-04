@@ -113,7 +113,7 @@ endif;
     
     <!-- Thanks page -->
 
-    <div id="content" class="content divider divider-content">
+    <main id="content" class="content divider divider-content" role="main">
     
         <div class="core core-content">
         
@@ -135,13 +135,13 @@ endif;
     
         </div> <!-- .core -->
     
-    </div> <!-- .divider -->
+    </main> <!-- .divider -->
 
 <?php else : ?>
 
     <!-- The contact form -->
 
-    <div id="content" class="content divider divider-content">
+    <main id="content" class="content divider divider-content" role="main">
     
         <div class="core core-content">
         
@@ -255,7 +255,7 @@ endif;
     
         </div> <!-- .core -->
     
-    </div> <!-- .divider -->
+    </main> <!-- .divider -->
 
 <?php endif; ?>
 
