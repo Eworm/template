@@ -16,6 +16,7 @@ environment = :production
 line_comments = false
 color_output = true
 cache = true
+Sass::Script::Number.precision = 10
 
 
 # If you prefer the indented syntax, you might want to regenerate this

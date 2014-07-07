@@ -5,8 +5,8 @@ setlocale(LC_TIME, 'nl_NL');
 /* Optional code to change the url
 ==================================================================================================================================*/
 /*
-update_option('siteurl','http://10.0.1.17/_htmltemplate/');
-update_option('home','http://10.0.1.17/_htmltemplate/');
+update_option('siteurl','http://template.dev/');
+update_option('home','http://template.dev/');
 */
 
 

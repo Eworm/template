@@ -8,7 +8,7 @@ Version: 1.0
 
 
 // Responsive utilitites
-@import '__sass-extras/responsive-utils';
+@import 'sass-extras/responsive-utils';
 
 
 // This is the container for all seperate scss files
@@ -17,39 +17,39 @@ Version: 1.0
 
 // Theme rules (variables)
 // -----------------------------------------------------------------
-@import '__theme-rules/grid-variables';
-@import '__theme-rules/colors';
-@import '__theme-rules/defaults';
-@import '__theme-rules/fonts';
-@import '__theme-rules/header-sizes';
-@import '__theme-rules/margins-paddings';
-@import '__theme-rules/mobile-widths';
-@import '__theme-rules/responsive-breakpoints';
+@import 'theme-rules/grid-variables';
+@import 'theme-rules/colors';
+@import 'theme-rules/defaults';
+@import 'theme-rules/fonts';
+@import 'theme-rules/header-sizes';
+@import 'theme-rules/margins-paddings';
+@import 'theme-rules/mobile-widths';
+@import 'theme-rules/responsive-breakpoints';
 
 
 // Sass functions, extendables & mixins.
 // -----------------------------------------------------------------
 @import 'compass/css3';
-@import '__sass-extras/flex';
-@import '__sass-extras/functions';
-@import '__sass-extras/extendables';
-@import '__sass-extras/mixins';
-@import '__sass-extras/responsive-js';
+@import 'sass-extras/flex';
+@import 'sass-extras/functions';
+@import 'sass-extras/extendables';
+@import 'sass-extras/mixins';
+@import 'sass-extras/responsive-js';
 
 
 // Layout rules. Styling of page sections that contain modules.
 // -----------------------------------------------------------------
-@import '__layout-rules/doormat';
-@import '__layout-rules/footer';
+@import 'layout-rules/doormat';
+@import 'layout-rules/footer';
 
 
 // Module rules. Styling of reusable, modular parts of the design.
 // -----------------------------------------------------------------
-@import '__module-rules/post';
-@import '__module-rules/comments';
-@import '__module-rules/forms';
-@import '__module-rules/header-image';
-@import '__module-rules/images';
-@import '__module-rules/paging';
-@import '__module-rules/search-results';
-@import '__module-rules/vcard';
+@import 'module-rules/post';
+@import 'module-rules/comments';
+@import 'module-rules/forms';
+@import 'module-rules/header-image';
+@import 'module-rules/images';
+@import 'module-rules/paging';
+@import 'module-rules/search-results';
+@import 'module-rules/vcard';

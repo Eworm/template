@@ -57,3 +57,10 @@ $baseline-px: $base-size;
 
         // Return the property and its list of converted values
         #{$property}: $rem-values; } }
+
+
+// Remove units
+// -----------------------------------------------------------------
+@function rem-units($number) {
+    @return $number / ($number * 0 + 1);
+}
