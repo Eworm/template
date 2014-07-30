@@ -98,7 +98,7 @@
 // Comment meta info
 // -----------------------------------------------------------------
 .comment-meta {
-    @include rem('font-size', $text-palm);
+    @include rem('font-size', $text-s);
 
     @include min-screen($lap) {
         padding-top: 20px;

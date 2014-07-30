@@ -42,9 +42,6 @@ body {
     position: relative;
     float: left;
     overflow: hidden;
-    transition-timing-function: ease;
-    transition-duration: .025s;
-    transition-property: opacity;
 
     .active-menu & {
         overflow: hidden;

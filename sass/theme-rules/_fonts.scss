@@ -1,27 +1,27 @@
 // Define sizes here, use them later on
 // -----------------------------------------------------------------
-$f-wrist: 11px;
-$f-palm: 12px;
-$f-lap: 14px;
-$f-desk: 16px;
-$f-wall: 18px;
-$f-cinema: 20px;
+$f-xs: 11px;
+$f-s: 12px;
+$f-m: 14px;
+$f-l: 16px;
+$f-xl: 18px;
+$f-xxl: 20px;
 
 
-// Font sizes
+// Font sizes. You can add your own variables here using some preset size (or add a new size)
 // -----------------------------------------------------------------
-$text-wrist: $f-wrist;
-$text-palm: $f-palm;
-$text-lap: $f-lap;
-$text-desk: $f-desk;
-$text-wall: $f-wall;
-$text-cinema: $f-cinema;
+$text-xs: $f-xs;
+$text-s: $f-s;
+$text-m: $f-m;
+$text-l: $f-l;
+$text-xl: $f-xl;
+$text-xxl: $f-xxl;
 
 
 // Standard site sizes
 // -----------------------------------------------------------------
-$base-size: $text-desk;
-$body-size: $text-lap;
+$base-size: $text-l;
+$body-size: $text-m;
 
 // Calculate the line-height according to the golden ratio
 // http://www.pearsonified.com/typography/
@@ -39,8 +39,6 @@ $golden-ratio: 1.61803398875;
 $line-height: $golden-ratio - (1 - ((strip-units($max-width)) / (((strip-units($body-size)) * $golden-ratio) * ((strip-units($body-size)) * $golden-ratio)))) * (1 / (2 * $golden-ratio));
 
 
-
-
 // Define font names here, use them later on
 // -----------------------------------------------------------------
 $websafe: Arial, Verdana, sans-serif;
@@ -50,6 +48,6 @@ $serif: Georgia, "Times new roman", serif;
 
 // Font families
 // -----------------------------------------------------------------
-$body-font: $websafe;                           // Websafe font family
+$body-font: $websafe;          // Websafe font family
 $special-font: $fontface;      // Special font, for example a google font. Use google fonts locally for a better pagespeed score
 $sec-font: $serif;

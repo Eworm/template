@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="nl" class="no-js">
     <head>
     
         <meta charset="utf-8">
@@ -111,8 +111,8 @@
                 y.src = '<?php bloginfo('template_url'); ?>/js/yepnope.min.js';
                 
                 var h = document.getElementsByTagName('body')[0];
-                h.parentNode.insertBefore(l, h);
                 h.parentNode.insertBefore(y, h);
+                h.parentNode.insertBefore(l, h);
             };
             
             var raf = false;
