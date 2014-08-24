@@ -1,4 +1,4 @@
-// Async css loading
+// Async loading
 yepnope([{
 
         load: templateUrl + '/js/modernizr.min.js',
