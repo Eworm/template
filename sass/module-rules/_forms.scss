@@ -102,7 +102,7 @@ input[type="search"] {
         }
     }
     
-    small { // Form field explanation
+    .input-exp { // Form field explanation. Using a small element is preferrable
         display: block;
         font-size: $text-s;
     }
