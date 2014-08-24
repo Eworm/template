@@ -13,6 +13,7 @@ var src_paths = {
     svgmin: 'images-src/*.svg',
     svg2png: 'images-src/*.svg',
     imagemin: 'images/portfolio/*.*',
+    bookmarks: 'images-src/root/*.png',
     uglify: ['bower_components/picturefill/external/matchmedia.js',
                 'bower_components/hideShowPassword/hideShowPassword.js',
                 'bower_components/picturefill/picturefill.js',
@@ -31,6 +32,7 @@ var dest_paths = {
     svg2png: 'images',
     imagemin: 'images',
     uglify: 'js',
+    bookmarks: '_root',
     yepnope: 'js'
 };
 
@@ -110,6 +112,29 @@ gulp.task('uglify', function() {
 });
 
 
+// Create all IOS & Windows phone images
+gulp.task('bookmarks', function () {
+
+    gulp.src(src_paths.bookmarks)
+        .pipe(plugins.imageResize({ width: 129, width: 129, quality: .9, imageMagick: true }))
+        .pipe(plugins.rename("apple-touch-icon-precomposed.png"))
+        .pipe(gulp.dest(dest_paths.bookmarks))
+        
+    gulp.src(src_paths.bookmarks)
+        .pipe(plugins.imageResize({ width: 129, width: 129, quality: .9, imageMagick: true }))
+        .pipe(plugins.rename("apple-touch-icon.png"))
+        .pipe(gulp.dest(dest_paths.bookmarks))
+    
+    gulp.src(src_paths.bookmarks)
+        .pipe(plugins.imageResize({ width: 144, width: 144, quality: .9, imageMagick: true }))
+        .pipe(plugins.rename("windows8-tile.png"))
+        .pipe(gulp.dest(dest_paths.bookmarks))
+    
+    .pipe(plugins.notify({ message: 'Bookmarks complete' }))
+        
+});
+
+
 // SCSS lint
 gulp.task('lint', function() {
     gulp.src(src_paths.compass)
@@ -124,6 +149,7 @@ gulp.task('watch', function() {
     	gulp.watch([src_paths.uglify, src_paths.yepnope], ['uglify']);
     	gulp.watch(src_paths.svgmin, ['svgmin']);
     	gulp.watch(src_paths.svg2png, ['svg2png']);
+        gulp.watch(src_paths.bookmarks, ['bookmarks']);
     })
 });
 
