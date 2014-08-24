@@ -32,7 +32,7 @@ var dest_paths = {
     svg2png: 'images',
     imagemin: 'images',
     uglify: 'js',
-    bookmarks: '_root',
+    bookmarks: '_put_in_root',
     yepnope: 'js'
 };
 
