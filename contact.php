@@ -232,7 +232,7 @@ endif;
         
                 </div> <!-- .main-content -->
         
-                <aside class="sidebar col col-3">
+                <aside class="sidebar col col-3" role="complementary">
         
                     <?php $options = get_option('template_theme_options');
                         if (($options['theme_address'])) : ?>

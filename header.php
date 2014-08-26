@@ -178,7 +178,7 @@
                         
                         <?php get_search_form(); ?>   
                                    
-                        <nav id="mainmenu">
+                        <nav id="mainmenu" role="navigation" >
                             <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container' => '','menu_id' => 'main-menu','menu_class' => 'inline', 'depth' => '2' ) ); ?>
                         </nav>
                         

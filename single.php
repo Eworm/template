@@ -69,7 +69,7 @@
             
             </div>
             
-            <aside class="sidebar col col-3">
+            <aside class="sidebar col col-3" role="complementary">
 
                 <?php if ( !function_exists('dynamic_sidebar')
                     || !dynamic_sidebar('Widget') ) : ?>

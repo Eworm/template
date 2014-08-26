@@ -421,7 +421,7 @@ Template Name: Homepage
     
             </article> <!-- .main-content -->
             
-            <aside class="sidebar col col-2">
+            <aside class="sidebar col col-2" role="complementary">
             
                 <div class="sidebar-section">Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Plura mihi bona sunt, inclinet, amari petere vellent. Tityre, tu patulae recubans sub tegmine fagi  dolor. Ab illo tempore, ab est sed immemorabili. A communi observantia non est recedendum.</div>
                 <div class="sidebar-section">Hi omnes lingua, institutis, legibus inter se differunt. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Tu quoque, Brute, fili mi, nihil timor populi, nihil! Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Contra legem facit qui id facit quod lex prohibet.</div>
