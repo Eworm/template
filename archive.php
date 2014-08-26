@@ -10,46 +10,38 @@
     
                 <?php if ( have_posts() ) : ?>
         
-                    <header class="main-content-header">
+                    <h1 class="main-content-title">
                     
-                        <h1 class="main-content-title">
+                        <?php if ( is_day() ) : ?>
                         
-                            <?php if ( is_day() ) : ?>
-                            
-                                <?php printf( __( 'Dagarchief: %s', 'thema_vertalingen' ), '<span>' . get_the_date() . '</span>' ); ?>
-                            
-                            <?php elseif ( is_month() ) : ?>
-                            
-                                <?php printf( __( 'Maandarchief: %s', 'thema_vertalingen' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'thema_vertalingen' ) ) . '</span>' ); ?>
-                            
-                            <?php elseif ( is_year() ) : ?>
-                            
-                                <?php printf( __( 'Jaararchief: %s', 'thema_vertalingen' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'thema_vertalingen' ) ) . '</span>' ); ?>
-                            
-                            <?php else : ?>
-                            
-                                <?php _e( 'Blogarchief', 'thema_vertalingen' ); ?>
-                            
-                            <?php endif; ?>
-                            
-                        </h1>
+                            <?php printf( __( 'Dagarchief: %s', 'thema_vertalingen' ), '<span>' . get_the_date() . '</span>' ); ?>
                         
-                    </header>
-        
+                        <?php elseif ( is_month() ) : ?>
+                        
+                            <?php printf( __( 'Maandarchief: %s', 'thema_vertalingen' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'thema_vertalingen' ) ) . '</span>' ); ?>
+                        
+                        <?php elseif ( is_year() ) : ?>
+                        
+                            <?php printf( __( 'Jaararchief: %s', 'thema_vertalingen' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'thema_vertalingen' ) ) . '</span>' ); ?>
+                        
+                        <?php else : ?>
+                        
+                            <?php _e( 'Blogarchief', 'thema_vertalingen' ); ?>
+                        
+                        <?php endif; ?>
+                        
+                    </h1>
+                        
                     <?php /* Start the Loop */ ?>
                     <?php while (have_posts()) : the_post(); ?>
     
                         <article <?php post_class(); ?>>
     
-                            <header class="post-header">
-                            
-                                <h1 class="post-title">
-                                    <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Directe link naar', 'thema_vertalingen' ); ?> <?php the_title_attribute(); ?>">
-                                        <?php the_title(); ?>
-                                    </a>
-                                </h1>
-                                
-                            </header>
+                            <h1 class="post-title">
+                                <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Directe link naar', 'thema_vertalingen' ); ?> <?php the_title_attribute(); ?>">
+                                    <?php the_title(); ?>
+                                </a>
+                            </h1>
                             
                             <div class="post-date">
                                 
@@ -103,13 +95,9 @@
         
                     <article <?php post_class(); ?>>
     
-                        <header class="post-header">
-    
-                            <h1 class="post-title">
-                                <?php _e( 'Deze pagina bestaat niet', 'thema_vertalingen' ); ?>
-                            </h1>
-    
-                        </header>
+                        <h1 class="post-title">
+                            <?php _e( 'Deze pagina bestaat niet', 'thema_vertalingen' ); ?>
+                        </h1>
         
                         <div class="entry">
                             <p><?php _e( 'Sorry, we hebben deze pagina niet gevonden. Maar misschien kun je zoeken om de juiste pagina te vinden:', 'thema_vertalingen' ); ?></p>

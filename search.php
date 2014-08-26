@@ -12,27 +12,19 @@
             
                 <?php if (have_posts()) : ?>
                 
-                    <header class="main-content-header">
-                        
-                        <h1>
-                            <?php _e( 'Zoekresultaten voor', 'thema_vertalingen' ); ?> <em>&#8216;<?php echo $search_query ?>&#8217;</em>
-                        </h1>
-    
-                    </header>
+                    <h1 class="main-content-title">
+                        <?php _e( 'Zoekresultaten voor', 'thema_vertalingen' ); ?> <em>&#8216;<?php echo $search_query ?>&#8217;</em>
+                    </h1>
                 
                     <?php while (have_posts()) : the_post(); ?>
                 
                         <section <?php post_class('search-result'); ?>>
                         
-                            <header class="search-result-header">
-    
-                                <h1 class="search-result-title post-title">
-                                    <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Permanente link naar', 'thema_vertalingen' ); ?><?php the_title(); ?>">
-                                        <?php the_title(); ?>
-                                    </a>
-                                </h1>
-    
-                            </header>
+                            <h1 class="search-result-title post-title">
+                                <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Permanente link naar', 'thema_vertalingen' ); ?><?php the_title(); ?>">
+                                    <?php the_title(); ?>
+                                </a>
+                            </h1>
                         
                             <div class="search-result-entry post-entry">
                                 <?php the_excerpt('Continue reading &raquo;'); ?>
@@ -63,15 +55,13 @@
                     
                     <section class="search-result">
               
-                        <header class="search-result-header">
-    
-                            <h1 class="search-result-title">
-                                <?php _e( 'Helaas..', 'thema_vertalingen' ); ?>
-                            </h1>
-    
-                        </header>
+                        <h1 class="search-result-title post-title">
+                            <?php _e( 'Helaas..', 'thema_vertalingen' ); ?>
+                        </h1>
                         
-                        <p><?php _e( 'We hebben niks gevonden dat lijkt op', 'thema_vertalingen' ); ?> <em>&#8216;<?php echo $search_query ?>&#8217;</em>. <?php _e( 'Misschien helpt overnieuw zoeken?', 'thema_vertalingen' ); ?></p>
+                        <p>
+                            <?php _e( 'We hebben niks gevonden dat lijkt op', 'thema_vertalingen' ); ?> <em>&#8216;<?php echo $search_query ?>&#8217;</em>. <?php _e( 'Misschien helpt overnieuw zoeken?', 'thema_vertalingen' ); ?>
+                        </p>
                     
                     </section>
               

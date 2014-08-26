@@ -13,14 +13,10 @@
         
                     <article <?php post_class('main-content single-post'); ?>>
         
-                        <header class="post-header single-post-header">
-    
-                            <h1 class="post-title maincontent-title single-post-title">
-                                <?php the_title(); ?>
-                            </h1>
-    
-                        </header>
-                        
+                        <h1 class="post-title maincontent-title single-post-title">
+                            <?php the_title(); ?>
+                        </h1>
+                    
                         <div class="post-entry">
                             <?php the_content('Lees meer &raquo;'); ?>
                         </div>
@@ -50,13 +46,9 @@
                     
                     <article <?php post_class('main-content single-post no-results not-found'); ?>>
     
-                        <header class="post-header maincontent-header single-post-header">
-                            
-                            <h1 class="post-title maincontent-title single-post-title">
-                                <?php _e( 'Deze pagina bestaat niet', 'thema_vertalingen' ); ?>
-                            </h1>
-    
-                        </header>
+                        <h1 class="post-title maincontent-title single-post-title">
+                            <?php _e( 'Deze pagina bestaat niet', 'thema_vertalingen' ); ?>
+                        </h1>
         
                         <div class="post-entry">
                             <p><?php _e( 'Sorry, we hebben deze pagina niet gevonden. Maar misschien kun je zoeken om de juiste pagina te vinden:', 'thema_vertalingen' ); ?></p>

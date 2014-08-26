@@ -18,14 +18,10 @@ Template Name: Homepage
                 <?php if (have_posts()) : ?>
     
                     <?php while (have_posts()) : the_post(); ?>
-                    
-                        <header class="main-content-header">
-                            
-                            <h1 class="main-content-title">
-                                <?php the_title(); ?>
-                            </h1>
-                            
-                        </header>
+                
+                        <h1 class="main-content-title">
+                            <?php the_title(); ?>
+                        </h1>
                         
                         <div class="main-content-body">
                             <?php the_content('Weiterlesen &raquo;'); ?>

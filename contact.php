@@ -121,9 +121,7 @@ endif;
     
                 <div class="main-content col col-5">
         
-                    <header class="main-content-header">
-                        <h1 class="main-content-title"><?php _e( 'Bedankt voor Je e-mail', 'thema_vertalingen' ); ?>, <?=$name;?></h1>
-                    </header>
+                    <h1 class="main-content-title"><?php _e( 'Bedankt voor Je e-mail', 'thema_vertalingen' ); ?>, <?=$name;?></h1>
         
                     <p><?php _e( 'Je e-mail is verstuurd. Ik neem zo snel mogelijk contact met u op.', 'thema_vertalingen' ); ?></p>
         
@@ -151,13 +149,10 @@ endif;
         
                     <form action="#contactform" id="contactform" method="post" class="form" data-parsley-validate>
         
-                        <header class="formheader">
-                            <h1><?php the_title(); ?></h1>
-                        </header>
+                        <h1><?php the_title(); ?></h1>
         
                         <fieldset class="formcontainer">
-                        
-        
+                                
                             <div class="formrow">
                             
                                 <label for="naam">
@@ -172,7 +167,6 @@ endif;
                                 <?php endif; ?>
     
                             </div> <!-- .formrow -->
-                            
         
                             <div class="formrow">
                             
@@ -190,7 +184,6 @@ endif;
     
                             </div> <!-- .formrow -->
                             
-        
                             <div class="formrow">
                             
                                 <label for="message">
@@ -206,7 +199,6 @@ endif;
     
                             </div> <!-- .formrow -->
                             
-        
                             <div id="screenreader" class="formrow">
                             
                                 <label for="checking">
@@ -216,7 +208,6 @@ endif;
                             
                             </div> <!-- .formrow -->
                             
-        
                             <div class="formrow">
                             
                                 <input type="hidden" name="submitted" id="submitted" value="true">
@@ -224,7 +215,6 @@ endif;
                                 <input type="submit" value="<?php _e( 'Verzenden', 'thema_vertalingen' ); ?>" class="submit">
                             
                             </div> <!-- .formrow -->
-        
         
                         </fieldset>
         

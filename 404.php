@@ -20,13 +20,9 @@
 
             <article class="main-content col col-5 not-found">
     
-                <header class="main-content-header">
-    
-                    <h1 class="main-content-title">
-                        <?php _e( 'Deze pagina bestaat niet (meer)', 'thema_vertalingen' ); ?>
-                    </h1>
-    
-                </header>
+                <h1 class="main-content-title">
+                    <?php _e( 'Deze pagina bestaat niet (meer)', 'thema_vertalingen' ); ?>
+                </h1>
     
                 <p><?php _e( 'Misschien helpt het als je een kijkje op onze', 'thema_vertalingen' ); ?> <a href="<?php echo get_settings('home'); ?>"><?php _e( 'homepage', 'thema_vertalingen' ); ?></a> <?php _e( 'neemt? Of probeer anders te zoeken', 'thema_vertalingen' ); ?>:</p>
     

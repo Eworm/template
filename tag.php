@@ -10,28 +10,20 @@
     
                 <?php if ( have_posts() ) : ?>
         
-                    <header class="main-content-header">
-                    
-                        <h1 class="main-content-title">
-                            <?php _e( 'Tag', 'thema_vertalingen' ); ?>: <?php single_cat_title() ?>
-                        </h1>
-                    
-                    </header>
+                    <h1 class="main-content-title">
+                        <?php _e( 'Tag', 'thema_vertalingen' ); ?>: <?php single_cat_title() ?>
+                    </h1>
         
                     <?php /* Start the Loop */ ?>
                     <?php while (have_posts()) : the_post(); ?>
     
                         <article <?php post_class(); ?>>
     
-                            <header class="post-header">
-                                
-                                <h1 class="post-title">
-                                    <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Directe link naar', 'thema_vertalingen' ); ?> <?php the_title_attribute(); ?>">
-                                        <?php the_title(); ?>
-                                    </a>
-                                </h1>
-                                
-                            </header>
+                            <h1 class="post-title">
+                                <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Directe link naar', 'thema_vertalingen' ); ?> <?php the_title_attribute(); ?>">
+                                    <?php the_title(); ?>
+                                </a>
+                            </h1>
                             
                             <div class="post-date">
                             
@@ -73,13 +65,9 @@
     
                     <article <?php post_class(); ?>>
     
-                        <header class="post-header">
-    
-                            <h1 class="post-title">
-                                <?php _e( 'Deze pagina bestaat niet', 'thema_vertalingen' ); ?>
-                            </h1>
-    
-                        </header>
+                        <h1 class="post-title">
+                            <?php _e( 'Deze pagina bestaat niet', 'thema_vertalingen' ); ?>
+                        </h1>
         
                         <div class="post-entry">
     

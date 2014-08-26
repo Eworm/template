@@ -44,13 +44,9 @@
     
                 <article class="main-content col col-6">
     
-                    <header class="main-content-header">
-                        
-                        <h1 class="main-content-title">
-                            <?php the_title(); ?>
-                        </h1>
-    
-                    </header>
+                    <h1 class="main-content-title">
+                        <?php the_title(); ?>
+                    </h1>
     
                     <div class="main-content-body">
                         <?php the_content('Lees meer &raquo;'); ?>
@@ -97,14 +93,10 @@
     
                 <article class="main-content col col-6 no-results not-found">
     
-                    <header class="main-content-header">
-                        
-                        <h1 class="main-content-title">
-                            <?php _e( 'Deze pagina bestaat niet', 'thema_vertalingen' ); ?>
-                        </h1>
-    
-                    </header>
-    
+                    <h1 class="main-content-title">
+                        <?php _e( 'Deze pagina bestaat niet', 'thema_vertalingen' ); ?>
+                    </h1>
+                    
                     <div class="main-content-body">
     
                         <p><?php _e( 'Sorry, we hebben deze pagina niet gevonden. Maar misschien kun je zoeken om de juiste pagina te vinden:', 'thema_vertalingen' ); ?></p>

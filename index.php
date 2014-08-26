@@ -15,15 +15,11 @@
     
                         <article <?php post_class(); ?>>
     
-                            <header class="post-header">
-                            
-                                <h1 class="post-title">
-                                    <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Directe link naar', 'thema_vertalingen' ); ?><?php the_title_attribute(); ?>">
-                                        <?php the_title(); ?>
-                                    </a>
-                                </h1>
-    
-                            </header>
+                            <h1 class="post-title">
+                                <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Directe link naar', 'thema_vertalingen' ); ?><?php the_title_attribute(); ?>">
+                                    <?php the_title(); ?>
+                                </a>
+                            </h1>
                             
                             <div class="post-date">
                                 
