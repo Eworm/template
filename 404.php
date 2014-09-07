@@ -18,7 +18,7 @@
     
         <div class="row">
 
-            <article class="main-content col col-5 not-found">
+            <main class="main-content col col-5 not-found" role="main">
     
                 <h1 class="main-content-title">
                     <?php _e( 'Deze pagina bestaat niet (meer)', 'thema_vertalingen' ); ?>
@@ -30,7 +30,7 @@
     
             </article> <!-- .main-content -->
         
-        </div> <!-- .row -->
+        </main> <!-- .row -->
 
     </div> <!-- .core -->
 

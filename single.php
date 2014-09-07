@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main id="content" class="content divider divider-content" role="main">
+<div id="content" class="content divider divider-content">
 
     <div class="core core-content">
     
@@ -11,7 +11,7 @@
                 <?php if (have_posts()) : ?>
                 <?php while (have_posts()) : the_post(); ?>
         
-                    <article <?php post_class('main-content single-post'); ?>>
+                    <main <?php post_class('main-content single-post'); ?> role="main">
         
                         <h1 class="post-title maincontent-title single-post-title">
                             <?php the_title(); ?>
@@ -37,14 +37,14 @@
                         
                         </div>
                         
-                    </article> <!-- .main-content -->
+                    </main> <!-- .main-content -->
                     
                     <?php comments_template(); ?>
         
                 <?php endwhile; ?>
                 <?php else : ?>
                     
-                    <article <?php post_class('main-content single-post no-results not-found'); ?>>
+                    <main <?php post_class('main-content single-post no-results not-found'); ?> role="main">
     
                         <h1 class="post-title maincontent-title single-post-title">
                             <?php _e( 'Deze pagina bestaat niet', 'thema_vertalingen' ); ?>
@@ -55,7 +55,7 @@
                             <?php get_search_form(); ?>
                         </div>
     
-                    </article> <!-- .main-content -->
+                    </main> <!-- .main-content -->
                     
                 <?php endif; ?>
             
@@ -73,6 +73,6 @@
 
     </div> <!-- .core -->
 
-</main> <!-- .divider -->
+</div> <!-- .divider -->
 
 <?php get_footer(); ?>

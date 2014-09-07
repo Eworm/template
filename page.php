@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main id="content" class="content divider divider-content" role="main">
+<div id="content" class="content divider divider-content">
 
     <div class="core core-content">
     
@@ -42,7 +42,7 @@
             <?php if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>
     
-                <article class="main-content col col-6">
+                <main class="main-content col col-6" role="main">
     
                     <h1 class="main-content-title">
                         <?php the_title(); ?>
@@ -85,7 +85,7 @@
                     </div>
 -->
     
-                </article> <!-- .main-content -->
+                </main> <!-- .main-content -->
     
             <?php endwhile; ?>
     
@@ -113,6 +113,6 @@
 
     </div> <!-- .core -->
 
-</main> <!-- .divider -->
+</div> <!-- .divider -->
 
 <?php get_footer(); ?>

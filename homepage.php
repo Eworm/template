@@ -5,7 +5,7 @@ Template Name: Homepage
 ?>
 <?php get_header(); ?>
 
-<main id="content" class="content divider divider-content" role="main">
+<div id="content" class="content divider divider-content">
 
     <div class="core core-content">
 
@@ -13,7 +13,7 @@ Template Name: Homepage
         
         <div class="row">
 
-            <article class="main-content col col-6">
+            <main class="main-content col col-6" role="main">
     
                 <?php if (have_posts()) : ?>
     
@@ -415,7 +415,7 @@ Template Name: Homepage
     
                 <?php endif; ?>
     
-            </article> <!-- .main-content -->
+            </main> <!-- .main-content -->
             
             <aside class="sidebar col col-2" role="complementary">
             
@@ -429,6 +429,6 @@ Template Name: Homepage
 
     </div> <!-- .core -->
 
-</main> <!-- .divider -->
+</div> <!-- .divider -->
 
 <?php get_footer(); ?>

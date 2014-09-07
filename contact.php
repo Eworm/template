@@ -113,13 +113,13 @@ endif;
     
     <!-- Thanks page -->
 
-    <main id="content" class="content divider divider-content" role="main">
+    <div id="content" class="content divider divider-content">
     
         <div class="core core-content">
         
             <div class="row">
     
-                <div class="main-content col col-5">
+                <main class="main-content col col-5" role="main">
         
                     <h1 class="main-content-title"><?php _e( 'Bedankt voor Je e-mail', 'thema_vertalingen' ); ?>, <?=$name;?></h1>
         
@@ -127,25 +127,25 @@ endif;
         
                     <p><a href="<?php echo get_settings('home'); ?>"><?php _e( 'Terug naar de homepage', 'thema_vertalingen' ); ?></a></p>
         
-                </div> <!-- .main-content -->
+                </main> <!-- .main-content -->
                 
             </div> <!-- .row -->
     
         </div> <!-- .core -->
     
-    </main> <!-- .divider -->
+    </div> <!-- .divider -->
 
 <?php else : ?>
 
     <!-- The contact form -->
 
-    <main id="content" class="content divider divider-content" role="main">
+    <div id="content" class="content divider divider-content">
     
         <div class="core core-content">
         
             <div class="row">
     
-                <div class="main-content col col-5">
+                <main class="main-content col col-5" role="main">
         
                     <form action="#contactform" id="contactform" method="post" class="form" data-parsley-validate>
         
@@ -220,7 +220,7 @@ endif;
         
                     </form>
         
-                </div> <!-- .main-content -->
+                </main> <!-- .main-content -->
         
                 <aside class="sidebar col col-3" role="complementary">
         
@@ -245,7 +245,7 @@ endif;
     
         </div> <!-- .core -->
     
-    </main> <!-- .divider -->
+    </div> <!-- .divider -->
 
 <?php endif; ?>
 
