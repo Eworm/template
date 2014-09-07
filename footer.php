@@ -44,7 +44,7 @@
         </script>
         
         
-        <!-- Add google maps only when necessary -->
+        <!-- Google maps only when necessary -->
         <?php if (is_page_template('contact.php')) { ?>
         
             <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBgU-OMTQXQwUwOyNRZB5jh1cFgY5z_L2A&sensor=false"></script>
