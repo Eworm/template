@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main id="content" class="content divider divider-content" role="main">
+<div id="content" class="content divider divider-content">
 
     <div class="core core-content">
     
@@ -95,6 +95,6 @@
 
     </div> <!-- .core -->
 
-</main> <!-- .divider -->
+</div> <!-- .divider -->
 
 <?php get_footer(); ?>

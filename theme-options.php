@@ -27,6 +27,7 @@ function theme_options_do_page() {
         $_REQUEST['settings-updated'] = false;
 
     ?>
+    
     <div class="wrap">
         <?php screen_icon(); echo "<h2>" . get_current_theme() . __( ' Thema opties', 'thema_vertalingen' ) . "</h2>"; ?>
 
@@ -76,7 +77,9 @@ function theme_options_do_page() {
             <p class="submit">
                 <input type="submit" class="button-primary" value="<?php _e( 'Opties opslaan', 'thema_vertalingen' ); ?>" />
             </p>
+            
         </form>
+        
     </div>
     <?php
 }

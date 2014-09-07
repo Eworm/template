@@ -12,7 +12,7 @@
     get_header();
 ?>
 
-<main id="content" class="content divider divider-content" role="main">
+<div id="content" class="content divider divider-content">
 
     <div class="core core-content">
     
@@ -28,12 +28,12 @@
     
                 <?php get_search_form(); ?>
     
-            </article> <!-- .main-content -->
+            </main> <!-- .main-content -->
         
-        </main> <!-- .row -->
+        </div> <!-- .row -->
 
     </div> <!-- .core -->
 
-</main> <!-- .divider -->
+</div> <!-- .divider -->
 
 <?php get_footer(); ?>

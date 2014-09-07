@@ -26,23 +26,37 @@ if ( post_password_required() )
                     'avatar_size' => 74,
                 ) );
             ?>
-        </ol><!-- .comment-list -->
+        </ol> <!-- .comment-list -->
 
         <?php
             // Are there comments to navigate through?
             if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
         ?>
         
-        <nav class="navigation comment-navigation" role="navigation">
-            <h1 class="screen-reader-text section-heading"><?php _e( 'Navigatie', 'thema_vertalingen' ); ?></h1>
-            <div class="nav-previous"><?php previous_comments_link( __( 'Oudere reacties', 'thema_vertalingen' ) ); ?></div>
-            <div class="nav-next"><?php next_comments_link( __( 'Nieuwere reacties', 'thema_vertalingen' ) ); ?></div>
-        </nav><!-- .comment-navigation -->
+        <div class="navigation comment-navigation">
+        
+            <h1 class="screen-reader-text section-heading">
+                <?php _e( 'Navigatie', 'thema_vertalingen' ); ?>
+            </h1>
+            
+            <div class="nav-previous">
+                <?php previous_comments_link( __( 'Oudere reacties', 'thema_vertalingen' ) ); ?>
+            </div>
+            
+            <div class="nav-next">
+                <?php next_comments_link( __( 'Nieuwere reacties', 'thema_vertalingen' ) ); ?>
+            </div>
+            
+        </div> <!-- .comment-navigation -->
         
         <?php endif; // Check for comment navigation ?>
 
         <?php if ( ! comments_open() && get_comments_number() ) : ?>
-            <p class="no-comments"><?php _e( 'Het reageren is gesloten.' , 'thema_vertalingen' ); ?></p>
+        
+            <p class="no-comments">
+                <?php _e( 'Het reageren is gesloten.' , 'thema_vertalingen' ); ?>
+            </p>
+        
         <?php endif; ?>
 
     <?php endif; // have_comments() ?>
@@ -69,4 +83,4 @@ if ( post_password_required() )
         comment_form($comment_args);
     ?>
 
-</div><!-- #comments -->
+</div> <!-- #comments -->
