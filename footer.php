@@ -38,7 +38,7 @@
         </div> <!-- .container -->
         
         
-        <!-- So we can use the template url in  javascript -->
+        <!-- So we can use the template url in javascript -->
         <script>
             var templateUrl = "<?php bloginfo('template_url'); ?>";
         </script>

@@ -91,7 +91,7 @@
     
             <?php else : ?>
     
-                <article class="main-content col col-6 no-results not-found">
+                <main class="main-content col col-6 no-results not-found">
     
                     <h1 class="main-content-title">
                         <?php _e( 'Deze pagina bestaat niet', 'thema_vertalingen' ); ?>
@@ -107,7 +107,7 @@
     
                     </div>
     
-                </article> <!-- .main-content -->
+                </main> <!-- .main-content -->
     
             <?php endif; ?>
         
