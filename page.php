@@ -29,7 +29,7 @@
     
                 if ($children) : ?>
     
-                    <div class="page-sub-menu col col-2">
+                    <div class="page-submenu col col-2">
                     
                         <ul>
                             <?php echo $children; ?>
