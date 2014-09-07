@@ -39,11 +39,9 @@
         
         
         <!-- So we can use the template url in  javascript -->
-        <script>var templateUrl = "<?php bloginfo('template_url'); ?>";</script>
-        
-        
-        <!-- This will load and inject all js & css -->
-        <!-- <script src="<?php bloginfo('template_url'); ?>/js/yepnope.min.js" async></script> -->
+        <script>
+            var templateUrl = "<?php bloginfo('template_url'); ?>";
+        </script>
         
         
         <!-- Add google maps only when necessary -->
