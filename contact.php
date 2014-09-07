@@ -113,7 +113,7 @@ endif;
     
     <!-- Thanks page -->
 
-    <div id="content" class="content divider divider-content">
+    <div class="content divider divider-content">
     
         <div class="core core-content">
         
@@ -147,7 +147,7 @@ endif;
 
     <!-- The contact form -->
 
-    <div id="content" class="content divider divider-content">
+    <div class="content divider divider-content">
     
         <div class="core core-content">
         

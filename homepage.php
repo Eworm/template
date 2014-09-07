@@ -5,7 +5,7 @@ Template Name: Homepage
 ?>
 <?php get_header(); ?>
 
-<div id="content" class="content divider divider-content">
+<div class="content divider divider-content">
 
     <div class="core core-content">
 

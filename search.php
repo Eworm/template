@@ -2,7 +2,7 @@
 
 <?php $search_query = get_search_query(); ?>
 
-<div id="content" class="content divider divider-content">
+<div class="content divider divider-content">
 
     <div class="core core-content">
     

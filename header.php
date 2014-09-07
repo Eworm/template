@@ -170,13 +170,6 @@
                                         </span>
                                     </a>
                                 </li>
-                                <li id="content-toggler" class="mobile-header-menuitem">
-                                    <a href="#content">
-                                        <span>
-                                            Content
-                                        </span>
-                                    </a>
-                                </li>
                             </ul>
                         </div>
                         
@@ -195,4 +188,6 @@
                         </nav>
                         
                     </div>
+                    
                 </header>
+                <!-- .header -->
