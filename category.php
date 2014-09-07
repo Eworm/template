@@ -71,7 +71,9 @@
         
                         <div class="post-entry">
                         
-                            <p><?php _e( 'Sorry, we hebben deze pagina niet gevonden. Maar misschien kun je zoeken om de juiste pagina te vinden:', 'thema_vertalingen' ); ?></p>
+                            <p>
+                                <?php _e( 'Sorry, we hebben deze pagina niet gevonden. Maar misschien kun je zoeken om de juiste pagina te vinden:', 'thema_vertalingen' ); ?>
+                            </p>
                         
                             <?php get_search_form(); ?>
                         

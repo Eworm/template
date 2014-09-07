@@ -121,11 +121,19 @@ endif;
     
                 <main class="main-content col col-5" role="main">
         
-                    <h1 class="main-content-title"><?php _e( 'Bedankt voor Je e-mail', 'thema_vertalingen' ); ?>, <?=$name;?></h1>
+                    <h1 class="main-content-title">
+                        <?php _e( 'Bedankt voor Je e-mail', 'thema_vertalingen' ); ?>, <?=$name;?>
+                    </h1>
         
-                    <p><?php _e( 'Je e-mail is verstuurd. Ik neem zo snel mogelijk contact met u op.', 'thema_vertalingen' ); ?></p>
+                    <p>
+                        <?php _e( 'Je e-mail is verstuurd. Ik neem zo snel mogelijk contact met u op.', 'thema_vertalingen' ); ?>
+                    </p>
         
-                    <p><a href="<?php echo get_settings('home'); ?>"><?php _e( 'Terug naar de homepage', 'thema_vertalingen' ); ?></a></p>
+                    <p>
+                        <a href="<?php echo get_settings('home'); ?>">
+                            <?php _e( 'Terug naar de homepage', 'thema_vertalingen' ); ?>
+                        </a>
+                    </p>
         
                 </main> <!-- .main-content -->
                 
@@ -149,7 +157,9 @@ endif;
         
                     <form action="#contactform" id="contactform" method="post" class="form" data-parsley-validate>
         
-                        <h1><?php the_title(); ?></h1>
+                        <h1>
+                            <?php the_title(); ?>
+                        </h1>
         
                         <fieldset class="formcontainer">
                                 

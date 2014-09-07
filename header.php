@@ -163,8 +163,20 @@
                         
                         <div class="mobile-header">
                             <ul class="mobile-header-menu">
-                                <li id="menu-toggler" class="mobile-header-menuitem"><a href="#mainmenu"><span>Menu</span></a></li>
-                                <li id="content-toggler" class="mobile-header-menuitem"><a href="#content"><span>Content</span></a></li>
+                                <li id="menu-toggler" class="mobile-header-menuitem">
+                                    <a href="#mainmenu">
+                                        <span>
+                                            Menu
+                                        </span>
+                                    </a>
+                                </li>
+                                <li id="content-toggler" class="mobile-header-menuitem">
+                                    <a href="#content">
+                                        <span>
+                                            Content
+                                        </span>
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                         
