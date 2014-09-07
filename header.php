@@ -141,7 +141,7 @@
             ?>
         </style>
         
-        <!-- Visitors without javascript will get the rest of the stylesheet the normal way -->
+        <!-- Visitors without javascript get the rest of the stylesheet the normal way -->
         <noscript>
             <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" media="screen">
         </noscript>
