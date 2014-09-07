@@ -4,8 +4,8 @@
   "authors": [
     "Wout Mager"
   ],
+  "description": "blabla",
   "homepage": "http://www.woutmager.nl",
-  "repository": "Blabla",
   "devDependencies": {
     "gulp-concat": "~2.4.0",
     "gulp-strip-debug": "~1.0.1",
