@@ -65,7 +65,7 @@
         float: left;
         // @include flex-direction(column);
 
-        box-shadow: inset rgba(#000, .4) 0 0 1px;
+        // box-shadow: inset rgba(#000, .4) 0 0 1px;
 
         @include min-screen($lap) {
             margin-right: gutter-width();

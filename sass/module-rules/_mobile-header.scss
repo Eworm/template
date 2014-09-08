@@ -16,31 +16,17 @@
     }
 }
 
-// Unordered list
-// -----------------------------------------------------------------
-.mobile-header-menu {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    @include inline-block;
-}
+// The toggler
+// -----------------------------------------------------------------    
+.mobile-toggler {
+    padding: $gutter-skinny;
+    display: block;
+    text-decoration: none;
 
-// Single item
-// -----------------------------------------------------------------
-.mobile-header-menuitem {
-    @extend %remove-style;
-    @include inline-block;
-    
-    a {
-        padding: $gutter-skinny;
-        display: block;
+    &:active,
+    &:focus,
+    &:hover {
         text-decoration: none;
-
-        &:active,
-        &:focus,
-        &:hover {
-            text-decoration: none;
-        }
     }
 }
 

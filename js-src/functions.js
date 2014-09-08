@@ -47,32 +47,10 @@ $(document).ready(function() {
     });
 
 
-    // Toggle the menu
-    $('#menu-toggler a').on('click touchstart', function(e) {
-        e.preventDefault();
-        openMenu('toggle-menu','active-menu','content-toggle',true);
-    });
-
-
     // Close the menu when clickin' on the content
-    $('html').on('click touchstart', '#content-toggle', function(e) {
+    $('html').on('click', '#content-toggle', function(e) {
         e.preventDefault();
         closeMenu('toggle-menu','active-menu');
-        $(this).remove();
-    });
-
-
-    // Toggle the doormat
-    $('#doormat-toggler a').on('click touchstart', function(e) {
-        e.preventDefault();
-        openMenu('toggle-doormat','active-doormat','doormat-toggle',false);
-    });
-
-
-    // Close the menu when clickin' on the content
-    $('html').on('click touchstart', '#doormat-toggle', function(e) {
-        e.preventDefault();
-        closeMenu('toggle-doormat','active-doormat');
         $(this).remove();
     });
 
@@ -133,6 +111,16 @@ $(document).ready(function() {
                     //$(this).next().toggleClass('active-sub');
                     $(this).next().toggle();
                 })
+                
+                
+                // Add the menu toggler
+                $('.core-header').prepend('<div class="mobile-header"><span id="menu-toggler" class="mobile-toggler">Menu</span></div>');
+                // Toggle the menu
+                $('#menu-toggler').on('click', function() {
+                    console.log('test');
+                    openMenu('toggle-menu','active-menu','content-toggle',true);
+                });
+                
 
             }, unmatch: function()
             {
@@ -143,6 +131,10 @@ $(document).ready(function() {
 
                 // Remove the submenu toggle
                 $('.toggle-sub').remove();
+                
+                
+                //
+                $('.mobile-header').remove();
 
             }
         },

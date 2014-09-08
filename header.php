@@ -161,18 +161,6 @@
                 
                     <div class="core core-header">
                         
-                        <div class="mobile-header">
-                            <ul class="mobile-header-menu">
-                                <li id="menu-toggler" class="mobile-header-menuitem">
-                                    <a href="#mainmenu">
-                                        <span>
-                                            Menu
-                                        </span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        
                         <a href="<?php echo get_option('home'); ?>" id="logo" rel="home" title="<?php _e( 'Terug naar de homepage', 'thema_vertalingen' ); ?>">
                             <?php bloginfo('name'); ?>
                         </a>
