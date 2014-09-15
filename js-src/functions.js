@@ -144,8 +144,10 @@ $(document).ready(function() {
 
                 // Submenu
                 $('.has-submenu').on('mouseenter', function() {
+                    $(this).addClass('sub-enter');
                     $('.sub-menu', this).show();
                 }).on('mouseleave',function() {
+                    $(this).removeClass('sub-enter');
                     $('.sub-menu', this).hide();
                 });
                 
