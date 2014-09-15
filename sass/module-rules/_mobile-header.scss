@@ -23,9 +23,8 @@
     display: block;
     text-decoration: none;
 
-    &:active,
-    &:focus,
-    &:hover {
+    &:hover,
+    &:focus {
         text-decoration: none;
     }
 }
