@@ -20,8 +20,6 @@ var src_paths = {
                 'bower_components/parsleyjs/dist/parsley.js',
                 'bower_components/on-media-query/js/onmediaquery.js',
                 'js-src/functions.js'],
-    yepnope: ['bower_components/yepnope/yepnope.1.5.4-min.js',
-                'js-src/yepnope-loader.js'],
     labjs: ['bower_components/labjs/LAB.min.js',
                 'js-src/lab-loader.js'],
     uglify: 'js-src/*.*'
@@ -36,7 +34,6 @@ var dest_paths = {
     imagemin: 'images',
     uglify: 'js',
     bookmarks: '_put_in_root',
-    yepnope: 'js',
     labjs: 'js'
 };
 
@@ -101,18 +98,6 @@ gulp.task('uglify', function() {
         .pipe(plugins.livereload(server))
         .pipe(plugins.notify({ message: 'Uglify complete' }))
         
-    gulp.src(src_paths.yepnope)
-    
-        .pipe(plugins.plumber({errorHandler: plugins.notify.onError("Error: <%= error.message %>")}))
-    
-        .pipe(plugins.concat('yepnope.min.js'))
-        .pipe(plugins.stripDebug())
-        .pipe(plugins.uglify())
-        .pipe(gulp.dest(dest_paths.uglify))
-        
-        .pipe(plugins.livereload(server))
-        .pipe(plugins.notify({ message: 'Uglify complete' }))
-        
     gulp.src(src_paths.labjs)
     
         .pipe(plugins.plumber({errorHandler: plugins.notify.onError("Error: <%= error.message %>")}))
@@ -161,7 +146,7 @@ gulp.task('lint', function() {
 gulp.task('watch', function() {
     server.listen(35729, function(err) {
     	gulp.watch(src_paths.compass, ['compass']);
-    	gulp.watch([src_paths.uglify, src_paths.yepnope], ['uglify']);
+    	gulp.watch([src_paths.uglify, src_paths.labjs], ['uglify']);
     	gulp.watch(src_paths.svgmin, ['svgmin']);
     	gulp.watch(src_paths.svg2png, ['svg2png']);
         gulp.watch(src_paths.bookmarks, ['bookmarks']);
