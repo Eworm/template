@@ -24,6 +24,7 @@
     text-indent: -9999px;
     @include svgbg('images/sprite');    
     transform: translate3d(0, 0, 0);
+    background-color: $border-color;
     
     @include min-screen($palm) {
         left: 35%;
