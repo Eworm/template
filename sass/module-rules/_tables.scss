@@ -90,34 +90,34 @@ table {
             word-wrap: break-word;
             font-size: $body-size;
         }
+    }
+    
+    tr {
+        display: inline-block;
+        vertical-align: top;
+        border: 1px solid $border-color;
+        border-left: 0;
+        font-size: $body-size;
         
-        tr {
-            display: inline-block;
-            vertical-align: top;
-            border: 1px solid $border-color;
-            border-left: 0;
-            font-size: $body-size;
+        @include min-screen($lap) {
+            margin: 0;
+            display: table-row;
+            border-right: 0;
+        }
+        
+        td {
+            display: block;
+            border-bottom: 1px solid $border-color;
             
             @include min-screen($lap) {
-                margin: 0;
-                display: table-row;
-                border-right: 0;
+                display: table-cell;
             }
             
-            td {
-                display: block;
-                border-bottom: 1px solid $border-color;
+            &:last-child {
+                border-bottom: 0;
                 
                 @include min-screen($lap) {
-                    display: table-cell;
-                }
-                
-                &:last-child {
-                    border-bottom: 0;
-                    
-                    @include min-screen($lap) {
-                        border-bottom: 1px solid $border-color;
-                    }
+                    border-bottom: 1px solid $border-color;
                 }
             }
         }
