@@ -44,6 +44,11 @@ input[type="search"] {
     box-sizing: border-box;
 }
 
+
+
+
+
+
 // The form
 // -----------------------------------------------------------------
 .content form {
@@ -62,6 +67,11 @@ input[type="search"] {
         float: left;
     }
 }
+
+
+
+
+
 
 // A single row
 // -----------------------------------------------------------------
@@ -108,6 +118,11 @@ input[type="search"] {
     }
 }
 
+
+
+
+
+
 // The submit
 // -----------------------------------------------------------------
 .submit,
@@ -129,6 +144,11 @@ a.submit {
     @include inline-block;
 }
 
+
+
+
+
+
 // Other elements
 // -----------------------------------------------------------------
 #screenreader,
@@ -136,12 +156,22 @@ a.submit {
     display: none;
 }
 
+
+
+
+
+
 // Required style
 // -----------------------------------------------------------------
 .req {
     color: $lesser-color;
     @include rem('font-size', $body-size);
 }
+
+
+
+
+
 
 // Error messages
 // -----------------------------------------------------------------
