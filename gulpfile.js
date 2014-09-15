@@ -92,7 +92,9 @@ gulp.task('uglify', function() {
     
         .pipe(plugins.concat('functions.min.js'))
         .pipe(plugins.stripDebug())
-        .pipe(plugins.uglify())
+        .pipe(plugins.uglify({
+            compress: false
+        }))
         .pipe(gulp.dest(dest_paths.uglify))
         
         .pipe(plugins.livereload(server))
@@ -104,7 +106,9 @@ gulp.task('uglify', function() {
     
         .pipe(plugins.concat('lab.min.js'))
         .pipe(plugins.stripDebug())
-        .pipe(plugins.uglify())
+        .pipe(plugins.uglify({
+            compress: false
+        }))
         .pipe(gulp.dest(dest_paths.uglify))
         
         .pipe(plugins.livereload(server))
