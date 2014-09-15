@@ -14,14 +14,17 @@ var src_paths = {
     svg2png: 'images-src/*.svg',
     imagemin: 'images/portfolio/*.*',
     bookmarks: 'images-src/root/*.png',
-    uglify: ['bower_components/picturefill/external/matchmedia.js',
+    functions: ['bower_components/picturefill/external/matchmedia.js',
                 'bower_components/hideShowPassword/hideShowPassword.js',
                 'bower_components/picturefill/picturefill.js',
                 'bower_components/parsleyjs/dist/parsley.js',
                 'bower_components/on-media-query/js/onmediaquery.js',
                 'js-src/functions.js'],
     yepnope: ['bower_components/yepnope/yepnope.1.5.4-min.js',
-                'js-src/yepnope-loader.js']
+                'js-src/yepnope-loader.js'],
+    labjs: ['bower_components/labjs/LAB.min.js',
+                'js-src/lab-loader.js'],
+    uglify: 'js-src/*.*'
 };
 
 
@@ -33,7 +36,8 @@ var dest_paths = {
     imagemin: 'images',
     uglify: 'js',
     bookmarks: '_put_in_root',
-    yepnope: 'js'
+    yepnope: 'js',
+    labjs: 'js'
 };
 
 
@@ -85,12 +89,11 @@ gulp.task('svg2png', function () {
 // Uglify
 gulp.task('uglify', function() {
     
-    gulp.src(src_paths.uglify)
+    gulp.src(src_paths.functions)
     
         .pipe(plugins.plumber({errorHandler: plugins.notify.onError("Error: <%= error.message %>")}))
     
         .pipe(plugins.concat('functions.min.js'))
-        // Strip console and debugger statements from JavaScript code
         .pipe(plugins.stripDebug())
         .pipe(plugins.uglify())
         .pipe(gulp.dest(dest_paths.uglify))
@@ -103,6 +106,18 @@ gulp.task('uglify', function() {
         .pipe(plugins.plumber({errorHandler: plugins.notify.onError("Error: <%= error.message %>")}))
     
         .pipe(plugins.concat('yepnope.min.js'))
+        .pipe(plugins.stripDebug())
+        .pipe(plugins.uglify())
+        .pipe(gulp.dest(dest_paths.uglify))
+        
+        .pipe(plugins.livereload(server))
+        .pipe(plugins.notify({ message: 'Uglify complete' }))
+        
+    gulp.src(src_paths.labjs)
+    
+        .pipe(plugins.plumber({errorHandler: plugins.notify.onError("Error: <%= error.message %>")}))
+    
+        .pipe(plugins.concat('lab.min.js'))
         .pipe(plugins.stripDebug())
         .pipe(plugins.uglify())
         .pipe(gulp.dest(dest_paths.uglify))

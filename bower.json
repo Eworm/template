@@ -19,6 +19,7 @@
     "zepto-sources": "~1.0.2",
     "yepnope": "~1.5.4",
     "normalize.scss": "3.0.1+normalize.3.0.1",
-    "parsleyjs": "~2.0.5"
+    "parsleyjs": "~2.0.5",
+    "labjs": "*"
   }
 }

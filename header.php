@@ -108,7 +108,7 @@
                 l.href = '<?php bloginfo('stylesheet_url'); ?>';
                 
                 var y = document.createElement('script');
-                y.src = '<?php bloginfo('template_url'); ?>/js/yepnope.min.js';
+                y.src = '<?php bloginfo('template_url'); ?>/js/lab.min.js';
                 
                 var h = document.getElementsByTagName('body')[0];
                 h.parentNode.insertBefore(y, h);
