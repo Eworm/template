@@ -1,6 +1,6 @@
 // A submenu on a page
 // -----------------------------------------------------------------
-.page-submenu {
+.submenu {
     display: none;
 
     @include min-screen($lap) {
