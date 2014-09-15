@@ -1,53 +1,54 @@
-// Responsive utilitites
-@import 'sass-extras/responsive-utils';
-
-
 // This is the container for all seperate scss files
 // No styles should be included here, only imports of other (smaller) parts
 
 
+// Responsive utilitites
+// -----------------------------------------------------------------
+@import 'sass-extras/responsive-utils';
+
+
 // Theme rules (variables)
 // -----------------------------------------------------------------
-@import 'theme-rules/grid-variables';
-@import 'theme-rules/colors';
-@import 'theme-rules/defaults';
-@import 'theme-rules/fonts';
-@import 'theme-rules/header-sizes';
-@import 'theme-rules/mobile-widths';
-@import 'theme-rules/responsive-breakpoints';
-@import 'theme-rules/margins-paddings';
+@import 'theme-rules/grid-variables';           // Grid config
+@import 'theme-rules/colors';                   // Globally-available colors
+@import 'theme-rules/defaults';                 // Globally-available variables fi radius and shadows
+@import 'theme-rules/fonts';                    // Globally-available font sizes and families
+@import 'theme-rules/header-sizes';             // Global H1/H6 styles
+@import 'theme-rules/mobile-widths';            // Widths of left ease-in menu
+@import 'theme-rules/responsive-breakpoints';   // Definition of all breakpoints
+@import 'theme-rules/margins-paddings';         // Globally-available paddings and margins
 
 
 // Sass functions, extendables & mixins.
 // -----------------------------------------------------------------
-@import 'compass/css3';
-@import 'sass-extras/flex';
-@import 'sass-extras/functions';
-@import 'sass-extras/responsive-grid';
-@import 'sass-extras/extendables';
-@import 'sass-extras/mixins';
-@import 'sass-extras/responsive-js';
+@import 'compass/css3';                         // Useful compass mixins
+// @import 'sass-extras/flex';                     // Flexbox mixins
+@import 'sass-extras/functions';                // Useful functions
+@import 'sass-extras/responsive-grid';          // Custom grid functions. Use grid-variables to control
+@import 'sass-extras/extendables';              // Useful extensions
+@import 'sass-extras/mixins';                   // Useful mixins
+@import 'sass-extras/responsive-js';            // Map javascript to the responsive breakpoints
 
 
 // Base rules. Normalize and other basic element styles.
 // -----------------------------------------------------------------
-@import 'normalize'; // Normalize is being imported via Bower
-@import 'base-rules/base';
-@import 'base-rules/headers';
+@import 'normalize';                            // Normalize is being imported via Bower
+@import 'base-rules/base';                      // Base styles
+@import 'base-rules/headers';                   // Custom H1/H6 styles
 
 
 // Layout rules. Styling of page sections that contain modules.
 // -----------------------------------------------------------------
-@import 'layout-rules/header';
-@import 'layout-rules/main-content';
+@import 'layout-rules/header';                  // Site header
+@import 'layout-rules/main-content';            // Main content of the site
 
 
 // Module rules. Styling of reusable, modular parts of the design.
 // -----------------------------------------------------------------
-@import 'module-rules/mainmenu';
-@import 'module-rules/mobile-header';
-@import 'module-rules/search-form';
-@import 'module-rules/sidebar-section';
-@import 'module-rules/submenu';
-@import 'module-rules/tables';
-@import 'module-rules/forms';
+@import 'module-rules/mainmenu';                // The main menu, probably the only nav
+@import 'module-rules/mobile-header';           // Header for small screens
+@import 'module-rules/search-form';             // A search form
+@import 'module-rules/sidebar-section';         // A section item in a sidebar
+@import 'module-rules/submenu';                 // Page submenu
+@import 'module-rules/tables';                  // Normal and responsive table styles
+@import 'module-rules/forms';                   // Input and button styles

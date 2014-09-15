@@ -1,3 +1,7 @@
+// This is the container for all seperate scss files
+// No styles should be included here, only imports of other (smaller) parts
+
+
 /*!
 Theme Name: Responsive mobile nav left
 Theme URI: http://www.clienturl.nl
@@ -8,47 +12,44 @@ Version: 1.0
 
 
 // Responsive utilitites
+// -----------------------------------------------------------------
 @import 'sass-extras/responsive-utils';
-
-
-// This is the container for all seperate scss files
-// No styles should be included here, only imports of other (smaller) parts
 
 
 // Theme rules (variables)
 // -----------------------------------------------------------------
-@import 'theme-rules/grid-variables';
-@import 'theme-rules/colors';
-@import 'theme-rules/defaults';
-@import 'theme-rules/fonts';
-@import 'theme-rules/header-sizes';
-@import 'theme-rules/margins-paddings';
-@import 'theme-rules/mobile-widths';
-@import 'theme-rules/responsive-breakpoints';
+@import 'theme-rules/grid-variables';           // Grid config
+@import 'theme-rules/colors';                   // Globally-available colors
+@import 'theme-rules/defaults';                 // Globally-available variables fi radius and shadows
+@import 'theme-rules/fonts';                    // Globally-available font sizes and families
+@import 'theme-rules/header-sizes';             // Global H1/H6 styles
+@import 'theme-rules/mobile-widths';            // Widths of left ease-in menu
+@import 'theme-rules/responsive-breakpoints';   // Definition of all breakpoints
+@import 'theme-rules/margins-paddings';         // Globally-available paddings and margins
 
 
 // Sass functions, extendables & mixins.
 // -----------------------------------------------------------------
-@import 'compass/css3';
-@import 'sass-extras/flex';
-@import 'sass-extras/functions';
-@import 'sass-extras/extendables';
-@import 'sass-extras/mixins';
-@import 'sass-extras/responsive-js';
+@import 'compass/css3';                         // Useful compass mixins
+@import 'sass-extras/flex';                     // Flexbox mixins
+@import 'sass-extras/functions';                // Useful functions
+@import 'sass-extras/extendables';              // Useful extensions
+@import 'sass-extras/mixins';                   // Useful mixins
+@import 'sass-extras/responsive-js';            // Map javascript to the responsive breakpoints
 
 
 // Layout rules. Styling of page sections that contain modules.
 // -----------------------------------------------------------------
-@import 'layout-rules/doormat';
-@import 'layout-rules/footer';
+@import 'layout-rules/doormat';                 // Site doormat
+@import 'layout-rules/footer';                  // Site footer
 
 
 // Module rules. Styling of reusable, modular parts of the design.
 // -----------------------------------------------------------------
-@import 'module-rules/post';
-@import 'module-rules/comments';
-@import 'module-rules/header-image';
-@import 'module-rules/images';
-@import 'module-rules/paging';
-@import 'module-rules/search-results';
-@import 'module-rules/vcard';
+@import 'module-rules/post';                    // A single blogpost or searchresult
+@import 'module-rules/comments';                // Comment styles
+@import 'module-rules/header-image';            // A custom wordpress header
+@import 'module-rules/images';                  // Aligned images and captions
+@import 'module-rules/paging';                  // Previous, next and numbers
+@import 'module-rules/search-results';          // For custom search results
+@import 'module-rules/vcard';                   // Vcard styles
