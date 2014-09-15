@@ -90,7 +90,7 @@ $(document).ready(function() {
 
 
                 // Add the submenu toggle
-                $('.sub-menu').each(function() {
+                $('.flyout').each(function() {
                     if($(this).parent().hasClass('current_page_ancestor')) {
                         // The submenu is open
                         $(this).before('<span class="toggle-sub toggle-sub-close"></span>');
@@ -145,10 +145,10 @@ $(document).ready(function() {
                 // Submenu
                 $('.has-submenu').on('mouseenter', function() {
                     $(this).addClass('sub-enter');
-                    $('.sub-menu', this).show();
+                    $('.flyout', this).show();
                 }).on('mouseleave',function() {
                     $(this).removeClass('sub-enter');
-                    $('.sub-menu', this).hide();
+                    $('.flyout', this).hide();
                 });
                 
             }, unmatch: function()

@@ -357,4 +357,19 @@ function mt_contactrequest_page () {
     
 }
 
+
+/* CUSTOM WALKER TO CHANGE THE SUB-MENU CLASS
+==================================================================================================================================*/
+class My_Sub_Menu extends Walker_Nav_Menu {
+    function start_lvl(&$output, $depth) {
+        $indent = str_repeat("\t", $depth);
+        $output .= "\n$indent<ul class=\"flyout\">\n";
+    }
+    function end_lvl(&$output, $depth) {
+        $indent = str_repeat("\t", $depth);
+        $output .= "$indent</ul>\n";
+    }
+}
+
+
 ?>
