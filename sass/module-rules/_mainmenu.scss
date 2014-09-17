@@ -1,6 +1,6 @@
 // The menu
 // -----------------------------------------------------------------
-#mainmenu {
+.mainmenu {
     width: $mobile-menu-width;
     height: 100%;
     position: absolute;
@@ -17,7 +17,7 @@
         transform: translate3d(-100%, 0, 0);
     }
 
-    .active-menu & {
+    .js-active-menu & {
         overflow: auto;
         overflow-x: hidden;
         -ms-overflow-style: -ms-autohiding-scrollbar;
@@ -28,7 +28,7 @@
         }
     }
     
-    .touch.no-overflow-scroll.active-menu & {
+    .touch.no-overflow-scroll.js-active-menu & {
         overflow: visible;
     }
 
@@ -59,7 +59,7 @@
 
 // Unordered list
 // -----------------------------------------------------------------
-#main-menu {
+.main-menu {
     width: 100%;
     margin: 0;
     padding: 0;

@@ -4,10 +4,10 @@ $(document).ready(function() {
     // Optimize scrolling
     (function() {
         var timer;
-        $(window).on('scroll resize',function () {
+        $(window).on('scroll resize', function () {
             $('html').addClass('avoid-clicks');
             clearTimeout(timer);
-            timer = setTimeout( refresh , 150 );
+            timer = setTimeout(refresh, 150 );
         });
         var refresh = function () {
             $('html').removeClass('avoid-clicks');
@@ -48,25 +48,25 @@ $(document).ready(function() {
 
 
     // Close the menu when clickin' on the content
-    $('html').on('click', '#content-toggle', function(e) {
+    $('html').on('click', '#js-content-toggle', function(e) {
         e.preventDefault();
-        closeMenu('toggle-menu','active-menu');
+        closeMenu('js-toggle-menu', 'js-active-menu');
         $(this).remove();
     });
 
 
     // Function to open something
-    function openMenu(toggleClass,activeClass,contentToggle,scrollTop) {
+    function openMenu(toggleClass, activeClass, contentToggle, scrollTop) {
         $('html').addClass(toggleClass);
         setTimeout(function() {
             $('html').addClass(activeClass);
-            $('#container').after('<div id="' + contentToggle + '"></div>');
+            $('#js-container').after('<div id="' + contentToggle + '"></div>');
         }, 180);
     };
 
 
     // Function to close something
-    function closeMenu(toggleClass,activeClass) {
+    function closeMenu(toggleClass, activeClass) {
         $('html').removeClass(toggleClass);
         setTimeout(function() {
             $('html').removeClass(activeClass);
@@ -86,11 +86,11 @@ $(document).ready(function() {
             {
 
                 // Put the search in the menu
-                $('#header #searchform').prependTo('#menu');
+                $('#js-header #js-searchform').prependTo('#js-mainmenu');
 
 
                 // Add the submenu toggle
-                $('.flyout').each(function() {
+                $('.js-flyout').each(function() {
                     if($(this).parent().hasClass('current_page_ancestor')) {
                         // The submenu is open
                         $(this).before('<span class="toggle-sub toggle-sub-close"></span>');
@@ -116,9 +116,9 @@ $(document).ready(function() {
                 // Add the menu toggler
                 $('.core-header').prepend('<div class="mobile-header"><span id="menu-toggler" class="mobile-toggler">Menu</span></div>');
                 // Toggle the menu
-                $('#menu-toggler').on('click', function() {
+                $('#js-menu-toggler').on('click', function() {
                     console.log('test');
-                    openMenu('toggle-menu','active-menu','content-toggle',true);
+                    openMenu('js-toggle-menu', 'js-active-menu', 'content-toggle', true);
                 });
                 
 
@@ -126,7 +126,7 @@ $(document).ready(function() {
             {
 
                 // Put the search back
-                $('#searchform').insertAfter('#logo');
+                $('#js-searchform').insertAfter('#js-logo');
 
 
                 // Remove the submenu toggle
@@ -145,10 +145,10 @@ $(document).ready(function() {
                 // Submenu
                 $('.has-submenu').on('mouseenter', function() {
                     $(this).addClass('sub-enter');
-                    $('.flyout', this).show();
-                }).on('mouseleave',function() {
+                    $('.js-flyout', this).show();
+                }).on('mouseleave', function() {
                     $(this).removeClass('sub-enter');
-                    $('.flyout', this).hide();
+                    $('.js-flyout', this).hide();
                 });
                 
             }, unmatch: function()
@@ -173,7 +173,7 @@ function initialize_single() {
         center: new google.maps.LatLng(0, 0),
         mapTypeId: google.maps.MapTypeId.ROADMAP,
     };
-    var map = new google.maps.Map(document.getElementById('map_address'), myOptions);
+    var map = new google.maps.Map(document.getElementById('js-map_address'), myOptions);
     codeLocations_single(company_address, map);
 }
 

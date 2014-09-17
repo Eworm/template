@@ -243,7 +243,7 @@ endif;
                                 var company_address = [{location:"<?php echo $options["theme_address"]; ?>"}];
                             </script>
                         
-                            <div id="map_address" style="width:100%; height:250px;"></div>
+                            <div id="js-map_address" style="width:100%; height:250px;"></div>
                         
                         </section>
         

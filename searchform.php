@@ -1,4 +1,4 @@
-<form role="search" method="get" class="searchform" action="<?php echo home_url( '/' ); ?>">
+<form role="search" method="get" id="js-searchform" class="searchform" action="<?php echo home_url( '/' ); ?>">
 
     <fieldset class="searchform-container">
 

@@ -363,7 +363,7 @@ function mt_contactrequest_page () {
 class My_Sub_Menu extends Walker_Nav_Menu {
     function start_lvl(&$output, $depth) {
         $indent = str_repeat("\t", $depth);
-        $output .= "\n$indent<ul class=\"flyout\">\n";
+        $output .= "\n$indent<ul class=\"js-flyout flyout\">\n";
     }
     function end_lvl(&$output, $depth) {
         $indent = str_repeat("\t", $depth);

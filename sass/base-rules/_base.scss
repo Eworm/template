@@ -10,12 +10,12 @@
 html {
     font-size: $base-size/$body-size; // Enable font-size zoom for old ies
 
-    &.active-menu {
+    &.js-active-menu {
         height: 100%;
         overflow: hidden;
     }
     
-    &.touch.no-overflow-scroll.active-menu {
+    &.touch.no-overflow-scroll.js-active-menu {
         overflow: visible;
     }
 }
@@ -25,13 +25,13 @@ body {
     font: #{$body-size}/#{$line-height} #{$body-font};
     color: $body-color;
 
-    .active-menu & {
+    .js-active-menu & {
         height: 100%;
         overflow: hidden;
         user-select: none;
     }
     
-    .touch.no-overflow-scroll.active-menu & {
+    .touch.no-overflow-scroll.js-active-menu & {
         overflow: visible;
     }
 }
@@ -44,16 +44,16 @@ body {
     float: left;
     overflow: hidden;
 
-    .active-menu & {
+    .js-active-menu & {
         overflow: hidden;
     }
     
-    .touch.no-overflow-scroll.active-menu & {
+    .touch.no-overflow-scroll.js-active-menu & {
         overflow: visible;
     }
 }
 
-#content-toggle {
+#js-content-toggle {
     position: absolute;
     top: 0;
     right: 0;
@@ -86,7 +86,7 @@ body {
         height: auto;
     }
 
-    .toggle-menu & {
+    .js-toggle-menu & {
         position: relative;
         left: $mobile-menu-width;
         
@@ -99,7 +99,7 @@ body {
         }
     }
 
-    .csstransforms3d.toggle-menu & {
+    .csstransforms3d.js-toggle-menu & {
         left: 0;
         transform: translate3d($mobile-menu-width, 0, 0) scale3d(1, 1, 1);
         backface-visibility: hidden;
