@@ -45,10 +45,6 @@ input[type="search"] {
 }
 
 
-
-
-
-
 // The form
 // -----------------------------------------------------------------
 .content form {
@@ -67,10 +63,6 @@ input[type="search"] {
         float: left;
     }
 }
-
-
-
-
 
 
 // A single row
@@ -119,10 +111,6 @@ input[type="search"] {
 }
 
 
-
-
-
-
 // The submit
 // -----------------------------------------------------------------
 .submit,
@@ -145,10 +133,6 @@ a.submit {
 }
 
 
-
-
-
-
 // Other elements
 // -----------------------------------------------------------------
 #screenreader,
@@ -157,20 +141,12 @@ a.submit {
 }
 
 
-
-
-
-
 // Required style
 // -----------------------------------------------------------------
 .req {
     color: $lesser-color;
     @include rem('font-size', $body-size);
 }
-
-
-
-
 
 
 // Error messages

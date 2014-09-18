@@ -177,8 +177,7 @@
                                 'container' => '',
                                 'menu_id' => '',
                                 'menu_class' => 'main-menu',
-                                'depth' => '2',
-                                'walker' => new My_Sub_Menu()
+                                'depth' => '2'
                             )); ?>
                         </nav>
                         

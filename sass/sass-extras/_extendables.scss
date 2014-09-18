@@ -1,4 +1,5 @@
 // Underline hover
+// -----------------------------------------------------------------
 %hover-underline {
     text-decoration: none;
     
@@ -9,6 +10,7 @@
 }
 
 // Images used in posts
+// -----------------------------------------------------------------
 %postimage {
     width: 100%;
     height: auto;
@@ -19,6 +21,7 @@
 }
 
 // Arrow for navfeedback
+// -----------------------------------------------------------------
 %navfeedback {
     width: 0;
     height: 0;
@@ -28,6 +31,7 @@
 }
 
 // Remove styling of lists
+// -----------------------------------------------------------------
 %remove-style {
     margin: 0;
     padding: 0;
@@ -35,6 +39,7 @@
 }
 
 // Row in a form
+// -----------------------------------------------------------------
 %formrow {
     width: 100%;
     margin-bottom: $margin/2;

@@ -9,10 +9,6 @@
 }
 
 
-
-
-
-
 // A comment, trackback, pingback or response
 // -----------------------------------------------------------------
 .comment,
@@ -60,17 +56,10 @@
 }
 
 
-
-
-
-
 // The comment body
 // -----------------------------------------------------------------
 .comment-body {
 }
-
-
-
 
 
 // The author name
@@ -86,9 +75,6 @@
         font-weight: normal;
     }
 }
-
-
-
 
 
 // The avatar
@@ -108,17 +94,11 @@
 }
 
 
-
-
-
 // Text
 // -----------------------------------------------------------------
 .says {
     
 }
-
-
-
 
 
 // Comment meta info
@@ -150,9 +130,6 @@
 }
 
 
-
-
-
 // The nr. of responses
 // -----------------------------------------------------------------
 .comments-title {
@@ -166,9 +143,6 @@
 .comment-author-admin,
 .bypostauthor {
 }
-
-
-
 
 
 // Replies
@@ -192,17 +166,11 @@
 }
 
 
-
-
-
 // Link for replying
 // -----------------------------------------------------------------
 .comment-reply-link {
     @extend %hover-underline;
 }
-
-
-
 
 
 // Text
