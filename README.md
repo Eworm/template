@@ -59,4 +59,7 @@ De 'js-src' map is bedoelt voor de bestanden waar je in werkt. D.m.v. een Gulp t
 **SASS**
 In de 'sass' map staan alle .scss bestanden. Elk onderdeel heeft zijn eigen bestand, hierdoor is het gemakkelijker werken met deze bestanden. De structuur van deze bestanden is ge&iuml;nspireerd door https://smacss.com/
 
+## Let op!
+* Classed en id's die nodig zijn voor javascript beginnen met js-. Deze classes en id's dus niet zomaar weghalen of aanpassen.
+
 Voor vragen kun je contact met me opnemen: 06 - 4641 2770, of wout@woutmager.nl
