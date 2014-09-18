@@ -35,7 +35,8 @@ Installeer de bower dependencies met:
 Zet deze regels in je .gitignore, zodat de repo netjes blijft. Het is het handigst om dat globaal te doen:
 ```node_modules
 bower_components
-.sass-cache```
+.sass-cache
+```
 
 **All done!**
 Als alles goed is gegaan heb je nu alle software en dependencies ge&iuml;nstalleerd.
