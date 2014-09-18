@@ -3,6 +3,7 @@ Ik maak gebruik van open-source software om sneller en effici&euml;nter te werke
 
 ### Voordat je kunt beginnen moet je deze software installeren
 **Stap 1**
+
 Nodejs: http://nodejs.org/
 
 **Stap 2**
