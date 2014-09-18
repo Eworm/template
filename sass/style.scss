@@ -23,7 +23,6 @@ Version: 1.0
 @import 'theme-rules/defaults';                 // Globally-available variables f.i. radius and shadows
 @import 'theme-rules/fonts';                    // Globally-available font sizes and families
 @import 'theme-rules/header-sizes';             // Global H1/H6 sizes
-@import 'theme-rules/mobile-widths';            // Widths of left ease-in menu
 @import 'theme-rules/responsive-breakpoints';   // Definition of all breakpoints
 @import 'theme-rules/margins-paddings';         // Globally-available paddings and margins
 
@@ -31,11 +30,9 @@ Version: 1.0
 // Sass functions, extendables & mixins.
 // -----------------------------------------------------------------
 @import 'compass/css3';                         // Useful compass mixins
-@import 'sass-extras/flex';                     // Flexbox mixins
 @import 'sass-extras/functions';                // Useful functions
 @import 'sass-extras/extendables';              // Useful extensions
 @import 'sass-extras/mixins';                   // Useful mixins
-@import 'sass-extras/responsive-js';            // Map javascript to the responsive breakpoints
 
 
 // Layout rules. Styling of page sections that contain modules.
