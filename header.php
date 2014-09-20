@@ -100,35 +100,6 @@
         
         <?php wp_head(); ?>
         
-        <!-- Script suggestion from google on how to insert the stylesheet -->
-        <script>
-        
-            // So we can use the template url in javascript
-            var templateUrl = '<?php bloginfo('template_url'); ?>';
-            
-            // Insert the remaining css & js as soon as possible
-            var cb = function() {
-                
-                var l = document.createElement('link'); l.rel = 'stylesheet';
-                l.href = '<?php bloginfo('stylesheet_url'); ?>';
-                
-                var y = document.createElement('script');
-                y.src = '<?php bloginfo('template_url'); ?>/js/lab.min.js';
-                
-                var h = document.getElementsByTagName('body')[0];
-                h.parentNode.insertBefore(y, h);
-                h.parentNode.insertBefore(l, h);
-            };
-            
-            var raf = false;
-            try {
-                raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
-            } catch(e) {}
-            
-            if (raf) raf(cb);
-            else window.addEventListener('load', cb);
-        </script>
-        
         <!-- Include the above the fold css and replace all relative urls with the theme url -->
         <style>
             <?php
@@ -150,6 +121,35 @@
         <noscript>
             <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" media="screen">
         </noscript>
+        
+        <!-- Script suggestion from google on how to insert the stylesheet -->
+        <script>
+        
+            // So we can use the template url in javascript
+            var templateUrl = '<?php bloginfo('template_url'); ?>';
+            
+            // Insert the remaining css & js as soon as possible
+            var cb = function() {
+                
+                var l = document.createElement('link'); l.rel = 'stylesheet';
+                l.href = '<?php bloginfo('stylesheet_url'); ?>';
+                
+                var y = document.createElement('script');
+                y.src = '<?php bloginfo('template_url'); ?>/js/lab.min.js';
+                
+                var h = document.getElementsByTagName('noscript')[0];
+                h.parentNode.insertBefore(y, h);
+                h.parentNode.insertBefore(l, h);
+            };
+            
+            var raf = false;
+            try {
+                raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
+            } catch(e) {}
+            
+            if (raf) raf(cb);
+            else window.addEventListener('load', cb);
+        </script>
         
         <!--[if lt IE 9]>
             <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
