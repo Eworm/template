@@ -102,6 +102,11 @@
         
         <!-- Script suggestion from google on how to insert the stylesheet -->
         <script>
+        
+            // So we can use the template url in javascript
+            var templateUrl = '<?php bloginfo('template_url'); ?>';
+            
+            // Insert the remaining css & js as soon as possible
             var cb = function() {
                 
                 var l = document.createElement('link'); l.rel = 'stylesheet';
@@ -141,7 +146,7 @@
             ?>
         </style>
         
-        <!-- Visitors without javascript get the rest of the stylesheet the normal way -->
+        <!-- Visitors without javascript get the rest of the stylesheet the standard way -->
         <noscript>
             <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" media="screen">
         </noscript>

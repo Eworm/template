@@ -36,17 +36,8 @@
             </div> <!-- .container-transition -->
             
         </div> <!-- .container -->
-        
-        
-        <script>
-        
-            // So we can use the template url in javascript
-            var templateUrl = '<?php bloginfo('template_url'); ?>';
-            
-        </script>
                 
-        <?php wp_footer(); ?>
-  
+        <?php wp_footer(); ?>  
   
     </body>
 </html>
