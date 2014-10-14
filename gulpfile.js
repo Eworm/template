@@ -14,6 +14,7 @@ var src_paths = {
     svg2png: 'images-src/*.svg',
     imagemin: 'images/portfolio/*.*',
     bookmarks: 'images-src/root/*.png',
+    svgsprites: 'images-src/sprites/**/*.svg',
     functions: ['bower_components/picturefill/external/matchmedia.js',
                 'bower_components/hideShowPassword/hideShowPassword.js',
                 'bower_components/picturefill/picturefill.js',
@@ -29,6 +30,7 @@ var src_paths = {
 // Set destination paths
 var dest_paths = {
     compass: '.',
+    images: 'images',
     svgmin: 'images',
     svg2png: 'images',
     imagemin: 'images',
@@ -136,6 +138,29 @@ gulp.task('bookmarks', function () {
     
     .pipe(plugins.notify({ message: 'Bookmarks complete' }))
         
+});
+
+
+// SVG sprites
+gulp.task('sprites', function () {
+    
+    return gulp.src(src_paths.svgsprites)
+    
+            .pipe(plugins.svgSprites({cssFile: '../sass/sprites/_sprites.scss',
+                    svgPath: '../images/%f',
+                    pngPath: '../images/%f',
+                    layout: 'vertical',
+                    templates: {
+                        css: require('fs').readFileSync('./dustjs/sprite-template.css', 'utf-8')
+                    }
+            }))
+            .pipe(gulp.dest(dest_paths.images))
+            .pipe(plugins.filter('**/*.svg'))
+            .pipe(plugins.svg2png())
+            .pipe(gulp.dest(dest_paths.images))
+            
+            .pipe(plugins.notify({ message: 'Svg sprites optim complete' }))
+            
 });
 
 
