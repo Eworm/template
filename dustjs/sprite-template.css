@@ -21,6 +21,9 @@ $sprite-size-y: {relHeight} * 10px;
         // Then use negative margins to reposition the element
         margin-top: -$sprite-height-reset;
         margin-left: -$sprite-width-reset;
+        position: absolute;
+        left: 50%;
+        top: 50%;
     }
     
     @if $posOnly == false {
