@@ -133,7 +133,7 @@ $(document).ready(function() {
                 $('.toggle-sub').remove();
                 
                 
-                //
+                // Remove the mobile header
                 $('.mobile-header').remove();
 
             }
