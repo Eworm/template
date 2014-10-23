@@ -23,7 +23,7 @@
     left: 50%;
     display: block;
     text-indent: -9999px;
-    @include svgbg('images/sprite');    
+    @include sprite($sprite-logo);
     transform: translate3d(0, 0, 0);
     background-color: $border-color;
     
@@ -37,7 +37,7 @@
         margin: 0 20px 0 0;
         float: left;
         position: static;
-        background-position: 0 -50px;
+        @include sprite($sprite-logo, false, true);               // No negative margins, position only
     }
 }
 
