@@ -29,49 +29,76 @@ function theme_options_do_page() {
     ?>
     
     <div class="wrap">
+    
         <?php screen_icon(); echo "<h2>" . get_current_theme() . __( ' Thema opties', 'thema_vertalingen' ) . "</h2>"; ?>
 
         <?php if ( false !== $_REQUEST['settings-updated'] ) : ?>
-        <div class="updated fade"><p><strong><?php _e( 'De wijzigingen zijn opgeslagen', 'thema_vertalingen' ); ?></strong></p></div>
+        
+            <div class="updated fade">
+                <p>
+                    <strong>
+                        <?php _e( 'De wijzigingen zijn opgeslagen', 'thema_vertalingen' ); ?>
+                    </strong>
+                </p>
+            </div>
+        
         <?php endif; ?>
 
         <form method="post" action="options.php">
+        
             <?php settings_fields( 'sample_options' ); ?>
             <?php $options = get_option( 'template_theme_options' ); ?>
             
             <table class="form-table">
+            
                 <tr valign="top">
                     <td colspan="2">
-                        <h2><?php _e( 'Algemene opties', 'thema_vertalingen' ); ?></h2>
+                        <h2>
+                            <?php _e( 'Algemene opties', 'thema_vertalingen' ); ?>
+                        </h2>
                     </td>
                 </tr>
+                
                 <?php
                 /**
                  * Address
                  */
                 ?>                
-                <tr valign="top"><th scope="row"><?php _e( 'Bedrijfsadres', 'thema_vertalingen' ); ?></th>
+                <tr valign="top">
+                    <th scope="row">
+                        <?php _e( 'Bedrijfsadres', 'thema_vertalingen' ); ?>
+                    </th>
                     <td>
                         <input id="template_theme_options[theme_address]" class="regular-text" type="text" name="template_theme_options[theme_address]" value="<?php esc_attr_e( $options['theme_address'] ); ?>" />
                     </td>
                 </tr>
+                
             </table>
+            
             <table class="form-table">
+            
                 <tr valign="top">
                     <td colspan="2">
-                        <h2><?php _e( 'SEO', 'thema_vertalingen' ); ?></h2>
+                        <h2>
+                            <?php _e( 'SEO', 'thema_vertalingen' ); ?>
+                        </h2>
                     </td>
                 </tr>
+                
                 <?php
                 /**
-                 * Address
+                 * SEO
                  */
                 ?>                
-                <tr valign="top"><th scope="row"><?php _e( 'SEO keywords', 'thema_vertalingen' ); ?></th>
+                <tr valign="top">
+                    <th scope="row">
+                        <?php _e( 'SEO keywords', 'thema_vertalingen' ); ?>
+                    </th>
                     <td>
                         <input id="template_theme_options[seo_keywords]" class="regular-text" type="text" name="template_theme_options[seo_keywords]" value="<?php esc_attr_e( $options['seo_keywords'] ); ?>" />
                     </td>
                 </tr>
+                
             </table>
 
             <p class="submit">
