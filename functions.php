@@ -358,4 +358,39 @@ function mt_contactrequest_page () {
 }
 
 
+//
+add_action( 'wp_ajax_nopriv_load-filter', 'prefix_load_cat_posts' );
+add_action( 'wp_ajax_load-filter', 'prefix_load_cat_posts' );
+
+function prefix_load_cat_posts () {
+
+    $cat_id = $_POST['cat'];
+    $args = array (
+        'cat' => $cat_id,
+        'posts_per_page' => 10,
+        'order' => 'DESC'
+    );
+
+    global $post;
+    $posts = get_posts($args);
+
+    ob_start ();
+
+    foreach ($posts as $post) {
+        setup_postdata($post);
+    ?>
+
+        <?php get_template_part( 'post', '' ); ?>
+        
+    <?php }
+        
+        wp_reset_postdata();
+
+        $response = ob_get_contents();
+        ob_end_clean();
+
+        echo $response;
+        die(1);
+    }
+
 ?>

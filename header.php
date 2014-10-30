@@ -128,6 +128,9 @@
             // So we can use the template url in javascript
             var templateUrl = '<?php bloginfo('template_url'); ?>';
             
+            // For ajax calls
+            var templateAdminAjax = '<?php echo admin_url('admin-ajax.php'); ?>';
+            
             // Insert the remaining css & js as soon as possible
             var cb = function() {
                 

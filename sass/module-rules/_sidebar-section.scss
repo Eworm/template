@@ -51,3 +51,10 @@
         @extend %hover-underline;
     }
 }
+
+
+// Nav feedback
+// -----------------------------------------------------------------
+.current-cat {
+    font-weight: bold;
+}

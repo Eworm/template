@@ -71,10 +71,13 @@
 }
 
 // Summary
+// -----------------------------------------------------------------
 %post {
     width: 100%;
     margin-bottom: $margin;
     float: left;
+    opacity: 1;
+    transition: opacity .2s ease;
     
     &:last-child {
         margin-bottom: 0;

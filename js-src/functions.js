@@ -3,6 +3,7 @@ $(document).ready(function() {
 
     // Optimize scrolling
     (function() {
+    
         var timer;
         $(window).on('scroll resize', function () {
             $('html').addClass('avoid-clicks');
@@ -12,23 +13,29 @@ $(document).ready(function() {
         var refresh = function () {
             $('html').removeClass('avoid-clicks');
         };
+        
     })();
     
 
     // Animation class
     setTimeout(function() {
+    
         $('html').addClass('start-animatin');
+        
     }, 50);
 
 
     // Sniffing for android lower then 2.3
     var ua = navigator.userAgent.toLowerCase();
     var isAndroid = ua.indexOf("android") > -1;
-    if(isAndroid) {
+    
+    if (isAndroid) {
+    
         var androidversion = parseFloat(ua.slice(ua.indexOf("android")+8)); 
         if (androidversion <= 2.3) {
             $('html').addClass('no-overflow-scroll');
         }
+        
     }
     
     
@@ -49,29 +56,107 @@ $(document).ready(function() {
 
     // Close the menu when clickin' on the content
     $('html').on('click', '#js-content-toggle', function(e) {
+    
         e.preventDefault();
         closeMenu('js-toggle-menu', 'js-active-menu');
         $(this).remove();
+        
     });
 
 
     // Function to open something
     function openMenu(toggleClass, activeClass, contentToggle, scrollTop) {
+    
         $('html').addClass(toggleClass);
         setTimeout(function() {
             $('html').addClass(activeClass);
             $('#js-container').after('<div id="' + contentToggle + '"></div>');
         }, 180);
+        
     };
 
 
     // Function to close something
     function closeMenu(toggleClass, activeClass) {
+    
         $('html').removeClass(toggleClass);
         setTimeout(function() {
             $('html').removeClass(activeClass);
         }, 180);
+        
     };
+    
+    
+    // Get categories via AJAX (if we have the browsersupport)
+    $('.js-catitem').on('click', function(e) {
+        
+        var catId = $(this).attr('id');
+        var catUrl = $(this).attr('href');
+        var cat = $(this).data('category');
+        var pageTitle = document.title;
+        
+        cat_ajax_get(catId, cat, pageTitle);
+        push(catId, cat, catUrl, pageTitle);
+        
+        e.preventDefault();
+      
+    });
+    
+    function cat_ajax_get(catId, cat, pageTitle) {
+    
+        $('.js-catitem').removeClass('current-cat');
+        $('#' + catId).addClass('current-cat');
+        
+        $('.main-content').addClass('thinkin');
+        
+        jQuery.ajax({
+            type: 'POST',
+            url: templateAdminAjax,
+            data: {
+                'action': 'load-filter',
+                cat: cat
+            },
+            success: function(response) {
+                
+                // Change HTML
+                $('.main-content').html(response).promise().done(function(){
+                    setTimeout(function() {
+                        $('.main-content').removeClass('thinkin');
+                    }, 100);
+                });
+
+                return false;
+            }
+        });
+    }
+
+
+    // Set the push state    
+    function push (catId, cat, catUrl, pageTitle) {
+        history.pushState({
+            id: cat,
+            current: catId
+        }, pageTitle, catUrl);
+    }
+    
+    // Catch the back button
+    window.addEventListener('popstate', function(e) {
+    
+        var state = e.state;
+        var current = e.current;
+    
+        if (state) {
+            cat_ajax_get(state.current, state.id, location.pathname);
+        }
+
+    });
+    
+    
+    // The initial state
+    history.replaceState({
+        catId: '',
+        catUrl: '',
+    }, null, location.pathname);
         
     
     // Commentform validation

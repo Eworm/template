@@ -93,7 +93,7 @@ gulp.task('uglify', function() {
         .pipe(plugins.plumber({errorHandler: plugins.notify.onError("Error: <%= error.message %>")}))
     
         .pipe(plugins.concat('functions.min.js'))
-        .pipe(plugins.stripDebug())
+        // .pipe(plugins.stripDebug())
         .pipe(plugins.uglify({
             compress: false
         }))
@@ -107,7 +107,7 @@ gulp.task('uglify', function() {
         .pipe(plugins.plumber({errorHandler: plugins.notify.onError("Error: <%= error.message %>")}))
     
         .pipe(plugins.concat('lab.min.js'))
-        .pipe(plugins.stripDebug())
+        // .pipe(plugins.stripDebug())
         .pipe(plugins.uglify({
             compress: false
         }))
