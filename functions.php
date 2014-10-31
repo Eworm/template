@@ -384,13 +384,13 @@ function prefix_load_cat_posts () {
         
     <?php }
         
-        wp_reset_postdata();
+    wp_reset_postdata();
 
-        $response = ob_get_contents();
-        ob_end_clean();
+    $response = ob_get_contents();
+    ob_end_clean();
 
-        echo $response;
-        die(1);
-    }
+    echo $response;
+    die(1);
+}
 
 ?>
