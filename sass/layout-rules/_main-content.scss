@@ -2,8 +2,19 @@
 // -----------------------------------------------------------------
 .main-content {
     padding: 0;
+    background-position: center 10px;
+    background: url('images/ajax-loader.gif') no-repeat center -24px;
+    transition: background-position .3s ease-in-out;
 
     @include min-screen($lap) {
+    }
+}
+
+.thinkin {
+    background: url('images/ajax-loader.gif') no-repeat center 20px;
+    
+    .post {
+        opacity: 0;
     }
 }
 
@@ -23,13 +34,5 @@
         &:last-child {
             // margin-bottom: 0;
         }
-    }
-}
-
-.thinkin {
-    background: url('images/ajax-loader.gif') no-repeat center 40px;
-    
-    .post {
-        opacity: 0;
     }
 }
