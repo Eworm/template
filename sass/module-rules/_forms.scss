@@ -4,7 +4,7 @@ input {
     width: 100%;
     padding: $input-padding*2;
     font-family: $body-font;
-    @include rem('font-size', $body-size);
+    font-size: $body-size;
     
     @include min-screen($lap) {
         width: 50%;
@@ -20,7 +20,7 @@ textarea {
     height: 120px;
     padding: $input-padding*2;
     font-family: $body-font;
-    @include rem('font-size', $body-size);
+    font-size: $body-size;
 }
 
 input[type="file"] {
@@ -145,7 +145,7 @@ a.submit {
 // -----------------------------------------------------------------
 .req {
     color: $lesser-color;
-    @include rem('font-size', $body-size);
+    font-size: $body-size;
 }
 
 
