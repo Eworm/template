@@ -14,6 +14,7 @@
         <?php edit_post_link('Aanpassen', ' | ',''); ?>
         
         <br>
+        
         <?php /* pages don't have categories or tags */ if (!is_page()) : ?>
             <?php _e( 'Categorie&euml;n', 'thema_vertalingen' ); ?>: <?php the_category(', '); ?>.
             <br>

@@ -96,8 +96,14 @@
         <link type="text/plain" rel="author" href="/humans.txt">
         
         <?php
-            $whitelist = array('localhost', '10.0.1.17');
-            if ($link = (!in_array($_SERVER['HTTP_HOST'], $whitelist))) :
+            $whitelist = array(
+                'localhost',
+                '10.0.1.17'
+            );
+            if ($link = (!in_array(
+                $_SERVER['HTTP_HOST'],
+                $whitelist
+            ))) :
         ?>
         <!-- Insert Google analytics here -->
         <?php endif; ?>
