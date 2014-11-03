@@ -14,7 +14,7 @@
 
     p,
     ul {
-        margin: $margin/2 0;
+        margin: $margin-skinny 0;
         
         @include min-screen($lap) {
             margin: $margin 0;

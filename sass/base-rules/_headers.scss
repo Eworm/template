@@ -1,7 +1,7 @@
 // Page title
 // -----------------------------------------------------------------
 .main-content-title {
-    margin: 0 0 $margin/2;
+    margin: 0 0 $margin-skinny;
     font-weight: normal;
     @include rem('font-size', $header-1);
 
@@ -41,21 +41,13 @@
     }
 
     h2 {
-        margin: 0 0 $margin/2;
+        margin: 0;
         @include rem('font-size', $header-2);
-        
-        @include min-screen($lap) {
-            margin-bottom: $margin;
-        }
     }
     
     h3 {
-        margin: 0 0 $margin-skinny/2;
+        margin: 0;
         @include rem('font-size', $header-3);
-        
-        @include min-screen($lap) {
-            margin-bottom: $margin-skinny;
-        }
     }
     
     h4 {

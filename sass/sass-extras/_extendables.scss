@@ -42,12 +42,16 @@
 // -----------------------------------------------------------------
 %formrow {
     width: 100%;
-    margin-bottom: $margin/2;
+    margin-bottom: $margin-skinny;
     float: left;
     clear: both;
     
+    @include min-screen($lap) {
+        margin-bottom: $margin;
+    }
+    
     &:last-child {
-        margin-bottom: 0;
+        // margin-bottom: 0;
     }
     
     &.error {
