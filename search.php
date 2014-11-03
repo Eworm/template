@@ -37,6 +37,7 @@
                             </span>
                 
                         </section>
+                        
                     <?php endwhile; ?>
                         
                         <ul class="post-navigation">
