@@ -4,6 +4,7 @@
     display: none;
 
     @include min-screen($lap) {
+        margin-bottom: $margin;
         clear: none;
         display: block;
         border: 1px solid $border-color;
