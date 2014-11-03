@@ -358,7 +358,8 @@ function mt_contactrequest_page () {
 }
 
 
-//
+/* AJAX categories
+==================================================================================================================================*/
 add_action( 'wp_ajax_nopriv_load-filter', 'prefix_load_cat_posts' );
 add_action( 'wp_ajax_load-filter', 'prefix_load_cat_posts' );
 

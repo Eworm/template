@@ -13,6 +13,7 @@
                     <?php /* Start the Loop */ ?>              
                     <?php while (have_posts()) : the_post(); ?>
                     
+                        <!-- This function uses post.php -->
                         <?php get_template_part( 'post', '' ); ?>
     
                     <?php endwhile; ?>
