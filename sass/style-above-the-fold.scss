@@ -27,12 +27,12 @@
 @import 'sass-extras/responsive-grid';          // Custom grid functions. Use grid-variables to control
 @import 'sass-extras/extendables';              // Useful extensions
 @import 'sass-extras/mixins';                   // Useful mixins
-@import 'sass-extras/responsive-js';            // Map javascript to the responsive breakpoints
 
 
 // Base rules. Normalize and other basic element styles.
 // -----------------------------------------------------------------
 @import 'normalize';                            // Normalize is being imported via Bower
+@import 'sass-extras/responsive-js';            // Map javascript to the responsive breakpoints
 @import 'base-rules/base';                      // Base styles
 @import 'base-rules/headers';                   // Custom H1/H6 styles
 

@@ -227,20 +227,28 @@ $(document).ready(function() {
             context: ['lap', 'desk', 'wall', 'cinema'],
             match: function() {
 
-                // Submenu
-                $('.has-submenu').on('mouseenter', function() {
-                    $(this).addClass('sub-enter');
-                    $('.js-sub-menu', this).show();
-                }).on('mouseleave', function() {
-                    $(this).removeClass('sub-enter');
-                    $('.js-sub-menu', this).hide();
+                // Submenu with hoverintent
+                $('.has-submenu').hoverIntent(
+                    toggleFlyout
+                );
+                function toggleFlyout() {
+                    $(this).toggleClass('show-sub');
+                }
+                
+                // Submenu when using tabs
+                $('.has-submenu').on('focusin', function() {
+                    $(this).addClass('show-sub');
+                });
+                
+                $('.has-submenu').on('focusout', function() {
+                    $(this).removeClass('show-sub');
                 });
                 
             }, unmatch: function()
             {
                 
                 // Remove the submenu hover
-                $('.menu-item').off();
+                $('.has-submenu').off();
 
             }
         }

@@ -111,6 +111,14 @@
     }
 }
 
+.show-sub {
+    display: block;
+    
+    > a {
+        background: $border-color;
+    }
+}
+
 
 // For nav feedback
 // -----------------------------------------------------------------
@@ -226,6 +234,11 @@
     }
 
     .current_page_ancestor .current_page_ancestor & {
+        display: block;
+    }
+    
+    // When hoverin
+    .show-sub & {
         display: block;
     }
 
