@@ -24,7 +24,7 @@
     .header & {
 
         @include min-screen($lap) {
-            width: 20%;
+            width: 30%;
             padding: 0;
             float: right;
             clear: none;
@@ -40,7 +40,16 @@
             clear: both;
 
             @include min-screen($lap) {
-                width: 100%;
+                width: 70%;
+                float: left;
+            }
+        }
+        
+        .searchsubmit {
+            
+            @include min-screen($lap) {
+                width: 30%;
+                float: left;
             }
         }
     }
