@@ -3,7 +3,7 @@
 {#common}$sprite-size-x: {relWidth} * 10px;
 $sprite-size-y: {relHeight} * 10px;
 
-@mixin sprite($sprite, $center: absolute, $posOnly: position) {
+@mixin sprite($sprite, $center: center, $posOnly: position) {
 
     $sprite-x: nth($sprite, 1) * 10px;
     $sprite-y: nth($sprite, 2) * 10px;
@@ -16,7 +16,7 @@ $sprite-size-y: {relHeight} * 10px;
     height: $sprite-height;
     background-position: $sprite-x $sprite-y;
     
-    @if $center == absolute {
+    @if $center == center {
         // Center the element using an 50%/50% absolute position
         // Use negative margins to reposition the element
         margin-top: -$sprite-height-reset;
