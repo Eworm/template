@@ -37,7 +37,7 @@
         margin: 0 20px 0 0;
         float: left;
         position: static;
-        // @include sprite($sprite-logo, false, true);               // No negative margins, position only
+        // @include sprite($sprite-logo, static, position);               // No negative margins, position only
     }
 }
 

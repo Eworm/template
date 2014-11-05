@@ -3,7 +3,7 @@
 {#common}$sprite-size-x: {relWidth} * 10px;
 $sprite-size-y: {relHeight} * 10px;
 
-@mixin sprite($sprite, $center: false, $posOnly: false) {
+@mixin sprite($sprite, $center: absolute, $posOnly: position) {
 
     $sprite-x: nth($sprite, 1) * 10px;
     $sprite-y: nth($sprite, 2) * 10px;
@@ -16,9 +16,9 @@ $sprite-size-y: {relHeight} * 10px;
     height: $sprite-height;
     background-position: $sprite-x $sprite-y;
     
-    @if $center == true {
+    @if $center == absolute {
         // Center the element using an 50%/50% absolute position
-        // Then use negative margins to reposition the element
+        // Use negative margins to reposition the element
         margin-top: -$sprite-height-reset;
         margin-left: -$sprite-width-reset;
         position: absolute;
@@ -26,9 +26,9 @@ $sprite-size-y: {relHeight} * 10px;
         top: 50%;
     }
     
-    @if $posOnly == false {
+    @if $posOnly == position {
         // Sometimes all we want is another background position
-        // Remove these properties by setting posOnly to true
+        // Remove these properties by setting posOnly to position
         background-image: url('{svgPath}');
         background-repeat: no-repeat;
         background-size: $sprite-size-x $sprite-size-y;
