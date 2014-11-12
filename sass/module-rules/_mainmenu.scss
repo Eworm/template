@@ -87,9 +87,7 @@
         display: block;
         border-bottom: 1px solid $border-color;
         text-decoration: none;
-        transition-timing-function: ease;
-        transition-duration: .15s;
-        transition-property: all;
+        transition: all .15s ease-out;
 
         @include min-screen($palm) {
             padding: $gutter-skinny;

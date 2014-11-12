@@ -199,7 +199,7 @@ $(document).ready(function() {
                 
                 
                 // Add the menu toggler
-                $('.core-header').prepend('<div class="mobile-header"><span id="menu-toggler" class="mobile-toggler">Menu</span></div>');
+                $('.core-header').prepend('<div class="mobile-header"><span id="js-menu-toggler" class="mobile-toggler">Menu</span></div>');
                 // Toggle the menu
                 $('#js-menu-toggler').on('click', function() {
                     console.log('test');

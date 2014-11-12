@@ -75,9 +75,7 @@ body {
     width: 100%;
     height: 100%;
     float: left;
-    transition-timing-function: ease;
-    transition-duration: .5s;
-    transition-property: all;
+    transition: all .5s ease-out;
     
     .touch.no-overflow-scroll & {
         height: auto;
