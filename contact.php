@@ -222,7 +222,7 @@ endif;
                             
                                 <input type="hidden" name="submitted" id="submitted" value="true">
                                 <input type="hidden" name="about" value="<?php the_title(); ?>">
-                                <input type="submit" value="<?php _e( 'Verzenden', 'thema_vertalingen' ); ?>" class="submit">
+                                <input type="submit" value="<?php _e( 'Verzenden', 'thema_vertalingen' ); ?>" class="button">
                             
                             </div> <!-- .formrow -->
         

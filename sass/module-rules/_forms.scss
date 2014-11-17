@@ -111,9 +111,9 @@ input[type="search"] {
 }
 
 
-// The submit
+// A button
 // -----------------------------------------------------------------
-.submit,
+.button,
 #submit {
     text-align: center;
     text-decoration: none;
@@ -128,7 +128,7 @@ input[type="search"] {
     }
 }
 
-a.submit {
+a.button {
     @include inline-block;
 }
 
