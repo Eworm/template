@@ -160,7 +160,7 @@ $(document).ready(function() {
         
     
     // Commentform validation
-    // $('#comment-form').parsley();
+    $('#commentform').parsley();
 
 
     // Responsive javascript: https://github.com/JoshBarr/js-media-queries

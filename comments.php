@@ -64,11 +64,11 @@ if ( post_password_required() )
     <?php $comment_args = array( 'title_reply'=>'Geef een reactie',
         'fields' => apply_filters( 'comment_form_default_fields', array(                
                 'author' => '<div class="formrow comment-form-author">' . '<label for="author">' . __( 'Je naam <span class="req">(verplicht)</span>', 'thema_vertalingen' ) . '</label> '.
-                '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' required></div>',
+                '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' required data-parsley-error-message="' . __( 'Je hebt geen naam ingevuld', 'thema_vertalingen' ) . '"></div>',
                 
                 'email'  => '<div class="formrow comment-form-email">' .
                 '<label for="email">' . __( 'Je e-mailadres  <span class="req">(verplicht, wordt niet gepubliceerd)</span>', 'thema_vertalingen' ) . '</label> ' .
-                '<input id="email" name="email" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . '  required>'.'</div>',
+                '<input id="email" name="email" type="email" value="' . esc_attr( $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . '  required data-parsley-trigger="change" data-parsley-required-message="' . __( 'Je hebt geen e-mailadres ingevuld', 'thema_vertalingen' ) . '" data-parsley-error-message="' . __( 'Dit is een ongeldig e-mailadres', 'thema_vertalingen' ) . '">'.'</div>',
                 
                 'url' => '<div class="formrow comment-form-url">' . '<label for="url">' . __( 'Je website', 'thema_vertalingen' ) . '</label> '.
                 '<input id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30"' . $aria_req . ' ></div>',
@@ -76,7 +76,7 @@ if ( post_password_required() )
             'comment_notes_before' => '',
             'comment_field' => '<div class="formrow">' .
             '<label for="comment">' . __( 'Je reactie <span class="req">(verplicht)</span>', 'thema_vertalingen' ) . '</label>' .
-            '<textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" required></textarea>' .
+            '<textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" required data-parsley-error-message="' . __( 'Je hebt geen reactie ingevuld', 'thema_vertalingen' ) . '"></textarea>' .
             '</div>',
             'comment_notes_after' => '',
         );
