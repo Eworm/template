@@ -28,7 +28,7 @@
         // -webkit-overflow-scrolling: touch;
 
         @include min-screen($palm) {
-            overflow: visible;
+            // overflow: visible;
         }
     }
     
@@ -37,25 +37,29 @@
     }
     
     .touch.no-overflow-scroll.js-active-menu & {
-        overflow: visible;
+        // overflow: visible;
     }
 
     @include min-screen($palm) {
-        width: $skinny-menu-width;
-        left: -$skinny-menu-width;
-        z-index: 10;
+        // width: $skinny-menu-width;
+        // left: -$skinny-menu-width;
+        // z-index: 10;
     }
 
     @include min-screen($lap) {
         width: 100%;
         height: auto;
+        margin-bottom: $margin;
         float: left;
         position: static;
         border: 0;
         box-shadow: none;
+        transform: none;
+        border-bottom: 1px solid $border-color;
 
         .csstransforms3d & {
-            transform: translate3d(0, 0, 0);
+            // transform: translate3d(0, 0, 0);
+            transform: none;
         }
     }
 }
@@ -83,10 +87,18 @@
     position: relative;
     display: block;
     float: left;
+    
+    &:nth-child(2n+1) {
+        border-right: 1px solid $border-color;
+    }
 
     @include min-screen($lap) {
         width: auto;
         float: left;
+        
+        &:nth-child(2n+1) {
+            border-right: 0;
+        }
     }
     
     > a {

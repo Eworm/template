@@ -220,35 +220,35 @@ $(document).ready(function() {
                 
                 
                 // If menu-items are clickable
-                $('.main-menu').find('a').on('click', function(e) {
-                    if($('#js-menu-toggler').data('opening') == true) {
-                        e.preventDefault();
-                        console.log('preventDefault');
-                    }
-                });
+                // $('.main-menu').find('a').on('click', function(e) {
+                    // if($('#js-menu-toggler').data('opening') == true) {
+                        // e.preventDefault();
+                        // console.log('preventDefault');
+                    // }
+                // });
                 
                 
                 // 
-                $('#js-mainmenu').on('transitionend', function(e) {
+                // $('#js-mainmenu').on('transitionend', function(e) {
                     
-                    setTimeout(function() {
+                    // setTimeout(function() {
                         // Make items clickable
-                        $('#js-menu-toggler').data('opening', false);
-                    }, 500);
-                });
+                        // $('#js-menu-toggler').data('opening', false);
+                    // }, 500);
+                // });
                 
                 // Stop bubblin'
                 $('.navchild').on('transitionend', function(e) {
-                    e.stopPropagation();
+                    // e.stopPropagation();
                 });
                 
                 // Stop bubblin'
                 $('.main-menu').on('transitionend', function(e) {
-                    e.stopPropagation();
+                    // e.stopPropagation();
                 });
                 
                 // Toggle the menu
-                $('#js-menu-toggler').on('click touchstart', function() {
+                $('#js-menu-toggler').on('click', function() {
                     $(this).data('opening', true);
                     
                     if ($('html').hasClass('js-toggle-menu')) {

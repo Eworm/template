@@ -162,7 +162,7 @@
                 
                     <div class="core core-header">
                         
-                        <a href="<?php echo get_option('home'); ?>" id="js-logo" rel="home" title="<?php _e( 'Terug naar de homepage', 'thema_vertalingen' ); ?>">
+                        <a href="<?php echo get_option('home'); ?>" id="js-logo" class="logo" rel="home" title="<?php _e( 'Terug naar de homepage', 'thema_vertalingen' ); ?>">
                             <?php bloginfo('name'); ?>
                         </a>
                         
@@ -177,12 +177,18 @@
                 </header>
                 <!-- .header -->
 
-                <nav id="js-mainmenu" class="mainmenu" role="navigation" >
-                    <?php wp_nav_menu( array(
-                        'theme_location' => 'main-menu',
-                        'container' => '',
-                        'menu_id' => '',
-                        'menu_class' => 'main-menu',
-                        'depth' => '2'
-                    )); ?>
+                <nav id="js-mainmenu" class="mainmenu divider divider-mainmenu" role="navigation" >
+                    
+                    <div class="core core-mainmenu">
+                        
+                        <?php wp_nav_menu( array(
+                            'theme_location' => 'main-menu',
+                            'container' => '',
+                            'menu_id' => '',
+                            'menu_class' => 'main-menu',
+                            'depth' => '2'
+                        )); ?>
+                        
+                    </div>
+                    
                 </nav>
