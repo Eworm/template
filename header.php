@@ -33,23 +33,6 @@
             <meta name="description" content="<?php bloginfo('description'); ?>">
         <?php endif; ?>
         
-        <?php
-            // Use tags or the theme options seo keywords otherwise
-            if (is_single()) :
-                $posttags = get_the_tags();
-                if ($posttags)
-                    foreach((get_the_tags()) as $tag) {
-                        $keywords[] = strtolower($tag->name);
-                    }
-                    echo '<meta name="keywords" content="' . implode(", ", array_unique($keywords)) . '">';
-            else :
-                $options = get_option('template_theme_options');
-                echo '<meta name="description" content="';
-                echo $options['seo_keywords'];
-                echo '">';
-            endif;
-        ?>
-        
         <meta name="language" content="nl">
         <meta name="revisit-after" content="15 days">
         <meta name="robots" content="index, follow">
