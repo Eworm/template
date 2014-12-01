@@ -2,13 +2,15 @@
 // -----------------------------------------------------------------
 .mobile-header {
     width: 100%;
-    height: auto;
+    height: 60px;
     padding: 0 $gutter-skinny;
     position: absolute;
-    top: 0;
-    left: 0;
+    margin-top: -60px;
+    // top: 0;
+    // left: 0;
     z-index: 1000;
     border-bottom: 1px solid $border-color;
+    text-align: center;
     transform: translate3d(0, 0, 0);
 
     @include min-screen($lap) {
@@ -20,9 +22,11 @@
 // The toggler
 // -----------------------------------------------------------------    
 .mobile-toggler {
-    padding: $gutter-skinny;
-    display: block;
+    padding: $gutter-small $gutter-skinny;
+    display: inline-block;
     text-decoration: none;
+    background: rgba(#ddd, .85);
+    border-radius: $default-border-radius;
 
     &:hover,
     &:focus {

@@ -1,31 +1,39 @@
 // The menu
 // -----------------------------------------------------------------
 .mainmenu {
-    width: $mobile-menu-width;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: -$mobile-menu-width;
+    width: 100%;
+    // height: 100%;
+    position: fixed;
+    top: 100%;
+    left: 0;
     z-index: 1000;
     border-right: 1px solid $border-color;
     background: $nav-bg-color;
+    background: rgba($nav-bg-color, .96);
     transform: perspective(100);
     backface-visibility: hidden;
+    transition: all .28s cubic-bezier(0.175, 0.885, 0.320, 1.275);
+    transform: translate3d(0, 100%, 0);
     
     .csstransforms3d & {
-        left: 0;
-        transform: translate3d(-100%, 0, 0);
+        // left: 0;
+        top: auto;
+        bottom: 0;
     }
 
     .js-active-menu & {
-        overflow: auto;
-        overflow-x: hidden;
-        -ms-overflow-style: -ms-autohiding-scrollbar;
-        -webkit-overflow-scrolling: touch;
+        // overflow: auto;
+        // overflow-x: hidden;
+        // -ms-overflow-style: -ms-autohiding-scrollbar;
+        // -webkit-overflow-scrolling: touch;
 
         @include min-screen($palm) {
             overflow: visible;
         }
+    }
+    
+    .csstransforms3d.js-toggle-menu & {
+        transform: translate3d(0, 0, 0);       
     }
     
     .touch.no-overflow-scroll.js-active-menu & {
@@ -71,7 +79,7 @@
 // A single item
 // -----------------------------------------------------------------
 .menu-item {
-    width: 100%;
+    width: 50%;
     position: relative;
     display: block;
     float: left;
@@ -82,7 +90,7 @@
     }
     
     > a {
-        padding: $gutter-skinny $gutter;
+        padding: $padding-skinny $padding-skinny;
         position: relative;
         display: block;
         border-bottom: 1px solid $border-color;
@@ -90,12 +98,12 @@
         transition: all .15s ease-out;
 
         @include min-screen($palm) {
-            padding: $gutter-skinny;
+            padding: $padding-skinny;
             border-bottom: 0;
         }
 
         @include min-screen($lap) {
-            padding: $gutter-skinny $gutter;
+            padding: $padding-skinny $padding;
             float: left;
         }
 

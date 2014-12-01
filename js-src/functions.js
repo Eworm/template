@@ -68,10 +68,11 @@ $(document).ready(function() {
     function openMenu(toggleClass, activeClass, contentToggle, scrollTop) {
     
         $('html').addClass(toggleClass);
-        setTimeout(function() {
-            $('html').addClass(activeClass);
-            $('#js-container').after('<div id="' + contentToggle + '"></div>');
-        }, 180);
+        
+        // setTimeout(function() {
+            // $('html').addClass(activeClass);
+            // $('#js-container').after('<div id="' + contentToggle + '"></div>');
+        // }, 280);
         
     };
 
@@ -80,9 +81,10 @@ $(document).ready(function() {
     function closeMenu(toggleClass, activeClass) {
     
         $('html').removeClass(toggleClass);
-        setTimeout(function() {
-            $('html').removeClass(activeClass);
-        }, 180);
+        
+        // setTimeout(function() {
+            // $('html').removeClass(activeClass);
+        // }, 280);
         
     };
     
@@ -199,10 +201,15 @@ $(document).ready(function() {
                 
                 
                 // Add the menu toggler
-                $('.core-header').prepend('<div class="mobile-header"><span id="js-menu-toggler" class="mobile-toggler">Menu</span></div>');
+                $('#js-mainmenu').prepend('<div class="mobile-header"><span id="js-menu-toggler" class="mobile-toggler">Menu</span></div>');
+                
                 // Toggle the menu
                 $('#js-menu-toggler').on('click', function() {
-                    openMenu('js-toggle-menu', 'js-active-menu', 'js-content-toggle', true);
+                    if ($('html').hasClass('js-toggle-menu')) {
+                        closeMenu('js-toggle-menu', 'js-active-menu');
+                    } else {
+                        openMenu('js-toggle-menu', 'js-active-menu', 'js-content-toggle', true);                        
+                    }
                 });
                 
 

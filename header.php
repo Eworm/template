@@ -66,7 +66,7 @@
         <meta name="msapplication-TileColor" content="#000">
         
         <!-- Mobile viewport optimized: h5bp.com/viewport -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimal-ui">
         
         <!-- Microsoft. Delete if not required -->
         <meta http-equiv="cleartype" content="on">
@@ -170,19 +170,19 @@
                             <?php bloginfo( 'description' ); ?>
                         </p>
                         
-                        <?php get_search_form(); ?>   
-                                   
-                        <nav id="js-mainmenu" class="mainmenu" role="navigation" >
-                            <?php wp_nav_menu( array(
-                                'theme_location' => 'main-menu',
-                                'container' => '',
-                                'menu_id' => '',
-                                'menu_class' => 'main-menu',
-                                'depth' => '2'
-                            )); ?>
-                        </nav>
+                        <?php get_search_form(); ?>
                         
                     </div>
                     
                 </header>
                 <!-- .header -->
+
+                <nav id="js-mainmenu" class="mainmenu" role="navigation" >
+                    <?php wp_nav_menu( array(
+                        'theme_location' => 'main-menu',
+                        'container' => '',
+                        'menu_id' => '',
+                        'menu_class' => 'main-menu',
+                        'depth' => '2'
+                    )); ?>
+                </nav>

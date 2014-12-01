@@ -44,16 +44,16 @@
                 float: left;
             }
         }
-        
-        .searchsubmit {
-            display: none;
-            
-            @include min-screen($lap) {
-                width: 30%;
-                float: left;
-                display: block;
-            }
-        }
+    }
+}
+
+.searchsubmit {
+    display: none;
+    
+    @include min-screen($lap) {
+        width: 30%;
+        float: left;
+        display: block;
     }
 }
 

@@ -26,13 +26,13 @@ body {
     color: $body-color;
 
     .js-active-menu & {
-        height: 100%;
-        overflow: hidden;
-        user-select: none;
+        // height: 100%;
+        // overflow: hidden;
+        // user-select: none;
     }
     
     .touch.no-overflow-scroll.js-active-menu & {
-        overflow: visible;
+        // overflow: visible;
     }
 }
 
@@ -45,11 +45,11 @@ body {
     overflow: hidden;
 
     .js-active-menu & {
-        overflow: hidden;
+        // overflow: hidden;
     }
     
     .touch.no-overflow-scroll.js-active-menu & {
-        overflow: visible;
+        // overflow: visible;
     }
 }
 
@@ -78,38 +78,38 @@ body {
     transition: all .5s ease-out;
     
     .touch.no-overflow-scroll & {
-        height: auto;
+        // height: auto;
     }
 
     .js-toggle-menu & {
-        position: relative;
-        left: $mobile-menu-width;
+        // position: relative;
+        // left: $mobile-menu-width;
         
         @include min-screen($palm) {
-            left: $skinny-menu-width;    
+            // left: $skinny-menu-width;    
         }
         
         @include min-screen($lap) {
-            left: 0;
+            // left: 0;
         }
     }
 
     .csstransforms3d.js-toggle-menu & {
-        left: 0;
-        transform: translate3d($mobile-menu-width, 0, 0) scale3d(1, 1, 1);
-        backface-visibility: hidden;
+        // left: 0;
+        // transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+        // backface-visibility: hidden;
 
         .divider {
-            transform-style: flat;
+            // transform-style: flat;
         }
 
         @include min-screen($palm) {
-            transform: translate3d($skinny-menu-width, 0, 0) scale3d(1, 1, 1);
+            // transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
         }
 
         @include min-screen($lap) {
-            left: 0;
-            transform: translate3d(0, 0, 0);
+            // left: 0;
+            // transform: translate3d(0, 0, 0);
         }
     }
 }
