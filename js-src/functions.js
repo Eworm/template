@@ -202,7 +202,7 @@ $(document).ready(function() {
                 $('.core-header').prepend('<div class="mobile-header"><span id="js-menu-toggler" class="mobile-toggler">Menu</span></div>');
                 // Toggle the menu
                 $('#js-menu-toggler').on('click', function() {
-                    openMenu('js-toggle-menu', 'js-active-menu', 'content-toggle', true);
+                    openMenu('js-toggle-menu', 'js-active-menu', 'js-content-toggle', true);
                 });
                 
 
