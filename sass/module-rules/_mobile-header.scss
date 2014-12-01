@@ -2,10 +2,10 @@
 // -----------------------------------------------------------------
 .mobile-header {
     width: 100%;
-    height: 60px;
+    height: 70px;
     padding: 0 $gutter-skinny;
     position: absolute;
-    margin-top: -60px;
+    margin-top: -70px;
     // top: 0;
     // left: 0;
     z-index: 1000;
@@ -31,6 +31,19 @@
     &:hover,
     &:focus {
         text-decoration: none;
+    }
+    
+    span {
+        margin-left: $margin-small;
+        content: '';
+        display: inline-block;
+        @include sprite($sprite-menu-toggle-up, false, position);
+        transition: all .25s ease;
+        
+        .js-toggle-menu & {
+            // @include sprite($sprite-menu-toggle-down, false, position);
+            transform: rotate(180deg);
+        }
     }
 }
 

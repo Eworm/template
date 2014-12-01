@@ -148,8 +148,8 @@ gulp.task('sprites', function () {
     return gulp.src(src_paths.svgsprites)
     
             .pipe(plugins.svgSprites({cssFile: '../sass/sprites/_sprites.scss',
-                    svgPath: '../images/%f',
-                    pngPath: '../images/%f',
+                    svgPath: 'images/%f',
+                    pngPath: 'images/%f',
                     layout: 'vertical',
                     templates: {
                         css: require('fs').readFileSync('./dustjs/sprite-template.css', 'utf-8')

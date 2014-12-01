@@ -64,10 +64,25 @@ $(document).ready(function() {
     });
 
 
-    // Function to open something
+    // Function to open the menu
     function openMenu(toggleClass, activeClass, contentToggle, scrollTop) {
     
         $('html').addClass(toggleClass);
+        
+/*
+        $('.navchild').on('transitionend', event, function(){
+            event.stopPropagation();
+            console.log(event);
+            //I suppose this ended the event listener for the childDiv
+            $('.navchild').off('transitionend');
+            
+            $('#js-mainmenu')
+                .on('transitionend', event, function() {
+                    //why is 'opacity' being read? any way to fix this?
+                    console.log(event.propertyName);
+                });
+        });  
+*/
         
         // setTimeout(function() {
             // $('html').addClass(activeClass);
@@ -77,7 +92,7 @@ $(document).ready(function() {
     };
 
 
-    // Function to close something
+    // Function to close the menu
     function closeMenu(toggleClass, activeClass) {
     
         $('html').removeClass(toggleClass);
@@ -173,7 +188,7 @@ $(document).ready(function() {
             {
 
                 // Put the search in the menu
-                $('#js-header #js-searchform').prependTo('#js-mainmenu');
+                // $('#js-header #js-searchform').prependTo('#js-mainmenu');
 
 
                 // Add the submenu toggle
@@ -201,15 +216,47 @@ $(document).ready(function() {
                 
                 
                 // Add the menu toggler
-                $('#js-mainmenu').prepend('<div class="mobile-header"><span id="js-menu-toggler" class="mobile-toggler">Menu</span></div>');
+                $('#js-mainmenu').prepend('<div class="navchild mobile-header"><div id="js-menu-toggler" class="mobile-toggler">Menu<span></span></div></div>');
+                
+                
+                // If menu-items are clickable
+                $('.main-menu').find('a').on('click', function(e) {
+                    if($('#js-menu-toggler').data('opening') == true) {
+                        e.preventDefault();
+                        console.log('preventDefault');
+                    }
+                });
+                
+                
+                // 
+                $('#js-mainmenu').on('transitionend', function(e) {
+                    
+                    setTimeout(function() {
+                        // Make items clickable
+                        $('#js-menu-toggler').data('opening', false);
+                    }, 500);
+                });
+                
+                // Stop bubblin'
+                $('.navchild').on('transitionend', function(e) {
+                    e.stopPropagation();
+                });
+                
+                // Stop bubblin'
+                $('.main-menu').on('transitionend', function(e) {
+                    e.stopPropagation();
+                });
                 
                 // Toggle the menu
-                $('#js-menu-toggler').on('click', function() {
+                $('#js-menu-toggler').on('click touchstart', function() {
+                    $(this).data('opening', true);
+                    
                     if ($('html').hasClass('js-toggle-menu')) {
                         closeMenu('js-toggle-menu', 'js-active-menu');
                     } else {
                         openMenu('js-toggle-menu', 'js-active-menu', 'js-content-toggle', true);                        
                     }
+                    
                 });
                 
 
@@ -217,7 +264,7 @@ $(document).ready(function() {
             {
 
                 // Put the search back
-                $('#js-searchform').insertAfter('#js-logo');
+                // $('#js-searchform').insertAfter('#js-logo');
 
 
                 // Remove the submenu toggle
