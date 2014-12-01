@@ -29,7 +29,7 @@
 
         <span class="post-options">
 
-            <?php comments_popup_link('Reageer als eerste', 'Er is 1 reactie', 'Er zijn % reacties'); ?>
+            <!-- <?php comments_popup_link('Reageer als eerste', 'Er is 1 reactie', 'Er zijn % reacties'); ?> -->
 
         </span>
 
