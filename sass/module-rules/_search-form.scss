@@ -10,6 +10,9 @@
     // -----------------------------------------------------------------
     nav & {
         display: block;
+        background: $nav-bg-color;
+        background: rgba($nav-bg-color, .96);
+        border-top: 1px solid $border-color;
     }
 
     // When in content

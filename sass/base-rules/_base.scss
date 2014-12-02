@@ -24,16 +24,6 @@ body {
     background: $body-bg-color;
     font: #{$body-size}/#{$line-height} #{$body-font};
     color: $body-color;
-
-    .js-active-menu & {
-        // height: 100%;
-        // overflow: hidden;
-        // user-select: none;
-    }
-    
-    .touch.no-overflow-scroll.js-active-menu & {
-        // overflow: visible;
-    }
 }
 
 .container {
@@ -43,14 +33,6 @@ body {
     position: relative;
     float: left;
     overflow: hidden;
-
-    .js-active-menu & {
-        // overflow: hidden;
-    }
-    
-    .touch.no-overflow-scroll.js-active-menu & {
-        // overflow: visible;
-    }
 }
 
 #js-content-toggle {
@@ -65,52 +47,6 @@ body {
     
     @include min-screen($palm) {
         left: $skinny-menu-width;
-    }
-}
-
-
-// The container that is animated when toggling the menu
-// -----------------------------------------------------------------
-.container-transition {
-    width: 100%;
-    height: 100%;
-    float: left;
-    transition: all .5s ease-out;
-    
-    .touch.no-overflow-scroll & {
-        // height: auto;
-    }
-
-    .js-toggle-menu & {
-        // position: relative;
-        // left: $mobile-menu-width;
-        
-        @include min-screen($palm) {
-            // left: $skinny-menu-width;    
-        }
-        
-        @include min-screen($lap) {
-            // left: 0;
-        }
-    }
-
-    .csstransforms3d.js-toggle-menu & {
-        // left: 0;
-        // transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
-        // backface-visibility: hidden;
-
-        .divider {
-            // transform-style: flat;
-        }
-
-        @include min-screen($palm) {
-            // transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
-        }
-
-        @include min-screen($lap) {
-            // left: 0;
-            // transform: translate3d(0, 0, 0);
-        }
     }
 }
 
@@ -161,7 +97,14 @@ a {
 }
 
 .core-mainmenu {
+    width: 100%;
     padding: 0;
+    float: left;
+    
+    @include min-screen($lap) {
+        width: $width;
+        float: none;   
+    }
 }
 
 .core-content {

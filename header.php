@@ -156,39 +156,37 @@
     
         <div id="js-container" class="container">
         
-            <div class="container-transition">
+            <header id="js-header" class="header divider divider-header" role="banner">
             
-                <header id="js-header" class="header divider divider-header" role="banner">
+                <div class="core core-header">
+                    
+                    <a href="<?php echo get_option('home'); ?>" id="js-logo" class="logo" rel="home" title="<?php _e( 'Terug naar de homepage', 'thema_vertalingen' ); ?>">
+                        <?php bloginfo('name'); ?>
+                    </a>
+                    
+                    <p class="cp">
+                        <?php bloginfo( 'description' ); ?>
+                    </p>
+                    
+                    <?php get_search_form(); ?>
+                    
+                </div>
                 
-                    <div class="core core-header">
-                        
-                        <a href="<?php echo get_option('home'); ?>" id="js-logo" class="logo" rel="home" title="<?php _e( 'Terug naar de homepage', 'thema_vertalingen' ); ?>">
-                            <?php bloginfo('name'); ?>
-                        </a>
-                        
-                        <p class="cp">
-                            <?php bloginfo( 'description' ); ?>
-                        </p>
-                        
-                        <?php get_search_form(); ?>
-                        
-                    </div>
-                    
-                </header>
-                <!-- .header -->
+            </header>
+            <!-- .header -->
 
-                <nav id="js-mainmenu" class="mainmenu divider divider-mainmenu" role="navigation" >
+            <nav id="js-mainmenu" class="mainmenu divider divider-mainmenu" role="navigation" >
+                
+                <div class="core core-mainmenu">
                     
-                    <div class="core core-mainmenu">
-                        
-                        <?php wp_nav_menu( array(
-                            'theme_location' => 'main-menu',
-                            'container' => '',
-                            'menu_id' => '',
-                            'menu_class' => 'main-menu',
-                            'depth' => '2'
-                        )); ?>
-                        
-                    </div>
+                    <?php wp_nav_menu( array(
+                        'theme_location' => 'main-menu',
+                        'container' => '',
+                        'menu_id' => '',
+                        'menu_class' => 'main-menu',
+                        'depth' => '2'
+                    )); ?>
                     
-                </nav>
+                </div>
+                
+            </nav>
