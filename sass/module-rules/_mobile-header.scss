@@ -21,6 +21,8 @@
 .mobile-toggler {
     padding: $gutter-small $gutter-skinny;
     display: inline-block;
+    position: relative;
+    top: -5px;
     text-decoration: none;
     background: rgba(#ddd, .85);
     border-radius: $default-border-radius;
@@ -29,6 +31,7 @@
     opacity: 0;
     
     .start-animatin & {
+        top: 0;
         opacity: 1;
     }
 

@@ -146,22 +146,13 @@
     a {
 
         &:after {
-            @extend %navfeedback;
-            margin-top: -8px;
-            top: 50%;
-            right: 0;
-            border-right: 8px solid $border-color;
 
-            @include min-screen($lap) {
-                display: none;
-            }
         }
     }
 
     @include min-screen($lap) {
     
         &:after {
-            display: none;
         }
     }
 
@@ -170,7 +161,6 @@
         a {
 
             &:after {
-                display: none;
             }
         }
     }
