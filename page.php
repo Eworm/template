@@ -4,7 +4,7 @@
 
     <div class="core core-content">
     
-        <div class="row">
+        <div class="row flexrow">
 
             <?php if (!$post->post_parent) :
                 

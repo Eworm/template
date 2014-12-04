@@ -163,22 +163,6 @@ $(document).ready(function() {
                 $('#js-header #js-searchform').prependTo('#js-mainmenu');
 
 
-                // Add the submenu toggle
-                $('.js-sub-menu').each(function() {
-                    if($(this).parent().hasClass('current_page_ancestor')) {
-                        // The submenu is open
-                        $(this).before('<span class="toggle-sub toggle-sub-close"></span>');
-                    } else {
-                        // The submenu is closed
-                        $(this).before('<span class="toggle-sub"></span>');
-                    }
-                    // Set the height of toggle-sub to the same height as the parent li
-                    parentHeight = $('.menu-item').first().height();
-                    $(this).prev().height(parentHeight);
-                    $(this).prev().width(parentHeight);
-                })
-
-
                 // Attach click events to submenu toggle
                 $('.toggle-sub').on('click', function() {
                     $(this).toggleClass('toggle-sub-close');

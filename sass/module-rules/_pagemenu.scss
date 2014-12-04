@@ -1,7 +1,8 @@
 // A submenu on a page
 // -----------------------------------------------------------------
 .pagemenu {
-    display: none;
+    @include flex-direction(column);
+    @include order(2);
 
     @include min-screen($lap) {
         margin-bottom: $margin;

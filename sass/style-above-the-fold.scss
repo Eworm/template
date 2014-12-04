@@ -23,7 +23,7 @@
 // Sass functions, extendables & mixins.
 // -----------------------------------------------------------------
 @import 'compass/css3';                         // Useful compass mixins
-// @import 'sass-extras/flex';                     // Flexbox mixins
+@import 'sass-extras/flex';                     // Flexbox mixins
 @import 'sass-extras/functions';                // Useful functions
 @import 'sass-extras/responsive-grid';          // Custom grid functions. Use grid-variables to control
 @import 'sass-extras/extendables';              // Useful extensions
@@ -53,3 +53,4 @@
 @import 'module-rules/pagemenu';                // Page submenu
 @import 'module-rules/tables';                  // Normal and responsive table styles
 @import 'module-rules/forms';                   // Input and button styles
+@import 'module-rules/flex';                    // Flexbox extra's

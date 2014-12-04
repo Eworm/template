@@ -218,12 +218,14 @@
 
     .current_page_parent &,
     .current-menu-parent & {
-        display: block;
+        
+        @include min-screen($lap) {
+            display: none;
+        }
     }
 
     .current_page_ancestor &,
     .current-menu-item & {
-        display: block;
         
         @include min-screen($lap) {
             display: none;
@@ -283,46 +285,5 @@
 
     &.closed-sub {
         display: none !important;
-    }
-}
-
-
-// To show or hide the submenu on small devices
-// -----------------------------------------------------------------
-.toggle-sub {
-    width: 50px;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 1200;
-    display: block;
-    border-left: 1px solid $border-color;
-    cursor: pointer;
-    
-    @include min-screen($lap) {
-        display: none;
-    }
-    
-    &:after {
-        width: 0;
-        height: 0;
-        margin-top: -4px;
-        margin-left: -8px;
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        border: 8px solid transparent;
-        border-top: 8px solid #000;
-    }
-}
-
-.toggle-sub-close {
-    
-    &:after {
-        margin-top: -12px;
-        border: 8px solid transparent;
-        border-bottom: 8px solid #000;
     }
 }

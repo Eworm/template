@@ -25,6 +25,12 @@
     background: rgba(#ddd, .85);
     border-radius: $default-border-radius;
     box-shadow: rgba(#000, .2) 0 1px 0;
+    transition: all .25s ease;
+    opacity: 0;
+    
+    .start-animatin & {
+        opacity: 1;
+    }
 
     &:hover,
     &:focus {
@@ -41,6 +47,8 @@
         .js-toggle-menu & {
             transform: rotate(180deg);
         }
+        
+        
     }
 }
 

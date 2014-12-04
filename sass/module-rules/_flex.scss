@@ -1,0 +1,15 @@
+// Flexbox extra's
+// -----------------------------------------------------------------
+.flexrow {
+    @include flexbox;
+    @include flex-flow(row wrap);
+    
+    > .main-content {
+        @include order(1);
+        @include flex-direction(column);
+    }
+    
+    > * {
+        @include flex-grow(1);
+    }
+}
