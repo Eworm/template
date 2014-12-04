@@ -12,4 +12,8 @@
     > * {
         @include flex-grow(1);
     }
+    
+    @include min-screen($palm) {
+        display: block;
+    }
 }

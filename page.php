@@ -3,6 +3,8 @@
 <div class="content divider divider-content">
 
     <div class="core core-content">
+        
+        <?php the_breadcrumb(); ?>
     
         <div class="row flexrow">
 

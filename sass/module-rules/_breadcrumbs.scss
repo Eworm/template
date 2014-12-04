@@ -1,0 +1,35 @@
+// Breadcrumbs
+// -----------------------------------------------------------------
+.breadcrumbs {
+    width: 100%;
+    margin: 0 0 $margin;
+    padding: 0;
+    float: left;
+    list-style-type: none;
+    
+    > li {
+        float: left;
+    }
+    
+    a {
+        margin-right: $margin-small;
+        padding-right: $padding-small;
+        display: block;
+        position: relative;
+        text-decoration: none;
+        transition: all .15s ease;
+        
+        @include min-screen($lap) {
+            margin-right: $margin-skinny;
+            padding-right: $padding-skinny;
+        }
+        
+        &:hover, &:focus {
+            color: $body-color;
+            text-decoration: underline;
+        }
+        
+        &:after {
+        }
+    }
+}

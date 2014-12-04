@@ -94,12 +94,12 @@
 
         @include min-screen($palm) {
             padding: $padding-skinny;
-            border-bottom: 0;
         }
 
         @include min-screen($lap) {
             padding: $padding-skinny $padding;
             float: left;
+            border-bottom: 0;
         }
 
         &:hover,
