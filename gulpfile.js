@@ -14,7 +14,7 @@ var src_paths = {
     svg2png: 'images-src/*.svg',
     imagemin: 'images/portfolio/*.*',
     bookmarks: 'images-src/root/*.png',
-    svgsprites: 'images-src/sprites/**/*.svg',
+    sprites: 'images-src/sprites/**/*.svg',
     functions: ['bower_components/picturefill/external/matchmedia.js',
                 'bower_components/hideShowPassword/hideShowPassword.js',
                 'bower_components/picturefill/picturefill.js',
@@ -180,6 +180,7 @@ gulp.task('watch', function() {
     	gulp.watch(src_paths.svgmin, ['svgmin']);
     	gulp.watch(src_paths.svg2png, ['svg2png']);
         gulp.watch(src_paths.bookmarks, ['bookmarks']);
+        gulp.watch(src_paths.sprites, ['sprites']);
     })
 });
 
