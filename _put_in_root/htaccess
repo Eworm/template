@@ -272,31 +272,6 @@ FileETag None
 # </IfModule>
 
 
-
-# ----------------------------------------------------------------------
-# Start rewrite engine
-# ----------------------------------------------------------------------
-
-# Turning on the rewrite engine is necessary for the following rules and features.
-
-<IfModule mod_rewrite.c>
-  RewriteEngine On
-  
-# Adaptive-Images -----------------------------------------------------------------------------------
-
-# Add any directories you wish to omit from the Adaptive-Images process on a new line, as follows:
-# RewriteCond %{REQUEST_URI} !some-directory
-# RewriteCond %{REQUEST_URI} !another-directory
-
-# RewriteCond %{REQUEST_URI} !wp-content/themes/woutmager1/img
-
-# Send any GIF, JPG, or PNG request that IS NOT stored inside one of the above directories
-# to adaptive-images.php so we can select appropriately sized versions
-# RewriteRule \.(?:jpe?g|gif|png)$ adaptive-images.php
-
-# END Adaptive-Images -------------------------------------------------------------------------------
-
-
 </IfModule>
 
 # ----------------------------------------------------------------------
