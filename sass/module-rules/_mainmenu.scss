@@ -67,7 +67,6 @@
 // -----------------------------------------------------------------
 .menu-item {
     width: 50%;
-    position: relative;
     display: block;
     float: left;
     
@@ -78,6 +77,7 @@
     @include min-screen($lap) {
         width: auto;
         float: left;
+        position: relative;
         
         &:nth-child(2n+1) {
             border-right: 0;
@@ -86,7 +86,6 @@
     
     > a {
         padding: $padding-skinny $padding-skinny;
-        position: relative;
         display: block;
         border-bottom: 1px solid $border-color;
         text-decoration: none;
@@ -99,6 +98,7 @@
         @include min-screen($lap) {
             padding: $padding-skinny $padding;
             float: left;
+            position: relative;
             border-bottom: 0;
         }
 
@@ -187,16 +187,40 @@
 
 // The sub-menu menu
 // -----------------------------------------------------------------
+.has-submenu {
+    
+    &:before {
+        content: '';
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 2200;
+        background: rgba(#000, .55);
+        
+        @include min-screen($lap) {
+            display: none;
+        }
+    }
+}
+
 .sub-menu {
-    width: 100%;
+    // width: 100%;
     margin: 0;
     padding: 0;
-    position: relative;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
     z-index: 10000;
     display: none;
     float: left;
     border: 0;
-    background: #fff;
+    overflow: auto;
+    // background: #fff;
     
     @include min-screen($lap) {
         position: absolute;
@@ -242,6 +266,7 @@
             width: 100%;
             float: left;
             border-bottom: 1px solid $border-color;
+            background: #fff;
 
             @include min-screen($lap) {
                 padding: 8px $gutter-skinny;
@@ -249,6 +274,7 @@
                 border: 0;
                 border-bottom: 1px solid $border-color;
                 white-space: nowrap;
+                background: transparent;
             }
             
             &:hover,
