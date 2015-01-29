@@ -167,7 +167,7 @@ gulp.task('lint', function() {
 // Watch
 gulp.task('watch', function() {
     // server.listen(35729, function(err) {
-        livereload.listen();
+        plugins.livereload.listen();
     	gulp.watch(src_paths.compass, ['compass']);
     	gulp.watch([src_paths.uglify, src_paths.labjs], ['uglify']);
     	gulp.watch(src_paths.svgmin, ['svgmin']);
