@@ -69,9 +69,19 @@
     width: 50%;
     display: block;
     float: left;
+    position: relative;
+    
+    .sub-menu {
+        left: -100%;
+    }
     
     &:nth-child(2n+1) {
+        clear: left;
         border-right: 1px solid $border-color;
+        
+        .sub-menu {
+            left: 0;
+        }
     }
 
     @include min-screen($lap) {
@@ -80,6 +90,7 @@
         position: relative;
         
         &:nth-child(2n+1) {
+            clear: none;
             border-right: 0;
         }
     }
@@ -188,10 +199,13 @@
 // The sub-menu menu
 // -----------------------------------------------------------------
 .has-submenu {
+}
+
+/*
+.active-sub {
     
     &:before {
         content: '';
-        display: none;
         position: absolute;
         top: 0;
         right: 0;
@@ -199,28 +213,29 @@
         left: 0;
         z-index: 2200;
         background: rgba(#000, .55);
-        
-        @include min-screen($lap) {
-            display: none;
-        }
     }
 }
+*/
 
 .sub-menu {
-    // width: 100%;
+    width: 200%;
+    height: 0;
+    max-height: 110px;
     margin: 0;
     padding: 0;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    bottom: 10px;
-    left: 10px;
-    z-index: 10000;
-    display: none;
+    position: relative;
+    // top: $padding-skinny;
+    // right: $padding-skinny;
+    // bottom: $padding-skinny;
+    z-index: 1100;
+    // display: none;
     float: left;
     border: 0;
     overflow: auto;
-    // background: #fff;
+    background: darken(#eee, 5%);
+    // border-radius: $default-border-radius;
+    // box-shadow: rgba(#000, .55) 0 0 10px;
+    transition: all .15s cubic-bezier(0.075, 0.085, 0.075, 1.175);
     
     @include min-screen($lap) {
         position: absolute;
@@ -228,6 +243,13 @@
         left: 0;
         border: 1px solid $border-color;
         background: #fff;
+    }
+    
+    .active-sub & {
+        height: 110px;
+        // max-height: 120px;
+        opacity: 1;
+        border-bottom: 1px solid $border-color;
     }
 
     .current_page_parent &,
@@ -260,13 +282,17 @@
     }
 
     .menu-item {    
-        width: 100%;
+        // width: 100%;
+        
+        &:nth-child(2n+1) {
+            border-right: 1px solid #fff;   
+        }
 
         a {
-            width: 100%;
-            float: left;
-            border-bottom: 1px solid $border-color;
-            background: #fff;
+            // width: 100%;
+            // float: left;
+            border-bottom: 1px solid #fff;
+            background: #eee;
 
             @include min-screen($lap) {
                 padding: 8px $gutter-skinny;
@@ -301,5 +327,54 @@
 
     &.closed-sub {
         display: none !important;
+    }
+}
+
+// To show or hide the submenu on small devices
+// -----------------------------------------------------------------
+.toggle-sub {
+    width: 50px;
+    height: 57px;
+    // height: 100%;
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    // bottom: 0;
+    z-index: 1200;
+    display: block;
+    border-left: 1px solid $border-color;
+    cursor: pointer;
+    background: #fff;
+    transition: all .15s ease-in;
+    
+    @include min-screen($lap) {
+        display: none;
+    }
+    
+    .active-sub & {
+        background-color: #eee;
+    }
+    
+    &:after {
+        width: 0;
+        height: 0;
+        margin-top: -4px;
+        margin-left: -8px;
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border: 8px solid transparent;
+        border-top: 8px solid #000;
+    }
+}
+
+.toggle-sub-close {
+    
+    &:after {
+        margin-top: -12px;
+        border: 8px solid transparent;
+        border-bottom: 8px solid #000;
     }
 }

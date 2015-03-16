@@ -1,140 +1,156 @@
-// Calculate the fluid gutters in percentages
-// -----------------------------------------------------------------
-@function gutter-width() {
-    @return 100% / ($max-width / $gutter);
-}
-
-
 // Calculate the grid widths
 // -----------------------------------------------------------------
-@mixin col-width($i, $value: true) {
-
-    // The standard width is optional
-    @if $value == true {
-        width: 100% / ($max-width / (((($max-width - (($nr-of-columns - 1) * $gutter)) / $nr-of-columns) * $i) + (($i - 1) * $gutter)));
-    }
-    
-    @if $i == $nr-of-columns {
-        width: #{100% / ($max-width / (((($max-width / $nr-of-columns) * $i))))};
-        margin-right: 0;    
-    }
-
+@mixin col-width($i) {
+    width: #{100% / ($max-width / (((($max-width / $nr-of-columns) * $i))))};
 }
 
 
 // Every column should have a row as it's parent
 // -----------------------------------------------------------------
 .row {
+    margin-right: -#{$gutter-skinny};
+    margin-left: -#{$gutter-skinny};
+    
+    &:before, &:after {
+        content: '';
+        display: table;
+        zoom: 1;
+    }
+    
+    &:after {
+        clear: both;
+    }
+}
+
+.row-condensed {
+    margin-right: -#{$gutter-skinny / 2};
+    margin-left: -#{$gutter-skinny / 2};
+}
+
+.col {
     width: 100%;
+    padding-right: $gutter-skinny;
+    padding-left: $gutter-skinny;
     float: left;
     
-    > .col {
-        width: 100%;
-        float: left;
-
-        @include min-screen($lap) {
-            margin-right: gutter-width();
-        }
-
-        &:last-child {
-
-            @include min-screen($lap) {
-                margin-right: 0;
-            }
-        }
-    }
-
-    // All screen widths
-    // -----------------------------------------------------------------
-    @for $i from 1 through $nr-of-columns {
-
-        @include min-screen($lap) {
-
-            > .col-#{$i} {
-                @include col-width($i, true);
-            }
-        }
-    }
-
-
-    // Palm to lap
-    // Non-flexbox browsers will use the standard col widths for this small screen to prevent columns becoming too small
-    // You can remove this when unused to minimize the css
-    // -----------------------------------------------------------------
-    @for $i from 1 through $nr-of-columns {
-
-        > .col-palm-#{$i} {
-
-            @include screen($palm, $lap) {
-                @include col-width($i, true);
-            }
-        }
-    }
-
-
-    // Lap to desk
-    // You can remove this when unused to minimize the css
-    // -----------------------------------------------------------------
-    @for $i from 1 through $nr-of-columns {
-
-        > .col-lap-#{$i} {
-
-            @include screen($lap, $desk) {
-                @include col-width($i, true);
-            }
-        }
-    }
-
-
-    // Desk to wall
-    // You can remove this when unused to minimize the css
-    // -----------------------------------------------------------------
-    @for $i from 1 through $nr-of-columns {
-
-        > .col-desk-#{$i} {
-
-            @include screen($desk, $wall) {
-                @include col-width($i, true);
-            }
-        }
-    }
-
-
-    // Wall to cinema
-    // You can remove this when unused to minimize the css
-    // -----------------------------------------------------------------
-    @for $i from 1 through $nr-of-columns {
-
-        .col-wall-#{$i} {
-
-            @include screen($wall, $cinema) {
-                @include col-width($i, true);
-            }
-        }
-    }
-
-
-    // Offset
-    // You can remove this when unused to minimize the css
-    // -----------------------------------------------------------------
-    @for $i from 1 through $nr-of-columns {
-
-        > .col-push-#{$i} {
-
-            @include min-screen($lap) {
-                margin-left: 100% / ($max-width / (((($max-width - (($nr-of-columns + 1) * $gutter)) / $nr-of-columns) * $i) + (($i + 1) * $gutter)));
-            }
-        }
+    .row-condensed & {
+        padding-right: $gutter-skinny / 2;
+        padding-left: $gutter-skinny / 2;
     }
 }
 
+.col-center {
+    margin-right: auto;
+    margin-left: auto;
+    float: none;
+}
 
-// Extra or no margins
+// All screen widths
 // -----------------------------------------------------------------
-.no-margin {
-    margin-right: 0;
+@for $i from 1 through $nr-of-columns {
+
+    @include min-screen($palm) {
+
+        .col-#{$i} {
+            @include col-width($i);
+        }
+    }
 }
 
-.plus-margin {
-    margin-right: gutter-width();
+
+// Wrist
+// You can remove this when unused to minimize the css
+// -----------------------------------------------------------------
+@for $i from 1 through $nr-of-columns {
+
+    .col-wrist-#{$i} {
+
+        @include min-screen($wrist) {
+            @include col-width($i);
+        }
+    }
+}
+
+
+// Palm
+// You can remove this when unused to minimize the css
+// -----------------------------------------------------------------
+@for $i from 1 through $nr-of-columns {
+
+    .col-palm-#{$i} {
+
+        @include min-screen($palm) {
+            @include col-width($i);
+        }
+    }
+}
+
+
+// Lap
+// You can remove this when unused to minimize the css
+// -----------------------------------------------------------------
+@for $i from 1 through $nr-of-columns {
+
+    .col-lap-#{$i} {
+
+        @include min-screen($lap) {
+            @include col-width($i);
+        }
+    }
+}
+
+
+// Desk
+// You can remove this when unused to minimize the css
+// -----------------------------------------------------------------
+@for $i from 1 through $nr-of-columns {
+
+    .col-desk-#{$i} {
+
+        @include min-screen($desk) {
+            @include col-width($i);
+        }
+    }
+}
+
+
+// Wall
+// You can remove this when unused to minimize the css
+// -----------------------------------------------------------------
+@for $i from 1 through $nr-of-columns {
+
+    .col-wall-#{$i} {
+
+        @include min-screen($wall) {
+            @include col-width($i);
+        }
+    }
+}
+
+// Cinema
+// You can remove this when unused to minimize the css
+// -----------------------------------------------------------------
+@for $i from 1 through $nr-of-columns {
+
+    .col-cinema-#{$i} {
+
+        @include min-screen($cinema) {
+            @include col-width($i);
+        }
+    }
+}
+
+
+
+// Offset
+// You can remove this when unused to minimize the css
+// -----------------------------------------------------------------
+@for $i from 1 through $nr-of-columns {
+
+    .col-push-#{$i} {
+
+        @include min-screen($lap) {
+            margin-left: 100% / ($max-width / (((($max-width - (($nr-of-columns + 1) * $gutter)) / $nr-of-columns) * $i) + (($i + 1) * $gutter)));
+        }
+    }
 }

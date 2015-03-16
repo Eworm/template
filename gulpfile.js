@@ -6,8 +6,6 @@ var gulp = require('gulp'),
 var src_paths = {
     compass: 'sass/**/*.scss',
     autoprefixer: '*.css',
-    svgmin: 'images-src/*.svg',
-    svg2png: 'images-src/*.svg',
     imagemin: 'images/portfolio/*.*',
     bookmarks: 'images-src/root/*.png',
     sprites: 'images-src/sprites/**/*.svg',
@@ -28,8 +26,6 @@ var src_paths = {
 var dest_paths = {
     compass: '.',
     images: 'images',
-    svgmin: 'images',
-    svg2png: 'images',
     imagemin: 'images',
     uglify: 'js',
     bookmarks: '_put_in_root',
@@ -57,26 +53,6 @@ gulp.task('compass', function() {
         
         // .pipe(plugins.livereload())
         .pipe(plugins.notify({ message: 'Compass complete' }))
-});
-
-
-// SVG optim
-gulp.task('svgmin', function() {
-    gulp.src(src_paths.svgmin)
-        .pipe(plugins.svgmin())
-        .pipe(gulp.dest(dest_paths.svgmin))
-        
-        .pipe(plugins.notify({ message: 'Svgoptim complete' }))
-});
-
-
-// SVG 2 png
-gulp.task('svg2png', function () {
-    gulp.src(src_paths.svg2png)
-        .pipe(plugins.svg2png())
-        .pipe(gulp.dest(dest_paths.svg2png))
-        
-        .pipe(plugins.notify({ message: 'Svg2png complete' }))
 });
 
 
@@ -149,7 +125,6 @@ gulp.task('sprites', function () {
             }))
             .pipe(gulp.dest(dest_paths.images))
             .pipe(plugins.filter('**/*.svg'))
-            .pipe(plugins.svg2png())
             .pipe(gulp.dest(dest_paths.images))
             
             .pipe(plugins.notify({ message: 'Svg sprites optim complete' }))
@@ -172,8 +147,6 @@ gulp.task('watch', function(ev) {
         // plugins.livereload.changed(ev.path);
     	gulp.watch(src_paths.compass, ['compass']);
     	gulp.watch([src_paths.uglify, src_paths.labjs], ['uglify']);
-    	gulp.watch(src_paths.svgmin, ['svgmin']);
-    	gulp.watch(src_paths.svg2png, ['svg2png']);
         gulp.watch(src_paths.bookmarks, ['bookmarks']);
         gulp.watch(src_paths.sprites, ['sprites']);
     // })

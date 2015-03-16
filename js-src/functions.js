@@ -165,6 +165,10 @@ $(document).ready(function() {
                 
                 // Add the submenu toggle
                 $('.has-submenu').each(function() {
+                    
+                    // Set the height of toggle-sub to the same height as the parent li
+                    parentHeight = $('.menu-item').first().height();
+                    
                     if($(this).parent().hasClass('current_page_ancestor')) {
                         // The submenu is open
                         $(this).prepend('<span class="toggle-sub toggle-sub-close"></span>');
@@ -172,8 +176,7 @@ $(document).ready(function() {
                         // The submenu is closed
                         $(this).prepend('<span class="toggle-sub"></span>');
                     }
-                    // Set the height of toggle-sub to the same height as the parent li
-                    parentHeight = $('.menu-item').first().height();
+                    
                     // $(this).prev().height(parentHeight);
                     // $(this).prev().width(parentHeight);
                 })
@@ -182,8 +185,7 @@ $(document).ready(function() {
                 // Attach click events to submenu toggle
                 $('.toggle-sub').on('click', function() {
                     $(this).toggleClass('toggle-sub-close');
-                    //$(this).next().toggleClass('active-sub');
-                    $(this).next().toggle();
+                    $(this).parent().toggleClass('active-sub');
                 })
                 
                 
