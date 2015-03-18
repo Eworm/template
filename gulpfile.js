@@ -70,6 +70,7 @@ gulp.task('uglify', function() {
         }))
         .pipe(gulp.dest(dest_paths.uglify))
         
+        .pipe(plugins.livereload())
         .pipe(plugins.notify({ message: 'Uglify complete' }))
         
     gulp.src(src_paths.labjs)
@@ -83,6 +84,7 @@ gulp.task('uglify', function() {
         }))
         .pipe(gulp.dest(dest_paths.uglify))
         
+        .pipe(plugins.livereload())
         .pipe(plugins.notify({ message: 'Uglify complete' }))
 });
 
@@ -127,6 +129,7 @@ gulp.task('sprites', function () {
             .pipe(plugins.filter('**/*.svg'))
             .pipe(gulp.dest(dest_paths.images))
             
+            .pipe(plugins.livereload())
             .pipe(plugins.notify({ message: 'Svg sprites optim complete' }))
             
 });
