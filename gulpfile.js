@@ -51,7 +51,7 @@ gulp.task('compass', function() {
         .pipe(plugins.autoprefixer('last 2 versions', '> 1%', 'ie 8'))
 		.pipe(gulp.dest('.'))
         
-        // .pipe(plugins.livereload())
+        .pipe(plugins.livereload())
         .pipe(plugins.notify({ message: 'Compass complete' }))
 });
 
@@ -141,15 +141,11 @@ gulp.task('lint', function() {
 
 // Watch
 gulp.task('watch', function(ev) {
-    // server.listen(35729, function(err) {
-        // plugins.livereload.listen();
-        // console.log('reload!');
-        // plugins.livereload.changed(ev.path);
-    	gulp.watch(src_paths.compass, ['compass']);
-    	gulp.watch([src_paths.uglify, src_paths.labjs], ['uglify']);
-        gulp.watch(src_paths.bookmarks, ['bookmarks']);
-        gulp.watch(src_paths.sprites, ['sprites']);
-    // })
+    plugins.livereload.listen();
+	gulp.watch(src_paths.compass, ['compass']);
+	gulp.watch([src_paths.uglify, src_paths.labjs], ['uglify']);
+    gulp.watch(src_paths.bookmarks, ['bookmarks']);
+    gulp.watch(src_paths.sprites, ['sprites']);
 });
 
 
