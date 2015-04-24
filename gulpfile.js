@@ -48,8 +48,8 @@ gulp.task('compass', function() {
             import_path: 'bower_components/normalize.scss'
         }))
         
-        .pipe(plugins.autoprefixer('last 2 versions', '> 1%', 'ie 8'))
-		.pipe(gulp.dest('.'))
+        .pipe(plugins.autoprefixer('last 2 versions', '> 1%', 'ie 9'))
+		.pipe(gulp.dest(dest_paths.compass))
         
         .pipe(plugins.livereload())
         .pipe(plugins.notify({ message: 'Compass complete' }))
