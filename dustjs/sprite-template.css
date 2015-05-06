@@ -1,9 +1,12 @@
 {#svg}$sprite-{name}: {relPositionX}, {relPositionY}, {relHeight}, {relWidth};
 {/svg}
-{#common}$sprite-size-x: {relWidth} * 10px;
+
+{#common}
+
+$sprite-size-x: {relWidth} * 10px;
 $sprite-size-y: {relHeight} * 10px;
 
-@mixin sprite($sprite, $center: center, $posOnly: position) {
+@mixin sprite($sprite) {
 
     $sprite-x: nth($sprite, 1) * 10px;
     $sprite-y: nth($sprite, 2) * 10px;
@@ -15,28 +18,21 @@ $sprite-size-y: {relHeight} * 10px;
     width: $sprite-width;
     height: $sprite-height;
     background-position: $sprite-x $sprite-y;
-    
-    @if $center == center {
-        // Center the element using an 50%/50% absolute position
-        // Use negative margins to reposition the element
-        margin-top: -$sprite-height-reset;
-        margin-left: -$sprite-width-reset;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-    }
-    
-    @if $posOnly == position {
-        // Sometimes all we want is another background position
-        // Remove these properties by setting posOnly to position
-        background-image: url('{svgPath}');
-        background-repeat: no-repeat;
-        background-size: $sprite-size-x $sprite-size-y;
-    }
+    background-image: url('{svgPath}');
+    background-repeat: no-repeat;
 
-    .no-svg & {
-        // Use png background for non-svg browsers using the modernizr check
-        background-image: url('{pngPath}');
-    }
+}
 
-}{/common}
+@mixin sprite-width($sprite, $property) {
+    
+    $sprite-width: nth($sprite, 4) * 10px;
+    #{ $property }: $sprite-width;
+}
+
+@mixin sprite-height($sprite, $property) {
+    
+    $sprite-height: nth($sprite, 4) * 10px;
+    #{ $property }: $sprite-height;
+}
+
+{/common}

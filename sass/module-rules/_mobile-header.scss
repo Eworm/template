@@ -44,7 +44,11 @@
         margin-left: $margin-small;
         content: '';
         display: inline-block;
-        @include sprite($sprite-menu-toggle-up, false, position);
+        @include sprite($sprite-menu-toggle-up);
+        // Use these functions to get the width or height of the sprite
+        // Add a property as a string
+        // @include sprite-width($sprite-menu-toggle-up, 'padding-left');
+        // @include sprite-height($sprite-menu-toggle-up, 'top');
         transition: all .25s ease;
         
         .js-toggle-menu & {

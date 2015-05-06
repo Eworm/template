@@ -42,7 +42,6 @@ gulp.task('compass', function() {
         .pipe(plugins.compass({
             config_file: 'config.rb',
             sourcemap: false,
-            //debug: true,
             css: dest_paths.compass,
             sass: 'sass',
             import_path: 'bower_components/normalize.scss'
@@ -64,7 +63,6 @@ gulp.task('uglify', function() {
         .pipe(plugins.plumber({errorHandler: plugins.notify.onError('Error: <%= error.message %>')}))
     
         .pipe(plugins.concat('functions.min.js'))
-        // .pipe(plugins.stripDebug())
         .pipe(plugins.uglify({
             compress: false
         }))
@@ -78,7 +76,6 @@ gulp.task('uglify', function() {
         .pipe(plugins.plumber({errorHandler: plugins.notify.onError('Error: <%= error.message %>')}))
     
         .pipe(plugins.concat('lab.min.js'))
-        // .pipe(plugins.stripDebug())
         .pipe(plugins.uglify({
             compress: false
         }))
@@ -115,7 +112,7 @@ gulp.task('bookmarks', function () {
 // SVG sprites
 gulp.task('sprites', function () {
     
-    return gulp.src(src_paths.svgsprites)
+    return gulp.src(src_paths.sprites)
     
             .pipe(plugins.svgSprites({cssFile: '../sass/sprites/_sprites.scss',
                     svgPath: 'images/%f',
@@ -130,10 +127,9 @@ gulp.task('sprites', function () {
             .pipe(gulp.dest(dest_paths.images))
             
             .pipe(plugins.livereload())
-            .pipe(plugins.notify({ message: 'Svg sprites optim complete' }))
+            .pipe(plugins.notify({ message: 'Sprite complete!' }))
             
 });
-
 
 // SCSS lint
 gulp.task('lint', function() {
