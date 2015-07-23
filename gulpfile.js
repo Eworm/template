@@ -114,20 +114,33 @@ gulp.task('sprites', function () {
     
     return gulp.src(src_paths.sprites)
     
-            .pipe(plugins.svgSprites({cssFile: '../sass/sprites/_sprites.scss',
-                    svgPath: 'images/%f',
-                    pngPath: 'images/%f',
-                    layout: 'vertical',
-                    templates: {
-                        css: require('fs').readFileSync('./dustjs/sprite-template.css', 'utf-8')
+        .pipe(plugins.plumber())
+        .pipe(plugins.svgo())
+        .pipe(plugins.svgSprite({
+            "mode": {
+                "css": {
+                    "spacing": {
+                        "padding": 10
+                    },
+                    "dest": "./",
+                    "layout": "vertical",
+                    "sprite": "sprite.svg",
+                    "bust": false,
+                    "render": {
+                        "scss": {
+                            "dest": "../sass/sprites/_sprites.scss",
+                            "template": "build/tpl/sprite-template.scss"
+                        }
                     }
-            }))
-            .pipe(gulp.dest(dest_paths.images))
-            .pipe(plugins.filter('**/*.svg'))
-            .pipe(gulp.dest(dest_paths.images))
-            
-            .pipe(plugins.livereload())
-            .pipe(plugins.notify({ message: 'Sprite complete!' }))
+                }
+            }
+        })).on('error', function(error){
+            /* Do some awesome error handling ... */
+        })
+        .pipe(gulp.dest(dest_paths.images))
+        
+        .pipe(plugins.livereload())
+        .pipe(plugins.notify({ message: 'Svg sprite complete' }))
             
 });
 

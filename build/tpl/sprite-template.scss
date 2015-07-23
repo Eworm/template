@@ -1,0 +1,26 @@
+{{#shapes}}${{name}}: {{position.absolute.x}}, {{position.absolute.y}}, {{height.inner}}, {{width.inner}};
+{{/shapes}}
+
+$sprite-size-x: {{spriteWidth}}px;
+$sprite-size-y: {{spriteHeight}}px;
+
+@mixin sprite($sprite) {
+
+    $sprite-x: nth($sprite, 1) * 1px;
+    $sprite-y: nth($sprite, 2) * 1px;
+    $sprite-height: nth($sprite, 3) * 1px;
+    $sprite-width: nth($sprite, 4) * 1px;
+    
+    width: $sprite-width;
+    height: $sprite-height;
+    background-position: $sprite-x $sprite-y;
+    background-image: url('images/svg/sprite.svg');
+    background-repeat: no-repeat;
+
+}
+
+@mixin sprite-rule($sprite, $property) {
+    
+    $sprite-width: nth($sprite, 4) * 1px;
+    #{ $property }: $sprite-width;
+}
