@@ -6,7 +6,6 @@ var gulp = require('gulp'),
 var src_paths = {
     compass: 'sass/**/*.scss',
     autoprefixer: '*.css',
-    imagemin: 'images/portfolio/*.*',
     bookmarks: 'images-src/root/*.png',
     sprites: 'images-src/sprites/**/*.svg',
     functions: ['bower_components/picturefill/external/matchmedia.js',
@@ -17,7 +16,7 @@ var src_paths = {
                 'js-src/functions.js'],
     labjs: ['bower_components/labjs/LAB.min.js',
                 'js-src/lab-loader.js'],
-    uglify: 'js-src/*.*'
+    javascript: 'js-src/*.*'
 };
 
 
@@ -25,10 +24,8 @@ var src_paths = {
 var dest_paths = {
     compass: '.',
     images: 'images',
-    imagemin: 'images',
-    uglify: 'js',
     bookmarks: '_put_in_root',
-    labjs: 'js'
+    javascript: 'js'
 };
 
 
@@ -65,7 +62,7 @@ gulp.task('uglify', function() {
         .pipe(plugins.uglify({
             compress: false
         }))
-        .pipe(gulp.dest(dest_paths.uglify))
+        .pipe(gulp.dest(dest_paths.javascript))
         
         .pipe(plugins.livereload())
         .pipe(plugins.notify({ message: 'Uglify complete' }))
@@ -78,7 +75,7 @@ gulp.task('uglify', function() {
         .pipe(plugins.uglify({
             compress: false
         }))
-        .pipe(gulp.dest(dest_paths.uglify))
+        .pipe(gulp.dest(dest_paths.javascript))
         
         .pipe(plugins.livereload())
         .pipe(plugins.notify({ message: 'Uglify complete' }))
@@ -154,7 +151,7 @@ gulp.task('lint', function() {
 gulp.task('watch', function(ev) {
     plugins.livereload.listen();
 	gulp.watch(src_paths.compass, ['compass']);
-	gulp.watch([src_paths.uglify, src_paths.labjs], ['uglify']);
+	gulp.watch(src_paths.javascript, ['uglify']);
     gulp.watch(src_paths.bookmarks, ['bookmarks']);
     gulp.watch(src_paths.sprites, ['sprites']);
 });
