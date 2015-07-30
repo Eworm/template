@@ -1,14 +1,4 @@
 <?php
-/*
-    $message = "";
-    if(isset($_SERVER['HTTP_REFERER'])):
-    $message .= "Gebruiker kwam van: ".$_SERVER['HTTP_REFERER']."\r\n";
-    endif;
-    $message.="URL die ze zochten: ".$_SERVER['REQUEST_URI']."\r\n";
-    $admin_email = get_option('admin_email');
-    @wp_mail($admin_email,"404 error",$message);
-    
-*/
     get_header();
 ?>
 
