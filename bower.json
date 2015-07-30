@@ -12,11 +12,8 @@
     "bower_components"
   ],
   "dependencies": {
-    "zepto": "1.1.4",
     "picturefill": "2.1.0",
     "hideShowPassword": "~2.0.3",
-    "on-media-query": "0.2.0",
-    "zepto-sources": "~1.0.2",
     "normalize.scss": "3.0.1+normalize.3.0.1",
     "parsleyjs": "~2.0.5",
     "labjs": "*",

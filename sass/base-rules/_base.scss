@@ -36,7 +36,7 @@ body {
     opacity: 0;
     background: $body-bg-color;
     
-    @include min-screen($palm) {
+    @media (min-width: $palm) {
         left: $skinny-menu-width;
     }
 }
@@ -63,7 +63,7 @@ a {
     backface-visibility: hidden;
     transform-style: flat;
 
-    @include min-screen($palm) {
+    @media (min-width: $palm) {
     }
 }
 
@@ -75,7 +75,7 @@ a {
     padding: $gutter;
     clear: both;
 
-    @include min-screen($lap) {
+    @media (min-width: $lap) {
         width: $width;
         max-width: $max-width;
         padding: $gutter 0;
@@ -92,7 +92,7 @@ a {
     padding: 0;
     float: left;
     
-    @include min-screen($lap) {
+    @media (min-width: $lap) {
         width: $width;
         float: none;   
     }
@@ -103,7 +103,7 @@ a {
     padding-top: 0;
     padding-bottom: 0;
     
-    @include min-screen($lap) {
+    @media (min-width: $lap) {
         width: $width;
         display: block;
     }

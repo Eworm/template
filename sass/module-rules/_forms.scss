@@ -6,7 +6,7 @@ input {
     font-family: $body-font;
     font-size: $body-size;
     
-    @include min-screen($lap) {
+    @media (min-width: $lap) {
         width: 50%;
         
         aside section & {
@@ -36,7 +36,7 @@ input[type="radio"] {
 
 input[type="submit"] {
     
-    @include min-screen($lap) {
+    @media (min-width: $lap) {
         width: auto;
     }
 }
@@ -63,7 +63,7 @@ fieldset {
     clear: both;
     border: 0;
 
-    @include min-screen($lap) {
+    @media (min-width: $lap) {
         width: 100%;
         float: left;
     }
@@ -124,7 +124,7 @@ fieldset {
     text-decoration: none;
     cursor: pointer;
 
-    @include min-screen($lap) {
+    @media (min-width: $lap) {
         width: auto;
     }
 

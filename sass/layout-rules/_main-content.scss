@@ -6,7 +6,7 @@
     background: url('images/ajax-loader.gif') no-repeat center -24px;
     transition: background-position .3s ease-in-out;
 
-    @include min-screen($lap) {
+    @media (min-width: $lap) {
     }
 }
 
@@ -27,7 +27,7 @@
     ul {
         margin: 0 0 $margin-skinny 0;
         
-        @include min-screen($lap) {
+        @media (min-width: $lap) {
             margin-bottom: $margin;
         }
         

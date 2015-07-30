@@ -46,7 +46,7 @@
     float: left;
     clear: both;
     
-    @include min-screen($lap) {
+    @media (min-width: $lap) {
         margin-bottom: $margin;
     }
     
@@ -64,7 +64,7 @@
         background: $alert;
         color: #fff;
         
-        @include min-screen($lap) {
+        @media (min-width: $lap) {
             width: 50%;
         }
     }
@@ -98,7 +98,7 @@
     .post-thumb {
         display: none;
 
-        @include min-screen($lap) {
+        @media (min-width: $lap) {
             width: 87px;
             height: 68px;
             margin-right: $gutter-skinny;

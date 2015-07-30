@@ -2,11 +2,6 @@
 // No styles should be included here, only imports of other (smaller) parts
 
 
-// Responsive utilitites
-// -----------------------------------------------------------------
-@import 'sass-extras/responsive-utils';
-
-
 // Theme rules (variables)
 // -----------------------------------------------------------------
 @import 'theme-rules/grid-variables';           // Grid config
@@ -33,7 +28,6 @@
 // Base rules. Normalize and other basic element styles.
 // -----------------------------------------------------------------
 @import 'normalize';                            // Normalize is being imported via Bower
-@import 'sass-extras/responsive-js';            // Map javascript to the responsive breakpoints
 @import 'base-rules/base';                      // Base styles
 @import 'base-rules/headers';                   // Custom H1/H6 styles
 

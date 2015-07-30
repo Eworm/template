@@ -49,7 +49,7 @@
 // -----------------------------------------------------------------
 @for $i from 1 through $nr-of-columns {
 
-    @include min-screen($palm) {
+    @media (min-width: $palm) {
 
         .col-#{$i} {
             @include col-width($i);
@@ -65,7 +65,7 @@
 
     .col-wrist-#{$i} {
 
-        @include min-screen($wrist) {
+        @media (min-width: $wrist) {
             @include col-width($i);
         }
     }
@@ -79,7 +79,7 @@
 
     .col-palm-#{$i} {
 
-        @include min-screen($palm) {
+        @media (min-width: $palm) {
             @include col-width($i);
         }
     }
@@ -93,7 +93,7 @@
 
     .col-lap-#{$i} {
 
-        @include min-screen($lap) {
+        @media (min-width: $lap) {
             @include col-width($i);
         }
     }
@@ -107,7 +107,7 @@
 
     .col-desk-#{$i} {
 
-        @include min-screen($desk) {
+        @media (min-width: $desk) {
             @include col-width($i);
         }
     }
@@ -121,7 +121,7 @@
 
     .col-wall-#{$i} {
 
-        @include min-screen($wall) {
+        @media (min-width: $wall) {
             @include col-width($i);
         }
     }
@@ -134,7 +134,7 @@
 
     .col-cinema-#{$i} {
 
-        @include min-screen($cinema) {
+        @media (min-width: $cinema) {
             @include col-width($i);
         }
     }
@@ -149,7 +149,7 @@
 
     .col-push-#{$i} {
 
-        @include min-screen($lap) {
+        @media (min-width: $lap) {
             margin-left: 100% / ($max-width / (((($max-width - (($nr-of-columns + 1) * $gutter)) / $nr-of-columns) * $i) + (($i + 1) * $gutter)));
         }
     }

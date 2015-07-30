@@ -44,7 +44,7 @@
 .page-number {
     display: none;
             
-    @include min-screen($lap) {
+    @media (min-width: $lap) {
         display: block;
     }
 }

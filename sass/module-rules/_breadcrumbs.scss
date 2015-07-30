@@ -19,7 +19,7 @@
         text-decoration: none;
         transition: all .15s ease;
         
-        @include min-screen($lap) {
+        @media (min-width: $lap) {
             margin-right: $margin-skinny;
             padding-right: $padding-skinny;
         }

@@ -29,7 +29,6 @@
     "gulp-filter": "~2.0.0",
     "gulp-svg-sprite": "^1.2.3",
     "gulp-svgo": "^0.1.1",
-    "tiny-lr": "0.1.4",
     "vinyl": "^0.4.6"
   }
 }

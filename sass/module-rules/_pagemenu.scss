@@ -4,7 +4,7 @@
     @include flex-direction(column);
     @include order(2);
 
-    @include min-screen($lap) {
+    @media (min-width: $lap) {
         margin-bottom: $margin;
         clear: none;
         display: block;
@@ -18,7 +18,7 @@
         border: 1px solid $border-color;
         @include inline-block;
         
-        @include min-screen($lap) {
+        @media (min-width: $lap) {
             border: 0;
         }
     }
@@ -31,7 +31,7 @@
         float: left;
         background: transparent;
 
-        @include min-screen($lap) {
+        @media (min-width: $lap) {
             margin-bottom: 0;
         }
         
@@ -47,7 +47,7 @@
         padding: $gutter-skinny;
         display: block;
 
-        @include min-screen($lap) {
+        @media (min-width: $lap) {
             border-bottom: 1px solid $border-color;
             background: transparent;
         }

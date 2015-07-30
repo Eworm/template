@@ -24,10 +24,10 @@
     .touch.no-overflow-scroll.js-active-menu & {
     }
 
-    @include min-screen($palm) {
+    @media (min-width: $palm) {
     }
 
-    @include min-screen($lap) {
+    @media (min-width: $lap) {
         width: 100%;
         height: auto;
         margin-bottom: $margin;
@@ -57,7 +57,7 @@
     background: rgba($nav-bg-color, .96);
     border-top: 1px solid $border-color;
 
-    @include min-screen($lap) {
+    @media (min-width: $lap) {
         border-top: 0;
     }
 }
@@ -84,7 +84,7 @@
         }
     }
 
-    @include min-screen($lap) {
+    @media (min-width: $lap) {
         width: auto;
         float: left;
         position: relative;
@@ -102,11 +102,11 @@
         text-decoration: none;
         transition: all .15s ease-out;
 
-        @include min-screen($palm) {
+        @media (min-width: $palm) {
             padding: $padding-skinny;
         }
 
-        @include min-screen($lap) {
+        @media (min-width: $lap) {
             padding: $padding-skinny $padding;
             float: left;
             position: relative;
@@ -117,7 +117,7 @@
         &:focus {
             background: $border-color;
 
-            @include min-screen($lap) {
+            @media (min-width: $lap) {
             }
         }
     }
@@ -142,7 +142,7 @@
     a {
     }
 
-    @include min-screen($lap) {
+    @media (min-width: $lap) {
         background: $border-color;
         box-shadow: none;
         @include background-image(none);
@@ -161,7 +161,7 @@
         }
     }
 
-    @include min-screen($lap) {
+    @media (min-width: $lap) {
     
         &:after {
         }
@@ -179,7 +179,7 @@
 
 .current_page_ancestor {
 
-    @include min-screen($lap) {
+    @media (min-width: $lap) {
     
         a {
         }
@@ -189,7 +189,7 @@
 .sub-enter {
 
     > a {         
-        @include min-screen($lap) {
+        @media (min-width: $lap) {
             background: $border-color;
         }
     }
@@ -237,7 +237,7 @@
     // box-shadow: rgba(#000, .55) 0 0 10px;
     transition: all .15s cubic-bezier(0.075, 0.085, 0.075, 1.175);
     
-    @include min-screen($lap) {
+    @media (min-width: $lap) {
         position: absolute;
         top: 100%;
         left: 0;
@@ -255,7 +255,7 @@
     .current_page_parent &,
     .current-menu-parent & {
         
-        @include min-screen($lap) {
+        @media (min-width: $lap) {
             display: none;
         }
     }
@@ -263,7 +263,7 @@
     .current_page_ancestor &,
     .current-menu-item & {
         
-        @include min-screen($lap) {
+        @media (min-width: $lap) {
             display: none;
         }
     }
@@ -294,7 +294,7 @@
             border-bottom: 1px solid #fff;
             background: #eee;
 
-            @include min-screen($lap) {
+            @media (min-width: $lap) {
                 padding: 8px $gutter-skinny;
                 color: $body-color;
                 border: 0;
@@ -313,7 +313,7 @@
             
             a {
             
-                @include min-screen($lap) {
+                @media (min-width: $lap) {
                     border: 0;
                 }
             }
@@ -348,7 +348,7 @@
     background: #fff;
     transition: all .15s ease-in;
     
-    @include min-screen($lap) {
+    @media (min-width: $lap) {
         display: none;
     }
     

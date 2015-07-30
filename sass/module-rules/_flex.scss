@@ -13,7 +13,7 @@
         @include flex-grow(1);
     }
     
-    @include min-screen($palm) {
+    @media (min-width: $palm) {
         display: block;
     }
 }

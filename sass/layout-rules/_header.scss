@@ -4,7 +4,7 @@
     margin-bottom: $margin-skinny;
     border-bottom: 1px solid $border-color;
 
-    @include min-screen($lap) {
+    @media (min-width: $lap) {
         margin-bottom: 0;
         // padding: $gutter 0 0;
         background: $body-bg-color;
@@ -28,11 +28,11 @@
     transform: translate3d(0, 0, 0);
     // background-color: $border-color;
     
-    @include min-screen($palm) {
+    @media (min-width: $palm) {
         left: 35%;
     }
 
-    @include min-screen($lap) {
+    @media (min-width: $lap) {
         width: 156px;
         height: 87px;
         margin: 0 20px 0 0;
@@ -48,7 +48,7 @@
 .cp {
     display: none;
 
-    @include min-screen($lap) {
+    @media (min-width: $lap) {
         margin: 0;
         display: block;
         float: left;

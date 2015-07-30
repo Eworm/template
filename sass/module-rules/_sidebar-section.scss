@@ -7,7 +7,7 @@
     float: left;
     border: 1px solid $border-color;
 
-    @include min-screen($lap) {
+    @media (min-width: $lap) {
         margin-bottom: $margin;
         padding: $padding;
     }
@@ -43,7 +43,7 @@
     font-weight: bold;
     @include rem('font-size', $body-size);
     
-    @include min-screen($lap) {
+    @media (min-width: $lap) {
         margin-bottom: $margin;
     }
 

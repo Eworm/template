@@ -13,7 +13,6 @@ var src_paths = {
                 'bower_components/hideShowPassword/hideShowPassword.js',
                 'bower_components/picturefill/picturefill.js',
                 'bower_components/parsleyjs/dist/parsley.js',
-                'bower_components/on-media-query/js/onmediaquery.js',
                 'bower_components/hoverintent/jquery.hoverIntent.js',
                 'js-src/functions.js'],
     labjs: ['bower_components/labjs/LAB.min.js',
