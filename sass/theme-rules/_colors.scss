@@ -1,12 +1,13 @@
 // Define colors here, use them later on
+// Names are derived from http://chir.ag/projects/name-that-color/
 // -----------------------------------------------------------------
 $white: #fff;
-$light-grey: #eee;
-$grey: #828282;
-$dark-grey: #222;
+$gallery: #eee;
+$gray: #828282;
+$mine-shaft: #222;
 $blue: #00e;
 $red: #f00;
-
+    
 
 // Base colors
 // -----------------------------------------------------------------
@@ -18,8 +19,8 @@ $link-color: $blue;         // Should be a blue so people will know which are li
 // Layout colors
 // -----------------------------------------------------------------
 $nav-bg-color: $white;
-$border-color: $light-grey;
-$lesser-color: $grey;
-$lesser-color-hover: darken($grey, 15%);
+$border-color: $gallery;
+$lesser-color: $gray;
+$lesser-color-hover: darken($gray, 15%);
 $alert: $red;
 $error: $red;
