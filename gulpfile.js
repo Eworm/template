@@ -6,7 +6,6 @@ var gulp = require('gulp'),
 var src_paths = {
     preprocess: 'sass/**/*.scss',
     autoprefixer: '*.css',
-    bookmarks: 'images-src/root/*.png',
     sprites: 'images-src/sprites/**/*.svg',
     functions: ['bower_components/picturefill/external/matchmedia.js',
                 'bower_components/hideShowPassword/hideShowPassword.js',
