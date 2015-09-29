@@ -23,4 +23,5 @@ $sprite-size-y: {{spriteHeight}}px;
     
     $sprite-width: nth($sprite, 4) * 1px;
     #{ $property }: $sprite-width;
+    
 }
