@@ -82,29 +82,6 @@ gulp.task('uglify', function() {
 });
 
 
-// Create all IOS & Windows phone images
-gulp.task('bookmarks', function () {
-
-    gulp.src(src_paths.bookmarks)
-        .pipe(plugins.imageResize({ width: 129, width: 129, quality: .9, imageMagick: true }))
-        .pipe(plugins.rename('apple-touch-icon-precomposed.png'))
-        .pipe(gulp.dest(dest_paths.bookmarks))
-        
-    gulp.src(src_paths.bookmarks)
-        .pipe(plugins.imageResize({ width: 129, width: 129, quality: .9, imageMagick: true }))
-        .pipe(plugins.rename('apple-touch-icon.png'))
-        .pipe(gulp.dest(dest_paths.bookmarks))
-    
-    gulp.src(src_paths.bookmarks)
-        .pipe(plugins.imageResize({ width: 144, width: 144, quality: .9, imageMagick: true }))
-        .pipe(plugins.rename('windows8-tile.png'))
-        .pipe(gulp.dest(dest_paths.bookmarks))
-    
-    .pipe(plugins.notify({ message: 'Bookmarks complete' }))
-        
-});
-
-
 // SVG sprites
 gulp.task('sprites', function () {
     
@@ -152,7 +129,6 @@ gulp.task('watch', function(ev) {
     plugins.livereload.listen();
 	gulp.watch(src_paths.compass, ['compass']);
 	gulp.watch(src_paths.javascript, ['uglify']);
-    gulp.watch(src_paths.bookmarks, ['bookmarks']);
     gulp.watch(src_paths.sprites, ['sprites']);
 });
 
