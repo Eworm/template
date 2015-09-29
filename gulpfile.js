@@ -4,7 +4,7 @@ var gulp = require('gulp'),
 
 // Set source paths
 var src_paths = {
-    compass: 'sass/**/*.scss',
+    preprocess: 'sass/**/*.scss',
     autoprefixer: '*.css',
     bookmarks: 'images-src/root/*.png',
     sprites: 'images-src/sprites/**/*.svg',
@@ -22,32 +22,31 @@ var src_paths = {
 
 // Set destination paths
 var dest_paths = {
-    compass: '.',
+    preprocess: '.',
     images: 'images',
-    bookmarks: '_put_in_root',
     javascript: 'js'
 };
 
 
-// Compass
-gulp.task('compass', function() {
-    gulp.src(src_paths.compass)
+// CSS Preprocessing
+gulp.task('preprocess', function() {
+    gulp.src(src_paths.preprocess)
     
         .pipe(plugins.plumber({errorHandler: plugins.notify.onError('Error: <%= error.message %>')}))
         
         .pipe(plugins.compass({
             config_file: 'config.rb',
             sourcemap: false,
-            css: dest_paths.compass,
+            css: dest_paths.preprocess,
             sass: 'sass',
             import_path: 'bower_components/normalize.scss'
         }))
         
         .pipe(plugins.autoprefixer('last 2 versions', '> 1%', 'ie 9'))
-		.pipe(gulp.dest(dest_paths.compass))
+		.pipe(gulp.dest(dest_paths.preprocess))
         
         .pipe(plugins.livereload())
-        .pipe(plugins.notify({ message: 'Compass complete' }))
+        .pipe(plugins.notify({ message: 'Preprocessing complete' }))
 });
 
 
@@ -119,7 +118,7 @@ gulp.task('sprites', function () {
 
 // SCSS lint
 gulp.task('lint', function() {
-    gulp.src(src_paths.compass)
+    gulp.src(src_paths.preprocess)
         .pipe(plugins.scssLint())
 });
 
@@ -127,7 +126,7 @@ gulp.task('lint', function() {
 // Watch
 gulp.task('watch', function(ev) {
     plugins.livereload.listen();
-	gulp.watch(src_paths.compass, ['compass']);
+	gulp.watch(src_paths.preprocess, ['preprocess']);
 	gulp.watch(src_paths.javascript, ['uglify']);
     gulp.watch(src_paths.sprites, ['sprites']);
 });
