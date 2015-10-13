@@ -116,28 +116,6 @@ fieldset {
 }
 
 
-// A button
-// -----------------------------------------------------------------
-.button,
-#submit {
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-
-    @media (min-width: $lap) {
-        width: auto;
-    }
-
-    &:hover,
-    &:focus {
-    }
-}
-
-a.button {
-    @include inline-block;
-}
-
-
 // Other elements
 // -----------------------------------------------------------------
 #screenreader,

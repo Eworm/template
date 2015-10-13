@@ -1,0 +1,24 @@
+// Several buttons
+// -----------------------------------------------------------------
+// A button
+// -----------------------------------------------------------------
+.button,
+#submit {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+
+    @media (min-width: $lap) {
+        width: auto;
+    }
+
+    &:hover,
+    &:focus {
+    }
+}
+
+a.button {
+    @include inline-block;
+}
