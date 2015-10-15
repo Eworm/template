@@ -41,7 +41,7 @@
 .sidebar-section-title {
     margin: 0 0 $margin-skinny;
     font-weight: bold;
-    @include rem('font-size', $body-size);
+    font-size: $body-size;
     
     @media (min-width: $lap) {
         margin-bottom: $margin;

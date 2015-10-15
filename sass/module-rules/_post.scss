@@ -45,7 +45,6 @@
 // -----------------------------------------------------------------
 .post-date {
     color: $lesser-color;
-    @include rem('font-size', $text-s);
     
     .single-post & {
         margin-top: $margin;
@@ -67,7 +66,6 @@
 // Continue reading & nr. of comments
 // -----------------------------------------------------------------
 .post-options {
-    @include rem('font-size', $text-s);
 
     a {
         @extend %hover-underline;
