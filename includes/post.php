@@ -6,7 +6,7 @@
         </a>
     </h1>
     
-    <div class="post-date">
+    <div class="post-meta">
         
         <time datetime="<?php the_time('Y-m-d') ?>" pubdate="pubdate">
             <?php the_time('j F Y') ?>
