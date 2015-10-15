@@ -21,7 +21,7 @@
                             <?php the_content('Lees meer &raquo;'); ?>
                         </div>
                         
-                        <div class="post-date">
+                        <div class="post-meta">
                                 
                             <time datetime="<?php the_time('Y-m-d') ?>" pubdate="pubdate">
                                 <?php the_time('j F Y') ?>
