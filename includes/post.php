@@ -1,7 +1,7 @@
 <article <?php post_class('post'); ?>>
 
     <h1 class="post-title">
-        <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Directe link naar', 'thema_vertalingen' ); ?><?php the_title_attribute(); ?>">
+        <a href="<?php the_permalink() ?>" title="<?php _e( 'Directe link naar', 'thema_vertalingen' ); ?><?php the_title_attribute(); ?>">
             <?php the_title(); ?>
         </a>
     </h1>
