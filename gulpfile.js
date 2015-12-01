@@ -4,7 +4,7 @@ var gulp = require('gulp'),
 
 // Set source paths
 var src_paths = {
-    preprocess: 'sass/**/*.scss',
+    sass: 'sass/**/*.scss',
     autoprefixer: '*.css',
     sprites: 'images-src/sprites/**/*.svg',
     functions: ['bower_components/picturefill/external/matchmedia.js',
@@ -21,31 +21,25 @@ var src_paths = {
 
 // Set destination paths
 var dest_paths = {
-    preprocess: '.',
+    sass: '.',
     images: 'images',
     javascript: 'js'
 };
 
 
-// CSS Preprocessing
-gulp.task('preprocess', function() {
-    gulp.src(src_paths.preprocess)
+// CSS sassing
+gulp.task('sass', function() {
+    gulp.src(src_paths.sass)
     
         .pipe(plugins.plumber({errorHandler: plugins.notify.onError('Error: <%= error.message %>')}))
         
-        .pipe(plugins.compass({
-            config_file: 'config.rb',
-            sourcemap: false,
-            css: dest_paths.preprocess,
-            sass: 'sass',
-            import_path: 'bower_components/normalize.scss'
-        }))
-        
-        .pipe(plugins.autoprefixer('last 2 versions', '> 1%', 'ie 9'))
-		.pipe(gulp.dest(dest_paths.preprocess))
+        .pipe(plugins.sass({ outputStyle: 'compressed', includePaths: 'bower_components/normalize.scss'}))
+		.pipe(gulp.dest(dest_paths.sass))
+		
+        .pipe(plugins.autoprefixer({ browsers: ['last 2 versions', 'ie 9', 'ios 6', 'android 4'], cascade: false }))
         
         .pipe(plugins.livereload())
-        .pipe(plugins.notify({ message: 'Preprocessing complete' }))
+        .pipe(plugins.notify({ message: 'sassing complete' }));
 });
 
 
@@ -117,7 +111,7 @@ gulp.task('sprites', function () {
 
 // SCSS lint
 gulp.task('lint', function() {
-    gulp.src(src_paths.preprocess)
+    gulp.src(src_paths.sass)
         .pipe(plugins.scssLint())
 });
 
@@ -125,7 +119,7 @@ gulp.task('lint', function() {
 // Watch
 gulp.task('watch', function(ev) {
     plugins.livereload.listen();
-	gulp.watch(src_paths.preprocess, ['preprocess']);
+	gulp.watch(src_paths.sass, ['sass']);
 	gulp.watch(src_paths.javascript, ['uglify']);
     gulp.watch(src_paths.sprites, ['sprites']);
 });
