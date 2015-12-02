@@ -36,10 +36,18 @@ gulp.task('sass', function() {
         .pipe(plugins.sass({ outputStyle: 'compressed', includePaths: 'bower_components/normalize.scss'}))
 		.pipe(gulp.dest(dest_paths.sass))
 		
-        .pipe(plugins.autoprefixer({ browsers: ['last 2 versions', 'ie 9', 'ios 6', 'android 4'], cascade: false }))
-        
         .pipe(plugins.livereload())
         .pipe(plugins.notify({ message: 'sassing complete' }));
+});
+
+
+// Autoprefix this shit!
+gulp.task('autoprefixer', function () {
+    var autoprefixer = require('autoprefixer');
+
+    return gulp.src(src_paths.autoprefixer)
+        .pipe(plugins.postcss([ autoprefixer({ browsers: ['last 2 versions', 'ie 9', 'ios 6', 'android 4'], cascade: false }) ]))
+        .pipe(gulp.dest('.'));
 });
 
 
