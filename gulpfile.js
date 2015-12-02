@@ -128,6 +128,7 @@ gulp.task('lint', function() {
 gulp.task('watch', function(ev) {
     plugins.livereload.listen();
 	gulp.watch(src_paths.sass, ['sass']);
+	gulp.watch(src_paths.autoprefixer, ['autoprefixer']);
 	gulp.watch(src_paths.javascript, ['uglify']);
     gulp.watch(src_paths.sprites, ['sprites']);
 });
