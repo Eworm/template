@@ -28,26 +28,17 @@ var dest_paths = {
 
 
 // CSS sassing
-gulp.task('sass', function() {
+gulp.task('css', function() {
     gulp.src(src_paths.sass)
     
         .pipe(plugins.plumber({errorHandler: plugins.notify.onError('Error: <%= error.message %>')}))
         
         .pipe(plugins.sass({ outputStyle: 'compressed', includePaths: 'bower_components/normalize.scss'}))
+        .pipe(plugins.autoprefixer({ browsers: ['last 2 versions', 'ie 9', 'ios 6', 'android 4'], cascade: false }))
 		.pipe(gulp.dest(dest_paths.sass))
 		
         .pipe(plugins.livereload())
         .pipe(plugins.notify({ message: 'sassing complete' }));
-});
-
-
-// Autoprefix this shit!
-gulp.task('autoprefixer', function () {
-    var autoprefixer = require('autoprefixer');
-
-    return gulp.src(src_paths.autoprefixer)
-        .pipe(plugins.postcss([ autoprefixer({ browsers: ['last 2 versions', 'ie 9', 'ios 6', 'android 4'], cascade: false }) ]))
-        .pipe(gulp.dest('.'));
 });
 
 
@@ -127,8 +118,7 @@ gulp.task('lint', function() {
 // Watch
 gulp.task('watch', function(ev) {
     plugins.livereload.listen();
-	gulp.watch(src_paths.sass, ['sass']);
-	gulp.watch(src_paths.autoprefixer, ['autoprefixer']);
+	gulp.watch(src_paths.sass, ['css']);
 	gulp.watch(src_paths.javascript, ['uglify']);
     gulp.watch(src_paths.sprites, ['sprites']);
 });
