@@ -4,7 +4,7 @@ var gulp = require('gulp'),
 
 // Set source paths
 var src_paths = {
-    sass: 'sass/**/*.scss',
+    css: 'sass/**/*.scss',
     autoprefixer: '*.css',
     sprites: 'images-src/sprites/**/*.svg',
     functions: ['bower_components/picturefill/external/matchmedia.js',
@@ -21,7 +21,7 @@ var src_paths = {
 
 // Set destination paths
 var dest_paths = {
-    sass: '.',
+    css: '.',
     images: 'images',
     javascript: 'js'
 };
@@ -29,13 +29,14 @@ var dest_paths = {
 
 // CSS sassing
 gulp.task('css', function() {
-    gulp.src(src_paths.sass)
+    gulp.src(src_paths.css)
     
         .pipe(plugins.plumber({errorHandler: plugins.notify.onError('Error: <%= error.message %>')}))
         
         .pipe(plugins.sass({ outputStyle: 'compressed', includePaths: 'bower_components/normalize.scss'}))
         .pipe(plugins.autoprefixer({ browsers: ['last 2 versions', 'ie 9', 'ios 6', 'android 4'], cascade: false }))
-		.pipe(gulp.dest(dest_paths.sass))
+        .pipe(plugins.minifyCss())
+		.pipe(gulp.dest(dest_paths.css))
 		
         .pipe(plugins.livereload())
         .pipe(plugins.notify({ message: 'sassing complete' }));
@@ -79,7 +80,6 @@ gulp.task('sprites', function () {
     return gulp.src(src_paths.sprites)
     
         .pipe(plugins.plumber())
-        .pipe(plugins.svgo())
         .pipe(plugins.svgSprite({
             "mode": {
                 "css": {

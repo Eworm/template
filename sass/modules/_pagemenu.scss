@@ -15,8 +15,8 @@
         width: 100%;
         margin: 0;
         padding: 0;
+        display: inline-block;
         border: 1px solid $border-color;
-        @include inline-block;
         
         @media (min-width: $lap) {
             border: 0;

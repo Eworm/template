@@ -1,37 +1,27 @@
-$sprite-menu-toggle-down: 0, 0, 0.9, 1.2;
-$sprite-menu-toggle-up: 0, -0.9, 0.9, 1.2;
+$icons--menu-toggle-down: 0, 0, 9, 12;
+$icons--menu-toggle-up: 0, -9, 9, 12;
 
-
-$sprite-size-x: 1.2 * 10px;
-$sprite-size-y: 1.8 * 10px;
+$sprite-size-x: 12px;
+$sprite-size-y: 18px;
 
 @mixin sprite($sprite) {
 
-    $sprite-x: nth($sprite, 1) * 10px;
-    $sprite-y: nth($sprite, 2) * 10px;
-    $sprite-height: nth($sprite, 3) * 10px;
-    $sprite-height-reset: (nth($sprite, 3) * 10px) / 2;
-    $sprite-width: nth($sprite, 4) * 10px;
-    $sprite-width-reset: (nth($sprite, 4) * 10px) / 2;
+    $sprite-x: nth($sprite, 1) * 1px;
+    $sprite-y: nth($sprite, 2) * 1px;
+    $sprite-height: nth($sprite, 3) * 1px;
+    $sprite-width: nth($sprite, 4) * 1px;
     
     width: $sprite-width;
     height: $sprite-height;
     background-position: $sprite-x $sprite-y;
-    background-image: url('images/svg/sprite.svg');
+    background-image: url('images/sprite.svg');
     background-repeat: no-repeat;
 
 }
 
-@mixin sprite-width($sprite, $property) {
+@mixin sprite-rule($sprite, $property) {
     
-    $sprite-width: nth($sprite, 4) * 10px;
+    $sprite-width: nth($sprite, 4) * 1px;
     #{ $property }: $sprite-width;
-}
-
-@mixin sprite-height($sprite, $property) {
     
-    $sprite-height: nth($sprite, 4) * 10px;
-    #{ $property }: $sprite-height;
 }
-
-

@@ -145,7 +145,7 @@
     @media (min-width: $lap) {
         background: $border-color;
         box-shadow: none;
-        @include background-image(none);
+        background-image: none;
     }
 }
 

@@ -94,8 +94,8 @@ fieldset {
     li { // List with radio/checkboxes
         margin-right: 12px;
         padding: 0;
+        display: inline-block;
         background: none;
-        @include inline-block;
 
         input {
             width: auto;

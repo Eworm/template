@@ -44,7 +44,7 @@
         margin-left: $margin-small;
         content: '';
         display: inline-block;
-        @include sprite($sprite-menu-toggle-up);
+        @include sprite($icons--menu-toggle-up);
         // Use these functions to get the width or height of the sprite
         // Add a property as a string
         // @include sprite-width($sprite-menu-toggle-up, 'padding-left');

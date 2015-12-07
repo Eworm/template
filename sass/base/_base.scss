@@ -117,3 +117,9 @@ a {
 .core-footer {
     
 }
+
+.symbols {
+    visibility: hidden;
+    position: absolute;
+    z-index: -1;
+}
