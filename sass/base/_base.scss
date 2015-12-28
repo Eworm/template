@@ -82,6 +82,16 @@ a {
         padding: $gutter 0;
         position: relative;
     }
+    
+    &:before, &:after {
+        content: '';
+        display: table;
+        zoom: 1;
+    }
+    
+    &:after {
+        clear: both;
+    }
 }
 
 .core-header {
