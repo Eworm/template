@@ -75,12 +75,10 @@
         <!-- Removing the highlight for mobile IE10. Stupid to make this a meta tag instead of a css property -->
         <meta name="msapplication-tap-highlight" content="no">
         
-        <!-- Regular png favicons -->
-        <link rel="icon" type="image/png" href="favicon.png">
-        <!-- IOS pinned tab -->
-        <link rel="mask-icon" href="icon.svg" color="blue">
-        <!-- Actual svg favicon -->
-        <link rel="icon" type="image/svg+xml" href="favicon.svg">
+        <!-- Modern favicons: http://thenewcode.com/28/Making-And-Deploying-SVG-Favicons -->        
+        <link rel="icon" type="image/png" href="/favicon.png">
+        <link rel="mask-icon" href="/icon.svg" color="#000000">
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg">
         
         <link type="text/plain" rel="author" href="/humans.txt">
         
@@ -156,11 +154,9 @@
     </head>
     <body>
         
-<!--
         <div class="symbols">
             <?php echo file_get_contents(get_template_directory_uri() . '/images/sprite.svg'); ?>
         </div>
--->
     
         <div id="js-container" class="container">
         

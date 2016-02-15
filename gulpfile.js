@@ -39,7 +39,7 @@ gulp.task('css', function() {
 		.pipe(gulp.dest(dest_paths.css))
 		
         .pipe(plugins.livereload())
-        .pipe(plugins.notify({ message: 'sassing complete' }));
+        .pipe(plugins.notify({ message: 'Css complete' }));
 });
 
 
@@ -82,7 +82,7 @@ gulp.task('sprites', function () {
         .pipe(plugins.plumber())
         .pipe(plugins.svgSprite({
             "mode": {
-                "css": {
+                "symbol": {
                     "spacing": {
                         "padding": 10
                     },

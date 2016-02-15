@@ -25,20 +25,6 @@ $(document).ready(function() {
     }, 50);
 
 
-    // Sniffing for android lower then 2.3
-    var ua = navigator.userAgent.toLowerCase();
-    var isAndroid = ua.indexOf("android") > -1;
-    
-    if (isAndroid) {
-    
-        var androidversion = parseFloat(ua.slice(ua.indexOf("android")+8)); 
-        if (androidversion <= 2.3) {
-            $('html').addClass('no-overflow-scroll');
-        }
-        
-    }
-    
-    
     // Show initial password
     $('#LoginPassword').hideShowPassword({
         show: true
@@ -150,110 +136,43 @@ $(document).ready(function() {
     
     // Commentform validation
     $('#commentform').parsley();
-
-
-    // Responsive javascript: https://github.com/JoshBarr/js-media-queries
-    var queries = [
-        {
-            context: ['wrist', 'palm'],
-            match: function()
-            {
-
-                // Put the search in the menu
-                $('#js-header #js-searchform').prependTo('#js-mainmenu');
-                
-                
-                // Add the submenu toggle
-                $('.has-submenu').each(function() {
-                    
-                    // Set the height of toggle-sub to the same height as the parent li
-                    parentHeight = $('.menu-item').first().height();
-                    
-                    if($(this).parent().hasClass('current_page_ancestor')) {
-                        // The submenu is open
-                        $(this).prepend('<span class="toggle-sub toggle-sub-close"></span>');
-                    } else {
-                        // The submenu is closed
-                        $(this).prepend('<span class="toggle-sub"></span>');
-                    }
-                    
-                    // $(this).prev().height(parentHeight);
-                    // $(this).prev().width(parentHeight);
-                })
-
-
-                // Attach click events to submenu toggle
-                $('.toggle-sub').on('click', function() {
-                    $(this).toggleClass('toggle-sub-close');
-                    $(this).parent().toggleClass('active-sub');
-                })
-                
-                
-                // Add the menu toggler
-                $('#js-mainmenu').prepend('<div class="navchild mobile-header"><div id="js-menu-toggler" class="mobile-toggler">Menu<span></span></div></div>');
-
-
-                // Toggle the menu
-                $('#js-menu-toggler').on('click', function() {
-                    $(this).data('opening', true);
-                    
-                    if ($('html').hasClass('js-toggle-menu')) {
-                        closeMenu('js-toggle-menu', 'js-active-menu');
-                    } else {
-                        openMenu('js-toggle-menu', 'js-active-menu', 'js-content-toggle', true);                        
-                    }
-                    
-                });
-                
-
-            }, unmatch: function()
-            {
-
-                // Put the search back
-                $('#js-searchform').insertAfter('#js-logo');
-
-
-                // Remove the submenu toggle
-                $('.toggle-sub').remove();
-                
-                
-                // Remove the mobile header
-                $('.mobile-header').remove();
-
-            }
-        },
-        {
-            context: ['lap', 'desk', 'wall', 'cinema'],
-            match: function() {
-
-                // Submenu with hoverintent
-                $('.has-submenu').hoverIntent(
-                    toggleFlyout
-                );
-                function toggleFlyout() {
-                    $(this).toggleClass('show-sub');
-                }
-                
-                // Submenu when using tabs
-                $('.has-submenu').on('focusin', function() {
-                    $(this).addClass('show-sub');
-                });
-                
-                $('.has-submenu').on('focusout', function() {
-                    $(this).removeClass('show-sub');
-                });
-                
-            }, unmatch: function()
-            {
-                
-                // Remove the submenu hover
-                $('.has-submenu').off();
-
-            }
+    
+    
+    // Small media queries
+    var handleMatchMediaSmall = function (mediaQuery) {
+        if (mediaQuery.matches) {
+        
+            // Add functions for small screens here
+        
+        } else {
+            
+            // Remove small bindings
+            
         }
-    ];
-    // Go!
-    MQ.init(queries);
+    },
+    mql = window.matchMedia('all and (max-width: 750px)');
+
+    handleMatchMediaSmall(mql);                  //Execute on load
+    mql.addListener(handleMatchMediaSmall);      //Execute each time media query will be reached
+    
+    
+    // Large media queries
+    var handleMatchMediaLarge = function (mediaQuery) {
+        if (mediaQuery.matches) {
+        
+            // Add functions for large screens here
+        
+        } else {
+            
+            // Remove large bindings
+            
+        }
+    },
+    mql = window.matchMedia('all and (min-width: 750px)');
+
+    handleMatchMediaLarge(mql);                  //Execute on load
+    mql.addListener(handleMatchMediaLarge);      //Execute each time media query will be reached
+
 
 });
 
