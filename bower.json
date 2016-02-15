@@ -17,6 +17,7 @@
     "normalize.scss": "3.0.1+normalize.3.0.1",
     "parsleyjs": "~2.0.5",
     "labjs": "*",
-    "jquery-hoverIntent": "~1.8.1"
+    "jquery-hoverIntent": "~1.8.1",
+    "matchMedia": "~0.3.0"
   }
 }
