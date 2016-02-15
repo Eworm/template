@@ -12,6 +12,8 @@ var src_paths = {
                 'bower_components/picturefill/picturefill.js',
                 'bower_components/parsleyjs/dist/parsley.js',
                 'bower_components/hoverintent/jquery.hoverIntent.js',
+                'bower_components/matchMedia/matchMedia.js',
+                'bower_components/matchMedia/matchMedia.addListener.js',
                 'js-src/functions.js'],
     labjs: ['bower_components/labjs/LAB.min.js',
                 'js-src/lab-loader.js'],
