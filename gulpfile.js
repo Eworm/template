@@ -6,7 +6,7 @@ var gulp = require('gulp'),
 var src_paths = {
     css: 'sass/**/*.scss',
     autoprefixer: '*.css',
-    sprites: 'images-src/sprites/**/*.svg',
+    sprite: 'images-src/sprite/**/*.svg',
     functions: ['bower_components/picturefill/external/matchmedia.js',
                 'bower_components/hideShowPassword/hideShowPassword.js',
                 'bower_components/picturefill/picturefill.js',
@@ -76,10 +76,10 @@ gulp.task('uglify', function() {
 });
 
 
-// SVG sprites
-gulp.task('sprites', function () {
+// SVG sprite
+gulp.task('sprite', function () {
     
-    return gulp.src(src_paths.sprites)
+    return gulp.src(src_paths.sprite)
     
         .pipe(plugins.plumber())
         .pipe(plugins.svgSprite({
@@ -94,7 +94,7 @@ gulp.task('sprites', function () {
                     "bust": false,
                     "render": {
                         "scss": {
-                            "dest": "../sass/sprites/_sprites.scss",
+                            "dest": "../sass/sprite/_sprite.scss",
                             "template": "build/tpl/sprite-template.scss"
                         }
                     }
@@ -122,7 +122,7 @@ gulp.task('watch', function(ev) {
     plugins.livereload.listen();
 	gulp.watch(src_paths.sass, ['css']);
 	gulp.watch(src_paths.javascript, ['uglify']);
-    gulp.watch(src_paths.sprites, ['sprites']);
+    gulp.watch(src_paths.sprite, ['sprite']);
 });
 
 
