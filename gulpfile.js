@@ -120,7 +120,7 @@ gulp.task('lint', function() {
 // Watch
 gulp.task('watch', function(ev) {
     plugins.livereload.listen();
-	gulp.watch(src_paths.sass, ['css']);
+	gulp.watch(src_paths.css, ['css']);
 	gulp.watch(src_paths.javascript, ['uglify']);
     gulp.watch(src_paths.sprite, ['sprite']);
 });
