@@ -38,7 +38,8 @@ gulp.task('css', function() {
         .pipe(plugins.sass({ outputStyle: 'compressed', includePaths: 'bower_components/normalize.scss'}))
         .pipe(plugins.autoprefixer({ browsers: ['last 2 versions', 'ie 9', 'ios 6', 'android 4'], cascade: false }))
         .pipe(plugins.cssnano({
-            zindex: false
+            zindex: false,
+            autoprefixer: false
         }))
 		.pipe(gulp.dest(dest_paths.css))
 		
