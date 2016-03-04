@@ -52,7 +52,7 @@ Hier staan de bestanden die je in de root van de site zet als-ie online gaat.
 Hier staan de niet-standaard fonts die gebruikt worden.
 
 **Afbeeldingen**
-De 'images-src' map is bedoelt voor photoshop of illustratorbestanden. De 'images' map is bedoelt voor afbeeldingen die in de site worden gebruikt. Van .svg bestanden wordt via Gulp automatisch een .png kopie gemaakt.
+De 'images-src' map is bedoelt voor originele bestanden. Een sprite wordt automatisch gegenereerd van svg's.
 
 **Javascript**
 De 'js-src' map is bedoelt voor de bestanden waar je in werkt. D.m.v. een Gulp taak worden deze bestanden samengevoegd en geminified en in de 'js' map geplaatst. De uglify taak in gulpfile.js zorgt hiervoor. Hier geef je aan welke bestanden samengevoegd moeten worden.
