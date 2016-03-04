@@ -37,8 +37,6 @@ Template Name: Homepage
             
             <aside class="sidebar col col-2" role="complementary">
                 
-                
-                
             </aside>
             
         </div> <!-- .row -->
