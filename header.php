@@ -154,7 +154,7 @@
     </head>
     <body>
         
-        <div class="symbols">
+        <div class="symbols" aria-hidden="true">
             <?php echo file_get_contents(get_template_directory_uri() . '/images/sprite.svg'); ?>
         </div>
     
