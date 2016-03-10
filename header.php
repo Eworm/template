@@ -61,10 +61,6 @@
             endif;
         ?>
         
-        <!-- Pinned tyle for Windows8 -->
-        <meta name="msapplication-TileImage" content="<?php bloginfo('url'); ?>/windows8-tile.png">
-        <meta name="msapplication-TileColor" content="#000">
-        
         <!-- Mobile viewport optimized: h5bp.com/viewport -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
         
