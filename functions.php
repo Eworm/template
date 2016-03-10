@@ -106,11 +106,6 @@ function add_gallery_id_rel($link) {
 }
 
 
-/* Theme options
-==================================================================================================================================*/
-require_once ( get_template_directory() . '/theme-options.php' );
-
-
 /* Remove inline width of captions
 ==================================================================================================================================*/
 add_shortcode('wp_caption', 'fixed_img_caption_shortcode');
