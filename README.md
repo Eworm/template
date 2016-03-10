@@ -14,24 +14,21 @@ Bower: http://bower.io/
 **Stap 4**
 SASS: http://sass-lang.com/install
 
-**Stap 5**
-Compass: http://compass-style.org/install/
-
 ### Je hebt nu alle benodigde software ge&iuml;nstalleerd. Nu moeten de dependencies nog worden ge&iuml;nstalleerd. Deze staan niet in git zodat de repo schoon blijft.
-**Stap 6**
+**Stap 5**
 Ga in de terminal naar de projectdirectory
 
-**Stap 7**
+**Stap 8**
 Installeer de gulp modules met:
 ```npm install``` of ```sudo npm install```
 *De gulp modules staan straks in de map 'node_modules'*
 
-**Stap 8**
+**Stap 9**
 Installeer de bower dependencies met:
 ```bower install```
 *De bower dependencies staan straks in de map 'bower_components'*
 
-**Stap 9**
+**Stap 10**
 Zet deze regels in je .gitignore, zodat de repo netjes blijft. Het is het handigst om dat globaal te doen:
 ```node_modules
 bower_components
