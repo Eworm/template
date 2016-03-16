@@ -139,39 +139,23 @@ $(document).ready(function() {
     
     
     // Small media queries
-    var handleMatchMediaSmall = function (mediaQuery) {
+    var handleMatchMedia = function (mediaQuery) {
         if (mediaQuery.matches) {
         
             // Add functions for small screens here
+            console.log('max-width: 750');
         
         } else {
             
             // Remove small bindings
+            console.log('min-width: 750');
             
         }
     },
     mql = window.matchMedia('all and (max-width: 750px)');
 
-    handleMatchMediaSmall(mql);                  //Execute on load
-    mql.addListener(handleMatchMediaSmall);      //Execute each time media query will be reached
-    
-    
-    // Large media queries
-    var handleMatchMediaLarge = function (mediaQuery) {
-        if (mediaQuery.matches) {
-        
-            // Add functions for large screens here
-        
-        } else {
-            
-            // Remove large bindings
-            
-        }
-    },
-    mql = window.matchMedia('all and (min-width: 750px)');
-
-    handleMatchMediaLarge(mql);                  //Execute on load
-    mql.addListener(handleMatchMediaLarge);      //Execute each time media query will be reached
+    handleMatchMedia(mql);                  //Execute on load
+    mql.addListener(handleMatchMedia);      //Execute each time media query will be reached
 
 
 });
