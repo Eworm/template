@@ -86,6 +86,12 @@ gulp.task('sprite', function () {
     
         .pipe(plugins.plumber())
         .pipe(plugins.svgSprite({
+            "svg": {
+                "xmlDeclaration": false,
+                "rootAttributes": {
+                    "class": "symbols"
+                }
+            },
             "mode": {
                 "symbol": {
                     "spacing": {
@@ -94,13 +100,7 @@ gulp.task('sprite', function () {
                     "dest": "./",
                     "layout": "vertical",
                     "sprite": "sprite.svg",
-                    "bust": false,
-                    "render": {
-                        "scss": {
-                            "dest": "../sass/sprite/_sprite.scss",
-                            "template": "build/tpl/sprite-template.scss"
-                        }
-                    }
+                    "bust": false
                 }
             }
         })).on('error', function(error){
