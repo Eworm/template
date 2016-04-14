@@ -122,24 +122,99 @@ $(document).ready(function() {
     $('#commentform').parsley();
     
     
-    // Small media queries
+    // Palm media queries
     var handleMatchMedia = function (mediaQuery) {
         if (mediaQuery.matches) {
-        
-            // Add functions for small screens here
-            console.log('max-width: 750');
-        
+
+            // Load mobile stuff
+            console.log('Below 480px');
+
         } else {
             
-            // Remove small bindings
-            console.log('min-width: 750');
-            
+            //load desktop stuff
+            console.log('Above 480px');
         }
     },
-    mql = window.matchMedia('all and (max-width: 750px)');
+    mqlPalm = window.matchMedia('all and (max-width: 30em)');
+    
+    handleMatchMedia(mqlPalm);                  //Execute on load
+    mqlPalm.addListener(handleMatchMedia);      //Execute each time media query will be reached
+    
+    
+    // Lap media queries
+    var handleMatchMedia = function (mediaQuery) {
+        if (mediaQuery.matches) {
 
-    handleMatchMedia(mql);                  //Execute on load
-    mql.addListener(handleMatchMedia);      //Execute each time media query will be reached
+            // Load mobile stuff
+            console.log('Below 750px');
+
+        } else {
+            
+            //load desktop stuff
+            console.log('Above 750px');
+        }
+    },
+    mqlLap = window.matchMedia('all and (max-width: 46.875em)');
+    
+    handleMatchMedia(mqlLap);                  //Execute on load
+    mqlLap.addListener(handleMatchMedia);      //Execute each time media query will be reached
+    
+    
+    // Desk media queries
+    var handleMatchMedia = function (mediaQuery) {
+        if (mediaQuery.matches) {
+
+            // Load mobile stuff
+            console.log('Below 970px');
+
+        } else {
+            
+            //load desktop stuff
+            console.log('Above 970px');
+        }
+    },
+    mqlDesk = window.matchMedia('all and (max-width: 60.625em)');
+    
+    handleMatchMedia(mqlDesk);                  //Execute on load
+    mqlDesk.addListener(handleMatchMedia);      //Execute each time media query will be reached
+    
+    
+    // Wall media queries
+    var handleMatchMedia = function (mediaQuery) {
+        if (mediaQuery.matches) {
+
+            // Load mobile stuff
+            console.log('Below 1170px');
+
+        } else {
+            
+            //load desktop stuff
+            console.log('Above 1170px');
+        }
+    },
+    mqlWall = window.matchMedia('all and (max-width: 73.125em)');
+    
+    handleMatchMedia(mqlWall);                  //Execute on load
+    mqlWall.addListener(handleMatchMedia);      //Execute each time media query will be reached
+    
+    
+    // Cinema media queries
+    var handleMatchMedia = function (mediaQuery) {
+        if (mediaQuery.matches) {
+
+            // Load mobile stuff
+            console.log('Below 1430px');
+
+        } else {
+            
+            //load desktop stuff
+            console.log('Above 1430px');
+        }
+    },
+    mqlCinema = window.matchMedia('all and (max-width: 89.375em)');
+    
+    handleMatchMedia(mqlCinema);                  //Execute on load
+    mqlCinema.addListener(handleMatchMedia);      //Execute each time media query will be reached
 
 
 });
