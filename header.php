@@ -123,9 +123,9 @@
             <?php echo file_get_contents(get_template_directory_uri() . '/images/sprite.svg'); ?>
         </div>
     
-        <div id="js-container" class="container">
+        <div class="container">
         
-            <header id="js-header" class="header divider divider-header" role="banner">
+            <header class="header divider divider-header" role="banner">
             
                 <div class="core core-header">
                     
@@ -144,7 +144,7 @@
             </header>
             <!-- .header -->
 
-            <nav id="js-mainmenu" class="mainmenu divider divider-mainmenu" role="navigation" >
+            <nav class="mainmenu divider divider-mainmenu" role="navigation" >
                 
                 <div class="core core-mainmenu">
                     
