@@ -5,7 +5,6 @@
 // Theme variables
 // -----------------------------------------------------------------
 @import 'theme/variables';                // Globally-available variables
-@import 'theme/header-sizes';             // Global H1/H6 sizes
 
 
 // Sass functions, extendables & mixins.
@@ -21,7 +20,6 @@
 // -----------------------------------------------------------------
 // @import 'normalize';                            // Normalize is being imported via Bower
 @import 'base/base';                      // Base styles
-@import 'base/headers';                   // Custom H1/H6 styles
 
 
 // Layout. Styling of page sections that contain moduless.
@@ -41,3 +39,4 @@
 @import 'modules/forms';                   // Input and button styles
 @import 'modules/flex';                    // Flexbox extra's
 @import 'modules/breadcrumbs';             // Breadcrumbs styling
+@import 'modules/headers';                 // Custom H1/H6 styles
