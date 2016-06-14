@@ -13,12 +13,12 @@
   ],
   "dependencies": {
     "picturefill": "2.1.0",
-    "hideShowPassword": "~2.0.3",
+    "hideShowPassword": "~2.0.11",
     "normalize.scss": "3.0.1+normalize.3.0.1",
-    "parsleyjs": "~2.0.5",
+    "parsleyjs": "~2.3.14",
     "labjs": "*",
     "jquery-hoverIntent": "~1.8.1",
     "matchMedia": "~0.3.0",
-    "blazy": "~1.5.4"
+    "blazy": "~1.6.2"
   }
 }
