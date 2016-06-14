@@ -6,9 +6,9 @@
     
         <div class="row">
 
-            <main class="main-content col col-5 not-found" role="main">
+            <main class="page-content col col-5 not-found" role="main">
     
-                <h1 class="main-content-title">
+                <h1 class="page-title">
                     <?php _e( 'Deze pagina bestaat niet (meer)', 'thema_vertalingen' ); ?>
                 </h1>
     
@@ -18,7 +18,7 @@
     
                 <?php get_search_form(); ?>
     
-            </main> <!-- .main-content -->
+            </main> <!-- .page-content -->
         
         </div> <!-- .row -->
 

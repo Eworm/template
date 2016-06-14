@@ -30,25 +30,6 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <meta name="apple-mobile-web-app-title" content="<?php bloginfo('name'); ?>">
         
-        <?php
-            if (is_single()) :
-            
-                // Twitter cards meta info - only for a single blogpost
-                $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail' );
-                $url = $thumb['0'];
-                
-                echo '<meta name="twitter:card" content="summary">';
-                echo '<meta name="twitter:site" content="' . get_bloginfo('name') . '">';
-                echo '<meta name="twitter:title" content="' . get_the_title() . '">';
-                echo '<meta name="twitter:description" content="' . get_the_excerpt() . '">';
-                
-                if ( has_post_thumbnail() ) {
-                    echo '<meta name="twitter:image:src" content="' . $url . '">';
-                }
-                
-            endif;
-        ?>
-        
         <!-- Mobile viewport optimized: h5bp.com/viewport -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
         

@@ -6,7 +6,7 @@
     
         <div class="row">
 
-            <main class="main-content col col-5" role="main">
+            <main class="page-content col col-5" role="main">
     
                 <?php if (have_posts()) : ?>
     
@@ -101,7 +101,7 @@
             
                 <?php endif; ?>
                 
-            </main> <!-- .main-content -->
+            </main> <!-- .page-content -->
     
             <aside class="sidebar col col-3" role="complementary">
             

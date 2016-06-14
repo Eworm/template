@@ -4,7 +4,7 @@
     @include flexbox;
     @include flex-flow(row wrap);
     
-    > .main-content {
+    > .page-content {
         @include order(1);
         @include flex-direction(column);
     }

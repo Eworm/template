@@ -119,9 +119,9 @@ endif;
         
             <div class="row">
     
-                <main class="main-content col col-5" role="main">
+                <main class="page-content col col-5" role="main">
         
-                    <h1 class="main-content-title">
+                    <h1 class="page-title">
                         <?php _e( 'Bedankt voor Je e-mail', 'thema_vertalingen' ); ?>, <?=$name;?>
                     </h1>
         
@@ -135,7 +135,7 @@ endif;
                         </a>
                     </p>
         
-                </main> <!-- .main-content -->
+                </main> <!-- .page-content -->
                 
             </div> <!-- .row -->
     
@@ -153,7 +153,7 @@ endif;
         
             <div class="row">
     
-                <main class="main-content col col-5" role="main">
+                <main class="page-content col col-5" role="main">
         
                     <form action="#contactform" id="contactform" method="post" class="form" data-parsley-validate>
         
@@ -230,7 +230,7 @@ endif;
         
                     </form>
         
-                </main> <!-- .main-content -->
+                </main> <!-- .page-content -->
         
                 <aside class="sidebar col col-3" role="complementary">
         

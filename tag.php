@@ -6,11 +6,11 @@
     
         <div class="row">
 
-            <main class="main-content col col-5" role="main">
+            <main class="page-content col col-5" role="main">
     
                 <?php if ( have_posts() ) : ?>
         
-                    <h1 class="main-content-title">
+                    <h1 class="page-title">
                         <?php _e( 'Tag', 'thema_vertalingen' ); ?>: <?php single_cat_title() ?>
                     </h1>
         
@@ -44,7 +44,7 @@
     
                 <?php endif; ?>
                 
-            </main> <!-- .main-content -->
+            </main> <!-- .page-content -->
     
             <aside class="sidebar col col-3" role="complementary">
     

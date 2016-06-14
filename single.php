@@ -11,7 +11,7 @@
                 <?php if (have_posts()) : ?>
                 <?php while (have_posts()) : the_post(); ?>
         
-                    <main <?php post_class('main-content single-post'); ?> role="main">
+                    <main <?php post_class('page-content single-post'); ?> role="main">
         
                         <h1 class="post-title maincontent-title single-post-title">
                             <?php the_title(); ?>
@@ -38,14 +38,14 @@
                         
                         </div>
                         
-                    </main> <!-- .main-content -->
+                    </main> <!-- .page-content -->
                     
                     <?php comments_template(); ?>
         
                 <?php endwhile; ?>
                 <?php else : ?>
                     
-                    <main <?php post_class('main-content single-post no-results not-found'); ?> role="main">
+                    <main <?php post_class('page-content single-post no-results not-found'); ?> role="main">
     
                         <h1 class="post-title maincontent-title single-post-title">
                             <?php _e( 'Deze pagina bestaat niet', 'thema_vertalingen' ); ?>
@@ -61,7 +61,7 @@
                         
                         </div>
     
-                    </main> <!-- .main-content -->
+                    </main> <!-- .page-content -->
                     
                 <?php endif; ?>
             

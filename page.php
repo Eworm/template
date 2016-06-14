@@ -44,13 +44,13 @@
             <?php if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>
     
-                <main class="main-content col col-6" role="main">
+                <main class="page-content col col-6" role="main">
     
-                    <h1 class="main-content-title">
+                    <h1 class="page-title">
                         <?php the_title(); ?>
                     </h1>
     
-                    <div class="main-content-body">
+                    <div class="page-body">
                         <?php the_content('Lees meer &raquo;'); ?>
                     </div>
                     
@@ -87,19 +87,19 @@
                     </div>
 -->
     
-                </main> <!-- .main-content -->
+                </main> <!-- .page-content -->
     
             <?php endwhile; ?>
     
             <?php else : ?>
     
-                <main class="main-content col col-6 no-results not-found">
+                <main class="page-content col col-6 no-results not-found">
     
-                    <h1 class="main-content-title">
+                    <h1 class="page-title">
                         <?php _e( 'Deze pagina bestaat niet', 'thema_vertalingen' ); ?>
                     </h1>
                     
-                    <div class="main-content-body">
+                    <div class="page-body">
     
                         <p>
                             <?php _e( 'Sorry, we hebben deze pagina niet gevonden. Maar misschien kun je zoeken om de juiste pagina te vinden:', 'thema_vertalingen' ); ?>
@@ -109,7 +109,7 @@
     
                     </div>
     
-                </main> <!-- .main-content -->
+                </main> <!-- .page-content -->
     
             <?php endif; ?>
         

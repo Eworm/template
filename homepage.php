@@ -13,17 +13,19 @@ Template Name: Homepage
         
         <div class="row">
 
-            <main class="main-content col col-6" role="main">
+            <main class="page-content col col-6" role="main">
     
                 <?php if (have_posts()) : ?>
     
                     <?php while (have_posts()) : the_post(); ?>
                 
-                        <h1 class="main-content-title">
+                        <h1 class="page-title">
+                            
                             <?php the_title(); ?>
+                            
                         </h1>
                         
-                        <div class="main-content-body">
+                        <div class="page-body">
                             
                             <?php the_content('Weiterlesen &raquo;'); ?>
                             
@@ -33,9 +35,11 @@ Template Name: Homepage
     
                 <?php endif; ?>
     
-            </main> <!-- .main-content -->
+            </main> <!-- .page-content -->
             
             <aside class="sidebar col col-2" role="complementary">
+                
+                Aside
                 
             </aside>
             

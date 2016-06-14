@@ -66,7 +66,7 @@ $(document).ready(function() {
         $('.js-catitem').removeClass('current-cat');
         $('#' + catId).addClass('current-cat');
         
-        $('.main-content').addClass('thinkin');
+        $('.page-content').addClass('thinkin');
         
         jQuery.ajax({
             type: 'POST',
@@ -78,9 +78,9 @@ $(document).ready(function() {
             success: function(response) {
                 
                 // Change HTML
-                $('.main-content').html(response).promise().done(function(){
+                $('.page-content').html(response).promise().done(function(){
                     setTimeout(function() {
-                        $('.main-content').removeClass('thinkin');
+                        $('.page-content').removeClass('thinkin');
                     }, 100);
                 });
 
