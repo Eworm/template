@@ -1,0 +1,62 @@
+.pagemenu {
+    @include flex-direction(column);
+    @include order(2);
+
+    @media (min-width: $lap) {
+        margin-bottom: $margin;
+        clear: none;
+        display: block;
+        border: 1px solid $border-color;
+    }
+
+    ul {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        border: 1px solid $border-color;
+        
+        @media (min-width: $lap) {
+            border: 0;
+        }
+    }
+
+    li {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: block;
+        float: left;
+        background: transparent;
+
+        @media (min-width: $lap) {
+            margin-bottom: 0;
+        }
+        
+        &:last-child {
+            
+            a {
+                border: 0;
+            }
+        }
+    }
+
+    a {
+        padding: $gutter-skinny;
+        display: block;
+
+        @media (min-width: $lap) {
+            border-bottom: 1px solid $border-color;
+            background: transparent;
+        }
+
+        &:hover,
+        &:focus {
+            background: $border-color;
+        }
+    }
+
+    .current_page_item a {
+        background: $border-color;
+    }
+}

@@ -5,8 +5,8 @@ setlocale(LC_TIME, 'nl_NL');
 /* Optional code to change the url
 ==================================================================================================================================*/
 /*
-update_option('siteurl','http://template.dev/');
-update_option('home','http://template.dev/');
+update_option('siteurl','http://10.0.1.17/_htmltemplate/');
+update_option('home','http://10.0.1.17/_htmltemplate/');
 */
 
 
@@ -33,6 +33,27 @@ add_action('template_redirect', 'load_jquery');
 remove_filter('term_description','wpautop');
 remove_action('wp_head', 'wp_generator');
 remove_action('wp_head', 'wlwmanifest_link');
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('admin_print_scripts', 'print_emoji_detection_script');
+remove_action('wp_print_styles', 'print_emoji_styles');
+remove_action('admin_print_styles', 'print_emoji_styles');
+
+function disable_embeds_init() {
+
+    // Remove the REST API endpoint.
+    remove_action('rest_api_init', 'wp_oembed_register_route');
+
+    // Turn off oEmbed auto discovery.
+    // Don't filter oEmbed results.
+    remove_filter('oembed_dataparse', 'wp_filter_oembed_result', 10);
+
+    // Remove oEmbed discovery links.
+    remove_action('wp_head', 'wp_oembed_add_discovery_links');
+
+    // Remove oEmbed-specific JavaScript from the front-end and back-end.
+    remove_action('wp_head', 'wp_oembed_add_host_js');
+}
+add_action('init', 'disable_embeds_init', 9999);
 
 
 /* Widget
@@ -100,11 +121,6 @@ function add_gallery_id_rel($link) {
     global $post;
     return str_replace('<a href', '<a rel="gallery" href', $link);
 }
-
-
-/* Theme options
-==================================================================================================================================*/
-require_once ( get_template_directory() . '/theme-options.php' );
 
 
 /* Remove inline width of captions
@@ -392,6 +408,52 @@ function prefix_load_cat_posts () {
 
     echo $response;
     die(1);
+}
+
+
+/* Breadcrumbs without a plugin
+==================================================================================================================================*/
+function the_breadcrumb() {
+    global $post;
+    echo '<ul class="breadcrumbs">';
+    if (!is_home()) {
+        echo '<li><a href="';
+        echo get_option('home');
+        echo '" title="Naar de homepage">';
+        echo 'Home';
+        echo '</a></li>';
+        if (is_category() || is_single()) {
+            echo '<li>';
+            the_category('</li><li>');
+            if (is_single()) {
+                echo '</li><li><span>';
+                the_title();
+                echo '<span></li>';
+            }
+        } elseif (is_page()) {
+            if($post->post_parent){
+                $anc = get_post_ancestors( $post->ID );
+                $title = get_the_title();
+                foreach ( $anc as $ancestor ) {
+                    $output = '<li><a href="'.get_permalink($ancestor).'" title="'.get_the_title($ancestor).'">'.get_the_title($ancestor).'</a></li>';
+                }
+                echo $output;
+                // echo '<li><span>';
+                // echo $title;
+                // echo '</span></li>';
+            } else {
+                // echo '<li><span>' . get_the_title() . '</span></li>';
+            }
+        }
+    }
+    elseif (is_tag()) {single_tag_title();}
+    elseif (is_day()) {echo"<li>Archive for "; the_time('F jS, Y'); echo'</li>';}
+    elseif (is_month()) {echo"<li>Archive for "; the_time('F, Y'); echo'</li>';}
+    elseif (is_year()) {echo"<li>Archive for "; the_time('Y'); echo'</li>';}
+    elseif (is_author()) {echo"<li>Author Archive"; echo'</li>';}
+    elseif (isset($_GET['paged']) && !empty($_GET['paged'])) {echo "<li>Blog Archives"; echo'</li>';}
+    elseif (is_search()) {echo"<li>Search Results"; echo'</li>';}
+    echo '</ul>';
 }
 
 ?>

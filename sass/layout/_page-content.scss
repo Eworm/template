@@ -1,0 +1,38 @@
+// Main content on a page
+// -----------------------------------------------------------------
+.page-content {
+    padding: 0;
+    background-position: center 10px;
+    background: url('images/ajax-loader.gif') no-repeat center -24px;
+    transition: background-position .3s ease-in-out;
+
+    @media (min-width: $lap) {
+    }
+}
+
+.thinkin {
+    background: url('images/ajax-loader.gif') no-repeat center 20px;
+    
+    .post {
+        opacity: 0;
+    }
+}
+
+
+// The content
+// -----------------------------------------------------------------
+.page-body {
+
+    p,
+    ul {
+        margin: 0 0 $margin-skinny 0;
+        
+        @media (min-width: $lap) {
+            margin-bottom: $margin;
+        }
+        
+        &:last-child {
+            // margin-bottom: 0;
+        }
+    }
+}

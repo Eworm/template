@@ -1,0 +1,71 @@
+// Section
+// -----------------------------------------------------------------
+.mobile-header {
+    width: 100%;
+    height: 70px;
+    padding: 0 $gutter-skinny;
+    position: absolute;
+    margin-top: -70px;
+    z-index: 1000;
+    text-align: center;
+    transform: translate3d(0, 0, 0);
+
+    @media (min-width: $lap) {
+        display: none;
+    }
+}
+
+
+// The toggler
+// -----------------------------------------------------------------    
+.mobile-toggler {
+    padding: $gutter-small $gutter-skinny;
+    display: inline-block;
+    position: relative;
+    top: -5px;
+    text-decoration: none;
+    background: rgba(#ddd, .85);
+    border-radius: $default-border-radius;
+    box-shadow: rgba(#000, .2) 0 1px 0;
+    transition: all .25s ease;
+    opacity: 0;
+    
+    .start-animatin & {
+        top: 0;
+        opacity: 1;
+    }
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+    
+    span {
+        margin-left: $margin-small;
+        content: '';
+        display: inline-block;
+        @include sprite($icons--menu-toggle-up);
+        // Use these functions to get the width or height of the sprite
+        // Add a property as a string
+        // @include sprite-width($sprite-menu-toggle-up, 'padding-left');
+        // @include sprite-height($sprite-menu-toggle-up, 'top');
+        transition: all .25s ease;
+        
+        .js-toggle-menu & {
+            transform: rotate(180deg);
+        }
+        
+        
+    }
+}
+
+
+// Class for hiding stuff on mobile
+// -----------------------------------------------------------------
+.mob-hide {
+    display: none;
+
+    @media (min-width: $lap) {
+        display: block;
+    }
+}

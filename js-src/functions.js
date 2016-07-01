@@ -1,21 +1,5 @@
 $(document).ready(function() {
-
-
-    // Optimize scrolling
-    (function() {
-    
-        var timer;
-        $(window).on('scroll resize', function () {
-            $('html').addClass('avoid-clicks');
-            clearTimeout(timer);
-            timer = setTimeout(refresh, 150 );
-        });
-        var refresh = function () {
-            $('html').removeClass('avoid-clicks');
-        };
-        
-    })();
-    
+   
 
     // Animation class
     setTimeout(function() {
@@ -25,20 +9,6 @@ $(document).ready(function() {
     }, 50);
 
 
-    // Sniffing for android lower then 2.3
-    var ua = navigator.userAgent.toLowerCase();
-    var isAndroid = ua.indexOf("android") > -1;
-    
-    if (isAndroid) {
-    
-        var androidversion = parseFloat(ua.slice(ua.indexOf("android")+8)); 
-        if (androidversion <= 2.3) {
-            $('html').addClass('no-overflow-scroll');
-        }
-        
-    }
-    
-    
     // Show initial password
     $('#LoginPassword').hideShowPassword({
         show: true
@@ -64,26 +34,15 @@ $(document).ready(function() {
     });
 
 
-    // Function to open something
+    // Function to open the menu
     function openMenu(toggleClass, activeClass, contentToggle, scrollTop) {
-    
         $('html').addClass(toggleClass);
-        setTimeout(function() {
-            $('html').addClass(activeClass);
-            $('#js-container').after('<div id="' + contentToggle + '"></div>');
-        }, 180);
-        
     };
 
 
-    // Function to close something
+    // Function to close the menu
     function closeMenu(toggleClass, activeClass) {
-    
         $('html').removeClass(toggleClass);
-        setTimeout(function() {
-            $('html').removeClass(activeClass);
-        }, 180);
-        
     };
     
     
@@ -107,7 +66,7 @@ $(document).ready(function() {
         $('.js-catitem').removeClass('current-cat');
         $('#' + catId).addClass('current-cat');
         
-        $('.main-content').addClass('thinkin');
+        $('.page-content').addClass('thinkin');
         
         jQuery.ajax({
             type: 'POST',
@@ -119,9 +78,9 @@ $(document).ready(function() {
             success: function(response) {
                 
                 // Change HTML
-                $('.main-content').html(response).promise().done(function(){
+                $('.page-content').html(response).promise().done(function(){
                     setTimeout(function() {
-                        $('.main-content').removeClass('thinkin');
+                        $('.page-content').removeClass('thinkin');
                     }, 100);
                 });
 
@@ -161,99 +120,102 @@ $(document).ready(function() {
     
     // Commentform validation
     $('#commentform').parsley();
+    
+    
+    // Palm media queries
+    var handleMatchMedia = function (mediaQuery) {
+        if (mediaQuery.matches) {
 
+            // Load mobile stuff
+            console.log('Below 480px');
 
-    // Responsive javascript: https://github.com/JoshBarr/js-media-queries
-    var queries = [
-        {
-            context: ['wrist', 'palm'],
-            match: function()
-            {
-
-                // Put the search in the menu
-                $('#js-header #js-searchform').prependTo('#js-mainmenu');
-
-
-                // Add the submenu toggle
-                $('.js-sub-menu').each(function() {
-                    if($(this).parent().hasClass('current_page_ancestor')) {
-                        // The submenu is open
-                        $(this).before('<span class="toggle-sub toggle-sub-close"></span>');
-                    } else {
-                        // The submenu is closed
-                        $(this).before('<span class="toggle-sub"></span>');
-                    }
-                    // Set the height of toggle-sub to the same height as the parent li
-                    parentHeight = $('.menu-item').first().height();
-                    $(this).prev().height(parentHeight);
-                    $(this).prev().width(parentHeight);
-                })
-
-
-                // Attach click events to submenu toggle
-                $('.toggle-sub').on('click', function() {
-                    $(this).toggleClass('toggle-sub-close');
-                    //$(this).next().toggleClass('active-sub');
-                    $(this).next().toggle();
-                })
-                
-                
-                // Add the menu toggler
-                $('.core-header').prepend('<div class="mobile-header"><span id="js-menu-toggler" class="mobile-toggler">Menu</span></div>');
-                // Toggle the menu
-                $('#js-menu-toggler').on('click', function() {
-                    openMenu('js-toggle-menu', 'js-active-menu', 'js-content-toggle', true);
-                });
-                
-
-            }, unmatch: function()
-            {
-
-                // Put the search back
-                $('#js-searchform').insertAfter('#js-logo');
-
-
-                // Remove the submenu toggle
-                $('.toggle-sub').remove();
-                
-                
-                // Remove the mobile header
-                $('.mobile-header').remove();
-
-            }
-        },
-        {
-            context: ['lap', 'desk', 'wall', 'cinema'],
-            match: function() {
-
-                // Submenu with hoverintent
-                $('.has-submenu').hoverIntent(
-                    toggleFlyout
-                );
-                function toggleFlyout() {
-                    $(this).toggleClass('show-sub');
-                }
-                
-                // Submenu when using tabs
-                $('.has-submenu').on('focusin', function() {
-                    $(this).addClass('show-sub');
-                });
-                
-                $('.has-submenu').on('focusout', function() {
-                    $(this).removeClass('show-sub');
-                });
-                
-            }, unmatch: function()
-            {
-                
-                // Remove the submenu hover
-                $('.has-submenu').off();
-
-            }
+        } else {
+            
+            //load desktop stuff
+            console.log('Above 480px');
         }
-    ];
-    // Go!
-    MQ.init(queries);
+    },
+    mqlPalm = window.matchMedia('all and (max-width: 30em)');
+    
+    handleMatchMedia(mqlPalm);                  //Execute on load
+    mqlPalm.addListener(handleMatchMedia);      //Execute each time media query will be reached
+    
+    
+    // Lap media queries
+    var handleMatchMedia = function (mediaQuery) {
+        if (mediaQuery.matches) {
+
+            // Load mobile stuff
+            console.log('Below 750px');
+
+        } else {
+            
+            //load desktop stuff
+            console.log('Above 750px');
+        }
+    },
+    mqlLap = window.matchMedia('all and (max-width: 46.875em)');
+    
+    handleMatchMedia(mqlLap);                  //Execute on load
+    mqlLap.addListener(handleMatchMedia);      //Execute each time media query will be reached
+    
+    
+    // Desk media queries
+    var handleMatchMedia = function (mediaQuery) {
+        if (mediaQuery.matches) {
+
+            // Load mobile stuff
+            console.log('Below 970px');
+
+        } else {
+            
+            //load desktop stuff
+            console.log('Above 970px');
+        }
+    },
+    mqlDesk = window.matchMedia('all and (max-width: 60.625em)');
+    
+    handleMatchMedia(mqlDesk);                  //Execute on load
+    mqlDesk.addListener(handleMatchMedia);      //Execute each time media query will be reached
+    
+    
+    // Wall media queries
+    var handleMatchMedia = function (mediaQuery) {
+        if (mediaQuery.matches) {
+
+            // Load mobile stuff
+            console.log('Below 1170px');
+
+        } else {
+            
+            //load desktop stuff
+            console.log('Above 1170px');
+        }
+    },
+    mqlWall = window.matchMedia('all and (max-width: 73.125em)');
+    
+    handleMatchMedia(mqlWall);                  //Execute on load
+    mqlWall.addListener(handleMatchMedia);      //Execute each time media query will be reached
+    
+    
+    // Cinema media queries
+    var handleMatchMedia = function (mediaQuery) {
+        if (mediaQuery.matches) {
+
+            // Load mobile stuff
+            console.log('Below 1430px');
+
+        } else {
+            
+            //load desktop stuff
+            console.log('Above 1430px');
+        }
+    },
+    mqlCinema = window.matchMedia('all and (max-width: 89.375em)');
+    
+    handleMatchMedia(mqlCinema);                  //Execute on load
+    mqlCinema.addListener(handleMatchMedia);      //Execute each time media query will be reached
+
 
 });
 

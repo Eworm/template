@@ -1,0 +1,58 @@
+.sidebar-section {
+    width: 100%;
+    margin-bottom: $margin-skinny;
+    padding: $padding-skinny;
+    float: left;
+    border: 1px solid $border-color;
+
+    @media (min-width: $lap) {
+        margin-bottom: $margin;
+        padding: $padding;
+    }
+
+    &:last-child {
+        // margin-bottom: 0;
+    }
+    
+    img {
+        margin-bottom: $margin;
+        border-radius: 0;
+    }
+
+    ul {
+        @extend %remove-style;
+    }
+
+    a {
+        @extend %hover-underline;
+    }
+
+    iframe {
+        float: left;
+    }
+
+}
+
+
+// Sidebar section title
+// -----------------------------------------------------------------
+.sidebar-section-title {
+    margin: 0 0 $margin-skinny;
+    font-weight: bold;
+    font-size: $body-size;
+    
+    @media (min-width: $lap) {
+        margin-bottom: $margin;
+    }
+
+    a {
+        @extend %hover-underline;
+    }
+}
+
+
+// Nav feedback
+// -----------------------------------------------------------------
+.current-cat {
+    font-weight: bold;
+}

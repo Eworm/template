@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    word-wrap: break-word;
+    -webkit-tap-highlight-color: rgba(#000, 0);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    font-size: $base-size/$body-size; // Enable font-size zoom for old ies
+
+    &.js-active-menu {
+        height: 100%;
+        overflow: hidden;
+    }
+    
+    &.touch.no-overflow-scroll.js-active-menu {
+        overflow: visible;
+    }
+}
+
+body {
+    background: $body-bg-color;
+    font: #{$body-size}/#{$line-height} #{$body-font};
+    color: $body-color;
+}
+
+#js-content-toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: $mobile-menu-width;
+    z-index: 10000;
+    opacity: 0;
+    background: $body-bg-color;
+    
+    @media (min-width: $palm) {
+        left: $skinny-menu-width;
+    }
+}
+
+
+// General links
+// -----------------------------------------------------------------
+a {
+    color: $link-color;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+}
+
+
+// Section dividers
+// -----------------------------------------------------------------
+.divider {
+    width: 100%;
+    float: left;    
+    backface-visibility: hidden;
+    transform-style: flat;
+
+    @media (min-width: $palm) {
+    }
+}
+
+
+// Center site
+// -----------------------------------------------------------------
+.core {
+    margin: 0 auto;
+    padding: $gutter;
+    clear: both;
+
+    @media (min-width: $lap) {
+        width: $width;
+        max-width: $max-width;
+        padding: $gutter 0;
+        position: relative;
+    }
+    
+    &:before, &:after {
+        content: '';
+        display: table;
+        zoom: 1;
+    }
+    
+    &:after {
+        clear: both;
+    }
+}
+
+.core-header {
+    z-index: 1200;
+}
+
+.core-mainmenu {
+    width: 100%;
+    padding: 0;
+    float: left;
+    
+    @media (min-width: $lap) {
+        width: $width;
+        float: none;   
+    }
+}
+
+.core-content {
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+    
+    @media (min-width: $lap) {
+        width: $width;
+        display: block;
+    }
+}
+
+.core-doormat {
+    
+}
+
+.core-footer {
+    
+}
+
+.symbols {
+    visibility: hidden;
+    position: absolute;
+    z-index: -1;
+}

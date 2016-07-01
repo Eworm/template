@@ -8,35 +8,18 @@
     
         <div class="row">
 
-            <main class="main-content col col-5" role="main">
+            <main class="page-content col col-5" role="main">
             
                 <?php if (have_posts()) : ?>
                 
-                    <h1 class="main-content-title">
+                    <h1 class="page-title">
                         <?php _e( 'Zoekresultaten voor', 'thema_vertalingen' ); ?> <em>&#8216;<?php echo $search_query ?>&#8217;</em>
                     </h1>
                 
                     <?php while (have_posts()) : the_post(); ?>
                 
-                        <section <?php post_class('search-result'); ?>>
-                        
-                            <h1 class="search-result-title post-title">
-                                <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Permanente link naar', 'thema_vertalingen' ); ?><?php the_title(); ?>">
-                                    <?php the_title(); ?>
-                                </a>
-                            </h1>
-                        
-                            <div class="search-result-entry post-entry">
-                                <?php the_excerpt('Continue reading &raquo;'); ?>
-                            </div>
-                        
-                            <span class="post-options">
-                                <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Directe link naar', 'thema_vertalingen' ); ?> <?php the_title_attribute(); ?>">
-                                    <?php _e( 'Verder lezen', 'thema_vertalingen' ); ?>
-                                </a>
-                            </span>
-                
-                        </section>
+                        <!-- This function uses post.php -->
+                        <?php get_template_part( 'includes/post', '' ); ?>
                         
                     <?php endwhile; ?>
                         
@@ -68,7 +51,7 @@
               
                 <?php endif; ?>
                 
-            </main> <!-- .main-content -->
+            </main> <!-- .page-content -->
             
         </div> <!-- .row -->
         

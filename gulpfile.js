@@ -1,88 +1,50 @@
 var gulp = require('gulp'),
     // Get packages from package.json
-    plugins = require("gulp-load-plugins")(),
-    // Livereload stuff
-    lr = require('tiny-lr'),
-    server = lr();
-    
+    plugins = require('gulp-load-plugins')();
 
 // Set source paths
 var src_paths = {
-    compass: 'sass/**/*.scss',
+    css: 'sass/**/*.scss',
     autoprefixer: '*.css',
-    svgmin: 'images-src/*.svg',
-    svg2png: 'images-src/*.svg',
-    imagemin: 'images/portfolio/*.*',
-    bookmarks: 'images-src/root/*.png',
-    svgsprites: 'images-src/sprites/**/*.svg',
+    sprite: 'images-src/sprite/**/*.svg',
     functions: ['bower_components/picturefill/external/matchmedia.js',
                 'bower_components/hideShowPassword/hideShowPassword.js',
                 'bower_components/picturefill/picturefill.js',
                 'bower_components/parsleyjs/dist/parsley.js',
-                'bower_components/on-media-query/js/onmediaquery.js',
                 'bower_components/hoverintent/jquery.hoverIntent.js',
+                'bower_components/matchMedia/matchMedia.js',
+                'bower_components/matchMedia/matchMedia.addListener.js',
                 'js-src/functions.js'],
     labjs: ['bower_components/labjs/LAB.min.js',
                 'js-src/lab-loader.js'],
-    uglify: 'js-src/*.*'
+    javascript: 'js-src/*.*'
 };
 
 
 // Set destination paths
 var dest_paths = {
-    compass: '.',
+    css: '.',
     images: 'images',
-    svgmin: 'images',
-    svg2png: 'images',
-    imagemin: 'images',
-    uglify: 'js',
-    bookmarks: '_put_in_root',
-    labjs: 'js'
+    javascript: 'js'
 };
 
 
-// Compass
-gulp.task('compass', function() {
-    gulp.src(src_paths.compass)
+// CSS sassing
+gulp.task('css', function() {
+    gulp.src(src_paths.css)
     
-        .pipe(plugins.plumber({errorHandler: plugins.notify.onError("Error: <%= error.message %>")}))
+        .pipe(plugins.plumber({errorHandler: plugins.notify.onError('Error: <%= error.message %>')}))
         
-        .pipe(plugins.compass({
-            config_file: 'config.rb',
-            sourcemap: false,
-            //debug: true,
-            css: dest_paths.compass,
-            sass: 'sass',
-            import_path: 'bower_components/normalize.scss'
+        .pipe(plugins.sass({ outputStyle: 'compressed', includePaths: 'bower_components/normalize.scss'}))
+        .pipe(plugins.autoprefixer({ browsers: ['last 2 versions', 'ie 9', 'ios 6', 'android 4'], cascade: false }))
+        .pipe(plugins.cssnano({
+            zindex: false,
+            autoprefixer: false
         }))
-        
-        .pipe(plugins.autoprefixer("last 2 versions", "> 1%", "ie 8"))
-		.pipe(gulp.dest('.'))
-        
-        .pipe(plugins.livereload(server))
-        .pipe(plugins.notify({ message: 'Compass complete' }))
-});
-
-
-// SVG optim
-gulp.task('svgmin', function() {
-    gulp.src(src_paths.svgmin)
-        .pipe(plugins.svgmin())
-        .pipe(gulp.dest(dest_paths.svgmin))
-        
-        .pipe(plugins.livereload(server))
-        .pipe(plugins.notify({ message: 'Svgoptim complete' }))
-});
-
-
-// SVG 2 png
-gulp.task('svg2png', function () {
-    gulp.src(src_paths.svg2png)
-        .pipe(plugins.svg2png())
-        .pipe(gulp.dest(dest_paths.svg2png))
-        
-        .pipe(plugins.livereload(server))
-        .pipe(plugins.notify({ message: 'Svg2png complete' }))
+		.pipe(gulp.dest(dest_paths.css))
+		
+        .pipe(plugins.livereload())
+        .pipe(plugins.notify({ message: 'Css complete' }));
 });
 
 
@@ -91,96 +53,79 @@ gulp.task('uglify', function() {
     
     gulp.src(src_paths.functions)
     
-        .pipe(plugins.plumber({errorHandler: plugins.notify.onError("Error: <%= error.message %>")}))
+        .pipe(plugins.plumber({errorHandler: plugins.notify.onError('Error: <%= error.message %>')}))
     
         .pipe(plugins.concat('functions.min.js'))
-        // .pipe(plugins.stripDebug())
         .pipe(plugins.uglify({
             compress: false
         }))
-        .pipe(gulp.dest(dest_paths.uglify))
+        .pipe(gulp.dest(dest_paths.javascript))
         
-        .pipe(plugins.livereload(server))
+        .pipe(plugins.livereload())
         .pipe(plugins.notify({ message: 'Uglify complete' }))
         
     gulp.src(src_paths.labjs)
     
-        .pipe(plugins.plumber({errorHandler: plugins.notify.onError("Error: <%= error.message %>")}))
+        .pipe(plugins.plumber({errorHandler: plugins.notify.onError('Error: <%= error.message %>')}))
     
         .pipe(plugins.concat('lab.min.js'))
-        // .pipe(plugins.stripDebug())
         .pipe(plugins.uglify({
             compress: false
         }))
-        .pipe(gulp.dest(dest_paths.uglify))
+        .pipe(gulp.dest(dest_paths.javascript))
         
-        .pipe(plugins.livereload(server))
+        .pipe(plugins.livereload())
         .pipe(plugins.notify({ message: 'Uglify complete' }))
 });
 
 
-// Create all IOS & Windows phone images
-gulp.task('bookmarks', function () {
-
-    gulp.src(src_paths.bookmarks)
-        .pipe(plugins.imageResize({ width: 129, width: 129, quality: .9, imageMagick: true }))
-        .pipe(plugins.rename("apple-touch-icon-precomposed.png"))
-        .pipe(gulp.dest(dest_paths.bookmarks))
+// SVG sprite
+gulp.task('sprite', function () {
+    
+    return gulp.src(src_paths.sprite)
+    
+        .pipe(plugins.plumber())
+        .pipe(plugins.svgSprite({
+            "svg": {
+                "xmlDeclaration": false,
+                "rootAttributes": {
+                    "class": "symbols"
+                }
+            },
+            "mode": {
+                "symbol": {
+                    "spacing": {
+                        "padding": 10
+                    },
+                    "dest": "./",
+                    "layout": "vertical",
+                    "sprite": "sprite.svg",
+                    "bust": false
+                }
+            }
+        })).on('error', function(error){
+            /* Do some awesome error handling ... */
+        })
+        .pipe(gulp.dest(dest_paths.images))
         
-    gulp.src(src_paths.bookmarks)
-        .pipe(plugins.imageResize({ width: 129, width: 129, quality: .9, imageMagick: true }))
-        .pipe(plugins.rename("apple-touch-icon.png"))
-        .pipe(gulp.dest(dest_paths.bookmarks))
-    
-    gulp.src(src_paths.bookmarks)
-        .pipe(plugins.imageResize({ width: 144, width: 144, quality: .9, imageMagick: true }))
-        .pipe(plugins.rename("windows8-tile.png"))
-        .pipe(gulp.dest(dest_paths.bookmarks))
-    
-    .pipe(plugins.notify({ message: 'Bookmarks complete' }))
-        
-});
-
-
-// SVG sprites
-gulp.task('sprites', function () {
-    
-    return gulp.src(src_paths.svgsprites)
-    
-            .pipe(plugins.svgSprites({cssFile: '../sass/sprites/_sprites.scss',
-                    svgPath: '../images/%f',
-                    pngPath: '../images/%f',
-                    layout: 'vertical',
-                    templates: {
-                        css: require('fs').readFileSync('./dustjs/sprite-template.css', 'utf-8')
-                    }
-            }))
-            .pipe(gulp.dest(dest_paths.images))
-            .pipe(plugins.filter('**/*.svg'))
-            .pipe(plugins.svg2png())
-            .pipe(gulp.dest(dest_paths.images))
-            
-            .pipe(plugins.notify({ message: 'Svg sprites optim complete' }))
+        .pipe(plugins.livereload())
+        .pipe(plugins.notify({ message: 'Svg sprite complete' }))
             
 });
-
 
 // SCSS lint
 gulp.task('lint', function() {
-    gulp.src(src_paths.compass)
+    gulp.src(src_paths.sass)
         .pipe(plugins.scssLint())
 });
 
 
 // Watch
-gulp.task('watch', function() {
-    server.listen(35729, function(err) {
-    	gulp.watch(src_paths.compass, ['compass']);
-    	gulp.watch([src_paths.uglify, src_paths.labjs], ['uglify']);
-    	gulp.watch(src_paths.svgmin, ['svgmin']);
-    	gulp.watch(src_paths.svg2png, ['svg2png']);
-        gulp.watch(src_paths.bookmarks, ['bookmarks']);
-    })
+gulp.task('watch', function(ev) {
+    plugins.livereload.listen();
+	gulp.watch(src_paths.css, ['css']);
+	gulp.watch(src_paths.javascript, ['uglify']);
+    gulp.watch(src_paths.sprite, ['sprite']);
 });
 
 

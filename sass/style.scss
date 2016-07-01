@@ -11,42 +11,32 @@ Version: 1.0
 */
 
 
-// Responsive utilitites
+// Theme variables
 // -----------------------------------------------------------------
-@import 'sass-extras/responsive-utils';
-
-
-// Theme rules (variables)
-// -----------------------------------------------------------------
-@import 'theme-rules/grid-variables';           // Grid config
-@import 'theme-rules/colors';                   // Globally-available colors
-@import 'theme-rules/defaults';                 // Globally-available variables f.i. radius and shadows
-@import 'theme-rules/fonts';                    // Globally-available font sizes and families
-@import 'theme-rules/header-sizes';             // Global H1/H6 sizes
-@import 'theme-rules/responsive-breakpoints';   // Definition of all breakpoints
-@import 'theme-rules/margins-paddings';         // Globally-available paddings and margins
+@import 'theme/variables';                // Globally-available variables
 
 
 // Sass functions, extendables & mixins.
 // -----------------------------------------------------------------
-@import 'compass/css3';                         // Useful compass mixins
 @import 'sass-extras/functions';                // Useful functions
 @import 'sass-extras/extendables';              // Useful extensions
 @import 'sass-extras/mixins';                   // Useful mixins
 
 
-// Layout rules. Styling of page sections that contain modules.
+// Layout. Styling of page sections that contain moduless.
 // -----------------------------------------------------------------
-@import 'layout-rules/doormat';                 // Site doormat
-@import 'layout-rules/footer';                  // Site footer
+@import 'layout/doormat';                 // Site doormat
+@import 'layout/footer';                  // Site footer
 
 
-// Module rules. Styling of reusable, modular parts of the design.
+// Modules. Styling of reusable, modular parts of the design.
 // -----------------------------------------------------------------
-@import 'module-rules/post';                    // A single blogpost or searchresult
-@import 'module-rules/comments';                // Comment styles
-@import 'module-rules/header-image';            // A custom wordpress header
-@import 'module-rules/images';                  // Aligned images and captions
-@import 'module-rules/paging';                  // Previous, next and numbers
-@import 'module-rules/search-results';          // For custom search results
-@import 'module-rules/vcard';                   // Vcard styles
+@import 'modules/post';                    // A single blogpost or searchresult
+@import 'modules/comments';                // Comment styles
+@import 'modules/header-image';            // A custom wordpress header
+@import 'modules/images';                  // Aligned images and captions
+@import 'modules/paging';                  // Previous, next and numbers
+@import 'modules/search-results';          // For custom search results
+@import 'modules/vcard';                   // Vcard styles
+@import 'modules/helpers';                 // Helper classes
+@import 'modules/buttons';                 // Several buttons

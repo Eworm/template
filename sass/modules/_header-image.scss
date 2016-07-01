@@ -1,0 +1,8 @@
+.header-image {
+    margin-bottom: $margin;
+    border-radius: 0;
+
+    @media (min-width: $lap) {
+        width: 100%;
+    }
+}

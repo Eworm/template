@@ -1,0 +1,73 @@
+// Single post
+// -----------------------------------------------------------------
+.post,
+.type-attachment {
+    @extend %post;
+}
+
+.sticky {   // Sticky post
+}
+
+
+// Post title
+// -----------------------------------------------------------------
+.post-title {
+    margin: 0;
+    
+    a {
+        @extend %hover-underline;
+    }
+}
+
+.single-post-title {
+    margin-bottom: $margin;
+}
+
+
+// Post content
+// -----------------------------------------------------------------
+.post-entry {
+}
+
+
+// Blog nav
+// -----------------------------------------------------------------
+.post-nav {
+    text-align: center;
+
+    @media (min-width: $lap) {
+        text-align: left;
+    }
+}
+
+
+// Post meta
+// -----------------------------------------------------------------
+.post-meta {
+    color: $lesser-color;
+    
+    .single-post & {
+        margin-top: $margin;
+    }
+
+    a {
+        color: $lesser-color;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            color: $lesser-color-hover;
+            text-decoration: underline;
+        }
+    }
+}
+
+
+// Continue reading & nr. of comments
+// -----------------------------------------------------------------
+.post-options {
+
+    a {
+        @extend %hover-underline;
+    }
+}

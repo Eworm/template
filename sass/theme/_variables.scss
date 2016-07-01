@@ -1,0 +1,131 @@
+// -----------------------------------------------------------------
+// Define colors here, use them later on
+// Names are derived from http://chir.ag/projects/name-that-color/
+// -----------------------------------------------------------------
+$white: #fff;
+$gallery: #eee;
+$gray: #828282;
+$mine-shaft: #222;
+$blue: #00e;
+$red: #f00;
+    
+// Base colors
+$body-bg-color: $white;
+$body-color: $mine-shaft;       // Should not be #000 for people with dyslexia: http://uxmovement.com/content/6-surprising-bad-practices-that-hurt-dyslexic-users/
+$link-color: $blue;             // Depending on the audience a blue, or another color
+
+// Layout colors
+$nav-bg-color: $white;
+$border-color: $gallery;
+$lesser-color: $gray;
+$lesser-color-hover: darken($gray, 15%);
+$alert: $red;
+$error: $red;
+
+
+
+
+// -----------------------------------------------------------------
+// Define sizes here, use them later on
+// -----------------------------------------------------------------
+$s-wrist: 7px;
+$s-palm: 14px;
+$s-lap: 28px;                   // Ideally this would be the same as the $line-height variable for a good vertical rhythm
+$s-desk: 35px;
+$s-wall: 42px;
+$s-cinema: 56px;
+
+// Gutters
+$gutter-small: $s-wrist;
+$gutter-skinny: $s-palm;
+$gutter: $s-lap;
+$gutter-large: $s-desk;
+
+// Margins
+$margin-small: $s-wrist;
+$margin-skinny: $s-palm;
+$margin: $s-lap;
+$margin-large: $s-desk;
+
+// Paddings
+$padding-small: $s-wrist;
+$padding-skinny: $s-palm;
+$padding: $s-lap;
+$padding-large: $s-desk;
+
+
+
+
+// -----------------------------------------------------------------
+// Responsive breakpoints. Always use em's!
+// -----------------------------------------------------------------
+$wrist: 0;                      // $wrist is the variable name from 0 to 480
+$palm: 30em;                    // 480px
+$lap: 46.875em;                 // 750px
+$desk: 60.625em;                // 970px
+$wall: 73.125em;                // 1170px
+$cinema: 89.375em;              // 1430px
+
+
+
+
+// -----------------------------------------------------------------
+// Define font sizes here, use them later on
+// -----------------------------------------------------------------
+$f-xs: 11px;
+$f-s: 12px;
+$f-m: 14px;
+$f-l: 16px;
+$f-xl: 18px;
+$f-xxl: 20px;
+
+// Font sizes. You can add your own variables here using some preset size (or add a new size)
+$text-xs: $f-xs;
+$text-s: $f-s;
+$text-m: $f-m;
+$text-l: $f-l;
+$text-xl: $f-xl;
+$text-xxl: $f-xxl;
+
+// Standard site sizes
+$base-size: $f-l;
+$body-size: $f-m;
+$line-height: 28px;
+
+// Define font names here, use them later on
+$websafe: Arial, Verdana, sans-serif;
+$fontface: Arial, Verdana, sans-serif;
+
+// Font families
+$body-font: $websafe;           // 
+$special-font: $fontface;       // Special font, for example a google font. Use google fonts locally for a better pagespeed score
+
+
+
+
+// -----------------------------------------------------------------
+// Default values for other stuff
+// -----------------------------------------------------------------
+$default-border-radius: 3px;
+$default-box-shadow: (rgba(0, 0, 0, .25) 0 1px 1px);
+$default-text-shadow: (rgba(0, 0, 0, .45) 0 1px 1px);
+$input-padding: 4px;
+
+
+
+
+// -----------------------------------------------------------------
+// Grid variables
+// -----------------------------------------------------------------
+$width: 95%;                    // The site width if the screen is smaller then the max size
+$max-width: 1280px;             // The max-size of the site
+$nr-of-columns: 8;              // How many grid columns we have. Dont' forget to change your classnames when changing this!
+
+
+
+
+// -----------------------------------------------------------------
+// How far the mobile menu slides in
+// -----------------------------------------------------------------
+$skinny-menu-width: 50%;
+$mobile-menu-width: 85%;

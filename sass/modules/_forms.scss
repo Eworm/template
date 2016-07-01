@@ -1,0 +1,155 @@
+// Input sizes
+// -----------------------------------------------------------------
+input {
+    width: 100%;
+    padding: $input-padding*2;
+    font-family: $body-font;
+    font-size: $body-size;
+    
+    @media (min-width: $lap) {
+        width: 50%;
+        
+        aside section & {
+            width: 100%;
+        }
+    }
+}
+
+textarea {
+    width: 100%;
+    height: 120px;
+    padding: $input-padding*2;
+    float: left;
+    font-family: $body-font;
+    font-size: $body-size;
+}
+
+input[type="file"] {
+    padding: 0;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    width: auto;
+    margin-right: $gutter-skinny;
+}
+
+input[type="submit"] {
+    
+    @media (min-width: $lap) {
+        width: auto;
+    }
+}
+
+input[type="search"] {
+    box-sizing: border-box;
+}
+
+fieldset {
+    border: 0;
+}
+
+
+// The form
+// -----------------------------------------------------------------
+.page-content form {
+    position: relative;
+    z-index: 1;
+}
+
+.formcontainer {
+    margin: 0;
+    padding: 0;
+    clear: both;
+    border: 0;
+
+    @media (min-width: $lap) {
+        width: 100%;
+        float: left;
+    }
+}
+
+
+// A single row
+// -----------------------------------------------------------------
+.formrow {
+    @extend %formrow;
+
+    label,
+    .label {
+        width: 100%;
+        display: block;
+        clear: both;
+
+        &:hover,
+        &:focus {
+            cursor: pointer;
+        }
+
+        small {
+            font-size: 100%;
+        }
+    }
+
+    li { // List with radio/checkboxes
+        margin-right: 12px;
+        padding: 0;
+        display: inline-block;
+        background: none;
+
+        input {
+            width: auto;
+            margin-right: 2px;
+        }
+
+        label {
+            width: auto;
+            display: inline;
+            clear: none;
+        }
+    }
+    
+    .input-exp { // Form field explanation. Using a small element is preferrable
+        display: block;
+        font-size: $text-s;
+    }
+}
+
+
+// Other elements
+// -----------------------------------------------------------------
+#screenreader,
+#loading {
+    display: none;
+}
+
+
+// Required style
+// -----------------------------------------------------------------
+.req {
+    color: $lesser-color;
+    font-size: $body-size;
+}
+
+
+// Error messages
+// -----------------------------------------------------------------
+.parsley-error {
+    
+}
+
+.parsley-errors-list {
+    display: none;
+}
+
+.error,
+.filled {
+    margin: 0;
+    padding: 0;
+    display: block;
+    color: $error;
+    
+    > li {
+        margin: 0;
+    }
+}

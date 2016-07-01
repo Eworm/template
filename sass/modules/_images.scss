@@ -1,0 +1,155 @@
+.alignnone {
+    @extend %postimage;
+
+    @media (min-width: $palm) {
+        width: auto;
+        margin: $margin $gutter $margin 0;
+    }
+}
+
+.aligncenter,
+div.aligncenter {
+    @extend %postimage;
+
+    @media (min-width: $palm) {
+        display: block;
+        margin: $margin auto;
+    }
+}
+
+.alignright {
+    @extend %postimage;
+
+    @media (min-width: $palm) {
+        width: auto;
+        float: right;
+        margin: 0 0 $margin $gutter;
+    }
+}
+
+.alignleft {
+    @extend %postimage;
+
+    @media (min-width: $palm) {
+        width: auto;
+        float: left;
+        margin: 0 $gutter $margin 0;
+    }
+}
+
+a img.alignright {
+    @extend %postimage;
+
+    @media (min-width: $palm) {
+        width: auto;
+        float: right;
+        margin: $gutter 0 $margin $gutter;
+    }
+}
+
+a img.alignnone {
+    @extend %postimage;
+
+    @media (min-width: $palm) {
+        width: auto;
+        margin: $gutter $gutter $margin 0;
+    }
+}
+
+a img.alignleft {
+    @extend %postimage;
+
+    @media (min-width: $palm) {
+        width: auto;
+        float: left;
+        margin: $gutter $gutter $margin 0;
+    }
+}
+
+a img.aligncenter {
+    @extend %postimage;
+
+    @media (min-width: $palm) {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+// The caption
+// -----------------------------------------------------------------
+.wp-caption {
+    @extend %postimage;
+    margin: $margin-skinny 0;
+    padding: $gutter-skinny;
+    border: 1px solid $border-color;
+    border-radius: 0;
+    background: #fff;
+    text-align: center;
+
+    img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        margin: 0 0 $gutter-skinny;
+        padding: 0;
+        display: block;
+        border: 0 none;
+
+        @media (min-width: $palm) {
+            max-width: auto;
+        }
+    }
+
+    @media (min-width: $palm) {
+        width: auto;
+        max-width: none;
+    }
+
+    p.wp-caption-text {
+        margin: $gutter-skinny 0 0;
+        display: block;
+        font-size: $text-s;
+    }
+
+
+    &.alignnone {
+    
+        @media (min-width: $palm) {
+            margin: $gutter $gutter $margin 0;
+        }
+    }
+    
+    &.alignleft {
+    
+        @media (min-width: $palm) {
+            margin: 0 $gutter $margin 0;
+        }
+    }
+    
+    &.alignright {
+    
+        @media (min-width: $palm) {
+            margin: 0 0 $margin $gutter;
+        }
+    }
+}
+
+
+// A post thumbnail
+// -----------------------------------------------------------------
+.post-thumbnail {
+    @extend %postimage;
+
+    @media (min-width: $palm) {
+        width: auto;
+        margin: $margin 0;
+    }
+    
+    @media (min-width: $palm) {
+        float: right;
+        margin: 0 0 $margin $gutter;
+    }
+}
+

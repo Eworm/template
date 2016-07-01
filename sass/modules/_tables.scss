@@ -1,0 +1,126 @@
+// Regular table
+// -----------------------------------------------------------------
+table {
+    width: 100%;
+    margin: $margin 0;
+    border: 1px solid $border-color;
+
+    tr {
+    }
+
+    th,
+    td {
+        padding: $padding-small;
+        border-bottom: 1px solid $border-color;
+        text-align: left;
+        vertical-align: top;
+    }
+    
+    th {
+        background-color: $border-color;
+    }
+}
+
+
+// Responsive table
+// -----------------------------------------------------------------
+.responsive-table {
+    position: relative;
+    display: block;
+    clear: both;
+    border: 0;
+    border-spacing: 0;
+    border-collapse: collapse;
+    
+    @media (min-width: $lap) {
+        display: table;
+    }
+
+    thead {
+        display: block;
+        float: left;
+        border: 1px solid $border-color;
+        vertical-align: middle;
+        
+        @media (min-width: $lap) {
+            display: table-header-group;
+            float: none;
+        }
+        
+        tr {
+            display: block;
+            
+            @media (min-width: $lap) {
+                display: table-row;
+                border-right: 0;
+            }
+        }
+        
+        th {
+            display: block;
+            border-bottom: 1px solid $border-color;
+            
+            @media (min-width: $lap) {
+                display: table-cell;
+            }
+            
+            &:last-child {
+                border-bottom: 0;
+                
+                @media (min-width: $lap) {
+                    border-bottom: 1px solid $border-color;
+                }
+            }
+        }
+    }
+    
+    tbody {
+        width: auto;
+        position: relative;
+        display: block;
+        overflow-x: auto;
+        font-size: 0;
+        white-space: nowrap;
+        word-wrap: normal;
+        
+        @media (min-width: $lap) {
+            display: table-row-group;
+            overflow: visible;
+            border: 1px solid $border-color;
+            white-space: normal;
+            word-wrap: break-word;
+            font-size: $body-size;
+        }
+    }
+    
+    tr {
+        display: inline-block;
+        vertical-align: top;
+        border: 1px solid $border-color;
+        border-left: 0;
+        font-size: $body-size;
+        
+        @media (min-width: $lap) {
+            margin: 0;
+            display: table-row;
+            border-right: 0;
+        }
+        
+        th, td {
+            display: block;
+            border-bottom: 1px solid $border-color;
+            
+            @media (min-width: $lap) {
+                display: table-cell;
+            }
+            
+            &:last-child {
+                border-bottom: 0;
+                
+                @media (min-width: $lap) {
+                    border-bottom: 1px solid $border-color;
+                }
+            }
+        }
+    }
+}

@@ -12,14 +12,13 @@
     "bower_components"
   ],
   "dependencies": {
-    "zepto": "1.1.4",
     "picturefill": "2.1.0",
-    "hideShowPassword": "~2.0.3",
-    "on-media-query": "0.2.0",
-    "zepto-sources": "~1.0.2",
+    "hideShowPassword": "~2.0.11",
     "normalize.scss": "3.0.1+normalize.3.0.1",
-    "parsleyjs": "~2.0.5",
+    "parsleyjs": "~2.3.14",
     "labjs": "*",
-    "hoverintent": "*"
+    "jquery-hoverIntent": "~1.8.1",
+    "matchMedia": "~0.3.0",
+    "blazy": "~1.6.2"
   }
 }

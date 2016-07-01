@@ -1,0 +1,380 @@
+// The menu
+// -----------------------------------------------------------------
+.mainmenu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    transition: all .28s cubic-bezier(0.075, 0.085, 0.075, 1.175);
+    transform: translate3d(0, 100%, 0);
+    
+    .no-csstransforms3d & {
+        top: 100%;
+    }
+    
+    .js-toggle-menu & {
+        transform: translate3d(0, 0, 0);
+    }
+    
+    .no-csstransforms3d.js-toggle-menu & {
+        margin-top: -100%;
+        top: auto;
+    }
+    
+    .touch.no-overflow-scroll.js-active-menu & {
+    }
+
+    @media (min-width: $palm) {
+    }
+
+    @media (min-width: $lap) {
+        width: 100%;
+        height: auto;
+        margin-bottom: $margin;
+        float: left;
+        position: static;
+        border: 0;
+        box-shadow: none;
+        transform: none;
+        border-bottom: 1px solid $border-color;
+        transform: none;
+
+        .no-csstransforms3d & {
+        }
+    }
+}
+
+
+// Unordered list
+// -----------------------------------------------------------------
+.main-menu {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: block;
+    float: left;
+    background: $nav-bg-color;
+    background: rgba($nav-bg-color, .96);
+    border-top: 1px solid $border-color;
+
+    @media (min-width: $lap) {
+        border-top: 0;
+    }
+}
+
+
+// A single item
+// -----------------------------------------------------------------
+.menu-item {
+    width: 50%;
+    display: block;
+    float: left;
+    position: relative;
+    
+    .sub-menu {
+        left: -100%;
+    }
+    
+    &:nth-child(2n+1) {
+        clear: left;
+        border-right: 1px solid $border-color;
+        
+        .sub-menu {
+            left: 0;
+        }
+    }
+
+    @media (min-width: $lap) {
+        width: auto;
+        float: left;
+        position: relative;
+        
+        &:nth-child(2n+1) {
+            clear: none;
+            border-right: 0;
+        }
+    }
+    
+    > a {
+        padding: $padding-skinny $padding-skinny;
+        display: block;
+        border-bottom: 1px solid $border-color;
+        text-decoration: none;
+        transition: all .15s ease-out;
+
+        @media (min-width: $palm) {
+            padding: $padding-skinny;
+        }
+
+        @media (min-width: $lap) {
+            padding: $padding-skinny $padding;
+            float: left;
+            position: relative;
+            border-bottom: 0;
+        }
+
+        &:hover,
+        &:focus {
+            background: $border-color;
+
+            @media (min-width: $lap) {
+            }
+        }
+    }
+}
+
+.show-sub {
+    display: block;
+    
+    > a {
+        background: $border-color;
+    }
+}
+
+
+// For nav feedback
+// -----------------------------------------------------------------
+.current_page_item,
+.current-menu-item,
+.current-page-ancestor,
+.current_page_parent {
+
+    a {
+    }
+
+    @media (min-width: $lap) {
+        background: $border-color;
+        box-shadow: none;
+        background-image: none;
+    }
+}
+
+
+// The current item
+// -----------------------------------------------------------------
+.current_page_item {
+
+    a {
+
+        &:after {
+
+        }
+    }
+
+    @media (min-width: $lap) {
+    
+        &:after {
+        }
+    }
+
+    .sub-menu {
+
+        a {
+
+            &:after {
+            }
+        }
+    }
+}
+
+.current_page_ancestor {
+
+    @media (min-width: $lap) {
+    
+        a {
+        }
+    }
+}
+
+.sub-enter {
+
+    > a {         
+        @media (min-width: $lap) {
+            background: $border-color;
+        }
+    }
+}
+
+
+// The sub-menu menu
+// -----------------------------------------------------------------
+.has-submenu {
+}
+
+/*
+.active-sub {
+    
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 2200;
+        background: rgba(#000, .55);
+    }
+}
+*/
+
+.sub-menu {
+    width: 200%;
+    height: 0;
+    max-height: 110px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    // top: $padding-skinny;
+    // right: $padding-skinny;
+    // bottom: $padding-skinny;
+    z-index: 1100;
+    // display: none;
+    float: left;
+    border: 0;
+    overflow: auto;
+    background: darken(#eee, 5%);
+    // border-radius: $default-border-radius;
+    // box-shadow: rgba(#000, .55) 0 0 10px;
+    transition: all .15s cubic-bezier(0.075, 0.085, 0.075, 1.175);
+    
+    @media (min-width: $lap) {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        border: 1px solid $border-color;
+        background: #fff;
+    }
+    
+    .active-sub & {
+        height: 110px;
+        // max-height: 120px;
+        opacity: 1;
+        border-bottom: 1px solid $border-color;
+    }
+
+    .current_page_parent &,
+    .current-menu-parent & {
+        
+        @media (min-width: $lap) {
+            display: none;
+        }
+    }
+
+    .current_page_ancestor &,
+    .current-menu-item & {
+        
+        @media (min-width: $lap) {
+            display: none;
+        }
+    }
+
+    .current_page_ancestor .menu-item & {
+        display: none;
+    }
+
+    .current_page_ancestor .current_page_ancestor & {
+        display: block;
+    }
+    
+    // When hoverin
+    .show-sub & {
+        display: block;
+    }
+
+    .menu-item {    
+        // width: 100%;
+        
+        &:nth-child(2n+1) {
+            border-right: 1px solid #fff;   
+        }
+
+        a {
+            // width: 100%;
+            // float: left;
+            border-bottom: 1px solid #fff;
+            background: #eee;
+
+            @media (min-width: $lap) {
+                padding: 8px $gutter-skinny;
+                color: $body-color;
+                border: 0;
+                border-bottom: 1px solid $border-color;
+                white-space: nowrap;
+                background: transparent;
+            }
+            
+            &:hover,
+            &:focus {
+                background: $border-color;
+            }
+        }
+        
+        &:last-child {
+            
+            a {
+            
+                @media (min-width: $lap) {
+                    border: 0;
+                }
+            }
+        }
+    }
+
+    &.active-sub {
+        display: block !important;
+        float: left;
+    }
+
+    &.closed-sub {
+        display: none !important;
+    }
+}
+
+// To show or hide the submenu on small devices
+// -----------------------------------------------------------------
+.toggle-sub {
+    width: 50px;
+    height: 57px;
+    // height: 100%;
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    // bottom: 0;
+    z-index: 1200;
+    display: block;
+    border-left: 1px solid $border-color;
+    cursor: pointer;
+    background: #fff;
+    transition: all .15s ease-in;
+    
+    @media (min-width: $lap) {
+        display: none;
+    }
+    
+    .active-sub & {
+        background-color: #eee;
+    }
+    
+    &:after {
+        width: 0;
+        height: 0;
+        margin-top: -4px;
+        margin-left: -8px;
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border: 8px solid transparent;
+        border-top: 8px solid #000;
+    }
+}
+
+.toggle-sub-close {
+    
+    &:after {
+        margin-top: -12px;
+        border: 8px solid transparent;
+        border-bottom: 8px solid #000;
+    }
+}

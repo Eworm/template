@@ -1,0 +1,70 @@
+// The form
+// -----------------------------------------------------------------
+.searchform {
+    width: 100%;
+    padding: $gutter-skinny;
+    display: none;
+    clear: both;
+
+    // When in nav
+    // -----------------------------------------------------------------
+    nav & {
+        display: block;
+        background: $nav-bg-color;
+        background: rgba($nav-bg-color, .96);
+        border-top: 1px solid $border-color;
+    }
+
+    // When in content
+    // -----------------------------------------------------------------
+    .page-content & {
+        padding: 0;
+        display: block;
+    }
+
+    // When in header
+    // -----------------------------------------------------------------
+    .header & {
+
+        @media (min-width: $lap) {
+            width: 30%;
+            padding: 0;
+            float: right;
+            clear: none;
+            display: block;
+            background: transparent;
+            text-align: left;
+        }
+
+        // The search input
+        // -----------------------------------------------------------------
+        #s {
+            width: 100%;
+            clear: both;
+
+            @media (min-width: $lap) {
+                width: 70%;
+                float: left;
+            }
+        }
+    }
+}
+
+.searchsubmit {
+    display: none;
+    
+    @media (min-width: $lap) {
+        width: 30%;
+        float: left;
+        display: block;
+    }
+}
+
+
+// Search form fieldset
+// -----------------------------------------------------------------
+.searchform-container {
+    margin: 0;
+    padding: 0;
+    line-height: 40px;
+}

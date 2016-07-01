@@ -1,0 +1,56 @@
+// Site header
+// -----------------------------------------------------------------
+.header {
+    margin-bottom: $margin-skinny;
+    border-bottom: 1px solid $border-color;
+
+    @media (min-width: $lap) {
+        margin-bottom: 0;
+        // padding: $gutter 0 0;
+        background: $body-bg-color;
+        // border-bottom: 1px solid $border-color;
+    }
+}
+
+
+// Site logo
+// -----------------------------------------------------------------
+.logo {
+    width: 172px;
+    height: 48px;
+    // margin-left: -36px;
+    // position: absolute;
+    // top: 4px;
+    // left: 50%;
+    display: block;
+    // text-indent: -9999px;
+    // @include sprite($sprite-logo);
+    transform: translate3d(0, 0, 0);
+    // background-color: $border-color;
+    
+    @media (min-width: $palm) {
+        left: 35%;
+    }
+
+    @media (min-width: $lap) {
+        width: 156px;
+        height: 87px;
+        margin: 0 20px 0 0;
+        float: left;
+        position: static;
+        // @include sprite($sprite-logo, center, position);               // Absolute center position, background-position only
+    }
+}
+
+
+// Customer promise
+// -----------------------------------------------------------------
+.cp {
+    display: none;
+
+    @media (min-width: $lap) {
+        margin: 0;
+        display: block;
+        float: left;
+    }
+}
