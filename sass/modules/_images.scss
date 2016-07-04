@@ -3,7 +3,7 @@
 
     @media (min-width: $palm) {
         width: auto;
-        margin: $margin $gutter $margin 0;
+        margin: $margin $margin $margin 0;
     }
 }
 
@@ -23,7 +23,7 @@ div.aligncenter {
     @media (min-width: $palm) {
         width: auto;
         float: right;
-        margin: 0 0 $margin $gutter;
+        margin: 0 0 $margin $margin;
     }
 }
 
@@ -33,7 +33,7 @@ div.aligncenter {
     @media (min-width: $palm) {
         width: auto;
         float: left;
-        margin: 0 $gutter $margin 0;
+        margin: 0 $margin $margin 0;
     }
 }
 
@@ -43,7 +43,7 @@ a img.alignright {
     @media (min-width: $palm) {
         width: auto;
         float: right;
-        margin: $gutter 0 $margin $gutter;
+        margin: $margin 0 $margin $margin;
     }
 }
 
@@ -52,7 +52,7 @@ a img.alignnone {
 
     @media (min-width: $palm) {
         width: auto;
-        margin: $gutter $gutter $margin 0;
+        margin: $margin $margin $margin 0;
     }
 }
 
@@ -62,7 +62,7 @@ a img.alignleft {
     @media (min-width: $palm) {
         width: auto;
         float: left;
-        margin: $gutter $gutter $margin 0;
+        margin: $margin $margin $margin 0;
     }
 }
 
@@ -82,7 +82,7 @@ a img.aligncenter {
 .wp-caption {
     @extend %postimage;
     margin: $margin-skinny 0;
-    padding: $gutter-skinny;
+    padding: $margin-skinny;
     border: 1px solid $border-color;
     border-radius: 0;
     background: #fff;
@@ -92,7 +92,7 @@ a img.aligncenter {
         width: 100%;
         height: auto;
         max-width: 100%;
-        margin: 0 0 $gutter-skinny;
+        margin: 0 0 $margin-skinny;
         padding: 0;
         display: block;
         border: 0 none;
@@ -108,7 +108,7 @@ a img.aligncenter {
     }
 
     p.wp-caption-text {
-        margin: $gutter-skinny 0 0;
+        margin: $margin-skinny 0 0;
         display: block;
         font-size: $text-s;
     }
@@ -117,21 +117,21 @@ a img.aligncenter {
     &.alignnone {
     
         @media (min-width: $palm) {
-            margin: $gutter $gutter $margin 0;
+            margin: $margin $margin $margin 0;
         }
     }
     
     &.alignleft {
     
         @media (min-width: $palm) {
-            margin: 0 $gutter $margin 0;
+            margin: 0 $margin $margin 0;
         }
     }
     
     &.alignright {
     
         @media (min-width: $palm) {
-            margin: 0 0 $margin $gutter;
+            margin: 0 0 $margin $margin;
         }
     }
 }
@@ -149,7 +149,7 @@ a img.aligncenter {
     
     @media (min-width: $palm) {
         float: right;
-        margin: 0 0 $margin $gutter;
+        margin: 0 0 $margin $margin;
     }
 }
 

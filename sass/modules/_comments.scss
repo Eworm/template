@@ -4,7 +4,7 @@
 }
 
 #reply-title {
-    margin: 0 0 $gutter;
+    margin: 0 0 $margin;
 }
 
 
@@ -15,14 +15,14 @@
 .pingback,
 #respond {
     width: 100%;
-    padding: $gutter-skinny 0;
+    padding: $padding-skinny 0;
     position: relative;
     float: left;
     border-bottom: 2px solid $border-color;
     background: transparent;
 
     .children .comment.depth-2 {
-        margin-bottom: $gutter;
+        margin-bottom: $margin;
         
         &:last-child {
             margin: 0;
@@ -31,7 +31,7 @@
 
     @media (min-width: $lap) {
         margin: 0 0 $margin-skinny;
-        padding: $gutter;
+        padding: $padding;
         border: 1px solid $border-color;
     }
 }
@@ -70,7 +70,7 @@
     line-height: 32px;
 
     @media (min-width: $lap) {
-        margin-bottom: $gutter;
+        margin-bottom: $margin;
         font-weight: normal;
     }
 }
@@ -86,7 +86,7 @@
     box-shadow: $default-box-shadow;
 
     @media (min-width: $lap) {
-        margin-right: $gutter-skinny;
+        margin-right: $margin-skinny;
         vertical-align: top;
         float: none;
     }
@@ -132,7 +132,7 @@
 // The nr. of responses
 // -----------------------------------------------------------------
 .comments-title {
-    margin: 0 0 $gutter;
+    margin: 0 0 $margin;
 }
 
 .comment-list {
@@ -153,12 +153,12 @@
 
     .comment {
         margin: 0;
-        padding: $gutter-skinny 0 0 $gutter-skinny;
+        padding: $padding-skinny 0 0 $padding-skinny;
         border-top: 1px solid $border-color;
         border-bottom: 0;
 
         @media (min-width: $lap) {
-            padding: $gutter-skinny;
+            padding: $padding-skinny;
             border-bottom: 1px solid $border-color;
         }
     }

@@ -56,7 +56,7 @@
     
     &.error {
         margin-bottom: 0;
-        padding: $gutter-skinny;
+        padding: $padding-skinny;
         border-radius: $default-border-radius;
         border-top-right-radius: 0;
         border-top-left-radius: 0;
@@ -101,7 +101,7 @@
         @media (min-width: $lap) {
             width: 87px;
             height: 68px;
-            margin-right: $gutter-skinny;
+            margin-right: $margin-skinny;
             overflow: hidden;
             float: left;
             display: block;
