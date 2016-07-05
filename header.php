@@ -15,11 +15,7 @@
         ?>
         </title>
         
-        <?php if (is_single() || is_page() ) : if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-            <meta name="description" content="<?php the_excerpt_rss(); ?>">
-        <?php endwhile; endif; elseif(is_front_page()) : ?>
-            <meta name="description" content="<?php bloginfo('description'); ?>">
-        <?php endif; ?>
+        <!-- No description tag. Use Yoast SEO instead. -->
         
         <meta name="language" content="nl">
         <meta name="revisit-after" content="15 days">
@@ -40,25 +36,15 @@
         <!-- Removing the highlight for mobile IE10. Stupid to make this a meta tag instead of a css property -->
         <meta name="msapplication-tap-highlight" content="no">
         
-        <!-- Modern favicons: http://thenewcode.com/28/Making-And-Deploying-SVG-Favicons -->        
+        <!-- Modern favicons: http://thenewcode.com/28/Making-And-Deploying-SVG-Favicons -->
+        <!-- Use http://realfavicongenerator.net/ for all other root icons -->
         <link rel="icon" type="image/png" href="/favicon.png">
         <link rel="mask-icon" href="/icon.svg" color="#000000">
         <link rel="icon" type="image/svg+xml" href="/favicon.svg">
         
         <link type="text/plain" rel="author" href="/humans.txt">
         
-        <?php
-            $whitelist = array(
-                'localhost',
-                '10.0.1.17'
-            );
-            if ($link = (!in_array(
-                $_SERVER['HTTP_HOST'],
-                $whitelist
-            ))) :
-        ?>
         <!-- Insert Google analytics here -->
-        <?php endif; ?>
         
         <?php wp_head(); ?>
         
@@ -159,3 +145,4 @@
                 </div>
                 
             </nav>
+            <!-- .mainmenu -->
