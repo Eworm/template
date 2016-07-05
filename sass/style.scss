@@ -13,30 +13,32 @@ Version: 1.0
 
 // Theme variables
 // -----------------------------------------------------------------
-@import 'theme/variables';                // Globally-available variables
+@import 'theme/variables';                  // Global variables
+@import 'theme/type';                       // Colors
+@import 'theme/colors';                     // Font-families and sizes
 
 
 // Sass functions, extendables & mixins.
 // -----------------------------------------------------------------
-@import 'sass-extras/functions';                // Useful functions
-@import 'sass-extras/extendables';              // Useful extensions
-@import 'sass-extras/mixins';                   // Useful mixins
+@import 'sass-extras/functions';            // Useful functions
+@import 'sass-extras/extendables';          // Useful extensions
+@import 'sass-extras/mixins';               // Useful mixins
 
 
 // Layout. Styling of page sections that contain moduless.
 // -----------------------------------------------------------------
-@import 'layout/doormat';                 // Site doormat
-@import 'layout/footer';                  // Site footer
+@import 'layout/doormat';                   // Site doormat
+@import 'layout/footer';                    // Site footer
 
 
 // Modules. Styling of reusable, modular parts of the design.
 // -----------------------------------------------------------------
-@import 'modules/post';                    // A single blogpost or searchresult
-@import 'modules/comments';                // Comment styles
-@import 'modules/header-image';            // A custom wordpress header
-@import 'modules/images';                  // Aligned images and captions
-@import 'modules/paging';                  // Previous, next and numbers
-@import 'modules/search-results';          // For custom search results
-@import 'modules/vcard';                   // Vcard styles
-@import 'modules/helpers';                 // Helper classes
-@import 'modules/buttons';                 // Several buttons
+@import 'modules/post';                      // A single blogpost or searchresult
+@import 'modules/comments';                  // Comment styles
+@import 'modules/header-image';              // A custom wordpress header
+@import 'modules/images';                    // Aligned images and captions
+@import 'modules/paging';                    // Previous, next and numbers
+@import 'modules/search-results';            // For custom search results
+@import 'modules/vcard';                     // Vcard styles
+@import 'modules/helpers';                   // Helper classes
+@import 'modules/buttons';                   // Several buttons

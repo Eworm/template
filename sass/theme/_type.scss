@@ -1,0 +1,57 @@
+// *
+// Define font families here.
+// For slightly deeper browser support use woff2, woff & truetype. See https://css-tricks.com/snippets/css/using-font-face/
+// Font-files should be placed in the font directory
+// *
+@font-face {
+    font-family: 'fontname';
+    src: url('fonts/fontname.woff2') format('woff2'),
+         url('fonts/fontname.woff') format('woff'),
+         url('fonts/fontname.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+// *
+// Define font sizes here, use them later on
+// *
+$f-xs: 11px;
+$f-s: 12px;
+$f-m: 14px;
+$f-l: 16px;
+$f-xl: 18px;
+$f-xxl: 20px;
+
+
+// *
+// Font sizes. You can add your own variables here using some preset size (or add a new size)
+// *
+$type-xs: $f-xs;
+$type-s: $f-s;
+$type-m: $f-m;
+$type-l: $f-l;
+$type-l: $f-xl;
+$type-xxl: $f-xxl;
+
+
+// *
+// Standard site sizes
+// *
+$base-size: $type-l;
+$body-size: $type-m;
+$line-height: 28px;
+
+
+// *
+// Define font names here, use them later on
+// *
+$websafe: Arial, Verdana, sans-serif;
+
+
+// *
+// Font families
+// Use google fonts locally for a better pagespeed score.
+// *
+$body-font: $websafe;
+$special-font: $websafe; // Special font, for example a google font

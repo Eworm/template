@@ -4,7 +4,9 @@
 
 // Theme variables
 // -----------------------------------------------------------------
-@import 'theme/variables';                // Globally-available variables
+@import 'theme/variables';                // Global variables
+@import 'theme/type';                     // Colors
+@import 'theme/colors';                   // Font-families and sizes
 
 
 // Sass functions, extendables & mixins.
@@ -18,7 +20,7 @@
 
 // Base. Normalize and other basic element styles.
 // -----------------------------------------------------------------
-// @import 'normalize';                            // Normalize is being imported via Bower
+// @import 'normalize';                   // Normalize is being imported via Bower
 @import 'base/base';                      // Base styles
 
 

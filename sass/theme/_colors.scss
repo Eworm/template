@@ -1,0 +1,42 @@
+// *
+// Brand colors are defined here, these should not be used directly but should be defined as layout colors.
+// Names are generated using this tool: http://chir.ag/projects/name-that-color/
+// *
+$color-blue: #0067c5;
+$color-red: #f00;
+
+
+// *
+// Neutral colors. $color-gray-13 Means '13% gray'.
+// No medium grays please, they're bad for readibility.
+// Read more about color in design systems here: https://medium.com/eightshapes-llc/color-in-design-systems-a1c80f65fa3#.w5cudfcy9
+// *
+$color-white: #fff;
+$color-gray-02: #f7f9f9;
+$color-gray-13: #ddd;
+$color-gray-15: #d9d9d9;
+$color-gray-35: #a5a5a5;
+$color-gray-47: #888;
+$color-gray-73: #888;
+$color-black: #000;
+
+
+// *
+// Layout colorset
+// This is the main set. Add more sets to group colors if appropriate.
+// This keeps the colors readable for other developers.
+// *
+$body-bg-color: $color-white;
+$body-color: $color-gray-73;        // Should not be #000 for people with dyslexia: http://uxmovement.com/content/6-surprising-bad-practices-that-hurt-dyslexic-users/
+$link-color: $color-blue;           // Depending on the audience a blue, or another color
+$nav-bg-color: $color-white;
+$border-color: $color-gray-35;
+$lesser-color: $color-gray-35;
+$lesser-color-hover: $color-gray-47;
+
+
+// *
+// Feeback colorset
+// *
+$alert: $color-red;
+$error: $color-red;
