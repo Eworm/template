@@ -1,12 +1,15 @@
+// *
 // Calculate the grid widths
-// -----------------------------------------------------------------
+// *
 @mixin col-width($i) {
     width: #{100% / ($max-width / (((($max-width / $nr-of-columns) * $i))))};
 }
 
 
+
+// *
 // Every column should have a row as it's parent
-// -----------------------------------------------------------------
+// *
 .row {
     margin-right: -#{$gutter-skinny};
     margin-left: -#{$gutter-skinny};
@@ -45,8 +48,11 @@
     float: none;
 }
 
+
+
+// *
 // All screen widths
-// -----------------------------------------------------------------
+// *
 @for $i from 1 through $nr-of-columns {
 
     @media (min-width: $palm) {
@@ -58,9 +64,11 @@
 }
 
 
+
+// *
 // Wrist
 // You can remove this when unused to minimize the css
-// -----------------------------------------------------------------
+// *
 @for $i from 1 through $nr-of-columns {
 
     .col-wrist-#{$i} {
@@ -72,9 +80,11 @@
 }
 
 
+
+// *
 // Palm
 // You can remove this when unused to minimize the css
-// -----------------------------------------------------------------
+// *
 @for $i from 1 through $nr-of-columns {
 
     .col-palm-#{$i} {
@@ -86,9 +96,10 @@
 }
 
 
+
 // Lap
 // You can remove this when unused to minimize the css
-// -----------------------------------------------------------------
+// *
 @for $i from 1 through $nr-of-columns {
 
     .col-lap-#{$i} {
@@ -100,9 +111,11 @@
 }
 
 
+
+// *
 // Desk
 // You can remove this when unused to minimize the css
-// -----------------------------------------------------------------
+// *
 @for $i from 1 through $nr-of-columns {
 
     .col-desk-#{$i} {
@@ -114,9 +127,11 @@
 }
 
 
+
+// *
 // Wall
 // You can remove this when unused to minimize the css
-// -----------------------------------------------------------------
+// *
 @for $i from 1 through $nr-of-columns {
 
     .col-wall-#{$i} {
@@ -127,9 +142,12 @@
     }
 }
 
+
+
+// *
 // Cinema
 // You can remove this when unused to minimize the css
-// -----------------------------------------------------------------
+// *
 @for $i from 1 through $nr-of-columns {
 
     .col-cinema-#{$i} {
@@ -142,9 +160,10 @@
 
 
 
+// *
 // Offset
 // You can remove this when unused to minimize the css
-// -----------------------------------------------------------------
+// *
 @for $i from 1 through $nr-of-columns {
 
     .col-push-#{$i} {

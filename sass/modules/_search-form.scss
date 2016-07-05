@@ -1,13 +1,18 @@
+// *
 // The form
-// -----------------------------------------------------------------
+// *
 .searchform {
     width: 100%;
     padding: $padding-skinny;
     display: none;
     clear: both;
 
+
+
+
+    // *
     // When in nav
-    // -----------------------------------------------------------------
+    // *
     nav & {
         display: block;
         background: $nav-bg-color;
@@ -15,15 +20,23 @@
         border-top: 1px solid $border-color;
     }
 
+
+
+
+    // *
     // When in content
-    // -----------------------------------------------------------------
+    // *
     .page-content & {
         padding: 0;
         display: block;
     }
 
+
+
+
+    // *
     // When in header
-    // -----------------------------------------------------------------
+    // *
     .header & {
 
         @media (min-width: $lap) {
@@ -36,8 +49,12 @@
             text-align: left;
         }
 
+
+
+
+        // *
         // The search input
-        // -----------------------------------------------------------------
+        // *
         #s {
             width: 100%;
             clear: both;
@@ -61,8 +78,11 @@
 }
 
 
+
+
+// *
 // Search form fieldset
-// -----------------------------------------------------------------
+// *
 .searchform-container {
     margin: 0;
     padding: 0;

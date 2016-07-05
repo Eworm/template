@@ -77,8 +77,17 @@ a img.aligncenter {
 }
 
 
+
+
+
+
+// *
 // The caption
-// -----------------------------------------------------------------
+
+
+
+
+// *
 .wp-caption {
     @extend %postimage;
     margin: $margin-skinny 0;
@@ -137,8 +146,15 @@ a img.aligncenter {
 }
 
 
+
+
+// *
 // A post thumbnail
-// -----------------------------------------------------------------
+
+
+
+
+// *
 .post-thumbnail {
     @extend %postimage;
 

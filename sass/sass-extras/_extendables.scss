@@ -1,5 +1,6 @@
+// *
 // Underline hover
-// -----------------------------------------------------------------
+// *
 %hover-underline {
     text-decoration: none;
     
@@ -9,8 +10,10 @@
     }
 }
 
+
+// *
 // Images used in posts
-// -----------------------------------------------------------------
+// *
 %postimage {
     width: 100%;
     height: auto;
@@ -20,8 +23,10 @@
     box-shadow: $default-box-shadow;
 }
 
+
+// *
 // Arrow for navfeedback
-// -----------------------------------------------------------------
+// *
 %navfeedback {
     width: 0;
     height: 0;
@@ -30,16 +35,20 @@
     border: 8px solid transparent;
 }
 
+
+// *
 // Remove styling of lists
-// -----------------------------------------------------------------
+// *
 %remove-style {
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
 
+
+// *
 // Row in a form
-// -----------------------------------------------------------------
+// *
 %formrow {
     width: 100%;
     margin-bottom: $margin-skinny;
@@ -74,8 +83,10 @@
     }
 }
 
+
+// *
 // Summary
-// -----------------------------------------------------------------
+// *
 %post {
     width: 100%;
     margin-bottom: $margin;

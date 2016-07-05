@@ -1,16 +1,13 @@
 .b-lazy {
     transition: all .25s cubic-bezier(0,.95,.71,1.22);
     opacity: 0;
-    // transform: translateY(10px);
     transform: scale(.3);
     
     &.b-loaded {
        opacity: 1;
-       //transform: translateY(0); 
        transform: scale(1);
     }
     
     &.b-error {
-        // border: 1px solid red;
     }
 }

@@ -11,28 +11,36 @@ Version: 1.0
 */
 
 
+
+// *
 // Theme variables
-// -----------------------------------------------------------------
+// *
 @import 'theme/variables';                  // Global variables
 @import 'theme/type';                       // Colors
 @import 'theme/colors';                     // Font-families and sizes
 
 
+
+// *
 // Sass functions, extendables & mixins.
-// -----------------------------------------------------------------
+// *
 @import 'sass-extras/functions';            // Useful functions
 @import 'sass-extras/extendables';          // Useful extensions
 @import 'sass-extras/mixins';               // Useful mixins
 
 
+
+// *
 // Layout. Styling of page sections that contain moduless.
-// -----------------------------------------------------------------
+// *
 @import 'layout/doormat';                   // Site doormat
 @import 'layout/footer';                    // Site footer
 
 
+
+// *
 // Modules. Styling of reusable, modular parts of the design.
-// -----------------------------------------------------------------
+// *
 @import 'modules/post';                      // A single blogpost or searchresult
 @import 'modules/comments';                  // Comment styles
 @import 'modules/header-image';              // A custom wordpress header

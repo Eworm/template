@@ -1,4 +1,4 @@
-// -----------------------------------------------------------------
+// *
 // Define sizes here, use them later on
 // *
 $s-wrist: 7px;
@@ -38,7 +38,7 @@ $padding-large: $s-desk;
 
 
 
-// -----------------------------------------------------------------
+// *
 // Responsive breakpoints. Always use em's!
 // *
 $wrist: 0;              // $wrist is the variable name from 0 to 480
@@ -51,7 +51,7 @@ $cinema: 89.375em;      // 1430px
 
 
 
-// -----------------------------------------------------------------
+// *
 // Default values for other stuff
 // *
 $default-border-radius: 3px;
@@ -62,7 +62,7 @@ $input-padding: 4px;
 
 
 
-// -----------------------------------------------------------------
+// *
 // Grid variables
 // *
 $width: 95%;            // The site width if the screen is smaller then the max size
@@ -72,7 +72,7 @@ $nr-of-columns: 8;      // How many grid columns we have. Don't forget to change
 
 
 
-// -----------------------------------------------------------------
+// *
 // How far the mobile menu slides in
 // *
 $skinny-menu-width: 50%;

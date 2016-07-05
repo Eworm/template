@@ -1,5 +1,6 @@
+// *
 // Header sizes
-// -----------------------------------------------------------------
+// *
 $header-1: 2 * $base-size;
 $header-2: 1.5 * $base-size;
 $header-3: 1.17 * $base-size;
@@ -26,8 +27,11 @@ h5 {
 } 
 
 
+
+
+// *
 // Page title
-// -----------------------------------------------------------------
+// *
 .page-title {
     margin: 0 0 $margin-skinny;
     font-weight: normal;
@@ -39,16 +43,22 @@ h5 {
 }
 
 
+
+
+// *
 // Page title with special styling
-// -----------------------------------------------------------------
+// *
 .sec-title {
     padding-bottom: $margin;
     border-bottom: 1px dashed $border-color;
 }
 
 
+
+
+// *
 // Headers in the main content
-// -----------------------------------------------------------------
+// *
 .page-body {
 
     h1, h2, h3, h4, h5 {

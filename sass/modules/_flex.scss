@@ -1,5 +1,6 @@
+// *
 // Flexbox extra's
-// -----------------------------------------------------------------
+// *
 .flexrow {
     @include flexbox;
     @include flex-flow(row wrap);

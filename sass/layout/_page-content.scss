@@ -1,5 +1,6 @@
+// *
 // Main content on a page
-// -----------------------------------------------------------------
+// *
 .page-content {
     padding: 0;
     background-position: center 10px;
@@ -19,8 +20,11 @@
 }
 
 
+
+
+// *
 // The content
-// -----------------------------------------------------------------
+// *
 .page-body {
 
     p,
@@ -32,7 +36,6 @@
         }
         
         &:last-child {
-            // margin-bottom: 0;
         }
     }
 }

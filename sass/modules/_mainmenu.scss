@@ -1,5 +1,6 @@
+// *
 // The menu
-// -----------------------------------------------------------------
+// *
 .mainmenu {
     position: fixed;
     bottom: 0;
@@ -45,8 +46,11 @@
 }
 
 
+
+
+// *
 // Unordered list
-// -----------------------------------------------------------------
+// *
 .main-menu {
     width: 100%;
     margin: 0;
@@ -63,8 +67,11 @@
 }
 
 
+
+
+// *
 // A single item
-// -----------------------------------------------------------------
+// *
 .menu-item {
     width: 50%;
     display: block;
@@ -132,8 +139,11 @@
 }
 
 
+
+
+// *
 // For nav feedback
-// -----------------------------------------------------------------
+// *
 .current_page_item,
 .current-menu-item,
 .current-page-ancestor,
@@ -150,8 +160,11 @@
 }
 
 
+
+
+// *
 // The current item
-// -----------------------------------------------------------------
+// *
 .current_page_item {
 
     a {
@@ -196,26 +209,13 @@
 }
 
 
+
+
+// *
 // The sub-menu menu
-// -----------------------------------------------------------------
+// *
 .has-submenu {
 }
-
-/*
-.active-sub {
-    
-    &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 2200;
-        background: rgba(#000, .55);
-    }
-}
-*/
 
 .sub-menu {
     width: 200%;
@@ -224,17 +224,11 @@
     margin: 0;
     padding: 0;
     position: relative;
-    // top: $padding-skinny;
-    // right: $padding-skinny;
-    // bottom: $padding-skinny;
     z-index: 1100;
-    // display: none;
     float: left;
     border: 0;
     overflow: auto;
     background: darken(#eee, 5%);
-    // border-radius: $default-border-radius;
-    // box-shadow: rgba(#000, .55) 0 0 10px;
     transition: all .15s cubic-bezier(0.075, 0.085, 0.075, 1.175);
     
     @media (min-width: $lap) {
@@ -247,7 +241,6 @@
     
     .active-sub & {
         height: 110px;
-        // max-height: 120px;
         opacity: 1;
         border-bottom: 1px solid $border-color;
     }
@@ -282,15 +275,12 @@
     }
 
     .menu-item {    
-        // width: 100%;
         
         &:nth-child(2n+1) {
             border-right: 1px solid #fff;   
         }
 
         a {
-            // width: 100%;
-            // float: left;
             border-bottom: 1px solid #fff;
             background: #eee;
 
@@ -330,8 +320,12 @@
     }
 }
 
+
+
+
+// *
 // To show or hide the submenu on small devices
-// -----------------------------------------------------------------
+// *
 .toggle-sub {
     width: 50px;
     height: 57px;
@@ -340,7 +334,6 @@
     position: absolute;
     top: 0;
     right: 0;
-    // bottom: 0;
     z-index: 1200;
     display: block;
     border-left: 1px solid $border-color;
