@@ -42,7 +42,7 @@ $type-xxl: $f-xxl;
 
 
 // *
-// Standard site sizes
+// Standard site sizes & other type related stuff
 // *
 $base-size: $type-l;
 $body-size: $type-m;
@@ -64,4 +64,4 @@ $websafe: Arial, Verdana, sans-serif;
 // Use google fonts locally for a better pagespeed score.
 // *
 $body-font: $websafe;
-$special-font: $websafe; // Special font, for example a google font
+$special-font: $websafe; // Webfont, for example a google font
