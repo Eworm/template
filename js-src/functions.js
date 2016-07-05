@@ -2,10 +2,8 @@ $(document).ready(function() {
    
 
     // Animation class
-    setTimeout(function() {
-    
+    setTimeout(function() {    
         $('html').addClass('start-animatin');
-        
     }, 50);
 
 
