@@ -1,7 +1,6 @@
 // This is the container for all seperate scss files
 // No styles should be included here, only imports of other (smaller) parts
 
-
 /*!
 Theme Name: Responsive mobile nav left
 Theme URI: http://www.clienturl.nl
@@ -9,6 +8,7 @@ Author: Wout Mager
 Author URI: http://www.woutmager.nl
 Version: 1.0
 */
+
 
 
 
@@ -21,6 +21,7 @@ Version: 1.0
 
 
 
+
 // *
 // Sass functions, extendables & mixins.
 // *
@@ -30,11 +31,13 @@ Version: 1.0
 
 
 
+
 // *
 // Layout. Styling of page sections that contain moduless.
 // *
 @import 'layout/doormat';                   // Site doormat
 @import 'layout/footer';                    // Site footer
+
 
 
 

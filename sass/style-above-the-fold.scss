@@ -1,14 +1,13 @@
 // This is the container for all seperate scss files
 // No styles should be included here, only imports of other (smaller) parts
 
-
-
 // *
 // Theme variables
 // *
 @import 'theme/variables';                // Global variables
 @import 'theme/type';                     // Colors
 @import 'theme/colors';                   // Font-families and sizes
+
 
 
 
@@ -23,6 +22,7 @@
 
 
 
+
 // *
 // Base. Normalize and other basic element styles.
 // *
@@ -31,11 +31,13 @@
 
 
 
+
 // *
 // Layout. Styling of page sections that contain moduless.
 // *
 @import 'layout/header';                  // Site header
 @import 'layout/page-content';            // Main content of the site
+
 
 
 
