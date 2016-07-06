@@ -43,7 +43,7 @@ gulp.task('css', function() {
 		.pipe(gulp.dest(dest_paths.css))
 		
         .pipe(plugins.livereload())
-        .pipe(plugins.notify({ message: 'Css complete' }));
+        .pipe(plugins.notify({ message: 'Css complete!' }));
 });
 
 
@@ -61,7 +61,7 @@ gulp.task('uglify', function() {
         .pipe(gulp.dest(dest_paths.javascript))
         
         .pipe(plugins.livereload())
-        .pipe(plugins.notify({ message: 'Uglify complete' }))
+        .pipe(plugins.notify({ message: 'Uglify complete!' }))
         
     gulp.src(src_paths.labjs)
     
@@ -74,7 +74,7 @@ gulp.task('uglify', function() {
         .pipe(gulp.dest(dest_paths.javascript))
         
         .pipe(plugins.livereload())
-        .pipe(plugins.notify({ message: 'Uglify complete' }))
+        .pipe(plugins.notify({ message: 'Uglify complete!' }))
 });
 
 
@@ -108,7 +108,7 @@ gulp.task('sprite', function () {
         .pipe(gulp.dest(dest_paths.images))
         
         .pipe(plugins.livereload())
-        .pipe(plugins.notify({ message: 'Svg sprite complete' }))
+        .pipe(plugins.notify({ message: 'Sprite complete!' }))
             
 });
 
