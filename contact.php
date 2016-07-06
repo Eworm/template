@@ -168,6 +168,7 @@ endif;
                                 <label for="naam">
                                     <?php _e( 'Je naam', 'thema_vertalingen' ); ?> <span class="req"><?php _e( '(Verplicht)', 'thema_vertalingen' ); ?></span>
                                 </label>
+                                
                                 <input value="<?php if (isset($_POST['naam'])) echo $_POST['naam'];?>" type="text" name="naam" id="naam" data-parsley-error-message="<?php _e( 'Je hebt geen naam ingevuld', 'thema_vertalingen' ); ?>" required>
                                 
                                 <?php if ($nameError != '') : ?>
@@ -183,7 +184,9 @@ endif;
                                 <label for="emailadres">
                                     <?php _e( 'Je e-mailadres', 'thema_vertalingen' ); ?> <span class="req"><?php _e( '(Verplicht)', 'thema_vertalingen' ); ?></span>
                                 </label>
+                                
                                 <input value="<?php if (isset($_POST['emailadres'])) echo $_POST['emailadres'];?>" type="email" name="emailadres" id="emailadres" data-parsley-trigger="change" data-parsley-required-message="<?php _e( 'Dit is een ongeldig e-mailadres', 'thema_vertalingen' ); ?>" data-parsley-error-message="<?php _e( 'Je hebt geen e-mailadres ingevuld', 'thema_vertalingen' ); ?>" required>
+                                
                                 <small class="input-exp"><?php _e( 'We gebruiken je e-mailadres om contact met je op te kunnen nemen', 'thema_vertalingen' ); ?></small>
     
                                 <?php if ($emailError != '') : ?>
@@ -199,6 +202,7 @@ endif;
                                 <label for="message">
                                     <?php _e( 'Omschrijf kort Je vraag', 'thema_vertalingen' ); ?> <span class="req"><?php _e( '(Verplicht)', 'thema_vertalingen' ); ?></span>
                                 </label>
+                                
                                 <textarea id="message" name="message" class="textarea" data-parsley-error-message="<?php _e( 'Je hebt geen bericht ingevuld', 'thema_vertalingen' ); ?>" required></textarea>
     
                                 <?php if ($messageError != '') : ?>
@@ -213,7 +217,8 @@ endif;
                             
                                 <label for="checking">
                                     <?php _e( 'Als u dit formulier wilt versturen moet u dit invoerveld leeg laten', 'thema_vertalingen' ); ?>
-                                </label>                                
+                                </label>  
+                                                              
                                 <input type="text" name="checking" id="checking" value="<?php if (isset($_POST['checking'])) echo $_POST['checking'];?>">
                             
                             </div> <!-- .formrow -->

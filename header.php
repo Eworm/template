@@ -116,11 +116,15 @@
                 <div class="core core-header">
                     
                     <a href="<?php echo get_option('home'); ?>" id="js-logo" class="logo" rel="home" title="<?php _e( 'Terug naar de homepage', 'thema_vertalingen' ); ?>">
+                        
                         <?php bloginfo('name'); ?>
+                        
                     </a>
                     
                     <p class="cp">
+                        
                         <?php bloginfo( 'description' ); ?>
+                        
                     </p>
                     
                     <?php get_search_form(); ?>

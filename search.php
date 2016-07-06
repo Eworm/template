@@ -13,7 +13,9 @@
                 <?php if (have_posts()) : ?>
                 
                     <h1 class="page-title">
+                        
                         <?php _e( 'Zoekresultaten voor', 'thema_vertalingen' ); ?> <em>&#8216;<?php echo $search_query ?>&#8217;</em>
+                        
                     </h1>
                 
                     <?php while (have_posts()) : the_post(); ?>
@@ -26,11 +28,15 @@
                         <ul class="post-navigation">
                             
                             <li class="goforward">
+                            
                                 <?php previous_posts_link('&laquo; Nieuwere artikelen'); ?>
+                                
                             </li>
                             
                             <li class="goback">
+                            
                                 <?php next_posts_link('Oudere artikelen &raquo;'); ?>
+                                
                             </li>
     
                         </ul>
@@ -40,11 +46,15 @@
                     <section class="search-result">
               
                         <h1 class="search-result-title post-title">
+                            
                             <?php _e( 'Helaas..', 'thema_vertalingen' ); ?>
+                            
                         </h1>
                         
                         <p>
+                            
                             <?php _e( 'We hebben niks gevonden dat lijkt op', 'thema_vertalingen' ); ?> <em>&#8216;<?php echo $search_query ?>&#8217;</em>. <?php _e( 'Misschien helpt overnieuw zoeken?', 'thema_vertalingen' ); ?>
+                            
                         </p>
                     
                     </section>

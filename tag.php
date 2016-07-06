@@ -11,7 +11,9 @@
                 <?php if ( have_posts() ) : ?>
         
                     <h1 class="page-title">
+                        
                         <?php _e( 'Tag', 'thema_vertalingen' ); ?>: <?php single_cat_title() ?>
+                        
                     </h1>
         
                     <?php /* Start the Loop */ ?>
@@ -27,13 +29,17 @@
                     <article <?php post_class(); ?>>
     
                         <h1 class="post-title">
+                            
                             <?php _e( 'Deze pagina bestaat niet', 'thema_vertalingen' ); ?>
+                            
                         </h1>
         
                         <div class="post-entry">
     
                             <p>
+                                
                                 <?php _e( 'Sorry, we hebben deze pagina niet gevonden. Maar misschien kun je zoeken om de juiste pagina te vinden:', 'thema_vertalingen' ); ?>
+                                
                             </p>
     
                             <?php get_search_form(); ?>

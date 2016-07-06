@@ -43,11 +43,15 @@
                     <ul class="post-navigation">
                         
                         <li class="goforward">
+                        
                             <?php previous_posts_link('&laquo; Nieuwere artikelen'); ?>
+                            
                         </li>
                         
                         <li class="goback">
+                        
                             <?php next_posts_link('Oudere artikelen &raquo;'); ?>
+                            
                         </li>
                         
                     </ul>
@@ -57,13 +61,17 @@
                     <article <?php post_class(); ?>>
     
                         <h1 class="post-title">
+                            
                             <?php _e( 'Deze pagina bestaat niet', 'thema_vertalingen' ); ?>
+                            
                         </h1>
         
                         <div class="entry">
                         
                             <p>
+                                
                                 <?php _e( 'Sorry, we hebben deze pagina niet gevonden. Maar misschien kun je zoeken om de juiste pagina te vinden:', 'thema_vertalingen' ); ?>
+                                
                             </p>
                             
                             <?php get_search_form(); ?>

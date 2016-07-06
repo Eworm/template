@@ -72,19 +72,27 @@
                         <ul class="paging">
                         
                             <li class="paging-navigation paging-next">
+                            
                                 <?php previous_posts_link('Vorige'); ?>
+                                
                             </li>
                             
                             <li class="paging-navigation paging-left">
+                            
                                 <?php next_posts_link('Volgende'); ?>
+                                
                             </li>
                             
                             <?php for ($i = 1; $i <= $count_post; $i++) { ?>
                             
                                 <li class="page-number <?php if ($paged == $i) { echo ' active-page'; } ?>">
+                                
                                     <a href="<?php echo $uri . $i; ?>">
+                                        
                                         <?php echo $i; ?>
+                                        
                                     </a>
+                                    
                                 </li>
                                 
                             <?php } ?>
@@ -108,18 +116,25 @@
                 <div class="sidebar-section">
                 
                     <h2 class="sidebar-section-title">
+                        
                         AJAX categorieen
+                        
                     </h2>
                 
-                    <?php $categories = get_categories(); ?>                        
+                    <?php $categories = get_categories(); ?>
+                                         
                     <ul>
                     
                         <?php foreach ( $categories as $cat ) { ?>
                         
                         <li>
+                        
                             <a id="js-cat-<?php echo $cat->term_id; ?>" class="js-catitem" href="<?php echo bloginfo('url') ?>/category/<?php echo $cat->slug; ?>" title="" data-category="<?php echo $cat->term_id; ?>">
+                                
                                 <?php echo $cat->name; ?>
+                                
                             </a>
+                            
                         </li>
                         
                         <?php } ?>

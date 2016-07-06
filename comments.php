@@ -12,13 +12,16 @@ if ( post_password_required() )
     <?php if ( have_comments() ) : ?>
     
         <h2 class="comments-title">
+            
             <?php
                 printf( _nx( 'E&eacute;n reactie op &ldquo;%2$s&rdquo;', '%1$s reacties op &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'thema_vertalingen' ),
                     number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
             ?>
+            
         </h2>
 
         <ol class="comment-list">
+            
             <?php
                 wp_list_comments( array(
                     'style'       => 'ol',
@@ -26,6 +29,7 @@ if ( post_password_required() )
                     'avatar_size' => 74,
                 ) );
             ?>
+            
         </ol> <!-- .comment-list -->
 
         <?php
@@ -36,15 +40,21 @@ if ( post_password_required() )
         <div class="navigation comment-navigation">
         
             <h1 class="screen-reader-text section-heading">
+                
                 <?php _e( 'Navigatie', 'thema_vertalingen' ); ?>
+                
             </h1>
             
             <div class="nav-previous">
+                
                 <?php previous_comments_link( __( 'Oudere reacties', 'thema_vertalingen' ) ); ?>
+                
             </div>
             
             <div class="nav-next">
+                
                 <?php next_comments_link( __( 'Nieuwere reacties', 'thema_vertalingen' ) ); ?>
+                
             </div>
             
         </div> <!-- .comment-navigation -->
@@ -54,7 +64,9 @@ if ( post_password_required() )
         <?php if ( ! comments_open() && get_comments_number() ) : ?>
         
             <p class="no-comments">
+                
                 <?php _e( 'Het reageren is gesloten.' , 'thema_vertalingen' ); ?>
+                
             </p>
         
         <?php endif; ?>
