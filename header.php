@@ -27,7 +27,7 @@
         <meta name="apple-mobile-web-app-title" content="<?php bloginfo('name'); ?>">
         
         <!-- Mobile viewport optimized: h5bp.com/viewport -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <!-- Microsoft. Delete if not required -->
         <meta http-equiv="cleartype" content="on">
