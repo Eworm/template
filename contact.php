@@ -130,7 +130,7 @@ endif;
                     </p>
         
                     <p>
-                        <a href="<?php echo get_settings('home'); ?>">
+                        <a href="<?php echo get_settings('home'); ?>" title="<?php _e( 'Terug naar de homepage', 'thema_vertalingen' ); ?>">
                             <?php _e( 'Terug naar de homepage', 'thema_vertalingen' ); ?>
                         </a>
                     </p>
@@ -172,9 +172,11 @@ endif;
                                 <input value="<?php if (isset($_POST['naam'])) echo $_POST['naam'];?>" type="text" name="naam" id="naam" data-parsley-error-message="<?php _e( 'Je hebt geen naam ingevuld', 'thema_vertalingen' ); ?>" required>
                                 
                                 <?php if ($nameError != '') : ?>
+                                
                                     <div class="error">
                                         <?=$nameError;?>
                                     </div>
+                                    
                                 <?php endif; ?>
     
                             </div> <!-- .formrow -->
@@ -190,9 +192,11 @@ endif;
                                 <small class="input-exp"><?php _e( 'We gebruiken je e-mailadres om contact met je op te kunnen nemen', 'thema_vertalingen' ); ?></small>
     
                                 <?php if ($emailError != '') : ?>
+                                
                                     <div class="error">
                                         <?=$emailError;?>
                                     </div>
+                                    
                                 <?php endif; ?>
     
                             </div> <!-- .formrow -->
@@ -206,9 +210,11 @@ endif;
                                 <textarea id="message" name="message" class="textarea" data-parsley-error-message="<?php _e( 'Je hebt geen bericht ingevuld', 'thema_vertalingen' ); ?>" required></textarea>
     
                                 <?php if ($messageError != '') : ?>
+                                
                                     <div class="error">
                                         <?=$messageError;?>
                                     </div>
+                                    
                                 <?php endif; ?>
     
                             </div> <!-- .formrow -->

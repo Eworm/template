@@ -64,7 +64,7 @@
     
             <?php else : ?>
     
-                <main class="page-content col col-6 no-results not-found">
+                <main class="page-content col col-6 no-results not-found" role="main">
     
                     <h1 class="page-title">
                         
