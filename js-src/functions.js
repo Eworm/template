@@ -1,6 +1,5 @@
 $(document).ready(function() {
-    
-    
+        
     
     
     // Animation class
@@ -8,7 +7,6 @@ $(document).ready(function() {
     {
         $('html').addClass('start-animatin');
     }, 50);
-
 
 
 
@@ -30,7 +28,6 @@ $(document).ready(function() {
 
 
 
-
     // Close the menu when clickin' on the content
     $('html').on('click', '#js-content-toggle', function(e) 
     {
@@ -43,7 +40,6 @@ $(document).ready(function() {
 
 
 
-
     // Function to open the menu
     function openMenu(toggleClass, activeClass, contentToggle, scrollTop)
     {
@@ -52,112 +48,18 @@ $(document).ready(function() {
 
 
 
-
     // Function to close the menu
     function closeMenu(toggleClass, activeClass)
     {
         $('html').removeClass(toggleClass);
     };
-    
-
-
-    
-    // Get categories via AJAX (if we have the browsersupport)
-    $('.js-catitem').on('click', function(e)
-    {
-        
-        var catId = $(this).attr('id');
-        var catUrl = $(this).attr('href');
-        var cat = $(this).data('category');
-        var pageTitle = document.title;
-        
-        cat_ajax_get(catId, cat, pageTitle);
-        push(catId, cat, catUrl, pageTitle);
-        
-        e.preventDefault();
-      
-    });
-    
-    function cat_ajax_get(catId, cat, pageTitle)
-    {
-    
-        $('.js-catitem').removeClass('current-cat');
-        $('#' + catId).addClass('current-cat');
-        
-        $('.page-content').addClass('thinkin');
-        
-        jQuery.ajax(
-        {
-            type: 'POST',
-            url: templateAdminAjax,
-            data: {
-                'action': 'load-filter',
-                cat: cat
-            },
-            success: function(response)
-            {
-                
-                // Change HTML
-                $('.page-content').html(response).promise().done(function()
-                {
-                    setTimeout(function()
-                    {
-                        $('.page-content').removeClass('thinkin');
-                    }, 100);
-                });
-
-                return false;
-            }
-        });
-    }
 
 
 
-
-    // Set the push state    
-    function push (catId, cat, catUrl, pageTitle)
-    {
-        history.pushState(
-        {
-            id: cat,
-            current: catId
-        }, pageTitle, catUrl);
-    }
-    
-    
-    
-    
-    // Catch the back button
-    window.addEventListener('popstate', function(e)
-    {
-    
-        var state = e.state;
-        var current = e.current;
-    
-        if (state)
-        {
-            cat_ajax_get(state.current, state.id, location.pathname);
-        }
-
-    });
-    
-    
-    
-    
-    // The initial state
-    history.replaceState({
-        catId: '',
-        catUrl: '',
-    }, null, location.pathname);
-        
-        
-        
-    
     // Commentform validation
     $('#commentform').parsley();
     
-    
-    
+        
     
     // Palm media queries
     var handleMatchMedia = function (mediaQuery)
@@ -271,7 +173,6 @@ $(document).ready(function() {
 
 
 
-
 // Initialize a single marker
 function initialize_single()
 {
@@ -284,7 +185,6 @@ function initialize_single()
     var map = new google.maps.Map(document.getElementById('js-map_address'), myOptions);
     codeLocations_single(company_address, map);
 }
-
 
 
 
@@ -308,7 +208,6 @@ function codeLocations_single(list, map)
 
 
 
-
 // Add a marker
 function createGeocodeCallback_single(item, map, addressId)
 {
@@ -321,7 +220,6 @@ function createGeocodeCallback_single(item, map, addressId)
         }
     }
 }
-
 
 
 
