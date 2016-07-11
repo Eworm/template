@@ -67,7 +67,7 @@
         
         <!-- Visitors without javascript get the rest of the stylesheet the standard way -->
         <noscript>
-            <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" media="screen">
+            <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
         </noscript>
         
         <!-- Script suggestion from google on how to insert the stylesheet -->
@@ -97,6 +97,7 @@
             
             if (raf) raf(cb);
             else window.addEventListener('load', cb);
+            
         </script>
         
     </head>
