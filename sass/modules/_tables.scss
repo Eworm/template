@@ -4,21 +4,21 @@
 table {
     width: 100%;
     margin: $margin 0;
-    border: 1px solid $border-color;
+    border: 1px solid $border;
 
     tr {
     }
 
     th,
     td {
-        padding: $padding-small;
-        border-bottom: 1px solid $border-color;
+        padding: $padding--small;
+        border-bottom: 1px solid $border;
         text-align: left;
         vertical-align: top;
     }
     
     th {
-        background-color: $border-color;
+        background-color: $border;
     }
 }
 
@@ -43,7 +43,7 @@ table {
     thead {
         display: block;
         float: left;
-        border: 1px solid $border-color;
+        border: 1px solid $border;
         vertical-align: middle;
         
         @media (min-width: $lap) {
@@ -62,7 +62,7 @@ table {
         
         th {
             display: block;
-            border-bottom: 1px solid $border-color;
+            border-bottom: 1px solid $border;
             
             @media (min-width: $lap) {
                 display: table-cell;
@@ -72,7 +72,7 @@ table {
                 border-bottom: 0;
                 
                 @media (min-width: $lap) {
-                    border-bottom: 1px solid $border-color;
+                    border-bottom: 1px solid $border;
                 }
             }
         }
@@ -90,7 +90,7 @@ table {
         @media (min-width: $lap) {
             display: table-row-group;
             overflow: visible;
-            border: 1px solid $border-color;
+            border: 1px solid $border;
             white-space: normal;
             word-wrap: break-word;
             font-size: $body-size;
@@ -100,7 +100,7 @@ table {
     tr {
         display: inline-block;
         vertical-align: top;
-        border: 1px solid $border-color;
+        border: 1px solid $border;
         border-left: 0;
         font-size: $body-size;
         
@@ -112,7 +112,7 @@ table {
         
         th, td {
             display: block;
-            border-bottom: 1px solid $border-color;
+            border-bottom: 1px solid $border;
             
             @media (min-width: $lap) {
                 display: table-cell;
@@ -122,7 +122,7 @@ table {
                 border-bottom: 0;
                 
                 @media (min-width: $lap) {
-                    border-bottom: 1px solid $border-color;
+                    border-bottom: 1px solid $border;
                 }
             }
         }

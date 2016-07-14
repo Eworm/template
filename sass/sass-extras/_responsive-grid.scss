@@ -11,8 +11,8 @@
 // Every column should have a row as it's parent
 // *
 .row {
-    margin-right: -#{$gutter-skinny};
-    margin-left: -#{$gutter-skinny};
+    margin-right: -#{$gutter--skinny};
+    margin-left: -#{$gutter--skinny};
     
     &:before, &:after {
         content: '';
@@ -26,19 +26,19 @@
 }
 
 .row-condensed {
-    margin-right: -#{$gutter-skinny / 2};
-    margin-left: -#{$gutter-skinny / 2};
+    margin-right: -#{$gutter--skinny / 2};
+    margin-left: -#{$gutter--skinny / 2};
 }
 
 .col {
     width: 100%;
-    padding-right: $gutter-skinny;
-    padding-left: $gutter-skinny;
+    padding-right: $gutter--skinny;
+    padding-left: $gutter--skinny;
     float: left;
     
     .row-condensed & {
-        padding-right: $gutter-skinny / 2;
-        padding-left: $gutter-skinny / 2;
+        padding-right: $gutter--skinny / 2;
+        padding-left: $gutter--skinny / 2;
     }
 }
 

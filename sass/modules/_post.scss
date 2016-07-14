@@ -57,19 +57,19 @@
 // Post meta
 // *
 .post__meta {
-    color: $lesser-color;
+    color: $mute;
     
     .single-post & {
         margin-top: $margin;
     }
 
     a {
-        color: $lesser-color;
+        color: $mute;
         text-decoration: none;
 
         &:hover,
         &:focus {
-            color: $lesser-color-hover;
+            color: $mute--hover;
             text-decoration: underline;
         }
     }

@@ -10,20 +10,20 @@
     }
     
     a {
-        margin-right: $margin-small;
-        padding-right: $padding-small;
+        margin-right: $margin--small;
+        padding-right: $padding--small;
         display: block;
         position: relative;
         text-decoration: none;
         transition: all .15s ease;
         
         @media (min-width: $lap) {
-            margin-right: $margin-skinny;
-            padding-right: $padding-skinny;
+            margin-right: $margin--skinny;
+            padding-right: $padding--skinny;
         }
         
         &:hover, &:focus {
-            color: $body-color;
+            color: $body;
             text-decoration: underline;
         }
         

@@ -6,7 +6,7 @@
         margin-bottom: $margin;
         clear: none;
         display: block;
-        border: 1px solid $border-color;
+        border: 1px solid $border;
     }
 
     ul {
@@ -14,7 +14,7 @@
         margin: 0;
         padding: 0;
         display: inline-block;
-        border: 1px solid $border-color;
+        border: 1px solid $border;
         
         @media (min-width: $lap) {
             border: 0;
@@ -42,21 +42,21 @@
     }
 
     a {
-        padding: $padding-skinny;
+        padding: $padding--skinny;
         display: block;
 
         @media (min-width: $lap) {
-            border-bottom: 1px solid $border-color;
+            border-bottom: 1px solid $border;
             background: transparent;
         }
 
         &:hover,
         &:focus {
-            background: $border-color;
+            background: $border;
         }
     }
 
     .current_page_item a {
-        background: $border-color;
+        background: $border;
     }
 }

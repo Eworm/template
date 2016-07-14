@@ -19,7 +19,7 @@
 %postimage {
     width: 100%;
     height: auto;
-    margin: $margin-skinny 0;
+    margin: $margin--skinny 0;
     display: block;
     border-radius: 0;
     box-shadow: $default-box-shadow;
@@ -59,7 +59,7 @@
 // *
 %form__row {
     width: 100%;
-    margin-bottom: $margin-skinny;
+    margin-bottom: $margin--skinny;
     float: left;
     clear: both;
     
@@ -73,7 +73,7 @@
     
     &.error {
         margin-bottom: 0;
-        padding: $padding-skinny;
+        padding: $padding--skinny;
         border-radius: $default-border-radius;
         border-top-right-radius: 0;
         border-top-left-radius: 0;
@@ -122,7 +122,7 @@
         @media (min-width: $lap) {
             width: 87px;
             height: 68px;
-            margin-right: $margin-skinny;
+            margin-right: $margin--skinny;
             overflow: hidden;
             float: left;
             display: block;

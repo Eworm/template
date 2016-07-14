@@ -32,7 +32,7 @@ input[type="file"] {
 input[type="checkbox"],
 input[type="radio"] {
     width: auto;
-    margin-right: $margin-skinny;
+    margin-right: $margin--skinny;
 }
 
 input[type="submit"] {
@@ -118,7 +118,7 @@ fieldset {
     
     .input-exp { // Form field explanation. Using a small element is preferrable
         display: block;
-        font-size: $type-s;
+        font-size: $type--s;
     }
 }
 
@@ -140,7 +140,7 @@ fieldset {
 // Required style
 // *
 .req {
-    color: $lesser-color;
+    color: $mute;
     font-size: $body-size;
 }
 

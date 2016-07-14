@@ -37,7 +37,7 @@
         border: 0;
         box-shadow: none;
         transform: none;
-        border-bottom: 1px solid $border-color;
+        border-bottom: 1px solid $border;
         transform: none;
 
         .no-csstransforms3d & {
@@ -57,9 +57,9 @@
     padding: 0;
     display: block;
     float: left;
-    background: $nav-bg-color;
-    background: rgba($nav-bg-color, .96);
-    border-top: 1px solid $border-color;
+    background: $nav-bg;
+    background: rgba($nav-bg, .96);
+    border-top: 1px solid $border;
 
     @media (min-width: $lap) {
         border-top: 0;
@@ -84,7 +84,7 @@
     
     &:nth-child(2n+1) {
         clear: left;
-        border-right: 1px solid $border-color;
+        border-right: 1px solid $border;
         
         .sub-menu {
             left: 0;
@@ -103,18 +103,18 @@
     }
     
     > a {
-        padding: $padding-skinny $padding-skinny;
+        padding: $padding--skinny $padding--skinny;
         display: block;
-        border-bottom: 1px solid $border-color;
+        border-bottom: 1px solid $border;
         text-decoration: none;
         transition: all .15s ease-out;
 
         @media (min-width: $palm) {
-            padding: $padding-skinny;
+            padding: $padding--skinny;
         }
 
         @media (min-width: $lap) {
-            padding: $padding-skinny $padding;
+            padding: $padding--skinny $padding;
             float: left;
             position: relative;
             border-bottom: 0;
@@ -122,7 +122,7 @@
 
         &:hover,
         &:focus {
-            background: $border-color;
+            background: $border;
 
             @media (min-width: $lap) {
             }
@@ -134,7 +134,7 @@
     display: block;
     
     > a {
-        background: $border-color;
+        background: $border;
     }
 }
 
@@ -153,7 +153,7 @@
     }
 
     @media (min-width: $lap) {
-        background: $border-color;
+        background: $border;
         box-shadow: none;
         background-image: none;
     }
@@ -203,7 +203,7 @@
 
     > a {         
         @media (min-width: $lap) {
-            background: $border-color;
+            background: $border;
         }
     }
 }
@@ -235,14 +235,14 @@
         position: absolute;
         top: 100%;
         left: 0;
-        border: 1px solid $border-color;
+        border: 1px solid $border;
         background: #fff;
     }
     
     .active-sub & {
         height: 110px;
         opacity: 1;
-        border-bottom: 1px solid $border-color;
+        border-bottom: 1px solid $border;
     }
 
     .current_page_parent &,
@@ -285,17 +285,17 @@
             background: #eee;
 
             @media (min-width: $lap) {
-                padding: 8px $padding-skinny;
-                color: $body-color;
+                padding: 8px $padding--skinny;
+                color: $body;
                 border: 0;
-                border-bottom: 1px solid $border-color;
+                border-bottom: 1px solid $border;
                 white-space: nowrap;
                 background: transparent;
             }
             
             &:hover,
             &:focus {
-                background: $border-color;
+                background: $border;
             }
         }
         
@@ -336,7 +336,7 @@
     right: 0;
     z-index: 1200;
     display: block;
-    border-left: 1px solid $border-color;
+    border-left: 1px solid $border;
     cursor: pointer;
     background: #fff;
     transition: all .15s ease-in;

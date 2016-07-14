@@ -3,7 +3,7 @@
 // *
 .searchform {
     width: 100%;
-    padding: $padding-skinny;
+    padding: $padding--skinny;
     display: none;
     clear: both;
 
@@ -15,9 +15,9 @@
     // *
     nav & {
         display: block;
-        background: $nav-bg-color;
-        background: rgba($nav-bg-color, .96);
-        border-top: 1px solid $border-color;
+        background: $nav-bg;
+        background: rgba($nav-bg, .96);
+        border-top: 1px solid $border;
     }
 
 

@@ -18,12 +18,12 @@
 // *
 // Define font sizes here, use them later on
 // *
-$f-xs: 11px;
-$f-s: 12px;
-$f-m: 14px;
-$f-l: 16px;
-$f-xl: 18px;
-$f-xxl: 20px;
+$f--xs:     11px;
+$f--s:      12px;
+$f--m:      14px;
+$f--l:      16px;
+$f--xl:     18px;
+$f--xxl:    20px;
 
 
 
@@ -31,12 +31,12 @@ $f-xxl: 20px;
 // *
 // Font sizes. You can add your own variables here using some preset size (or add a new size)
 // *
-$type-xs: $f-xs;
-$type-s: $f-s;
-$type-m: $f-m;
-$type-l: $f-l;
-$type-l: $f-xl;
-$type-xxl: $f-xxl;
+$type--xs:  $f--xs;
+$type--s:   $f--s;
+$type--m:   $f--m;
+$type--l:   $f--l;
+$type--xl:  $f--xl;
+$type--xxl: $f--xxl;
 
 
 
@@ -44,9 +44,9 @@ $type-xxl: $f-xxl;
 // *
 // Standard site sizes & other type related stuff
 // *
-$base-size: $type-l;
-$body-size: $type-m;
-$line-height: 28px;
+$base-size: $type--l;
+$body-size: $type--m;
+$line-height: 1.8;
 
 
 

@@ -8,17 +8,17 @@
         float: left;
         
         > a {
-            margin-right: $padding-small;
-            padding: $padding-small $padding-skinny;
+            margin-right: $padding--small;
+            padding: $padding--small $padding--skinny;
             display: block;
             float: left;
-            border: 1px solid $border-color;
-            color: $body-color;
+            border: 1px solid $border;
+            color: $body;
             text-decoration: none;
             
             &:hover,
             &:focus {
-                background: $border-color;
+                background: $border;
             }
         }
     }
@@ -65,6 +65,6 @@
 .paging__number--active {
     
     > a {
-        background: $border-color;
+        background: $border;
     }
 }

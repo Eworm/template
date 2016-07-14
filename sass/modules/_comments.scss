@@ -19,10 +19,10 @@
 .pingback,
 #respond {
     width: 100%;
-    padding: $padding-skinny 0;
+    padding: $padding--skinny 0;
     position: relative;
     float: left;
-    border-bottom: 2px solid $border-color;
+    border-bottom: 2px solid $border;
     background: transparent;
 
     .children .comment.depth-2 {
@@ -34,9 +34,9 @@
     }
 
     @media (min-width: $lap) {
-        margin: 0 0 $margin-skinny;
+        margin: 0 0 $margin--skinny;
         padding: $padding;
-        border: 1px solid $border-color;
+        border: 1px solid $border;
     }
 }
 
@@ -48,7 +48,7 @@
     font-style: normal;
 
     a {
-        color: $lesser-color-hover;
+        color: $mute--hover;
         text-decoration: none;
 
         &:hover,
@@ -99,7 +99,7 @@
     box-shadow: $default-box-shadow;
 
     @media (min-width: $lap) {
-        margin-right: $margin-skinny;
+        margin-right: $margin--skinny;
         vertical-align: top;
         float: none;
     }
@@ -122,7 +122,7 @@
 // Comment meta info
 // *
 .comment-meta {
-    font-size: $type-s;
+    font-size: $type--s;
 
     @media (min-width: $lap) {
         padding-top: 20px;
@@ -133,12 +133,12 @@
     }
 
     a {
-        color: $lesser-color;
+        color: $mute;
         text-decoration: none;
 
         &:hover,
         &:focus {
-            color: $lesser-color-hover;
+            color: $mute--hover;
         }
     }
 }
@@ -178,13 +178,13 @@
 
     .comment {
         margin: 0;
-        padding: $padding-skinny 0 0 $padding-skinny;
-        border-top: 1px solid $border-color;
+        padding: $padding--skinny 0 0 $padding--skinny;
+        border-top: 1px solid $border;
         border-bottom: 0;
 
         @media (min-width: $lap) {
-            padding: $padding-skinny;
-            border-bottom: 1px solid $border-color;
+            padding: $padding--skinny;
+            border-bottom: 1px solid $border;
         }
     }
 }

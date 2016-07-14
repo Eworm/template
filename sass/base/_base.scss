@@ -20,9 +20,9 @@ html {
 }
 
 body {
-    background: $body-bg-color;
+    background: $body-bg;
     font: #{$body-size}/#{$line-height} #{$body-font};
-    color: $body-color;
+    color: $body;
 }
 
 #js-content-toggle {
@@ -33,7 +33,7 @@ body {
     left: $mobile-menu-width;
     z-index: 10000;
     opacity: 0;
-    background: $body-bg-color;
+    background: $body-bg;
     
     @media (min-width: $palm) {
         left: $skinny-menu-width;
@@ -46,7 +46,7 @@ body {
 // General links
 // *
 a {
-    color: $link-color;
+    color: $link;
     text-decoration: underline;
 
     &:hover,

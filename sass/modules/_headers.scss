@@ -33,7 +33,7 @@ h5 {
 // Page title
 // *
 .page-content__title {
-    margin: 0 0 $margin-skinny;
+    margin: 0 0 $margin--skinny;
     font-weight: normal;
     font-size: $header-1;
 
@@ -50,7 +50,7 @@ h5 {
 // *
 .sec-title {
     padding-bottom: $margin;
-    border-bottom: 1px dashed $border-color;
+    border-bottom: 1px dashed $border;
 }
 
 

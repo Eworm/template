@@ -86,9 +86,9 @@ a img.aligncenter {
 // *
 .wp-caption {
     @extend %postimage;
-    margin: $margin-skinny 0;
-    padding: $margin-skinny;
-    border: 1px solid $border-color;
+    margin: $margin--skinny 0;
+    padding: $margin--skinny;
+    border: 1px solid $border;
     border-radius: 0;
     background: #fff;
     text-align: center;
@@ -97,7 +97,7 @@ a img.aligncenter {
         width: 100%;
         height: auto;
         max-width: 100%;
-        margin: 0 0 $margin-skinny;
+        margin: 0 0 $margin--skinny;
         padding: 0;
         display: block;
         border: 0 none;
@@ -113,9 +113,9 @@ a img.aligncenter {
     }
 
     p.wp-caption-text {
-        margin: $margin-skinny 0 0;
+        margin: $margin--skinny 0 0;
         display: block;
-        font-size: $type-s;
+        font-size: $type--s;
     }
 
 

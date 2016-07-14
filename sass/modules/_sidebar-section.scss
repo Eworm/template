@@ -1,9 +1,9 @@
 .sidebar__section {
     width: 100%;
-    margin-bottom: $margin-skinny;
-    padding: $padding-skinny;
+    margin-bottom: $margin--skinny;
+    padding: $padding--skinny;
     float: left;
-    border: 1px solid $border-color;
+    border: 1px solid $border;
 
     @media (min-width: $lap) {
         margin-bottom: $margin;
@@ -40,7 +40,7 @@
 // Sidebar section title
 // *
 .sidebar__section__title {
-    margin: 0 0 $margin-skinny;
+    margin: 0 0 $margin--skinny;
     font-weight: bold;
     font-size: $body-size;
     
