@@ -35,6 +35,40 @@ gulp.task('css', function() {
         
         .pipe(plugins.sass({ outputStyle: 'compressed', includePaths: 'bower_components/normalize.scss'}))
         .pipe(plugins.autoprefixer({ browsers: ['last 2 versions', 'ie 9', 'ios 6', 'android 4'], cascade: false }))
+        
+        .pipe(plugins.uncss({
+            html: ['index.html',
+                'posts/**/*.html',
+                'http://example.com'
+            ],
+            options: {
+                ignore: [
+                    '.collapsing', // collapsing
+                    /\.fade/, // fade
+                    /\.close/, // .close class
+                    /\.collapse/, // .collapse prefixed classes
+                    /\.collapsed/, // .collapse prefixed classes
+                    /\.modal/, // .modal prefixed classes
+                    /\.in/, // .in classes
+                    /\.js\-/, // .js- prefixed classes
+                    /\.has\-/, // .has- prefixed classes
+                    /\.error/, // .error prefixed classes
+                    /\.valid/, // .valid prefixed classes
+                    /\.js/, // .js prefixed classes
+                    /\.is\-/, // .is- prefixed classes
+                    /\.cycle\-/, // .cycle- prefixed classes
+                    /\.slider/, // all slider components, including dynamic pager
+                    /\.chosen/, // all chosen selects
+                    /\.affix/, // all affix selects
+                    /placeholder/, // All placeholder attributes
+                    /\.active/,    // All of .active
+                    /\.touch/,    // All of .touch
+                    /\.no-/,     // All of .no-
+                    /\-webkit-/,   // All webkit vendor styles
+                ],
+            }
+        }))
+        
         .pipe(plugins.cssnano({
             zindex: false,
             autoprefixer: false
