@@ -43,28 +43,28 @@ gulp.task('css', function() {
             ],
             options: {
                 ignore: [
-                    '.collapsing', // collapsing
-                    /\.fade/, // fade
-                    /\.close/, // .close class
-                    /\.collapse/, // .collapse prefixed classes
-                    /\.collapsed/, // .collapse prefixed classes
-                    /\.modal/, // .modal prefixed classes
-                    /\.in/, // .in classes
-                    /\.js\-/, // .js- prefixed classes
-                    /\.has\-/, // .has- prefixed classes
-                    /\.error/, // .error prefixed classes
-                    /\.valid/, // .valid prefixed classes
-                    /\.js/, // .js prefixed classes
-                    /\.is\-/, // .is- prefixed classes
-                    /\.cycle\-/, // .cycle- prefixed classes
-                    /\.slider/, // all slider components, including dynamic pager
-                    /\.chosen/, // all chosen selects
-                    /\.affix/, // all affix selects
-                    /placeholder/, // All placeholder attributes
-                    /\.active/,    // All of .active
-                    /\.touch/,    // All of .touch
-                    /\.no-/,     // All of .no-
-                    /\-webkit-/,   // All webkit vendor styles
+                    '.collapsing',  // collapsing
+                    /\.fade/,       // fade
+                    /\.close/,      // .close class
+                    /\.collapse/,   // .collapse prefixed classes
+                    /\.collapsed/,  // .collapse prefixed classes
+                    /\.modal/,      // .modal prefixed classes
+                    /\.in/,         // .in classes
+                    /\.js\-/,       // .js- prefixed classes
+                    /\.has\-/,      // .has- prefixed classes
+                    /\.error/,      // .error prefixed classes
+                    /\.valid/,      // .valid prefixed classes
+                    /\.js/,         // .js prefixed classes
+                    /\.is\-/,       // .is- prefixed classes
+                    /\.cycle\-/,    // .cycle- prefixed classes
+                    /\.slider/,     // all slider components, including dynamic pager
+                    /\.chosen/,     // all chosen selects
+                    /\.affix/,      // all affix selects
+                    /placeholder/,  // All placeholder attributes
+                    /\.active/,     // All of .active
+                    /\.touch/,      // All of .touch
+                    /\.no-/,        // All of .no-
+                    /\-webkit-/,    // All webkit vendor styles
                 ],
             }
         }))
