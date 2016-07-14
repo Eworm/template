@@ -66,7 +66,7 @@ if (isset($_POST['submitted'])) :
         // If there is no error, send the email
         if (!isset($hasError)) :
 
-            require("class.phpmailer.php");
+            require("includes/class.phpmailer.php");
             $mail = new PHPMailer();
             
             // Add mail to the database
