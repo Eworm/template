@@ -16,27 +16,17 @@
 
 
 // *
-// Define font sizes here, use them later on
+// Font sizes
+// Add new ones when appropriate
+// Those should only be used for sizes used in several places
+// Otherwise just add the font-size in the scss file
 // *
-$f--xs:     11px;
-$f--s:      12px;
-$f--m:      14px;
-$f--l:      16px;
-$f--xl:     18px;
-$f--xxl:    20px;
-
-
-
-
-// *
-// Font sizes. You can add your own variables here using some preset size (or add a new size)
-// *
-$type--xs:  $f--xs;
-$type--s:   $f--s;
-$type--m:   $f--m;
-$type--l:   $f--l;
-$type--xl:  $f--xl;
-$type--xxl: $f--xxl;
+$type--xs:  11px;
+$type--s:   12px;
+$type--m:   14px;
+$type--l:   16px;
+$type--xl:  18px;
+$type--xxl: 20px;
 
 
 
@@ -45,7 +35,7 @@ $type--xxl: $f--xxl;
 // Standard site sizes & other type related stuff
 // *
 $base-size: $type--l;
-$body-size: $type--m;
+$body-size: $type--l;
 $line-height: 1.8;
 
 
