@@ -6,7 +6,7 @@
         
         <?php the_breadcrumb(); ?>
     
-        <div class="row flexrow">
+        <div class="row row--flex">
 
             <?php if (!$post->post_parent) :
                 
