@@ -121,18 +121,24 @@ endif;
     
                 <main class="page-content col col-5" role="main">
         
-                    <h1 class="page-title">
+                    <h1 class="page-content__title">
+                        
                         <?php _e( 'Bedankt voor Je e-mail', 'thema_vertalingen' ); ?>, <?=$name;?>
+                        
                     </h1>
         
                     <p>
+                        
                         <?php _e( 'Je e-mail is verstuurd. Ik neem zo snel mogelijk contact met u op.', 'thema_vertalingen' ); ?>
+                        
                     </p>
         
                     <p>
+                        
                         <a href="<?php echo get_settings('home'); ?>" title="<?php _e( 'Terug naar de homepage', 'thema_vertalingen' ); ?>">
                             <?php _e( 'Terug naar de homepage', 'thema_vertalingen' ); ?>
                         </a>
+                        
                     </p>
         
                 </main> <!-- .page-content -->
@@ -157,13 +163,15 @@ endif;
         
                     <form action="#contactform" id="contactform" method="post" class="form" data-parsley-validate>
         
-                        <h1>
+                        <h1 class="page-content__title">
+                            
                             <?php the_title(); ?>
+                            
                         </h1>
-        
+                        
                         <fieldset class="formcontainer">
                                 
-                            <div class="formrow">
+                            <div class="form__row">
                             
                                 <label for="naam">
                                     <?php _e( 'Je naam', 'thema_vertalingen' ); ?> <span class="req"><?php _e( '(Verplicht)', 'thema_vertalingen' ); ?></span>
@@ -179,9 +187,9 @@ endif;
                                     
                                 <?php endif; ?>
     
-                            </div> <!-- .formrow -->
+                            </div> <!-- .form__row -->
         
-                            <div class="formrow">
+                            <div class="form__row">
                             
                                 <label for="emailadres">
                                     <?php _e( 'Je e-mailadres', 'thema_vertalingen' ); ?> <span class="req"><?php _e( '(Verplicht)', 'thema_vertalingen' ); ?></span>
@@ -199,9 +207,9 @@ endif;
                                     
                                 <?php endif; ?>
     
-                            </div> <!-- .formrow -->
+                            </div> <!-- .form__row -->
                             
-                            <div class="formrow">
+                            <div class="form__row">
                             
                                 <label for="message">
                                     <?php _e( 'Omschrijf kort Je vraag', 'thema_vertalingen' ); ?> <span class="req"><?php _e( '(Verplicht)', 'thema_vertalingen' ); ?></span>
@@ -217,9 +225,9 @@ endif;
                                     
                                 <?php endif; ?>
     
-                            </div> <!-- .formrow -->
+                            </div> <!-- .form__row -->
                             
-                            <div id="screenreader" class="formrow">
+                            <div id="screenreader" class="form__row">
                             
                                 <label for="checking">
                                     <?php _e( 'Als u dit formulier wilt versturen moet u dit invoerveld leeg laten', 'thema_vertalingen' ); ?>
@@ -227,15 +235,15 @@ endif;
                                                               
                                 <input type="text" name="checking" id="checking" value="<?php if (isset($_POST['checking'])) echo $_POST['checking'];?>">
                             
-                            </div> <!-- .formrow -->
+                            </div> <!-- .form__row -->
                             
-                            <div class="formrow">
+                            <div class="form__row">
                             
                                 <input type="hidden" name="submitted" id="submitted" value="true">
                                 <input type="hidden" name="about" value="<?php the_title(); ?>">
                                 <input type="submit" value="<?php _e( 'Verzenden', 'thema_vertalingen' ); ?>" class="button">
                             
-                            </div> <!-- .formrow -->
+                            </div> <!-- .form__row -->
         
                         </fieldset>
         

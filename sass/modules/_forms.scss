@@ -79,8 +79,8 @@ fieldset {
 // *
 // A single row
 // *
-.formrow {
-    @extend %formrow;
+.form__row {
+    @extend %form__row;
 
     label,
     .label {

@@ -30,15 +30,15 @@
 // *
 // Next & prev
 // *
-.paging-navigation {
+.paging__navigation {
     
 }
 
-.paging-next {
+.paging__navigation--prev {
     
 }
 
-.paging-left {
+.paging__navigation--next {
     
 }
 
@@ -48,7 +48,7 @@
 // *
 // A list item
 // *
-.page-number {
+.paging__number {
     display: none;
             
     @media (min-width: $lap) {
@@ -60,9 +60,9 @@
 
 
 // *
-// Extra current class on page-number
+// Extra current class on paging__number
 // *
-.active-page {
+.paging__number--active {
     
     > a {
         background: $border-color;

@@ -55,7 +55,7 @@
         // *
         // The search input
         // *
-        #s {
+        .searchform__container__field {
             width: 100%;
             clear: both;
 
@@ -67,7 +67,7 @@
     }
 }
 
-.searchsubmit {
+.searchform__container__button {
     display: none;
     
     @media (min-width: $lap) {
@@ -83,7 +83,7 @@
 // *
 // Search form fieldset
 // *
-.searchform-container {
+.searchform__container {
     margin: 0;
     padding: 0;
     line-height: 40px;

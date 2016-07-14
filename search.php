@@ -12,7 +12,7 @@
             
                 <?php if (have_posts()) : ?>
                 
-                    <h1 class="page-title">
+                    <h1 class="page-content__title">
                         
                         <?php _e( 'Zoekresultaten voor', 'thema_vertalingen' ); ?> <em>&#8216;<?php echo $search_query ?>&#8217;</em>
                         
@@ -27,13 +27,13 @@
                         
                         <ul class="post-navigation">
                             
-                            <li class="goforward">
+                            <li class="post-navigation__next">
                             
                                 <?php previous_posts_link('&laquo; Nieuwere artikelen'); ?>
                                 
                             </li>
                             
-                            <li class="goback">
+                            <li class="post-navigation__prev">
                             
                                 <?php next_posts_link('Oudere artikelen &raquo;'); ?>
                                 
@@ -45,7 +45,7 @@
                     
                     <section class="search-result">
               
-                        <h1 class="search-result-title post-title">
+                        <h1 class="search-result__title post__title">
                             
                             <?php _e( 'Helaas..', 'thema_vertalingen' ); ?>
                             

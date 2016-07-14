@@ -4,7 +4,7 @@
                 
                     <section class="vcard">
                     
-                        <ul class="vcard-section adr">
+                        <ul class="vcard__section adr">
                             
                             <li class="org">
                                 <strong>
@@ -31,7 +31,7 @@
                             
                         </ul>
                         
-                        <ul class="vcard-section">
+                        <ul class="vcard__section">
                             
                             <li class="url fn">
                                 <strong>

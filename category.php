@@ -10,7 +10,7 @@
     
                 <?php if (have_posts()) : ?>
         
-                    <h1 class="page-title">
+                    <h1 class="page-content__title">
                         
                         <?php _e( 'Categorie', 'thema_vertalingen' ); ?>: <?php single_cat_title() ?>
                         
@@ -28,13 +28,13 @@
         
                     <article <?php post_class(); ?>>
                                                 
-                        <h1 class="post-title">
+                        <h1 class="post__title">
                             
                             <?php _e( 'Deze pagina bestaat niet', 'thema_vertalingen' ); ?>
                             
                         </h1>
         
-                        <div class="post-entry">
+                        <div class="post__entry">
                         
                             <p>
                                 

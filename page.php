@@ -46,13 +46,13 @@
     
                 <main class="page-content col col-6" role="main">
     
-                    <h1 class="page-title">
+                    <h1 class="page-content__title">
                         
                         <?php the_title(); ?>
                         
                     </h1>
     
-                    <div class="page-body">
+                    <div class="page-content__body">
                         
                         <?php the_content('Lees meer &raquo;'); ?>
                         
@@ -66,13 +66,13 @@
     
                 <main class="page-content col col-6 no-results not-found" role="main">
     
-                    <h1 class="page-title">
+                    <h1 class="page-content__title">
                         
                         <?php _e( 'Deze pagina bestaat niet', 'thema_vertalingen' ); ?>
                         
                     </h1>
                     
-                    <div class="page-body">
+                    <div class="page-content__body">
     
                         <p>
                             

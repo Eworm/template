@@ -15,7 +15,7 @@
 // *
 // Post title
 // *
-.post-title {
+.post__title {
     margin: 0;
     
     a {
@@ -23,7 +23,7 @@
     }
 }
 
-.single-post-title {
+.single-post__title {
     margin-bottom: $margin;
 }
 
@@ -33,7 +33,7 @@
 // *
 // Post content
 // *
-.post-entry {
+.post__entry {
 }
 
 
@@ -56,7 +56,7 @@
 // *
 // Post meta
 // *
-.post-meta {
+.post__meta {
     color: $lesser-color;
     
     .single-post & {
@@ -81,7 +81,7 @@
 // *
 // Continue reading & nr. of comments
 // *
-.post-options {
+.post__options {
 
     a {
         @extend %hover-underline;

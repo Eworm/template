@@ -153,11 +153,11 @@
 // *
 // The nr. of responses
 // *
-.comments-title {
+.comments-area__title {
     margin: 0 0 $margin;
 }
 
-.comment-list {
+.comments-area__list {
     @extend %remove-style;
 }
 
@@ -210,6 +210,6 @@
 }
 
 .form-submit {
-    @extend %formrow;
+    @extend %form__row;
     margin: 0;
 }

@@ -13,19 +13,19 @@
         
                     <main <?php post_class('page-content single-post'); ?> role="main">
         
-                        <h1 class="post-title maincontent-title single-post-title">
+                        <h1 class="post__title single-post__title">
                             
                             <?php the_title(); ?>
                             
                         </h1>
                     
-                        <div class="post-entry">
+                        <div class="post__entry">
                             
                             <?php the_content('Lees meer &raquo;'); ?>
                             
                         </div>
                         
-                        <div class="post-meta">
+                        <div class="post__meta">
                                 
                             <time datetime="<?php the_time('Y-m-d') ?>" pubdate="pubdate">
                             
@@ -58,13 +58,13 @@
                     
                     <main <?php post_class('page-content single-post no-results not-found'); ?> role="main">
     
-                        <h1 class="post-title maincontent-title single-post-title">
+                        <h1 class="post__title single-post__title">
                             
                             <?php _e( 'Deze pagina bestaat niet', 'thema_vertalingen' ); ?>
                             
                         </h1>
         
-                        <div class="post-entry">
+                        <div class="post__entry">
                         
                             <p>
                                 

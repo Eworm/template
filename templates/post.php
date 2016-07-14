@@ -1,6 +1,6 @@
 <article <?php post_class('post'); ?>>
 
-    <h1 class="post-title">
+    <h1 class="post__title">
         
         <a href="<?php the_permalink() ?>" title="<?php _e( 'Directe link naar', 'thema_vertalingen' ); ?><?php the_title_attribute(); ?>">
             
@@ -10,7 +10,7 @@
         
     </h1>
     
-    <div class="post-meta">
+    <div class="post__meta">
         
         <time datetime="<?php the_time('Y-m-d') ?>" pubdate="pubdate">
         
@@ -34,11 +34,11 @@
     
     </div>
 
-    <div class="post-entry">
+    <div class="post__entry">
 
         <?php the_excerpt(); ?>
 
-        <span class="post-options">
+        <span class="post__options">
 
             <!-- <?php comments_popup_link('Reageer als eerste', 'Er is 1 reactie', 'Er zijn % reacties'); ?> -->
 

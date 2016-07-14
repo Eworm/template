@@ -10,7 +10,7 @@
     
                 <?php if ( have_posts() ) : ?>
         
-                    <h1 class="page-title">
+                    <h1 class="page-content__title">
                     
                         <?php if ( is_day() ) : ?>
                         
@@ -42,13 +42,13 @@
                     
                     <ul class="post-navigation">
                         
-                        <li class="goforward">
+                        <li class="post-navigation__next">
                         
                             <?php previous_posts_link('&laquo; Nieuwere artikelen'); ?>
                             
                         </li>
                         
-                        <li class="goback">
+                        <li class="post-navigation__prev">
                         
                             <?php next_posts_link('Oudere artikelen &raquo;'); ?>
                             
@@ -60,13 +60,13 @@
         
                     <article <?php post_class(); ?>>
     
-                        <h1 class="post-title">
+                        <h1 class="post__title">
                             
                             <?php _e( 'Deze pagina bestaat niet', 'thema_vertalingen' ); ?>
                             
                         </h1>
         
-                        <div class="entry">
+                        <div class="post__entry">
                         
                             <p>
                                 

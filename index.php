@@ -71,13 +71,13 @@
                         
                         <ul class="paging">
                         
-                            <li class="paging-navigation paging-next">
+                            <li class="paging__navigation paging__navigation--prev">
                             
                                 <?php previous_posts_link('Vorige'); ?>
                                 
                             </li>
                             
-                            <li class="paging-navigation paging-left">
+                            <li class="paging__navigation paging__navigation--next">
                             
                                 <?php next_posts_link('Volgende'); ?>
                                 
@@ -85,7 +85,7 @@
                             
                             <?php for ($i = 1; $i <= $count_post; $i++) { ?>
                             
-                                <li class="page-number <?php if ($paged == $i) { echo ' active-page'; } ?>">
+                                <li class="paging__number <?php if ($paged == $i) { echo ' paging__number--active'; } ?>">
                                 
                                     <a href="<?php echo $uri . $i; ?>">
                                         
@@ -113,9 +113,9 @@
     
             <aside class="sidebar col col-3" role="complementary">
             
-                <div class="sidebar-section">
+                <div class="sidebar__section">
                 
-                    <h2 class="sidebar-section-title">
+                    <h2 class="sidebar__section__title">
                         
                         AJAX categorieen
                         
