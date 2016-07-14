@@ -1,7 +1,7 @@
 // *
 // Calculate the grid widths
 // *
-@mixin col-width($i) {
+@mixin col--width($i) {
     width: #{100% / ($max-width / (((($max-width / $nr-of-columns) * $i))))};
 }
 
@@ -42,7 +42,7 @@
     }
 }
 
-.col-center {
+.col--center {
     margin-right: auto;
     margin-left: auto;
     float: none;
@@ -57,8 +57,8 @@
 
     @media (min-width: $palm) {
 
-        .col-#{$i} {
-            @include col-width($i);
+        .col--#{$i} {
+            @include col--width($i);
         }
     }
 }
@@ -71,10 +71,10 @@
 // *
 @for $i from 1 through $nr-of-columns {
 
-    .col-wrist-#{$i} {
+    .col--wrist-#{$i} {
 
         @media (min-width: $wrist) {
-            @include col-width($i);
+            @include col--width($i);
         }
     }
 }
@@ -87,10 +87,10 @@
 // *
 @for $i from 1 through $nr-of-columns {
 
-    .col-palm-#{$i} {
+    .col--palm-#{$i} {
 
         @media (min-width: $palm) {
-            @include col-width($i);
+            @include col--width($i);
         }
     }
 }
@@ -102,10 +102,10 @@
 // *
 @for $i from 1 through $nr-of-columns {
 
-    .col-lap-#{$i} {
+    .col--lap-#{$i} {
 
         @media (min-width: $lap) {
-            @include col-width($i);
+            @include col--width($i);
         }
     }
 }
@@ -118,10 +118,10 @@
 // *
 @for $i from 1 through $nr-of-columns {
 
-    .col-desk-#{$i} {
+    .col--desk-#{$i} {
 
         @media (min-width: $desk) {
-            @include col-width($i);
+            @include col--width($i);
         }
     }
 }
@@ -134,10 +134,10 @@
 // *
 @for $i from 1 through $nr-of-columns {
 
-    .col-wall-#{$i} {
+    .col--wall-#{$i} {
 
         @media (min-width: $wall) {
-            @include col-width($i);
+            @include col--width($i);
         }
     }
 }
@@ -150,10 +150,10 @@
 // *
 @for $i from 1 through $nr-of-columns {
 
-    .col-cinema-#{$i} {
+    .col--cinema-#{$i} {
 
         @media (min-width: $cinema) {
-            @include col-width($i);
+            @include col--width($i);
         }
     }
 }
@@ -166,7 +166,7 @@
 // *
 @for $i from 1 through $nr-of-columns {
 
-    .col-push-#{$i} {
+    .col--push-#{$i} {
 
         @media (min-width: $lap) {
             margin-left: 100% / ($max-width / (((($max-width - (($nr-of-columns + 1) * $gutter)) / $nr-of-columns) * $i) + (($i + 1) * $gutter)));

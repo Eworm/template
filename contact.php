@@ -113,13 +113,13 @@ endif;
     
     <!-- Thanks page -->
 
-    <div class="content divider divider-content">
+    <div class="content divider divider--content">
     
-        <div class="core core-content">
+        <div class="core core--content">
         
             <div class="row">
     
-                <main class="page-content col col-5" role="main">
+                <main class="page-content col col--5" role="main">
         
                     <h1 class="page-content__title">
                         
@@ -153,13 +153,13 @@ endif;
 
     <!-- The contact form -->
 
-    <div class="content divider divider-content">
+    <div class="content divider divider--content">
     
-        <div class="core core-content">
+        <div class="core core--content">
         
             <div class="row">
     
-                <main class="page-content col col-5" role="main">
+                <main class="page-content col col--5" role="main">
         
                     <form action="#contactform" id="contactform" method="post" class="form" data-parsley-validate>
         
@@ -251,7 +251,7 @@ endif;
         
                 </main> <!-- .page-content -->
         
-                <aside class="sidebar col col-3" role="complementary">
+                <aside class="sidebar col col--3" role="complementary">
         
                     <?php $options = get_option('template_theme_options');
                         if (($options['theme_address'])) : ?>

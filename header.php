@@ -109,7 +109,7 @@
     
         <div class="container">
         
-            <header class="header divider divider-header" role="banner">
+            <header class="header divider divider--header" role="banner">
             
                 <div class="core core-header">
                     
@@ -132,9 +132,9 @@
             </header>
             <!-- .header -->
 
-            <nav class="mainmenu divider divider-mainmenu" role="navigation" >
+            <nav class="mainmenu divider divider--mainmenu" role="navigation" >
                 
-                <div class="core core-mainmenu">
+                <div class="core core--mainmenu">
                     
                     <?php wp_nav_menu( array(
                         'theme_location' => 'main-menu',

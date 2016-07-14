@@ -1,12 +1,12 @@
 <?php get_header(); ?>
 
-<div class="content divider divider-content">
+<div class="content divider divider--content">
 
-    <div class="core core-content">
+    <div class="core core--content">
     
         <div class="row">
 
-            <div class="col col-5">
+            <div class="col col--5">
     
                 <?php if (have_posts()) : ?>
                 <?php while (have_posts()) : the_post(); ?>
@@ -82,7 +82,7 @@
             
             </div>
             
-            <aside class="sidebar col col-3" role="complementary">
+            <aside class="sidebar col col--3" role="complementary">
 
                 <?php if ( !function_exists('dynamic_sidebar')
                     || !dynamic_sidebar('Widget') ) : ?>

@@ -1,12 +1,12 @@
 <?php get_header(); ?>
 
-<div class="content divider divider-content">
+<div class="content divider divider--content">
 
-    <div class="core core-content">
+    <div class="core core--content">
     
         <div class="row">
 
-            <main class="page-content col col-5" role="main">
+            <main class="page-content col col--5" role="main">
     
                 <?php if (have_posts()) : ?>
     
@@ -111,7 +111,7 @@
                 
             </main> <!-- .page-content -->
     
-            <aside class="sidebar col col-3" role="complementary">
+            <aside class="sidebar col col--3" role="complementary">
             
                 <div class="sidebar__section">
                 

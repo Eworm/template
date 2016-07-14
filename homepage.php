@@ -5,15 +5,15 @@ Template Name: Homepage
 ?>
 <?php get_header(); ?>
 
-<div class="content divider divider-content">
+<div class="content divider divider--content">
 
-    <div class="core core-content">
+    <div class="core core--content">
 
         <!-- <img src="<?php header_image(); ?>"> -->
         
         <div class="row">
 
-            <main class="page-content col col-6" role="main">
+            <main class="page-content col col--6" role="main">
     
                 <?php if (have_posts()) : ?>
     
@@ -37,7 +37,7 @@ Template Name: Homepage
     
             </main> <!-- .page-content -->
             
-            <aside class="sidebar col col-2" role="complementary">
+            <aside class="sidebar col col--2" role="complementary">
                 
                 Aside
                 

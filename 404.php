@@ -1,12 +1,12 @@
 <?php get_header(); ?>
 
-<div class="content divider divider-content">
+<div class="content divider divider--content">
 
-    <div class="core core-content">
+    <div class="core core--content">
     
         <div class="row">
 
-            <main class="page-content col col-5 not-found" role="main">
+            <main class="page-content col col--5 not-found" role="main">
     
                 <h1 class="page-content__title">
                     

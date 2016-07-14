@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-<div class="content divider divider-content">
+<div class="content divider divider--content">
 
-    <div class="core core-content">
+    <div class="core core--content">
         
         <?php the_breadcrumb(); ?>
     
@@ -31,7 +31,7 @@
     
                 if ($children) : ?>
     
-                    <div class="pagemenu col col-2">
+                    <div class="pagemenu col col--2">
                     
                         <ul>
                             <?php echo $children; ?>
@@ -44,7 +44,7 @@
             <?php if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>
     
-                <main class="page-content col col-6" role="main">
+                <main class="page-content col col--6" role="main">
     
                     <h1 class="page-content__title">
                         
@@ -64,7 +64,7 @@
     
             <?php else : ?>
     
-                <main class="page-content col col-6 no-results not-found" role="main">
+                <main class="page-content col col--6 no-results not-found" role="main">
     
                     <h1 class="page-content__title">
                         

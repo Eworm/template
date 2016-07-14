@@ -2,13 +2,13 @@
 
 <?php $search_query = get_search_query(); ?>
 
-<div class="content divider divider-content">
+<div class="content divider divider--content">
 
-    <div class="core core-content">
+    <div class="core core--content">
     
         <div class="row">
 
-            <main class="page-content col col-5" role="main">
+            <main class="page-content col col--5" role="main">
             
                 <?php if (have_posts()) : ?>
                 
