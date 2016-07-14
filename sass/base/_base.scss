@@ -13,10 +13,6 @@ html {
         height: 100%;
         overflow: hidden;
     }
-    
-    &.touch.no-overflow-scroll.html--active-menu {
-        overflow: visible;
-    }
 }
 
 body {

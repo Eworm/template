@@ -9,20 +9,8 @@
     transition: all .28s cubic-bezier(0.075, 0.085, 0.075, 1.175);
     transform: translate3d(0, 100%, 0);
     
-    .no-csstransforms3d & {
-        top: 100%;
-    }
-    
     .html--toggle-menu & {
         transform: translate3d(0, 0, 0);
-    }
-    
-    .no-csstransforms3d.html--toggle-menu & {
-        margin-top: -100%;
-        top: auto;
-    }
-    
-    .touch.no-overflow-scroll.html--active-menu & {
     }
 
     @media (min-width: $palm) {
@@ -39,9 +27,6 @@
         transform: none;
         border-bottom: 1px solid $border;
         transform: none;
-
-        .no-csstransforms3d & {
-        }
     }
 }
 
