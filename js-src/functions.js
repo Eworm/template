@@ -5,7 +5,7 @@ $(document).ready(function() {
     // Animation class
     setTimeout(function()
     {
-        $('html').addClass('start-animatin');
+        $('html').addClass('html--animation');
     }, 50);
 
 
@@ -33,7 +33,7 @@ $(document).ready(function() {
     {
     
         e.preventDefault();
-        closeMenu('js-toggle-menu', 'js-active-menu');
+        closeMenu('html--toggle-menu', 'html--active-menu');
         $(this).remove();
         
     });

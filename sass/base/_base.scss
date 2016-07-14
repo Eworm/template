@@ -9,12 +9,12 @@
 html {
     font-size: $base-size/$body-size; // Enable font-size zoom for old ies
 
-    &.js-active-menu {
+    &.html--active-menu {
         height: 100%;
         overflow: hidden;
     }
     
-    &.touch.no-overflow-scroll.js-active-menu {
+    &.touch.no-overflow-scroll.html--active-menu {
         overflow: visible;
     }
 }

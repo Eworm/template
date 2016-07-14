@@ -34,7 +34,7 @@
     transition: all .25s ease;
     opacity: 0;
     
-    .start-animatin & {
+    .html--animation & {
         top: 0;
         opacity: 1;
     }
@@ -50,7 +50,7 @@
         display: inline-block;
         transition: all .25s ease;
         
-        .js-toggle-menu & {
+        .html--toggle-menu & {
             transform: rotate(180deg);
         }
     }
