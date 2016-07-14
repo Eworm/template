@@ -13,6 +13,7 @@ var src_paths = {
                 'bower_components/hoverintent/jquery.hoverIntent.js',
                 'bower_components/matchMedia/matchMedia.js',
                 'bower_components/matchMedia/matchMedia.addListener.js',
+                'bower_components/blazy/blazy.js',
                 'js-src/functions.js'],
     labjs: ['bower_components/labjs/LAB.min.js',
                 'js-src/lab-loader.js'],
