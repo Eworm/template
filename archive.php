@@ -36,7 +36,7 @@
                     <?php while (have_posts()) : the_post(); ?>
     
                         <!-- This function uses post.php -->
-                        <?php get_template_part( 'includes/post', '' ); ?>
+                        <?php get_template_part( 'templates/post', '' ); ?>
                         
                     <?php endwhile; ?>
                     
