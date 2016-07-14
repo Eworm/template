@@ -31,7 +31,7 @@ body {
     opacity: 0;
     background: $body-bg;
     
-    @media (min-width: $palm) {
+    @media (min-width: $mq--palm) {
         left: $skinny-menu-width;
     }
 }
@@ -62,7 +62,7 @@ a {
     backface-visibility: hidden;
     transform-style: flat;
 
-    @media (min-width: $palm) {
+    @media (min-width: $mq--palm) {
     }
 }
 
@@ -76,9 +76,9 @@ a {
     padding: $gutter;
     clear: both;
 
-    @media (min-width: $lap) {
-        width: $width;
-        max-width: $max-width;
+    @media (min-width: $mq--lap) {
+        width: $site--width;
+        max-width: $site--max-width;
         padding: $gutter 0;
         position: relative;
     }
@@ -103,8 +103,8 @@ a {
     padding: 0;
     float: left;
     
-    @media (min-width: $lap) {
-        width: $width;
+    @media (min-width: $mq--lap) {
+        width: $site--width;
         float: none;   
     }
 }
@@ -114,8 +114,8 @@ a {
     padding-top: 0;
     padding-bottom: 0;
     
-    @media (min-width: $lap) {
-        width: $width;
+    @media (min-width: $mq--lap) {
+        width: $site--width;
         display: block;
     }
 }

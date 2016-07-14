@@ -11,7 +11,7 @@
     text-align: center;
     transform: translate3d(0, 0, 0);
 
-    @media (min-width: $lap) {
+    @media (min-width: $mq--lap) {
         display: none;
     }
 }
@@ -65,7 +65,7 @@
 .mob-hide {
     display: none;
 
-    @media (min-width: $lap) {
+    @media (min-width: $mq--lap) {
         display: block;
     }
 }

@@ -36,7 +36,7 @@ table {
     border-spacing: 0;
     border-collapse: collapse;
     
-    @media (min-width: $lap) {
+    @media (min-width: $mq--lap) {
         display: table;
     }
 
@@ -46,7 +46,7 @@ table {
         border: 1px solid $border;
         vertical-align: middle;
         
-        @media (min-width: $lap) {
+        @media (min-width: $mq--lap) {
             display: table-header-group;
             float: none;
         }
@@ -54,7 +54,7 @@ table {
         tr {
             display: block;
             
-            @media (min-width: $lap) {
+            @media (min-width: $mq--lap) {
                 display: table-row;
                 border-right: 0;
             }
@@ -64,14 +64,14 @@ table {
             display: block;
             border-bottom: 1px solid $border;
             
-            @media (min-width: $lap) {
+            @media (min-width: $mq--lap) {
                 display: table-cell;
             }
             
             &:last-child {
                 border-bottom: 0;
                 
-                @media (min-width: $lap) {
+                @media (min-width: $mq--lap) {
                     border-bottom: 1px solid $border;
                 }
             }
@@ -87,7 +87,7 @@ table {
         white-space: nowrap;
         word-wrap: normal;
         
-        @media (min-width: $lap) {
+        @media (min-width: $mq--lap) {
             display: table-row-group;
             overflow: visible;
             border: 1px solid $border;
@@ -104,7 +104,7 @@ table {
         border-left: 0;
         font-size: $body-size;
         
-        @media (min-width: $lap) {
+        @media (min-width: $mq--lap) {
             margin: 0;
             display: table-row;
             border-right: 0;
@@ -114,14 +114,14 @@ table {
             display: block;
             border-bottom: 1px solid $border;
             
-            @media (min-width: $lap) {
+            @media (min-width: $mq--lap) {
                 display: table-cell;
             }
             
             &:last-child {
                 border-bottom: 0;
                 
-                @media (min-width: $lap) {
+                @media (min-width: $mq--lap) {
                     border-bottom: 1px solid $border;
                 }
             }

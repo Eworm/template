@@ -33,7 +33,7 @@
         }
     }
 
-    @media (min-width: $lap) {
+    @media (min-width: $mq--lap) {
         margin: 0 0 $margin--skinny;
         padding: $padding;
         border: 1px solid $border;
@@ -79,7 +79,7 @@
     font-weight: bold;
     line-height: 32px;
 
-    @media (min-width: $lap) {
+    @media (min-width: $mq--lap) {
         margin-bottom: $margin;
         font-weight: normal;
     }
@@ -98,7 +98,7 @@
     border-radius: 0;
     box-shadow: $default-box-shadow;
 
-    @media (min-width: $lap) {
+    @media (min-width: $mq--lap) {
         margin-right: $margin--skinny;
         vertical-align: top;
         float: none;
@@ -124,7 +124,7 @@
 .comment-meta {
     font-size: $type--s;
 
-    @media (min-width: $lap) {
+    @media (min-width: $mq--lap) {
         padding-top: 20px;
         position: absolute;
         top: 0;
@@ -182,7 +182,7 @@
         border-top: 1px solid $border;
         border-bottom: 0;
 
-        @media (min-width: $lap) {
+        @media (min-width: $mq--lap) {
             padding: $padding--skinny;
             border-bottom: 1px solid $border;
         }

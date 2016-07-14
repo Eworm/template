@@ -2,7 +2,7 @@
 // Calculate the grid widths
 // *
 @mixin col--width($i) {
-    width: #{100% / ($max-width / (((($max-width / $nr-of-columns) * $i))))};
+    width: #{100% / ($site--max-width / (((($site--max-width / $grid-columns) * $i))))};
 }
 
 
@@ -53,9 +53,9 @@
 // *
 // All screen widths
 // *
-@for $i from 1 through $nr-of-columns {
+@for $i from 1 through $grid-columns {
 
-    @media (min-width: $palm) {
+    @media (min-width: $mq--palm) {
 
         .col--#{$i} {
             @include col--width($i);
@@ -69,11 +69,11 @@
 // Wrist
 // You can remove this when unused to minimize the css
 // *
-@for $i from 1 through $nr-of-columns {
+@for $i from 1 through $grid-columns {
 
     .col--wrist-#{$i} {
 
-        @media (min-width: $wrist) {
+        @media (min-width: $mq--wrist) {
             @include col--width($i);
         }
     }
@@ -85,11 +85,11 @@
 // Palm
 // You can remove this when unused to minimize the css
 // *
-@for $i from 1 through $nr-of-columns {
+@for $i from 1 through $grid-columns {
 
     .col--palm-#{$i} {
 
-        @media (min-width: $palm) {
+        @media (min-width: $mq--palm) {
             @include col--width($i);
         }
     }
@@ -100,11 +100,11 @@
 // Lap
 // You can remove this when unused to minimize the css
 // *
-@for $i from 1 through $nr-of-columns {
+@for $i from 1 through $grid-columns {
 
     .col--lap-#{$i} {
 
-        @media (min-width: $lap) {
+        @media (min-width: $mq--lap) {
             @include col--width($i);
         }
     }
@@ -116,11 +116,11 @@
 // Desk
 // You can remove this when unused to minimize the css
 // *
-@for $i from 1 through $nr-of-columns {
+@for $i from 1 through $grid-columns {
 
     .col--desk-#{$i} {
 
-        @media (min-width: $desk) {
+        @media (min-width: $mq--desk) {
             @include col--width($i);
         }
     }
@@ -132,11 +132,11 @@
 // Wall
 // You can remove this when unused to minimize the css
 // *
-@for $i from 1 through $nr-of-columns {
+@for $i from 1 through $grid-columns {
 
     .col--wall-#{$i} {
 
-        @media (min-width: $wall) {
+        @media (min-width: $mq--wall) {
             @include col--width($i);
         }
     }
@@ -148,11 +148,11 @@
 // Cinema
 // You can remove this when unused to minimize the css
 // *
-@for $i from 1 through $nr-of-columns {
+@for $i from 1 through $grid-columns {
 
     .col--cinema-#{$i} {
 
-        @media (min-width: $cinema) {
+        @media (min-width: $mq--cinema) {
             @include col--width($i);
         }
     }
@@ -164,12 +164,12 @@
 // Offset
 // You can remove this when unused to minimize the css
 // *
-@for $i from 1 through $nr-of-columns {
+@for $i from 1 through $grid-columns {
 
     .col--push-#{$i} {
 
-        @media (min-width: $lap) {
-            margin-left: 100% / ($max-width / (((($max-width - (($nr-of-columns + 1) * $gutter)) / $nr-of-columns) * $i) + (($i + 1) * $gutter)));
+        @media (min-width: $mq--lap) {
+            margin-left: 100% / ($site--max-width / (((($site--max-width - (($grid-columns + 1) * $gutter)) / $grid-columns) * $i) + (($i + 1) * $gutter)));
         }
     }
 }

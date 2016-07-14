@@ -5,7 +5,7 @@
     float: left;
     border: 1px solid $border;
 
-    @media (min-width: $lap) {
+    @media (min-width: $mq--lap) {
         margin-bottom: $margin;
         padding: $padding;
     }
@@ -44,7 +44,7 @@
     font-weight: bold;
     font-size: $body-size;
     
-    @media (min-width: $lap) {
+    @media (min-width: $mq--lap) {
         margin-bottom: $margin;
     }
 

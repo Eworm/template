@@ -16,6 +16,8 @@ $gutter--small:     $s--wrist;
 $gutter--skinny:    $s--palm;
 $gutter:            $s--lap;
 $gutter--desk:      $s--desk;
+$gutter--wall:      $s--wall;
+$gutter--cinema:    $s--cinema;
 
 
 // *
@@ -25,6 +27,8 @@ $margin--small:     $s--wrist;
 $margin--skinny:    $s--palm;
 $margin:            $s--lap;
 $margin--desk:      $s--desk;
+$margin--wall:      $s--wall;
+$margin--cinema:    $s--cinema;
 
 
 // *
@@ -34,6 +38,8 @@ $padding--small:    $s--wrist;
 $padding--skinny:   $s--palm;
 $padding:           $s--lap;
 $padding--desk:     $s--desk;
+$padding--wall:     $s--wall;
+$padding--cinema:   $s--cinema;
 
 
 
@@ -41,12 +47,12 @@ $padding--desk:     $s--desk;
 // *
 // Responsive breakpoints. Always use em's!
 // *
-$wrist: 0;              // $wrist is the variable name from 0 to 480
-$palm: 30em;            // 480px
-$lap: 46.875em;         // 750px
-$desk: 60.625em;        // 970px
-$wall: 73.125em;        // 1170px
-$cinema: 89.375em;      // 1430px
+$mq--wrist: 0;              // $mq--wrist is the variable name from 0 to 480
+$mq--palm: 30em;            // 480px
+$mq--lap: 46.875em;         // 750px
+$mq--desk: 60.625em;        // 970px
+$mq--wall: 73.125em;        // 1170px
+$mq--cinema: 89.375em;      // 1430px
 
 
 
@@ -65,9 +71,9 @@ $input-padding: 4px;
 // *
 // Grid variables
 // *
-$width: 95%;            // The site width if the screen is smaller then the max size
-$max-width: 1280px;     // The max-size of the site
-$nr-of-columns: 8;      // How many grid columns we have. Don't forget to change your classnames when changing this!
+$site--width: 95%;            // The site width if the screen is smaller then the max size
+$site--max-width: 1280px;     // The max-size of the site
+$grid-columns: 8;             // How many grid columns we have. Don't forget to change your classnames when changing this!
 
 
 

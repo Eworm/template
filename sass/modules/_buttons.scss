@@ -9,7 +9,7 @@
     text-decoration: none;
     cursor: pointer;
 
-    @media (min-width: $lap) {
+    @media (min-width: $mq--lap) {
         width: auto;
     }
 

@@ -16,7 +16,7 @@ function fixed_img_caption_shortcode($attr, $content = null) {
             'width'    => '',
             'caption' => ''), $attr));
 
-    if ( 1 > (int) $width || empty($caption) )
+    if ( 1 > (int) $site--width || empty($caption) )
         //return $content;
         extract(shortcode_atts(array(
             'id'=> '',

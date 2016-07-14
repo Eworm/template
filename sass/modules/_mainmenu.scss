@@ -13,10 +13,10 @@
         transform: translate3d(0, 0, 0);
     }
 
-    @media (min-width: $palm) {
+    @media (min-width: $mq--palm) {
     }
 
-    @media (min-width: $lap) {
+    @media (min-width: $mq--lap) {
         width: 100%;
         height: auto;
         margin-bottom: $margin;
@@ -46,7 +46,7 @@
     background: rgba($nav-bg, .96);
     border-top: 1px solid $border;
 
-    @media (min-width: $lap) {
+    @media (min-width: $mq--lap) {
         border-top: 0;
     }
 }
@@ -76,7 +76,7 @@
         }
     }
 
-    @media (min-width: $lap) {
+    @media (min-width: $mq--lap) {
         width: auto;
         float: left;
         position: relative;
@@ -94,11 +94,11 @@
         text-decoration: none;
         transition: all .15s ease-out;
 
-        @media (min-width: $palm) {
+        @media (min-width: $mq--palm) {
             padding: $padding--skinny;
         }
 
-        @media (min-width: $lap) {
+        @media (min-width: $mq--lap) {
             padding: $padding--skinny $padding;
             float: left;
             position: relative;
@@ -109,7 +109,7 @@
         &:focus {
             background: $border;
 
-            @media (min-width: $lap) {
+            @media (min-width: $mq--lap) {
             }
         }
     }
@@ -137,7 +137,7 @@
     a {
     }
 
-    @media (min-width: $lap) {
+    @media (min-width: $mq--lap) {
         background: $border;
         box-shadow: none;
         background-image: none;
@@ -159,7 +159,7 @@
         }
     }
 
-    @media (min-width: $lap) {
+    @media (min-width: $mq--lap) {
     
         &:after {
         }
@@ -177,7 +177,7 @@
 
 .current_page_ancestor {
 
-    @media (min-width: $lap) {
+    @media (min-width: $mq--lap) {
     
         a {
         }
@@ -187,7 +187,7 @@
 .sub-enter {
 
     > a {         
-        @media (min-width: $lap) {
+        @media (min-width: $mq--lap) {
             background: $border;
         }
     }
@@ -216,7 +216,7 @@
     background: darken(#eee, 5%);
     transition: all .15s cubic-bezier(0.075, 0.085, 0.075, 1.175);
     
-    @media (min-width: $lap) {
+    @media (min-width: $mq--lap) {
         position: absolute;
         top: 100%;
         left: 0;
@@ -233,7 +233,7 @@
     .current_page_parent &,
     .current-menu-parent & {
         
-        @media (min-width: $lap) {
+        @media (min-width: $mq--lap) {
             display: none;
         }
     }
@@ -241,7 +241,7 @@
     .current_page_ancestor &,
     .current-menu-item & {
         
-        @media (min-width: $lap) {
+        @media (min-width: $mq--lap) {
             display: none;
         }
     }
@@ -269,7 +269,7 @@
             border-bottom: 1px solid #fff;
             background: #eee;
 
-            @media (min-width: $lap) {
+            @media (min-width: $mq--lap) {
                 padding: 8px $padding--skinny;
                 color: $body;
                 border: 0;
@@ -288,7 +288,7 @@
             
             a {
             
-                @media (min-width: $lap) {
+                @media (min-width: $mq--lap) {
                     border: 0;
                 }
             }
@@ -326,7 +326,7 @@
     background: #fff;
     transition: all .15s ease-in;
     
-    @media (min-width: $lap) {
+    @media (min-width: $mq--lap) {
         display: none;
     }
     

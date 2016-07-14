@@ -63,7 +63,7 @@
     float: left;
     clear: both;
     
-    @media (min-width: $lap) {
+    @media (min-width: $mq--lap) {
         margin-bottom: $margin;
     }
     
@@ -81,7 +81,7 @@
         background: $alert;
         color: #fff;
         
-        @media (min-width: $lap) {
+        @media (min-width: $mq--lap) {
             width: 50%;
         }
     }
@@ -119,7 +119,7 @@
     .post-thumb {
         display: none;
 
-        @media (min-width: $lap) {
+        @media (min-width: $mq--lap) {
             width: 87px;
             height: 68px;
             margin-right: $margin--skinny;

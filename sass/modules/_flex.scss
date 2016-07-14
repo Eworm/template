@@ -14,7 +14,7 @@
         @include flex-grow(1);
     }
     
-    @media (min-width: $palm) {
+    @media (min-width: $mq--palm) {
         display: block;
     }
 }

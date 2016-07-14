@@ -17,7 +17,7 @@
         text-decoration: none;
         transition: all .15s ease;
         
-        @media (min-width: $lap) {
+        @media (min-width: $mq--lap) {
             margin-right: $margin--skinny;
             padding-right: $padding--skinny;
         }

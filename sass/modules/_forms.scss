@@ -7,7 +7,7 @@ input {
     font-family: $body-font;
     font-size: $body-size;
     
-    @media (min-width: $lap) {
+    @media (min-width: $mq--lap) {
         width: 50%;
         
         aside section & {
@@ -37,7 +37,7 @@ input[type="radio"] {
 
 input[type="submit"] {
     
-    @media (min-width: $lap) {
+    @media (min-width: $mq--lap) {
         width: auto;
     }
 }
@@ -67,7 +67,7 @@ fieldset {
     clear: both;
     border: 0;
 
-    @media (min-width: $lap) {
+    @media (min-width: $mq--lap) {
         width: 100%;
         float: left;
     }

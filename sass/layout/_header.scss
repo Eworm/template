@@ -5,7 +5,7 @@
     margin-bottom: $margin--skinny;
     border-bottom: 1px solid $border;
 
-    @media (min-width: $lap) {
+    @media (min-width: $mq--lap) {
         margin-bottom: 0;
         background: $body-bg;
     }
@@ -22,11 +22,11 @@
     display: block;
     transform: translate3d(0, 0, 0);
     
-    @media (min-width: $palm) {
+    @media (min-width: $mq--palm) {
         left: 35%;
     }
 
-    @media (min-width: $lap) {
+    @media (min-width: $mq--lap) {
         width: 156px;
         height: 87px;
         margin: 0 20px 0 0;
@@ -43,7 +43,7 @@
 .cp {
     display: none;
 
-    @media (min-width: $lap) {
+    @media (min-width: $mq--lap) {
         margin: 0;
         display: block;
         float: left;

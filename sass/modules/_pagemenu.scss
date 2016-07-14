@@ -2,7 +2,7 @@
     @include flex-direction(column);
     @include order(2);
 
-    @media (min-width: $lap) {
+    @media (min-width: $mq--lap) {
         margin-bottom: $margin;
         clear: none;
         display: block;
@@ -16,7 +16,7 @@
         display: inline-block;
         border: 1px solid $border;
         
-        @media (min-width: $lap) {
+        @media (min-width: $mq--lap) {
             border: 0;
         }
     }
@@ -29,7 +29,7 @@
         float: left;
         background: transparent;
 
-        @media (min-width: $lap) {
+        @media (min-width: $mq--lap) {
             margin-bottom: 0;
         }
         
@@ -45,7 +45,7 @@
         padding: $padding--skinny;
         display: block;
 
-        @media (min-width: $lap) {
+        @media (min-width: $mq--lap) {
             border-bottom: 1px solid $border;
             background: transparent;
         }

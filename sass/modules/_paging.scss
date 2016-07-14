@@ -51,7 +51,7 @@
 .paging__number {
     display: none;
             
-    @media (min-width: $lap) {
+    @media (min-width: $mq--lap) {
         display: block;
     }
 }

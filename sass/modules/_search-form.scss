@@ -39,7 +39,7 @@
     // *
     .header & {
 
-        @media (min-width: $lap) {
+        @media (min-width: $mq--lap) {
             width: 30%;
             padding: 0;
             float: right;
@@ -59,7 +59,7 @@
             width: 100%;
             clear: both;
 
-            @media (min-width: $lap) {
+            @media (min-width: $mq--lap) {
                 width: 70%;
                 float: left;
             }
@@ -70,7 +70,7 @@
 .searchform__container__button {
     display: none;
     
-    @media (min-width: $lap) {
+    @media (min-width: $mq--lap) {
         width: 30%;
         float: left;
         display: block;

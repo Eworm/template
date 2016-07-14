@@ -45,7 +45,7 @@
 .post-nav {
     text-align: center;
 
-    @media (min-width: $lap) {
+    @media (min-width: $mq--lap) {
         text-align: left;
     }
 }
