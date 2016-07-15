@@ -111,7 +111,7 @@
         
             <header class="header divider divider--header" role="banner">
             
-                <div class="core core-header">
+                <div class="core core--header">
                     
                     <a href="<?php echo get_option('home'); ?>" id="js-logo" class="logo" rel="home" title="<?php _e( 'Terug naar de homepage', 'thema_vertalingen' ); ?>">
                         
