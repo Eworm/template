@@ -2,6 +2,11 @@ $(document).ready(function() {
         
     
     
+    // Lazy loading: add b-lazy class to the image
+    var bLazy = new Blazy();
+    
+    
+    
     // Animation class
     setTimeout(function()
     {
