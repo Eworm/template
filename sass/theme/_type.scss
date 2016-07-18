@@ -55,3 +55,89 @@ $websafe: Arial, Verdana, sans-serif;
 // *
 $body-font: $websafe;
 $special-font: $websafe; // Webfont, for example a google font
+
+
+
+
+// *
+// Header sizes
+// *
+$header-1: 2 * $base-size;
+$header-2: 1.5 * $base-size;
+$header-3: 1.17 * $base-size;
+$header-4: 1 * $base-size;
+$header-5: 1 * $base-size;
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    line-height: 1.1;
+    text-rendering: optimizeLegibility;
+    
+    a {
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+} 
+
+
+
+
+// *
+// Page title
+// *
+.page-content__title {
+    margin: 0 0 $margin--skinny;
+    font-weight: normal;
+    font-size: $header-1;
+
+    @media (min-width: $mq--lap) {
+        margin-bottom: $margin;
+    }
+}
+
+
+
+// *
+// Headers in the main content
+// *
+.page-content__body {
+
+    h1, h2, h3, h4, h5 {
+        
+        a {
+            text-decoration: none;
+    
+            &:hover,
+            &:focus {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    h2 {
+        margin: 0;
+        font-size: $header-2;
+    }
+    
+    h3 {
+        margin: 0;
+        font-size: $header-3;
+    }
+    
+    h4 {
+        margin: 0;
+        font-size: $header-4;
+    }
+    
+    h5 {
+        margin: 0;
+        font-size: $body-size;
+    }
+}
