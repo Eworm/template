@@ -9,8 +9,6 @@ var src_paths = {
     sprite: 'images-src/sprite/**/*.svg',
     functions: ['bower_components/parsleyjs/dist/parsley.js',
                 'bower_components/hoverintent/jquery.hoverIntent.js',
-                'bower_components/matchMedia/matchMedia.js',
-                'bower_components/matchMedia/matchMedia.addListener.js',
                 'bower_components/blazy/blazy.js',
                 'js-src/functions.js'],
     labjs: ['bower_components/labjs/LAB.min.js',
