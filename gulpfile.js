@@ -34,7 +34,7 @@ gulp.task('css', function() {
         .pipe(plugins.plumber({errorHandler: plugins.notify.onError('Error: <%= error.message %>')}))
         
         .pipe(plugins.sass({ outputStyle: 'compressed', includePaths: 'bower_components/normalize.scss'}))
-        .pipe(plugins.autoprefixer({ browsers: ['last 2 versions', 'ie 9', 'ios 6', 'android 4'], cascade: false }))
+        .pipe(plugins.autoprefixer({ browsers: ['last 2 versions', 'ie 10', 'ios 8', 'android 4'], cascade: false }))
         
         .pipe(plugins.uncss({
             html: ['index.html',
