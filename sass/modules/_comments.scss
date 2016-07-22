@@ -64,7 +64,7 @@
 // *
 // The comment body
 // *
-.comment-body {
+.comment__body {
 }
 
 
@@ -73,7 +73,7 @@
 // *
 // The author name
 // *
-.comment-author {
+.comment__author {
     width: 100%;
     float: left;
     font-weight: bold;
@@ -121,7 +121,7 @@
 // *
 // Comment meta info
 // *
-.comment-meta {
+.comment__meta {
     font-size: $type--s;
 
     @media (min-width: $mq--lap) {
@@ -161,7 +161,7 @@
     @extend %remove-style;
 }
 
-.comment-author-admin,
+.comment__author__admin,
 .bypostauthor {
 }
 
@@ -195,7 +195,7 @@
 // *
 // Link for replying
 // *
-.comment-reply-link {
+.comment__reply__link {
     @extend %hover-underline;
 }
 
@@ -209,7 +209,7 @@
     
 }
 
-.form-submit {
+.form__submit {
     @extend %form__row;
     margin: 0;
 }
