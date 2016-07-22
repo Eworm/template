@@ -55,7 +55,7 @@
                     
                 </div>
                 
-            </div> <!-- .doormat -->
+            </div>
             
             <footer class="footer divider divider--footer" role="contentinfo">
             
@@ -65,9 +65,9 @@
                     
                 </div>
                 
-            </footer> <!-- .footer -->
+            </footer>
             
-        </div> <!-- .container -->
+        </div>
                 
         <?php wp_footer(); ?>  
   

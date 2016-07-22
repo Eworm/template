@@ -109,7 +109,7 @@
             
                 <?php endif; ?>
                 
-            </main> <!-- .page-content -->
+            </main>
     
             <aside class="sidebar col col--3" role="complementary">
             
@@ -127,12 +127,12 @@
                     || !dynamic_sidebar('Widget') ) : ?>
                 <?php endif; ?>
     
-            </aside> <!-- .sidebar -->
+            </aside>
             
-        </div> <!-- .row -->
+        </div>
 
-    </div> <!-- .core -->
+    </div>
 
-</div> <!-- .divider -->
+</div>
 
 <?php get_footer(); ?>

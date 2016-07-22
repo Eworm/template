@@ -141,13 +141,13 @@ endif;
                         
                     </p>
         
-                </main> <!-- .page-content -->
+                </main>
                 
-            </div> <!-- .row -->
+            </div>
     
-        </div> <!-- .core -->
+        </div>
     
-    </div> <!-- .divider -->
+    </div>
 
 <?php else : ?>
 
@@ -187,7 +187,7 @@ endif;
                                     
                                 <?php endif; ?>
     
-                            </div> <!-- .form__row -->
+                            </div>
         
                             <div class="form__row">
                             
@@ -207,7 +207,7 @@ endif;
                                     
                                 <?php endif; ?>
     
-                            </div> <!-- .form__row -->
+                            </div>
                             
                             <div class="form__row">
                             
@@ -225,7 +225,7 @@ endif;
                                     
                                 <?php endif; ?>
     
-                            </div> <!-- .form__row -->
+                            </div>
                             
                             <div id="screenreader" class="form__row">
                             
@@ -235,7 +235,7 @@ endif;
                                                               
                                 <input type="text" name="checking" id="checking" value="<?php if (isset($_POST['checking'])) echo $_POST['checking'];?>">
                             
-                            </div> <!-- .form__row -->
+                            </div>
                             
                             <div class="form__row">
                             
@@ -243,13 +243,13 @@ endif;
                                 <input type="hidden" name="about" value="<?php the_title(); ?>">
                                 <input type="submit" value="<?php _e( 'Verzenden', 'thema_vertalingen' ); ?>" class="button">
                             
-                            </div> <!-- .form__row -->
+                            </div>
         
                         </fieldset>
         
                     </form>
         
-                </main> <!-- .page-content -->
+                </main>
         
                 <aside class="sidebar col col--3" role="complementary">
         
@@ -268,13 +268,13 @@ endif;
         
                     <?php endif; ?>
         
-                </aside> <!-- .sidebar -->
+                </aside>
             
-            </div> <!-- .row -->
+            </div>
     
-        </div> <!-- .core -->
+        </div>
     
-    </div> <!-- .divider -->
+    </div>
 
 <?php endif; ?>
 

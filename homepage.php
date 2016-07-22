@@ -35,7 +35,7 @@ Template Name: Homepage
     
                 <?php endif; ?>
     
-            </main> <!-- .page-content -->
+            </main>
             
             <aside class="sidebar col col--2" role="complementary">
                 
@@ -43,10 +43,10 @@ Template Name: Homepage
                 
             </aside>
             
-        </div> <!-- .row -->
+        </div>
 
-    </div> <!-- .core -->
+    </div>
 
-</div> <!-- .divider -->
+</div>
 
 <?php get_footer(); ?>

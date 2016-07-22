@@ -58,7 +58,7 @@
                         
                     </div>
                     
-                </main> <!-- .page-content -->
+                </main>
     
             <?php endwhile; ?>
     
@@ -84,14 +84,14 @@
     
                     </div>
     
-                </main> <!-- .page-content -->
+                </main>
     
             <?php endif; ?>
         
-        </div> <!-- .row -->
+        </div>
 
-    </div> <!-- .core -->
+    </div>
 
-</div> <!-- .divider -->
+</div>
 
 <?php get_footer(); ?>

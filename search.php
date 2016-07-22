@@ -61,12 +61,12 @@
               
                 <?php endif; ?>
                 
-            </main> <!-- .page-content -->
+            </main>
             
-        </div> <!-- .row -->
+        </div>
         
-    </div> <!-- .core -->
+    </div>
     
-</div> <!-- .divider -->
+</div>
 
 <?php get_footer(); ?>
