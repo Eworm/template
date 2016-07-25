@@ -39,6 +39,7 @@
 // *
 // Modules. Styling of reusable, modular parts of the design.
 // *
+@import 'modules/symbols'                  // Hiding the svg symbol sprite
 @import 'modules/mainmenu';                // The main menu, probably the only nav
 //@import 'modules/mobile-header';           // Header for small screens
 @import 'modules/search-form';             // A search form
