@@ -88,3 +88,12 @@
     padding: 0;
     line-height: 40px;
 }
+
+
+
+// *
+// Hiding the label, but not for screenreaders
+// *
+.searchform__container__label {
+    @include text--hide;    
+}
