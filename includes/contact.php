@@ -12,14 +12,16 @@ $messageError_message = 'Je bent vergeten een bericht in te vullen';
 /* Contactinfo submenu
 ==================================================================================================================================*/
 add_action('admin_menu', 'mt_add_pages');
-function mt_add_pages() {
+function mt_add_pages()
+{
     add_management_page(__('Contactaanvragen','menu-contactrequest'), __('Contactaanvragen','menu-contactrequest'), 'manage_options', 'overview-contactrequest.php', 'mt_contactrequest_page');
 };
 
 
 /* Get contactinfo
 ==================================================================================================================================*/
-function mt_contactrequest_page () {
+function mt_contactrequest_page () 
+{
 
     global $wpdb;
     
@@ -40,7 +42,8 @@ function mt_contactrequest_page () {
     echo '<th align="left">Tijd</th>';
     echo '<tr>';
     
-    foreach ( $requests as $request ) {
+    foreach ( $requests as $request ) 
+    {
         echo '<tr>';
         echo '<td valign="top">';
         echo $request->from;

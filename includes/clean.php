@@ -2,8 +2,10 @@
 
 /* Deregister jquery
 ==================================================================================================================================*/
-function load_jquery() {
-    if ( ! is_admin() ) {
+function load_jquery()
+{
+    if ( ! is_admin() )
+    {
         wp_deregister_script('jquery');
     }
 }
@@ -20,7 +22,8 @@ remove_action('admin_print_scripts', 'print_emoji_detection_script');
 remove_action('wp_print_styles', 'print_emoji_styles');
 remove_action('admin_print_styles', 'print_emoji_styles');
 
-function disable_embeds_init() {
+function disable_embeds_init()
+{
 
     // Remove the REST API endpoint.
     remove_action('rest_api_init', 'wp_oembed_register_route');

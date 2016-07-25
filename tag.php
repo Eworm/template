@@ -19,7 +19,7 @@
                     <?php /* Start the Loop */ ?>
                     <?php while (have_posts()) : the_post(); ?>
     
-                        <!-- This function uses post.php -->
+                        <!-- Using templates/post -->
                         <?php get_template_part( 'templates/post', '' ); ?>
     
                     <?php endwhile; ?>    

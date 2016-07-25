@@ -2,7 +2,6 @@
 
     <fieldset class="searchform__container">
 
-
         <label for="s" class="searchform__container__label">
             <?php _e( 'Zoeken in de site', 'thema_vertalingen' ); ?>
         </label>

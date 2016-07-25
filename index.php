@@ -13,7 +13,7 @@
                     <?php /* Start the Loop */ ?>              
                     <?php while (have_posts()) : the_post(); ?>
                     
-                        <!-- This function uses post.php -->
+                        <!-- Using templates/post -->
                         <?php get_template_part( 'templates/post', '' ); ?>
     
                     <?php endwhile; ?>
@@ -25,9 +25,9 @@
                             $wp_query = null;
                             $wp_query = new WP_Query();
         
-                            $show_posts = 10;  //How many post you want on a page
-                            $permalink = 'Post name'; // Default, Post name
-                            $req_uri =  $_SERVER['REQUEST_URI']; // Know the current URI
+                            $show_posts = 10;                           //How many post you want on a page
+                            $permalink = 'Post name';                   // Default, Post name
+                            $req_uri =  $_SERVER['REQUEST_URI'];        // Know the current URI
         
                             // Permalink set to default
                             if ($permalink == 'Default') {
@@ -87,7 +87,7 @@
                             
                                 <li class="paging__number <?php if ($paged == $i) { echo ' paging__number--active'; } ?>">
                                 
-                                    <a href="<?php echo $uri . $i; ?>">
+                                    <a href="<?php echo $uri . $i; ?>" title="<?php _e( 'Naar pagina ', 'thema_vertalingen' ); ?><?php echo $i; ?>">
                                         
                                         <?php echo $i; ?>
                                         
@@ -117,7 +117,7 @@
                 
                     <h2 class="sidebar__section__title">
                         
-                        Sidebar section
+                        <?php _e( 'Sidebar section', 'thema_vertalingen' ); ?>
                         
                     </h2>
                                     

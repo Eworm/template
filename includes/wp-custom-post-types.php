@@ -4,7 +4,8 @@
 /* CPT
 ==================================================================================================================================*/
 add_action('init', 'cpt_register');
-function cpt_register() {
+function cpt_register() 
+{
 
 	$labels = array(
 		'name'                  => _x('Mediatheek', 'post type general name'),
@@ -45,7 +46,8 @@ function cpt_register() {
 
 /* CPT Taxonomies
 ==================================================================================================================================*/
-function create_cpt_taxonomies() {
+function create_cpt_taxonomies() 
+{
     $labels = array(
         'name'              => _x( 'Categorieën', 'taxonomy general name' ),
         'singular_name'     => _x( 'Categorie', 'taxonomy singular name' ),
@@ -76,7 +78,8 @@ add_action( 'init', 'create_cpt_taxonomies', 0 );
 /* Custom post type icons
    Get the icon content here: https://developer.wordpress.org/resource/dashicons/#welcome-write-blog
 ==================================================================================================================================*/
-function add_menu_icons_styles() {
+function add_menu_icons_styles() 
+{
 ?>
  
 <style>

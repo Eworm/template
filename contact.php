@@ -126,20 +126,24 @@ endif;
                         <?php _e( 'Bedankt voor Je e-mail', 'thema_vertalingen' ); ?>, <?=$name;?>
                         
                     </h1>
-        
-                    <p>
+                
+                    <div class="page-content__body">
+            
+                        <p>
+                            
+                            <?php _e( 'Je e-mail is verstuurd. Ik neem zo snel mogelijk contact met u op.', 'thema_vertalingen' ); ?>
+                            
+                        </p>
+            
+                        <p>
+                            
+                            <a href="<?php echo get_settings('home'); ?>" title="<?php _e( 'Terug naar de homepage', 'thema_vertalingen' ); ?>">
+                                <?php _e( 'Terug naar de homepage', 'thema_vertalingen' ); ?>
+                            </a>
+                            
+                        </p>
                         
-                        <?php _e( 'Je e-mail is verstuurd. Ik neem zo snel mogelijk contact met u op.', 'thema_vertalingen' ); ?>
-                        
-                    </p>
-        
-                    <p>
-                        
-                        <a href="<?php echo get_settings('home'); ?>" title="<?php _e( 'Terug naar de homepage', 'thema_vertalingen' ); ?>">
-                            <?php _e( 'Terug naar de homepage', 'thema_vertalingen' ); ?>
-                        </a>
-                        
-                    </p>
+                    </div>
         
                 </main>
                 
@@ -160,14 +164,14 @@ endif;
             <div class="row">
     
                 <main class="page-content col col--5" role="main">
+                    
+                    <h1 class="page-content__title">
+                            
+                        <?php the_title(); ?>
+                        
+                    </h1>
         
                     <form action="#contactform" id="contactform" method="post" class="form" data-parsley-validate>
-        
-                        <h1 class="page-content__title">
-                            
-                            <?php the_title(); ?>
-                            
-                        </h1>
                         
                         <fieldset class="formcontainer">
                                 
