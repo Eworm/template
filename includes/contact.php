@@ -1,6 +1,6 @@
 <?php
-    
-    
+
+
 /* Error messages
 ==================================================================================================================================*/
 $nameError_message = 'Je bent vergeten je naam in te vullen';
@@ -20,20 +20,20 @@ function mt_add_pages()
 
 /* Get contactinfo
 ==================================================================================================================================*/
-function mt_contactrequest_page () 
+function mt_contactrequest_page ()
 {
 
     global $wpdb;
-    
-    $requests = $wpdb->get_results( 
+
+    $requests = $wpdb->get_results(
     "SELECT *
     FROM maillog
     "
     );
-    
+
     echo '<pre>';
     echo '</pre>';
-    
+
     echo '<table cellspacing="10">';
     echo '<tr>';
     echo '<th align="left">Van</th>';
@@ -41,8 +41,8 @@ function mt_contactrequest_page ()
     echo '<th align="left">Bericht</th>';
     echo '<th align="left">Tijd</th>';
     echo '<tr>';
-    
-    foreach ( $requests as $request ) 
+
+    foreach ( $requests as $request )
     {
         echo '<tr>';
         echo '<td valign="top">';
@@ -59,9 +59,9 @@ function mt_contactrequest_page ()
         echo '</td>';
         echo '</tr>';
         echo '<tr><td colspan="4"><hr></td></tr>';
-    }  
+    }
     echo '</table>';
-    
+
 }
 
 ?>

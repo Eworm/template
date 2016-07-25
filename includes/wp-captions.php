@@ -5,7 +5,7 @@
 add_shortcode('wp_caption', 'fixed_img_caption_shortcode');
 add_shortcode('caption', 'fixed_img_caption_shortcode');
 
-function fixed_img_caption_shortcode($attr, $content = null) 
+function fixed_img_caption_shortcode($attr, $content = null)
 {
     // Allow plugins/themes to override the default caption template.
     $output = apply_filters('img_caption_shortcode', '', $attr, $content);

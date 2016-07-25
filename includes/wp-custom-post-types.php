@@ -1,10 +1,10 @@
 <?php
-    
+
 
 /* CPT
 ==================================================================================================================================*/
 add_action('init', 'cpt_register');
-function cpt_register() 
+function cpt_register()
 {
 
 	$labels = array(
@@ -46,7 +46,7 @@ function cpt_register()
 
 /* CPT Taxonomies
 ==================================================================================================================================*/
-function create_cpt_taxonomies() 
+function create_cpt_taxonomies()
 {
     $labels = array(
         'name'              => _x( 'Categorieën', 'taxonomy general name' ),
@@ -78,16 +78,16 @@ add_action( 'init', 'create_cpt_taxonomies', 0 );
 /* Custom post type icons
    Get the icon content here: https://developer.wordpress.org/resource/dashicons/#welcome-write-blog
 ==================================================================================================================================*/
-function add_menu_icons_styles() 
+function add_menu_icons_styles()
 {
 ?>
- 
+
 <style>
 #adminmenu .menu-icon-mediatheek div.wp-menu-image:before {
     content: "\f110";
 }
 </style>
- 
+
 <?php
 }
 add_action( 'admin_head', 'add_menu_icons_styles' );

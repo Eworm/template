@@ -10,39 +10,39 @@ Template Name: Homepage
     <div class="core core--content">
 
         <!-- <img src="<?php header_image(); ?>"> -->
-        
+
         <div class="row">
 
             <main class="page-content col col--6" role="main">
-    
+
                 <?php if (have_posts()) : ?>
-    
+
                     <?php while (have_posts()) : the_post(); ?>
-                
+
                         <h1 class="page-content__title">
-                            
+
                             <?php the_title(); ?>
-                            
+
                         </h1>
-                        
+
                         <div class="page-content__body">
-                            
+
                             <?php the_content('Weiterlesen &raquo;'); ?>
-                            
+
                         </div>
-                                                    
+
                     <?php endwhile; ?>
-    
+
                 <?php endif; ?>
-    
+
             </main>
-            
+
             <aside class="sidebar col col--2" role="complementary">
-                
+
                 Aside
-                
+
             </aside>
-            
+
         </div>
 
     </div>

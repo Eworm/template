@@ -28,12 +28,12 @@ var dest_paths = {
 // CSS sassing
 gulp.task('css', function() {
     gulp.src(src_paths.css)
-    
+
         .pipe(plugins.plumber({errorHandler: plugins.notify.onError('Error: <%= error.message %>')}))
-        
+
         .pipe(plugins.sass({ outputStyle: 'compressed', includePaths: 'bower_components/normalize-scss/sass/normalize'}))
         .pipe(plugins.autoprefixer({ browsers: ['last 2 versions', 'ie 10', 'ios 8', 'android 4'], cascade: false }))
-        
+
         .pipe(plugins.uncss({
             html: ['index.html',
                 'posts/**/*.html',
@@ -66,13 +66,13 @@ gulp.task('css', function() {
                 ],
             }
         }))
-        
+
         .pipe(plugins.cssnano({
             zindex: false,
             autoprefixer: false
         }))
 		.pipe(gulp.dest(dest_paths.css))
-		
+
         .pipe(plugins.livereload())
         .pipe(plugins.notify({ message: 'Css complete!' }));
 });
@@ -80,30 +80,30 @@ gulp.task('css', function() {
 
 // Uglify
 gulp.task('uglify', function() {
-    
+
     gulp.src(src_paths.functions)
-    
+
         .pipe(plugins.plumber({errorHandler: plugins.notify.onError('Error: <%= error.message %>')}))
-    
+
         .pipe(plugins.concat('functions.min.js'))
         .pipe(plugins.uglify({
             compress: false
         }))
         .pipe(gulp.dest(dest_paths.javascript))
-        
+
         .pipe(plugins.livereload())
         .pipe(plugins.notify({ message: 'Uglify complete!' }))
-        
+
     gulp.src(src_paths.labjs)
-    
+
         .pipe(plugins.plumber({errorHandler: plugins.notify.onError('Error: <%= error.message %>')}))
-    
+
         .pipe(plugins.concat('lab.min.js'))
         .pipe(plugins.uglify({
             compress: false
         }))
         .pipe(gulp.dest(dest_paths.javascript))
-        
+
         .pipe(plugins.livereload())
         .pipe(plugins.notify({ message: 'Uglify complete!' }))
 });
@@ -111,9 +111,9 @@ gulp.task('uglify', function() {
 
 // SVG sprite
 gulp.task('sprite', function () {
-    
+
     return gulp.src(src_paths.sprite)
-    
+
         .pipe(plugins.plumber())
         .pipe(plugins.svgSprite({
             "svg": {
@@ -137,10 +137,10 @@ gulp.task('sprite', function () {
             /* Do some awesome error handling ... */
         })
         .pipe(gulp.dest(dest_paths.images))
-        
+
         .pipe(plugins.livereload())
         .pipe(plugins.notify({ message: 'Sprite complete!' }))
-            
+
 });
 
 // SCSS lint

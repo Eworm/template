@@ -27,11 +27,11 @@ class WP_HTML_Compression
         {
                 $raw = strlen($raw);
                 $compressed = strlen($compressed);
-                
+
                 $savings = ($raw-$compressed) / $raw * 100;
-                
+
                 $savings = round($savings, 2);
-                
+
                 return '<!--HTML compressed, size saved '.$savings.'%. From '.$raw.' bytes, now '.$compressed.' bytes-->';
         }
         protected function minifyHTML($html)
@@ -45,9 +45,9 @@ class WP_HTML_Compression
                 foreach ($matches as $token)
                 {
                         $tag = (isset($token['tag'])) ? strtolower($token['tag']) : null;
-                        
+
                         $content = $token[0];
-                        
+
                         if (is_null($tag))
                         {
                                 if ( !empty($token['script']) )
@@ -61,7 +61,7 @@ class WP_HTML_Compression
                                 else if ($content == '<!--wp-html-compression no compression-->')
                                 {
                                         $overriding = !$overriding;
-                                        
+
                                         // Don't print the comment
                                         continue;
                                 }
@@ -93,60 +93,60 @@ class WP_HTML_Compression
                                         else
                                         {
                                                 $strip = true;
-                                                
+
                                                 // Remove any empty attributes, except:
                                                 // action, alt, content, src
                                                 $content = preg_replace('/(\s+)(\w++(?<!\baction|\balt|\bcontent|\bsrc)="")/', '$1', $content);
-                                                
+
                                                 // Remove any space before the end of self-closing XHTML tags
                                                 // JavaScript excluded
                                                 $content = str_replace(' />', '/>', $content);
                                         }
                                 }
                         }
-                        
+
                         if ($strip)
                         {
                                 $content = $this->removeWhiteSpace($content);
                         }
-                        
+
                         $html .= $content;
                 }
-                
+
                 return $html;
         }
-                
+
         public function parseHTML($html)
         {
                 $this->html = $this->minifyHTML($html);
-                
+
                 if ($this->info_comment)
                 {
                         $this->html .= "\n" . $this->bottomComment($html, $this->html);
                 }
         }
-        
+
         protected function removeWhiteSpace($str)
         {
                 $str = str_replace("\t", ' ', $str);
                 $str = str_replace("\n",  '', $str);
                 $str = str_replace("\r",  '', $str);
-                
+
                 while (stristr($str, '  '))
                 {
                         $str = str_replace('  ', ' ', $str);
                 }
-                
+
                 return $str;
         }
 }
 
-function wp_html_compression_finish($html) 
+function wp_html_compression_finish($html)
 {
         return new WP_HTML_Compression($html);
 }
 
-function wp_html_compression_start() 
+function wp_html_compression_start()
 {
         ob_start('wp_html_compression_finish');
 }
