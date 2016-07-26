@@ -88,8 +88,7 @@ fieldset {
         display: block;
         clear: both;
 
-        &:hover,
-        &:focus {
+        &:hover, &:focus {
             cursor: pointer;
         }
 

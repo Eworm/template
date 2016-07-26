@@ -67,8 +67,7 @@
         color: $mute;
         text-decoration: none;
 
-        &:hover,
-        &:focus {
+        &:hover, &:focus {
             color: $mute--hover;
             text-decoration: underline;
         }

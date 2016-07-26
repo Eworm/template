@@ -50,8 +50,7 @@
             background: transparent;
         }
 
-        &:hover,
-        &:focus {
+        &:hover, &:focus {
             background: $border;
         }
     }

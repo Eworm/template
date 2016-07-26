@@ -114,8 +114,7 @@ h5 {
         a {
             text-decoration: none;
     
-            &:hover,
-            &:focus {
+            &:hover, &:focus {
                 text-decoration: underline;
             }
         }

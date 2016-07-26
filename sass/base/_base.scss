@@ -45,8 +45,7 @@ a {
     color: $link;
     text-decoration: underline;
 
-    &:hover,
-    &:focus {
+    &:hover, &:focus {
         text-decoration: none;
     }
 }
