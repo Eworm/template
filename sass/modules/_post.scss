@@ -87,6 +87,10 @@
 .post__options {
 
     a {
-        @extend %hover-underline;
+        text-decoration: none
+        
+        &:hover, &:focus {
+            text-decoration: underline;
+        }
     }
 }

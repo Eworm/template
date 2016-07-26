@@ -1,6 +1,4 @@
 .pagemenu {
-    @include flex-direction(column);
-    @include order(2);
 
     @media (min-width: $mq--lap) {
         margin-bottom: $margin;

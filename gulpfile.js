@@ -38,6 +38,14 @@ gulp.task('css', function() {
             zindex: false,
             autoprefixer: false
         }))
+        
+/*
+        .pipe(plugins.pixrem({
+            rootValue: '100%',
+            replace: true
+        }))
+*/
+        
 		.pipe(gulp.dest(dest_paths.css))
 
         .pipe(plugins.livereload())
