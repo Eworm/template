@@ -16,6 +16,7 @@
     "gulp-livereload": "^3.8.1",
     "gulp-load-plugins": "^1.1.0",
     "gulp-notify": "^2.2.0",
+    "gulp-pixrem": "^1.0.0",
     "gulp-plumber": "^1.0.1",
     "gulp-sass": "^2.1.0",
     "gulp-scss-lint": "0.3.8",

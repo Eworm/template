@@ -232,18 +232,19 @@ function createGeocodeCallback_single(item, map, addressId)
 function addMarker_single(map, item, location, addressId)
 {
     var marker = new google.maps.Marker
-    {
-        map : map,
-        position : location,
-    });
+    ({
+        map: map,
+        position: location
+    })
     
     var bounds = new google.maps.LatLngBounds();
     bounds.extend(location);
     map.fitBounds(bounds);
+    
     zoomChangeBoundsListener =
     google.maps.event.addListenerOnce(map, 'bounds_changed', function(event)
     {
-        if (this.getZoom())
+        if (this.getZoom()) 
         {
             this.setZoom(14);
         }
