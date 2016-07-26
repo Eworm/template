@@ -31,20 +31,20 @@ gulp.task('css', function() {
 
         .pipe(plugins.plumber({errorHandler: plugins.notify.onError('Error: <%= error.message %>')}))
 
-        .pipe(plugins.sass({ outputStyle: 'compressed', includePaths: 'bower_components/normalize-scss/sass/normalize'}))
-        .pipe(plugins.autoprefixer({ browsers: ['last 2 versions', 'ie 10', 'ios 8', 'android 4'], cascade: false }))
+        .pipe(plugins.sass({
+            outputStyle: 'compressed',
+            includePaths: 'bower_components/normalize-scss/sass/normalize'
+        }))
+        
+        .pipe(plugins.autoprefixer({
+            browsers: ['last 2 versions', 'ie 10', 'ios 8', 'android 4'],
+            cascade: false
+        }))
 
         .pipe(plugins.cssnano({
             zindex: false,
             autoprefixer: false
         }))
-        
-/*
-        .pipe(plugins.pixrem({
-            rootValue: '100%',
-            replace: true
-        }))
-*/
         
 		.pipe(gulp.dest(dest_paths.css))
 
