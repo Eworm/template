@@ -157,7 +157,7 @@
 }
 
 .comments-area__list {
-    @extend %remove-style;
+
 }
 
 .comment__author__admin,
@@ -195,7 +195,11 @@
 // Link for replying
 // *
 .comment__reply__link {
-    @extend %hover-underline;
+    text-decoration: none;
+    
+    &:hover, &:focus {
+        text-decoration: underline;
+    }
 }
 
 

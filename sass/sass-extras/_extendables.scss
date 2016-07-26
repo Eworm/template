@@ -1,18 +1,4 @@
 // *
-// Underline hover
-// *
-%hover-underline {
-    text-decoration: none;
-    
-    &:hover, &:focus {
-        text-decoration: underline;
-    }
-}
-
-
-
-
-// *
 // Images used in posts
 // *
 %postimage {
@@ -42,18 +28,6 @@
 
 
 // *
-// Remove styling of lists
-// *
-%remove-style {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
-
-
-
-// *
 // Row in a form
 // *
 %form__row {
@@ -67,7 +41,6 @@
     }
     
     &:last-child {
-        // margin-bottom: 0;
     }
     
     &.error {

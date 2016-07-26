@@ -20,11 +20,15 @@
     }
 
     ul {
-        @extend %remove-style;
+    
     }
 
     a {
-        @extend %hover-underline;
+        text-decoration: none;
+    
+        &:hover, &:focus {
+            text-decoration: underline;
+        }
     }
 
     iframe {
