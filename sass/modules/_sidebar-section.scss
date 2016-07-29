@@ -11,21 +11,20 @@
     }
 
     &:last-child {
-        // margin-bottom: 0;
     }
-    
+
     img {
         margin-bottom: $margin;
         border-radius: 0;
     }
 
     ul {
-    
+
     }
 
     a {
         text-decoration: none;
-    
+
         &:hover, &:focus {
             text-decoration: underline;
         }
@@ -34,7 +33,6 @@
     iframe {
         float: left;
     }
-
 }
 
 
@@ -47,14 +45,14 @@
     margin: 0 0 $margin--skinny;
     font-weight: bold;
     font-size: $body-size;
-    
+
     @media (min-width: $mq--lap) {
         margin-bottom: $margin;
     }
 
     a {
         text-decoration: none
-        
+
         &:hover, &:focus {
             text-decoration: underline;
         }

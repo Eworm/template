@@ -245,7 +245,7 @@ endif;
 
                                 <input type="hidden" name="submitted" id="submitted" value="true">
                                 <input type="hidden" name="about" value="<?php the_title(); ?>">
-                                <input type="submit" value="<?php _e( 'Verzenden', 'thema_vertalingen' ); ?>" class="button">
+                                <input type="submit" value="<?php _e( 'Verzenden', 'thema_vertalingen' ); ?>" class="btn btn--primary">
 
                             </div>
 
@@ -260,7 +260,7 @@ endif;
                     <?php $options = get_option('template_theme_options');
                         if (($options['theme_address'])) : ?>
 
-                        <section class="no-padding mob-hide">
+                        <section>
 
                             <script>
                                 var company_address = [{location:"<?php echo $options["theme_address"]; ?>"}];
