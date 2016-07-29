@@ -41,7 +41,7 @@ Als alles goed is gegaan heb je nu alle software en dependencies ge&iuml;nstalle
 Als je in je terminal naar de projectdirectory gaat en ```gulp``` uitvoert wordt de default Gulp taak uitgevoerd, in dit geval de watch taak. Deze taak zorgt ervoor dat de javascript, .scss bestanden en afbeeldingen automatisch gecompileerd worden als je die wijzigt.
 
 ## De mappenstructuur
-**De _put_in_root map**
+**De _root map**
 Hier staan de bestanden die je in de root van de site zet als-ie online gaat.
 
 **Fonts**
