@@ -1,7 +1,8 @@
 // *
 // Define font families here.
 // For slightly deeper browser support use woff2, woff & truetype. See https://css-tricks.com/snippets/css/using-font-face/
-// Font-files should be placed in the font directory
+// Font-files should be placed in the fonts directory
+// Use google fonts locally for a better pagespeed score.
 // *
 @font-face {
     font-family: 'fontname';
@@ -11,7 +12,6 @@
     font-weight: normal;
     font-style: normal;
 }
-
 
 
 
@@ -30,14 +30,12 @@ $type--xxl: 20px;
 
 
 
-
 // *
 // Standard site sizes & other type related stuff
 // *
 $base-size: $type--l;
 $body-size: $type--l;
 $line-height: 1.8;
-
 
 
 
@@ -48,14 +46,11 @@ $websafe: Arial, Verdana, sans-serif;
 
 
 
-
 // *
-// Font families
-// Use google fonts locally for a better pagespeed score.
+// Define font variables here using the above font names
 // *
-$body-font: $websafe;
-$special-font: $websafe; // Webfont, for example a google font
-
+$body-family: $websafe;
+$special-family: $websafe; // Webfont, for example a google font
 
 
 
@@ -88,7 +83,6 @@ h5 {
 
 
 
-
 // *
 // Page title
 // *
@@ -101,7 +95,6 @@ h5 {
         margin-bottom: $margin;
     }
 }
-
 
 
 // *
