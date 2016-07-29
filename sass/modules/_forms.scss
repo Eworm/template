@@ -6,10 +6,10 @@ input {
     padding: $input-padding*2;
     font-family: $body-family;
     font-size: $body-size;
-    
+
     @media (min-width: $mq--lap) {
         width: 50%;
-        
+
         aside section & {
             width: 100%;
         }
@@ -36,7 +36,7 @@ input[type="radio"] {
 }
 
 input[type="submit"] {
-    
+
     @media (min-width: $mq--lap) {
         width: auto;
     }
@@ -114,7 +114,7 @@ fieldset {
             clear: none;
         }
     }
-    
+
     .input-exp { // Form field explanation. Using a small element is preferrable
         display: block;
         font-size: $type--s;
@@ -150,7 +150,7 @@ fieldset {
 // Error messages
 // *
 .parsley-error {
-    
+
 }
 
 .parsley-errors-list {
@@ -163,7 +163,7 @@ fieldset {
     padding: 0;
     display: block;
     color: $error;
-    
+
     > li {
         margin: 0;
     }
