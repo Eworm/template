@@ -8,7 +8,6 @@
 }
 
 html {
-    font-size: $base-size/$body-size; // Enable font-size zoom for old ies
 
     &.html--active-menu {
         height: 100%;
@@ -18,7 +17,7 @@ html {
 
 body {
     background: $body-bg;
-    font: #{$body-size}/#{$line-height} #{$body-font};
+    font: #{$body-size}/#{$line-height} #{$body-family};
     color: $body;
 }
 
@@ -49,81 +48,4 @@ a {
     &:hover, &:focus {
         text-decoration: none;
     }
-}
-
-
-
-// *
-// Section dividers
-// *
-.divider {
-    width: 100%;
-    float: left;    
-    backface-visibility: hidden;
-    transform-style: flat;
-
-    @media (min-width: $mq--palm) {
-    }
-}
-
-
-
-// *
-// Center site
-// *
-.core {
-    margin: 0 auto;
-    padding: $gutter;
-    clear: both;
-
-    @media (min-width: $mq--lap) {
-        width: $site--width;
-        max-width: $site--max-width;
-        padding: $gutter 0;
-        position: relative;
-    }
-    
-    &:before, &:after {
-        content: '';
-        display: table;
-        zoom: 1;
-    }
-    
-    &:after {
-        clear: both;
-    }
-}
-
-.core--header {
-    z-index: 1200;
-}
-
-.core-mainmenu {
-    width: 100%;
-    padding: 0;
-    float: left;
-    
-    @media (min-width: $mq--lap) {
-        width: $site--width;
-        float: none;   
-    }
-}
-
-.core--content {
-    width: 100%;
-    padding-top: 0;
-    padding-bottom: 0;
-    
-    @media (min-width: $mq--lap) {
-        width: $site--width;
-        display: block;
-    }
-}
-
-.core-doormat {
-    
-}
-
-.core-footer {
-    
 }
