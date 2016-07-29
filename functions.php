@@ -20,7 +20,6 @@ require_once 'includes/required-plugins.php';
 require_once 'includes/contact.php';
 require_once 'includes/widgets.php';
 require_once 'includes/wp-options.php';
-require_once 'includes/wp-captions.php';
 require_once 'includes/wp-submenu-walker.php';
 require_once 'includes/wp-custom-post-types.php';
 require_once 'includes/acf-options.php';
