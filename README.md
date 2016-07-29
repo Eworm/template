@@ -28,7 +28,8 @@ Installeer de bower dependencies met:
 
 **8:**
 Zet deze regels in je .gitignore, zodat de repo netjes blijft. Het is het handigst om dat globaal te doen:
-```node_modules
+```
+node_modules
 bower_components
 .sass-cache
 ```
