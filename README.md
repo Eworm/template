@@ -21,12 +21,10 @@ Ga in de terminal naar de projectdirectory
 **6:**
 Installeer de gulp modules met:
 ```npm install``` of ```sudo npm install```
-*De gulp modules staan straks in de map 'node_modules'*
 
 **7:**
 Installeer de bower dependencies met:
 ```bower install```
-*De bower dependencies staan straks in de map 'bower_components'*
 
 **8:**
 Zet deze regels in je .gitignore, zodat de repo netjes blijft. Het is het handigst om dat globaal te doen:
@@ -49,7 +47,7 @@ Hier staan de bestanden die je in de root van de site zet als-ie online gaat.
 Hier staan de niet-standaard fonts die gebruikt worden.
 
 **Afbeeldingen**
-De 'images-src' map is bedoelt voor originele bestanden. Een sprite wordt automatisch gegenereerd van svg's.
+De 'images-src' map is bedoelt voor originele bestanden. Een svg sprite wordt automatisch gegenereerd met svg's in de sprite map.
 
 **Javascript**
 De 'js-src' map is bedoelt voor de bestanden waar je in werkt. D.m.v. een Gulp taak worden deze bestanden samengevoegd en geminified en in de 'js' map geplaatst. De uglify taak in gulpfile.js zorgt hiervoor. Hier geef je aan welke bestanden samengevoegd moeten worden.
