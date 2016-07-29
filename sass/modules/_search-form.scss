@@ -69,7 +69,7 @@
 
 .searchform__container__button {
     display: none;
-    
+
     @media (min-width: $mq--lap) {
         width: 30%;
         float: left;
@@ -95,5 +95,5 @@
 // Hiding the label, but not for screenreaders
 // *
 .searchform__container__label {
-    @include text--hide;    
+    @include screenreader--hide;
 }
