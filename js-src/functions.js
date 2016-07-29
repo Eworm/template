@@ -16,10 +16,12 @@ $(document).ready(function() {
 
 
     // Show initial password
+/*
     $('#LoginPassword').hideShowPassword(
     {
         show: true
     });
+*/
     // Toggle password
     $('#show-password').on('change', function () 
     {
@@ -30,34 +32,6 @@ $(document).ready(function() {
             $(this).prop('checked')
         );
     });
-
-
-
-    // Close the menu when clickin' on the content
-    $('html').on('click', '#js-content-toggle', function(e) 
-    {
-    
-        e.preventDefault();
-        closeMenu('html--toggle-menu', 'html--active-menu');
-        $(this).remove();
-        
-    });
-
-
-
-    // Function to open the menu
-    function openMenu(toggleClass, activeClass, contentToggle, scrollTop)
-    {
-        $('html').addClass(toggleClass);
-    };
-
-
-
-    // Function to close the menu
-    function closeMenu(toggleClass, activeClass)
-    {
-        $('html').removeClass(toggleClass);
-    };
 
 
 

@@ -8,32 +8,12 @@
 }
 
 html {
-
-    &.html--active-menu {
-        height: 100%;
-        overflow: hidden;
-    }
 }
 
 body {
     background: $body-bg;
     font: #{$body-size}/#{$line-height} #{$body-family};
     color: $body;
-}
-
-#js-content-toggle {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: $mobile-menu-width;
-    z-index: 10000;
-    opacity: 0;
-    background: $body-bg;
-    
-    @media (min-width: $mq--palm) {
-        left: $skinny-menu-width;
-    }
 }
 
 

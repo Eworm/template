@@ -128,22 +128,22 @@
                     <?php get_search_form(); ?>
 
                 </div>
+                
+                <nav class="mainmenu divider divider--mainmenu" role="navigation" >
+
+                    <div class="core core--mainmenu">
+    
+                        <?php wp_nav_menu( array(
+                            'theme_location' => 'main-menu',
+                            'container' => '',
+                            'menu_id' => '',
+                            'menu_class' => 'main-menu',
+                            'depth' => '2'
+                        )); ?>
+    
+                    </div>
+    
+                </nav>
 
             </header>
 
-
-            <nav class="mainmenu divider divider--mainmenu" role="navigation" >
-
-                <div class="core core--mainmenu">
-
-                    <?php wp_nav_menu( array(
-                        'theme_location' => 'main-menu',
-                        'container' => '',
-                        'menu_id' => '',
-                        'menu_class' => 'main-menu',
-                        'depth' => '2'
-                    )); ?>
-
-                </div>
-
-            </nav>
