@@ -35,14 +35,14 @@
     margin-bottom: $margin--skinny;
     float: left;
     clear: both;
-    
+
     @media (min-width: $mq--lap) {
         margin-bottom: $margin;
     }
-    
+
     &:last-child {
     }
-    
+
     &.error {
         margin-bottom: 0;
         padding: $padding--skinny;
@@ -52,12 +52,12 @@
         box-shadow: $default-box-shadow;
         background: $alert;
         color: #fff;
-        
+
         @media (min-width: $mq--lap) {
             width: 50%;
         }
     }
-    
+
     .textarea + div.error {
         width: 100%;
     }
@@ -75,7 +75,7 @@
     float: left;
     opacity: 1;
     transition: opacity .2s ease;
-    
+
     &:last-child {
         margin-bottom: 0;
     }
