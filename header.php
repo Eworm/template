@@ -113,9 +113,14 @@
 
                 <div class="core core--header">
 
-                    <a href="<?php echo get_option('home'); ?>" id="js-logo" class="logo" rel="home" title="<?php _e( 'Terug naar de homepage', 'thema_vertalingen' ); ?>">
-
-                        <?php bloginfo('name'); ?>
+                    <a href="<?php echo get_option('home'); ?>" class="logo" rel="home" title="<?php _e( 'Terug naar de homepage', 'thema_vertalingen' ); ?>">
+                        
+                        <svg class="logo__img">
+                            <title>
+                                <?php bloginfo('name'); ?>
+                            </title>
+                            <use xlink:href="#logo">
+                        </svg>
 
                     </a>
 
