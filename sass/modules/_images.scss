@@ -120,21 +120,21 @@ a img.aligncenter {
 
 
     &.alignnone {
-    
+
         @media (min-width: $mq--palm) {
             margin: $margin $margin $margin 0;
         }
     }
-    
+
     &.alignleft {
-    
+
         @media (min-width: $mq--palm) {
             margin: 0 $margin $margin 0;
         }
     }
-    
+
     &.alignright {
-    
+
         @media (min-width: $mq--palm) {
             margin: 0 0 $margin $margin;
         }
@@ -154,7 +154,7 @@ a img.aligncenter {
         width: auto;
         margin: $margin 0;
     }
-    
+
     @media (min-width: $mq--palm) {
         float: right;
         margin: 0 0 $margin $margin;
