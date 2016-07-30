@@ -26,11 +26,14 @@
     padding: 0;
     display: block;
     float: left;
+    white-space: nowrap;
     background: $nav-bg;
-    background: rgba($nav-bg, .96);
-    border-top: 1px solid $border;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    list-style-type: none;
 
     @media (min-width: $mq--lap) {
+        width: $site--width;
         border-top: 0;
     }
 }
@@ -42,39 +45,22 @@
 // A single item
 // *
 .menu-item {
-    width: 50%;
-    display: block;
-    float: left;
+    display: inline-block;
     position: relative;
     
     .sub-menu {
+        display: none;
         left: -100%;
-    }
-    
-    &:nth-child(2n+1) {
-        clear: left;
-        border-right: 1px solid $border;
-        
-        .sub-menu {
-            left: 0;
-        }
     }
 
     @media (min-width: $mq--lap) {
-        width: auto;
         float: left;
         position: relative;
-        
-        &:nth-child(2n+1) {
-            clear: none;
-            border-right: 0;
-        }
     }
     
     > a {
         padding: $padding--skinny $padding--skinny;
-        display: block;
-        border-bottom: 1px solid $border;
+        display: inline-block;
         text-decoration: none;
         transition: all .15s ease-out;
 
@@ -86,7 +72,6 @@
             padding: $padding--skinny $padding;
             float: left;
             position: relative;
-            border-bottom: 0;
         }
 
         &:hover, &:focus {
@@ -118,12 +103,10 @@
 .current_page_parent {
 
     a {
+        background: $mute;
     }
 
     @media (min-width: $mq--lap) {
-        background: $border;
-        box-shadow: none;
-        background-image: none;
     }
 }
 

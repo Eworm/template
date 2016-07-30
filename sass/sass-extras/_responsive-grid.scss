@@ -47,37 +47,31 @@
 }
 
 .core--header {
-    z-index: 1200;
 }
 
-.core-mainmenu {
-    width: 100%;
+.core--mainmenu {
     padding: 0;
-    float: left;
-
+    
     @media (min-width: $mq--lap) {
-        width: $site--width;
-        float: none;
+    }
+    
+    > .row {
+        margin: 0;
+        
+        @media (min-width: $mq--lap) {
+            margin-right: -#{$gutter--skinny};
+            margin-left: -#{$gutter--skinny};
+        }
     }
 }
 
 .core--content {
-    width: 100%;
-    padding-top: 0;
-    padding-bottom: 0;
-
-    @media (min-width: $mq--lap) {
-        width: $site--width;
-        display: block;
-    }
 }
 
 .core-doormat {
-
 }
 
 .core-footer {
-
 }
 
 
@@ -100,21 +94,11 @@
     }
 }
 
-.row-condensed {
-    margin-right: -#{$gutter--skinny / 2};
-    margin-left: -#{$gutter--skinny / 2};
-}
-
 .col {
     width: 100%;
     padding-right: $gutter--skinny;
     padding-left: $gutter--skinny;
     float: left;
-
-    .row-condensed & {
-        padding-right: $gutter--skinny / 2;
-        padding-left: $gutter--skinny / 2;
-    }
 }
 
 .col--center {

@@ -112,43 +112,51 @@
             <header class="header divider divider--header" role="banner">
 
                 <div class="core core--header">
+                    
+                    <div class="row">
 
-                    <a href="<?php echo get_option('home'); ?>" class="logo" rel="home" title="<?php _e( 'Terug naar de homepage', 'thema_vertalingen' ); ?>">
-                        
-                        <svg class="logo__img">
-                            <title>
-                                <?php bloginfo('name'); ?>
-                            </title>
-                            <use xlink:href="#logo">
-                        </svg>
-
-                    </a>
-
-                    <p class="cp">
-
-                        <?php bloginfo( 'description' ); ?>
-
-                    </p>
-
-                    <?php get_search_form(); ?>
+                        <a href="<?php echo get_option('home'); ?>" class="logo" rel="home" title="<?php _e( 'Terug naar de homepage', 'thema_vertalingen' ); ?>">
+                            
+                            <svg class="logo__img">
+                                <title>
+                                    <?php bloginfo('name'); ?>
+                                </title>
+                                <use xlink:href="#logo">
+                            </svg>
+    
+                        </a>
+    
+                        <p class="cp">
+    
+                            <?php bloginfo( 'description' ); ?>
+    
+                        </p>
+    
+                        <?php get_search_form(); ?>
+                    
+                    </div>
 
                 </div>
                 
-                <nav class="mainmenu divider divider--mainmenu" role="navigation" >
-
-                    <div class="core core--mainmenu">
-    
-                        <?php wp_nav_menu( array(
-                            'theme_location' => 'main-menu',
-                            'container' => '',
-                            'menu_id' => '',
-                            'menu_class' => 'main-menu',
-                            'depth' => '2'
-                        )); ?>
-    
+                <div class="core core--mainmenu">
+                    
+                    <div class="row">
+                    
+                        <nav class="mainmenu" role="navigation" >
+            
+                            <?php wp_nav_menu( array(
+                                'theme_location' => 'main-menu',
+                                'container' => '',
+                                'menu_id' => '',
+                                'menu_class' => 'main-menu',
+                                'depth' => '2'
+                            )); ?>
+            
+                        </nav>
+                        
                     </div>
-    
-                </nav>
+                    
+                </div>
 
             </header>
 
