@@ -1,6 +1,9 @@
 var gulp = require('gulp'),
     // Get packages from package.json
-    plugins = require('gulp-load-plugins')();
+    plugins = require('gulp-load-plugins')(),
+    critical = require('critical').stream;
+
+
 
 // Set source paths
 var src_paths = {
@@ -17,12 +20,14 @@ var src_paths = {
 };
 
 
+
 // Set destination paths
 var dest_paths = {
     css: '.',
     images: 'images',
     javascript: 'js'
 };
+
 
 
 // CSS sassing
@@ -51,6 +56,7 @@ gulp.task('css', function() {
         .pipe(plugins.livereload())
         .pipe(plugins.notify({ message: 'Css complete!' }))
 });
+
 
 
 // Uglify
@@ -82,6 +88,7 @@ gulp.task('uglify', function() {
         .pipe(plugins.livereload())
         .pipe(plugins.notify({ message: 'Uglify complete!' }))
 });
+
 
 
 // SVG sprite
@@ -118,11 +125,44 @@ gulp.task('sprite', function () {
 
 });
 
+
+
 // SCSS lint
 gulp.task('lint', function() {
     gulp.src(src_paths.sass)
         .pipe(plugins.scssLint())
 });
+
+
+
+// Critical css
+// More info & options: https://github.com/addyosmani/critical
+gulp.task('critical', function () {
+    return gulp.src('style.css')
+        .pipe(critical({
+            inline: false,
+            base: '.',
+            src: 'http://template.dev/',
+            css: 'style.css',
+            dest: 'style-critical.css',
+            minify: false,
+            extract: false,
+            width: 1300,
+            height: 900,
+            include: ['.breadcrumbs',
+                        '.breadcrumbs > li',
+                        '.breadcrumbs a',
+                        '.page_item',
+                        '.pagemenu',
+                        '.pagemenu ul',
+                        '.pagemenu li',
+                        '.pagemenu a']
+        }))
+        
+        .pipe(plugins.livereload())
+        .pipe(plugins.notify({ message: 'Critical css complete!' }))
+});
+
 
 
 // Watch
@@ -132,6 +172,7 @@ gulp.task('watch', function(ev) {
 	gulp.watch(src_paths.javascript, ['uglify']);
     gulp.watch(src_paths.sprite, ['sprite']);
 });
+
 
 
 // Default

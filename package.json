@@ -8,6 +8,7 @@
   "description": "blabla",
   "homepage": "http://www.woutmager.nl",
   "devDependencies": {
+    "critical": "^0.7.3",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "3.1.0",
     "gulp-concat": "^2.6.0",
