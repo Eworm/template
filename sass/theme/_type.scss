@@ -5,13 +5,14 @@
 // Use google fonts locally for a better pagespeed score.
 // *
 @font-face {
-    font-family: 'fontname';
-    src: url('fonts/fontname.woff2') format('woff2'),
-         url('fonts/fontname.woff') format('woff'),
-         url('fonts/fontname.ttf') format('truetype');
-    font-weight: normal;
+    font-family: 'Lato regular';
+    src: url('fonts/lato-regular.woff2') format('woff2'),
+         url('fonts/lato-regular.woff') format('woff'),
+         url('fonts/lato-regular.ttf') format('truetype');
+    font-weight: 300;
     font-style: normal;
 }
+
 
 
 
@@ -43,14 +44,14 @@ $line-height: 1.8;
 // Define font names here, use them later on
 // *
 $websafe: Arial, Verdana, sans-serif;
+$lato--regular: 'Lato regular', arial, sans-serif;
 
 
 
 // *
 // Define font variables here using the above font names
 // *
-$body-family: $websafe;
-$special-family: $websafe; // Webfont, for example a google font
+$body-family: $lato--regular;
 
 
 

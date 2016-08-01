@@ -48,46 +48,23 @@
 
         <?php wp_head(); ?>
 
-        <!-- Include the above the fold css and replace all relative urls with the theme url -->
-        <style>
-            <?php
-
-                // Add the theme url to external files
-                function replaceUrl($buffer) {
-                    return (str_replace('url("', 'url("' . get_bloginfo('template_url') . '/', $buffer));
-                }
-
-                // Include the above the fold css
-                ob_start('replaceUrl');
-                include 'style-above-the-fold.css';
-                ob_end_flush();
-
-            ?>
-        </style>
-
-        <!-- Visitors without javascript get the rest of the stylesheet the standard way -->
-        <noscript>
-            <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
-        </noscript>
+        <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">        
 
         <!-- Script suggestion from google on how to insert the stylesheet -->
+        <noscript></noscript>
         <script>
 
             // So we can use the template url in javascript
             var templateUrl = '<?php bloginfo('template_url'); ?>';
 
-            // Insert the remaining css & js as soon as possible
+            // Insert the remaining js as soon as possible
             var cb = function() {
-
-                var l = document.createElement('link'); l.rel = 'stylesheet';
-                l.href = '<?php bloginfo('stylesheet_url'); ?>';
 
                 var y = document.createElement('script');
                 y.src = '<?php bloginfo('template_url'); ?>/js/lab.min.js';
 
                 var h = document.getElementsByTagName('noscript')[0];
                 h.parentNode.insertBefore(y, h);
-                h.parentNode.insertBefore(l, h);
             };
 
             var raf = false;
