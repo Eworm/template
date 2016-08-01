@@ -1,14 +1,13 @@
 // *
 // Define font families here.
-// For slightly deeper browser support use woff2, woff & truetype. See https://css-tricks.com/snippets/css/using-font-face/
+// For practical browser support use woff2 & woff. See https://css-tricks.com/snippets/css/using-font-face/
 // Font-files should be placed in the fonts directory
 // Use google fonts locally for a better pagespeed score.
 // *
 @font-face {
-    font-family: 'Lato regular';
+    font-family: 'Lato';
     src: url('fonts/lato-regular.woff2') format('woff2'),
-         url('fonts/lato-regular.woff') format('woff'),
-         url('fonts/lato-regular.ttf') format('truetype');
+         url('fonts/lato-regular.woff') format('woff');
     font-weight: 300;
     font-style: normal;
 }
@@ -44,7 +43,7 @@ $line-height: 1.8;
 // Define font names here, use them later on
 // *
 $websafe: Arial, Verdana, sans-serif;
-$lato--regular: 'Lato regular', arial, sans-serif;
+$lato--regular: 'Lato', arial, sans-serif;
 
 
 
