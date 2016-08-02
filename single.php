@@ -13,7 +13,7 @@
 
                     <main <?php post_class('content single-post'); ?> role="main">
 
-                        <h1 class="post__title single-post__title">
+                        <h1 class="post__header single-post__header">
 
                             <?php the_title(); ?>
 
@@ -58,7 +58,7 @@
 
                     <main <?php post_class('content single-post no-results not-found'); ?> role="main">
 
-                        <h1 class="post__title single-post__title">
+                        <h1 class="post__header single-post__header">
 
                             <?php _e( 'Deze pagina bestaat niet', 'thema_vertalingen' ); ?>
 

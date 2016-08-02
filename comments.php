@@ -11,7 +11,7 @@ if ( post_password_required() )
 
     <?php if ( have_comments() ) : ?>
 
-        <h2 class="comments-area__title">
+        <h2 class="comments-area__header">
 
             <?php
                 printf( _nx( 'E&eacute;n reactie op &ldquo;%2$s&rdquo;', '%1$s reacties op &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'thema_vertalingen' ),

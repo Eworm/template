@@ -28,7 +28,7 @@
 
                     <article <?php post_class(); ?>>
 
-                        <h1 class="post__title">
+                        <h1 class="post__header">
 
                             <?php _e( 'Deze pagina bestaat niet', 'thema_vertalingen' ); ?>
 

@@ -115,7 +115,7 @@
 
                 <div class="sidebar__section">
 
-                    <h2 class="sidebar__section__title">
+                    <h2 class="sidebar__section__header">
 
                         <?php _e( 'Sidebar section', 'thema_vertalingen' ); ?>
 

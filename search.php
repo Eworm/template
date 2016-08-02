@@ -45,7 +45,7 @@
 
                     <section class="search-result">
 
-                        <h1 class="search-result__title post__title">
+                        <h1 class="search-result__header post__header">
 
                             <?php _e( 'Helaas..', 'thema_vertalingen' ); ?>
 

@@ -1,6 +1,6 @@
 <article <?php post_class('post'); ?>>
 
-    <h1 class="post__title">
+    <h1 class="post__header">
 
         <a href="<?php the_permalink() ?>" title="<?php _e( 'Directe link naar', 'thema_vertalingen' ); ?><?php the_title_attribute(); ?>">
 
