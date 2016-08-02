@@ -119,15 +119,15 @@ endif;
 
             <div class="row">
 
-                <main class="page-content col col--5" role="main">
+                <main class="content col col--5" role="main">
 
-                    <h1 class="page-content__title">
+                    <h1 class="content__title">
 
                         <?php _e( 'Bedankt voor Je e-mail', 'thema_vertalingen' ); ?>, <?=$name;?>
 
                     </h1>
 
-                    <div class="page-content__body">
+                    <div class="content__body">
 
                         <p>
 
@@ -163,9 +163,9 @@ endif;
 
             <div class="row">
 
-                <main class="page-content col col--5" role="main">
+                <main class="content col col--5" role="main">
 
-                    <h1 class="page-content__title">
+                    <h1 class="content__title">
 
                         <?php the_title(); ?>
 

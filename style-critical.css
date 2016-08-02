@@ -11,19 +11,19 @@ h2 {
   text-rendering: optimizeLegibility;
 }
 
-.page-content__title {
+.content__title {
   margin: 0 0 14px;
   font-weight: 400;
   font-size: 32px;
 }
 
 @media (min-width:46.875em) {
-  .page-content__title {
+  .content__title {
     margin-bottom: 28px;
   }
 }
 
-.page-content__body h2 {
+.content__body h2 {
   margin: 0;
   font-size: 24px;
 }
@@ -247,16 +247,16 @@ a {
   }
 }
 
-.page-content {
+.content {
   padding: 0;
 }
 
-.page-content__body p {
+.content__body p {
   margin: 0 0 14px;
 }
 
 @media (min-width:46.875em) {
-  .page-content__body p {
+  .content__body p {
     margin-bottom: 28px;
   }
 }

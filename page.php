@@ -44,15 +44,15 @@
             <?php if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>
 
-                <main class="page-content col col--6" role="main">
+                <main class="content col col--6" role="main">
 
-                    <h1 class="page-content__title">
+                    <h1 class="content__title">
 
                         <?php the_title(); ?>
 
                     </h1>
 
-                    <div class="page-content__body">
+                    <div class="content__body">
 
                         <?php the_content('Lees meer &raquo;'); ?>
 
@@ -64,15 +64,15 @@
 
             <?php else : ?>
 
-                <main class="page-content col col--6 no-results not-found" role="main">
+                <main class="content col col--6 no-results not-found" role="main">
 
-                    <h1 class="page-content__title">
+                    <h1 class="content__title">
 
                         <?php _e( 'Deze pagina bestaat niet', 'thema_vertalingen' ); ?>
 
                     </h1>
 
-                    <div class="page-content__body">
+                    <div class="content__body">
 
                         <p>
 

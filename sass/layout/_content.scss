@@ -1,7 +1,7 @@
 // *
 // Main content on a page
 // *
-.page-content {
+.content {
     padding: 0;
 
     @media (min-width: $mq--lap) {
@@ -13,7 +13,7 @@
 // *
 // The content
 // *
-.page-content__body {
+.content__body {
 
     p,
     ul {

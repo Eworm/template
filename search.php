@@ -8,11 +8,11 @@
 
         <div class="row">
 
-            <main class="page-content col col--5" role="main">
+            <main class="content col col--5" role="main">
 
                 <?php if (have_posts()) : ?>
 
-                    <h1 class="page-content__title">
+                    <h1 class="content__title">
 
                         <?php _e( 'Zoekresultaten voor', 'thema_vertalingen' ); ?> <em>&#8216;<?php echo $search_query ?>&#8217;</em>
 

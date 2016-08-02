@@ -6,15 +6,15 @@
 
         <div class="row">
 
-            <main class="page-content col col--5 not-found" role="main">
+            <main class="content col col--5 not-found" role="main">
 
-                <h1 class="page-content__title">
+                <h1 class="content__title">
 
                     <?php _e( 'Deze pagina bestaat niet (meer)', 'thema_vertalingen' ); ?>
 
                 </h1>
 
-                <div class="page-content__body">
+                <div class="content__body">
 
                     <p>
 

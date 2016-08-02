@@ -11,7 +11,7 @@
                 <?php if (have_posts()) : ?>
                 <?php while (have_posts()) : the_post(); ?>
 
-                    <main <?php post_class('page-content single-post'); ?> role="main">
+                    <main <?php post_class('content single-post'); ?> role="main">
 
                         <h1 class="post__title single-post__title">
 
@@ -56,7 +56,7 @@
                 <?php endwhile; ?>
                 <?php else : ?>
 
-                    <main <?php post_class('page-content single-post no-results not-found'); ?> role="main">
+                    <main <?php post_class('content single-post no-results not-found'); ?> role="main">
 
                         <h1 class="post__title single-post__title">
 
