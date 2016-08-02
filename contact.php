@@ -121,7 +121,7 @@ endif;
 
                 <main class="content col col--5" role="main">
 
-                    <h1 class="content__title">
+                    <h1 class="content__header">
 
                         <?php _e( 'Bedankt voor Je e-mail', 'thema_vertalingen' ); ?>, <?=$name;?>
 
@@ -165,7 +165,7 @@ endif;
 
                 <main class="content col col--5" role="main">
 
-                    <h1 class="content__title">
+                    <h1 class="content__header">
 
                         <?php the_title(); ?>
 

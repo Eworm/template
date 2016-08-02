@@ -46,7 +46,7 @@
 
                 <main class="content col col--6" role="main">
 
-                    <h1 class="content__title">
+                    <h1 class="content__header">
 
                         <?php the_title(); ?>
 
@@ -66,7 +66,7 @@
 
                 <main class="content col col--6 no-results not-found" role="main">
 
-                    <h1 class="content__title">
+                    <h1 class="content__header">
 
                         <?php _e( 'Deze pagina bestaat niet', 'thema_vertalingen' ); ?>
 

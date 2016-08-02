@@ -11,14 +11,14 @@ h2 {
   text-rendering: optimizeLegibility;
 }
 
-.content__title {
+.content__header {
   margin: 0 0 14px;
   font-weight: 400;
   font-size: 32px;
 }
 
 @media (min-width:46.875em) {
-  .content__title {
+  .content__header {
     margin-bottom: 28px;
   }
 }

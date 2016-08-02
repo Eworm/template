@@ -19,7 +19,7 @@ Template Name: Homepage
 
                     <?php while (have_posts()) : the_post(); ?>
 
-                        <h1 class="content__title">
+                        <h1 class="content__header">
 
                             <?php the_title(); ?>
 

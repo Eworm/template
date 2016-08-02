@@ -12,7 +12,7 @@
 
                 <?php if (have_posts()) : ?>
 
-                    <h1 class="content__title">
+                    <h1 class="content__header">
 
                         <?php _e( 'Zoekresultaten voor', 'thema_vertalingen' ); ?> <em>&#8216;<?php echo $search_query ?>&#8217;</em>
 

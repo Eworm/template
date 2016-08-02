@@ -8,7 +8,7 @@
 
             <main class="content col col--5 not-found" role="main">
 
-                <h1 class="content__title">
+                <h1 class="content__header">
 
                     <?php _e( 'Deze pagina bestaat niet (meer)', 'thema_vertalingen' ); ?>
 

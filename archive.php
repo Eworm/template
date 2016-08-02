@@ -10,7 +10,7 @@
 
                 <?php if ( have_posts() ) : ?>
 
-                    <h1 class="content__title">
+                    <h1 class="content__header">
 
                         <?php if ( is_day() ) : ?>
 

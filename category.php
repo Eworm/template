@@ -10,7 +10,7 @@
 
                 <?php if (have_posts()) : ?>
 
-                    <h1 class="content__title">
+                    <h1 class="content__header">
 
                         <?php _e( 'Categorie', 'thema_vertalingen' ); ?>: <?php single_cat_title() ?>
 
