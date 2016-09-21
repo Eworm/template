@@ -18,11 +18,11 @@
     p,
     ul {
         margin: 0 0 $margin--skinny 0;
-        
+
         @media (min-width: $mq--lap) {
             margin-bottom: $margin;
         }
-        
+
         &:last-child {
         }
     }
