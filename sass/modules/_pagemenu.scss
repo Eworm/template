@@ -13,7 +13,7 @@
         padding: 0;
         display: inline-block;
         border: 1px solid $border;
-        
+
         @media (min-width: $mq--lap) {
             border: 0;
         }
@@ -30,9 +30,9 @@
         @media (min-width: $mq--lap) {
             margin-bottom: 0;
         }
-        
+
         &:last-child {
-            
+
             a {
                 border: 0;
             }

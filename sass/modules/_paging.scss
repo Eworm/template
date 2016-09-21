@@ -3,10 +3,10 @@
 // *
 .paging {
 
-    
+
     > li {
         float: left;
-        
+
         > a {
             margin-right: $padding--small;
             padding: $padding--small $padding--skinny;
@@ -15,7 +15,7 @@
             border: 1px solid $border;
             color: $body;
             text-decoration: none;
-            
+
             &:hover, &:focus {
                 background: $border;
             }
@@ -29,15 +29,15 @@
 // Next & prev
 // *
 .paging__navigation {
-    
+
 }
 
 .paging__navigation--prev {
-    
+
 }
 
 .paging__navigation--next {
-    
+
 }
 
 
@@ -46,7 +46,7 @@
 // *
 .paging__number {
     display: none;
-            
+
     @media (min-width: $mq--lap) {
         display: block;
     }
@@ -58,7 +58,7 @@
 // Extra current class on paging__number
 // *
 .paging__number--active {
-    
+
     > a {
         background: $border;
     }

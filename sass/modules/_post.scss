@@ -16,10 +16,10 @@
 // *
 .post__header {
     margin: 0;
-    
+
     a {
         text-decoration: none;
-        
+
         &:hover, &:focus {
             text-decoration: underline;
         }
@@ -58,7 +58,7 @@
 // *
 .post__meta {
     color: $mute;
-    
+
     .single-post & {
         margin-top: $margin;
     }
@@ -83,7 +83,7 @@
 
     a {
         text-decoration: none
-        
+
         &:hover, &:focus {
             text-decoration: underline;
         }

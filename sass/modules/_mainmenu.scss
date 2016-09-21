@@ -45,7 +45,7 @@
 .menu-item {
     display: inline-block;
     position: relative;
-    
+
     .sub-menu {
         display: none;
         left: -100%;
@@ -55,7 +55,7 @@
         float: left;
         position: relative;
     }
-    
+
     > a {
         padding: $padding--skinny $padding--skinny;
         display: inline-block;
@@ -83,7 +83,7 @@
 
 .show-sub {
     display: block;
-    
+
     > a {
         background: $border;
     }
@@ -122,7 +122,7 @@
     }
 
     @media (min-width: $mq--lap) {
-    
+
         &:after {
         }
     }
@@ -140,7 +140,7 @@
 .current_page_ancestor {
 
     @media (min-width: $mq--lap) {
-    
+
         a {
         }
     }
@@ -148,7 +148,7 @@
 
 .sub-enter {
 
-    > a {         
+    > a {
         @media (min-width: $mq--lap) {
             background: $border;
         }
@@ -176,7 +176,7 @@
     overflow: auto;
     background: darken(#eee, 5%);
     transition: all .15s cubic-bezier(0.075, 0.085, 0.075, 1.175);
-    
+
     @media (min-width: $mq--lap) {
         position: absolute;
         top: 100%;
@@ -184,7 +184,7 @@
         border: 1px solid $border;
         background: #fff;
     }
-    
+
     .active-sub & {
         height: 110px;
         opacity: 1;
@@ -193,7 +193,7 @@
 
     .current_page_parent &,
     .current-menu-parent & {
-        
+
         @media (min-width: $mq--lap) {
             display: none;
         }
@@ -201,7 +201,7 @@
 
     .current_page_ancestor &,
     .current-menu-item & {
-        
+
         @media (min-width: $mq--lap) {
             display: none;
         }
@@ -214,16 +214,16 @@
     .current_page_ancestor .current_page_ancestor & {
         display: block;
     }
-    
+
     // When hoverin
     .show-sub & {
         display: block;
     }
 
-    .menu-item {    
-        
+    .menu-item {
+
         &:nth-child(2n+1) {
-            border-right: 1px solid #fff;   
+            border-right: 1px solid #fff;
         }
 
         a {
@@ -238,17 +238,17 @@
                 white-space: nowrap;
                 background: transparent;
             }
-            
+
             &:hover,
             &:focus {
                 background: $border;
             }
         }
-        
+
         &:last-child {
-            
+
             a {
-            
+
                 @media (min-width: $mq--lap) {
                     border: 0;
                 }

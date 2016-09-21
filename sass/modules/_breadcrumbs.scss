@@ -4,11 +4,11 @@
     padding: 0;
     float: left;
     list-style-type: none;
-    
+
     > li {
         float: left;
     }
-    
+
     a {
         margin-right: $margin--small;
         padding-right: $padding--small;
@@ -16,17 +16,17 @@
         position: relative;
         text-decoration: none;
         transition: all .15s ease;
-        
+
         @media (min-width: $mq--lap) {
             margin-right: $margin--skinny;
             padding-right: $padding--skinny;
         }
-        
+
         &:hover, &:focus {
             color: $body;
             text-decoration: underline;
         }
-        
+
         &:after {
         }
     }
