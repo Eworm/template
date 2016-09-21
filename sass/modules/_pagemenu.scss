@@ -53,7 +53,10 @@
         }
     }
 
-    .current_page_item a {
-        background: $border;
+    .current_page_item {
+
+        a {
+            background: $border;
+        }
     }
 }
