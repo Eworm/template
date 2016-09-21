@@ -51,13 +51,13 @@
 
 .core--mainmenu {
     padding: 0;
-    
+
     @media (min-width: $mq--lap) {
     }
-    
+
     > .row {
         margin: 0;
-        
+
         @media (min-width: $mq--lap) {
             margin-right: -#{$gutter--skinny};
             margin-left: -#{$gutter--skinny};
