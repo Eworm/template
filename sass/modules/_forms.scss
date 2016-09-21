@@ -4,7 +4,7 @@
 input {
     width: 100%;
     padding: $padding--small*2;
-    font-family: $body-family;
+    font-family: $type-fam-body;
     font-size: $type-body;
 
     @media (min-width: $mq--lap) {
@@ -21,7 +21,7 @@ textarea {
     height: 120px;
     padding: $padding--small*2;
     float: left;
-    font-family: $body-family;
+    font-family: $type-fam-body;
     font-size: $type-body;
 }
 

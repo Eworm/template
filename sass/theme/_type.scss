@@ -19,7 +19,6 @@
 // Add new ones when appropriate
 // *
 $line-height: 1.8;
-$type-base: 16px;
 $type-body: 16px;
 $type-meta: 12px;
 
@@ -36,18 +35,18 @@ $lato--regular: 'Lato', arial, sans-serif;
 // *
 // Define font variables here using the above font names
 // *
-$body-family: $lato--regular;
+$type-fam-body: $lato--regular;
 
 
 
 // *
 // Header sizes
 // *
-$header-1: 2 * $type-base;
-$header-2: 1.5 * $type-base;
-$header-3: 1.17 * $type-base;
-$header-4: 1 * $type-base;
-$header-5: 1 * $type-base;
+$header-1: 2 * $type-body;
+$header-2: 1.5 * $type-body;
+$header-3: 1.17 * $type-body;
+$header-4: 1 * $type-body;
+$header-5: 1 * $type-body;
 
 h1,
 h2,

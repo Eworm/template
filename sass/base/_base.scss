@@ -12,7 +12,7 @@ html {
 
 body {
     background: $body-bg;
-    font: #{$type-body}/#{$line-height} #{$body-family};
+    font: #{$type-body}/#{$line-height} #{$type-fam-body};
     color: $body;
 }
 
