@@ -145,7 +145,7 @@ gulp.task('critical', function () {
             src: 'http://template.dev/',
             css: 'style.css',
             dest: 'style-critical.css',
-            minify: false,
+            minify: true,
             extract: false,
             width: 1300,
             height: 900,
