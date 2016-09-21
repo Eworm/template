@@ -16,26 +16,14 @@
 
 
 // *
-// Font sizes
+// Font sizes & other related stuff
 // Add new ones when appropriate
-// Those should only be used for sizes used in several places
-// Otherwise just add the font-size in the scss file
 // *
-$type--xs:  11px;
-$type--s:   12px;
-$type--m:   14px;
-$type--l:   16px;
-$type--xl:  18px;
-$type--xxl: 20px;
-
-
-
-// *
-// Standard site sizes & other type related stuff
-// *
-$base-size: $type--l;
-$body-size: $type--l;
 $line-height: 1.8;
+$type-base: 16px;
+$type-body: 16px;
+$type-meta: 12px;
+
 
 
 
@@ -47,6 +35,7 @@ $lato--regular: 'Lato', arial, sans-serif;
 
 
 
+
 // *
 // Define font variables here using the above font names
 // *
@@ -54,14 +43,15 @@ $body-family: $lato--regular;
 
 
 
+
 // *
 // Header sizes
 // *
-$header-1: 2 * $base-size;
-$header-2: 1.5 * $base-size;
-$header-3: 1.17 * $base-size;
-$header-4: 1 * $base-size;
-$header-5: 1 * $base-size;
+$header-1: 2 * $type-base;
+$header-2: 1.5 * $type-base;
+$header-3: 1.17 * $type-base;
+$header-4: 1 * $type-base;
+$header-5: 1 * $type-base;
 
 h1,
 h2,
@@ -83,6 +73,7 @@ h5 {
 
 
 
+
 // *
 // Page title
 // *
@@ -95,6 +86,8 @@ h5 {
         margin-bottom: $margin;
     }
 }
+
+
 
 
 // *
@@ -130,6 +123,6 @@ h5 {
     
     h5 {
         margin: 0;
-        font-size: $body-size;
+        font-size: $type-body;
     }
 }

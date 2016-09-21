@@ -92,7 +92,7 @@ table {
             border: 1px solid $border;
             white-space: normal;
             word-wrap: break-word;
-            font-size: $body-size;
+            font-size: $type-body;
         }
     }
     
@@ -101,7 +101,7 @@ table {
         vertical-align: top;
         border: 1px solid $border;
         border-left: 0;
-        font-size: $body-size;
+        font-size: $type-body;
         
         @media (min-width: $mq--lap) {
             margin: 0;

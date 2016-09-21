@@ -7,7 +7,7 @@
     margin: $margin--skinny 0;
     display: block;
     border-radius: 0;
-    box-shadow: $default-box-shadow;
+    box-shadow: $shadow;
 }
 
 
@@ -46,10 +46,10 @@
     &.error {
         margin-bottom: 0;
         padding: $padding--skinny;
-        border-radius: $default-border-radius;
+        border-radius: $radius;
         border-top-right-radius: 0;
         border-top-left-radius: 0;
-        box-shadow: $default-box-shadow;
+        box-shadow: $shadow;
         background: $alert;
         color: #fff;
 

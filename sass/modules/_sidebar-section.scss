@@ -43,7 +43,7 @@
 .sidebar__section__header {
     margin: 0 0 $margin--skinny;
     font-weight: bold;
-    font-size: $body-size;
+    font-size: $type-body;
 
     @media (min-width: $mq--lap) {
         margin-bottom: $margin;

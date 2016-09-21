@@ -3,9 +3,9 @@
 // *
 input {
     width: 100%;
-    padding: $input-padding*2;
+    padding: $padding--small*2;
     font-family: $body-family;
-    font-size: $body-size;
+    font-size: $type-body;
 
     @media (min-width: $mq--lap) {
         width: 50%;
@@ -19,10 +19,10 @@ input {
 textarea {
     width: 100%;
     height: 120px;
-    padding: $input-padding*2;
+    padding: $padding--small*2;
     float: left;
     font-family: $body-family;
-    font-size: $body-size;
+    font-size: $type-body;
 }
 
 input[type="file"] {
@@ -115,7 +115,7 @@ fieldset {
 
     .input-exp { // Form field explanation. Using a small element is preferrable
         display: block;
-        font-size: $type--s;
+        font-size: $type-meta;
     }
 }
 
@@ -136,7 +136,7 @@ fieldset {
 // *
 .req {
     color: $mute;
-    font-size: $body-size;
+    font-size: $type-body;
 }
 
 

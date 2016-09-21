@@ -91,7 +91,7 @@
     height: auto;
     float: right;
     border-radius: 0;
-    box-shadow: $default-box-shadow;
+    box-shadow: $shadow;
 
     @media (min-width: $mq--lap) {
         margin-right: $margin--skinny;
@@ -115,7 +115,7 @@
 // Comment meta info
 // *
 .comment__meta {
-    font-size: $type--s;
+    font-size: $type-meta;
 
     @media (min-width: $mq--lap) {
         padding-top: 20px;

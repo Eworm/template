@@ -47,12 +47,12 @@ $padding--cinema:   $s--cinema;
 // *
 // Responsive breakpoints. Always use em's!
 // *
-$mq--wrist: 0;              // $mq--wrist is the variable name from 0 to 480
-$mq--palm: 30em;            // 480px
-$mq--lap: 46.875em;         // 750px
-$mq--desk: 60.625em;        // 970px
-$mq--wall: 73.125em;        // 1170px
-$mq--cinema: 89.375em;      // 1430px
+$mq--wrist:     0;              // $mq--wrist is the variable name from 0 to 480
+$mq--palm:      30em;           // 480px
+$mq--lap:       46.875em;       // 750px
+$mq--desk:      60.625em;       // 970px
+$mq--wall:      73.125em;       // 1170px
+$mq--cinema:    89.375em;       // 1430px
 
 
 
@@ -60,10 +60,8 @@ $mq--cinema: 89.375em;      // 1430px
 // *
 // Default values for other stuff
 // *
-$default-border-radius: 3px;
-$default-box-shadow: (rgba(0, 0, 0, .25) 0 1px 1px);
-$default-text-shadow: (rgba(0, 0, 0, .45) 0 1px 1px);
-$input-padding: 4px;
+$radius: 3px;
+$shadow: (rgba(0, 0, 0, .25) 0 1px 1px);
 
 
 
