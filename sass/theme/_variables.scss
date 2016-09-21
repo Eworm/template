@@ -8,7 +8,6 @@ $s--desk: 35px;
 $s--wall: 42px;
 $s--cinema: 56px;
 
-
 // *
 // Gutters
 // *
@@ -18,7 +17,6 @@ $gutter:            $s--lap;
 $gutter--desk:      $s--desk;
 $gutter--wall:      $s--wall;
 $gutter--cinema:    $s--cinema;
-
 
 // *
 // Margins
@@ -30,7 +28,6 @@ $margin--desk:      $s--desk;
 $margin--wall:      $s--wall;
 $margin--cinema:    $s--cinema;
 
-
 // *
 // Paddings
 // *
@@ -40,7 +37,6 @@ $padding:           $s--lap;
 $padding--desk:     $s--desk;
 $padding--wall:     $s--wall;
 $padding--cinema:   $s--cinema;
-
 
 
 
@@ -56,13 +52,11 @@ $mq--cinema:    89.375em;       // 1430px
 
 
 
-
 // *
 // Default values for other stuff
 // *
 $radius: 3px;
 $shadow: (rgba(0, 0, 0, .25) 0 1px 1px);
-
 
 
 

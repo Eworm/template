@@ -14,7 +14,6 @@
 
 
 
-
 // *
 // Font sizes & other related stuff
 // Add new ones when appropriate
@@ -26,7 +25,6 @@ $type-meta: 12px;
 
 
 
-
 // *
 // Define font names here, use them later on
 // *
@@ -35,12 +33,10 @@ $lato--regular: 'Lato', arial, sans-serif;
 
 
 
-
 // *
 // Define font variables here using the above font names
 // *
 $body-family: $lato--regular;
-
 
 
 
@@ -60,7 +56,7 @@ h4,
 h5 {
     line-height: 1.1;
     text-rendering: optimizeLegibility;
-    
+
     a {
         text-decoration: none;
 
@@ -69,8 +65,7 @@ h5 {
             text-decoration: underline;
         }
     }
-} 
-
+}
 
 
 
@@ -89,17 +84,16 @@ h5 {
 
 
 
-
 // *
 // Headers in the main content
 // *
 .content__body {
 
     h1, h2, h3, h4, h5 {
-        
+
         a {
             text-decoration: none;
-    
+
             &:hover, &:focus {
                 text-decoration: underline;
             }
@@ -110,17 +104,17 @@ h5 {
         margin: 0;
         font-size: $header-2;
     }
-    
+
     h3 {
         margin: 0;
         font-size: $header-3;
     }
-    
+
     h4 {
         margin: 0;
         font-size: $header-4;
     }
-    
+
     h5 {
         margin: 0;
         font-size: $type-body;
