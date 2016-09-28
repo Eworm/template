@@ -5,12 +5,12 @@ var gulp = require('gulp'),
 
 
 
-// Set source paths
+// Source paths
 var src_paths = {
     css: 'sass/**/*.scss',
     autoprefixer: '*.css',
     sprite: 'images-src/sprite/**/*.svg',
-    functions: ['bower_components/parsleyjs/dist/parsley.js',
+    scripts: ['bower_components/parsleyjs/dist/parsley.js',
                 'bower_components/hoverintent/jquery.hoverIntent.js',
                 'bower_components/blazy/blazy.js',
                 'js-src/functions.js'],
@@ -21,7 +21,7 @@ var src_paths = {
 
 
 
-// Set destination paths
+// Destination paths
 var dest_paths = {
     css: '.',
     images: 'images',
@@ -30,7 +30,7 @@ var dest_paths = {
 
 
 
-// CSS sassing
+// CSS using SASS
 gulp.task('css', function() {
     gulp.src(src_paths.css)
 
@@ -59,34 +59,34 @@ gulp.task('css', function() {
 
 
 
-// Uglify
-gulp.task('uglify', function() {
+// Javascript
+gulp.task('javascript', function() {
 
-    gulp.src(src_paths.functions)
+    gulp.src(src_paths.scripts)
 
         .pipe(plugins.plumber({errorHandler: plugins.notify.onError('Error: <%= error.message %>')}))
 
         .pipe(plugins.concat('functions.min.js'))
-        .pipe(plugins.uglify({
+        .pipe(plugins.javascript({
             compress: false
         }))
         .pipe(gulp.dest(dest_paths.javascript))
 
         .pipe(plugins.livereload())
-        .pipe(plugins.notify({ message: 'Uglify complete!' }))
+        .pipe(plugins.notify({ message: 'javascript complete!' }))
 
     gulp.src(src_paths.labjs)
 
         .pipe(plugins.plumber({errorHandler: plugins.notify.onError('Error: <%= error.message %>')}))
 
         .pipe(plugins.concat('lab.min.js'))
-        .pipe(plugins.uglify({
+        .pipe(plugins.javascript({
             compress: false
         }))
         .pipe(gulp.dest(dest_paths.javascript))
 
         .pipe(plugins.livereload())
-        .pipe(plugins.notify({ message: 'Uglify complete!' }))
+        .pipe(plugins.notify({ message: 'javascript complete!' }))
 });
 
 
@@ -169,7 +169,7 @@ gulp.task('critical', function () {
 gulp.task('watch', function(ev) {
     plugins.livereload.listen();
 	gulp.watch(src_paths.css, ['css']);
-	gulp.watch(src_paths.javascript, ['uglify']);
+	gulp.watch(src_paths.javascript, ['javascript']);
     gulp.watch(src_paths.sprite, ['sprite']);
 });
 
