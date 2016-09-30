@@ -156,7 +156,8 @@ gulp.task('critical', function () {
                         '.pagemenu',
                         '.pagemenu ul',
                         '.pagemenu li',
-                        '.pagemenu a']
+                        '.pagemenu a',
+                        '.symbols']
         }))
         
         .pipe(plugins.livereload())
