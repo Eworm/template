@@ -67,7 +67,7 @@ gulp.task('javascript', function() {
         .pipe(plugins.plumber({errorHandler: plugins.notify.onError('Error: <%= error.message %>')}))
 
         .pipe(plugins.concat('functions.min.js'))
-        .pipe(plugins.javascript({
+        .pipe(plugins.uglify({
             compress: false
         }))
         .pipe(gulp.dest(dest_paths.javascript))
@@ -80,7 +80,7 @@ gulp.task('javascript', function() {
         .pipe(plugins.plumber({errorHandler: plugins.notify.onError('Error: <%= error.message %>')}))
 
         .pipe(plugins.concat('lab.min.js'))
-        .pipe(plugins.javascript({
+        .pipe(plugins.uglify({
             compress: false
         }))
         .pipe(gulp.dest(dest_paths.javascript))
