@@ -1,6 +1,9 @@
 <?php
 
+
+
 setlocale(LC_TIME, 'nl_NL');
+
 
 
 /* Optional code to change the url
@@ -9,6 +12,7 @@ setlocale(LC_TIME, 'nl_NL');
 update_option('siteurl','http://10.0.1.17/_htmltemplate/');
 update_option('home','http://10.0.1.17/_htmltemplate/');
 */
+
 
 
 /* Includes
@@ -24,6 +28,7 @@ require_once 'includes/wp-imagesizes.php';
 require_once 'includes/wp-submenu-walker.php';
 require_once 'includes/wp-custom-post-types.php';
 require_once 'includes/acf-options.php';
+
 
 
 /* Register menu's
