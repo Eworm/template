@@ -6,7 +6,38 @@
     padding: $padding--skinny;
     display: none;
     clear: both;
-
+    
+    
+    
+    &__container__button {
+        display: none;
+    
+        @media (min-width: $mq--lap) {
+            width: 30%;
+            float: left;
+            display: block;
+        }
+    }
+    
+    
+    
+    // *
+    // Search form fieldset
+    // *
+    &__container {
+        margin: 0;
+        padding: 0;
+        line-height: 40px;
+    }
+    
+    
+    
+    // *
+    // Hiding the label, but not for screenreaders
+    // *
+    &__container__label {
+        @include screenreader--hide;
+    }
 
 
     // *
@@ -61,34 +92,4 @@
             }
         }
     }
-}
-
-.searchform__container__button {
-    display: none;
-
-    @media (min-width: $mq--lap) {
-        width: 30%;
-        float: left;
-        display: block;
-    }
-}
-
-
-
-// *
-// Search form fieldset
-// *
-.searchform__container {
-    margin: 0;
-    padding: 0;
-    line-height: 40px;
-}
-
-
-
-// *
-// Hiding the label, but not for screenreaders
-// *
-.searchform__container__label {
-    @include screenreader--hide;
 }

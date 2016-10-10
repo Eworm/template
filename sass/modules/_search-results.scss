@@ -1,11 +1,10 @@
 .search-result {
     @extend %post;
-}
-
-
-
-// *
-// Result title
-// *
-.search-result__header {
+    
+    
+    // *
+    // Result title
+    // *
+    &__header {
+    }
 }

@@ -33,31 +33,29 @@
     iframe {
         float: left;
     }
-}
-
-
-
-// *
-// Sidebar section title
-// *
-.sidebar__section__header {
-    margin: 0 0 $margin--skinny;
-    font-weight: bold;
-    font-size: $type-body;
-
-    @media (min-width: $mq--lap) {
-        margin-bottom: $margin;
-    }
-
-    a {
-        text-decoration: none
-
-        &:hover, &:focus {
-            text-decoration: underline;
+    
+    
+    // *
+    // Sidebar section title
+    // *
+    &__header {
+        margin: 0 0 $margin--skinny;
+        font-weight: bold;
+        font-size: $type-body;
+    
+        @media (min-width: $mq--lap) {
+            margin-bottom: $margin;
+        }
+    
+        a {
+            text-decoration: none
+    
+            &:hover, &:focus {
+                text-decoration: underline;
+            }
         }
     }
 }
-
 
 
 // *
