@@ -39,9 +39,9 @@ div.aligncenter {
 
 a img {
     @extend %postimage;
-    
+
     &.alignright {
-    
+
         @media (min-width: $mq--palm) {
             width: auto;
             float: right;
@@ -50,24 +50,24 @@ a img {
     }
 
     &.alignnone {
-    
+
         @media (min-width: $mq--palm) {
             width: auto;
             margin: $margin $margin $margin 0;
         }
     }
-    
+
     &.alignleft {
-    
+
         @media (min-width: $mq--palm) {
             width: auto;
             float: left;
             margin: $margin $margin $margin 0;
         }
     }
-    
+
     &.aligncenter {
-    
+
         @media (min-width: $mq--palm) {
             display: block;
             margin-left: auto;
@@ -75,7 +75,6 @@ a img {
         }
     }
 }
-
 
 
 // *
@@ -139,7 +138,6 @@ a img {
 }
 
 
-
 // *
 // A post thumbnail
 // *
@@ -156,4 +154,3 @@ a img {
         margin: 0 0 $margin $margin;
     }
 }
-

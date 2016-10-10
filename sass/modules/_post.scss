@@ -1,91 +1,89 @@
 // *
 // Single post
 // *
-.post,
+.post {
+    @extend %post;
+
+    
+    // *
+    // Post title
+    // *
+    &__header {
+        margin: 0;
+    
+        a {
+            text-decoration: none;
+    
+            &:hover, &:focus {
+                text-decoration: underline;
+            }
+        }
+    }
+    
+    .single-post__header {
+        margin-bottom: $margin;
+    }
+    
+    
+    // *
+    // Post content
+    // *
+    &__entry {
+    }
+    
+    
+    // *
+    // Blog nav
+    // *
+    &-nav {
+        text-align: center;
+    
+        @media (min-width: $mq--lap) {
+            text-align: left;
+        }
+    }
+    
+    
+    // *
+    // Post meta
+    // *
+    &__meta {
+        color: $mute;
+    
+        .single-post & {
+            margin-top: $margin;
+        }
+    
+        a {
+            color: $mute;
+            text-decoration: none;
+    
+            &:hover, &:focus {
+                color: $mute--hover;
+                text-decoration: underline;
+            }
+        }
+    }
+    
+    
+    // *
+    // Continue reading & nr. of comments
+    // *
+    &__options {
+    
+        a {
+            text-decoration: none
+    
+            &:hover, &:focus {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
 .type-attachment {
     @extend %post;
 }
 
 .sticky {   // Sticky post
-}
-
-
-
-// *
-// Post title
-// *
-.post__header {
-    margin: 0;
-
-    a {
-        text-decoration: none;
-
-        &:hover, &:focus {
-            text-decoration: underline;
-        }
-    }
-}
-
-.single-post__header {
-    margin-bottom: $margin;
-}
-
-
-
-// *
-// Post content
-// *
-.post__entry {
-}
-
-
-
-// *
-// Blog nav
-// *
-.post-nav {
-    text-align: center;
-
-    @media (min-width: $mq--lap) {
-        text-align: left;
-    }
-}
-
-
-
-// *
-// Post meta
-// *
-.post__meta {
-    color: $mute;
-
-    .single-post & {
-        margin-top: $margin;
-    }
-
-    a {
-        color: $mute;
-        text-decoration: none;
-
-        &:hover, &:focus {
-            color: $mute--hover;
-            text-decoration: underline;
-        }
-    }
-}
-
-
-
-// *
-// Continue reading & nr. of comments
-// *
-.post__options {
-
-    a {
-        text-decoration: none
-
-        &:hover, &:focus {
-            text-decoration: underline;
-        }
-    }
 }

@@ -51,7 +51,6 @@ fieldset {
 }
 
 
-
 // *
 // The form
 // *
@@ -71,7 +70,6 @@ fieldset {
         float: left;
     }
 }
-
 
 
 // *
@@ -120,7 +118,6 @@ fieldset {
 }
 
 
-
 // *
 // Other elements
 // *
@@ -128,7 +125,6 @@ fieldset {
 #loading {
     display: none;
 }
-
 
 
 // *
@@ -140,16 +136,14 @@ fieldset {
 }
 
 
-
 // *
 // Error messages
 // *
 .parsley-error {
 
-}
-
-.parsley-errors-list {
-    display: none;
+    &-list {
+        display: none;
+    }
 }
 
 .error,
