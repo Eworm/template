@@ -1,4 +1,3 @@
-# Volg onderstaande stappen voordat je met het project begint
 This project uses open-source software to work more efficient. You need to install some software to start working with this project. I won't go into all details about how to use this software, other sites are better at this than I am.
 
 ### Necessary global software
