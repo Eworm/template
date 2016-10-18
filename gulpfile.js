@@ -42,7 +42,7 @@ gulp.task('css', function() {
         }))
         
         .pipe(plugins.autoprefixer({
-            browsers: ['last 2 versions', 'ie 10', 'ios 8', 'android 4'],
+            browsers: ['last 2 versions', 'ie 10'],
             cascade: false
         }))
 
