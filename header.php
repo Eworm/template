@@ -49,6 +49,7 @@
         <?php wp_head(); ?>
         
         <!-- Include the above the fold css and replace all relative urls with the theme url -->
+        <!-- Consider inlining all css if it's below 50kb, as used in AMP: https://www.ampproject.org/learn/how-amp-works/ -->
         <style>
             <?php
 
