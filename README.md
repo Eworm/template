@@ -34,7 +34,7 @@ bower_components
 **All done!**
 
 ### Editing javascript, stylesheet, and images
-The easiest way to start is to navigate to the project dir and run ```gulp``` in a terminal window. This executes the standard gulp watch task. This task keeps an eye on the javascript and sass files and compiles svg sprite files.
+The easiest way to start is to navigate to the project dir and run ```gulp``` in a terminal window. This executes the standard gulp watch task. This task keeps an eye on the javascript and sass files and compiles svg sprite files. You should read the gulpfile to see what other tasks there are.
 
 ## The directories
 **The _root dir**
