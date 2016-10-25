@@ -14,9 +14,10 @@ Version: 1.0
 // *
 // Theme variables
 // *
+@import 'import-now';                       // Normalize is imported via Bower
+@import 'theme/colors';                     // Font-families and sizes
 @import 'theme/variables';                  // Global variables
 @import 'theme/type';                       // Colors
-@import 'theme/colors';                     // Font-families and sizes
 
 
 
@@ -31,9 +32,8 @@ Version: 1.0
 
 
 // *
-// Base. Normalize and other basic element styles.
+// Base styles.
 // *
-@import 'import-now';                       // Normalize is imported via Bower
 @import 'base/base';                        // Base styles
 
 
