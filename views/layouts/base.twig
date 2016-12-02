@@ -5,20 +5,20 @@
 	{% block head %}
 
 	    <meta charset="{{ site.charset }}">
-	    
+	
 	    <title>{{ wp_title|default('Template') }}</title>
-	    
+	
 	    <meta name="language" content="nl">
         <meta name="revisit-after" content="15 days">
         <meta name="robots" content="index, follow">
-	    
+	
 	    <!-- Mobile viewport optimized: h5bp.com/viewport -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
+
         <!-- iOS stuff -->
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <meta name="apple-mobile-web-app-title" content="<?php bloginfo('name'); ?>">
+        <meta name="apple-mobile-web-app-title" content="{{ site.name }}">
 
         <!-- Mobile viewport optimized: h5bp.com/viewport -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,12 +37,12 @@
         <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
         <link type="text/plain" rel="author" href="/humans.txt">
-        
+
         <!-- Insert Google analytics here -->
-        
+
         {{ wp_head }}
-	    
-	    
+	
+	
 	    <!-- Include the above the fold css and replace all relative urls with the theme url -->
         <!-- Consider inlining all css if it's below 50kb, as used in AMP: https://www.ampproject.org/learn/how-amp-works/ -->
 	    <style>
@@ -50,12 +50,12 @@
 	    {{ include_critical_css('style-critical.css') }}
 
 	    </style>
-	    
+	
 	    <!-- Visitors without javascript get the rest of the stylesheet the standard way -->
         <noscript>
             <link rel="stylesheet" href="{{site.theme.link}}/style.css">
         </noscript>
-	
+
         <!-- Script suggestion from google on how to insert the stylesheet -->
 	    <script>
 
@@ -92,30 +92,90 @@
 
 <body>
 
-	{{ include_svg('images/sprite.svg') }}
-	
-	<nav>
-        <ul class="main-nav">
-        {% for item in menu.get_items %}
-            <li class="nav-main-item {{item.classes | join(' ')}}">
-                <a class="nav-main-link" href="{{item.link}}">{{item.title}}</a>
-                {% if item.get_children %}
-                <ul class="nav-drop">
-                  {% for child in item.get_children %}
-                    <li class="nav-drop-item"><a href="{{child.link}}">{{child.title}}</a></li>
-                  {% endfor %}
-                 </ul>
-              {% endif %}
-              </li>
-       {% endfor %}
-       </ul>
-    </nav>
-	
+	<div class="symbols" aria-hidden="true">
+        {{ include_svg('images/sprite.svg') }}
+    </div>
+
+    <header class="header divider divider--header" role="banner">
+
+        <div class="core core--header">
+
+            <div class="row">
+
+                <a href="{{ site.link }}" class="logo" rel="home" title="Terug naar de homepage">
+
+                    <svg class="logo__img">
+                        <title>
+                            {{ site.name }}
+                        </title>
+                        <use xlink:href="#logo">
+                    </svg>
+
+                </a>
+
+                <p class="cp">
+
+                    {{ site.description }}
+
+                </p>
+
+                <?php get_search_form(); ?>
+
+            </div>
+
+        </div>
+
+        <div class="core core--mainmenu">
+
+            <div class="row">
+
+                <nav class="mainmenu" role="navigation" >
+
+                    <ul class="main-menu">
+
+                        {% for item in menu.get_items %}
+
+                        <li class="nav-main-item {{item.classes | join(' ')}}">
+
+                            <a class="nav-main-link" href="{{item.link}}">{{item.title}}</a>
+
+                            {% if item.get_children %}
+
+                            <ul class="nav-drop">
+
+                                {% for child in item.get_children %}
+
+                                    <li class="nav-drop-item">
+
+                                        <a href="{{child.link}}">{{child.title}}</a>
+
+                                    </li>
+
+                                {% endfor %}
+
+                            </ul>
+
+                        {% endif %}
+
+                        </li>
+
+                        {% endfor %}
+
+                   </ul>
+
+                </nav>
+
+            </div>
+
+        </div>
+
+    </header>
+
 	{% block content %}
-	
+
     {% endblock %}
 
 	{{ wp_footer }}
-	
+
 </body>
 </html>
