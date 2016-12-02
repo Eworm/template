@@ -31,6 +31,12 @@ function template_register_required_plugins() {
 			'required'  => true,
 		),
 		
+		array(
+			'name'      => 'Timber',
+			'slug'      => 'timber-library',
+			'required'  => true,
+		),
+		
     );
     
     /*
