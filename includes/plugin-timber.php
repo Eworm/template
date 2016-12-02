@@ -69,8 +69,7 @@ class MyTimberSite extends TimberSite
 		{
 			
 		    $css = file_get_contents($path);
-		    $css = str_replace('../', null, $css);
-		    $css = str_replace('fonts/', get_bloginfo('stylesheet_directory') . '/fonts/', $css);
+		    $css = str_replace('/fonts/', get_bloginfo('stylesheet_directory') . '/fonts/', $css);
 
 		    return $css;
 

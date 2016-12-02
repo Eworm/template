@@ -5,6 +5,7 @@ $context = Timber::get_context();
 if (is_front_page())
 {
 
+    $context['post'] = new TimberPost();
 	$template = ['home.twig'];
 
 }
@@ -12,6 +13,7 @@ if (is_front_page())
 else if (is_page())
 {
 
+    $context['post'] = new TimberPost();
     $template = ['page.twig'];
 
 }
