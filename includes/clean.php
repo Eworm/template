@@ -14,7 +14,7 @@ add_action('template_redirect', 'load_jquery');
 
 /* Remove some ugly wp meta data
 ==================================================================================================================================*/
-remove_filter('term_description','wpautop');
+remove_filter('term_description', 'wpautop');
 remove_action('wp_head', 'wp_generator');
 remove_action('wp_head', 'wlwmanifest_link');
 remove_action('wp_head', 'print_emoji_detection_script', 7);
