@@ -19,10 +19,20 @@ class MyTimberSite extends TimberSite
 	function __construct()
 	{
 
+        add_filter('timber_context', array($this, 'add_to_context'));
 		add_filter('get_twig', array($this, 'add_to_twig'));
 
 		parent::__construct();
 
+	}
+	
+	function add_to_context($context)
+	{
+
+		$context['menu'] = new TimberMenu('main');
+
+		return $context;
+		
 	}
 
 	function add_to_twig($twig)
