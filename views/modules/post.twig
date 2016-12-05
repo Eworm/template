@@ -1,0 +1,33 @@
+<article class="post">
+
+    <h1 class="post__header">
+
+        <a href="{{ item.link }}" title="Directe link naar {{ item.title }}">
+
+            {{ item.title }}
+
+        </a>
+
+    </h1>
+
+    <div class="post__meta">
+
+        <time datetime="<?php the_time('Y-m-d') ?>" pubdate="pubdate">
+
+            {{ item.date }}
+
+        </time>
+
+        <a href="{{ item.edit_link }}" title="">
+            Aanpassen
+        </a>
+
+    </div>
+
+    <div class="post__entry">
+
+        {{ item.get_preview(50, false, "") }}
+
+    </div>
+
+</article>

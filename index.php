@@ -18,6 +18,34 @@ else if (is_page())
 
 }
 
+else if (is_home())
+{
+    
+    $posts_query = array(
+        'post_type' =>      'post',
+        'numberposts' =>    10,
+        'orderby' =>        'date',
+        'post_status' =>    'publish',
+        'paged' =>          $paged
+    );
+    query_posts($posts_query);
+
+    $context['page'] = new TimberPost();
+    $context['posts'] = Timber::get_posts($posts_query);
+    $context['pagination'] = Timber::get_pagination(4);
+    
+    $template = ['blog.twig'];
+
+}
+
+else if (is_single())
+{
+
+    $context['post'] = new TimberPost();
+    $template = ['single.twig'];
+
+}
+
 Timber::render($template, $context);
 
 ?>

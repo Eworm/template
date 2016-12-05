@@ -1,0 +1,64 @@
+{% extends "layouts/base.twig" %}
+
+{% block content %}
+
+<div class="content divider divider--content">
+
+    <div class="core core--content">
+
+        <div class="row">
+
+            <main class="content col col--5" role="main">
+
+                <h1 class="post__header single-post__header">
+
+                    {{ post.title }}
+
+                </h1>
+
+                <div class="post__entry">
+
+                    {{ post.content }}
+
+                </div>
+                
+                <div class="comments-area">
+                    
+                    <h2 class="comments-area__header">
+                        Reacties
+                    </h2>
+                
+                    <ol class="comments-area__list">
+                        
+                        {% for comment in post.comments %}
+                        
+                            <li class="comment comment-{{comment.ID}} comment-order-{{loop.index}}">
+                                
+                                <p class="comment__author">{{comment.author.name}} said:</p>
+                                <p>{{comment.content}}</p>
+                                
+                            </li>
+                            
+                        {% endfor %}
+                        
+                    </ol>
+                
+                </div>
+                
+                {{ post.comment_form }}
+
+            </main>
+
+            <aside class="sidebar col col--3" role="complementary">
+
+                Aside
+
+            </aside>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
