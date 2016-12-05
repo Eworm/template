@@ -15,6 +15,14 @@
                     {{ post.title }}
 
                 </h1>
+                
+                <div class="post__meta">
+                    
+                    <a href="{{ post.author.link }}" title="Alle berichten van {{ post.author.name }}">
+                        {{ post.author.name }}
+                    </a>
+                    
+                </div>
 
                 {% if post.password_required %}
 
