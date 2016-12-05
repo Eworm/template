@@ -20,12 +20,16 @@
 
                     {{ post.content }}
                     
+                    {% if(post.thumbnail) %}
+                    
                     <img src="{{ post.thumbnail.src }}" srcset="{{ post.thumbnail.src | retina(1) }} 1x, 
                         {{ post.thumbnail.src | retina(2) }}  2x, 
                         {{ post.thumbnail.src | retina(3) }}  3x, 
                         {{ post.thumbnail.src | retina(4) }}  4x"
                         class="img-responsive"
                         alt="{{ post.thumbnail.alt }}">
+                        
+                    {% endif %}
 
                 </div>
                 

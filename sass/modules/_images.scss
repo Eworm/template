@@ -2,7 +2,7 @@
     @extend %postimage;
 
     @media (min-width: $mq--palm) {
-        width: auto;
+        width: 100% !important;
         margin: 0 0 $margin 0;
     }
 }
@@ -118,7 +118,7 @@ a img {
     &.alignnone {
 
         @media (min-width: $mq--palm) {
-            margin: $margin $margin $margin 0;
+            margin: $margin 0 0;
         }
     }
 

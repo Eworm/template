@@ -10,6 +10,7 @@
     // *
     &__header {
         margin: 0;
+        word-break: break-word;
     
         a {
             text-decoration: none;
@@ -29,6 +30,7 @@
     // Post content
     // *
     &__entry {
+        word-break: break-word;
     }
     
     
