@@ -10,7 +10,23 @@
 
     </h1>
 
-    <div class="post__meta">
+    <div class="post__entry">
+
+        {% if(item.thumbnail) %}
+
+        <a href="{{ item.link }}" title="Directe link naar {{ item.title }}">
+
+            <img src="{{ item.thumbnail.src | resize(100, 100) }}" class="post-thumbnail" alt="{{ item.thumbnail.alt }}">
+
+        </a>
+
+        {% endif %}
+
+        {{ item.get_preview(50, false, "") }}
+
+    </div>
+
+        <div class="post__meta">
 
         <time datetime="{{ item.date | date('Y-m-d') }}" pubdate="pubdate">
 
@@ -18,7 +34,7 @@
 
         </time>
 
-        | <a href="{{ item.edit_link }}" title="">
+        - <a href="{{ item.edit_link }}" title="">
             Aanpassen
         </a>
 
@@ -27,7 +43,7 @@
         {% for category in item.categories %}
 
             <a href="{{ category.link }}">{{ category }}</a>
-            
+
             {% if (loop.last == false) %} , {% endif %}
 
         {% endfor %}
@@ -37,16 +53,10 @@
         {% for tag in item.tags %}
 
             <a href="{{ tag.link }}">{{ tag }}</a>
-            
+
             {% if (loop.last == false) %} , {% endif %}
 
         {% endfor %}
-
-    </div>
-
-    <div class="post__entry">
-
-        {{ item.get_preview(50, false, "") }}
 
     </div>
 

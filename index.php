@@ -40,8 +40,6 @@ else if (is_single())
 {
 
     $context['post'] = new TimberPost();
-    $cover_image_id = $post->cover_image;
-    $context['cover_image'] = new TimberImage($cover_image_id);
     $template = ['single.twig'];
 
 }

@@ -150,7 +150,7 @@ a img {
     }
 
     @media (min-width: $mq--palm) {
-        float: right;
-        margin: 0 0 $margin $margin;
+        float: left;
+        margin: 0 $margin--skinny $margin 0;
     }
 }
