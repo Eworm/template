@@ -25,7 +25,6 @@ else if (is_home())
         
     $posts_query = array(
         'post_type' =>      'post',
-        'numberposts' =>    10,
         'orderby' =>        'date',
         'post_status' =>    'publish',
         'paged' =>          $paged
@@ -44,6 +43,40 @@ else if (is_single())
 
     $context['post'] = new TimberPost();
     $template = ['single.twig'];
+
+}
+
+else if (is_post_type_archive())
+{
+
+    $context['page'] = new TimberPost();
+	$context['post'] = Timber::get_posts();
+	$template = ['archive.twig'];
+
+}
+
+else if (is_category())
+{
+
+    $context['page'] = new TimberPost();
+	$context['post'] = Timber::get_posts();
+	$template = ['category.twig'];
+
+}
+
+else if (is_tag())
+{
+
+    $context['page'] = new TimberPost();
+	$context['post'] = Timber::get_posts();
+	$template = ['tag.twig'];
+
+}
+
+else if (is_404())
+{
+
+	$template = ['errors/404.twig'];
 
 }
 

@@ -12,15 +12,35 @@
 
     <div class="post__meta">
 
-        <time datetime="<?php the_time('Y-m-d') ?>" pubdate="pubdate">
+        <time datetime="{{ item.date | date('Y-m-d') }}" pubdate="pubdate">
 
             {{ item.date }}
 
         </time>
 
-        <a href="{{ item.edit_link }}" title="">
+        | <a href="{{ item.edit_link }}" title="">
             Aanpassen
         </a>
+
+        <br>
+
+        {% for category in item.categories %}
+
+            <a href="{{ category.link }}">{{ category }}</a>
+            
+            {% if (loop.last == false) %} , {% endif %}
+
+        {% endfor %}
+
+        <br>
+
+        {% for tag in item.tags %}
+
+            <a href="{{ tag.link }}">{{ tag }}</a>
+            
+            {% if (loop.last == false) %} , {% endif %}
+
+        {% endfor %}
 
     </div>
 
