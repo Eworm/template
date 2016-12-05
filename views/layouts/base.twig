@@ -6,7 +6,7 @@
 
 	    <meta charset="{{ site.charset }}">
 	
-	    <title>{{ wp_title|default('Template') }}</title>
+	    <title>{{ wp_title | default('Template') }}</title>
 	
 	    <meta name="language" content="nl">
         <meta name="revisit-after" content="15 days">
@@ -42,7 +42,6 @@
 
         {{ wp_head }}
 	
-	
 	    <!-- Include the above the fold css and replace all relative urls with the theme url -->
         <!-- Consider inlining all css if it's below 50kb, as used in AMP: https://www.ampproject.org/learn/how-amp-works/ -->
 	    <style>
@@ -53,23 +52,23 @@
 	
 	    <!-- Visitors without javascript get the rest of the stylesheet the standard way -->
         <noscript>
-            <link rel="stylesheet" href="{{site.theme.link}}/style.css">
+            <link rel="stylesheet" href="{{ site.theme.link }}/style.css">
         </noscript>
 
         <!-- Script suggestion from google on how to insert the stylesheet -->
 	    <script>
 
             // So we can use the template url in javascript
-            var templateUrl = '{{site.theme.link}}';
+            var templateUrl = '{{ site.theme.link }}';
 
             // Insert the remaining css & js as soon as possible
             var cb = function() {
 
                 var l = document.createElement('link'); l.rel = 'stylesheet';
-                l.href = '{{site.theme.link}}/style.css';
+                l.href = '{{ site.theme.link }}/style.css';
 
                 var y = document.createElement('script');
-                y.src = '{{site.theme.link}}/js/lab.min.js';
+                y.src = '{{ site.theme.link }}/js/lab.min.js';
 
                 var h = document.getElementsByTagName('noscript')[0];
                 h.parentNode.insertBefore(l, h);

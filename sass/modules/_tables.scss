@@ -1,10 +1,11 @@
 // *
 // Regular table
 // *
-.table {
+.table, .content table {
     width: 100%;
     margin: $margin 0;
     border: 1px solid $border;
+    border-collapse: collapse;
 
     tr {
     }
