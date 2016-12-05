@@ -1,5 +1,5 @@
 <?php
-    
+
 $context = Timber::get_context();
 
 if (is_front_page())
@@ -22,7 +22,7 @@ else if (is_home())
 {
 
     $context['post'] = new TimberPost();
-        
+
     $posts_query = array(
         'post_type' =>      'post',
         'orderby' =>        'date',
@@ -40,6 +40,8 @@ else if (is_single())
 {
 
     $context['post'] = new TimberPost();
+    $cover_image_id = $post->cover_image;
+    $context['cover_image'] = new TimberImage($cover_image_id);
     $template = ['single.twig'];
 
 }
