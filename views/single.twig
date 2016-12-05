@@ -75,7 +75,7 @@
                                 </div>
 
                                 <div class="comment__body">
-                                    {{ comment.content | replace({'<iframe': '<div class="video-wrapper"><iframe', '</iframe>': '</iframe></div>'})}}
+                                    {{ comment.content }}
 
                                     <br>
 
@@ -84,6 +84,16 @@
                                     </a>
 
                                 </div>
+                                
+                                <ol>
+                                
+                                {% for comment in post.comments.comment %}
+                                
+                                test
+                                
+                                {% endfor %} 
+                                
+                                </ol>
 
                             </li>
 
