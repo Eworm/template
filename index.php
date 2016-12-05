@@ -32,6 +32,7 @@ else if (is_home())
 
     $context['posts'] = Timber::get_posts($posts_query);
     $context['pagination'] = Timber::get_pagination(4);
+    $context['dynamic_sidebar'] = Timber::get_widgets('dynamic_sidebar');
     $template = ['blog.twig'];
 
 }

@@ -157,7 +157,10 @@ gulp.task('critical', function () {
                         '.pagemenu ul',
                         '.pagemenu li',
                         '.pagemenu a',
-                        '.symbols']
+                        '.symbols',
+                        '.row',
+                        '.col',
+                        '.divider']
         }))
         
         .pipe(plugins.livereload())

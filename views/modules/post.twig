@@ -30,7 +30,11 @@
 
         <time datetime="{{ item.date | date('Y-m-d') }}" pubdate="pubdate">
 
-            {{ item.date }}
+            <a href="{{ item.link }}" title="Directe link naar {{ item.title }}">
+                
+                {{ item.date }}
+                
+            </a>
 
         </time>
 
