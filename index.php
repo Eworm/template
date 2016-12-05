@@ -20,7 +20,9 @@ else if (is_page())
 
 else if (is_home())
 {
-    
+
+    $context['page'] = new TimberPost();
+        
     $posts_query = array(
         'post_type' =>      'post',
         'numberposts' =>    10,
@@ -30,7 +32,6 @@ else if (is_home())
     );
     query_posts($posts_query);
 
-    $context['page'] = new TimberPost();
     $context['posts'] = Timber::get_posts($posts_query);
     $context['pagination'] = Timber::get_pagination(4);
     
