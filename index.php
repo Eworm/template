@@ -71,6 +71,15 @@ else if (is_tag())
 
 }
 
+else if (is_search())
+{
+
+    $context['post'] = new TimberPost();
+	$context['posts'] = Timber::get_posts();
+	$template = ['search.twig'];
+
+}
+
 else if (is_404())
 {
 
