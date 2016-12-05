@@ -40,7 +40,7 @@
 
                 <div class="post__entry">
 
-                    {{ post.content }}
+                    {{ post.content | replace({'<iframe': '<div class="video-wrapper"><iframe', '</iframe>': '</iframe></div>'})}}
 
                     {% if post.thumbnail %}
 
