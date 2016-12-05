@@ -16,47 +16,63 @@
 
                 </h1>
 
+                {% if post.password_required %}
+
+                <div class="post__entry">
+
+                    <p>
+                        Deze content is beveiligd met een wachtwoord.
+                    </p>
+
+                    {{ post.maybe_show_password_form }}
+
+                </div>
+
+                {% else %}
+
                 <div class="post__entry">
 
                     {{ post.content }}
-                    
-                    {% if(post.thumbnail) %}
-                    
-                    <img src="{{ post.thumbnail.src }}" srcset="{{ post.thumbnail.src | retina(1) }} 1x, 
-                        {{ post.thumbnail.src | retina(2) }}  2x, 
-                        {{ post.thumbnail.src | retina(3) }}  3x, 
+
+                    {% if post.thumbnail %}
+
+                    <img src="{{ post.thumbnail.src }}" srcset="{{ post.thumbnail.src | retina(1) }} 1x,
+                        {{ post.thumbnail.src | retina(2) }}  2x,
+                        {{ post.thumbnail.src | retina(3) }}  3x,
                         {{ post.thumbnail.src | retina(4) }}  4x"
                         class="img-responsive"
                         alt="{{ post.thumbnail.alt }}">
-                        
+
                     {% endif %}
 
                 </div>
-                
+
                 <div class="comments-area">
-                    
+
                     <h2 class="comments-area__header">
                         {{ post.get_comment_count }} Reacties
                     </h2>
-                
+
                     <ol class="comments-area__list">
-                        
+
                         {% for comment in post.comments %}
-                        
+
                             <li class="comment comment-{{comment.ID}} comment-order-{{loop.index}}">
-                                
+
                                 <p class="comment__author">{{comment.author.name}} said:</p>
                                 <p>{{comment.content}}</p>
-                                
+
                             </li>
-                            
+
                         {% endfor %}
-                        
+
                     </ol>
-                
+
                 </div>
-                
+
                 {{ post.comment_form }}
+
+                {% endif %}
 
             </main>
 
