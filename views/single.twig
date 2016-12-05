@@ -15,13 +15,13 @@
                     {{ post.title }}
 
                 </h1>
-                
+
                 <div class="post__meta">
-                    
+
                     <a href="{{ post.author.link }}" title="Alle berichten van {{ post.author.name }}">
                         {{ post.author.name }}
                     </a>
-                    
+
                 </div>
 
                 {% if post.password_required %}
@@ -67,8 +67,23 @@
 
                             <li class="comment comment-{{comment.ID}} comment-order-{{loop.index}}">
 
-                                <p class="comment__author">{{comment.author.name}} said:</p>
-                                <p>{{comment.content}}</p>
+                                <div class="comment__author vcard">
+                                    <img src="{{ comment.author.avatar }}" class="avatar">
+                                    <span class="says">
+                                        {{ comment.author.name }} zegt:
+                                    </span>
+                                </div>
+
+                                <div class="comment__body">
+                                    {{ comment.content | replace({'<iframe': '<div class="video-wrapper"><iframe', '</iframe>': '</iframe></div>'})}}
+
+                                    <br>
+
+                                    <a href="#" class="comment__reply__link">
+                                        Reageren
+                                    </a>
+
+                                </div>
 
                             </li>
 
