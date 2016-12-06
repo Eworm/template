@@ -81,6 +81,14 @@ else if (is_search())
 
 }
 
+else if (is_author())
+{
+
+    $context['post'] = new TimberPost();
+	$template = ['author.twig'];
+
+}
+
 else if (is_404())
 {
 

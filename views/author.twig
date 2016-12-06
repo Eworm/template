@@ -1,0 +1,39 @@
+{% extends "layouts/base.twig" %}
+
+{% block content %}
+
+<div class="content divider divider--content">
+
+    <div class="core core--content">
+
+        <div class="row">
+
+            <main class="content col col--6" role="main">
+
+                <h1 class="content__header">
+
+                    {{ post.title }}
+
+                </h1>
+
+                <div class="content__body">
+
+                    {{ post.content }}
+
+                </div>
+
+            </main>
+
+            <aside class="sidebar col col--2" role="complementary">
+
+                Aside
+
+            </aside>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
