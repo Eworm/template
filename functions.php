@@ -4,7 +4,7 @@
 /* Includes
 ==================================================================================================================================*/
 include_once( get_stylesheet_directory() . '/includes/clean.php');
-include_once( get_stylesheet_directory() . '/includes/menu.php');
+// include_once( get_stylesheet_directory() . '/includes/menu.php');
 include_once( get_stylesheet_directory() . '/includes/minify.php');
 include_once( get_stylesheet_directory() . '/includes/breadcrumbs.php');
 include_once( get_stylesheet_directory() . '/includes/required-plugins.php');
