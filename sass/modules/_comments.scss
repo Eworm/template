@@ -17,7 +17,7 @@
 .pingback,
 #respond {
     width: 100%;
-    padding: $padding--skinny 0;
+    padding: $padding--m 0;
     position: relative;
     float: left;
     border-bottom: 2px solid $border;
@@ -32,7 +32,7 @@
     }
 
     @media (min-width: $mq--lap) {
-        margin: 0 0 $margin--skinny;
+        margin: 0 0 $margin--m;
         padding: $padding;
         border: 1px solid $border;
     }
@@ -90,7 +90,7 @@
     box-shadow: $shadow;
 
     @media (min-width: $mq--lap) {
-        margin-right: $margin--skinny;
+        margin-right: $margin--m;
         vertical-align: top;
         float: none;
     }
@@ -161,12 +161,12 @@
 
     .comment {
         margin: 0;
-        padding: $padding--skinny 0 0 $padding--skinny;
+        padding: $padding--m 0 0 $padding--m;
         border-top: 1px solid $border;
         border-bottom: 0;
 
         @media (min-width: $mq--lap) {
-            padding: $padding--skinny;
+            padding: $padding--m;
             border-bottom: 1px solid $border;
         }
     }

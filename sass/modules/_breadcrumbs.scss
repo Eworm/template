@@ -10,16 +10,16 @@
     }
 
     a {
-        margin-right: $margin--small;
-        padding-right: $padding--small;
+        margin-right: $margin--s;
+        padding-right: $padding--s;
         display: block;
         position: relative;
         text-decoration: none;
         transition: all .15s ease;
 
         @media (min-width: $mq--lap) {
-            margin-right: $margin--skinny;
-            padding-right: $padding--skinny;
+            margin-right: $margin--m;
+            padding-right: $padding--m;
         }
 
         &:hover, &:focus {
