@@ -39,12 +39,12 @@ $padding--xxl:      $s--xxl;
 // *
 // Responsive breakpoints. Always use em's!
 // *
-$mq--wrist:     0;              // $mq--wrist is the variable name from 0 to 480
-$mq--palm:      em(480);        // 480px
-$mq--lap:       em(750);        // 750px
-$mq--desk:      em(970);        // 970px
-$mq--wall:      em(1170);       // 1170px
-$mq--cinema:    em(1430);       // 1430px
+$mq--wrist:     0; // $mq--wrist is the variable name from 0 to 480
+$mq--palm:      em(480);
+$mq--lap:       em(750);
+$mq--desk:      em(970);
+$mq--wall:      em(1170);
+$mq--cinema:    em(1430);
 
 
 
