@@ -179,7 +179,7 @@
 
     .col--l-#{$i} {
 
-        @media (min-width: $mq--l) {
+        @media (min-width: $mq--desk) {
             @include col--width($i);
         }
     }
