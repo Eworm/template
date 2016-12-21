@@ -1,42 +1,4 @@
 // *
-// Define sizes here, use them later on
-// We're using increments of 8
-// https://medium.com/built-to-adapt/intro-to-the-8-point-grid-system-d2573cde8632
-// *
-$s--s:              8px;
-$s--m:              16px;
-$s:                 32px; // Ideally this would be the same as the $line-height variable for a good vertical rhythm. But remember, line-height shouldn't be in pixels!
-$s--l:              40px;
-$s--xl:             48px;
-$s--xxl:            56px;
-
-// Gutters
-$gutter--s:         $s--s;
-$gutter--m:         $s--m;
-$gutter:            $s;
-$gutter--l:         $s--l;
-$gutter--xl:        $s--xl;
-$gutter--xxl:       $s--xxl;
-
-// Margins
-$margin--s:         $s--s;
-$margin--m:         $s--m;
-$margin:            $s;
-$margin--l:         $s--l;
-$margin--xl:        $s--xl;
-$margin--xxl:       $s--xxl;
-
-// Paddings
-$padding--s:        $s--s;
-$padding--m:        $s--m;
-$padding:           $s;
-$padding--l:        $s--l;
-$padding--xl:       $s--xl;
-$padding--xxl:      $s--xxl;
-
-
-
-// *
 // Responsive breakpoints. Always use em's!
 // *
 $mq--wrist:     0; // $mq--wrist is the variable name from 0 to 480
