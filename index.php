@@ -77,6 +77,7 @@ else if (is_search())
 
     $context['post'] = new TimberPost();
 	$context['posts'] = Timber::get_posts();
+	$context['searchterm'] = get_search_query();
 	$template = ['search.twig'];
 
 }
