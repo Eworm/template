@@ -129,7 +129,7 @@ gulp.task('sprite', function () {
 
 // SCSS lint
 gulp.task('lint', function() {
-    gulp.src(src_paths.sass)
+    gulp.src(src_paths.css)
         .pipe(plugins.scssLint())
 });
 
