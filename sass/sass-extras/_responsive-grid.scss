@@ -58,8 +58,8 @@
             margin: 0;
     
             @media (min-width: $mq--lap) {
-                margin-right: -#{$gutter--skinny};
-                margin-left: -#{$gutter--skinny};
+                margin-right: -#{$gutter--m};
+                margin-left: -#{$gutter--m};
             }
         }
     }
@@ -80,8 +80,8 @@
 // Every column should have a row as it's parent
 // *
 .row {
-    margin-right: -#{$gutter--skinny};
-    margin-left: -#{$gutter--skinny};
+    margin-right: -#{$gutter--m};
+    margin-left: -#{$gutter--m};
 
     &:before, &:after {
         content: '';
@@ -96,8 +96,8 @@
 
 .col {
     width: 100%;
-    padding-right: $gutter--skinny;
-    padding-left: $gutter--skinny;
+    padding-right: $gutter--m;
+    padding-left: $gutter--m;
     float: left;
         
     &--center {
@@ -177,7 +177,7 @@
 // *
 @for $i from 1 through $grid-columns {
 
-    .col--desk-#{$i} {
+    .col--l-#{$i} {
 
         @media (min-width: $mq--desk) {
             @include col--width($i);

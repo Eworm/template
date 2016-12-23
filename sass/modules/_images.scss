@@ -2,8 +2,8 @@
     @extend %postimage;
 
     @media (min-width: $mq--palm) {
-        width: 100% !important;
-        margin: 0 0 $margin 0;
+        width: auto;
+        margin: $margin $margin $margin 0;
     }
 }
 
@@ -82,8 +82,8 @@ a img {
 // *
 .wp-caption {
     @extend %postimage;
-    margin: $margin--skinny 0;
-    padding: $margin--skinny;
+    margin: $margin--m 0;
+    padding: $margin--m;
     border: 1px solid $border;
     border-radius: 0;
     background: #fff;
@@ -93,7 +93,7 @@ a img {
         width: 100%;
         height: auto;
         max-width: 100%;
-        margin: 0 0 $margin--skinny;
+        margin: 0 0 $margin--m;
         padding: 0;
         display: block;
         border: 0 none;
@@ -109,7 +109,7 @@ a img {
     }
 
     p.wp-caption-text {
-        margin: $margin--skinny 0 0;
+        margin: $margin--m 0 0;
         display: block;
         font-size: $type-meta;
     }
@@ -118,7 +118,7 @@ a img {
     &.alignnone {
 
         @media (min-width: $mq--palm) {
-            margin: $margin 0 0;
+            margin: $margin $margin $margin 0;
         }
     }
 
@@ -150,7 +150,7 @@ a img {
     }
 
     @media (min-width: $mq--palm) {
-        float: left;
-        margin: 0 $margin--skinny $margin 0;
+        float: right;
+        margin: 0 0 $margin $margin;
     }
 }

@@ -15,9 +15,10 @@ Version: 1.0
 // Theme variables
 // *
 @import 'import-now';                       // Normalize is imported via Bower
-@import 'theme/colors';                     // Font-families and sizes
+@import 'theme/layout';                     // Margins/paddings
+@import 'theme/colors';                     // Colors
 @import 'theme/variables';                  // Global variables
-@import 'theme/type';                       // Colors
+@import 'theme/type';                       // Font variables
 
 
 
@@ -68,5 +69,4 @@ Version: 1.0
 @import 'modules/vcard';                     // Vcard styles
 @import 'modules/helpers';                   // Helper classes
 @import 'modules/buttons';                   // Several buttons
-@import 'modules/video-wrapper';             // Responsive youtube iframe wrapper
 @import 'modules/print';                     // Simple print stylesheet

@@ -55,17 +55,17 @@
     }
 
     > a {
-        padding: $padding--skinny $padding--skinny;
+        padding: $padding--m $padding--m;
         display: inline-block;
         text-decoration: none;
         transition: all .15s ease-out;
 
         @media (min-width: $mq--palm) {
-            padding: $padding--skinny;
+            padding: $padding--m;
         }
 
         @media (min-width: $mq--lap) {
-            padding: $padding--skinny $padding;
+            padding: $padding--m $padding;
             float: left;
             position: relative;
         }
@@ -226,7 +226,7 @@
             background: #eee;
 
             @media (min-width: $mq--lap) {
-                padding: 8px $padding--skinny;
+                padding: 8px $padding--m;
                 color: $body;
                 border: 0;
                 border-bottom: 1px solid $border;

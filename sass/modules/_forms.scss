@@ -3,7 +3,7 @@
 // *
 input {
     width: 100%;
-    padding: $padding--small*2;
+    padding: $padding--s*2;
     font-family: $type-fam-body;
     font-size: $type-body;
 
@@ -19,7 +19,7 @@ input {
 textarea {
     width: 100%;
     height: 120px;
-    padding: $padding--small*2;
+    padding: $padding--s*2;
     float: left;
     font-family: $type-fam-body;
     font-size: $type-body;
@@ -32,7 +32,7 @@ input[type="file"] {
 input[type="checkbox"],
 input[type="radio"] {
     width: auto;
-    margin-right: $margin--skinny;
+    margin-right: $margin--m;
 }
 
 input[type="submit"] {
