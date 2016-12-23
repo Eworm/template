@@ -1,6 +1,6 @@
-// *
+//
 // Regular table
-// *
+//
 .table {
     width: 100%;
     margin: $margin 0;
@@ -23,9 +23,9 @@
     
     
     
-    // *
+    //
     // Responsive table
-    // *
+    //
     &--responsive {
         position: relative;
         display: block;
@@ -89,18 +89,18 @@
                 display: table-row-group;
                 overflow: visible;
                 border: 1px solid $border;
+                font-size: $type-body;
                 white-space: normal;
                 word-wrap: break-word;
-                font-size: $type-body;
             }
         }
 
         tr {
             display: inline-block;
-            vertical-align: top;
             border: 1px solid $border;
             border-left: 0;
             font-size: $type-body;
+            vertical-align: top;
 
             @media (min-width: $mq--lap) {
                 margin: 0;
@@ -108,7 +108,8 @@
                 border-right: 0;
             }
 
-            th, td {
+            th,
+            td {
                 display: block;
                 border-bottom: 1px solid $border;
 

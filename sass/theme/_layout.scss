@@ -1,8 +1,8 @@
-// *
+//
 // Define sizes here, use them later on
 // We're using increments of 8
 // https://medium.com/built-to-adapt/intro-to-the-8-point-grid-system-d2573cde8632
-// *
+//
 $layout--s:         8px;
 $layout--m:         16px;
 $layout:            32px; // Ideally this would be the same as the $line-height variable for a good vertical rhythm. But remember, line-height shouldn't be in pixels!

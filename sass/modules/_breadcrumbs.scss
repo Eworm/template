@@ -12,8 +12,8 @@
     a {
         margin-right: $margin--s;
         padding-right: $padding--s;
-        display: block;
         position: relative;
+        display: block;
         text-decoration: none;
         transition: all .15s ease;
 
@@ -22,7 +22,8 @@
             padding-right: $padding--m;
         }
 
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
             color: $body;
             text-decoration: underline;
         }

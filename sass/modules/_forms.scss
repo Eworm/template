@@ -1,11 +1,11 @@
-// *
+//
 // Input sizes
-// *
+//
 input {
     width: 100%;
     padding: $padding--s*2;
-    font-family: $type-fam-body;
     font-size: $type-body;
+    font-family: $type-fam-body;
 
     @media (min-width: $mq--lap) {
         width: 50%;
@@ -21,8 +21,8 @@ textarea {
     height: 120px;
     padding: $padding--s*2;
     float: left;
-    font-family: $type-fam-body;
     font-size: $type-body;
+    font-family: $type-fam-body;
 }
 
 input[type="file"] {
@@ -51,9 +51,9 @@ fieldset {
 }
 
 
-// *
+//
 // The form
-// *
+//
 .content form {
     position: relative;
     z-index: 1;
@@ -72,9 +72,9 @@ fieldset {
 }
 
 
-// *
+//
 // A single row
-// *
+//
 .form__row {
     @extend %form__row;
 
@@ -84,7 +84,8 @@ fieldset {
         display: block;
         clear: both;
 
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
             cursor: pointer;
         }
 
@@ -118,27 +119,27 @@ fieldset {
 }
 
 
-// *
+//
 // Other elements
-// *
+//
 #screenreader,
 #loading {
     display: none;
 }
 
 
-// *
+//
 // Required style
-// *
+//
 .req {
-    color: $mute;
     font-size: $type-body;
+    color: $mute;
 }
 
 
-// *
+//
 // Error messages
-// *
+//
 .parsley-error {
 
     &-list {

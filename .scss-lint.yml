@@ -6,6 +6,9 @@ linters:
 
     EmptyRule:
         enabled: false
+        
+    SelectorFormat:
+        convention: hyphenated_BEM
 
     PropertySortOrder:
         order: [

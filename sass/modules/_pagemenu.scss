@@ -2,8 +2,8 @@
 
     @media (min-width: $mq--lap) {
         margin-bottom: $margin;
-        clear: none;
         display: block;
+        clear: none;
         border: 1px solid $border;
     }
 
@@ -48,7 +48,8 @@
             background: transparent;
         }
 
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
             background: $border;
         }
     }

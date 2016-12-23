@@ -1,6 +1,6 @@
-// *
+//
 // The menu
-// *
+//
 .mainmenu {
 
     @media (min-width: $mq--palm) {
@@ -15,20 +15,20 @@
 }
 
 
-// *
+//
 // Unordered list
-// *
+//
 .main-menu {
     width: 100%;
     margin: 0;
     padding: 0;
     display: block;
     float: left;
-    white-space: nowrap;
-    background: $nav-bg;
     overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    background: $nav-bg;
     list-style-type: none;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
 
     @media (min-width: $mq--lap) {
         width: $site--width;
@@ -37,40 +37,40 @@
 }
 
 
-// *
+//
 // A single item
-// *
+//
 .menu-item {
-    display: inline-block;
     position: relative;
+    display: inline-block;
 
     .sub-menu {
-        display: none;
         left: -100%;
+        display: none;
     }
 
     @media (min-width: $mq--lap) {
-        float: left;
         position: relative;
+        float: left;
     }
 
     > a {
-        padding: $padding--m $padding--m;
+        padding: $padding--m;
         display: inline-block;
         text-decoration: none;
         transition: all .15s ease-out;
 
         @media (min-width: $mq--palm) {
-            padding: $padding--m;
         }
 
         @media (min-width: $mq--lap) {
             padding: $padding--m $padding;
-            float: left;
             position: relative;
+            float: left;
         }
 
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
             background: $border;
 
             @media (min-width: $mq--lap) {
@@ -88,9 +88,9 @@
 }
 
 
-// *
+//
 // Nav feedback
-// *
+//
 .current_page_item,
 .current-menu-item,
 .current-page-ancestor,
@@ -105,9 +105,9 @@
 }
 
 
-// *
+//
 // The current item
-// *
+//
 .current_page_item {
 
     a {
@@ -152,9 +152,9 @@
 }
 
 
-// *
+//
 // The sub-menu menu
-// *
+//
 .has-submenu {
 }
 
@@ -167,23 +167,23 @@
     position: relative;
     z-index: 1100;
     float: left;
-    border: 0;
     overflow: auto;
-    background: darken(#eee, 5%);
-    transition: all .15s cubic-bezier(0.075, 0.085, 0.075, 1.175);
+    border: 0;
+    background: darken($color--gray-13, 5%);
+    transition: all .15s cubic-bezier(.075, .085, .075, 1.175);
 
     @media (min-width: $mq--lap) {
         position: absolute;
         top: 100%;
         left: 0;
         border: 1px solid $border;
-        background: #fff;
+        background: $color--white;
     }
 
     .active-sub & {
         height: 110px;
-        opacity: 1;
         border-bottom: 1px solid $border;
+        opacity: 1;
     }
 
     .current_page_parent &,
@@ -218,20 +218,20 @@
     .menu-item {
 
         &:nth-child(2n+1) {
-            border-right: 1px solid #fff;
+            border-right: 1px solid $color--white;
         }
 
         a {
-            border-bottom: 1px solid #fff;
-            background: #eee;
+            border-bottom: 1px solid $color--white;
+            background: $color--gray-13;
 
             @media (min-width: $mq--lap) {
                 padding: 8px $padding--m;
-                color: $body;
                 border: 0;
                 border-bottom: 1px solid $border;
-                white-space: nowrap;
                 background: transparent;
+                color: $body;
+                white-space: nowrap;
             }
 
             &:hover,

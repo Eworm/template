@@ -1,42 +1,49 @@
-// *
+//
 // Simple print stylesheet
-// *
+//
 
 @media print {
 
     * {
         background: transparent !important;
-        color: black !important;
+        color: $color--black !important;
         text-shadow: none !important;
         filter:none !important;
-        -ms-filter: none !important;
-    } /* Black prints faster: h5bp.com/s */
+    }
+    // Black prints faster: h5bp.com/s
 
-    a, a:visited {
+    a,
+    a:visited {
         text-decoration: underline;
     }
 
     a[href]:after {
-        content: " (" attr(href) ")";
+        content: ' (' attr(href) ')';
     }
 
     abbr[title]:after {
-        content: " (" attr(title) ")";
+        content: ' (' attr(title) ')';
     }
 
-    .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
-        content: "";
-    }  // Don't show links for images, or javascript/internal links
+    .ir a:after,
+    a[href^='javascript:']:after,
+    a[href^='#']:after {
+        content: '';
+    }
+    // Don't show links for images, or javascript/internal links
 
-    pre, blockquote {
+    pre,
+    blockquote {
         page-break-inside: avoid;
     }
 
     thead {
         display: table-header-group;
-    } // h5bp.com/t
+    }
+    // h5bp.com/t
 
-    tr, img {
+    tr,
+    img {
         page-break-inside: avoid;
     }
 
@@ -48,12 +55,15 @@
         margin: 2cm;
     }
 
-    p, h2, h3 {
+    p,
+    h2,
+    h3 {
         orphans: 3;
         widows: 3;
     }
 
-    h2, h3 {
+    h2,
+    h3 {
         page-break-after: avoid;
     }
 }

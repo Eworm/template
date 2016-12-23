@@ -25,7 +25,8 @@
     a {
         text-decoration: none;
 
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
             text-decoration: underline;
         }
     }
@@ -35,9 +36,9 @@
     }
     
     
-    // *
+    //
     // Sidebar section title
-    // *
+    //
     &__header {
         margin: 0 0 $margin--m;
         font-weight: bold;
@@ -48,9 +49,10 @@
         }
     
         a {
-            text-decoration: none
+            text-decoration: none;
     
-            &:hover, &:focus {
+            &:hover,
+            &:focus {
                 text-decoration: underline;
             }
         }
@@ -58,9 +60,9 @@
 }
 
 
-// *
+//
 // Nav feedback
-// *
+//
 .current-cat {
     font-weight: bold;
 }
