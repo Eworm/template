@@ -1,6 +1,6 @@
-// *
+//
 // Images used in posts
-// *
+//
 %postimage {
     width: 100%;
     height: auto;
@@ -12,9 +12,9 @@
 
 
 
-// *
+//
 // Arrow for navfeedback
-// *
+//
 %navfeedback {
     width: 0;
     height: 0;
@@ -25,9 +25,9 @@
 
 
 
-// *
+//
 // Row in a form
-// *
+//
 %form__row {
     width: 100%;
     margin-bottom: $margin--m;
@@ -49,23 +49,23 @@
         border-top-left-radius: 0;
         box-shadow: $shadow;
         background: $alert;
-        color: #fff;
+        color: $color--white;
 
         @media (min-width: $mq--lap) {
             width: 50%;
         }
     }
 
-    .textarea + div.error {
+    .textarea + .error {
         width: 100%;
     }
 }
 
 
 
-// *
+//
 // Summary
-// *
+//
 %post {
     width: 100%;
     margin-bottom: $margin;
@@ -92,10 +92,10 @@
             width: 87px;
             height: 68px;
             margin-right: $margin--m;
-            overflow: hidden;
-            float: left;
-            display: block;
             position: relative;
+            display: block;
+            float: left;
+            overflow: hidden;
 
             img {
                 position: absolute;

@@ -1,6 +1,6 @@
-// *
+//
 // The form
-// *
+//
 .searchform {
     width: 100%;
     padding: $padding--m;
@@ -14,16 +14,16 @@
     
         @media (min-width: $mq--lap) {
             width: 30%;
-            float: left;
             display: block;
+            float: left;
         }
     }
     
     
     
-    // *
+    //
     // Search form fieldset
-    // *
+    //
     &__container {
         margin: 0;
         padding: 0;
@@ -32,29 +32,28 @@
     
     
     
-    // *
+    //
     // Hiding the label, but not for screenreaders
-    // *
+    //
     &__container__label {
         @include screenreader--hide;
     }
 
 
-    // *
+    //
     // When in nav
-    // *
+    //
     nav & {
         display: block;
-        background: $nav-bg;
-        background: rgba($nav-bg, .96);
         border-top: 1px solid $border;
+        background: rgba($nav-bg, .96);
     }
 
 
 
-    // *
+    //
     // When in content
-    // *
+    //
     .content & {
         padding: 0;
         display: block;
@@ -62,26 +61,26 @@
 
 
 
-    // *
+    //
     // When in header
-    // *
+    //
     .header & {
 
         @media (min-width: $mq--lap) {
             width: 30%;
             padding: 0;
+            display: block;
             float: right;
             clear: none;
-            display: block;
             background: transparent;
             text-align: left;
         }
 
 
 
-        // *
+        //
         // The search input
-        // *
+        //
         .searchform__container__field {
             width: 100%;
             clear: both;

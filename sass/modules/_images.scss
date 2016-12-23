@@ -12,8 +12,8 @@ div.aligncenter {
     @extend %postimage;
 
     @media (min-width: $mq--palm) {
-        display: block;
         margin: $margin auto;
+        display: block;
     }
 }
 
@@ -22,8 +22,8 @@ div.aligncenter {
 
     @media (min-width: $mq--palm) {
         width: auto;
-        float: right;
         margin: 0 0 $margin $margin;
+        float: right;
     }
 }
 
@@ -32,8 +32,8 @@ div.aligncenter {
 
     @media (min-width: $mq--palm) {
         width: auto;
-        float: left;
         margin: 0 $margin $margin 0;
+        float: left;
     }
 }
 
@@ -44,8 +44,8 @@ a img {
 
         @media (min-width: $mq--palm) {
             width: auto;
-            float: right;
             margin: $margin 0 $margin $margin;
+            float: right;
         }
     }
 
@@ -61,32 +61,32 @@ a img {
 
         @media (min-width: $mq--palm) {
             width: auto;
-            float: left;
             margin: $margin $margin $margin 0;
+            float: left;
         }
     }
 
     &.aligncenter {
 
         @media (min-width: $mq--palm) {
-            display: block;
-            margin-left: auto;
             margin-right: auto;
+            margin-left: auto;
+            display: block;
         }
     }
 }
 
 
-// *
+//
 // The caption
-// *
+//
 .wp-caption {
     @extend %postimage;
     margin: $margin--m 0;
     padding: $margin--m;
     border: 1px solid $border;
     border-radius: 0;
-    background: #fff;
+    background: $color--white;
     text-align: center;
 
     img {
@@ -138,9 +138,9 @@ a img {
 }
 
 
-// *
+//
 // A post thumbnail
-// *
+//
 .post-thumbnail {
     @extend %postimage;
 
@@ -150,7 +150,7 @@ a img {
     }
 
     @media (min-width: $mq--palm) {
-        float: right;
         margin: 0 0 $margin $margin;
+        float: right;
     }
 }

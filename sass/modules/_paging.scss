@@ -1,6 +1,6 @@
-// *
+//
 // Unordered list
-// *
+//
 .paging {
     margin: 0;
     padding: 0;
@@ -18,7 +18,8 @@
             color: $body;
             text-decoration: none;
 
-            &:hover, &:focus {
+            &:hover,
+            &:focus {
                 background: $border;
             }
         }
@@ -35,9 +36,9 @@
     }
 
     
-    // *
+    //
     // Next & prev
-    // *
+    //
     &__navigation {
     
         &--prev {
@@ -48,9 +49,9 @@
     }
     
     
-    // *
+    //
     // A list item
-    // *
+    //
     &__number {
         display: none;
     

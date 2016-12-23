@@ -1,6 +1,6 @@
-// *
+//
 // Main content on a page
-// *
+//
 .content {
     padding: 0;
 
@@ -9,14 +9,14 @@
 }
 
 
-// *
+//
 // The content
-// *
+//
 .content__body {
 
     p,
     ul {
-        margin: 0 0 $margin--m 0;
+        margin: 0 0 $margin--m;
 
         @media (min-width: $mq--lap) {
             margin-bottom: $margin;

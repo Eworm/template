@@ -1,20 +1,21 @@
-// *
+//
 // Single post
-// *
+//
 .post {
     @extend %post;
 
     
-    // *
+    //
     // Post title
-    // *
+    //
     &__header {
         margin: 0;
     
         a {
             text-decoration: none;
     
-            &:hover, &:focus {
+            &:hover,
+            &:focus {
                 text-decoration: underline;
             }
         }
@@ -25,17 +26,17 @@
     }
     
     
-    // *
+    //
     // Post content
-    // *
+    //
     &__entry {
         word-break: break-word;
     }
     
     
-    // *
+    //
     // Blog nav
-    // *
+    //
     &-nav {
         text-align: center;
     
@@ -45,9 +46,9 @@
     }
     
     
-    // *
+    //
     // Post meta
-    // *
+    //
     &__meta {
         color: $mute;
     
@@ -59,7 +60,8 @@
             color: $mute;
             text-decoration: none;
     
-            &:hover, &:focus {
+            &:hover,
+            &:focus {
                 color: $mute--hover;
                 text-decoration: underline;
             }
@@ -67,15 +69,16 @@
     }
     
     
-    // *
+    //
     // Continue reading & nr. of comments
-    // *
+    //
     &__options {
     
         a {
-            text-decoration: none
+            text-decoration: none;
     
-            &:hover, &:focus {
+            &:hover,
+            &:focus {
                 text-decoration: underline;
             }
         }
