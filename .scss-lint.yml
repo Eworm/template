@@ -3,6 +3,9 @@ linters:
     Indentation:
         enabled: true
         width: 4
+        
+    SelectorFormat:
+        convention: hyphenated_BEM
 
     EmptyRule:
         enabled: false
