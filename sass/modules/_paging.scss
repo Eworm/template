@@ -10,8 +10,8 @@
         float: left;
 
         > a {
-            margin-right: $padding--s;
-            padding: $padding--s $padding--m;
+            margin-right: $padding--centi;
+            padding: $padding--centi $padding--deci;
             display: block;
             float: left;
             border: 1px solid $border;
@@ -25,8 +25,8 @@
         }
         
         > span {
-            margin-right: $padding--s;
-            padding: $padding--s $padding--m;
+            margin-right: $padding--centi;
+            padding: $padding--centi $padding--deci;
             display: block;
             float: left;
             border: 1px solid transparent;

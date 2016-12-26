@@ -10,16 +10,16 @@
     }
 
     a {
-        margin-right: $margin--s;
-        padding-right: $padding--s;
+        margin-right: $margin--centi;
+        padding-right: $padding--centi;
         position: relative;
         display: block;
         text-decoration: none;
         transition: all .15s ease;
 
         @media (min-width: $mq--lap) {
-            margin-right: $margin--m;
-            padding-right: $padding--m;
+            margin-right: $margin--deci;
+            padding-right: $padding--deci;
         }
 
         &:hover,

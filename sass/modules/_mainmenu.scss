@@ -55,7 +55,7 @@
     }
 
     > a {
-        padding: $padding--m;
+        padding: $padding--deci;
         display: inline-block;
         text-decoration: none;
         transition: all .15s ease-out;
@@ -64,7 +64,7 @@
         }
 
         @media (min-width: $mq--lap) {
-            padding: $padding--m $padding;
+            padding: $padding--deci $padding;
             position: relative;
             float: left;
         }
@@ -226,7 +226,7 @@
             background: $color--gray-13;
 
             @media (min-width: $mq--lap) {
-                padding: 8px $padding--m;
+                padding: 8px $padding--deci;
                 border: 0;
                 border-bottom: 1px solid $border;
                 background: transparent;

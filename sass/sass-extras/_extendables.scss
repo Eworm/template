@@ -4,7 +4,7 @@
 %postimage {
     width: 100%;
     height: auto;
-    margin: $margin--m 0;
+    margin: $margin--deci 0;
     display: block;
     border-radius: 0;
     box-shadow: $shadow;
@@ -30,7 +30,7 @@
 //
 %formrow {
     width: 100%;
-    margin-bottom: $margin--m;
+    margin-bottom: $margin--deci;
     float: left;
     clear: both;
 
@@ -43,7 +43,7 @@
 
     &.error {
         margin-bottom: 0;
-        padding: $padding--m;
+        padding: $padding--deci;
         border-radius: $radius;
         border-top-right-radius: 0;
         border-top-left-radius: 0;
@@ -91,7 +91,7 @@
         @media (min-width: $mq--lap) {
             width: 87px;
             height: 68px;
-            margin-right: $margin--m;
+            margin-right: $margin--deci;
             position: relative;
             display: block;
             float: left;

@@ -82,8 +82,8 @@ a img {
 //
 .wp-caption {
     @extend %postimage;
-    margin: $margin--m 0;
-    padding: $margin--m;
+    margin: $margin--deci 0;
+    padding: $margin--deci;
     border: 1px solid $border;
     border-radius: 0;
     background: $color--white;
@@ -93,7 +93,7 @@ a img {
         width: 100%;
         height: auto;
         max-width: 100%;
-        margin: 0 0 $margin--m;
+        margin: 0 0 $margin--deci;
         padding: 0;
         display: block;
         border: 0 none;
@@ -109,7 +109,7 @@ a img {
     }
 
     p.wp-caption-text {
-        margin: $margin--m 0 0;
+        margin: $margin--deci 0 0;
         display: block;
         font-size: $type-meta;
     }

@@ -14,26 +14,27 @@ $layout--7:         $layout--base * 7;
 
 //
 // Use the defined sizes
+// Use https://en.wikipedia.org/wiki/Metric_prefix for variables naming conventions
 // Gutters
-$gutter--s:         $layout--1;
-$gutter--m:         $layout--2;
+$gutter--centi:     $layout--1;
+$gutter--deci:      $layout--2;
 $gutter:            $layout--4;
-$gutter--l:         $layout--5;
-$gutter--xl:        $layout--6;
-$gutter--xxl:       $layout--7;
+$gutter--deca:      $layout--5;
+$gutter--hecto:     $layout--6;
+$gutter--kilo:      $layout--7;
 
 // Margins
-$margin--s:         $layout--1;
-$margin--m:         $layout--2;
+$margin--centi:     $layout--1;
+$margin--deci:      $layout--2;
 $margin:            $layout--4;
-$margin--l:         $layout--5;
-$margin--xl:        $layout--6;
-$margin--xxl:       $layout--7;
+$margin--deca:      $layout--5;
+$margin--hecto:     $layout--6;
+$margin--kilo:      $layout--7;
 
 // Paddings
-$padding--s:        $layout--1;
-$padding--m:        $layout--2;
+$padding--centi:    $layout--1;
+$padding--deci:     $layout--2;
 $padding:           $layout--4;
-$padding--l:        $layout--5;
-$padding--xl:       $layout--6;
-$padding--xxl:      $layout--7;
+$padding--deca:     $layout--5;
+$padding--hecto:    $layout--6;
+$padding--kilo:     $layout--7;

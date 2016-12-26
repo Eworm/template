@@ -16,7 +16,7 @@
 
     p,
     ul {
-        margin: 0 0 $margin--m;
+        margin: 0 0 $margin--deci;
 
         @media (min-width: $mq--lap) {
             margin-bottom: $margin;

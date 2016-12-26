@@ -2,7 +2,7 @@
 // Calculate the grid widths
 //
 @mixin col--width($i) {
-    width: #{100% / ($site--max-width / (((($site--max-width / $grid-columns) * $i))))};
+    width: #{100% / ($site--deciax-width / (((($site--deciax-width / $grid-columns) * $i))))};
 }
 
 
@@ -30,7 +30,7 @@
 
     @media (min-width: $mq--lap) {
         width: $site--width;
-        max-width: $site--max-width;
+        max-width: $site--deciax-width;
         padding: $gutter 0;
         position: relative;
     }
@@ -49,7 +49,7 @@
     &--header {
     }
     
-    &--mainmenu {
+    &--deciainmenu {
         padding: 0;
     
         @media (min-width: $mq--lap) {
@@ -59,8 +59,8 @@
             margin: 0;
     
             @media (min-width: $mq--lap) {
-                margin-right: -#{$gutter--m};
-                margin-left: -#{$gutter--m};
+                margin-right: -#{$gutter--deci};
+                margin-left: -#{$gutter--deci};
             }
         }
     }
@@ -81,8 +81,8 @@
 // Every column should have a row as it's parent
 //
 .row {
-    margin-right: -#{$gutter--m};
-    margin-left: -#{$gutter--m};
+    margin-right: -#{$gutter--deci};
+    margin-left: -#{$gutter--deci};
 
     &:before,
     &:after {
@@ -98,8 +98,8 @@
 
 .col {
     width: 100%;
-    padding-right: $gutter--m;
-    padding-left: $gutter--m;
+    padding-right: $gutter--deci;
+    padding-left: $gutter--deci;
     float: left;
         
     &--center {
@@ -230,7 +230,7 @@
     .col--push-#{$i} {
 
         @media (min-width: $mq--lap) {
-            margin-left: 100% / ($site--max-width / (((($site--max-width - (($grid-columns + 1) * $gutter)) / $grid-columns) * $i) + (($i + 1) * $gutter)));
+            margin-left: 100% / ($site--deciax-width / (((($site--deciax-width - (($grid-columns + 1) * $gutter)) / $grid-columns) * $i) + (($i + 1) * $gutter)));
         }
     }
 }
