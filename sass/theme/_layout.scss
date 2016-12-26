@@ -1,35 +1,39 @@
 //
-// Define sizes here, use them later on
-// We're using increments of 8
+// Define sizes here
+// Use increments of 8 for a cleaner layout
 // https://medium.com/built-to-adapt/intro-to-the-8-point-grid-system-d2573cde8632
 //
-$layout--s:         8px;
-$layout--m:         16px;
-$layout:            32px; // Ideally this would be the same as the $line-height variable for a good vertical rhythm. But remember, line-height shouldn't be in pixels!
-$layout--l:         40px;
-$layout--xl:        48px;
-$layout--xxl:       56px;
+$layout--base:      8px;
+$layout--1:         $layout--base * 1;
+$layout--2:         $layout--base * 2;
+$layout--4:         $layout--base * 4;
+$layout--5:         $layout--base * 5;
+$layout--6:         $layout--base * 6;
+$layout--7:         $layout--base * 7;
 
+
+//
+// Use the defined sizes
 // Gutters
-$gutter--s:         $layout--s;
-$gutter--m:         $layout--m;
-$gutter:            $layout;
-$gutter--l:         $layout--l;
-$gutter--xl:        $layout--xl;
-$gutter--xxl:       $layout--xxl;
+$gutter--s:         $layout--1;
+$gutter--m:         $layout--2;
+$gutter:            $layout--4;
+$gutter--l:         $layout--5;
+$gutter--xl:        $layout--6;
+$gutter--xxl:       $layout--7;
 
 // Margins
-$margin--s:         $layout--s;
-$margin--m:         $layout--m;
-$margin:            $layout;
-$margin--l:         $layout--l;
-$margin--xl:        $layout--xl;
-$margin--xxl:       $layout--xxl;
+$margin--s:         $layout--1;
+$margin--m:         $layout--2;
+$margin:            $layout--4;
+$margin--l:         $layout--5;
+$margin--xl:        $layout--6;
+$margin--xxl:       $layout--7;
 
 // Paddings
-$padding--s:        $layout--s;
-$padding--m:        $layout--m;
-$padding:           $layout;
-$padding--l:        $layout--l;
-$padding--xl:       $layout--xl;
-$padding--xxl:      $layout--xxl;
+$padding--s:        $layout--1;
+$padding--m:        $layout--2;
+$padding:           $layout--4;
+$padding--l:        $layout--5;
+$padding--xl:       $layout--6;
+$padding--xxl:      $layout--7;
