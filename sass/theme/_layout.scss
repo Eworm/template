@@ -2,39 +2,34 @@
 // Define sizes here
 // Use increments of 8 for a cleaner layout
 // https://medium.com/built-to-adapt/intro-to-the-8-point-grid-system-d2573cde8632
+// We're using the metric system for variable names
+// https://en.wikipedia.org/wiki/Metric_prefix
 //
 $layout--base:      8px;
-$layout--1:         $layout--base * 1;
-$layout--2:         $layout--base * 2;
-$layout--4:         $layout--base * 4;
-$layout--5:         $layout--base * 5;
-$layout--6:         $layout--base * 6;
-$layout--7:         $layout--base * 7;
+$layout--1:         $layout--base * 1; // One
+$layout--2:         $layout--base * 2; // Deca
+$layout--3:         $layout--base * 3; // Hecto
+$layout--4:         $layout--base * 4; // Kilo
+$layout--5:         $layout--base * 5; // Mega
+$layout--6:         $layout--base * 6; // Giga
+$layout--7:         $layout--base * 8; // Tera
+$layout--7:         $layout--base * 8; // Peta
+$layout--7:         $layout--base * 10; // Exa
+$layout--7:         $layout--base * 11; // Zetta
+$layout--7:         $layout--base * 12; // Yotta
 
 
-//
-// Use the defined sizes
-// Use https://en.wikipedia.org/wiki/Metric_prefix for variables naming conventions
 // Gutters
-$gutter--centi:     $layout--1;
-$gutter--deci:      $layout--2;
-$gutter:            $layout--4;
-$gutter--deca:      $layout--5;
-$gutter--hecto:     $layout--6;
-$gutter--kilo:      $layout--7;
+$gutter:            $layout--1;
+$gutter--deca:      $layout--2;
+$gutter--kilo:      $layout--4;
 
 // Margins
-$margin--centi:     $layout--1;
-$margin--deci:      $layout--2;
-$margin:            $layout--4;
-$margin--deca:      $layout--5;
-$margin--hecto:     $layout--6;
-$margin--kilo:      $layout--7;
+$margin:            $layout--1;
+$margin--deca:      $layout--2;
+$margin--kilo:      $layout--4;
 
 // Paddings
-$padding--centi:    $layout--1;
-$padding--deci:     $layout--2;
-$padding:           $layout--4;
-$padding--deca:     $layout--5;
-$padding--hecto:    $layout--6;
-$padding--kilo:     $layout--7;
+$padding:           $layout--1;
+$padding--deca:     $layout--2;
+$padding--kilo:     $layout--4;

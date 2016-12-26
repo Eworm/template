@@ -3,7 +3,7 @@
 
     @media (min-width: $mq--palm) {
         width: auto;
-        margin: $margin $margin $margin 0;
+        margin: $margin--kilo $margin--kilo $margin--kilo 0;
     }
 }
 
@@ -12,7 +12,7 @@ div.aligncenter {
     @extend %postimage;
 
     @media (min-width: $mq--palm) {
-        margin: $margin auto;
+        margin: $margin--kilo auto;
         display: block;
     }
 }
@@ -22,7 +22,7 @@ div.aligncenter {
 
     @media (min-width: $mq--palm) {
         width: auto;
-        margin: 0 0 $margin $margin;
+        margin: 0 0 $margin--kilo $margin--kilo;
         float: right;
     }
 }
@@ -32,7 +32,7 @@ div.aligncenter {
 
     @media (min-width: $mq--palm) {
         width: auto;
-        margin: 0 $margin $margin 0;
+        margin: 0 $margin--kilo $margin--kilo 0;
         float: left;
     }
 }
@@ -44,7 +44,7 @@ a img {
 
         @media (min-width: $mq--palm) {
             width: auto;
-            margin: $margin 0 $margin $margin;
+            margin: $margin--kilo 0 $margin--kilo $margin--kilo;
             float: right;
         }
     }
@@ -53,7 +53,7 @@ a img {
 
         @media (min-width: $mq--palm) {
             width: auto;
-            margin: $margin $margin $margin 0;
+            margin: $margin--kilo $margin--kilo $margin--kilo 0;
         }
     }
 
@@ -61,7 +61,7 @@ a img {
 
         @media (min-width: $mq--palm) {
             width: auto;
-            margin: $margin $margin $margin 0;
+            margin: $margin--kilo $margin--kilo $margin--kilo 0;
             float: left;
         }
     }
@@ -82,8 +82,8 @@ a img {
 //
 .wp-caption {
     @extend %postimage;
-    margin: $margin--deci 0;
-    padding: $margin--deci;
+    margin: $margin--deca 0;
+    padding: $margin--deca;
     border: 1px solid $border;
     border-radius: 0;
     background: $color--white;
@@ -93,7 +93,7 @@ a img {
         width: 100%;
         height: auto;
         max-width: 100%;
-        margin: 0 0 $margin--deci;
+        margin: 0 0 $margin--deca;
         padding: 0;
         display: block;
         border: 0 none;
@@ -109,7 +109,7 @@ a img {
     }
 
     p.wp-caption-text {
-        margin: $margin--deci 0 0;
+        margin: $margin--deca 0 0;
         display: block;
         font-size: $type-meta;
     }
@@ -118,21 +118,21 @@ a img {
     &.alignnone {
 
         @media (min-width: $mq--palm) {
-            margin: $margin $margin $margin 0;
+            margin: $margin--kilo $margin--kilo $margin--kilo 0;
         }
     }
 
     &.alignleft {
 
         @media (min-width: $mq--palm) {
-            margin: 0 $margin $margin 0;
+            margin: 0 $margin--kilo $margin--kilo 0;
         }
     }
 
     &.alignright {
 
         @media (min-width: $mq--palm) {
-            margin: 0 0 $margin $margin;
+            margin: 0 0 $margin--kilo $margin--kilo;
         }
     }
 }
@@ -146,11 +146,11 @@ a img {
 
     @media (min-width: $mq--palm) {
         width: auto;
-        margin: $margin 0;
+        margin: $margin--kilo 0;
     }
 
     @media (min-width: $mq--palm) {
-        margin: 0 0 $margin $margin;
+        margin: 0 0 $margin--kilo $margin--kilo;
         float: right;
     }
 }

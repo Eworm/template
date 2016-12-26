@@ -4,7 +4,7 @@
 %postimage {
     width: 100%;
     height: auto;
-    margin: $margin--deci 0;
+    margin: $margin--deca 0;
     display: block;
     border-radius: 0;
     box-shadow: $shadow;
@@ -30,12 +30,12 @@
 //
 %formrow {
     width: 100%;
-    margin-bottom: $margin--deci;
+    margin-bottom: $margin--deca;
     float: left;
     clear: both;
 
     @media (min-width: $mq--lap) {
-        margin-bottom: $margin;
+        margin-bottom: $margin--kilo;
     }
 
     &:last-child {
@@ -43,7 +43,7 @@
 
     &.error {
         margin-bottom: 0;
-        padding: $padding--deci;
+        padding: $padding--deca;
         border-radius: $radius;
         border-top-right-radius: 0;
         border-top-left-radius: 0;
@@ -68,7 +68,7 @@
 //
 %post {
     width: 100%;
-    margin-bottom: $margin;
+    margin-bottom: $margin--kilo;
     float: left;
     opacity: 1;
     transition: opacity .2s ease;
@@ -91,7 +91,7 @@
         @media (min-width: $mq--lap) {
             width: 87px;
             height: 68px;
-            margin-right: $margin--deci;
+            margin-right: $margin--deca;
             position: relative;
             display: block;
             float: left;

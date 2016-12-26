@@ -3,7 +3,7 @@
 //
 .table {
     width: 100%;
-    margin: $margin 0;
+    margin: $margin--kilo 0;
     border: 1px solid $border;
 
     tr {
@@ -11,7 +11,7 @@
 
     th,
     td {
-        padding: $padding--centi;
+        padding: $padding--kilo;
         border-bottom: 1px solid $border;
         text-align: left;
         vertical-align: top;

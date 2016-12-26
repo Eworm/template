@@ -1,20 +1,20 @@
 .sidebar__section {
     width: 100%;
-    margin-bottom: $margin--deci;
-    padding: $padding--deci;
+    margin-bottom: $margin--deca;
+    padding: $padding--deca;
     float: left;
     border: 1px solid $border;
 
     @media (min-width: $mq--lap) {
-        margin-bottom: $margin;
-        padding: $padding;
+        margin-bottom: $margin--kilo;
+        padding: $padding--deca;
     }
 
     &:last-child {
     }
 
     img {
-        margin-bottom: $margin;
+        margin-bottom: $margin--deca;
         border-radius: 0;
     }
 
@@ -40,12 +40,12 @@
     // Sidebar section title
     //
     &__header {
-        margin: 0 0 $margin--deci;
+        margin: 0 0 $margin--deca;
         font-weight: bold;
         font-size: $type-body;
     
         @media (min-width: $mq--lap) {
-            margin-bottom: $margin;
+            margin-bottom: $margin--kilo;
         }
     
         a {

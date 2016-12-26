@@ -1,6 +1,6 @@
 .breadcrumbs {
     width: 100%;
-    margin: 0 0 $margin;
+    margin: 0 0 $margin--kilo;
     padding: 0;
     float: left;
     list-style-type: none;
@@ -10,16 +10,16 @@
     }
 
     a {
-        margin-right: $margin--centi;
-        padding-right: $padding--centi;
+        margin-right: $margin--kilo;
+        padding-right: $padding--kilo;
         position: relative;
         display: block;
         text-decoration: none;
         transition: all .15s ease;
 
         @media (min-width: $mq--lap) {
-            margin-right: $margin--deci;
-            padding-right: $padding--deci;
+            margin-right: $margin--deca;
+            padding-right: $padding--deca;
         }
 
         &:hover,

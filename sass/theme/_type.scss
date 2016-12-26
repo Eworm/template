@@ -73,12 +73,12 @@ h5 {
 // Page title
 //
 .content__header {
-    margin: 0 0 $margin--deci;
+    margin: 0 0 $margin--deca;
     font-weight: normal;
     font-size: $header-1;
 
     @media (min-width: $mq--lap) {
-        margin-bottom: $margin;
+        margin-bottom: $margin--kilo;
     }
 }
 

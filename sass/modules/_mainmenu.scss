@@ -9,7 +9,7 @@
     @media (min-width: $mq--lap) {
         width: 100%;
         height: auto;
-        margin-bottom: $margin;
+        margin-bottom: $margin--kilo;
         float: left;
     }
 }
@@ -55,7 +55,7 @@
     }
 
     > a {
-        padding: $padding--deci;
+        padding: $padding--deca;
         display: inline-block;
         text-decoration: none;
         transition: all .15s ease-out;
@@ -64,7 +64,7 @@
         }
 
         @media (min-width: $mq--lap) {
-            padding: $padding--deci $padding;
+            padding: $padding--deca $padding--kilo;
             position: relative;
             float: left;
         }
@@ -226,7 +226,7 @@
             background: $color--gray-13;
 
             @media (min-width: $mq--lap) {
-                padding: 8px $padding--deci;
+                padding: 8px $padding--deca;
                 border: 0;
                 border-bottom: 1px solid $border;
                 background: transparent;

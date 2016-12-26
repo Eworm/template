@@ -1,7 +1,7 @@
 .pagemenu {
 
     @media (min-width: $mq--lap) {
-        margin-bottom: $margin;
+        margin-bottom: $margin--kilo;
         display: block;
         clear: none;
         border: 1px solid $border;
@@ -40,7 +40,7 @@
     }
 
     a {
-        padding: $padding--deci;
+        padding: $padding--deca;
         display: block;
 
         @media (min-width: $mq--lap) {
