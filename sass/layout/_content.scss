@@ -16,10 +16,10 @@
 
     p,
     ul {
-        margin: 0 0 $margin--deca;
+        margin: 0 0 $pt--deca;
 
         @media (min-width: $mq--lap) {
-            margin-bottom: $margin--kilo;
+            margin-bottom: $pt--kilo;
         }
 
         &:last-child {

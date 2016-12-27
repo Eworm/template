@@ -25,13 +25,13 @@
 //
 .core {
     margin: 0 auto;
-    padding: $gutter--kilo;
+    padding: $pt--kilo;
     clear: both;
 
     @media (min-width: $mq--lap) {
         width: $site--width;
         max-width: $site--max-width;
-        padding: $gutter--kilo 0;
+        padding: $pt--kilo 0;
         position: relative;
     }
 
@@ -59,8 +59,8 @@
             margin: 0;
     
             @media (min-width: $mq--lap) {
-                margin-right: -#{$gutter--deca};
-                margin-left: -#{$gutter--deca};
+                margin-right: -#{$pt--deca};
+                margin-left: -#{$pt--deca};
             }
         }
     }
@@ -81,8 +81,8 @@
 // Every column should have a row as it's parent
 //
 .row {
-    margin-right: -#{$gutter--deca};
-    margin-left: -#{$gutter--deca};
+    margin-right: -#{$pt--deca};
+    margin-left: -#{$pt--deca};
 
     &:before,
     &:after {
@@ -98,8 +98,8 @@
 
 .col {
     width: 100%;
-    padding-right: $gutter--deca;
-    padding-left: $gutter--deca;
+    padding-right: $pt--deca;
+    padding-left: $pt--deca;
     float: left;
         
     &--center {
@@ -230,7 +230,7 @@
     .col--push-#{$i} {
 
         @media (min-width: $mq--lap) {
-            margin-left: 100% / ($site--max-width / (((($site--max-width - (($grid-columns + 1) * $gutter--kilo)) / $grid-columns) * $i) + (($i + 1) * $gutter--kilo)));
+            margin-left: 100% / ($site--max-width / (((($site--max-width - (($grid-columns + 1) * $pt--kilo)) / $grid-columns) * $i) + (($i + 1) * $pt--kilo)));
         }
     }
 }

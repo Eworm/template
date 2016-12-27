@@ -1,35 +1,18 @@
 //
-// Define sizes here
 // Use increments of 8 for a cleaner layout
 // https://medium.com/built-to-adapt/intro-to-the-8-point-grid-system-d2573cde8632
 // We're using the metric system for variable names
 // https://en.wikipedia.org/wiki/Metric_prefix
 //
-$layout--base:      8px;
-$layout--1:         $layout--base * 1; // No name, this is the base size
-$layout--2:         $layout--base * 2; // Deca
-$layout--3:         $layout--base * 3; // Hecto
-$layout--4:         $layout--base * 4; // Kilo
-$layout--5:         $layout--base * 5; // Mega
-$layout--6:         $layout--base * 6; // Giga
-$layout--7:         $layout--base * 8; // Tera
-$layout--8:         $layout--base * 8; // Peta
-$layout--9:         $layout--base * 10; // Exa
-$layout--10:         $layout--base * 11; // Zetta
-$layout--11:         $layout--base * 12; // Yotta
-
-
-// Gutters
-$gutter:            $layout--1;
-$gutter--deca:      $layout--2;
-$gutter--kilo:      $layout--4;
-
-// Margins
-$margin:            $layout--1;
-$margin--deca:      $layout--2;
-$margin--kilo:      $layout--4;
-
-// Paddings
-$padding:           $layout--1;
-$padding--deca:     $layout--2;
-$padding--kilo:     $layout--4;
+$pt--base:      8px;
+$pt:            $pt--base * 1; // No name, this is the base size
+$pt--deca:      $pt--base * 2; // Deca
+$pt--hecto:     $pt--base * 3; // Hecto
+$pt--kilo:      $pt--base * 4; // Kilo
+$pt--mega:      $pt--base * 5; // Mega
+$pt--giga:      $pt--base * 6; // Giga
+$pt--tera:      $pt--base * 8; // Tera
+$pt--peta:      $pt--base * 8; // Peta
+$pt--exa:       $pt--base * 10; // Exa
+$pt--zetta:     $pt--base * 11; // Zetta
+$pt--yotta:     $pt--base * 12; // Yotta

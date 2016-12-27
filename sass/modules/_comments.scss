@@ -5,7 +5,7 @@
 }
 
 #reply-title {
-    margin: 0 0 $margin--kilo;
+    margin: 0 0 $pt--kilo;
 }
 
 
@@ -17,14 +17,14 @@
 .pingback,
 #respond {
     width: 100%;
-    padding: $padding--deca 0;
+    padding: $pt--deca 0;
     position: relative;
     float: left;
     border-bottom: 2px solid $border;
     background: transparent;
 
     .children .comment.depth-2 {
-        margin-bottom: $margin--kilo;
+        margin-bottom: $pt--kilo;
 
         &:last-child {
             margin: 0;
@@ -32,8 +32,8 @@
     }
 
     @media (min-width: $mq--lap) {
-        margin: 0 0 $margin--deca;
-        padding: $padding--kilo;
+        margin: 0 0 $pt--deca;
+        padding: $pt--kilo;
         border: 1px solid $border;
     }
 }
@@ -74,7 +74,7 @@
     line-height: 32px;
 
     @media (min-width: $mq--lap) {
-        margin-bottom: $margin--kilo;
+        margin-bottom: $pt--kilo;
         font-weight: normal;
     }
 }
@@ -91,7 +91,7 @@
     box-shadow: $shadow;
 
     @media (min-width: $mq--lap) {
-        margin-right: $margin--deca;
+        margin-right: $pt--deca;
         float: none;
         vertical-align: top;
     }
@@ -116,7 +116,7 @@
         padding-top: 20px;
         position: absolute;
         top: 0;
-        right: $gutter--kilo;
+        right: $pt--kilo;
         line-height: 32px;
     }
 
@@ -140,7 +140,7 @@
 // The nr. of responses
 //
 .comments-area__header {
-    margin: 0 0 $margin--kilo;
+    margin: 0 0 $pt--kilo;
 }
 
 .comments-area__list {
@@ -162,12 +162,12 @@
 
     .comment {
         margin: 0;
-        padding: $padding--deca 0 0 $padding--deca;
+        padding: $pt--deca 0 0 $pt--deca;
         border-top: 1px solid $border;
         border-bottom: 0;
 
         @media (min-width: $mq--lap) {
-            padding: $padding--deca;
+            padding: $pt--deca;
             border-bottom: 1px solid $border;
         }
     }

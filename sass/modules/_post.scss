@@ -22,7 +22,7 @@
     }
     
     .single-post__header {
-        margin-bottom: $margin--kilo;
+        margin-bottom: $pt--kilo;
     }
     
     
@@ -53,7 +53,7 @@
         color: $mute;
     
         .single-post & {
-            margin-top: $margin;
+            margin-top: $pt;
         }
     
         a {
