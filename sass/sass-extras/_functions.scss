@@ -1,6 +1,4 @@
-//
 // Convert px to em
-//
 @function em($pixels, $context: $type-body) {
     @if (unitless($pixels)) {
         $pixels: $pixels * 1px;

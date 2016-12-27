@@ -1,6 +1,4 @@
-//
 // The form
-//
 .searchform {
     width: 100%;
     padding: $pt--deca;
@@ -21,9 +19,7 @@
     
     
     
-    //
     // Search form fieldset
-    //
     &__container {
         margin: 0;
         padding: 0;
@@ -32,17 +28,13 @@
     
     
     
-    //
     // Hiding the label, but not for screenreaders
-    //
     &__container__label {
         @include screenreader--hide;
     }
 
 
-    //
     // When in nav
-    //
     nav & {
         display: block;
         border-top: 1px solid $border;
@@ -51,9 +43,7 @@
 
 
 
-    //
     // When in content
-    //
     .content & {
         padding: 0;
         display: block;
@@ -61,9 +51,7 @@
 
 
 
-    //
     // When in header
-    //
     .header & {
 
         @media (min-width: $mq--lap) {
@@ -78,9 +66,7 @@
 
 
 
-        //
         // The search input
-        //
         .searchform__container__field {
             width: 100%;
             clear: both;

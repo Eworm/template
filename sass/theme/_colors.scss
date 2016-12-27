@@ -1,18 +1,14 @@
-//
 // Brand colors are defined here, these should not be used directly but should be defined as layout colors.
 // All variable names are generated using this tool: http://chir.ag/projects/name-that-color/
-//
 $colorcience-blue: #0067c5;
 $color--red: #f00;
 
 
 
-//
 // Neutral colors. $color-gray-13 Means '13% gray'.
 // No medium grays please, they're bad for readibility.
 // Read more about color in design systems here: https://medium.com/eightshapes-llc/color-in-design-systems-a1c80f65fa3#.w5cudfcy9
 // Get the sass var for greys here: http://fiftyshades.functioneelwit.nl/FF55AA
-//
 $color--white: #fff;
 $color--gray-02: #f7f9f9;
 $color--gray-13: #ddd;
@@ -24,11 +20,9 @@ $color--black: #000;
 
 
 
-//
 // Layout colorset
 // This is the main set. Add more sets to group colors if appropriate.
 // This keeps the colors readable for other people.
-//
 $body-bg:       $color--white;
 $body:          $color--gray-87;  // Should not be #000 for people with dyslexia: http://uxmovement.com/content/6-surprising-bad-practices-that-hurt-dyslexic-users/
 $link:          $colorcience-blue;  // Depending on the audience a blue, or another color
@@ -39,8 +33,6 @@ $mute--hover:   $color--gray-47;
 
 
 
-//
 // Feeback colorset
-//
 $alert: $color--red;
 $error: $color--red;

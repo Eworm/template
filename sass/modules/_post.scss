@@ -1,65 +1,55 @@
-//
 // Single post
-//
 .post {
     @extend %post;
 
-    
-    //
+
     // Post title
-    //
     &__header {
         margin: 0;
-    
+
         a {
             text-decoration: none;
-    
+
             &:hover,
             &:focus {
                 text-decoration: underline;
             }
         }
     }
-    
+
     .single-post__header {
         margin-bottom: $pt--kilo;
     }
-    
-    
-    //
+
+
     // Post content
-    //
     &__entry {
         word-break: break-word;
     }
-    
-    
-    //
+
+
     // Blog nav
-    //
     &-nav {
         text-align: center;
-    
+
         @media (min-width: $mq--lap) {
             text-align: left;
         }
     }
-    
-    
-    //
+
+
     // Post meta
-    //
     &__meta {
         color: $mute;
-    
+
         .single-post & {
             margin-top: $pt;
         }
-    
+
         a {
             color: $mute;
             text-decoration: none;
-    
+
             &:hover,
             &:focus {
                 color: $mute--hover;
@@ -67,16 +57,14 @@
             }
         }
     }
-    
-    
-    //
+
+
     // Continue reading & nr. of comments
-    //
     &__options {
-    
+
         a {
             text-decoration: none;
-    
+
             &:hover,
             &:focus {
                 text-decoration: underline;
@@ -89,5 +77,6 @@
     @extend %post;
 }
 
-.sticky {   // Sticky post
+// Sticky post
+.sticky {
 }

@@ -1,15 +1,11 @@
-//
 // Calculate the grid widths
-//
 @mixin col--width($i) {
     width: #{100% / ($site--max-width / (((($site--max-width / $grid-columns) * $i))))};
 }
 
 
 
-//
 // Section dividers
-//
 .divider {
     width: 100%;
     float: left;
@@ -20,9 +16,7 @@
 
 
 
-//
 // Center site
-//
 .core {
     margin: 0 auto;
     padding: $pt--kilo;
@@ -77,9 +71,7 @@
 
 
 
-//
 // Every column should have a row as it's parent
-//
 .row {
     margin-right: -#{$pt--deca};
     margin-left: -#{$pt--deca};
@@ -111,9 +103,7 @@
 
 
 
-//
 // All screen widths
-//
 @for $i from 1 through $grid-columns {
 
     @media (min-width: $mq--palm) {
@@ -126,10 +116,8 @@
 
 
 
-//
 // Wrist
 // You can remove this when unused to minimize the css
-//
 @for $i from 1 through $grid-columns {
 
     .col--wrist-#{$i} {
@@ -142,10 +130,8 @@
 
 
 
-//
 // Palm
 // You can remove this when unused to minimize the css
-//
 @for $i from 1 through $grid-columns {
 
     .col--palm-#{$i} {
@@ -160,7 +146,6 @@
 
 // Lap
 // You can remove this when unused to minimize the css
-//
 @for $i from 1 through $grid-columns {
 
     .col--lap-#{$i} {
@@ -173,10 +158,8 @@
 
 
 
-//
 // Desk
 // You can remove this when unused to minimize the css
-//
 @for $i from 1 through $grid-columns {
 
     .col--l-#{$i} {
@@ -189,10 +172,8 @@
 
 
 
-//
 // Wall
 // You can remove this when unused to minimize the css
-//
 @for $i from 1 through $grid-columns {
 
     .col--wall-#{$i} {
@@ -205,10 +186,8 @@
 
 
 
-//
 // Cinema
 // You can remove this when unused to minimize the css
-//
 @for $i from 1 through $grid-columns {
 
     .col--cinema-#{$i} {
@@ -221,10 +200,8 @@
 
 
 
-//
 // Offset
 // You can remove this when unused to minimize the css
-//
 @for $i from 1 through $grid-columns {
 
     .col--push-#{$i} {

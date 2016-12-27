@@ -1,11 +1,9 @@
-//
 // Input sizes
-//
 input {
     width: 100%;
     padding: $pt--kilo * 2;
     font-size: $type-body;
-    font-family: $type-fam-body;
+    font-family: $fam-body;
 
     @media (min-width: $mq--lap) {
         width: 50%;
@@ -22,7 +20,7 @@ textarea {
     padding: $pt--kilo * 2;
     float: left;
     font-size: $type-body;
-    font-family: $type-fam-body;
+    font-family: $fam-body;
 }
 
 input[type="file"] {
@@ -51,9 +49,7 @@ fieldset {
 }
 
 
-//
 // The form
-//
 .content form {
     position: relative;
     z-index: 1;
@@ -72,9 +68,7 @@ fieldset {
 }
 
 
-//
 // A single row
-//
 .form-row {
     @extend %formrow;
 
@@ -112,34 +106,29 @@ fieldset {
         }
     }
 
-    .input-exp { // Form field explanation. Using a small element is preferrable
+    // Form field explanation. Using a small element is preferrable
+    .input-exp {
         display: block;
         font-size: $type-meta;
     }
 }
 
 
-//
 // Other elements
-//
 #screenreader,
 #loading {
     display: none;
 }
 
 
-//
 // Required style
-//
 .req {
     font-size: $type-body;
     color: $mute;
 }
 
 
-//
 // Error messages
-//
 .parsley-error {
 
     &-list {

@@ -1,10 +1,8 @@
-//
 // Define font families here.
 // For practical browser support use woff2 & woff. See https://css-tricks.com/snippets/css/using-font-face/
 // This is a good font-face generator: https://www.fontsquirrel.com/tools/webfont-generator
 // Font-files should be placed in the fonts directory
 // Use google fonts locally for a better pagespeed score.
-//
 @font-face {
     font-family: 'Lato';
     src: url('fonts/lato-regular.woff2') format('woff2'),
@@ -15,34 +13,26 @@
 
 
 
-//
 // Font sizes & other related stuff
 // Add new ones when appropriate
-//
 $line-height: 1.8;
 $type-body: 16px;
 $type-meta: 12px;
 
 
 
-//
 // Define font names here, use them later on
-//
 $websafe: Arial, Verdana, sans-serif;
 $lato--regular: 'Lato', $websafe;
 
 
 
-//
 // Define font variables here using the above font names
-//
-$type-fam-body: $lato--regular;
+$fam-body: $lato--regular;
 
 
 
-//
 // Header sizes
-//
 $header-1: 2 * $type-body;
 $header-2: 1.5 * $type-body;
 $header-3: 1.17 * $type-body;
@@ -69,9 +59,7 @@ h5 {
 
 
 
-//
 // Page title
-//
 .content__header {
     margin: 0 0 $pt--deca;
     font-weight: normal;
@@ -84,9 +72,7 @@ h5 {
 
 
 
-//
 // Headers in the main content
-//
 .content__body {
 
     h1,

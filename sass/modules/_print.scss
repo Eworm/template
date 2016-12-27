@@ -1,16 +1,14 @@
-//
 // Simple print stylesheet
-//
 
 @media print {
 
     * {
         background: transparent !important;
+        // Black prints faster: h5bp.com/s
         color: $color--black !important;
         text-shadow: none !important;
         filter: none !important;
     }
-    // Black prints faster: h5bp.com/s
 
     a,
     a:visited {
@@ -25,22 +23,22 @@
         content: ' (' attr(title) ')';
     }
 
+    // Don't show links for images, or javascript/internal links
     .ir a:after,
     a[href^='javascript:']:after,
     a[href^='#']:after {
         content: '';
     }
-    // Don't show links for images, or javascript/internal links
 
     pre,
     blockquote {
         page-break-inside: avoid;
     }
 
+    // h5bp.com/t
     thead {
         display: table-header-group;
     }
-    // h5bp.com/t
 
     tr,
     img {

@@ -1,6 +1,4 @@
-//
 // Unordered list
-//
 .paging {
     margin: 0;
     padding: 0;
@@ -36,9 +34,7 @@
     }
 
     
-    //
     // Next & prev
-    //
     &__navigation {
     
         &--prev {
@@ -49,9 +45,7 @@
     }
     
     
-    //
     // A list item
-    //
     &__number {
         display: none;
     

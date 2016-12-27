@@ -1,3 +1,4 @@
+// Section in a sidebar
 .sidebar__section {
     width: 100%;
     margin-bottom: $pt--deca;
@@ -36,9 +37,7 @@
     }
     
     
-    //
     // Sidebar section title
-    //
     &__header {
         margin: 0 0 $pt--deca;
         font-weight: bold;
@@ -60,9 +59,7 @@
 }
 
 
-//
 // Nav feedback
-//
 .current-cat {
     font-weight: bold;
 }

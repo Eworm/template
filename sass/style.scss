@@ -11,9 +11,7 @@ Version: 1.0
 
 
 
-//
 // Theme variables
-//
 @import 'import-now';                       // Normalize is imported via Bower
 @import 'theme/layout';                     // Margins/paddings
 @import 'theme/colors';                     // Colors
@@ -22,9 +20,7 @@ Version: 1.0
 
 
 
-//
 // Sass functions, extendables & mixins.
-//
 @import 'sass-extras/functions';            // Useful functions
 @import 'sass-extras/responsive-grid';      // Custom grid functions. Use grid-variables to control
 @import 'sass-extras/extendables';          // Useful extensions
@@ -32,16 +28,12 @@ Version: 1.0
 
 
 
-//
 // Base styles
-//
 @import 'base/base';                        // Base styles
 
 
 
-//
 // Styling of page sections that contain moduless
-//
 @import 'layout/header';                    // Site header
 @import 'layout/content';                   // Main content of the site
 @import 'layout/doormat';                   // Site doormat
@@ -49,9 +41,7 @@ Version: 1.0
 
 
 
-//
 // Styling of reusable, modular parts of the design
-//
 @import 'modules/symbols';                   // Hiding the svg symbol sprite
 @import 'modules/mainmenu';                  // The main menu, probably the only nav
 @import 'modules/search-form';               // A search form

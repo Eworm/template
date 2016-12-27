@@ -1,16 +1,15 @@
-//*
-// Preferred lazy loader: http://dinbror.dk/blog/blazy/   
-//*
+// Preferred lazy loader
+// http://dinbror.dk/blog/blazy/
 .b-lazy {
     opacity: 0;
-    transition: all .25s cubic-bezier(0, .95, .71, 1.22);
-    transform: scale(.3);
+    transition: all .25s ease-in;
 
+    // When loaded
     &.b-loaded {
         opacity: 1;
-        transform: scale(1);
     }
 
+    // If there's an error loading the image
     &.b-error {
     }
 }

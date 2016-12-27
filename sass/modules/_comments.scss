@@ -1,6 +1,4 @@
-//
 // Container for comments
-//
 .comments-area {
 }
 
@@ -9,9 +7,7 @@
 }
 
 
-//
 // A comment, trackback, pingback or response
-//
 .comment,
 .trackback,
 .pingback,
@@ -57,16 +53,12 @@
 }
 
 
-//
 // The comment body
-//
 .comment__body {
 }
 
 
-//
 // The author name
-//
 .comment__author {
     width: 100%;
     float: left;
@@ -80,9 +72,7 @@
 }
 
 
-//
 // The avatar
-//
 .avatar {
     width: auto;
     height: auto;
@@ -98,17 +88,13 @@
 }
 
 
-//
 // Text
-//
 .says {
 
 }
 
 
-//
 // Comment meta info
-//
 .comment__meta {
     font-size: $type-meta;
 
@@ -136,9 +122,7 @@
 }
 
 
-//
 // The nr. of responses
-//
 .comments-area__header {
     margin: 0 0 $pt--kilo;
 }
@@ -152,9 +136,7 @@
 }
 
 
-//
 // Replies
-//
 .children {
     margin-bottom: 0;
     padding: 0;
@@ -174,9 +156,7 @@
 }
 
 
-//
 // Link for replying
-//
 .comment__reply__link {
     text-decoration: none;
 
@@ -187,9 +167,7 @@
 }
 
 
-//
 // Text
-//
 .logged-in-as {
 
 }
