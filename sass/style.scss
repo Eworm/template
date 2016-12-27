@@ -33,14 +33,14 @@ Version: 1.0
 
 
 //
-// Base styles.
+// Base styles
 //
 @import 'base/base';                        // Base styles
 
 
 
 //
-// Layout. Styling of page sections that contain moduless.
+// Styling of page sections that contain moduless
 //
 @import 'layout/header';                    // Site header
 @import 'layout/content';                   // Main content of the site
@@ -50,7 +50,7 @@ Version: 1.0
 
 
 //
-// Modules. Styling of reusable, modular parts of the design.
+// Styling of reusable, modular parts of the design
 //
 @import 'modules/symbols';                   // Hiding the svg symbol sprite
 @import 'modules/mainmenu';                  // The main menu, probably the only nav
