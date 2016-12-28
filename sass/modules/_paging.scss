@@ -8,8 +8,8 @@
         float: left;
 
         > a {
-            margin-right: $pt--kilo;
-            padding: $pt--kilo $pt--deca;
+            margin-right: $pt;
+            padding: $pt $pt--deca;
             display: block;
             float: left;
             border: 1px solid $border;
@@ -23,8 +23,8 @@
         }
         
         > span {
-            margin-right: $pt--kilo;
-            padding: $pt--kilo $pt--deca;
+            margin-right: $pt;
+            padding: $pt $pt--deca;
             display: block;
             float: left;
             border: 1px solid transparent;

@@ -1,5 +1,15 @@
 // Container for comments
 .comments-area {
+    
+    ol {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        
+        ol {
+            margin-top: $pt--deca;
+        }
+    }
 }
 
 #reply-title {
@@ -55,6 +65,7 @@
 
 // The comment body
 .comment__body {
+    word-break: break-word;
 }
 
 

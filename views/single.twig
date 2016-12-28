@@ -68,13 +68,17 @@
                             <li class="comment comment-{{comment.ID}} comment-order-{{loop.index}}">
 
                                 <div class="comment__author vcard">
+                                
                                     <img src="{{ comment.author.avatar }}" class="avatar">
+                                
                                     <span class="says">
                                         {{ comment.author.name }} zegt:
                                     </span>
+                                
                                 </div>
 
                                 <div class="comment__body">
+                                
                                     {{ comment.content }}
 
                                     <br>
@@ -85,11 +89,29 @@
 
                                 </div>
                                 
-                                <ol>
+                                <ol class="comments-area__list">
                                 
-                                {% for comment in post.comments.comment %}
+                                {% for child in comment.children %}
                                 
-                                test
+                                    <li class="comment comment-{{child.ID}} comment-order-{{loop.index}}">
+                                    
+                                        <div class="comment__author vcard">
+                                        
+                                            <img src="{{ child.author.avatar }}" class="avatar">
+                                        
+                                            <span class="says">
+                                                {{ child.author.name }} zegt:
+                                            </span>
+                                            
+                                        </div>
+                                        
+                                        <div class="comment__body">
+                                
+                                            {{ child.content }}
+                                            
+                                        </div>
+                                    
+                                    </li>
                                 
                                 {% endfor %} 
                                 
