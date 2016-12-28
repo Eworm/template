@@ -37,12 +37,18 @@
             </a>
 
         </time>
+        
+        <br>
 
-        - <a href="{{ item.edit_link }}" title="Dit artikel aanpassen">
+        {% if item.edit_link %}
+
+        <a href="{{ item.edit_link }}" title="Dit artikel aanpassen">
             Aanpassen
         </a>
-
+        
         <br>
+        
+        {% endif %}
 
         {% for category in item.categories %}
 

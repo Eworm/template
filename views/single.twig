@@ -66,10 +66,16 @@
                         </a>
             
                     </time>
+                    
+                    {% if post.edit_link %}
+                    
+                    <br>
             
-                    - <a href="{{ post.edit_link }}" title="">
+                    <a href="{{ post.edit_link }}" title="">
                         Aanpassen
                     </a>
+                    
+                    {% endif %}
             
                     <br>
             
