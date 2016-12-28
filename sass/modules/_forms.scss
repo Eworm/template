@@ -16,9 +16,8 @@ input {
 
 textarea {
     width: 100%;
-    height: 120px;
-    padding: $pt--kilo * 2;
-    float: left;
+    height: $pt--yotta;
+    padding: $pt;
     font-size: $type-body;
     font-family: $fam-body;
 }

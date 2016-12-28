@@ -188,3 +188,12 @@
     @extend %formrow;
     margin: 0;
 }
+
+
+//
+.comment-form {
+    
+    p {
+        margin-bottom: $pt;
+    }
+}
