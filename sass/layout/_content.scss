@@ -22,3 +22,11 @@
         }
     }
 }
+
+code {
+    padding-right: $pt;
+    padding-left: $pt;
+    display: inline-block;
+    background: rgba($mute, .25);
+    border-radius: $radius;
+}
