@@ -71,22 +71,6 @@ fieldset {
 .form-row {
     @extend %formrow;
 
-    label,
-    .label {
-        width: 100%;
-        display: block;
-        clear: both;
-
-        &:hover,
-        &:focus {
-            cursor: pointer;
-        }
-
-        small {
-            font-size: 100%;
-        }
-    }
-
     li { // List with radio/checkboxes
         margin-right: 12px;
         padding: 0;
@@ -109,6 +93,22 @@ fieldset {
     .input-exp {
         display: block;
         font-size: $type-meta;
+    }
+}
+
+label,
+.label {
+    width: 100%;
+    display: block;
+    clear: both;
+
+    &:hover,
+    &:focus {
+        cursor: pointer;
+    }
+
+    small {
+        font-size: 100%;
     }
 }
 
