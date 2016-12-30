@@ -1,0 +1,99 @@
+<li class="comment comment-{{comment.ID}} comment-order-{{loop.index}}">
+
+    <div class="comment__author vcard">
+
+        <img src="{{ comment.author.avatar }}" class="avatar">
+
+        <div class="says">
+
+            {% if (comment.author.user_url) %}
+
+            <a href="{{ comment.author.user_url }}">
+                {{ comment.author.name }} zegt:
+            </a>
+
+            {% else %}
+
+            <span>
+                {{ comment.author.name }} zegt:
+            </span>
+
+            {% endif %}
+
+            <br>
+
+            <a href="#{{ comment.id }}" id="{{ comment.id }}" title="">
+                {{ comment.date }}
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="comment__body">
+
+        {{ comment.content | replace({'<iframe': '<div class="video-wrapper"><iframe', '</iframe>': '</iframe></div>', '<table>': '<table class="table">'})}}
+
+        <br>
+
+        <a href="#" class="comment__reply__link">
+            Reageren
+        </a>
+
+    </div>
+
+    <ol class="comments-area__list">
+
+    {% for child in comment.children %}
+
+        <li class="comment comment-{{child.ID}} comment-order-{{loop.index}}">
+
+            <div class="comment__author vcard">
+
+                <img src="{{ child.author.avatar }}" class="avatar">
+
+                <div class="says">
+
+                    {% if (child.author.user_url) %}
+
+                    <a href="{{ child.author.user_url }}">
+                        {{ child.author.name }} zegt:
+                    </a>
+
+                    {% else %}
+
+                    <span>
+                        {{ child.author.name }} zegt:
+                    </span>
+
+                    {% endif %}
+
+                    <br>
+
+                    <a href="#{{ child.id }}" id="{{ child.id }}" title="">
+                        {{ child.date}}
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="comment__body">
+
+                {{ child.content | replace({'<iframe': '<div class="video-wrapper"><iframe', '</iframe>': '</iframe></div>', '<table>': '<table class="table">'})}}
+
+                <br>
+
+                <a href="#" class="comment__reply__link">
+                    Reageren
+                </a>
+
+            </div>
+
+        </li>
+
+    {% endfor %}
+
+    </ol>
+
+</li>
