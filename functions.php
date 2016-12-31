@@ -17,12 +17,12 @@ update_option('home','http://10.0.1.17/_htmltemplate/');
 
 /* Includes
 ==================================================================================================================================*/
-require_once 'includes/clean.php';
-require_once 'includes/minify.php';
-require_once 'includes/breadcrumbs.php';
+require_once 'includes/wp-clean.php';
+require_once 'includes/wm-minify.php';
+require_once 'includes/wm-breadcrumbs.php';
 require_once 'includes/required-plugins.php';
-require_once 'includes/contact.php';
-require_once 'includes/widgets.php';
+require_once 'includes/wm-contact.php';
+require_once 'includes/wp-widgets.php';
 require_once 'includes/wp-options.php';
 require_once 'includes/wp-imagesizes.php';
 require_once 'includes/wp-submenu-walker.php';
