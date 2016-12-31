@@ -1,44 +1,62 @@
-<li class="comment comment-{{comment.ID}} comment-order-{{loop.index}}">
+<li class="comment comment-{{ comment.id }} comment-order-{{loop.index}}">
+
+    <pre>
+{# {{ dump(comment) }} #}
+    </pre>
 
     <div class="comment__author vcard">
 
-        <img src="{{ comment.author.avatar }}" class="avatar">
+        <img src="{{ comment.author.avatar }}" class="avatar photo">
 
         <div class="says">
 
-            {% if (comment.author.user_url) %}
+            <cite class="fn">
+            
+                <h1>URL: {{ comment.comment_author_url }}</h1>
 
-            <a href="{{ comment.author.user_url }}">
-                {{ comment.author.name }} zegt:
-            </a>
-
-            {% else %}
-
-            <span>
-                {{ comment.author.name }} zegt:
+                {% if (comment.comment_author_url) %}
+    
+                <a href="{{ comment.comment_author_url }}" title="" rel="external nofollow" class="url">
+                    {{ comment.author.name }}
+                </a>
+    
+                {% else %}
+    
+                {{ comment.author.name }}
+    
+                {% endif %}
+            
+            </cite>
+            
+            <span class="says">
+                zegt:
             </span>
-
-            {% endif %}
-
-            <br>
-
-            <a href="#{{ comment.id }}" id="{{ comment.id }}" title="">
-                {{ comment.date }}
-            </a>
 
         </div>
 
     </div>
+    
+    <div class="comment-meta commentmetadata">
+        
+        <a href="{{ post.link }}#comment-{{ comment.id }}" title="">
+            {{ comment.date }} om {{ comment.time }}
+        </a>
+    
+    </div>
 
     <div class="comment__body">
 
-        {{ comment.content | replace({'<iframe': '<div class="video-wrapper"><iframe', '</iframe>': '</iframe></div>', '<table>': '<table class="table">'})}}
-
-        <br>
-
-        <a href="#" class="comment__reply__link">
-            Reageren
-        </a>
+        {% if comment.approved %}
+        
+            {{ comment.content | replace({'<iframe': '<div class="video-wrapper"><iframe', '</iframe>': '</iframe></div>', '<table>': '<table class="table">'})}}
+            
+        {% else %}
+        
+            <p>
+                Deze reactie wacht op goedkeuring
+            </p>
+            
+        {% endif %}
 
     </div>
 
@@ -70,7 +88,7 @@
 
                     <br>
 
-                    <a href="#{{ child.id }}" id="{{ child.id }}" title="">
+                    <a href="#comment-{{ child.id }}" id="{{ child.id }}" title="">
                         {{ child.date}}
                     </a>
 
@@ -81,12 +99,6 @@
             <div class="comment__body">
 
                 {{ child.content | replace({'<iframe': '<div class="video-wrapper"><iframe', '</iframe>': '</iframe></div>', '<table>': '<table class="table">'})}}
-
-                <br>
-
-                <a href="#" class="comment__reply__link">
-                    Reageren
-                </a>
 
             </div>
 
