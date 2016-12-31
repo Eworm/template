@@ -1,38 +1,28 @@
 <li class="comment comment-{{ comment.id }} comment-order-{{loop.index}}">
 
-    <pre>
-{# {{ dump(comment) }} #}
-    </pre>
-
     <div class="comment__author vcard">
 
         <img src="{{ comment.author.avatar }}" class="avatar photo">
 
-        <div class="says">
+        <cite class="fn">
+        
+            {% if (comment.comment_author_url) %}
 
-            <cite class="fn">
-            
-                <h1>URL: {{ comment.comment_author_url }}</h1>
-
-                {% if (comment.comment_author_url) %}
-    
-                <a href="{{ comment.comment_author_url }}" title="" rel="external nofollow" class="url">
-                    {{ comment.author.name }}
-                </a>
-    
-                {% else %}
-    
+            <a href="{{ comment.comment_author_url }}" title="" rel="external nofollow" class="url">
                 {{ comment.author.name }}
-    
-                {% endif %}
-            
-            </cite>
-            
-            <span class="says">
-                zegt:
-            </span>
+            </a>
 
-        </div>
+            {% else %}
+
+            {{ comment.author.name }}
+
+            {% endif %}
+        
+        </cite>
+        
+        <span class="says">
+            zegt:
+        </span>
 
     </div>
     
@@ -48,7 +38,7 @@
 
         {% if comment.approved %}
         
-            {{ comment.content | replace({'<iframe': '<div class="video-wrapper"><iframe', '</iframe>': '</iframe></div>', '<table>': '<table class="table">'})}}
+            {{ comment.content | replace({'<iframe': '<div class="video-wrapper"><iframe', '</iframe>': '</iframe></div>', '<table>': '<table class="table">', '<img': '<img class="img-responsive"'})}}
             
         {% else %}
         
@@ -59,46 +49,24 @@
         {% endif %}
 
     </div>
+    
+    {% if comment.children %}
 
     <ol class="comments-area__list">
+    
+{# <pre>{{ dump(comment.children) }}</pre> #}
 
     {% for child in comment.children %}
 
-        <li class="comment comment-{{child.ID}} comment-order-{{loop.index}}">
-
-            <div class="comment__author vcard">
-
-                <img src="{{ child.author.avatar }}" class="avatar">
-
-                <div class="says">
-
-                    {% if (child.author.user_url) %}
-
-                    <a href="{{ child.author.user_url }}">
-                        {{ child.author.name }} zegt:
-                    </a>
-
-                    {% else %}
-
-                    <span>
-                        {{ child.author.name }} zegt:
-                    </span>
-
-                    {% endif %}
-
-                    <br>
-
-                    <a href="#comment-{{ child.id }}" id="{{ child.id }}" title="">
-                        {{ child.date}}
-                    </a>
-
-                </div>
-
-            </div>
+        <li class="comment comment-{{child.id}} comment-order-{{loop.index}}">
 
             <div class="comment__body">
 
-                {{ child.content | replace({'<iframe': '<div class="video-wrapper"><iframe', '</iframe>': '</iframe></div>', '<table>': '<table class="table">'})}}
+                ID: {{ child.id }}
+                <br>
+                Parent: {{ child.comment_parent }}
+                <br>
+                {{ child.content }}
 
             </div>
 
@@ -107,5 +75,7 @@
     {% endfor %}
 
     </ol>
+    
+    {% endif %}
 
 </li>
