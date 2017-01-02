@@ -8,6 +8,7 @@ register_sidebar(array('name'=>'Widget',
     'after_widget' => '</section>',
     'before_title' => '<h1 class="sidebar__section__header">',
     'after_title' => '</h1>',
+    'id' => '1'
 ));
 
 ?>
