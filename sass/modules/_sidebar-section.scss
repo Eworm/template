@@ -20,8 +20,10 @@
         border-radius: 0;
     }
 
-    ul {
-
+    ul, ol {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
     }
 
     a {
@@ -40,12 +42,11 @@
     
     // Sidebar section title
     &__header {
-        margin: 0 0 $pt--deca;
+        margin: 0 0 $pt;
         font-weight: bold;
         font-size: $type-body;
     
         @media (min-width: $mq--lap) {
-            margin-bottom: $pt--kilo;
         }
     
         a {
