@@ -32,7 +32,7 @@ else if (is_home())
 
     $context['posts'] = Timber::get_posts($posts_query);
     $context['pagination'] = Timber::get_pagination(4);
-    $context['dynamic_sidebar'] = Timber::get_widgets('dynamic_sidebar');
+    $context['dynamic_sidebar'] = Timber::get_widgets('1');
     $template = ['blog.twig'];
 
 }
@@ -41,6 +41,7 @@ else if (is_single())
 {
 
     $context['post'] = new TimberPost();
+    $context['dynamic_sidebar'] = Timber::get_widgets('1');
     $template = ['single.twig'];
 
 }

@@ -5,6 +5,7 @@
     padding: $pt--deca;
     float: left;
     border: 1px solid $border;
+    word-break: break-word;
 
     @media (min-width: $mq--lap) {
         margin-bottom: $pt--kilo;
