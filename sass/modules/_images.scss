@@ -4,6 +4,7 @@
 
     @media (min-width: $mq--palm) {
         width: auto;
+        max-width: 100%;
         margin: $pt--kilo $pt--kilo $pt--kilo 0;
     }
 }
@@ -117,7 +118,9 @@ a img {
     &.alignnone {
 
         @media (min-width: $mq--palm) {
-            margin: $pt--kilo $pt--kilo $pt--kilo 0;
+            width: auto !important;
+            max-width: 100% !important;
+            margin: $pt--kilo 0;
         }
     }
 
