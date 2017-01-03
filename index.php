@@ -60,6 +60,7 @@ else if (is_category())
 
     $context['post'] = new TimberPost();
 	$context['posts'] = Timber::get_posts();
+	$context['title'] = single_cat_title('', false);
 	$template = ['category.twig'];
 
 }
@@ -69,6 +70,7 @@ else if (is_tag())
 
     $context['post'] = new TimberPost();
 	$context['posts'] = Timber::get_posts();
+	$context['title'] = single_cat_title('', false);
 	$template = ['tag.twig'];
 
 }
