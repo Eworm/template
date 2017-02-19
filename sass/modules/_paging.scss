@@ -8,8 +8,8 @@
         float: left;
 
         > a {
-            margin-right: pt(1)
-            padding: $pt pt(2);
+            margin-right: pt(1);
+            padding: pt(1) pt(2);
             display: block;
             float: left;
             border: 1px solid $border;
@@ -23,8 +23,8 @@
         }
         
         > span {
-            margin-right: pt(1)
-            padding: $pt pt(2);
+            margin-right: pt(1);
+            padding: pt(1) pt(2);
             display: block;
             float: left;
             border: 1px solid transparent;
