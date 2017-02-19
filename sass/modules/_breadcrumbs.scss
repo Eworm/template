@@ -1,7 +1,7 @@
 // These styles are for custom breadcrumbs
 .breadcrumbs {
     width: 100%;
-    margin: 0 0 $pt--kilo;
+    margin: 0 0 pt(4);
     padding: 0;
     float: left;
     list-style-type: none;
@@ -11,16 +11,16 @@
     }
 
     a {
-        margin-right: $pt--kilo;
-        padding-right: $pt--kilo;
+        margin-right: pt(4);
+        padding-right: pt(4);
         position: relative;
         display: block;
         text-decoration: none;
         transition: all .15s ease;
 
         @media (min-width: $mq--lap) {
-            margin-right: $pt--deca;
-            padding-right: $pt--deca;
+            margin-right: pt(2);
+            padding-right: pt(2);
         }
 
         &:hover,

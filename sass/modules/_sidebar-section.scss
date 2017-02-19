@@ -1,22 +1,22 @@
 // Section in a sidebar
 .sidebar__section {
     width: 100%;
-    margin-bottom: $pt--deca;
-    padding: $pt--deca;
+    margin-bottom: pt(2);
+    padding: pt(2);
     float: left;
     border: 1px solid $border;
     word-break: break-word;
 
     @media (min-width: $mq--lap) {
-        margin-bottom: $pt--kilo;
-        padding: $pt--deca;
+        margin-bottom: pt(4);
+        padding: pt(2);
     }
 
     &:last-child {
     }
 
     img {
-        margin-bottom: $pt--deca;
+        margin-bottom: pt(2);
         border-radius: 0;
     }
 
@@ -42,7 +42,7 @@
     
     // Sidebar section title
     &__header {
-        margin: 0 0 $pt;
+        margin: 0 0 pt(1)
         font-weight: bold;
         font-size: $type-body;
     

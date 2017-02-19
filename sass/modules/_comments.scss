@@ -1,6 +1,6 @@
 // Container for comments
 .comments-area {
-    margin-top: $pt--kilo;
+    margin-top: pt(4);
     
     ol {
         margin: 0;
@@ -8,13 +8,13 @@
         list-style-type: none;
         
         ol {
-            margin-top: $pt--deca;
+            margin-top: pt(2);
         }
     }
 }
 
 #reply-title {
-    margin: 0 0 $pt--kilo;
+    margin: 0 0 pt(4);
 }
 
 
@@ -24,14 +24,14 @@
 .pingback,
 #respond {
     width: 100%;
-    padding: $pt--deca 0;
+    padding: pt(2) 0;
     position: relative;
     float: left;
     border-bottom: 2px solid $border;
     background: transparent;
 
     .children .comment.depth-2 {
-        margin-bottom: $pt--kilo;
+        margin-bottom: pt(4);
 
         &:last-child {
             margin: 0;
@@ -39,8 +39,8 @@
     }
 
     @media (min-width: $mq--lap) {
-        margin: 0 0 $pt--deca;
-        padding: $pt--kilo;
+        margin: 0 0 pt(2);
+        padding: pt(4);
         border: 1px solid $border;
     }
 }
@@ -78,7 +78,7 @@
     line-height: 32px;
 
     @media (min-width: $mq--lap) {
-        margin-bottom: $pt--kilo;
+        margin-bottom: pt(4);
         font-weight: normal;
     }
 }
@@ -93,7 +93,7 @@
     box-shadow: $shadow;
 
     @media (min-width: $mq--lap) {
-        margin-right: $pt--deca;
+        margin-right: pt(2);
         float: none;
         vertical-align: top;
     }
@@ -114,7 +114,7 @@
         padding-top: 20px;
         position: absolute;
         top: 0;
-        right: $pt--kilo;
+        right: pt(4);
         line-height: 32px;
     }
 
@@ -136,7 +136,7 @@
 
 // The nr. of responses
 .comments-area__header {
-    margin: 0 0 $pt--kilo;
+    margin: 0 0 pt(4);
 }
 
 .comments-area__list {
@@ -156,12 +156,12 @@
 
     .comment {
         margin: 0;
-        padding: $pt--deca 0 0 $pt--deca;
+        padding: pt(2) 0 0 pt(2);
         border-top: 1px solid $border;
         border-bottom: 0;
 
         @media (min-width: $mq--lap) {
-            padding: $pt--deca;
+            padding: pt(2);
             border-bottom: 1px solid $border;
         }
     }
@@ -195,6 +195,6 @@
     
     p {
         margin-top: 0;
-        margin-bottom: $pt--deca;
+        margin-bottom: pt(2);
     }
 }

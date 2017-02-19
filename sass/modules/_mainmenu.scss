@@ -7,7 +7,7 @@
     @media (min-width: $mq--lap) {
         width: 100%;
         height: auto;
-        margin-bottom: $pt--kilo;
+        margin-bottom: pt(4);
         float: left;
     }
 }
@@ -49,7 +49,7 @@
     }
 
     > a {
-        padding: $pt--deca;
+        padding: pt(2);
         display: inline-block;
         text-decoration: none;
         transition: all .15s ease-out;
@@ -58,7 +58,7 @@
         }
 
         @media (min-width: $mq--lap) {
-            padding: $pt--deca $pt--kilo;
+            padding: pt(2) pt(4);
             position: relative;
             float: left;
         }
@@ -214,7 +214,7 @@
             background: $color--gray-13;
 
             @media (min-width: $mq--lap) {
-                padding: 8px $pt--deca;
+                padding: 8px pt(2);
                 border: 0;
                 border-bottom: 1px solid $border;
                 background: transparent;

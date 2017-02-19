@@ -62,12 +62,12 @@ h5 {
 
 // Page title
 .content__header {
-    margin: 0 0 $pt--deca;
+    margin: 0 0 pt(2);
     font-weight: normal;
     font-size: $header-1;
 
     @media (min-width: $mq--lap) {
-        margin-bottom: $pt--kilo;
+        margin-bottom: pt(4);
     }
 }
 

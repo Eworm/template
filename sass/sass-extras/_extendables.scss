@@ -2,7 +2,7 @@
 %postimage {
     width: 100%;
     height: auto;
-    margin: $pt--deca 0;
+    margin: pt(2) 0;
     display: block;
     border-radius: 0;
     box-shadow: $shadow;
@@ -24,12 +24,12 @@
 // Row in a form
 %formrow {
     width: 100%;
-    margin-bottom: $pt--deca;
+    margin-bottom: pt(2);
     float: left;
     clear: both;
 
     @media (min-width: $mq--lap) {
-        margin-bottom: $pt--kilo;
+        margin-bottom: pt(4);
     }
 
     &:last-child {
@@ -37,7 +37,7 @@
 
     &.error {
         margin-bottom: 0;
-        padding: $pt--deca;
+        padding: pt(2);
         border-radius: $radius;
         border-top-right-radius: 0;
         border-top-left-radius: 0;
@@ -60,7 +60,7 @@
 // Post summary
 %post {
     width: 100%;
-    margin-bottom: $pt--kilo;
+    margin-bottom: pt(4);
     float: left;
     opacity: 1;
     transition: opacity .2s ease;
@@ -83,7 +83,7 @@
         @media (min-width: $mq--lap) {
             width: 87px;
             height: 68px;
-            margin-right: $pt--deca;
+            margin-right: pt(2);
             position: relative;
             display: block;
             float: left;

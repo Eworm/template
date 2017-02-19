@@ -12,10 +12,10 @@
 
     p,
     ul {
-        margin: 0 0 $pt--deca;
+        margin: 0 0 pt(2);
 
         @media (min-width: $mq--lap) {
-            margin-bottom: $pt--kilo;
+            margin-bottom: pt(4);
         }
 
         &:last-child {
@@ -24,8 +24,8 @@
 }
 
 code {
-    padding-right: $pt;
-    padding-left: $pt;
+    padding-right: pt(1)
+    padding-left: pt(1)
     display: inline-block;
     background: rgba($mute, .25);
     border-radius: $radius;

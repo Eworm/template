@@ -16,12 +16,12 @@ Version: 1.0
 @import 'theme/layout';                     // Margins/paddings
 @import 'theme/colors';                     // Colors
 @import 'theme/variables';                  // Global variables
-@import 'theme/type';                       // Font variables
 
 
 
 // Sass functions, extendables & mixins.
 @import 'sass-extras/functions';            // Useful functions
+@import 'theme/type';                       // Font variables
 @import 'sass-extras/responsive-grid';      // Custom grid functions. Use grid-variables to control
 @import 'sass-extras/extendables';          // Useful extensions
 @import 'sass-extras/mixins';               // Useful mixins

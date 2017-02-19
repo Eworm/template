@@ -1,16 +1,3 @@
 // Use increments of 8 for a cleaner layout
 // https://medium.com/built-to-adapt/intro-to-the-8-point-grid-system-d2573cde8632
-// We're using the metric system for variable names
-// https://en.wikipedia.org/wiki/Metric_prefix
-$pt--base:      8px;
-$pt:            $pt--base * 1; // No name, this is the base size
-$pt--deca:      $pt--base * 2; // Deca
-$pt--hecto:     $pt--base * 3; // Hecto
-$pt--kilo:      $pt--base * 4; // Kilo
-$pt--mega:      $pt--base * 5; // Mega
-$pt--giga:      $pt--base * 6; // Giga
-$pt--tera:      $pt--base * 8; // Tera
-$pt--peta:      $pt--base * 8; // Peta
-$pt--exa:       $pt--base * 10; // Exa
-$pt--zetta:     $pt--base * 11; // Zetta
-$pt--yotta:     $pt--base * 12; // Yotta
+$pt--base: 8px;

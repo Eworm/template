@@ -10,3 +10,10 @@
 
     @return $pixels / $context * 1em;
 }
+
+
+
+// Multiplier function for the point grid
+@function pt($multiplier) {
+    @return $pt--base * $multiplier;
+}

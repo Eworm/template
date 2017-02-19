@@ -5,7 +5,7 @@
     @media (min-width: $mq--palm) {
         width: auto;
         max-width: 100%;
-        margin: $pt--kilo $pt--kilo $pt--kilo 0;
+        margin: pt(4) pt(4) pt(4) 0;
     }
 }
 
@@ -14,7 +14,7 @@ div.aligncenter {
     @extend %postimage;
 
     @media (min-width: $mq--palm) {
-        margin: $pt--kilo auto;
+        margin: pt(4) auto;
         display: block;
     }
 }
@@ -24,7 +24,7 @@ div.aligncenter {
 
     @media (min-width: $mq--palm) {
         width: auto;
-        margin: 0 0 $pt--kilo $pt--kilo;
+        margin: 0 0 pt(4) pt(4);
         float: right;
     }
 }
@@ -34,7 +34,7 @@ div.aligncenter {
 
     @media (min-width: $mq--palm) {
         width: auto;
-        margin: 0 $pt--kilo $pt--kilo 0;
+        margin: 0 pt(4) pt(4) 0;
         float: left;
     }
 }
@@ -46,7 +46,7 @@ a img {
 
         @media (min-width: $mq--palm) {
             width: auto;
-            margin: $pt--kilo 0 $pt--kilo $pt--kilo;
+            margin: pt(4) 0 pt(4) pt(4);
             float: right;
         }
     }
@@ -55,7 +55,7 @@ a img {
 
         @media (min-width: $mq--palm) {
             width: auto;
-            margin: $pt--kilo $pt--kilo $pt--kilo 0;
+            margin: pt(4) pt(4) pt(4) 0;
         }
     }
 
@@ -63,7 +63,7 @@ a img {
 
         @media (min-width: $mq--palm) {
             width: auto;
-            margin: $pt--kilo $pt--kilo $pt--kilo 0;
+            margin: pt(4) pt(4) pt(4) 0;
             float: left;
         }
     }
@@ -82,8 +82,8 @@ a img {
 // WP images with a caption
 .wp-caption {
     @extend %postimage;
-    margin: $pt--deca 0;
-    padding: $pt--deca;
+    margin: pt(2) 0;
+    padding: pt(2);
     border: 1px solid $border;
     border-radius: 0;
     background: $color--white;
@@ -93,7 +93,7 @@ a img {
         width: 100%;
         height: auto;
         max-width: 100%;
-        margin: 0 0 $pt--deca;
+        margin: 0 0 pt(2);
         padding: 0;
         display: block;
         border: 0 none;
@@ -109,7 +109,7 @@ a img {
     }
 
     p.wp-caption-text {
-        margin: $pt--deca 0 0;
+        margin: pt(2) 0 0;
         display: block;
         font-size: $type-meta;
     }
@@ -120,21 +120,21 @@ a img {
         @media (min-width: $mq--palm) {
             width: auto !important;
             max-width: 100% !important;
-            margin: $pt--kilo 0;
+            margin: pt(4) 0;
         }
     }
 
     &.alignleft {
 
         @media (min-width: $mq--palm) {
-            margin: 0 $pt--kilo $pt--kilo 0;
+            margin: 0 pt(4) pt(4) 0;
         }
     }
 
     &.alignright {
 
         @media (min-width: $mq--palm) {
-            margin: 0 0 $pt--kilo $pt--kilo;
+            margin: 0 0 pt(4) pt(4);
         }
     }
 }
@@ -146,11 +146,11 @@ a img {
 
     @media (min-width: $mq--palm) {
         width: auto;
-        margin: $pt--kilo 0;
+        margin: pt(4) 0;
     }
 
     @media (min-width: $mq--palm) {
-        margin: 0 0 $pt--kilo $pt--kilo;
+        margin: 0 0 pt(4) pt(4);
         float: right;
     }
 }
