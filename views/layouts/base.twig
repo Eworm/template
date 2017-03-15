@@ -20,9 +20,6 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <meta name="apple-mobile-web-app-title" content="{{ site.name }}">
 
-        <!-- Mobile viewport optimized: h5bp.com/viewport -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
         <!-- Microsoft. Delete if not required -->
         <meta http-equiv="cleartype" content="on">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -91,9 +88,7 @@
 
 <body class="{{ body_class }}">
 
-	<div class="symbols" aria-hidden="true">
-        {{ include_svg('images/sprite.svg') }}
-    </div>
+	{!! file_get_contents(asset('images/sprite.svg')) !!}
 
     <header class="header divider divider--header" role="banner">
 
