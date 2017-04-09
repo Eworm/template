@@ -147,8 +147,13 @@ gulp.task('critical', function () {
             dest: 'style-critical.css',
             minify: true,
             extract: false,
-            width: 1300,
-            height: 900,
+            dimensions: [{
+                height: 320,
+                width: 500
+            }, {
+                height: 900,
+                width: 1300
+            }],
             include: ['.breadcrumbs',
                         '.breadcrumbs > li',
                         '.breadcrumbs a',
@@ -160,7 +165,8 @@ gulp.task('critical', function () {
                         '.symbols',
                         '.row',
                         '.col',
-                        '.divider']
+                        '.divider'],
+            ignore: ['@font-face']
         }))
         
         .pipe(plugins.livereload())
