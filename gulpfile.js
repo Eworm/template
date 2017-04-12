@@ -165,8 +165,7 @@ gulp.task('critical', function () {
                         '.symbols',
                         '.row',
                         '.col',
-                        '.divider'],
-            ignore: ['@font-face']
+                        '.divider']
         }))
         
         .pipe(plugins.livereload())
