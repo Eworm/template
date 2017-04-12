@@ -1,6 +1,6 @@
 // Brand colors are defined here, these should not be used directly but should be defined as layout colors.
 // All variable names are generated using this tool: http://chir.ag/projects/name-that-color/
-$colorcience-blue: #0067c5;
+$color--science-blue: #0067c5;
 $color--red: #f00;
 
 
@@ -25,7 +25,7 @@ $color--black: #000;
 // This keeps the colors readable for other people.
 $body-bg:       $color--white;
 $body:          $color--gray-87;  // Should not be #000 for people with dyslexia: http://uxmovement.com/content/6-surprising-bad-practices-that-hurt-dyslexic-users/
-$link:          $colorcience-blue;  // Depending on the audience a blue, or another color
+$link:          $color--science-blue;  // Depending on the audience a blue, or another color
 $nav-bg:        $color--white;
 $border:        $color--gray-35;
 $mute:          $color--gray-35;
