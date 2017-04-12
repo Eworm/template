@@ -1,138 +1,105 @@
-<?php get_header(); ?>
+<?php
 
-<div class="content divider divider--content">
+$context = Timber::get_context();
 
-    <div class="core core--content">
+if (is_front_page())
+{
 
-        <div class="row">
+    $context['post'] = new TimberPost();
+	$template = ['home.twig'];
 
-            <main class="content col col--5" role="main">
+}
 
-                <?php if (have_posts()) : ?>
+else if (is_page())
+{
 
-                    <?php /* Start the Loop */ ?>
-                    <?php while (have_posts()) : the_post(); ?>
+    $context['post'] = new TimberPost();
+    $template = ['page.twig'];
 
-                        <!-- Using templates/post -->
-                        <?php get_template_part( 'templates/post', '' ); ?>
+}
 
-                    <?php endwhile; ?>
+else if (is_home())
+{
 
-                    <?php if (!is_single() && !is_page()) { ?>
+    $context['post'] = new TimberPost();
 
-                        <?php
-                            $temp = $wp_query;
-                            $wp_query = null;
-                            $wp_query = new WP_Query();
+    $posts_query = array(
+        'post_type' =>      'post',
+        'orderby' =>        'date',
+        'post_status' =>    'publish',
+        'paged' =>          $paged
+    );
 
-                            $show_posts = 10;                           //How many post you want on a page
-                            $permalink = 'Post name';                   // Default, Post name
-                            $req_uri =  $_SERVER['REQUEST_URI'];        // Know the current URI
+    $context['posts'] = Timber::get_posts($posts_query);
+    $context['pagination'] = Timber::get_pagination(4);
+    $context['dynamic_sidebar'] = Timber::get_widgets('1');
+    $template = ['blog.twig'];
 
-                            // Permalink set to default
-                            if ($permalink == 'Default') {
+}
 
-                                $req_uri = explode('paged=', $req_uri);
+else if (is_single())
+{
 
-                                if ($_GET['paged']) {
-                                    $uri = $req_uri[0] . 'paged=';
-                                } else {
-                                    $uri = $req_uri[0] . '&paged=';
-                                }
+    $context['post'] = new TimberPost();
+    $context['dynamic_sidebar'] = Timber::get_widgets('1');
+    $template = ['single.twig'];
 
-                            // Permalink is set to Post name
-                            } elseif ($permalink == 'Post name') {
+}
 
-                                if (strpos($req_uri, 'page/') !== false) {
-                                    $req_uri = explode('page/', $req_uri);
-                                    $req_uri = $req_uri[0];
-                                }
-                                $uri = $req_uri . 'page/';
+else if (is_post_type_archive())
+{
 
-                            }
+    $context['post'] = new TimberPost();
+	$context['posts'] = Timber::get_posts();
+	$template = ['archive.twig'];
 
-                            // The query
-                            $wp_query->query('showposts=' . $show_posts . '&post_type=post&paged=' . $paged);
-                            $count_posts = wp_count_posts('post');
+}
 
-                            // Determine number of posts
-                            $count_post = round($count_posts->publish / $show_posts);
+else if (is_category())
+{
 
-                            if ($count_posts->publish % $show_posts == 1) {
+    $context['post'] = new TimberPost();
+	$context['posts'] = Timber::get_posts();
+	$context['title'] = single_cat_title('', false);
+	$template = ['category.twig'];
 
-                                $count_post++;
-                                $count_post = intval($count_post);
+}
 
-                            }
+else if (is_tag())
+{
 
-                            // The navigation
-                            if ($count_post > 1) {
-                        ?>
+    $context['post'] = new TimberPost();
+	$context['posts'] = Timber::get_posts();
+	$context['title'] = single_cat_title('', false);
+	$template = ['tag.twig'];
 
-                        <ul class="paging">
+}
 
-                            <li class="paging__navigation paging__navigation--prev">
+else if (is_search())
+{
 
-                                <?php previous_posts_link('Vorige'); ?>
+    $context['post'] = new TimberPost();
+	$context['posts'] = Timber::get_posts();
+	$context['searchterm'] = get_search_query();
+	$template = ['search.twig'];
 
-                            </li>
+}
 
-                            <li class="paging__navigation paging__navigation--next">
+else if (is_author())
+{
 
-                                <?php next_posts_link('Volgende'); ?>
+    $context['post'] = new TimberPost();
+	$template = ['author.twig'];
 
-                            </li>
+}
 
-                            <?php for ($i = 1; $i <= $count_post; $i++) { ?>
+else if (is_404())
+{
 
-                                <li class="paging__number <?php if ($paged == $i) { echo ' paging__number--active'; } ?>">
+	$template = ['errors/404.twig'];
 
-                                    <a href="<?php echo $uri . $i; ?>" title="<?php _e( 'Naar pagina ', 'thema_vertalingen' ); ?><?php echo $i; ?>">
+}
 
-                                        <?php echo $i; ?>
+Timber::render($template, $context);
 
-                                    </a>
-
-                                </li>
-
-                            <?php } ?>
-
-                        </ul>
-
-                        <?php }
-                            // Reset
-                            $wp_query = null;
-                            $wp_query = $temp;
-                        ?>
-
-                    <?php } ?>
-
-                <?php endif; ?>
-
-            </main>
-
-            <aside class="sidebar col col--3" role="complementary">
-
-                <div class="sidebar__section">
-
-                    <h2 class="sidebar__section__header">
-
-                        <?php _e( 'Sidebar section', 'thema_vertalingen' ); ?>
-
-                    </h2>
-
-                </div>
-
-                <?php if ( !function_exists('dynamic_sidebar')
-                    || !dynamic_sidebar('Widget') ) : ?>
-                <?php endif; ?>
-
-            </aside>
-
-        </div>
-
-    </div>
-
-</div>
-
-<?php get_footer(); ?>
+?>

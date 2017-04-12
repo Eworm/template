@@ -1,6 +1,4 @@
-//
 // The menu
-//
 .mainmenu {
 
     @media (min-width: $mq--palm) {
@@ -9,15 +7,13 @@
     @media (min-width: $mq--lap) {
         width: 100%;
         height: auto;
-        margin-bottom: $margin;
+        margin-bottom: pt(4);
         float: left;
     }
 }
 
 
-//
 // Unordered list
-//
 .main-menu {
     width: 100%;
     margin: 0;
@@ -37,9 +33,7 @@
 }
 
 
-//
 // A single item
-//
 .menu-item {
     position: relative;
     display: inline-block;
@@ -55,7 +49,7 @@
     }
 
     > a {
-        padding: $padding--m;
+        padding: pt(2);
         display: inline-block;
         text-decoration: none;
         transition: all .15s ease-out;
@@ -64,7 +58,7 @@
         }
 
         @media (min-width: $mq--lap) {
-            padding: $padding--m $padding;
+            padding: pt(2) pt(4);
             position: relative;
             float: left;
         }
@@ -88,9 +82,7 @@
 }
 
 
-//
 // Nav feedback
-//
 .current_page_item,
 .current-menu-item,
 .current-page-ancestor,
@@ -105,9 +97,7 @@
 }
 
 
-//
 // The current item
-//
 .current_page_item {
 
     a {
@@ -152,9 +142,7 @@
 }
 
 
-//
 // The sub-menu menu
-//
 .has-submenu {
 }
 
@@ -226,7 +214,7 @@
             background: $color--gray-13;
 
             @media (min-width: $mq--lap) {
-                padding: 8px $padding--m;
+                padding: 8px pt(2);
                 border: 0;
                 border-bottom: 1px solid $border;
                 background: transparent;

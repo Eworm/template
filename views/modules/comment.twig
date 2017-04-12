@@ -1,0 +1,81 @@
+<li id="comment-{{ comment.id }}" class="comment comment-order-{{loop.index}}">
+
+    <div class="comment__author vcard">
+
+        <img src="{{ comment.author.avatar }}" class="avatar photo">
+
+        <cite class="fn">
+        
+            {% if (comment.comment_author_url) %}
+
+            <a href="{{ comment.comment_author_url }}" title="" rel="external nofollow" class="url">
+                {{ comment.author.name }}
+            </a>
+
+            {% else %}
+
+            {{ comment.author.name }}
+
+            {% endif %}
+        
+        </cite>
+        
+        <span class="says">
+            zegt:
+        </span>
+
+    </div>
+    
+    <div class="comment-meta commentmetadata">
+        
+        <a href="{{ post.link }}#comment-{{ comment.id }}" title="">
+            {{ comment.date }} om {{ comment.time }}
+        </a>
+    
+    </div>
+
+    <div class="comment__body">
+
+        {% if comment.approved %}
+        
+            {{ comment.content | replace({'<iframe': '<div class="video-wrapper"><iframe', '</iframe>': '</iframe></div>', '<table>': '<table class="table">', '<img': '<img class="img-responsive"'})}}
+            
+        {% else %}
+        
+            <p>
+                Deze reactie wacht op goedkeuring
+            </p>
+            
+        {% endif %}
+
+    </div>
+    
+    {% if comment.children %}
+
+    <ol class="comments-area__list">
+    
+{# <pre>{{ dump(comment.children) }}</pre> #}
+
+    {% for child in comment.children %}
+
+        <li class="comment comment-{{child.id}} comment-order-{{loop.index}}">
+
+            <div class="comment__body">
+
+                ID: {{ child.id }}
+                <br>
+                Parent: {{ child.comment_parent }}
+                <br>
+                {{ child.content }}
+
+            </div>
+
+        </li>
+
+    {% endfor %}
+
+    </ol>
+    
+    {% endif %}
+
+</li>

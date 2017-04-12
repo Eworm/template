@@ -1,6 +1,4 @@
-//
 // Unordered list
-//
 .paging {
     margin: 0;
     padding: 0;
@@ -10,8 +8,8 @@
         float: left;
 
         > a {
-            margin-right: $padding--s;
-            padding: $padding--s $padding--m;
+            margin-right: pt(1);
+            padding: pt(1) pt(2);
             display: block;
             float: left;
             border: 1px solid $border;
@@ -25,8 +23,8 @@
         }
         
         > span {
-            margin-right: $padding--s;
-            padding: $padding--s $padding--m;
+            margin-right: pt(1);
+            padding: pt(1) pt(2);
             display: block;
             float: left;
             border: 1px solid transparent;
@@ -36,9 +34,7 @@
     }
 
     
-    //
     // Next & prev
-    //
     &__navigation {
     
         &--prev {
@@ -49,9 +45,7 @@
     }
     
     
-    //
     // A list item
-    //
     &__number {
         display: none;
     

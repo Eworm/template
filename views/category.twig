@@ -1,0 +1,89 @@
+{% extends "layouts/base.twig" %}
+
+{% block content %}
+
+<div class="content divider divider--content">
+
+    <div class="core core--content">
+
+        <div class="row">
+
+            <main class="content col col--5" role="main">
+
+                <h1 class="content__header">
+
+                    Categorie: {{ title }}
+
+                </h1>
+
+                <div class="content__body">
+
+                    {% for item in posts %}
+        			{% include 'modules/post-excerpt.twig' %}
+        			{% endfor %}
+        			
+        			<ul class="paging">
+            			
+                        {% if pagination.prev %}
+                        
+                            <li class="paging__navigation paging__navigation--prev">
+                                <a href="{{pagination.prev.link}}">
+                                    Vorige
+                                </a>
+                            </li>
+                            
+                        {% endif %}
+                        
+                        {% if pagination.next %}
+                        
+                            <li class="paging__navigation paging__navigation--next">
+                                <a href="{{pagination.next.link}}">
+                                    Volgende
+                                </a>
+                            </li>
+                            
+                        {% endif %}
+                        
+                        {% for page in pagination.pages %}
+                        
+                        {% if page.link %}
+                        
+                            <li class="paging__number">
+                                <a href="{{page.link}}">
+                                    {{ page.title }}
+                                </a>
+                            </li>
+                            
+                            {% else %}
+                            
+                                <li class="paging__number paging__number--active">
+                                    <span>
+                                    {{ page.title }}
+                                    </span>
+                                </li>
+                                
+                            {% endif %}
+                            
+                            </li>
+                        
+                        {% endfor %}
+
+                    </ul>
+                
+                </div>
+
+            </main>
+
+            <aside class="sidebar col col--3" role="complementary">
+
+                Aside
+
+            </aside>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

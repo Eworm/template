@@ -1,6 +1,4 @@
-//
 // Responsive breakpoints. Always use em's!
-//
 $mq--wrist:     0; // $mq--wrist is the variable name from 0 to 480
 $mq--palm:      em(480);
 $mq--lap:       em(750);
@@ -10,17 +8,13 @@ $mq--cinema:    em(1430);
 
 
 
-//
 // Default values for other stuff
-//
 $radius: 3px;
 $shadow: (rgba(0, 0, 0, .25) 0 1px 1px);
 
 
 
-//
 // Grid variables
-//
 $site--width: 95%;            // The site width if the screen is smaller then the max size
 $site--max-width: 1280px;     // The max-size of the site
 $grid-columns: 8;             // How many grid columns we have. Don't forget to change your classnames when changing this!

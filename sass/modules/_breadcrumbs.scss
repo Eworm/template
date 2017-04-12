@@ -1,6 +1,7 @@
+// These styles are for custom breadcrumbs
 .breadcrumbs {
     width: 100%;
-    margin: 0 0 $margin;
+    margin: 0 0 pt(4);
     padding: 0;
     float: left;
     list-style-type: none;
@@ -10,16 +11,16 @@
     }
 
     a {
-        margin-right: $margin--s;
-        padding-right: $padding--s;
+        margin-right: pt(4);
+        padding-right: pt(4);
         position: relative;
         display: block;
         text-decoration: none;
         transition: all .15s ease;
 
         @media (min-width: $mq--lap) {
-            margin-right: $margin--m;
-            padding-right: $padding--m;
+            margin-right: pt(2);
+            padding-right: pt(2);
         }
 
         &:hover,

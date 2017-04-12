@@ -1,6 +1,4 @@
-//
 // Convert px to em
-//
 @function em($pixels, $context: $type-body) {
     @if (unitless($pixels)) {
         $pixels: $pixels * 1px;
@@ -11,4 +9,11 @@
     }
 
     @return $pixels / $context * 1em;
+}
+
+
+
+// Multiplier function for the point grid
+@function pt($multiplier) {
+    @return $pt--base * $multiplier;
 }

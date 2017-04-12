@@ -1,5 +1,6 @@
+// Custom WP header image
 .header-image {
-    margin-bottom: $margin;
+    margin-bottom: pt(4);
     border-radius: 0;
 
     @media (min-width: $mq--lap) {

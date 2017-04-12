@@ -1,7 +1,8 @@
+// The menu holding siblings on a page
 .pagemenu {
 
     @media (min-width: $mq--lap) {
-        margin-bottom: $margin;
+        margin-bottom: pt(4);
         display: block;
         clear: none;
         border: 1px solid $border;
@@ -40,7 +41,7 @@
     }
 
     a {
-        padding: $padding--m;
+        padding: pt(2);
         display: block;
 
         @media (min-width: $mq--lap) {

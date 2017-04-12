@@ -129,7 +129,7 @@ gulp.task('sprite', function () {
 
 // SCSS lint
 gulp.task('lint', function() {
-    gulp.src(src_paths.css)
+    return gulp.src(src_paths.css)
         .pipe(plugins.scssLint())
 });
 
@@ -147,8 +147,13 @@ gulp.task('critical', function () {
             dest: 'style-critical.css',
             minify: true,
             extract: false,
-            width: 1300,
-            height: 900,
+            dimensions: [{
+                height: 320,
+                width: 500
+            }, {
+                height: 900,
+                width: 1300
+            }],
             include: ['.breadcrumbs',
                         '.breadcrumbs > li',
                         '.breadcrumbs a',
@@ -157,7 +162,10 @@ gulp.task('critical', function () {
                         '.pagemenu ul',
                         '.pagemenu li',
                         '.pagemenu a',
-                        '.symbols']
+                        '.symbols',
+                        '.row',
+                        '.col',
+                        '.divider']
         }))
         
         .pipe(plugins.livereload())

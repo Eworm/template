@@ -1,15 +1,11 @@
-//
 // Calculate the grid widths
-//
 @mixin col--width($i) {
     width: #{100% / ($site--max-width / (((($site--max-width / $grid-columns) * $i))))};
 }
 
 
 
-//
 // Section dividers
-//
 .divider {
     width: 100%;
     float: left;
@@ -20,18 +16,16 @@
 
 
 
-//
 // Center site
-//
 .core {
     margin: 0 auto;
-    padding: $gutter;
+    padding: pt(4);
     clear: both;
 
     @media (min-width: $mq--lap) {
         width: $site--width;
         max-width: $site--max-width;
-        padding: $gutter 0;
+        padding: pt(4) 0;
         position: relative;
     }
 
@@ -49,7 +43,7 @@
     &--header {
     }
     
-    &--mainmenu {
+    &--decaainmenu {
         padding: 0;
     
         @media (min-width: $mq--lap) {
@@ -59,8 +53,8 @@
             margin: 0;
     
             @media (min-width: $mq--lap) {
-                margin-right: -#{$gutter--m};
-                margin-left: -#{$gutter--m};
+                margin-right: -#{pt(2)};
+                margin-left: -#{pt(2)};
             }
         }
     }
@@ -77,12 +71,10 @@
 
 
 
-//
 // Every column should have a row as it's parent
-//
 .row {
-    margin-right: -#{$gutter--m};
-    margin-left: -#{$gutter--m};
+    margin-right: -#{pt(2)};
+    margin-left: -#{pt(2)};
 
     &:before,
     &:after {
@@ -98,8 +90,8 @@
 
 .col {
     width: 100%;
-    padding-right: $gutter--m;
-    padding-left: $gutter--m;
+    padding-right: pt(2);
+    padding-left: pt(2);
     float: left;
         
     &--center {
@@ -111,9 +103,7 @@
 
 
 
-//
 // All screen widths
-//
 @for $i from 1 through $grid-columns {
 
     @media (min-width: $mq--palm) {
@@ -126,10 +116,8 @@
 
 
 
-//
 // Wrist
 // You can remove this when unused to minimize the css
-//
 @for $i from 1 through $grid-columns {
 
     .col--wrist-#{$i} {
@@ -142,10 +130,8 @@
 
 
 
-//
 // Palm
 // You can remove this when unused to minimize the css
-//
 @for $i from 1 through $grid-columns {
 
     .col--palm-#{$i} {
@@ -160,7 +146,6 @@
 
 // Lap
 // You can remove this when unused to minimize the css
-//
 @for $i from 1 through $grid-columns {
 
     .col--lap-#{$i} {
@@ -173,10 +158,8 @@
 
 
 
-//
 // Desk
 // You can remove this when unused to minimize the css
-//
 @for $i from 1 through $grid-columns {
 
     .col--l-#{$i} {
@@ -189,10 +172,8 @@
 
 
 
-//
 // Wall
 // You can remove this when unused to minimize the css
-//
 @for $i from 1 through $grid-columns {
 
     .col--wall-#{$i} {
@@ -205,10 +186,8 @@
 
 
 
-//
 // Cinema
 // You can remove this when unused to minimize the css
-//
 @for $i from 1 through $grid-columns {
 
     .col--cinema-#{$i} {
@@ -221,16 +200,14 @@
 
 
 
-//
 // Offset
 // You can remove this when unused to minimize the css
-//
 @for $i from 1 through $grid-columns {
 
     .col--push-#{$i} {
 
         @media (min-width: $mq--lap) {
-            margin-left: 100% / ($site--max-width / (((($site--max-width - (($grid-columns + 1) * $gutter)) / $grid-columns) * $i) + (($i + 1) * $gutter)));
+            margin-left: 100% / ($site--max-width / (((($site--max-width - (($grid-columns + 1) * pt(4))) / $grid-columns) * $i) + (($i + 1) * pt(4))));
         }
     }
 }

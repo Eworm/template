@@ -1,11 +1,9 @@
-//
 // Input sizes
-//
 input {
     width: 100%;
-    padding: $padding--s*2;
+    padding: pt(1);
     font-size: $type-body;
-    font-family: $type-fam-body;
+    font-family: $fam-body;
 
     @media (min-width: $mq--lap) {
         width: 50%;
@@ -18,11 +16,10 @@ input {
 
 textarea {
     width: 100%;
-    height: 120px;
-    padding: $padding--s*2;
-    float: left;
+    height: pt(12);
+    padding: pt(1);
     font-size: $type-body;
-    font-family: $type-fam-body;
+    font-family: $fam-body;
 }
 
 input[type="file"] {
@@ -32,7 +29,7 @@ input[type="file"] {
 input[type="checkbox"],
 input[type="radio"] {
     width: auto;
-    margin-right: $margin--m;
+    margin-right: pt(2);
 }
 
 input[type="submit"] {
@@ -51,9 +48,7 @@ fieldset {
 }
 
 
-//
 // The form
-//
 .content form {
     position: relative;
     z-index: 1;
@@ -72,27 +67,9 @@ fieldset {
 }
 
 
-//
 // A single row
-//
-.form__row {
-    @extend %form__row;
-
-    label,
-    .label {
-        width: 100%;
-        display: block;
-        clear: both;
-
-        &:hover,
-        &:focus {
-            cursor: pointer;
-        }
-
-        small {
-            font-size: 100%;
-        }
-    }
+.form-row {
+    @extend %formrow;
 
     li { // List with radio/checkboxes
         margin-right: 12px;
@@ -112,34 +89,45 @@ fieldset {
         }
     }
 
-    .input-exp { // Form field explanation. Using a small element is preferrable
+    // Form field explanation. Using a small element is preferrable
+    .input-exp {
         display: block;
         font-size: $type-meta;
     }
 }
 
+label,
+.label {
+    width: 100%;
+    display: block;
+    clear: both;
 
-//
+    &:hover,
+    &:focus {
+        cursor: pointer;
+    }
+
+    small {
+        font-size: 100%;
+    }
+}
+
+
 // Other elements
-//
 #screenreader,
 #loading {
     display: none;
 }
 
 
-//
 // Required style
-//
 .req {
     font-size: $type-body;
     color: $mute;
 }
 
 
-//
 // Error messages
-//
 .parsley-error {
 
     &-list {

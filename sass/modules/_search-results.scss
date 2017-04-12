@@ -1,10 +1,9 @@
+// Single search result
 .search-result {
     @extend %post;
     
     
-    //
     // Result title
-    //
     &__header {
     }
 }

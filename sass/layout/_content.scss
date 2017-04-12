@@ -1,6 +1,4 @@
-//
 // Main content on a page
-//
 .content {
     padding: 0;
 
@@ -9,20 +7,26 @@
 }
 
 
-//
 // The content
-//
 .content__body {
 
     p,
     ul {
-        margin: 0 0 $margin--m;
+        margin: 0 0 pt(2);
 
         @media (min-width: $mq--lap) {
-            margin-bottom: $margin;
+            margin-bottom: pt(4);
         }
 
         &:last-child {
         }
     }
+}
+
+code {
+    padding-right: pt(1);
+    padding-left: pt(1);
+    display: inline-block;
+    background: rgba($mute, .25);
+    border-radius: $radius;
 }

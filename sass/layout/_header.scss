@@ -1,8 +1,6 @@
-//
 // Site header
-//
 .header {
-    margin-bottom: $margin--m;
+    margin-bottom: pt(2);
     border-bottom: 1px solid $border;
 
     @media (min-width: $mq--lap) {
@@ -12,9 +10,7 @@
 }
 
 
-//
 // Site logo
-//
 .logo {
     width: 40px;
     height: 40px;
@@ -34,9 +30,7 @@
 }
 
 
-//
 // Customer promise
-//
 .cp {
     display: none;
 

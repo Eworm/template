@@ -1,17 +1,24 @@
-//
 // Regular table
-//
 .table {
     width: 100%;
-    margin: $margin 0;
+    margin: pt(4) 0;
     border: 1px solid $border;
+    border-spacing: 0;
 
     tr {
+        
+        &:last-child {
+            
+            th,
+            td {
+                border-bottom: 0;
+            }
+        }
     }
 
     th,
     td {
-        padding: $padding--s;
+        padding: pt(1);
         border-bottom: 1px solid $border;
         text-align: left;
         vertical-align: top;
@@ -23,9 +30,7 @@
     
     
     
-    //
     // Responsive table
-    //
     &--responsive {
         position: relative;
         display: block;

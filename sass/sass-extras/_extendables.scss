@@ -1,10 +1,8 @@
-//
 // Images used in posts
-//
 %postimage {
     width: 100%;
     height: auto;
-    margin: $margin--m 0;
+    margin: pt(2) 0;
     display: block;
     border-radius: 0;
     box-shadow: $shadow;
@@ -12,9 +10,7 @@
 
 
 
-//
 // Arrow for navfeedback
-//
 %navfeedback {
     width: 0;
     height: 0;
@@ -25,17 +21,15 @@
 
 
 
-//
 // Row in a form
-//
-%form__row {
+%formrow {
     width: 100%;
-    margin-bottom: $margin--m;
+    margin-bottom: pt(2);
     float: left;
     clear: both;
 
     @media (min-width: $mq--lap) {
-        margin-bottom: $margin;
+        margin-bottom: pt(4);
     }
 
     &:last-child {
@@ -43,7 +37,7 @@
 
     &.error {
         margin-bottom: 0;
-        padding: $padding--m;
+        padding: pt(2);
         border-radius: $radius;
         border-top-right-radius: 0;
         border-top-left-radius: 0;
@@ -63,12 +57,10 @@
 
 
 
-//
-// Summary
-//
+// Post summary
 %post {
     width: 100%;
-    margin-bottom: $margin;
+    margin-bottom: pt(4);
     float: left;
     opacity: 1;
     transition: opacity .2s ease;
@@ -91,7 +83,7 @@
         @media (min-width: $mq--lap) {
             width: 87px;
             height: 68px;
-            margin-right: $margin--m;
+            margin-right: pt(2);
             position: relative;
             display: block;
             float: left;
