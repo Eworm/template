@@ -52,6 +52,10 @@ The js-src dir is used for your own javascript files. The javascript Gulp task c
 **SASS**
 All sass files are conveniently located in the sass dir. The structure of the subdirs is based on https://smacss.com/
 
+## Timber
+Timber (https://www.upstatement.com/timber/) is an awesome way of making your html cleaner and easier to read. It uses the Twig template engine to write html seperate from the html files.
+
+
 ## Final words
 * Classes and id's necessary for javascript should start with js-. So don't remove or edit them in this html.
 * Please use BEM for classnames: http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/
