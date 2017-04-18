@@ -87,7 +87,7 @@
 
 <body class="{{ body_class }}">
 
-	{!! file_get_contents(asset('images/sprite.svg')) !!}
+	{{ include_svg('images/sprite.svg') }}
 
     <header class="header divider divider--header" role="banner">
 
