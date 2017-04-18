@@ -65,6 +65,20 @@ class MyTimberSite extends TimberSite
 			)
 		
 		);
+		
+		$twig->addFunction
+		(
+
+			new Twig_SimpleFunction
+			(
+		
+				'include_js',
+				[$this, 'include_js'],
+				['is_safe' => ['html']]
+
+			)
+		
+		);
 
 		return $twig;
 
@@ -98,6 +112,22 @@ class MyTimberSite extends TimberSite
 			$svg = file_get_contents($path);
 
 			return $svg;
+
+		}
+
+	}
+	
+	function include_js($path)
+	{
+
+		$path = get_template_directory() . '/' . $path;
+
+		if (file_exists($path))
+		{
+			
+			$script = file_get_contents($path);
+
+			return $script;
 
 		}
 
