@@ -46,10 +46,14 @@ gulp.task('css', function() {
             cascade: false
         }))
 
+/*
         .pipe(plugins.cssnano({
             zindex: false,
             autoprefixer: false
         }))
+*/
+        
+        .pipe(plugins.cleanCss({}))
         
 		.pipe(gulp.dest(dest_paths.css))
 
