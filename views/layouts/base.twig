@@ -64,7 +64,7 @@
                 l.href = '{{ site.theme.link }}/style.css';
                 
                 var y = document.createElement('script');
-                y.src = '<?php bloginfo('template_url'); ?>/js/lab.min.js';
+                y.src = '{{ site.theme.link }}/js/lab.min.js';
 
                 var h = document.getElementsByTagName('noscript')[0];
                 h.parentNode.insertBefore(l, h);
