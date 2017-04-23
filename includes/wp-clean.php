@@ -18,6 +18,8 @@ remove_filter('term_description','wpautop');
 remove_action('wp_head', 'wp_generator');
 remove_action('wp_head', 'wlwmanifest_link');
 remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('wp_head', 'rsd_link');
+remove_action('wp_head', 'wp_shortlink_wp_head');
 remove_action('admin_print_scripts', 'print_emoji_detection_script');
 remove_action('wp_print_styles', 'print_emoji_styles');
 remove_action('admin_print_styles', 'print_emoji_styles');
@@ -39,5 +41,16 @@ function disable_embeds_init()
     remove_action('wp_head', 'wp_oembed_add_host_js');
 }
 add_action('init', 'disable_embeds_init', 9999);
+
+
+/* Remove the recent comments css
+==================================================================================================================================*/
+function remove_recent_comments_style()
+{
+    global $wp_widget_factory;
+    remove_action('wp_head', array($wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style'));
+}
+add_action('widgets_init', 'remove_recent_comments_style');
+
 
 ?>
