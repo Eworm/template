@@ -151,7 +151,8 @@ function wp_html_compression_start()
         ob_start('wp_html_compression_finish');
 }
 
-if (!is_admin()) {
+if (!is_admin())
+{
     add_action('wp_loaded', 'wp_html_compression_start');
 }
 
