@@ -1,10 +1,8 @@
 $(document).ready(function() {
 
 
-
     // Lazy loading: add b-lazy class to the image
     var bLazy = new Blazy();
-
 
 
     // Animation class
@@ -12,7 +10,6 @@ $(document).ready(function() {
     {
         $('html').addClass('html--animation');
     }, 50);
-
 
 
     // Show initial password
@@ -34,10 +31,8 @@ $(document).ready(function() {
     });
 
 
-
     // Commentform validation
     $('#commentform').parsley();
-
 
 
     // Palm media queries
@@ -62,8 +57,6 @@ $(document).ready(function() {
     mqlPalm.addListener(handleMatchMedia);      //Execute each time media query will be reached
 
 
-
-
     // Lap media queries
     var handleMatchMedia = function (mediaQuery)
     {
@@ -84,8 +77,6 @@ $(document).ready(function() {
 
     handleMatchMedia(mqlLap);                  //Execute on load
     mqlLap.addListener(handleMatchMedia);      //Execute each time media query will be reached
-
-
 
 
     // Desk media queries
@@ -110,8 +101,6 @@ $(document).ready(function() {
     mqlDesk.addListener(handleMatchMedia);      //Execute each time media query will be reached
 
 
-
-
     // Wall media queries
     var handleMatchMedia = function (mediaQuery)
     {
@@ -132,8 +121,6 @@ $(document).ready(function() {
 
     handleMatchMedia(mqlWall);                  //Execute on load
     mqlWall.addListener(handleMatchMedia);      //Execute each time media query will be reached
-
-
 
 
     // Cinema media queries
@@ -162,9 +149,17 @@ $(document).ready(function() {
 
 
 
+// Add the google maps api only when we want it to via labjs
+if ($('#js-map_address').length > 0)
+{
+    $L = $L
+    .script('//maps.googleapis.com/maps/api/js?key=AIzaSyBgU-OMTQXQwUwOyNRZB5jh1cFgY5z_L2A&sensor=false&callback=initialize_single').wait();    
+}
+
+
 // Initialize a single marker
 function initialize_single()
-{
+{    
     var myOptions =
     {
         zoom: 10,

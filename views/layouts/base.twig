@@ -56,19 +56,18 @@
 
             // So we can use the template url in javascript
             var templateUrl = '{{ site.theme.link }}';
+            
+            // Inlining labjs removes a request and adds only a few kb's to the html
+            {{ include_js('js/lab.min.js') }}
 
             // Insert the remaining css as soon as possible
             var cb = function() {
 
                 var l = document.createElement('link'); l.rel = 'stylesheet';
                 l.href = '{{ site.theme.link }}/style.css';
-                
-                var y = document.createElement('script');
-                y.src = '{{ site.theme.link }}/js/lab.min.js';
 
                 var h = document.getElementsByTagName('noscript')[0];
                 h.parentNode.insertBefore(l, h);
-                h.parentNode.insertBefore(y, h);
             };
 
             var raf = false;

@@ -126,6 +126,7 @@ class MyTimberSite extends TimberSite
 		{
 			
 			$script = file_get_contents($path);
+			$script = str_replace('/js/', get_bloginfo('stylesheet_directory') . '/js/', $script);
 
 			return $script;
 
