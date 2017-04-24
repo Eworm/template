@@ -26,12 +26,6 @@ function template_register_required_plugins() {
 		),
 		
 		array(
-			'name'      => 'Advanced Custom Fields',
-			'slug'      => 'advanced-custom-fields',
-			'required'  => true,
-		),
-		
-		array(
 			'name'      => 'Timber',
 			'slug'      => 'timber-library',
 			'required'  => true,
