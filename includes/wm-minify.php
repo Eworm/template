@@ -151,7 +151,7 @@ function wp_html_compression_start()
         ob_start('wp_html_compression_finish');
 }
 
-if (!is_admin())
+if (!is_admin() && strpos($_SERVER['REQUEST_URI'], 'sitemap') == false)
 {
     add_action('wp_loaded', 'wp_html_compression_start');
 }
