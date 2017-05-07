@@ -11,11 +11,13 @@ var src_paths = {
     autoprefixer: '*.css',
     sprite: 'images-src/sprite/**/*.svg',
     scripts: ['bower_components/parsleyjs/dist/parsley.js',
-                'bower_components/hoverintent/jquery.hoverIntent.js',
-                'bower_components/blazy/blazy.js',
-                'js-src/functions.js'],
+        'bower_components/hoverintent/jquery.hoverIntent.js',
+        'bower_components/blazy/blazy.js',
+        'js-src/functions.js'
+    ],
     labjs: ['bower_components/labjs/LAB.min.js',
-                'js-src/lab-loader.js'],
+        'js-src/lab-loader.js'
+    ],
     javascript: 'js-src/*.*'
 };
 
@@ -34,31 +36,35 @@ var dest_paths = {
 gulp.task('css', function() {
     gulp.src(src_paths.css)
 
-        .pipe(plugins.plumber({errorHandler: plugins.notify.onError('Error: <%= error.message %>')}))
+        .pipe(plugins.plumber({
+            errorHandler: plugins.notify.onError('Error: <%= error.message %>')
+        }))
 
         .pipe(plugins.sass({
             outputStyle: 'compressed',
             includePaths: 'bower_components/normalize-scss/sass/normalize'
         }))
-        
+
         .pipe(plugins.autoprefixer({
             browsers: ['last 2 versions', 'ie 10'],
             cascade: false
         }))
 
-/*
-        .pipe(plugins.cssnano({
-            zindex: false,
-            autoprefixer: false
-        }))
-*/
-        
+        /*
+                .pipe(plugins.cssnano({
+                    zindex: false,
+                    autoprefixer: false
+                }))
+        */
+
         .pipe(plugins.cleanCss({}))
-        
-		.pipe(gulp.dest(dest_paths.css))
+
+        .pipe(gulp.dest(dest_paths.css))
 
         .pipe(plugins.livereload())
-        .pipe(plugins.notify({ message: 'Css complete!' }))
+        .pipe(plugins.notify({
+            message: 'Css complete!'
+        }))
 });
 
 
@@ -68,7 +74,9 @@ gulp.task('javascript', function() {
 
     gulp.src(src_paths.scripts)
 
-        .pipe(plugins.plumber({errorHandler: plugins.notify.onError('Error: <%= error.message %>')}))
+        .pipe(plugins.plumber({
+            errorHandler: plugins.notify.onError('Error: <%= error.message %>')
+        }))
 
         .pipe(plugins.concat('functions.min.js'))
         .pipe(plugins.uglify({
@@ -77,11 +85,15 @@ gulp.task('javascript', function() {
         .pipe(gulp.dest(dest_paths.javascript))
 
         .pipe(plugins.livereload())
-        .pipe(plugins.notify({ message: 'javascript complete!' }))
+        .pipe(plugins.notify({
+            message: 'javascript complete!'
+        }))
 
     gulp.src(src_paths.labjs)
 
-        .pipe(plugins.plumber({errorHandler: plugins.notify.onError('Error: <%= error.message %>')}))
+        .pipe(plugins.plumber({
+            errorHandler: plugins.notify.onError('Error: <%= error.message %>')
+        }))
 
         .pipe(plugins.concat('lab.min.js'))
         .pipe(plugins.uglify({
@@ -90,13 +102,15 @@ gulp.task('javascript', function() {
         .pipe(gulp.dest(dest_paths.javascript))
 
         .pipe(plugins.livereload())
-        .pipe(plugins.notify({ message: 'javascript complete!' }))
+        .pipe(plugins.notify({
+            message: 'javascript complete!'
+        }))
 });
 
 
 
 // SVG sprite
-gulp.task('sprite', function () {
+gulp.task('sprite', function() {
 
     return gulp.src(src_paths.sprite)
 
@@ -119,13 +133,15 @@ gulp.task('sprite', function () {
                     "bust": false
                 }
             }
-        })).on('error', function(error){
+        })).on('error', function(error) {
             /* Do some awesome error handling ... */
         })
         .pipe(gulp.dest(dest_paths.images))
 
         .pipe(plugins.livereload())
-        .pipe(plugins.notify({ message: 'Sprite complete!' }))
+        .pipe(plugins.notify({
+            message: 'Sprite complete!'
+        }))
 
 });
 
@@ -141,7 +157,7 @@ gulp.task('lint', function() {
 
 // Critical css
 // More info & options: https://github.com/addyosmani/critical
-gulp.task('critical', function () {
+gulp.task('critical', function() {
     return gulp.src('style.css')
         .pipe(critical({
             inline: false,
@@ -159,21 +175,24 @@ gulp.task('critical', function () {
                 width: 1300
             }],
             include: ['.breadcrumbs',
-                        '.breadcrumbs > li',
-                        '.breadcrumbs a',
-                        '.page_item',
-                        '.pagemenu',
-                        '.pagemenu ul',
-                        '.pagemenu li',
-                        '.pagemenu a',
-                        '.symbols',
-                        '.row',
-                        '.col',
-                        '.divider']
+                '.breadcrumbs > li',
+                '.breadcrumbs a',
+                '.page_item',
+                '.pagemenu',
+                '.pagemenu ul',
+                '.pagemenu li',
+                '.pagemenu a',
+                '.symbols',
+                '.row',
+                '.col',
+                '.divider'
+            ]
         }))
-        
+
         .pipe(plugins.livereload())
-        .pipe(plugins.notify({ message: 'Critical css complete!' }))
+        .pipe(plugins.notify({
+            message: 'Critical css complete!'
+        }))
 });
 
 
@@ -181,8 +200,8 @@ gulp.task('critical', function () {
 // Watch
 gulp.task('watch', function(ev) {
     plugins.livereload.listen();
-	gulp.watch(src_paths.css, ['css']);
-	gulp.watch(src_paths.javascript, ['javascript']);
+    gulp.watch(src_paths.css, ['css']);
+    gulp.watch(src_paths.javascript, ['javascript']);
     gulp.watch(src_paths.sprite, ['sprite']);
 });
 

@@ -2,38 +2,42 @@
 
 {% block content %}
 
-<div class="divider divider--content">
+    <div class="divider divider--content">
 
-    <div class="core core--content">
+        <div class="core core--content">
 
-        <div class="row">
+            <div class="row">
 
-            <main class="content col col--5" role="main">
+                <main class="content col col--5" role="main">
 
-                <h1 class="post__header single-post__header">
+                    <h1 class="post__header single-post__header">
 
-                    {{ post.title }}
+                        {{ post.title }}
 
-                </h1>
+                    </h1>
 
-                <div class="post__entry">
-                    
-                    <script>
-                        var company_address = [{location:"Kerklaan 30b, Haren"}];
-                    </script>
+                    <div class="post__entry">
 
-                    <div id="js-map_address" style="width: 100%; height: 400px;"></div>
+                        <script>
+                            var company_address = [
+                                {
+                                    location: "Kerklaan 30b, Haren"
+                                }
+                            ];
+                        </script>
 
-                    {{ post.content }}
+                        <div id="js-map_address" style="width: 100%; height: 400px;"></div>
 
-                </div>
+                        {{ post.content }}
 
-            </main>
+                    </div>
+
+                </main>
+
+            </div>
 
         </div>
 
     </div>
-
-</div>
 
 {% endblock %}

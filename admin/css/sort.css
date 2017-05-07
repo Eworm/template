@@ -1,6 +1,8 @@
 #video-list {
-  margin-top: 20px; }
-  #video-list li {
+    margin-top: 20px;
+}
+
+#video-list li {
     padding: 10px;
     width: 90%;
     font-weight: bold;
@@ -18,7 +20,9 @@
     background-image: -moz-linear-gradient(#f7f7f7, #e7e7e7);
     background-image: -o-linear-gradient(#f7f7f7, #e7e7e7);
     background-image: -ms-linear-gradient(#f7f7f7, #e7e7e7);
-    background-image: linear-gradient(#f7f7f7, #e7e7e7); }
+    background-image: linear-gradient(#f7f7f7, #e7e7e7);
+}
 
 #loading-animation {
-  display: none; }
+    display: none;
+}

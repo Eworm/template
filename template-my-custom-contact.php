@@ -7,5 +7,3 @@ Template Name: Contactformulier
     $context['post'] = new TimberPost();
     $template = ['page-contact.twig'];
     Timber::render($template, $context);
-    
-?>

@@ -1,141 +1,141 @@
 <!DOCTYPE html>
 <html {{ site.language_attributes }}>
-<head>
+    <head>
 
-	{% block head %}
+        {% block head %}
 
-	    <meta charset="{{ site.charset }}">
-	
-	    <title>{{ wp_title | default('Template') }}</title>
-	
-	    <meta name="language" content="nl">
-        <meta name="robots" content="index, follow">
-	
-	    <!-- Mobile viewport optimized: h5bp.com/viewport -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta charset="{{ site.charset }}">
 
-        <!-- iOS stuff -->
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <meta name="apple-mobile-web-app-title" content="{{ site.name }}">
+            <title>{{ wp_title | default('Template') }}</title>
 
-        <!-- Microsoft. Delete if not required -->
-        <meta http-equiv="cleartype" content="on">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+            <meta name="language" content="nl">
+            <meta name="robots" content="index, follow">
 
-        <!-- Removing the highlight for mobile IE10. Stupid to make this a meta tag instead of a css property -->
-        <meta name="msapplication-tap-highlight" content="no">
+            <!-- Mobile viewport optimized: h5bp.com/viewport -->
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- Modern favicons: http://thenewcode.com/28/Making-And-Deploying-SVG-Favicons -->
-        <!-- Use http://realfavicongenerator.net/ for all other root icons -->
-        <link rel="icon" type="image/png" href="/favicon.png">
-        <link rel="mask-icon" href="/icon.svg" color="#000000">
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+            <!-- iOS stuff -->
+            <meta name="apple-mobile-web-app-capable" content="yes">
+            <meta name="apple-mobile-web-app-status-bar-style" content="black">
+            <meta name="apple-mobile-web-app-title" content="{{ site.name }}">
 
-        <link type="text/plain" rel="author" href="/humans.txt">
+            <!-- Microsoft. Delete if not required -->
+            <meta http-equiv="cleartype" content="on">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-        <!-- Insert Google analytics here -->
+            <!-- Removing the highlight for mobile IE10. Stupid to make this a meta tag instead of a css property -->
+            <meta name="msapplication-tap-highlight" content="no">
 
-        {{ wp_head }}
-	
-	    <!-- Include the above the fold css and replace all relative urls with the theme url -->
-        <!-- Consider inlining all css if it's below 50kb, as used in AMP: https://www.ampproject.org/learn/how-amp-works/ -->
-	    <style>
+            <!-- Modern favicons: http://thenewcode.com/28/Making-And-Deploying-SVG-Favicons -->
+            <!-- Use http://realfavicongenerator.net/ for all other root icons -->
+            <link rel="icon" type="image/png" href="/favicon.png">
+            <link rel="mask-icon" href="/icon.svg" color="#000000">
+            <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
-	    {{ include_critical_css('style-critical.css') }}
+            <link type="text/plain" rel="author" href="/humans.txt">
 
-	    </style>
-	
-	    <!-- Visitors without javascript get the rest of the stylesheet the standard way -->
-        <noscript>
-            <link rel="stylesheet" href="{{ site.theme.link }}/style.css">
-        </noscript>
+            <!-- Insert Google analytics here -->
 
-        <!-- Script suggestion from google on how to insert the stylesheet -->
-	    <script>
+            {{ wp_head }}
 
-            // So we can use the template url in javascript
-            var templateUrl = '{{ site.theme.link }}';
-            
-            // Inlining labjs removes a request and adds only a few kb's to the html
-            {{ include_js('js/lab.min.js') }}
+            <!-- Include the above the fold css and replace all relative urls with the theme url -->
+            <!-- Consider inlining all css if it's below 50kb, as used in AMP: https://www.ampproject.org/learn/how-amp-works/ -->
+            <style>
 
-            // Insert the remaining css as soon as possible
-            var cb = function() {
+                {{include_critical_css('style-critical.css')}}
+            </style>
 
-                var l = document.createElement('link'); l.rel = 'stylesheet';
-                l.href = '{{ site.theme.link }}/style.css';
+            <!-- Visitors without javascript get the rest of the stylesheet the standard way -->
+            <noscript>
+                <link rel="stylesheet" href="{{ site.theme.link }}/style.css">
+            </noscript>
 
-                var h = document.getElementsByTagName('noscript')[0];
-                h.parentNode.insertBefore(l, h);
-            };
+            <!-- Script suggestion from google on how to insert the stylesheet -->
+            <script>
 
-            var raf = false;
-            try {
-                raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
-            } catch(e) {}
+                // So we can use the template url in javascript
+                var templateUrl = '{{ site.theme.link }}';
 
-            if (raf) raf(cb);
-            else window.addEventListener('load', cb);
+                // Inlining labjs removes a request and adds only a few kb's to the html
+                {{ include_js('js/lab.min.js') }}
 
-        </script>
+                // Insert the remaining css as soon as possible
+                var cb = function() {
 
-	{% endblock head %}
+                    var l = document.createElement('link');
+                    l.rel = 'stylesheet';
+                    l.href = '{{ site.theme.link }}/style.css';
 
-</head>
+                    var h = document.getElementsByTagName('noscript')[0];
+                    h.parentNode.insertBefore(l, h);
+                };
 
-<body class="{{ body_class }}">
+                var raf = false;
+                try {
+                    raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
+                } catch (e) {}
 
-	{{ include_svg('images/sprite.svg') }}
+                if (raf)
+                    raf(cb);
+                else
+                    window.addEventListener('load', cb);
+            </script>
 
-    <header class="header divider divider--header" role="banner">
+        {% endblock head %}
 
-        <div class="core core--header">
+    </head>
 
-            <div class="row">
+    <body class="{{ body_class }}">
 
-                <a href="{{ site.link }}" class="logo" rel="home" title="Terug naar de homepage">
+        {{ include_svg('images/sprite.svg') }}
 
-                    <svg class="logo__img">
-                        <title>
-                            {{ site.name }}
-                        </title>
-                        <use xlink:href="#logo">
-                    </svg>
+        <header class="header divider divider--header" role="banner">
 
-                </a>
+            <div class="core core--header">
 
-                <p class="cp">
+                <div class="row">
 
-                    {{ site.description }}
+                    <a href="{{ site.link }}" class="logo" rel="home" title="Terug naar de homepage">
 
-                </p>
+                        <svg class="logo__img">
+                            <title>
+                                {{ site.name }}
+                            </title>
+                            <use xlink:href="#logo"></svg>
 
-            </div>
+                        </a>
 
-        </div>
+                        <p class="cp">
 
-        <div class="core core--mainmenu">
+                            {{ site.description }}
 
-            <div class="row">
+                        </p>
 
-                <nav class="mainmenu" role="navigation" >
+                    </div>
 
-                    <ul class="main-menu">
+                </div>
 
-                        {% for item in menu.get_items %}
+                <div class="core core--mainmenu">
 
-                        <li class="nav-main-item {{item.classes | join(' ')}}">
+                    <div class="row">
 
-                            <a class="nav-main-link" href="{{item.link}}">{{item.title}}</a>
+                        <nav class="mainmenu" role="navigation">
 
-                            {% if item.get_children %}
+                            <ul class="main-menu">
 
-                            <ul class="nav-drop">
+                                {% for item in menu.get_items %}
 
-                                {% for child in item.get_children %}
+                                    <li class="nav-main-item {{item.classes | join(' ')}}">
 
-<!--
+                                        <a class="nav-main-link" href="{{item.link}}">{{item.title}}</a>
+
+                                        {% if item.get_children %}
+
+                                            <ul class="nav-drop">
+
+                                                {% for child in item.get_children %}
+
+                                                    <!--
                                     <li class="nav-drop-item">
 
                                         <a href="{{child.link}}">{{child.title}}</a>
@@ -143,29 +143,27 @@
                                     </li>
 -->
 
+                                                {% endfor %}
+
+                                            </ul>
+
+                                        {% endif %}
+
+                                    </li>
+
                                 {% endfor %}
 
                             </ul>
 
-                        {% endif %}
+                        </nav>
 
-                        </li>
+                    </div>
 
-                        {% endfor %}
+                </div>
 
-                   </ul>
+            </header>
 
-                </nav>
-
-            </div>
-
-        </div>
-
-    </header>
-
-	{% block content %}
-
-    {% endblock %}
+            {% block content %}{% endblock %}
 
             <div class="doormat divider divider--doormat">
 
@@ -230,7 +228,8 @@
 
                 <div class="core core--footer">
 
-                    &copy; {{ function('date', 'Y') }}
+                    &copy;
+                    {{ function('date', 'Y') }}
 
                 </div>
 
@@ -238,7 +237,7 @@
 
         </div>
 
-    	{{ wp_footer }}
+        {{ wp_footer }}
 
     </body>
 

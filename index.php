@@ -6,7 +6,7 @@ if (is_front_page())
 {
 
     $context['post'] = new TimberPost();
-	$template = ['home.twig'];
+    $template = ['home.twig'];
 
 }
 
@@ -50,8 +50,8 @@ else if (is_post_type_archive())
 {
 
     $context['post'] = new TimberPost();
-	$context['posts'] = Timber::get_posts();
-	$template = ['archive.twig'];
+    $context['posts'] = Timber::get_posts();
+    $template = ['archive.twig'];
 
 }
 
@@ -59,9 +59,9 @@ else if (is_category())
 {
 
     $context['post'] = new TimberPost();
-	$context['posts'] = Timber::get_posts();
-	$context['title'] = single_cat_title('', false);
-	$template = ['category.twig'];
+    $context['posts'] = Timber::get_posts();
+    $context['title'] = single_cat_title('', false);
+    $template = ['category.twig'];
 
 }
 
@@ -69,9 +69,9 @@ else if (is_tag())
 {
 
     $context['post'] = new TimberPost();
-	$context['posts'] = Timber::get_posts();
-	$context['title'] = single_cat_title('', false);
-	$template = ['tag.twig'];
+    $context['posts'] = Timber::get_posts();
+    $context['title'] = single_cat_title('', false);
+    $template = ['tag.twig'];
 
 }
 
@@ -79,9 +79,9 @@ else if (is_search())
 {
 
     $context['post'] = new TimberPost();
-	$context['posts'] = Timber::get_posts();
-	$context['searchterm'] = get_search_query();
-	$template = ['search.twig'];
+    $context['posts'] = Timber::get_posts();
+    $context['searchterm'] = get_search_query();
+    $template = ['search.twig'];
 
 }
 
@@ -89,14 +89,14 @@ else if (is_author())
 {
 
     $context['post'] = new TimberPost();
-	$template = ['author.twig'];
+    $template = ['author.twig'];
 
 }
 
 else if (is_404())
 {
 
-	$template = ['errors/404.twig'];
+    $template = ['errors/404.twig'];
 
 }
 

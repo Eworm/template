@@ -4,8 +4,7 @@
 ==================================================================================================================================*/
 function load_jquery()
 {
-    if ( ! is_admin() )
-    {
+    if (! is_admin()) {
         wp_deregister_script('jquery');
     }
 }
@@ -14,14 +13,14 @@ add_action('template_redirect', 'load_jquery');
 
 /* Remove some ugly wp meta data
 ==================================================================================================================================*/
-remove_filter('term_description','wpautop');
+remove_filter('term_description', 'wpautop');
 remove_action('wp_head', 'wp_generator');
 remove_action('wp_head', 'wlwmanifest_link');
 remove_action('wp_head', 'print_emoji_detection_script', 7);
 remove_action('wp_head', 'rsd_link');
 remove_action('wp_head', 'wp_shortlink_wp_head');
-remove_action( 'wp_head', 'feed_links', 2 );
-remove_action('wp_head', 'feed_links_extra', 3 );
+remove_action('wp_head', 'feed_links', 2);
+remove_action('wp_head', 'feed_links_extra', 3);
 remove_action('admin_print_scripts', 'print_emoji_detection_script');
 remove_action('wp_print_styles', 'print_emoji_styles');
 remove_action('admin_print_styles', 'print_emoji_styles');
@@ -54,6 +53,3 @@ function remove_recent_comments_style()
     remove_action('wp_head', array($wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style'));
 }
 add_action('widgets_init', 'remove_recent_comments_style');
-
-
-?>

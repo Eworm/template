@@ -2,74 +2,74 @@
 
 {% block content %}
 
-<div class="divider divider--content">
+    <div class="divider divider--content">
 
-    <div class="core core--content">
+        <div class="core core--content">
 
-        <div class="row">
+            <div class="row">
 
-            <main class="content col col--5" role="main">
+                <main class="content col col--5" role="main">
 
-                <h1 class="content__header">
+                    <h1 class="content__header">
 
-                    Zoekresultaten voor '{{ post.title }}'
+                        Zoekresultaten voor '{{ post.title }}'
 
-                </h1>
+                    </h1>
 
-                <div class="content__body">
+                    <div class="content__body">
 
-                    {% for item in posts %}
-        			{% include 'modules/post-excerpt.twig' %}
-        			{% endfor %}
-        			
-        			<ul class="paging">
-            			
-                        {% if pagination.prev %}
-                        
-                            <li class="paging__navigation paging__navigation--prev">
-                                <a href="{{pagination.prev.link}}">
-                                    Vorige
-                                </a>
-                            </li>
-                            
-                        {% endif %}
-                        
-                        {% if pagination.next %}
-                        
-                            <li class="paging__navigation paging__navigation--next">
-                                <a href="{{pagination.next.link}}">
-                                    Volgende
-                                </a>
-                            </li>
-                            
-                        {% endif %}
-                        
-                        {% for page in pagination.pages %}
-                        
-                        {% if page.link %}
-                        
-                            <li class="paging__number">
-                                <a href="{{page.link}}">
-                                    {{ page.title }}
-                                </a>
-                            </li>
-                            
-                            {% else %}
-                            
-                                <li class="paging__number paging__number--active">
-                                    <span>
-                                    {{ page.title }}
-                                    </span>
+                        {% for item in posts %}
+                            {% include 'modules/post-excerpt.twig' %}
+                        {% endfor %}
+
+                        <ul class="paging">
+
+                            {% if pagination.prev %}
+
+                                <li class="paging__navigation paging__navigation--prev">
+                                    <a href="{{pagination.prev.link}}">
+                                        Vorige
+                                    </a>
                                 </li>
-                                
+
                             {% endif %}
-                            
+
+                            {% if pagination.next %}
+
+                                <li class="paging__navigation paging__navigation--next">
+                                    <a href="{{pagination.next.link}}">
+                                        Volgende
+                                    </a>
+                                </li>
+
+                            {% endif %}
+
+                            {% for page in pagination.pages %}
+
+                                {% if page.link %}
+
+                                    <li class="paging__number">
+                                        <a href="{{page.link}}">
+                                            {{ page.title }}
+                                        </a>
+                                    </li>
+
+                                {% else %}
+
+                                    <li class="paging__number paging__number--active">
+                                        <span>
+                                            {{ page.title }}
+                                        </span>
+                                    </li>
+
+                                {% endif %}
+
                             </li>
-                        
+
                         {% endfor %}
 
                     </ul>
-                
+
                 </div>
 
             </main>
