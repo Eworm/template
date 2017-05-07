@@ -131,7 +131,6 @@ $(document).ready(function() {
 });
 
 
-
 // Add the google maps api only when we want it to via labjs
 if ($('#js-map_address').length > 0) {
     $L = $L
@@ -151,7 +150,6 @@ function initialize_single() {
 }
 
 
-
 // Geocode a location
 function codeLocations_single(list, map) {
     for (var i = 0; i < list.length; i++) {
@@ -169,7 +167,6 @@ function codeLocations_single(list, map) {
 }
 
 
-
 // Add a marker
 function createGeocodeCallback_single(item, map, addressId) {
     return function(results, status) {
@@ -180,7 +177,6 @@ function createGeocodeCallback_single(item, map, addressId) {
         }
     }
 }
-
 
 
 // Add a single marker
