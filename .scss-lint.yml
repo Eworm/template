@@ -1,20 +1,20 @@
 linters:
 
     Indentation:
-        enabled: true
-        width: 4
-        
+        enabled:                 true
+        width:                   4
+
     SelectorFormat:
-        convention: hyphenated_BEM
+        convention:              hyphenated_BEM
 
     EmptyRule:
-        enabled: false
-        
+        enabled:                 false
+
     SelectorFormat:
-        convention: hyphenated_BEM
+        convention:              hyphenated_BEM
 
     PropertySortOrder:
-        order: [
+        order:                   [
             "width",
             "height",
             "min-width",
