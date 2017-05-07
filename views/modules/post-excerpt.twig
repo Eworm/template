@@ -14,11 +14,11 @@
 
         {% if item.thumbnail %}
 
-        <a href="{{ item.link }}" title="Directe link naar {{ item.title }}">
+            <a href="{{ item.link }}" title="Directe link naar {{ item.title }}">
 
-            <img src="{{ item.thumbnail.src | resize(100, 100) }}" class="post-thumbnail" alt="{{ item.thumbnail.alt }}">
+                <img src="{{ item.thumbnail.src | resize(100, 100) }}" class="post-thumbnail" alt="{{ item.thumbnail.alt }}">
 
-        </a>
+            </a>
 
         {% endif %}
 
@@ -31,30 +31,32 @@
         <time datetime="{{ item.date | date('Y-m-d') }}" pubdate="pubdate">
 
             <a href="{{ item.link }}" title="Directe link naar {{ item.title }}">
-                
+
                 {{ item.date }}
-                
+
             </a>
 
         </time>
-        
+
         <br>
 
         {% if item.edit_link %}
 
-        <a href="{{ item.edit_link }}" title="Dit artikel aanpassen">
-            Aanpassen
-        </a>
-        
-        <br>
-        
+            <a href="{{ item.edit_link }}" title="Dit artikel aanpassen">
+                Aanpassen
+            </a>
+
+            <br>
+
         {% endif %}
 
         {% for category in item.categories %}
 
             <a href="{{ category.link }}">{{ category }}</a>
 
-            {% if (loop.last == false) %} , {% endif %}
+            {% if (loop.last == false) %}
+                ,
+            {% endif %}
 
         {% endfor %}
 
@@ -64,7 +66,9 @@
 
             <a href="{{ tag.link }}">{{ tag }}</a>
 
-            {% if (loop.last == false) %} , {% endif %}
+            {% if (loop.last == false) %}
+                ,
+            {% endif %}
 
         {% endfor %}
 
