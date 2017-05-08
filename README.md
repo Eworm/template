@@ -4,7 +4,7 @@ This project uses open-source software to work more efficient. You'll need to in
 
 **1:** Nodejs: <http://nodejs.org/>
 
-**2:** Gulp: `npm install -g gulp`
+**2:** Gulp: <http://gulpjs.com/>
 
 **3:** Bower: <http://bower.io/>
 
