@@ -11,18 +11,22 @@
     font-style: normal;
 }
 
+
 // Font sizes & other related stuff
 // Add new ones when appropriate
 $line-height: 1.8;
 $font-size: 16px;
 $font-meta: 12px;
 
+
 // Define font names here, use them later on
 $websafe: Arial, Verdana, sans-serif;
 $lato--regular: 'Lato', $websafe;
 
+
 // Define font variables here using the above font names
 $font-family: $lato--regular;
+
 
 // Header sizes
 $header-1: 2 * $font-size;
@@ -30,6 +34,7 @@ $header-2: 1.5 * $font-size;
 $header-3: 1.17 * $font-size;
 $header-4: 1 * $font-size;
 $header-5: 1 * $font-size;
+
 
 h1,
 h2,
@@ -51,7 +56,6 @@ h5 {
 }
 
 
-
 // Page title
 .content__header {
     margin: 0 0 pt(2);
@@ -62,6 +66,7 @@ h5 {
         margin-bottom: pt(4);
     }
 }
+
 
 // Headers in the main content
 .content__body {

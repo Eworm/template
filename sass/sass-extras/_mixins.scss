@@ -8,15 +8,13 @@
 }
 
 
-
-// Unreplace Zeldman?
+// Unreplace Zeldman
 @mixin text--show() {
     text-indent: 0;
     white-space: normal;
     overflow: visible;
     word-wrap: break-word;
 }
-
 
 
 // Hide elements visually, but not for screenreaders

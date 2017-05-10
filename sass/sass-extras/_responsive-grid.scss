@@ -4,7 +4,6 @@
 }
 
 
-
 // Section dividers
 .divider {
     width: 100%;
@@ -13,7 +12,6 @@
     @media (min-width: $mq--palm) {
     }
 }
-
 
 
 // Center site
@@ -39,32 +37,32 @@
     &:after {
         clear: both;
     }
-    
+
     &--header {
     }
-    
+
     &--decaainmenu {
         padding: 0;
-    
+
         @media (min-width: $mq--lap) {
         }
-    
+
         > .row {
             margin: 0;
-    
+
             @media (min-width: $mq--lap) {
                 margin-right: -#{pt(2)};
                 margin-left: -#{pt(2)};
             }
         }
     }
-    
+
     &--content {
     }
-    
+
     &--doormat {
     }
-    
+
     &--footer {
     }
 }
@@ -93,14 +91,13 @@
     padding-right: pt(2);
     padding-left: pt(2);
     float: left;
-        
+
     &--center {
         margin-right: auto;
         margin-left: auto;
         float: none;
     }
 }
-
 
 
 // All screen widths
@@ -113,7 +110,6 @@
         }
     }
 }
-
 
 
 // Wrist
@@ -129,7 +125,6 @@
 }
 
 
-
 // Palm
 // You can remove this when unused to minimize the css
 @for $i from 1 through $grid-columns {
@@ -141,7 +136,6 @@
         }
     }
 }
-
 
 
 // Lap
@@ -157,7 +151,6 @@
 }
 
 
-
 // Desk
 // You can remove this when unused to minimize the css
 @for $i from 1 through $grid-columns {
@@ -169,7 +162,6 @@
         }
     }
 }
-
 
 
 // Wall
@@ -185,7 +177,6 @@
 }
 
 
-
 // Cinema
 // You can remove this when unused to minimize the css
 @for $i from 1 through $grid-columns {
@@ -197,7 +188,6 @@
         }
     }
 }
-
 
 
 // Offset

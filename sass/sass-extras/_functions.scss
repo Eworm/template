@@ -12,7 +12,6 @@
 }
 
 
-
 // Multiplier function for the point grid
 @function pt($multiplier) {
     @return $pt--base * $multiplier;
