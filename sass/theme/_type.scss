@@ -18,8 +18,8 @@
 // Font sizes & other related stuff
 // Add new ones when appropriate
 $line-height: 1.8;
-$type-body: 16px;
-$type-meta: 12px;
+$font-size: 16px;
+$font-meta: 12px;
 
 
 
@@ -30,16 +30,16 @@ $lato--regular: 'Lato', $websafe;
 
 
 // Define font variables here using the above font names
-$fam-body: $lato--regular;
+$font-family: $lato--regular;
 
 
 
 // Header sizes
-$header-1: 2 * $type-body;
-$header-2: 1.5 * $type-body;
-$header-3: 1.17 * $type-body;
-$header-4: 1 * $type-body;
-$header-5: 1 * $type-body;
+$header-1: 2 * $font-size;
+$header-2: 1.5 * $font-size;
+$header-3: 1.17 * $font-size;
+$header-4: 1 * $font-size;
+$header-5: 1 * $font-size;
 
 h1,
 h2,
@@ -111,6 +111,6 @@ h5 {
 
     h5 {
         margin: 0;
-        font-size: $type-body;
+        font-size: $font-size;
     }
 }

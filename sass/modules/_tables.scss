@@ -94,7 +94,7 @@
                 display: table-row-group;
                 overflow: visible;
                 border: 1px solid $border;
-                font-size: $type-body;
+                font-size: $font-size;
                 white-space: normal;
                 word-wrap: break-word;
             }
@@ -104,7 +104,7 @@
             display: inline-block;
             border: 1px solid $border;
             border-left: 0;
-            font-size: $type-body;
+            font-size: $font-size;
             vertical-align: top;
 
             @media (min-width: $mq--lap) {

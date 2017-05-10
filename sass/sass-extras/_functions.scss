@@ -1,5 +1,5 @@
 // Convert px to em
-@function em($pixels, $context: $type-body) {
+@function em($pixels, $context: $font-size) {
     @if (unitless($pixels)) {
         $pixels: $pixels * 1px;
     }
