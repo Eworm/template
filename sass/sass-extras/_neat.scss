@@ -1,0 +1,16 @@
+$neat-grid: (
+  columns: 12,
+  gutter: pt(2),
+);
+
+.center {
+    @include grid-container;
+
+    @media (min-width: $mq--lap) {
+        width: $site--width;
+        max-width: $site--max-width;
+        margin: 0 auto;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}

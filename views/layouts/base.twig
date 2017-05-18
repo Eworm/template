@@ -41,8 +41,7 @@
             <!-- Include the above the fold css and replace all relative urls with the theme url -->
             <!-- Consider inlining all css if it's below 50kb, as used in AMP: https://www.ampproject.org/learn/how-amp-works/ -->
             <style>
-
-                {{include_critical_css('style-critical.css')}}
+                /*{{ include_critical_css('style-critical.css') }}*/
             </style>
 
             <!-- Visitors without javascript get the rest of the stylesheet the standard way -->
@@ -89,11 +88,11 @@
 
         {{ include_svg('images/sprite.svg') }}
 
-        <header class="header divider divider--header" role="banner">
+        <header class="header" role="banner">
 
-            <div class="core core--header">
+            <div class="center">
 
-                <div class="row">
+                <div class="col">
 
                     <a href="{{ site.link }}" class="logo" rel="home" title="Terug naar de homepage">
 
@@ -110,14 +109,6 @@
                             {{ site.description }}
 
                         </p>
-
-                    </div>
-
-                </div>
-
-                <div class="core core--mainmenu">
-
-                    <div class="row">
 
                         <nav class="mainmenu" role="navigation">
 
@@ -163,82 +154,96 @@
 
             </header>
 
-            {% block content %}{% endblock %}
+            <section class="content">
 
-            <div class="doormat divider divider--doormat">
+                <div class="center">
 
-                <div class="core core--doormat">
-
-                    <section class="vcard">
-
-                        <ul class="vcard__section adr">
-
-                            <li class="org">
-                                <strong>
-                                    Wout Mager
-                                </strong>
-                            </li>
-
-                            <li class="street-address">
-                                Folkingestraat 37B
-                            </li>
-
-                            <li>
-                                <span class="postal-code">
-                                    9711 JT
-                                </span>,
-                                <span class="locality">
-                                    Groningen
-                                </span>
-                            </li>
-
-                            <li class="country-name">
-                                Nederland
-                            </li>
-
-                        </ul>
-
-                        <ul class="vcard__section">
-
-                            <li class="url fn">
-                                <strong>
-                                    Wout Mager
-                                </strong>
-                            </li>
-
-                            <li class="tel">
-                                06 - 4641 2770
-                            </li>
-
-                            <li>
-                                <a href="mailto:wout@woutmager.nl" class="email">
-                                    wout@woutmager.nl
-                                </a>
-                            </li>
-
-                        </ul>
-
-                    </section>
+                    {% block content %}{% endblock %}
 
                 </div>
 
-            </div>
+            </section>
 
-            <footer class="footer divider divider--footer" role="contentinfo">
+            <section class="doormat">
 
-                <div class="core core--footer">
+                <div class="center">
 
-                    &copy;
-                    {{ function('date', 'Y') }}
+                    <div class="col">
+
+                        <div class="vcard">
+
+                            <ul class="vcard__section adr">
+
+                                <li class="org">
+                                    <strong>
+                                        Wout Mager
+                                    </strong>
+                                </li>
+
+                                <li class="street-address">
+                                    Folkingestraat 37B
+                                </li>
+
+                                <li>
+                                    <span class="postal-code">
+                                        9711 JT
+                                    </span>,
+                                    <span class="locality">
+                                        Groningen
+                                    </span>
+                                </li>
+
+                                <li class="country-name">
+                                    Nederland
+                                </li>
+
+                            </ul>
+
+                            <ul class="vcard__section">
+
+                                <li class="url fn">
+                                    <strong>
+                                        Wout Mager
+                                    </strong>
+                                </li>
+
+                                <li class="tel">
+                                    06 - 4641 2770
+                                </li>
+
+                                <li>
+                                    <a href="mailto:wout@woutmager.nl" class="email">
+                                        wout@woutmager.nl
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <footer class="footer" role="contentinfo">
+
+                <div class="center">
+
+                    <div class="col">
+
+                        &copy;
+                        {{ function('date', 'Y') }}
+
+                    </div>
 
                 </div>
 
             </footer>
 
-        </div>
+            {{ wp_footer }}
 
-        {{ wp_footer }}
+        </body>
 
-    </body>
-
-</html>
+    </html>

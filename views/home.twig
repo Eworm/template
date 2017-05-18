@@ -2,32 +2,20 @@
 
 {% block content %}
 
-    <div class="divider divider--content">
+    <main class="main main--full" role="main">
 
-        <div class="core core--content">
+        <h1 class="main__header">
 
-            <div class="row">
+            {{ post.title }}
 
-                <main class="content col col--5" role="main">
+        </h1>
 
-                    <h1 class="content__header">
+        <div class="main__body">
 
-                        {{ post.title }}
-
-                    </h1>
-
-                    <div class="content__body">
-
-                        {{ post.content }}
-
-                    </div>
-
-                </main>
-
-            </div>
+            {{ post.content }}
 
         </div>
 
-    </div>
+    </main>
 
 {% endblock %}

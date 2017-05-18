@@ -1,0 +1,88 @@
+// Main content on a page
+.content {
+    padding-top: pt(2);
+    padding-bottom: pt(2);
+
+    @media (min-width: $mq--lap) {
+        padding-top: pt(4);
+        padding-bottom: pt(4);
+    }
+}
+
+.main {
+    margin-bottom: pt(2);
+    @include grid-column(12);
+
+    @media (min-width: $mq--lap) {
+        @include grid-column(8);
+    }
+
+    &--full {
+
+        @media (min-width: $mq--lap) {
+            @include grid-column(12);
+        }
+    }
+
+    // Page title
+    .main__header {
+        margin: 0 0 pt(2);
+        font-weight: normal;
+        font-size: $header-1;
+
+        @media (min-width: $mq--lap) {
+            margin-bottom: pt(4);
+        }
+    }
+
+    // The content
+    &__body {
+
+        h2,
+        h3,
+        h4,
+        h5 {
+
+            a {
+                text-decoration: none;
+
+                &:hover,
+                &:focus {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        h2 {
+            margin: 0 0 pt(2);
+            font-size: $header-2;
+        }
+
+        h3 {
+            margin: 0 0 pt(1);
+            font-size: $header-3;
+        }
+
+        h4 {
+            margin: 0 0 pt(1);
+            font-size: $header-4;
+        }
+
+        h5 {
+            margin: 0 0 pt(1);
+            font-size: $font-size;
+        }
+
+        p,
+        ul {
+            margin: 0 0 pt(2);
+
+            @media (min-width: $mq--lap) {
+                margin-bottom: pt(4);
+            }
+
+            &:last-child {
+            }
+        }
+    }
+}

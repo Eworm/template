@@ -38,7 +38,7 @@
 
         {% if comment.approved %}
 
-            {{ comment.content | replace({'<iframe': '<div class="video-wrapper"><iframe', '</iframe>': '</iframe></div>', '<table>': '<table class="table">', '<img': '<img class="img-responsive"'})}}
+            {{ comment.main | replace({'<iframe': '<div class="video-wrapper"><iframe', '</iframe>': '</iframe></div>', '<table>': '<table class="table">', '<img': '<img class="img-responsive"'})}}
 
         {% else %}
 
@@ -64,7 +64,7 @@
                 <br>
                 Parent: {{ child.comment_parent }}
                 <br>
-                {{ child.content }}
+                {{ child.main }}
 
             </div>
 

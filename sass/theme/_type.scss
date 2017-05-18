@@ -15,8 +15,8 @@
 // Font sizes & other related stuff
 // Add new ones when appropriate
 $line-height: 1.8;
-$font-size: 16px;
-$font-meta: 12px;
+$font-size: pt(2);
+$font-meta: pt(1.5);
 
 
 // Define font names here, use them later on
@@ -29,12 +29,11 @@ $font-family: $lato--regular;
 
 
 // Header sizes
-$header-1: 2 * $font-size;
-$header-2: 1.5 * $font-size;
-$header-3: 1.17 * $font-size;
+$header-1: 3 * $font-size;
+$header-2: 2 * $font-size;
+$header-3: 1.5 * $font-size;
 $header-4: 1 * $font-size;
 $header-5: 1 * $font-size;
-
 
 h1,
 h2,
@@ -56,54 +55,11 @@ h5 {
 }
 
 
-// Page title
-.content__header {
-    margin: 0 0 pt(2);
-    font-weight: normal;
-    font-size: $header-1;
-
-    @media (min-width: $mq--lap) {
-        margin-bottom: pt(4);
-    }
-}
-
-
-// Headers in the main content
-.content__body {
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5 {
-
-        a {
-            text-decoration: none;
-
-            &:hover,
-            &:focus {
-                text-decoration: underline;
-            }
-        }
-    }
-
-    h2 {
-        margin: 0;
-        font-size: $header-2;
-    }
-
-    h3 {
-        margin: 0;
-        font-size: $header-3;
-    }
-
-    h4 {
-        margin: 0;
-        font-size: $header-4;
-    }
-
-    h5 {
-        margin: 0;
-        font-size: $font-size;
-    }
+// Code snippet
+code {
+    padding-right: pt(1);
+    padding-left: pt(1);
+    display: inline-block;
+    background: rgba($mute, .25);
+    border-radius: $radius;
 }

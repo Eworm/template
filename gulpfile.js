@@ -42,7 +42,7 @@ gulp.task('css', function() {
 
         .pipe(plugins.sass({
             outputStyle: 'compressed',
-            includePaths: 'bower_components/normalize-scss/sass/normalize'
+            includePaths: ['bower_components/normalize-scss/sass/normalize', 'bower_components/neat/core/']
         }))
 
         .pipe(plugins.autoprefixer({

@@ -2,140 +2,128 @@
 
 {% block content %}
 
-    <div class="divider divider--content">
+    <main class="main main--full" role="main">
 
-        <div class="core core--content">
+        <h1 class="post__header single-post__header">
+            {{ post.title }}
+        </h1>
 
-            <div class="row">
+        <div class="post__meta">
 
-                <main class="content col col--5" role="main">
-
-                    <h1 class="post__header single-post__header">
-                        {{ post.title }}
-                    </h1>
-
-                    <div class="post__meta">
-
-                        <a href="{{ post.author.link }}" title="Alle berichten van {{ post.author.name }}">
-                            {{ post.author.name }}
-                        </a>
-
-                    </div>
-
-                    {% if post.password_required %}
-
-                        <div class="post__entry">
-
-                            <p>
-                                Deze content is beveiligd met een wachtwoord.
-                            </p>
-
-                            {{ post.maybe_show_password_form }}
-
-                        </div>
-
-                    {% else %}
-
-                        <div class="post__entry">
-
-                            {{ post.content | replace({'<iframe': '<div class="video-wrapper"><iframe', '</iframe>': '</iframe></div>', '<table>': '<table class="table">'})}}
-
-                            {% if post.thumbnail %}
-
-                                <img
-                                    src="{{ post.thumbnail.src }}"
-                                    srcset="{{ post.thumbnail.src | retina(1) }} 1x,
-                        {{ post.thumbnail.src | retina(2) }}  2x,
-                        {{ post.thumbnail.src | retina(3) }}  3x,
-                        {{ post.thumbnail.src | retina(4) }}  4x"
-                                    class="img-responsive"
-                                    alt="{{ post.thumbnail.alt }}">
-
-                            {% endif %}
-
-                        </div>
-
-                        <div class="post__meta">
-
-                            <time datetime="{{ post.date | date('Y-m-d') }}" pubdate="pubdate">
-
-                                <a href="{{ post.link }}" title="Directe link naar {{ item.title }}">
-
-                                    {{ post.date }}
-
-                                </a>
-
-                            </time>
-
-                            {% if post.edit_link %}
-
-                                <br>
-
-                                <a href="{{ post.edit_link }}" title="">
-                                    Aanpassen
-                                </a>
-
-                            {% endif %}
-
-                            <br>
-
-                            {% for category in post.categories %}
-
-                                <a href="{{ category.link }}">{{ category }}</a>
-
-                                {% if (loop.last == false) %}
-                                    ,
-                                {% endif %}
-
-                            {% endfor %}
-
-                            <br>
-
-                            {% for tag in post.tags %}
-
-                                <a href="{{ tag.link }}">{{ tag }}</a>
-
-                                {% if (loop.last == false) %}
-                                    ,
-                                {% endif %}
-
-                            {% endfor %}
-
-                        </div>
-
-                        <div class="comments-area">
-
-                            <h2 class="comments-area__header">
-                                {{ post.get_comment_count }}
-                                Reacties
-                            </h2>
-
-                            <ol class="comments-area__list">
-
-                                {% for comment in post.comments %}
-                                    {% include 'modules/comment.twig' %}
-                                {% endfor %}
-
-                            </ol>
-
-                        </div>
-
-                        {{ post.comment_form }}
-
-                    {% endif %}
-
-                </main>
-
-                <aside class="sidebar col col--3" role="complementary">
-
-                    {% include 'sidebar.twig' %}
-
-                </aside>
-
-            </div>
+            <a href="{{ post.author.link }}" title="Alle berichten van {{ post.author.name }}">
+                {{ post.author.name }}
+            </a>
 
         </div>
 
-    </div>
+        {% if post.password_required %}
+
+            <div class="post__entry">
+
+                <p>
+                    Deze content is beveiligd met een wachtwoord.
+                </p>
+
+                {{ post.maybe_show_password_form }}
+
+            </div>
+
+        {% else %}
+
+            <div class="post__entry">
+
+                {{ post.content | replace({'<iframe': '<div class="video-wrapper"><iframe', '</iframe>': '</iframe></div>', '<table>': '<table class="table">'})}}
+
+                {% if post.thumbnail %}
+
+                    <img
+                        src="{{ post.thumbnail.src }}"
+                        srcset="{{ post.thumbnail.src | retina(1) }} 1x,
+                        {{ post.thumbnail.src | retina(2) }}  2x,
+                        {{ post.thumbnail.src | retina(3) }}  3x,
+                        {{ post.thumbnail.src | retina(4) }}  4x"
+                        class="img-responsive"
+                        alt="{{ post.thumbnail.alt }}">
+
+                {% endif %}
+
+            </div>
+
+            <div class="post__meta">
+
+                <time datetime="{{ post.date | date('Y-m-d') }}" pubdate="pubdate">
+
+                    <a href="{{ post.link }}" title="Directe link naar {{ item.title }}">
+
+                        {{ post.date }}
+
+                    </a>
+
+                </time>
+
+                {% if post.edit_link %}
+
+                    <br>
+
+                    <a href="{{ post.edit_link }}" title="">
+                        Aanpassen
+                    </a>
+
+                {% endif %}
+
+                <br>
+
+                {% for category in post.categories %}
+
+                    <a href="{{ category.link }}">{{ category }}</a>
+
+                    {% if (loop.last == false) %}
+                        ,
+                    {% endif %}
+
+                {% endfor %}
+
+                <br>
+
+                {% for tag in post.tags %}
+
+                    <a href="{{ tag.link }}">{{ tag }}</a>
+
+                    {% if (loop.last == false) %}
+                        ,
+                    {% endif %}
+
+                {% endfor %}
+
+            </div>
+
+            <div class="comments-area">
+
+                <h2 class="comments-area__header">
+                    {{ post.get_comment_count }}
+                    Reacties
+                </h2>
+
+                <ol class="comments-area__list">
+
+                    {% for comment in post.comments %}
+                        {% include 'modules/comment.twig' %}
+                    {% endfor %}
+
+                </ol>
+
+            </div>
+
+            {{ post.comment_form }}
+
+        {% endif %}
+
+    </main>
+
+    <aside class="aside" role="complementary">
+
+        {% include 'sidebar.twig' %}
+
+    </aside>
 
 {% endblock %}

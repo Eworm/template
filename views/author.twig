@@ -2,38 +2,26 @@
 
 {% block content %}
 
-    <div class="divider divider--content">
+    <main class="main" role="main">
 
-        <div class="core core--content">
+        <h1 class="main__header">
 
-            <div class="row">
+            {{ post.title }}
 
-                <main class="content col col--6" role="main">
+        </h1>
 
-                    <h1 class="content__header">
+        <div class="main__body">
 
-                        {{ post.title }}
-
-                    </h1>
-
-                    <div class="content__body">
-
-                        {{ post.content }}
-
-                    </div>
-
-                </main>
-
-                <aside class="sidebar col col--2" role="complementary">
-
-                    Aside
-
-                </aside>
-
-            </div>
+            {{ post.content }}
 
         </div>
 
-    </div>
+    </main>
+
+    <aside class="aside" role="complementary">
+
+        Aside
+
+    </aside>
 
 {% endblock %}

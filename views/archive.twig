@@ -2,96 +2,84 @@
 
 {% block content %}
 
-    <div class="divider divider--content">
+    <main class="main" role="main">
 
-        <div class="core core--content">
+        <h1 class="main__header">
 
-            <div class="row">
+            {{ post.title }}
 
-                <main class="content col col--5" role="main">
+        </h1>
 
-                    <h1 class="content__header">
+        <div class="main__body">
 
-                        {{ post.title }}
+            {% for item in posts %}
+                {% include 'modules/post-excerpt.twig' %}
+            {% endfor %}
 
-                    </h1>
+            <ul class="paging">
 
-                    <div class="content__body">
+                {% if pagination.prev %}
 
-                        {% for item in posts %}
-                            {% include 'modules/post-excerpt.twig' %}
-                        {% endfor %}
+                    <li class="paging__navigation paging__navigation--prev">
 
-                        <ul class="paging">
+                        <a href="{{pagination.prev.link}}">
+                            Vorige
+                        </a>
 
-                            {% if pagination.prev %}
+                    </li>
 
-                                <li class="paging__navigation paging__navigation--prev">
+                {% endif %}
 
-                                    <a href="{{pagination.prev.link}}">
-                                        Vorige
-                                    </a>
+                {% if pagination.next %}
 
-                                </li>
+                    <li class="paging__navigation paging__navigation--next">
 
-                            {% endif %}
+                        <a href="{{pagination.next.link}}">
+                            Volgende
+                        </a>
 
-                            {% if pagination.next %}
+                    </li>
 
-                                <li class="paging__navigation paging__navigation--next">
+                {% endif %}
 
-                                    <a href="{{pagination.next.link}}">
-                                        Volgende
-                                    </a>
+                {% for page in pagination.pages %}
 
-                                </li>
+                    {% if page.link %}
 
-                            {% endif %}
+                        <li class="paging__number">
 
-                            {% for page in pagination.pages %}
+                            <a href="{{page.link}}">
+                                {{ page.title }}
+                            </a>
 
-                                {% if page.link %}
+                        </li>
 
-                                    <li class="paging__number">
+                    {% else %}
 
-                                        <a href="{{page.link}}">
-                                            {{ page.title }}
-                                        </a>
+                        <li class="paging__number paging__number--active">
 
-                                    </li>
+                            <span>
+                                {{ page.title }}
+                            </span>
 
-                                {% else %}
+                        </li>
 
-                                    <li class="paging__number paging__number--active">
+                    {% endif %}
 
-                                        <span>
-                                            {{ page.title }}
-                                        </span>
+                </li>
 
-                                    </li>
+            {% endfor %}
 
-                                {% endif %}
-
-                            </li>
-
-                        {% endfor %}
-
-                    </ul>
-
-                </div>
-
-            </main>
-
-            <aside class="sidebar col col--3" role="complementary">
-
-                Aside
-
-            </aside>
-
-        </div>
+        </ul>
 
     </div>
 
-</div>
+</main>
+
+<aside class="aside" role="complementary">
+
+    Aside
+
+</aside>
 
 {% endblock %}

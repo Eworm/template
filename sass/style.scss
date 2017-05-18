@@ -10,42 +10,39 @@ Version: 1.0
 */
 
 
-
 // Theme variables
 @import 'import-now';                       // Normalize is imported via Bower
 @import 'theme/layout';                     // Margins/paddings
 @import 'theme/colors';                     // Colors
 @import 'theme/variables';                  // Global variables
-
+@import 'neat';                             //
 
 
 // Sass functions, extendables & mixins.
 @import 'sass-extras/functions';            // Useful functions
 @import 'theme/type';                       // Font variables
-@import 'sass-extras/responsive-grid';      // Custom grid functions. Use grid-variables to control
+@import 'sass-extras/neat';                 // Base grid variables for Neat
 @import 'sass-extras/extendables';          // Useful extensions
 @import 'sass-extras/mixins';               // Useful mixins
-
 
 
 // Base styles
 @import 'base/base';                        // Base styles
 
 
-
 // Styling of page sections that contain modules
 @import 'layout/header';                    // Site header
-@import 'layout/content';                   // Main content of the site
+@import 'layout/main';                      // Main content of the site
 @import 'layout/doormat';                   // Site doormat
 @import 'layout/footer';                    // Site footer
-
 
 
 // Styling of reusable, modular parts of the design
 @import 'modules/symbols';                   // Hiding the svg symbol sprite
 @import 'modules/mainmenu';                  // The main menu, probably the only nav
 @import 'modules/search-form';               // A search form
-@import 'modules/sidebar-section';           // A section item in a sidebar
+@import 'modules/aside';                     // Aside
+@import 'modules/aside-section';             // A section item in an aside
 @import 'modules/pagemenu';                  // Page submenu
 @import 'modules/tables';                    // Normal and responsive table styles
 @import 'modules/forms';                     // Input and button styles

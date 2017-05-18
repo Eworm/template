@@ -1,11 +1,19 @@
 // Site header
 .header {
-    margin-bottom: pt(2);
+    padding-top: pt(2);
+    padding-bottom: pt(2);
     border-bottom: 1px solid $border;
 
     @media (min-width: $mq--lap) {
-        margin-bottom: 0;
         background: $body-bg;
+    }
+
+    .col {
+        @include grid-column(12);
+
+        @media (min-width: $mq--lap) {
+            @include grid-column(12);
+        }
     }
 }
 
