@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html {{ site.language_attributes }}>
+    <head>
+
+        {% block head %}
+
+            <meta charset="{{ site.charset }}">
+
+            <title>{{ wp_title | default('Template') }}</title>
+
+            <meta name="language" content="nl">
+            <meta name="robots" content="index, follow">
+
+            <!-- Mobile viewport optimized: h5bp.com/viewport -->
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            <!-- iOS stuff -->
+            <meta name="apple-mobile-web-app-capable" content="yes">
+            <meta name="apple-mobile-web-app-status-bar-style" content="black">
+            <meta name="apple-mobile-web-app-title" content="{{ site.name }}">
+
+            <!-- Microsoft. Delete if not required -->
+            <meta http-equiv="cleartype" content="on">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+            <!-- Removing the highlight for mobile IE10. Stupid to make this a meta tag instead of a css property -->
+            <meta name="msapplication-tap-highlight" content="no">
+
+            <!-- Modern favicons: http://thenewcode.com/28/Making-And-Deploying-SVG-Favicons -->
+            <!-- Use http://realfavicongenerator.net/ for all other root icons -->
+            <link rel="icon" type="image/png" href="/favicon.png">
+            <link rel="mask-icon" href="/icon.svg" color="#000000">
+            <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+            <link type="text/plain" rel="author" href="/humans.txt">
+
+            <!-- Insert Google analytics here -->
+
+            {{ wp_head }}
+
+            <!-- Include the above the fold css and replace all relative urls with the theme url -->
+            <!-- Consider inlining all css if it's below 50kb, as used in AMP: https://www.ampproject.org/learn/how-amp-works/ -->
+            <style>
+                /*{{ include_critical_css('style-critical.css') }}*/
+            </style>
+
+            <!-- Visitors without javascript get the rest of the stylesheet the standard way -->
+            <noscript>
+                <link rel="stylesheet" href="{{ site.theme.link }}/style.css">
+            </noscript>
+
+            <!-- Script suggestion from google on how to insert the stylesheet -->
+            <script>
+
+                // So we can use the template url in javascript
+                var templateUrl = '{{ site.theme.link }}';
+
+                // Inlining labjs removes a request and adds only a few kb's to the html
+                {{ include_js('js/lab.min.js') }}
+
+                // Insert the remaining css as soon as possible
+                var cb = function() {
+
+                    var l = document.createElement('link');
+                    l.rel = 'stylesheet';
+                    l.href = '{{ site.theme.link }}/style.css';
+
+                    var h = document.getElementsByTagName('noscript')[0];
+                    h.parentNode.insertBefore(l, h);
+                };
+
+                var raf = false;
+                try {
+                    raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
+                } catch (e) {}
+
+                if (raf)
+                    raf(cb);
+                else
+                    window.addEventListener('load', cb);
+            </script>
+
+        {% endblock head %}
+
+    </head>
+
+    <body class="{{ body_class }}">
+
+        {{ include_svg('images/sprite.svg') }}
+
+        {% include 'layout/header.twig' %}
+
+        <section class="content">
+
+            <div class="center">
+
+                {% block content %}{% endblock %}
+
+            </div>
+
+        </section>
+
+        {% include 'layout/doormat.twig' %}
+
+        {% include 'layout/footer.twig' %}
+
+    </body>
+
+</html>
