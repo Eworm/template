@@ -17,7 +17,7 @@
         @include grid-column(8);
     }
 
-    &--full {
+    &--min-aside {
 
         @media (min-width: $mq--lap) {
             @include grid-column(12);
