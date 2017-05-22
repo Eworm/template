@@ -16,7 +16,7 @@ html {
 body {
     // Always good to define a background color on the body
     background: $body-bg;
-    font: #{$font-size}/#{$line-height} #{$font-family};
+    font: #{$font-size}/#{$line-height} #{$font-family--default};
     color: $body;
 }
 

@@ -184,7 +184,7 @@ gulp.task('critical', function() {
                 '.pagemenu a',
                 '.symbols',
                 '.row',
-                '.col',
+                '.grid-item',
                 '.divider'
             ]
         }))

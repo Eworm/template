@@ -2,7 +2,7 @@
 
 {% block content %}
 
-    <main class="main" role="main">
+    <main class="main main--plus-aside" role="main">
 
         <h1 class="main__header">
 
@@ -58,24 +58,22 @@
 
                     {% endif %}
 
-                </li>
+                {% endfor %}
 
-            {% endfor %}
+            </ul>
 
-        </ul>
+        </div>
 
-    </div>
+    </main>
 
-</main>
+    <aside class="aside" role="complementary">
 
-<aside class="aside" role="complementary">
+        <h3>
+            Sidebar
+        </h3>
 
-    <h3>
-        Sidebar
-    </h3>
+        {% include 'sidebar.twig' %}
 
-    {% include 'sidebar.twig' %}
-
-</aside>
+    </aside>
 
 {% endblock %}

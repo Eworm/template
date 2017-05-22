@@ -1,5 +1,5 @@
 // Main content on a page
-.content {
+.l-content {
     padding-top: pt(2);
     padding-bottom: pt(2);
 
@@ -14,13 +14,12 @@
     @include grid-column(12);
 
     @media (min-width: $mq--lap) {
-        @include grid-column(8);
     }
 
-    &--min-aside {
+    &--plus-aside {
 
         @media (min-width: $mq--lap) {
-            @include grid-column(12);
+            @include grid-column(8);
         }
     }
 

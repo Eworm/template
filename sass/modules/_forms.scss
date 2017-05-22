@@ -3,7 +3,7 @@ input {
     width: 100%;
     padding: pt(1);
     font-size: $font-size;
-    font-family: $font-family;
+    font-family: $font-family--default;
 
     @media (min-width: $mq--lap) {
         width: 50%;
@@ -19,7 +19,7 @@ textarea {
     height: pt(12);
     padding: pt(1);
     font-size: $font-size;
-    font-family: $font-family;
+    font-family: $font-family--default;
 }
 
 input[type="file"] {
