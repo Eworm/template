@@ -3,7 +3,7 @@ $neat-grid: (
     gutter: pt(2),
 );
 
-.center {
+.grid-item-container {
     @include grid-container;
 
     @media (min-width: $mq--lap) {
