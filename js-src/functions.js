@@ -29,10 +29,6 @@ $(document).ready(function() {
     });
 
 
-    // Commentform validation
-    $('#commentform').parsley();
-
-
     // Palm media queries
     var handleMatchMedia = function(mediaQuery) {
             if (mediaQuery.matches) {
