@@ -14,6 +14,75 @@
 
             {{ post.content }}
 
+            <form action="#body" method="post" id="js-contact-form" {% if email_sent %} class="form-sent" {% endif %}>
+
+                {{ nonce }}
+
+                <input type="hidden" name="submitted" id="submitted" value="true">
+
+                {% if email_sent %}
+
+                    <div id="form-message" class="succes">
+                        Je bericht is verzonden!
+                    </div>
+
+                {% endif %}
+
+                <fieldset>
+
+                    <div class="form-row">
+
+                        <label class="label" for="contact_name">
+                            Naam
+                        </label>
+                        <input type="text" id="contact_name" name="contact_name" required {% if contact_name %} value="{{ contact_name }}" {% endif %}>
+
+                        {% if contact_name_error %}
+                            Dit veld is verplicht
+                        {% endif %}
+
+                    </div>
+
+                    <div class="form-row">
+
+                        <label class="label" for="contact_contact">
+                            E-mailadres
+                        </label>
+                        <input type="email" id="contact_contact" name="contact_contact" required {% if contact_contact %} value="{{ contact_contact }}" {% endif %}>
+
+                        {% if contact_contact_error %}
+                            Dit veld is verplicht
+                        {% endif %}
+
+                    </div>
+
+                    <div class="form-row">
+
+                        <label class="label" for="contact_info">
+                            Je bericht
+                        </label>
+                        <textarea id="contact_info" name="contact_info" required>
+                            {% if contact_info %}{{ contact_info }}{% endif %}
+                        </textarea>
+
+                        {% if contact_info_error %}
+                            Dit veld is verplicht
+                        {% endif %}
+
+                    </div>
+
+                    <div class="form-row">
+
+                        <button type="submit" class="btn btn--primary">
+                            Verstuur bericht
+                        </button>
+
+                    </div>
+
+                </fieldset>
+
+            </form>
+
         </div>
 
     </main>
