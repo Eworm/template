@@ -4,7 +4,7 @@ $neat-grid: (
 );
 
 
-//
+// Generate grid container classes
 @for $i from 1 through 12 {
 
     .l-g#{$i} {
