@@ -2,76 +2,78 @@
 
 {% block content %}
 
-    <main class="main" role="main">
+    <div class="l-cs">
 
-        <h1 class="main__header">
+        <main role="main">
 
-            Zoekresultaten voor '{{ post.title }}'
+            <h1 class="main__header">
 
-        </h1>
+                Zoekresultaten voor '{{ post.title }}'
 
-        <div class="main__body">
+            </h1>
 
-            {% for item in posts %}
-                {% include 'modules/post-excerpt.twig' %}
-            {% endfor %}
+            <div class="main__body">
 
-            <ul class="paging">
+                {% for item in posts %}
+                    {% include 'modules/post-excerpt.twig' %}
+                {% endfor %}
 
-                {% if pagination.prev %}
+                <ul class="paging">
 
-                    <li class="paging__navigation paging__navigation--prev">
-                        <a href="{{pagination.prev.link}}">
-                            Vorige
-                        </a>
-                    </li>
+                    {% if pagination.prev %}
 
-                {% endif %}
-
-                {% if pagination.next %}
-
-                    <li class="paging__navigation paging__navigation--next">
-                        <a href="{{pagination.next.link}}">
-                            Volgende
-                        </a>
-                    </li>
-
-                {% endif %}
-
-                {% for page in pagination.pages %}
-
-                    {% if page.link %}
-
-                        <li class="paging__number">
-                            <a href="{{page.link}}">
-                                {{ page.title }}
+                        <li class="paging__navigation paging__navigation--prev">
+                            <a href="{{pagination.prev.link}}">
+                                Vorige
                             </a>
-                        </li>
-
-                    {% else %}
-
-                        <li class="paging__number paging__number--active">
-                            <span>
-                                {{ page.title }}
-                            </span>
                         </li>
 
                     {% endif %}
 
-                </li>
+                    {% if pagination.next %}
 
-            {% endfor %}
+                        <li class="paging__navigation paging__navigation--next">
+                            <a href="{{pagination.next.link}}">
+                                Volgende
+                            </a>
+                        </li>
 
-        </ul>
+                    {% endif %}
+
+                    {% for page in pagination.pages %}
+
+                        {% if page.link %}
+
+                            <li class="paging__number">
+                                <a href="{{page.link}}">
+                                    {{ page.title }}
+                                </a>
+                            </li>
+
+                        {% else %}
+
+                            <li class="paging__number paging__number--active">
+                                <span>
+                                    {{ page.title }}
+                                </span>
+                            </li>
+
+                        {% endif %}
+
+                    {% endfor %}
+
+                </ul>
+
+            </div>
+
+        </main>
+
+        <aside role="complementary">
+
+            Aside
+
+        </aside>
 
     </div>
-
-</main>
-
-<aside class="aside" role="complementary">
-
-    Aside
-
-</aside>
 
 {% endblock %}

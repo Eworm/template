@@ -9,18 +9,10 @@
     }
 }
 
-.main {
+main {
     margin-bottom: pt(2);
-    @include grid-column(12);
 
     @media (min-width: $mq--lap) {
-    }
-
-    &--plus-aside {
-
-        @media (min-width: $mq--lap) {
-            @include grid-column(8);
-        }
     }
 
     // Page title

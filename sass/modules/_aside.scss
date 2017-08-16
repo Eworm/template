@@ -1,7 +1,2 @@
-.aside {
-    @include grid-column(12);
-
-    @media (min-width: $mq--lap) {
-        @include grid-column(4);
-    }
+aside {
 }

@@ -2,103 +2,107 @@
 
 {% block content %}
 
-    <main class="main main--plus-aside" role="main">
+    <div class="l-cs">
 
-        <h1 class="main__header">
+        <main class="main main--plus-aside" role="main">
 
-            {{ post.title }}
+            <h1 class="main__header">
 
-        </h1>
+                {{ post.title }}
 
-        <div class="main__entry">
+            </h1>
 
-            {{ post.content }}
+            <div class="main__entry">
 
-            <form action="#body" method="post" id="js-contact-form" {% if email_sent %} class="form-sent" {% endif %}>
+                {{ post.content }}
 
-                {{ nonce }}
+                <form action="#body" method="post" id="js-contact-form" {% if email_sent %} class="form-sent" {% endif %}>
 
-                <input type="hidden" name="submitted" id="submitted" value="true">
+                    {{ nonce }}
 
-                {% if email_sent %}
+                    <input type="hidden" name="submitted" id="submitted" value="true">
 
-                    <div id="form-message" class="succes">
-                        Je bericht is verzonden!
-                    </div>
+                    {% if email_sent %}
 
-                {% endif %}
+                        <div id="form-message" class="succes">
+                            Je bericht is verzonden!
+                        </div>
 
-                <fieldset>
+                    {% endif %}
 
-                    <div class="form-row">
+                    <fieldset>
 
-                        <label class="label" for="contact_name">
-                            Naam
-                        </label>
-                        <input type="text" id="contact_name" name="contact_name" required {% if contact_name %} value="{{ contact_name }}" {% endif %}>
+                        <div class="form-row">
 
-                        {% if contact_name_error %}
-                            Dit veld is verplicht
-                        {% endif %}
+                            <label class="label" for="contact_name">
+                                Naam
+                            </label>
+                            <input type="text" id="contact_name" name="contact_name" required {% if contact_name %} value="{{ contact_name }}" {% endif %}>
 
-                    </div>
+                            {% if contact_name_error %}
+                                Dit veld is verplicht
+                            {% endif %}
 
-                    <div class="form-row">
+                        </div>
 
-                        <label class="label" for="contact_contact">
-                            E-mailadres
-                        </label>
-                        <input type="email" id="contact_contact" name="contact_contact" required {% if contact_contact %} value="{{ contact_contact }}" {% endif %}>
+                        <div class="form-row">
 
-                        {% if contact_contact_error %}
-                            Dit veld is verplicht
-                        {% endif %}
+                            <label class="label" for="contact_contact">
+                                E-mailadres
+                            </label>
+                            <input type="email" id="contact_contact" name="contact_contact" required {% if contact_contact %} value="{{ contact_contact }}" {% endif %}>
 
-                    </div>
+                            {% if contact_contact_error %}
+                                Dit veld is verplicht
+                            {% endif %}
 
-                    <div class="form-row">
+                        </div>
 
-                        <label class="label" for="contact_info">
-                            Je bericht
-                        </label>
-                        <textarea id="contact_info" name="contact_info" required>
-                            {% if contact_info %}{{ contact_info }}{% endif %}
-                        </textarea>
+                        <div class="form-row">
 
-                        {% if contact_info_error %}
-                            Dit veld is verplicht
-                        {% endif %}
+                            <label class="label" for="contact_info">
+                                Je bericht
+                            </label>
+                            <textarea id="contact_info" name="contact_info" required>
+                                {% if contact_info %}{{ contact_info }}{% endif %}
+                            </textarea>
 
-                    </div>
+                            {% if contact_info_error %}
+                                Dit veld is verplicht
+                            {% endif %}
 
-                    <div class="form-row">
+                        </div>
 
-                        <button type="submit" class="btn btn--primary">
-                            Verstuur bericht
-                        </button>
+                        <div class="form-row">
 
-                    </div>
+                            <button type="submit" class="btn btn--primary">
+                                Verstuur bericht
+                            </button>
 
-                </fieldset>
+                        </div>
 
-            </form>
+                    </fieldset>
 
-        </div>
+                </form>
 
-    </main>
+            </div>
 
-    <aside class="aside" role="complementary">
+        </main>
 
-        <script>
-            var company_address = [
-                {
-                    location: "Kerklaan 30b, Haren"
-                }
-            ];
-        </script>
+        <aside role="complementary">
 
-        <div id="js-map_address" style="width: 100%; height: 400px;"></div>
+            <script>
+                var company_address = [
+                    {
+                        location: "Kerklaan 30b, Haren"
+                    }
+                ];
+            </script>
 
-    </aside>
+            <div id="js-map_address" style="width: 100%; height: 400px;"></div>
+
+        </aside>
+
+    </div>
 
 {% endblock %}

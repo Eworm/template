@@ -3,7 +3,25 @@ $neat-grid: (
     gutter: pt(2),
 );
 
-.grid-item-container {
+
+//
+@for $i from 1 through 12 {
+
+    .l-g#{$i} {
+
+        > * {
+            @include grid-column(12);
+
+            @media (min-width: $mq--lap) {
+                @include grid-column($i);
+            }
+        }
+    }
+}
+
+
+// Container element
+.container {
     @include grid-container;
 
     @media (min-width: $mq--lap) {
@@ -12,5 +30,39 @@ $neat-grid: (
         margin: 0 auto;
         padding-right: 0;
         padding-left: 0;
+    }
+}
+
+
+// Single contentblock grid pattern
+.l-c {
+
+    > * {
+        @include grid-column(12);
+
+        @media (min-width: $mq--lap) {
+            @include grid-column(8);
+        }
+    }
+}
+
+
+// Content + sidebar
+.l-cs {
+
+    > *:nth-child(1) {
+        @include grid-column(12);
+
+        @media (min-width: $mq--lap) {
+            @include grid-column(8);
+        }
+    }
+
+    > *:nth-child(2) {
+        @include grid-column(12);
+
+        @media (min-width: $mq--lap) {
+            @include grid-column(4);
+        }
     }
 }
