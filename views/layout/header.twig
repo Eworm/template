@@ -2,42 +2,44 @@
 
     <div class="container">
 
-        <div class="grid-item">
+        <div class="l-g12">
 
-            <a href="{{ site.link }}" class="logo" rel="home" title="Terug naar de homepage">
+            <div>
 
-                <svg class="logo__img">
-                    <title>
-                        {{ site.name }}
-                    </title>
-                    <use xlink:href="#logo"/>
-                </svg>
+                <a href="{{ site.link }}" class="logo" rel="home" title="Terug naar de homepage">
 
-            </a>
+                    <svg class="logo__img">
+                        <title>
+                            {{ site.name }}
+                        </title>
+                        <use xlink:href="#logo"/>
+                    </svg>
 
-            <p class="cp">
+                </a>
 
-                {{ site.description }}
+                <p class="cp">
 
-            </p>
+                    {{ site.description }}
 
-            <nav class="mainmenu" role="navigation">
+                </p>
 
-                <ul class="main-menu">
+                <nav class="mainmenu" role="navigation">
 
-                    {% for item in menu.get_items %}
+                    <ul class="main-menu">
 
-                        <li class="nav-main-item {{item.classes | join(' ')}}">
+                        {% for item in menu.get_items %}
 
-                            <a class="nav-main-link" href="{{item.link}}">{{item.title}}</a>
+                            <li class="nav-main-item {{item.classes | join(' ')}}">
 
-                            {% if item.get_children %}
+                                <a class="nav-main-link" href="{{item.link}}">{{item.title}}</a>
 
-                                <ul class="nav-drop">
+                                {% if item.get_children %}
 
-                                    {% for child in item.get_children %}
+                                    <ul class="nav-drop">
 
-                                        <!--
+                                        {% for child in item.get_children %}
+
+                                            <!--
                             <li class="nav-drop-item">
 
                                 <a href="{{child.link}}">{{child.title}}</a>
@@ -45,19 +47,21 @@
                             </li>
 -->
 
-                                    {% endfor %}
+                                        {% endfor %}
 
-                                </ul>
+                                    </ul>
 
-                            {% endif %}
+                                {% endif %}
 
-                        </li>
+                            </li>
 
-                    {% endfor %}
+                        {% endfor %}
 
-                </ul>
+                    </ul>
 
-            </nav>
+                </nav>
+
+            </div>
 
         </div>
 

@@ -7,14 +7,6 @@
     @media (min-width: $mq--lap) {
         background: $body-bg;
     }
-
-    .grid-item {
-        @include grid-column(12);
-
-        @media (min-width: $mq--lap) {
-            @include grid-column(12);
-        }
-    }
 }
 
 

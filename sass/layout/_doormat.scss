@@ -3,12 +3,4 @@
     padding-top: pt(2);
     padding-bottom: pt(2);
     border-top: 1px solid $border;
-
-    .grid-item {
-        @include grid-column(12);
-
-        @media (min-width: $mq--lap) {
-            @include grid-column(12);
-        }
-    }
 }
