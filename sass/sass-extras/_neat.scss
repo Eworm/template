@@ -25,7 +25,6 @@ $neat-grid: (
     @include grid-container;
 
     @media (min-width: $mq--lap) {
-        width: $site--width;
         max-width: $site--max-width;
         margin: 0 auto;
         padding-right: 0;
