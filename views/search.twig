@@ -2,7 +2,7 @@
 
 {% block content %}
 
-    <div class="l-cs">
+    <div class="l-g8">
 
         <main role="main">
 
@@ -18,61 +18,13 @@
                     {% include 'modules/post-excerpt.twig' %}
                 {% endfor %}
 
-                <ul class="paging">
-
-                    {% if pagination.prev %}
-
-                        <li class="paging__navigation paging__navigation--prev">
-                            <a href="{{pagination.prev.link}}">
-                                Vorige
-                            </a>
-                        </li>
-
-                    {% endif %}
-
-                    {% if pagination.next %}
-
-                        <li class="paging__navigation paging__navigation--next">
-                            <a href="{{pagination.next.link}}">
-                                Volgende
-                            </a>
-                        </li>
-
-                    {% endif %}
-
-                    {% for page in pagination.pages %}
-
-                        {% if page.link %}
-
-                            <li class="paging__number">
-                                <a href="{{page.link}}">
-                                    {{ page.title }}
-                                </a>
-                            </li>
-
-                        {% else %}
-
-                            <li class="paging__number paging__number--active">
-                                <span>
-                                    {{ page.title }}
-                                </span>
-                            </li>
-
-                        {% endif %}
-
-                    {% endfor %}
+                {% include 'modules/pagination.twig' %}
 
                 </ul>
 
             </div>
 
         </main>
-
-        <aside role="complementary">
-
-            Aside
-
-        </aside>
 
     </div>
 

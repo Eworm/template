@@ -1,0 +1,45 @@
+<ul class="paging">
+
+    {% if pagination.prev %}
+
+        <li class="paging__navigation paging__navigation--prev">
+            <a href="{{pagination.prev.link}}">
+                Vorige
+            </a>
+        </li>
+
+    {% endif %}
+
+    {% if pagination.next %}
+
+        <li class="paging__navigation paging__navigation--next">
+            <a href="{{pagination.next.link}}">
+                Volgende
+            </a>
+        </li>
+
+    {% endif %}
+
+    {% for page in pagination.pages %}
+
+        {% if page.link %}
+
+            <li class="paging__number">
+                <a href="{{page.link}}">
+                    {{ page.title }}
+                </a>
+            </li>
+
+        {% else %}
+
+            <li class="paging__number paging__number--active">
+                <span>
+                    {{ page.title }}
+                </span>
+            </li>
+
+        {% endif %}
+
+    {% endfor %}
+
+</ul>

@@ -4,51 +4,20 @@
     padding: pt(2);
     display: none;
     clear: both;
-    
-    
-    
-    &__container__button {
-        display: none;
-    
-        @media (min-width: $mq--lap) {
-            width: 30%;
-            display: block;
-            float: left;
-        }
-    }
-    
-    
-    
+
+
     // Search form fieldset
     &__container {
         margin: 0;
         padding: 0;
         line-height: 40px;
     }
-    
-    
-    
+
+
     // Hiding the label, but not for screenreaders
     &__container__label {
         @include screenreader--hide;
     }
-
-
-    // When in nav
-    nav & {
-        display: block;
-        border-top: 1px solid $border;
-        background: rgba($nav-bg, .96);
-    }
-
-
-
-    // When in content
-    .main & {
-        padding: 0;
-        display: block;
-    }
-
 
 
     // When in header
@@ -63,7 +32,6 @@
             background: transparent;
             text-align: left;
         }
-
 
 
         // The search input
