@@ -47,3 +47,7 @@ Timber (<https://www.upstatement.com/timber/>) is an awesome way of making your 
 
 - Classes and id's necessary for javascript should start with js-. So don't remove or edit them in this html.
 - Please use BEM for classnames: <http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/>
+
+# The php side of things
+
+All php functions are split in seperate files (with handy filenames) and are included in /includes. 
