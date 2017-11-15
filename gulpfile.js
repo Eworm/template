@@ -1,33 +1,33 @@
-var gulp = require('gulp'),
-    // Get packages from package.json
-    plugins = require('gulp-load-plugins')(),
-    critical = require('critical').stream;
+var gulp                = require('gulp'),
+    plugins             = require('gulp-load-plugins')(),
+    neat                = require('bourbon-neat').includePaths,
+    critical            = require('critical').stream;
 
 
 
 // Source paths
 var src_paths = {
-    css: 'sass/**/*.scss',
-    autoprefixer: '*.css',
-    sprite: 'images-src/sprite/**/*.svg',
-    scripts: ['bower_components/parsleyjs/dist/parsley.js',
-        'bower_components/hoverintent/jquery.hoverIntent.js',
-        'bower_components/blazy/blazy.js',
-        'js-src/functions.js'
-    ],
-    labjs: ['bower_components/labjs/LAB.min.js',
-        'js-src/lab-loader.js'
-    ],
-    javascript: 'js-src/*.*'
+    css:                'sass/**/*.scss',
+    autoprefixer:       '*.css',
+    sprite:             'images-src/sprite/**/*.svg',
+    scripts:            ['node_modules/parsleyjs/dist/parsley.js',
+                            'node_modules/parsleyjs/dist/i18n/nl.js',
+                            'node_modules/blazy/blazy.js',
+                            'js-src/functions.js'
+                        ],
+    labjs:              ['node_modules/labjs/LAB.min.js',
+                            'js-src/lab-loader.js'
+                        ],
+    javascript:         'js-src/*.*'
 };
 
 
 
 // Destination paths
 var dest_paths = {
-    css: '.',
-    images: 'images',
-    javascript: 'js'
+    css:                '.',
+    images:             'images',
+    javascript:         'js'
 };
 
 
@@ -42,7 +42,7 @@ gulp.task('css', function() {
 
         .pipe(plugins.sass({
             outputStyle: 'compressed',
-            includePaths: ['bower_components/normalize-scss/sass/normalize', 'bower_components/neat/core/']
+            includePaths: ['node_modules/normalize-scss/sass/normalize', neat]
         }))
 
         .pipe(plugins.autoprefixer({

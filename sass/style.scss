@@ -11,11 +11,11 @@ Version: 1.0
 
 
 // Theme variables
-@import 'import-now';                       // Normalize is imported via Bower
+@import 'import-now';                       // Neat path is defined in the Gulp file (line 45)
 @import 'theme/layout';                     // Margins/paddings
 @import 'theme/colors';                     // Colors
 @import 'theme/variables';                  // Global variables
-@import 'neat';                             //
+@import 'neat';                             // Neat path is defined in the Gulp file (line 45)
 
 
 // Sass functions, extendables & mixins.

@@ -2,18 +2,15 @@
     "name": "HTML-template",
     "version": "1.0.0",
     "private": true,
-    "authors": [
-        "Wout Mager"
-    ],
     "description": "blabla",
     "homepage": "http://www.woutmager.nl",
     "devDependencies": {
         "critical": "^0.7.3",
         "gulp": "^3.9.0",
         "gulp-autoprefixer": "4.0.0",
+        "gulp-clean-css": "^3.4.1",
         "gulp-concat": "^2.6.1",
         "gulp-cssnano": "^2.1.2",
-        "gulp-clean-css": "^3.4.1",
         "gulp-filter": "^5.0.0",
         "gulp-livereload": "^3.8.1",
         "gulp-load-plugins": "^1.5.0",
@@ -28,5 +25,16 @@
         "gulp-watch": "^4.3.11",
         "tiny-lr": "1.0.5",
         "vinyl": "^0.4.6"
+    },
+    "main": "index.js",
+    "repository": "git@github.com:Eworm/template.git",
+    "author": "Wout <wout@woutmager.nl>",
+    "license": "MIT",
+    "dependencies": {
+        "LABjs": "https://github.com/getify/LABjs",
+        "blazy": "^1.8.2",
+        "bourbon-neat": "2.1.0",
+        "normalize-scss": "^7.0.0",
+        "parsleyjs": "^2.8.0"
     }
 }

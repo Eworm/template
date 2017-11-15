@@ -1,4 +1,4 @@
-This project uses open-source software to work more efficient. You'll need to install some software to start working with this project. I won't go into all details about how to use this software, other sites are better at this than I am.
+This project uses open-source software to work more efficient. You'll need to install some software to start working with this project. I won't go into all details about how to use this software. This readme should be efficient to get going.
 
 # Necessary global software
 
@@ -6,21 +6,18 @@ This project uses open-source software to work more efficient. You'll need to in
 
 **2:** Gulp: <http://gulpjs.com/>
 
-**3:** Bower: <http://bower.io/>
+**3:** Yarn: <https://yarnpkg.com/lang/en/>
 
 **4:** SASS: <http://sass-lang.com/install>
 
 # After installing the above software you need to install some dependencies. These files aren't in the repo to keep it clean. These dependencies are installed in the project directory
 
-**5:** Gulp modules `npm install` or `sudo npm install`
+**5:** Add dependencies: `yarn install`
 
-**6:** Bower dependencies: `bower install`
-
-**7:** Add these lines to your global gitignore:
+**6:** Add these lines to your global gitignore:
 
 ```
 node_modules
-bower_components
 .sass-cache
 ```
 

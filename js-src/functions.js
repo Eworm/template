@@ -11,24 +11,6 @@ $(document).ready(function() {
     }, 50);
 
 
-    // Show initial password
-    /*
-        $('#LoginPassword').hideShowPassword(
-        {
-            show: true
-        });
-    */
-    // Toggle password
-    $('#show-password').on('change', function() {
-        // When the '#show-password' checkbox changes its value,
-        // set the visibility of the password field to whatever
-        // its 'checked' attribute is.
-        $('#LoginPassword').hideShowPassword(
-            $(this).prop('checked')
-        );
-    });
-
-
     // Palm media queries
     var handleMatchMedia = function(mediaQuery) {
             if (mediaQuery.matches) {
