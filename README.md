@@ -41,7 +41,7 @@ The easiest way to start is to navigate to the project dir and run `gulp` in a t
 
 ## Timber
 
-Timber (<https://www.upstatement.com/timber/>) is an awesome way of making your html cleaner and easier to read. It uses the Twig template engine to write html seperate from the php files.
+Timber (<https://www.upstatement.com/timber/>) is an awesome way of making your html cleaner and easier to read. It uses the Twig template engine to write html seperate from the php files. Timber is included in the required plugins list, so you'll see a message asking you to install it.
 
 ## Final words
 
