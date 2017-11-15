@@ -12,7 +12,7 @@ This project uses open-source software to work more efficient. You'll need to in
 
 # After installing the above software you need to install some dependencies. These files aren't in the repo to keep it clean. These dependencies are installed in the project directory
 
-**5:** Add dependencies: `yarn install`
+**5:** Add dependencies: `yarn install`. This command adds a node_modules directory which you _really_ should gitignore.
 
 **6:** Add these lines to your global gitignore:
 
@@ -50,4 +50,4 @@ Timber (<https://www.upstatement.com/timber/>) is an awesome way of making your 
 
 # The php side of things
 
-All php functions are split in seperate files (with handy filenames) and are included in /includes. 
+All php functions are split in seperate files (with handy filenames) and are included in /includes.
