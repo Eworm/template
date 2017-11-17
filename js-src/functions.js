@@ -11,6 +11,17 @@ $(document).ready(function() {
     }, 50);
 
 
+    // Form validation in 6 lines
+    // https://daverupert.com/2017/11/happier-html5-forms/
+    const inputs = document.querySelectorAll('input, select, textarea');
+
+    inputs.forEach( (input) => {
+        input.addEventListener('invalid', (event) => {
+            input.classList.add('error');
+        }, false);
+    })
+
+
     // Palm media queries
     var handleMatchMedia = function(mediaQuery) {
             if (mediaQuery.matches) {
