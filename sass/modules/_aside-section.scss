@@ -44,7 +44,7 @@
     &__header {
         margin: 0 0 pt(1);
         font-weight: bold;
-        font-size: $font-size;
+        font-size: $fs-def;
     
         @media (min-width: $mq--lap) {
         }

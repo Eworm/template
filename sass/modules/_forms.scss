@@ -2,8 +2,8 @@
 input {
     width: 100%;
     padding: pt(1);
-    font-size: $font-size;
-    font-family: $font-family--default;
+    font-size: $fs-def;
+    font-family: $ff--def;
 
     @media (min-width: $mq--lap) {
         width: 50%;
@@ -18,8 +18,8 @@ textarea {
     width: 100%;
     height: pt(12);
     padding: pt(1);
-    font-size: $font-size;
-    font-family: $font-family--default;
+    font-size: $fs-def;
+    font-family: $ff--def;
 }
 
 input[type="file"] {
@@ -94,7 +94,7 @@ fieldset {
     // Form field explanation. Using a small element is preferrable
     .input-exp {
         display: block;
-        font-size: $font-meta;
+        font-size: $fs-meta;
     }
 }
 
@@ -124,7 +124,7 @@ label,
 
 // Required style
 .req {
-    font-size: $font-size;
+    font-size: $fs-def;
     color: $mute;
 }
 

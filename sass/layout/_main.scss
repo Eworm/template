@@ -20,7 +20,7 @@ main {
 .main__header {
     margin: 0 0 pt(2);
     font-weight: normal;
-    font-size: $header-1;
+    font-size: $h1;
 
     @media (min-width: $mq--lap) {
         margin-bottom: pt(4);
@@ -47,22 +47,22 @@ main {
 
     h2 {
         margin: 0 0 pt(2);
-        font-size: $header-2;
+        font-size: $h2;
     }
 
     h3 {
         margin: 0 0 pt(1);
-        font-size: $header-3;
+        font-size: $h3;
     }
 
     h4 {
         margin: 0 0 pt(1);
-        font-size: $header-4;
+        font-size: $h4;
     }
 
     h5 {
         margin: 0 0 pt(1);
-        font-size: $font-size;
+        font-size: $fs-def;
     }
 
     p,

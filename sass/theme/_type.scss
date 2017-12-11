@@ -12,28 +12,22 @@
 }
 
 
-// Font sizes & other related stuff
-// Add new ones when appropriate
-$line-height: 1.8;
-$font-size: pt(2);
-$font-meta: pt(1.5);
+// Font sizes & related stuff
+$lh: 1.8;                        // Default line height
+$fs-def: pt(2);                  // Font size - default
+$fs-meta: pt(1.5);               // Font size - meta
 
 
-// Define font variables here, use later on
-$sans-serif: Arial, Verdana, sans-serif;
-$lato--regular: 'Lato', Arial, Verdana, sans-serif;
-
-
-// Define font families here using the above variables
-$font-family--default: $lato--regular;
+// Define font families here
+$ff--def: 'Lato', Arial, Verdana, sans-serif;        // Default font family
 
 
 // Header sizes
-$header-1: 3 * $font-size;
-$header-2: 2 * $font-size;
-$header-3: 1.5 * $font-size;
-$header-4: 1 * $font-size;
-$header-5: 1 * $font-size;
+$h1: 3 * $fs-def;
+$h2: 2 * $fs-def;
+$h3: 1.5 * $fs-def;
+$h4: 1 * $fs-def;
+$h5: 1 * $fs-def;
 
 h1,
 h2,
