@@ -14,8 +14,8 @@
 
 // Font sizes & related stuff
 $lh: 1.8;                        // Default line height
-$fs-def: pt(2);                  // Font size - default
-$fs-meta: pt(1.5);               // Font size - meta
+$fs-def: 1rem;                   // Font size - default
+$fs-meta: .75rem;                // Font size - meta
 
 
 // Define font families here
@@ -23,11 +23,11 @@ $ff--def: 'Lato', Arial, Verdana, sans-serif;        // Default font family
 
 
 // Header sizes
-$h1: 3 * $fs-def;
-$h2: 2 * $fs-def;
-$h3: 1.5 * $fs-def;
-$h4: 1 * $fs-def;
-$h5: 1 * $fs-def;
+$h1: 3rem;
+$h2: 2rem;
+$h3: 1.5rem;
+$h4: 1rem;
+$h5: 1rem;
 
 h1,
 h2,
