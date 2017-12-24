@@ -1,3 +1,5 @@
+// Neat grid docs:
+// https://neat.bourbon.io/docs/latest/
 $neat-grid: (
     columns: 12,
     gutter: pt(2),
@@ -33,7 +35,7 @@ $neat-grid: (
 }
 
 
-// Single contentblock grid pattern
+// Layout block: single contentblock
 .l-c {
 
     > * {
@@ -46,7 +48,7 @@ $neat-grid: (
 }
 
 
-// Content + sidebar
+// Layout block: content + sidebar
 .l-cs {
 
     > *:nth-child(1) {
