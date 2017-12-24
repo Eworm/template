@@ -1,5 +1,6 @@
 // Convert px to em
-@function em($pixels, $context: $fs-def) {
+// Only use this for media queries
+@function em($pixels, $context: 16px) {
     @if (unitless($pixels)) {
         $pixels: $pixels * 1px;
     }
@@ -14,7 +15,7 @@
 
 // Multiplier function for the point grid
 @function pt($multiplier) {
-    @return $pt--base * $multiplier;
+    @return 1rem * $multiplier;
 }
 
 
