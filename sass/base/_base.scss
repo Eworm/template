@@ -27,6 +27,7 @@ body {
 a {
     color: $link;
     text-decoration: underline;
+    text-decoration-skip: auto;
 
     &:hover,
     &:focus {
