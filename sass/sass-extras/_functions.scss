@@ -14,6 +14,9 @@
 
 
 // Multiplier function for the point grid
+// I'm using px instead of rem
+// Here's why:
+// https://mindtheshift.wordpress.com/2015/04/02/r-i-p-rem-viva-css-reference-pixel/
 @function pt($multiplier) {
     @return $pt--base * $multiplier;
 }
