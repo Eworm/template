@@ -16,13 +16,13 @@
 
             <a href="{{ item.link }}" title="Directe link naar {{ item.title }}">
 
-                <img src="{{ item.thumbnail.src | resize(100, 100) }}" class="post-thumbnail" alt="{{ item.thumbnail.alt }}">
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ item.thumbnail.src | resize(100, 100) }}" class="post-thumbnail b-lazy" alt="{{ item.thumbnail.alt }}">
 
             </a>
 
         {% endif %}
 
-        {{ item.get_preview(50, false, "") }}
+        {{ item.preview(50, false, "") }}
 
     </div>
 
