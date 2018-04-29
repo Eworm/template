@@ -13,6 +13,7 @@ var src_paths = {
     scripts:            ['node_modules/parsleyjs/dist/parsley.js',
                             'node_modules/parsleyjs/dist/i18n/nl.js',
                             'node_modules/blazy/blazy.js',
+                            'node_modules/hyperform/hyperform.js',
                             'js-src/functions.js'
                         ],
     labjs:              ['node_modules/labjs/LAB.min.js',

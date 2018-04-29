@@ -34,6 +34,7 @@
         "LABjs": "https://github.com/getify/LABjs",
         "blazy": "^1.8.2",
         "bourbon-neat": "2.1.0",
+        "hyperform": "^0.9.9",
         "normalize-scss": "^7.0.0",
         "parsleyjs": "^2.8.0"
     }
