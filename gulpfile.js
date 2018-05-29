@@ -14,6 +14,7 @@ var src_paths = {
                             'node_modules/parsleyjs/dist/i18n/nl.js',
                             'node_modules/blazy/blazy.js',
                             'node_modules/hyperform/hyperform.js',
+                            'node_modules/easy-autocomplete/dist/jquery.easy-autocomplete.js',
                             'js-src/functions.js'
                         ],
     labjs:              ['node_modules/labjs/LAB.min.js',

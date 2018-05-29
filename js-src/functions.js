@@ -1,6 +1,30 @@
 $(document).ready(function() {
 
 
+    // Autocomplete
+    var options = {
+        url: function(phrase) {
+    		return ajaxurl + '?action=wm_autocomplete&phrase=' + phrase;
+    	},
+        getValue: "title",
+        template: {
+            type: "links",
+            fields: {
+                link: "permalink"
+            }
+        },
+    	list: {
+    		match: {
+    			enabled: true
+    		},
+            sort: {
+    			enabled: true
+    		}
+    	}
+    };
+    $('#js-searchform').easyAutocomplete(options);
+
+
     // Lazy loading: add b-lazy class to the image
     var bLazy = new Blazy();
 
