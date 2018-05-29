@@ -2,6 +2,7 @@
 .searchform {
     width: 100%;
     padding: pt(2);
+    position: relative;
     display: none;
     clear: both;
 
@@ -27,7 +28,7 @@
             width: 30%;
             padding: 0;
             display: block;
-            float: right;
+            float: left;
             clear: none;
             background: transparent;
             text-align: left;

@@ -7,7 +7,7 @@ function wm_autocomplete() {
 
     $args = array(
         "post_type" => array(
-            "posts"
+            "post"
         ),
         "s" => $phrase
     );

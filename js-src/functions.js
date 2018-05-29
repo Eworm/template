@@ -4,16 +4,19 @@ $(document).ready(function() {
     // Autocomplete
     var options = {
         url: function(phrase) {
+            console.log(ajaxurl + '?action=wm_autocomplete&phrase=' + phrase);
     		return ajaxurl + '?action=wm_autocomplete&phrase=' + phrase;
     	},
-        getValue: "title",
+        getValue: 'title',
+        requestDelay: 500,
         template: {
-            type: "links",
+            type: 'links',
             fields: {
-                link: "permalink"
+                link: 'permalink'
             }
         },
     	list: {
+            maxNumberOfElements: 10,
     		match: {
     			enabled: true
     		},
@@ -22,17 +25,11 @@ $(document).ready(function() {
     		}
     	}
     };
-    $('#js-searchform').easyAutocomplete(options);
+    $('#searchform__field').easyAutocomplete(options);
 
 
     // Lazy loading: add b-lazy class to the image
     var bLazy = new Blazy();
-
-
-    // Animation class
-    setTimeout(function() {
-        $('html').addClass('html--animation');
-    }, 50);
 
 
     // Form validation in 6 lines

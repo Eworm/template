@@ -62,6 +62,7 @@
 
                 // So we can use the template url in javascript
                 var templateUrl = '{{ site.theme.link }}';
+                var ajaxurl = "{{ site.url }}/wp-admin/admin-ajax.php";
 
                 // Inlining labjs removes a request and adds only a few kb's to the html
                 {{ include_js('js/lab.min.js') }}

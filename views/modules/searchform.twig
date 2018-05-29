@@ -1,10 +1,13 @@
-<form method="get" id="searchform" action="/">
+<form role="search" method="get" class="searchform" action="{{ site.link }}">
 
-    <fieldset>
+    <fieldset class="searchform__container">
 
-        <input type="search" value="{{ searchterm }}" name="s" id="js-searchform" class="">
+        <label for="searchform__field" class="searchform__container__label">
+            Zoeken
+        </label>
 
-        <button type="submit" class="btn">
+        <input type="search" class="searchform__field" id="searchform__field" placeholder="Zoek in de site" value="" name="s">
+        <button type="submit" class="searchform__field__submit">
             Zoeken
         </button>
 
