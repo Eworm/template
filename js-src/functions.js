@@ -1,209 +1,123 @@
 $(document).ready(function() {
 
+// Lazy loading: add b-lazy class to the image
+var bLazy = new Blazy();
 
-    // Autocomplete
-    var options = {
-        url: function(phrase) {
-            console.log(ajaxurl + '?action=wm_autocomplete&phrase=' + phrase);
-    		return ajaxurl + '?action=wm_autocomplete&phrase=' + phrase;
-    	},
-        getValue: 'title',
-        requestDelay: 500,
-        template: {
-            type: 'links',
-            fields: {
-                link: 'permalink'
-            }
+// Autocomplete
+var options = {
+    url: function(phrase) {
+        console.log(ajaxurl + '?action=wm_autocomplete&phrase=' + phrase);
+        return ajaxurl + '?action=wm_autocomplete&phrase=' + phrase;
+    },
+    getValue: 'title',
+    requestDelay: 500,
+    template: {
+        type: 'links',
+        fields: {
+            link: 'permalink'
+        }
+    },
+    list: {
+        maxNumberOfElements: 10,
+        match: {
+            enabled: true
         },
-    	list: {
-            maxNumberOfElements: 10,
-    		match: {
-    			enabled: true
-    		},
-            sort: {
-    			enabled: true
-    		}
-    	}
-    };
-    $('#searchform__field').easyAutocomplete(options);
+        sort: {
+            enabled: true
+        }
+    }
+};
+$('#searchform__field').easyAutocomplete(options);
 
+// Palm media queries
+var handleMatchMedia = function(mediaQuery) {
+        if (mediaQuery.matches) {
 
-    // Lazy loading: add b-lazy class to the image
-    var bLazy = new Blazy();
+            // Load mobile stuff
+            console.log('Below 480px');
 
+        } else {
 
-    // Form validation in 6 lines
-    // https://daverupert.com/2017/11/happier-html5-forms/
-    // const inputs = document.querySelectorAll('input, select, textarea');
-    //
-    // inputs.forEach( (input) => {
-    //     input.addEventListener('invalid', (event) => {
-    //         input.classList.add('error');
-    //     }, false);
-    // })
+            //load desktop stuff
+            console.log('Above 480px');
+        }
+    },
+    mqlPalm = window.matchMedia('all and (max-width: 30em)');
 
+handleMatchMedia(mqlPalm); //Execute on load
+mqlPalm.addListener(handleMatchMedia); //Execute each time media query will be reached
 
-    // Palm media queries
-    var handleMatchMedia = function(mediaQuery) {
-            if (mediaQuery.matches) {
+// Lap media queries
+var handleMatchMedia = function(mediaQuery) {
+        if (mediaQuery.matches) {
 
-                // Load mobile stuff
-                console.log('Below 480px');
+            // Load mobile stuff
+            console.log('Below 750px');
 
-            } else {
+        } else {
 
-                //load desktop stuff
-                console.log('Above 480px');
-            }
-        },
-        mqlPalm = window.matchMedia('all and (max-width: 30em)');
+            //load desktop stuff
+            console.log('Above 750px');
+        }
+    },
+    mqlLap = window.matchMedia('all and (max-width: 46.875em)');
 
-    handleMatchMedia(mqlPalm); //Execute on load
-    mqlPalm.addListener(handleMatchMedia); //Execute each time media query will be reached
+handleMatchMedia(mqlLap); //Execute on load
+mqlLap.addListener(handleMatchMedia); //Execute each time media query will be reached
 
+// Desk media queries
+var handleMatchMedia = function(mediaQuery) {
+        if (mediaQuery.matches) {
 
-    // Lap media queries
-    var handleMatchMedia = function(mediaQuery) {
-            if (mediaQuery.matches) {
+            // Load mobile stuff
+            console.log('Below 970px');
 
-                // Load mobile stuff
-                console.log('Below 750px');
+        } else {
 
-            } else {
+            //load desktop stuff
+            console.log('Above 970px');
+        }
+    },
+    mqlDesk = window.matchMedia('all and (max-width: 60.625em)');
 
-                //load desktop stuff
-                console.log('Above 750px');
-            }
-        },
-        mqlLap = window.matchMedia('all and (max-width: 46.875em)');
+handleMatchMedia(mqlDesk); //Execute on load
+mqlDesk.addListener(handleMatchMedia); //Execute each time media query will be reached
 
-    handleMatchMedia(mqlLap); //Execute on load
-    mqlLap.addListener(handleMatchMedia); //Execute each time media query will be reached
+// Wall media queries
+var handleMatchMedia = function(mediaQuery) {
+        if (mediaQuery.matches) {
 
+            // Load mobile stuff
+            console.log('Below 1170px');
 
-    // Desk media queries
-    var handleMatchMedia = function(mediaQuery) {
-            if (mediaQuery.matches) {
+        } else {
 
-                // Load mobile stuff
-                console.log('Below 970px');
+            //load desktop stuff
+            console.log('Above 1170px');
+        }
+    },
+    mqlWall = window.matchMedia('all and (max-width: 73.125em)');
 
-            } else {
+handleMatchMedia(mqlWall); //Execute on load
+mqlWall.addListener(handleMatchMedia); //Execute each time media query will be reached
 
-                //load desktop stuff
-                console.log('Above 970px');
-            }
-        },
-        mqlDesk = window.matchMedia('all and (max-width: 60.625em)');
+// Wall media queries
+var handleMatchMedia = function(mediaQuery) {
+        if (mediaQuery.matches) {
 
-    handleMatchMedia(mqlDesk); //Execute on load
-    mqlDesk.addListener(handleMatchMedia); //Execute each time media query will be reached
+            // Load mobile stuff
+            console.log('Below 1170px');
 
+        } else {
 
-    // Wall media queries
-    var handleMatchMedia = function(mediaQuery) {
-            if (mediaQuery.matches) {
+            //load desktop stuff
+            console.log('Above 1170px');
+        }
+    },
+    mqlWall = window.matchMedia('all and (max-width: 73.125em)');
 
-                // Load mobile stuff
-                console.log('Below 1170px');
-
-            } else {
-
-                //load desktop stuff
-                console.log('Above 1170px');
-            }
-        },
-        mqlWall = window.matchMedia('all and (max-width: 73.125em)');
-
-    handleMatchMedia(mqlWall); //Execute on load
-    mqlWall.addListener(handleMatchMedia); //Execute each time media query will be reached
-
-
-    // Cinema media queries
-    var handleMatchMedia = function(mediaQuery) {
-            if (mediaQuery.matches) {
-
-                // Load mobile stuff
-                console.log('Below 1430px');
-
-            } else {
-
-                //load desktop stuff
-                console.log('Above 1430px');
-            }
-        },
-        mqlCinema = window.matchMedia('all and (max-width: 89.375em)');
-
-    handleMatchMedia(mqlCinema); //Execute on load
-    mqlCinema.addListener(handleMatchMedia); //Execute each time media query will be reached
+handleMatchMedia(mqlWall); //Execute on load
+mqlWall.addListener(handleMatchMedia); //Execute each time media query will be reached
 
 
 });
-
-
-// Add the google maps api only when we want it to via labjs
-if ($('#js-map_address').length > 0) {
-    $L = $L
-        .script('//maps.googleapis.com/maps/api/js?key=AIzaSyBgU-OMTQXQwUwOyNRZB5jh1cFgY5z_L2A&sensor=false&callback=initialize_single').wait();
-}
-
-
-// Initialize a single marker
-function initialize_single() {
-    var myOptions = {
-        zoom: 10,
-        center: new google.maps.LatLng(0, 0),
-        mapTypeId: google.maps.MapTypeId.ROADMAP,
-    };
-    var map = new google.maps.Map(document.getElementById('js-map_address'), myOptions);
-    codeLocations_single(company_address, map);
-}
-
-
-// Geocode a location
-function codeLocations_single(list, map) {
-    for (var i = 0; i < list.length; i++) {
-        list = window[list] || list;
-
-        var addressId = list[i].id;
-        var geocoder = new google.maps.Geocoder();
-        var geoOptions = {
-            address: list[i].location,
-            region: 'NO'
-        };
-
-        geocoder.geocode(geoOptions, createGeocodeCallback_single(list[i], map, addressId));
-    }
-}
-
-
-// Add a marker
-function createGeocodeCallback_single(item, map, addressId) {
-    return function(results, status) {
-        if (status == google.maps.GeocoderStatus.OK) {
-            addMarker_single(map, item, results[0].geometry.location, addressId);
-        } else {
-
-        }
-    }
-}
-
-
-// Add a single marker
-function addMarker_single(map, item, location, addressId) {
-    var marker = new google.maps.Marker({
-        map: map,
-        position: location
-    })
-
-    var bounds = new google.maps.LatLngBounds();
-    bounds.extend(location);
-    map.fitBounds(bounds);
-
-    zoomChangeBoundsListener =
-        google.maps.event.addListenerOnce(map, 'bounds_changed', function(event) {
-            if (this.getZoom()) {
-                this.setZoom(14);
-            }
-        });
-}

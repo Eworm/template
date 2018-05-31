@@ -10,17 +10,25 @@ var src_paths = {
     css:                'sass/**/*.scss',
     autoprefixer:       '*.css',
     sprite:             'images-src/sprite/**/*.svg',
+    scripts_docready:    ['js-src/includes/blazy.js',
+                            'js-src/includes/autocomplete.js',
+                            'js-src/includes/mq-palm.js',
+                            'js-src/includes/mq-lap.js',
+                            'js-src/includes/mq-desk.js',
+                            'js-src/includes/mq-wall.js',
+                            'js-src/includes/mq-cinema.js'],
     scripts:            ['node_modules/parsleyjs/dist/parsley.js',
                             'node_modules/parsleyjs/dist/i18n/nl.js',
                             'node_modules/blazy/blazy.js',
                             'node_modules/hyperform/hyperform.js',
                             'node_modules/easy-autocomplete/dist/jquery.easy-autocomplete.js',
-                            'js-src/functions.js'
+                            'js-src/functions.js',
+                            'js-src/includes/googlemaps.js'
                         ],
     labjs:              ['node_modules/labjs/LAB.min.js',
                             'js-src/lab-loader.js'
                         ],
-    javascript:         'js-src/*.*'
+    javascript:         'js-src/**/*.*'
 };
 
 
@@ -67,6 +75,22 @@ gulp.task('css', function() {
 // Javascript
 gulp.task('javascript', function() {
 
+    gulp.src(src_paths.scripts_docready)
+
+        .pipe(plugins.plumber({
+            errorHandler: plugins.notify.onError('Error: <%= error.message %>')
+        }))
+
+        .pipe(plugins.concatUtil('functions.js'))
+        .pipe(plugins.concatUtil.header('$(document).ready(function() {\n\n'))
+        .pipe(plugins.concatUtil.footer('\n\n});'))
+        .pipe(gulp.dest('js-src'))
+
+        .pipe(plugins.livereload())
+        .pipe(plugins.notify({
+            message: 'Functions docready complete!'
+        }))
+
     gulp.src(src_paths.scripts)
 
         .pipe(plugins.plumber({
@@ -81,7 +105,7 @@ gulp.task('javascript', function() {
 
         .pipe(plugins.livereload())
         .pipe(plugins.notify({
-            message: 'javascript complete!'
+            message: 'Functions minified complete!'
         }))
 
     gulp.src(src_paths.labjs)
@@ -98,7 +122,7 @@ gulp.task('javascript', function() {
 
         .pipe(plugins.livereload())
         .pipe(plugins.notify({
-            message: 'javascript complete!'
+            message: 'Labloader minified complete!'
         }))
 });
 
