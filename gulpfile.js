@@ -11,7 +11,7 @@ var src_paths = {
     autoprefixer:       '*.css',
     sprite:             'images-src/sprite/**/*.svg',
     labjs:              ['node_modules/labjs/LAB.min.js',
-                            'js-src/lab-loader.js'
+                            'js-src/base/lab-loader.js'
                         ],
     javascript:         'js-src/**/*.*'
 };
@@ -72,7 +72,7 @@ gulp.task('javascript', function() {
             'js-src/modules/template.mq-desk.js',
             'js-src/modules/template.mq-wall.js',
             'js-src/modules/template.mq-cinema.js',
-            'js-src/template.init.js'
+            'js-src/base/template.init.js'
         ])
         .pipe(plugins.plumber({
             errorHandler: plugins.notify.onError('Error: <%= error.message %>')
