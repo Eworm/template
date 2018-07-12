@@ -1,6 +1,6 @@
 // Cinema media queries
-var wedeka = window.wedeka || {};
-    wedeka.mqcinema = {};
+var template = window.template || {};
+    template.mqcinema = {};
 
 (function(mqcinema)
 {
@@ -8,7 +8,7 @@ var wedeka = window.wedeka || {};
     mqcinema.init = function()
     {
 
-        wedeka.mq.observe('all and (max-width: 89.375em)', _handleMq);
+        template.mq.observe('all and (max-width: 89.375em)', _handleMq);
 
     };
 
@@ -29,4 +29,4 @@ var wedeka = window.wedeka || {};
     }
 
 
-})(wedeka.mqcinema);
+})(template.mqcinema);
