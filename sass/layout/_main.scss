@@ -30,10 +30,10 @@ main {
 // The content
 .main__body {
 
-    h2,
-    h3,
-    h4,
-    h5 {
+    > h2,
+    > h3,
+    > h4,
+    > h5 {
 
         a {
             text-decoration: none;
@@ -45,28 +45,28 @@ main {
         }
     }
 
-    h2 {
+    > h2 {
         margin: 0 0 pt(2);
         font-size: $h2;
     }
 
-    h3 {
+    > h3 {
         margin: 0 0 pt(1);
         font-size: $h3;
     }
 
-    h4 {
+    > h4 {
         margin: 0 0 pt(1);
         font-size: $h4;
     }
 
-    h5 {
+    > h5 {
         margin: 0 0 pt(1);
         font-size: $fs-def;
     }
 
-    p,
-    ul {
+    > p,
+    > ul {
         margin: 0 0 pt(2);
 
         @media (min-width: $mq--lap) {
