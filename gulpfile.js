@@ -61,13 +61,11 @@ gulp.task('css', function() {
 gulp.task('javascript', function() {
 
     gulp.src([
-            'node_modules/parsleyjs/dist/parsley.js',
-            'node_modules/parsleyjs/dist/i18n/nl.js',
             'node_modules/blazy/blazy.js',
-            'node_modules/hyperform/hyperform.js',
-            'node_modules/easy-autocomplete/dist/jquery.easy-autocomplete.js'
+            'node_modules/easy-autocomplete/dist/jquery.easy-autocomplete.js',
             'js-src/modules/template.blazy.js',
             'js-src/modules/template.autocomplete.js',
+            'js-src/modules/template.googlemaps.js',
             'js-src/modules/template.mq.js',
             'js-src/modules/template.mq-palm.js',
             'js-src/modules/template.mq-lap.js',
@@ -79,8 +77,8 @@ gulp.task('javascript', function() {
         .pipe(plugins.plumber({
             errorHandler: plugins.notify.onError('Error: <%= error.message %>')
         }))
-        .pipe(plugins.concat('wedeka.min.js'))
-        .pipe(plugins.uglify()
+        .pipe(plugins.concat('functions.min.js'))
+        .pipe(plugins.uglify())
         .pipe(gulp.dest(dest_paths.javascript))
 
         .pipe(plugins.notify({
@@ -94,7 +92,7 @@ gulp.task('javascript', function() {
         }))
 
         .pipe(plugins.concat('lab.min.js'))
-        .pipe(plugins.uglify()
+        .pipe(plugins.uglify())
         .pipe(gulp.dest(dest_paths.javascript))
 
         .pipe(plugins.livereload())

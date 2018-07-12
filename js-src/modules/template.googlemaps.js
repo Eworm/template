@@ -22,7 +22,7 @@ var template = window.template || {};
             mapTypeId: google.maps.MapTypeId.ROADMAP,
         };
         var map = new google.maps.Map(document.getElementById('js-map_address'), myOptions);
-        googlemap.geocode(company_address, map);
+        template.googlemap.geocode(company_address, map);
 
     };
 
@@ -40,7 +40,7 @@ var template = window.template || {};
                 region: 'NO'
             };
 
-            geocoder.geocode(geoOptions, createGeocodeCallback_single(list[i], map, addressId));
+            geocoder.geocode(geoOptions, template.googlemap.geocodeCallback(list[i], map, addressId));
         }
 
     };
@@ -50,10 +50,9 @@ var template = window.template || {};
 
         // Add a marker
         return function(results, status) {
-        if (status == google.maps.GeocoderStatus.OK) {
-            googlemap.addMarker(map, item, results[0].geometry.location, addressId);
-        } else {
-
+            if (status == google.maps.GeocoderStatus.OK) {
+                template.googlemap.addMarker(map, item, results[0].geometry.location, addressId);
+            }
         }
 
     };
@@ -86,7 +85,7 @@ var template = window.template || {};
         // Add the google maps api only when we want it to via labjs
         if ($('#js-map_address').length > 0) {
             $L = $L
-                .script('//maps.googleapis.com/maps/api/js?key=AIzaSyBgU-OMTQXQwUwOyNRZB5jh1cFgY5z_L2A&sensor=false&callback=googlemap.initialize').wait();
+                .script('//maps.googleapis.com/maps/api/js?key=AIzaSyBgU-OMTQXQwUwOyNRZB5jh1cFgY5z_L2A&sensor=false&callback=template.googlemap.initialize').wait();
         }
 
     };
