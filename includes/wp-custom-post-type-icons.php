@@ -2,18 +2,16 @@
 
 
 /* Custom post type icons
-   Get the icon content here: https://developer.wordpress.org/resource/dashicons/#welcome-write-blog
+   Get the icon content here:
+   https://developer.wordpress.org/resource/dashicons/#welcome-write-blog
 ==================================================================================================================================*/
 function add_menu_icons_styles()
 {
     ?>
 
 <style>
-#adminmenu .menu-icon-men div.wp-menu-image:before {
-    content: "\f110";
-}
-#adminmenu .menu-icon-women div.wp-menu-image:before {
-    content: "\f110";
+#adminmenu .menu-icon-cpt div.wp-menu-image:before {
+    content: "\f319";
 }
 </style>
 

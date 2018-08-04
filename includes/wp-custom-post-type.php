@@ -7,7 +7,7 @@ add_action('init', 'cpt_register');
 function cpt_register()
 {
     $labels = array(
-        'name'                  => _x('Mediatheek', 'post type general name'),
+        'name'                  => _x('CPT', 'post type general name'),
         'singular_name'         => _x('Onderdeel', 'post type singular name'),
         'add_new'               => _x('Nieuw onderdeel', 'bedrijf item'),
         'add_new_item'          => __('Nieuw onderdeel toevoegen'),
@@ -36,10 +36,10 @@ function cpt_register()
         'supports'              => array('title', 'editor', 'excerpt', 'comments'),
         'map_meta_cap'          => true,
         'has_archive'           => true,
-        'slug'                  => 'mediatheek'
+        'slug'                  => 'cpt'
       );
 
-    register_post_type('mediatheek', $args);
+    register_post_type('cpt', $args);
 }
 
 
