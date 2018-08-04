@@ -9,71 +9,74 @@
     }
 }
 
-main {
+.main {
     margin-bottom: pt(2);
 
     @media (min-width: $mq--lap) {
     }
-}
 
-// Page title
-.main__header {
-    margin: 0 0 pt(2);
-    font-weight: normal;
-    font-size: $h1;
-
-    @media (min-width: $mq--lap) {
-        margin-bottom: pt(4);
-    }
-}
-
-// The content
-.main__body {
-
-    > h2,
-    > h3,
-    > h4,
-    > h5 {
-
-        a {
-            text-decoration: none;
-
-            &:hover,
-            &:focus {
-                text-decoration: underline;
-            }
-        }
-    }
-
-    > h2 {
+    // Page title
+    &__header {
         margin: 0 0 pt(2);
-        font-size: $h2;
-    }
-
-    > h3 {
-        margin: 0 0 pt(1);
-        font-size: $h3;
-    }
-
-    > h4 {
-        margin: 0 0 pt(1);
-        font-size: $h4;
-    }
-
-    > h5 {
-        margin: 0 0 pt(1);
-        font-size: $fs-def;
-    }
-
-    > p,
-    > ul {
-        margin: 0 0 pt(2);
+        font-weight: normal;
+        font-size: $h1;
 
         @media (min-width: $mq--lap) {
             margin-bottom: pt(4);
         }
+    }
 
-        &:last-child {
+    // The content
+    &__content {
+
+        > h2,
+        > h3,
+        > h4,
+        > h5 {
+
+            a {
+                text-decoration: none;
+
+                &:hover,
+                &:focus {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        > h2 {
+            margin: 0 0 pt(2);
+            font-size: $h2;
+        }
+
+        > h3 {
+            margin: 0 0 pt(1);
+            font-size: $h3;
+        }
+
+        > h4 {
+            margin: 0 0 pt(1);
+            font-size: $h4;
+        }
+
+        > h5 {
+            margin: 0 0 pt(1);
+            font-size: $fs-def;
+        }
+
+        > p,
+        > ol
+        > table
+        > ul {
+            margin: 0 0 pt(2);
+
+            @media (min-width: $mq--lap) {
+                margin-bottom: pt(4);
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
     }
 }
