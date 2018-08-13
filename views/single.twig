@@ -26,7 +26,24 @@
                         Deze content is beveiligd met een wachtwoord.
                     </p>
 
-                    {{ post.maybe_show_password_form }}
+                    <form class="signupform" action="{{site.link}}/wp-login.php?action=postpass" method="post">
+
+                        <fieldset>
+
+                            <div class="form-row">
+                                <label for="pwbox-{{post.ID}}">Wachtwoord:</label>
+                                <input class="password-box" name="post_password" id="pwbox-{{post.ID}}" type="password" placeholder="Password" size="20" maxlength="20">
+                            </div>
+
+                            <div class="form-row">
+                                <button class="btn btn--primary" type="submit" name="Submit">
+                                    Wachtwoord opgeven
+                                </button>
+                            </div>
+
+                        </fieldset>
+
+                    </form>
 
                 </div>
 
