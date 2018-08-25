@@ -788,7 +788,6 @@ if (! class_exists('TGM_Plugin_Activation')) {
 				</form>
 			</div>
 			<?php
-
         }
 
         /**

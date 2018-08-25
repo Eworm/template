@@ -16,7 +16,6 @@ function add_menu_icons_styles()
 </style>
 
 <?php
-
 }
 add_action('admin_head', 'add_menu_icons_styles');
 
