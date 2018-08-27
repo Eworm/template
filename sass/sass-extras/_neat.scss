@@ -35,6 +35,29 @@ $neat-grid: (
 }
 
 
+// Layout block container
+// Use as a container for grids inside a container element
+.l-container {
+    @include grid-container;
+
+    @media (min-width: $mq--lap) {
+        @include grid-collapse();
+    }
+
+    // Make it a flex!
+    &--flex {
+
+        > * {
+
+            @media (min-width: $mq--lap) {
+                display: flex;
+                align-items: flex-start;
+            }
+        }
+    }
+}
+
+
 // Layout block: single contentblock
 .l-c {
 

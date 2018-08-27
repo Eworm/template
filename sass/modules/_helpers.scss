@@ -1,6 +1,6 @@
 // Text align helpers
 .text {
-    
+
     &--center {
         text-align: center;
     }
@@ -14,4 +14,13 @@
 .img-responsive {
     height: auto;
     max-width: 100%;
+}
+
+
+// Display helpers
+.is {
+
+    &--hidden {
+        @include screenreader--hide();
+    }
 }

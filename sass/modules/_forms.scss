@@ -73,11 +73,7 @@ label,
     width: 100%;
     display: block;
     clear: both;
-
-    &:hover,
-    &:focus {
-        cursor: pointer;
-    }
+    cursor: pointer;
 
     small {
         font-size: 100%;

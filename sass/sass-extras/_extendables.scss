@@ -8,17 +8,6 @@
     box-shadow: $shadow;
 }
 
-
-// Arrow for navfeedback
-%navfeedback {
-    width: 0;
-    height: 0;
-    content: '';
-    position: absolute;
-    border: 8px solid transparent;
-}
-
-
 // Row in a form
 %formrow {
     width: 100%;
@@ -52,7 +41,6 @@
         width: 100%;
     }
 }
-
 
 // Post summary
 %post {
@@ -94,4 +82,10 @@
             }
         }
     }
+}
+
+// Extendable for a primary button
+// Handy if buttons with other html want to use the same styling
+%btn-primary {
+    background: grey;
 }

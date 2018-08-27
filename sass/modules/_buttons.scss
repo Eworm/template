@@ -1,6 +1,5 @@
 // A button
-.btn,
-#submit {
+.btn {
     width: 100%;
     display: inline-block;
     text-align: center;
@@ -14,7 +13,19 @@
     &:hover,
     &:focus {
     }
-    
-    &--primary {    
+
+    &--primary {
+        @extend %btn-primary;
+    }
+
+    &--secondary {
+
+    }
+
+    &--block {
+        width: 100%;
+        padding-right: pt(1);
+        padding-left: pt(1);
+        display: block;
     }
 }
