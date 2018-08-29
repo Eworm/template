@@ -1,5 +1,6 @@
 // Responsive breakpoints. Always use em's!
-$mq--wrist:     0; // $mq--wrist is the variable name from 0 to 480
+// $mq--wrist is the variable name from 0 to palm
+$mq--wrist:     0;
 $mq--palm:      em(480);
 $mq--lap:       em(750);
 $mq--desk:      em(970);
@@ -9,6 +10,12 @@ $mq--cinema:    em(1430);
 
 // Grid variables
 $site--max-width: 1024px;      // The max-size of the site.
+
+
+// Layout variable
+// I'm using increments of 8 for a cleaner layout
+// https://medium.com/built-to-adapt/intro-to-the-8-point-grid-system-d2573cde8632
+$pt--base: 8px;
 
 
 // Default values for other stuff
