@@ -85,7 +85,7 @@ var template = window.template || {};
         // Add the google maps api only when we want it to via labjs
         if ($('#js-map_address').length > 0) {
             $L = $L
-                .script('//maps.googleapis.com/maps/api/js?key=AIzaSyBgU-OMTQXQwUwOyNRZB5jh1cFgY5z_L2A&sensor=false&callback=template.googlemap.initialize').wait();
+                .script('//maps.googleapis.com/maps/api/js?key=[ADD YOUR OWN API KEY]&sensor=false&callback=template.googlemap.initialize').wait();
         }
 
     };
