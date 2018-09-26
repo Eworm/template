@@ -1,0 +1,122 @@
+{% block content %}
+
+<div class="l-cs">
+
+    <main role="main">
+
+        <h1 class="main__header">
+
+            {{ post.title }}
+
+        </h1>
+
+        <div class="main__content">
+
+            {% do action( 'woocommerce_before_cart' ) %}
+
+            <form class="woocommerce-cart-form" action="{{ action }}" method="post">
+
+            	{% do action( 'woocommerce_before_cart_table' ) %}
+
+            	<table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
+
+            		<thead>
+
+            			<tr>
+            				<th class="product-name" colspan="2">Product</th>
+            				<th class="product-price text--right">Prijs</th>
+            				<th class="product-quantity">Aantal</th>
+            				<th class="product-subtotal text--right">Totaal</th>
+            			</tr>
+
+            		</thead>
+
+            		<tbody>
+
+            			{% do action( 'woocommerce_before_cart_contents' ) %}
+
+                        {% for product in products %}
+
+                            <tr>
+
+                                <td>
+                                    <a href="{{ product.url }}" title="Direct naar {{ product.title }}">
+                                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                        data-src="{{ product.thumbnail }}"
+                                        class="b-lazy img--responsive"
+                                        alt="">
+                                    </a>
+                                </td>
+
+                                <td>
+                                    <a href="{{ product.url }}" title="Direct naar {{ product.title }}">
+                                        <strong>{{ product.title }}</strong>
+                                    </a>
+                                </td>
+
+                                <td class="text--right">
+                                    {{ product.price }}
+                                </td>
+
+                                <td>
+                                    {{ product.quantity }}
+
+                                    <button type="submit"
+                                            class="btn cart-action"
+                                            name="update_cart"
+                                            title="Pas het aantal aan" value="{{ __('Update cart', 'woocommerce') }}">
+                                    </button>
+
+                                    <a href="{{ product.delete_permalink }}"
+                                        class="remove btn cart-action" aria-label="Verwijder dit product" data-product_id="{{ product.delete_productid }}" data-product_sku="{{ product.delete_sku }}" title="Verwijder dit product">
+                                    </a>
+
+                                </td>
+
+                                <td class="text--right">
+                                    {{ product.total }}
+                                </td>
+
+                            </tr>
+
+                        {% endfor %}
+
+            			{% do action( 'woocommerce_cart_contents' ) %}
+
+            			<tr>
+
+            				<td colspan="6" class="actions">
+
+                                {% do action( 'woocommerce_cart_actions' ) %}
+
+                                {{ nonce }}
+
+            				</td>
+
+            			</tr>
+
+            			{% do action( 'woocommerce_after_cart_contents' ) %}
+
+            		</tbody>
+
+            	</table>
+
+            	{% do action( 'woocommerce_after_cart_table' ) %}
+
+            </form>
+
+        </div>
+
+    </main>
+
+    <aside role="complementary" class="sidebar">
+
+        {% do action( 'woocommerce_cart_collaterals' ) %}
+
+    </aside>
+
+    {% do action( 'woocommerce_after_cart' ) %}
+
+</div>
+
+{% endblock %}

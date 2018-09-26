@@ -59,3 +59,10 @@ Version: 1.0
 @import 'modules/blazy';                     // Lazy loading
 @import 'modules/easy-autocomplete';         // Default autocomplete styles
 @import 'modules/print';                     // Simple print stylesheet
+
+// Optional Woocommerce modules
+@import 'modules/woo-cart';                  // Woo cart
+@import 'modules/woo-checkout';              // Woo checkout page
+@import 'modules/woo-product-excerpt';       // Woo single product excerpt
+@import 'modules/woo-product';               // Woo product detail
+@import 'modules/woo-thankyou';              // Woo thanks page

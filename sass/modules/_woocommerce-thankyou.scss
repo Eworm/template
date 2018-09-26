@@ -1,0 +1,51 @@
+// Thank you - order details
+.woocommerce-order-details {
+
+    &__title {
+        margin: 0 0 pt(2);
+        padding-bottom: pt(1);
+        font-size: pt(3);
+        border-bottom: 1px solid;
+    }
+
+    .shop_table {
+
+        th {
+            text-align: left;
+        }
+
+        tfoot {
+
+        }
+    }
+}
+
+// Thank you - order overview
+.woocommerce-order-overview {
+
+    &__title {
+        margin: 0 0 pt(2);
+        padding-bottom: pt(1);
+        font-size: pt(3);
+        border-bottom: 1px solid;
+    }
+}
+
+// Thank you - customer details
+.woocommerce-customer-details {
+
+    .woocommerce-column__title {
+        margin: 0 0 pt(2);
+        padding-bottom: pt(1);
+        font-size: pt(3);
+        border-bottom: 1px solid;
+    }
+
+    address {
+        font-style: normal;
+
+        p {
+            margin: 0;
+        }
+    }
+}
