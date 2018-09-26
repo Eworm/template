@@ -5,7 +5,7 @@
     $context['products'] = [];
 
     foreach (WC()->cart->get_cart() as $cart_item_key => $cart_item) {
-        $myarray = [];
+        $products_array = [];
 
         // General vars
         $_product   = apply_filters('woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key);
@@ -16,38 +16,38 @@
 
             // URL
             $product_permalink = apply_filters('woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink($cart_item) : '', $cart_item, $cart_item_key);
-            $myarray['url'] = get_permalink($product_id);
+            $products_array['url'] = get_permalink($product_id);
 
             // Delete button
-            $myarray['delete_permalink'] = esc_url(WC()->cart->get_remove_url($cart_item_key));
-            $myarray['delete_productid'] = esc_attr($product_id);
-            $myarray['delete_sku'] = esc_attr($_product->get_sku());
+            $products_array['delete_permalink'] = esc_url(WC()->cart->get_remove_url($cart_item_key));
+            $products_array['delete_productid'] = esc_attr($product_id);
+            $products_array['delete_sku'] = esc_attr($_product->get_sku());
 
             // Thumbnail
             $thumbnail = get_the_post_thumbnail_url($product_id);
 
             if (! $product_permalink) {
-                $myarray['thumbnail'] = $thumbnail;
+                $products_array['thumbnail'] = $thumbnail;
             } else {
-                $myarray['thumbnail'] = $thumbnail;
+                $products_array['thumbnail'] = $thumbnail;
                 // printf('<a href="%s">%s</a>', esc_url($product_permalink), $thumbnail);
             }
 
             // Title
             if (! $product_permalink) {
-                $myarray['title'] = apply_filters('woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key);
+                $products_array['title'] = apply_filters('woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key);
             } else {
-                $myarray['title'] = apply_filters('woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key);
-                // $myarray['title'] = apply_filters('woocommerce_cart_item_name', sprintf('<a href="%s">%s</a>', esc_url($product_permalink), $_product->get_name()), $cart_item, $cart_item_key);
+                $products_array['title'] = apply_filters('woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key);
+                // $products_array['title'] = apply_filters('woocommerce_cart_item_name', sprintf('<a href="%s">%s</a>', esc_url($product_permalink), $_product->get_name()), $cart_item, $cart_item_key);
             }
 
             // Backorder notification
             if ($_product->backorders_require_notification() && $_product->is_on_backorder($cart_item['quantity'])) {
-                $myarray['backorder'] = true;
+                $products_array['backorder'] = true;
             }
 
             // Price
-            $myarray['price'] = apply_filters('woocommerce_cart_item_price', WC()->cart->get_product_price($_product), $cart_item, $cart_item_key);
+            $products_array['price'] = apply_filters('woocommerce_cart_item_price', WC()->cart->get_product_price($_product), $cart_item, $cart_item_key);
 
             // Quantity
             if ($_product->is_sold_individually()) {
@@ -61,13 +61,13 @@
                     'product_name' => $_product->get_name(),
                 ), $_product, false );
             }
-            $myarray['quantity'] = apply_filters('woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item);
+            $products_array['quantity'] = apply_filters('woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item);
 
             // Total
-            $myarray['total'] = apply_filters('woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal($_product, $cart_item['quantity']), $cart_item, $cart_item_key);
+            $products_array['total'] = apply_filters('woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal($_product, $cart_item['quantity']), $cart_item, $cart_item_key);
 
             // Merge with products
-            $context['products'][] = $myarray;
+            $context['products'][] = $products_array;
         }
     }
 
