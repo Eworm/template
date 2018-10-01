@@ -19,7 +19,7 @@
             $products_array['url'] = get_permalink($product_id);
 
             // Delete button
-            $products_array['delete_permalink'] = esc_url(WC()->cart->get_remove_url($cart_item_key));
+            $myarray['delete_permalink'] = esc_url(wc_get_cart_remove_url( $cart_item_key ));
             $products_array['delete_productid'] = esc_attr($product_id);
             $products_array['delete_sku'] = esc_attr($_product->get_sku());
 
