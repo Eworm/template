@@ -149,47 +149,6 @@ gulp.task('lint', function() {
 
 
 
-// Critical css
-// More info & options: https://github.com/addyosmani/critical
-gulp.task('critical', function() {
-    return gulp.src('style.css')
-        .pipe(critical({
-            inline: false,
-            base: '.',
-            src: 'http://template.dev/',
-            css: 'style.css',
-            dest: 'style-critical.css',
-            minify: true,
-            extract: false,
-            dimensions: [{
-                height: 320,
-                width: 500
-            }, {
-                height: 900,
-                width: 1300
-            }],
-            include: ['.breadcrumbs',
-                '.breadcrumbs > li',
-                '.breadcrumbs a',
-                '.page_item',
-                '.pagemenu',
-                '.pagemenu ul',
-                '.pagemenu li',
-                '.pagemenu a',
-                '.symbols',
-                '.grid-item',
-                '.container'
-            ]
-        }))
-
-        .pipe(plugins.livereload())
-        .pipe(plugins.notify({
-            message: 'Critical css complete!'
-        }))
-});
-
-
-
 // Watch
 gulp.task('watch', function(ev) {
     plugins.livereload.listen();
