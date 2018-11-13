@@ -2,18 +2,18 @@
 
 /* Includes
 ==================================================================================================================================*/
-include_once(get_stylesheet_directory() . '/includes/required-plugins.php');
-include_once(get_stylesheet_directory() . '/includes/wm-minify.php');
-include_once(get_stylesheet_directory() . '/includes/wm-breadcrumbs.php');
-include_once(get_stylesheet_directory() . '/includes/wm-contact.php');
-include_once(get_stylesheet_directory() . '/includes/wm-autocomplete.php');
-include_once(get_stylesheet_directory() . '/includes/wp-clean.php');
-include_once(get_stylesheet_directory() . '/includes/wp-widgets.php');
-include_once(get_stylesheet_directory() . '/includes/wp-options.php');
-include_once(get_stylesheet_directory() . '/includes/wp-custom-post-type.php');
-include_once(get_stylesheet_directory() . '/includes/wp-custom-post-type-icons.php');
-include_once(get_stylesheet_directory() . '/includes/acf-options.php');
-include_once(get_stylesheet_directory() . '/includes/plugin-timber.php');
+include_once(get_stylesheet_directory() . '/functions/required-plugins.php');
+include_once(get_stylesheet_directory() . '/functions/wm-minify.php');
+include_once(get_stylesheet_directory() . '/functions/wm-breadcrumbs.php');
+include_once(get_stylesheet_directory() . '/functions/wm-contact.php');
+include_once(get_stylesheet_directory() . '/functions/wm-autocomplete.php');
+include_once(get_stylesheet_directory() . '/functions/wp-clean.php');
+include_once(get_stylesheet_directory() . '/functions/wp-widgets.php');
+include_once(get_stylesheet_directory() . '/functions/wp-options.php');
+include_once(get_stylesheet_directory() . '/functions/wp-custom-post-type.php');
+include_once(get_stylesheet_directory() . '/functions/wp-custom-post-type-icons.php');
+include_once(get_stylesheet_directory() . '/functions/acf-options.php');
+include_once(get_stylesheet_directory() . '/functions/plugin-timber.php');
 
 
 /* Register menu's

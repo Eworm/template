@@ -2,7 +2,7 @@
 
 /* Required plugins
 ==================================================================================================================================*/
-require_once get_template_directory() . '/includes/class-tgm-plugin-activation.php';
+require_once get_template_directory() . '/functions/class-tgm-plugin-activation.php';
 
 add_action('tgmpa_register', 'template_register_required_plugins');
 
