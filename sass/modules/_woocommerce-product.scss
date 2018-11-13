@@ -12,11 +12,9 @@
     &__summary {
 
         .product_title {
-            @extend %mainheader;
         }
 
         .price {
-            @extend %price;
         }
 
         .stock {
@@ -26,7 +24,6 @@
 
             &.out-of-stock {
                 color: $alert;
-                font-family: $ff--header;
                 text-transform: uppercase;
                 font-size: pt(3);
                 vertical-align: sub;
@@ -52,7 +49,7 @@
             }
 
             button {
-                @extend %primary;
+                @extend %btn-primary;
             }
         }
 

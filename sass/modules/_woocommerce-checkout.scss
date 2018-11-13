@@ -3,7 +3,6 @@
 
     .col-1,
     .col-2 {
-        @extend %formdivider;
     }
 
     h3 {
@@ -11,7 +10,6 @@
     }
 
     label {
-        @extend %label;
     }
 
     .required {
