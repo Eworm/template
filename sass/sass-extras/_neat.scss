@@ -12,7 +12,6 @@ $neat-grid: (
     .l-g#{$i} {
 
         > * {
-            @include grid-column(12);
 
             @media (min-width: $mq--lap) {
                 @include grid-column($i);
@@ -25,6 +24,8 @@ $neat-grid: (
 // Container element
 .container {
     @include grid-container;
+    padding-right: pt(2);
+    padding-left: pt(2);
 
     @media (min-width: $mq--lap) {
         max-width: $site--max-width;
@@ -62,7 +63,6 @@ $neat-grid: (
 .l-c {
 
     > * {
-        @include grid-column(12);
 
         @media (min-width: $mq--lap) {
             @include grid-column(8);
@@ -75,7 +75,6 @@ $neat-grid: (
 .l-cs {
 
     > *:nth-child(1) {
-        @include grid-column(12);
 
         @media (min-width: $mq--lap) {
             @include grid-column(8);
@@ -83,7 +82,6 @@ $neat-grid: (
     }
 
     > *:nth-child(2) {
-        @include grid-column(12);
 
         @media (min-width: $mq--lap) {
             @include grid-column(4);
