@@ -61,6 +61,7 @@ $neat-grid: (
 
 // Layout block: single contentblock
 .l-c {
+    @include grid-container;
 
     > * {
 
@@ -73,6 +74,7 @@ $neat-grid: (
 
 // Layout block: content + sidebar
 .l-cs {
+    @include grid-container;
 
     > *:nth-child(1) {
 
