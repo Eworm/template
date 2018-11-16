@@ -116,25 +116,29 @@
 
                 </div>
 
-                <div class="comments-area">
+                {% if post.comment_status == 'open' %}
 
-                    <h2 class="comments-area__header">
-                        {{ post.get_comment_count }}
-                        Reacties
-                    </h2>
+                    <div class="comments-area">
 
-                    <ol class="comments-area__list">
+                        <h2 class="comments-area__header">
+                            {{ post.get_comment_count }}
+                            Reacties
+                        </h2>
 
-                        {% for comment in post.comments %}
-                            {% include 'modules/comment.twig' %}
-                        {% endfor %}
+                        <ol class="comments-area__list">
 
-                    </ol>
+                            {% for comment in post.comments %}
+                                {% include 'modules/comment.twig' %}
+                            {% endfor %}
 
-                </div>
+                        </ol>
 
-                {{ post.comment_form }}
+                    </div>
 
+                    {{ post.comment_form }}
+
+                {% endif %}
+                
             {% endif %}
 
         </main>
