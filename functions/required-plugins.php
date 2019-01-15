@@ -32,6 +32,12 @@ function template_register_required_plugins()
             'required'  => true,
         ),
 
+        array(
+            'name'      => 'Classic editor',
+            'slug'      => 'classic-editor',
+            'required'  => true,
+        ),
+
     );
 
     /*
