@@ -1,70 +1,118 @@
 <li id="comment-{{ comment.id }}" class="comment comment-order-{{loop.index}}">
 
-    <div class="comment__author vcard">
+    <div>
 
-        <img src="{{ comment.author.avatar }}" class="avatar photo">
+        <div class="comment__author vcard">
 
-        <cite class="fn">
+            <img  src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ comment.author.avatar }}" class="b-lazy avatar photo">
 
-            {% if (comment.comment_author_url) %}
+        </div>
 
-            <a href="{{ comment.comment_author_url }}" title="" rel="external nofollow" class="url">
-                {{ comment.author.name }}
-            </a>
+        <div class="comment__body">
+
+            <div class="comment__header">
+
+                <cite class="fn">
+
+                    {% if (comment.comment_author_url) %}
+
+                    <a href="{{ comment.comment_author_url }}" title="" rel="external nofollow" class="url">
+                        {{ comment.author.name }}
+                    </a>
+
+                    {% else %}
+
+                    {{ comment.author.name }}
+
+                    {% endif %}
+
+                </cite>
+
+                <span class="says">op</span>
+
+                <a href="{{ post.link }}#comment-{{ comment.id }}" title="">
+                    {{ comment.date }} om {{ comment.time }}
+                </a>
+
+                <span class="says">zegt</span>
+
+            </div>
+
+            {% if comment.approved %}
+
+                {{ comment.content | replace({'<iframe': '<div class="video-wrapper"><iframe', '</iframe>': '</iframe></div>', '<table>': '<table class="table">', '<img': '<img class="img-responsive"'})}}
 
             {% else %}
 
-            {{ comment.author.name }}
+                <p>
+                    Deze reactie wacht op goedkeuring
+                </p>
 
             {% endif %}
 
-        </cite>
-
-        <span class="says">
-            zegt:
-        </span>
-
-    </div>
-
-    <div class="comment-meta commentmetadata">
-
-        <a href="{{ post.link }}#comment-{{ comment.id }}" title="">
-            {{ comment.date }} om {{ comment.time }}
-        </a>
-
-    </div>
-
-    <div class="comment__body">
-
-        {% if comment.approved %}
-
-            {{ comment.main | replace({'<iframe': '<div class="video-wrapper"><iframe', '</iframe>': '</iframe></div>', '<table>': '<table class="table">', '<img': '<img class="img-responsive"'})}}
-
-        {% else %}
-
-            <p>
-                Deze reactie wacht op goedkeuring
-            </p>
-
-        {% endif %}
+        </div>
 
     </div>
 
     {% if comment.children %}
 
-    <ol class="comments-area__list">
+    <ol class="comments-area__list comments-area__list--children">
 
     {% for child in comment.children %}
 
         <li class="comment comment-{{child.id}} comment-order-{{loop.index}}">
 
-            <div class="comment__body">
+            <div>
 
-                ID: {{ child.id }}
-                <br>
-                Parent: {{ child.comment_parent }}
-                <br>
-                {{ child.main }}
+                <div class="comment__author vcard">
+
+                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ child.avatar }}" class="avatar photo b-lazy">
+
+                </div>
+
+                <div class="comment__body">
+
+                    <div class="comment__header">
+
+                        <cite class="fn">
+
+                            {% if (child.comment_author_url) %}
+
+                            <a href="{{ child.comment_author_url }}" title="" rel="external nofollow" class="url">
+                                {{ child.author.name }}
+                            </a>
+
+                            {% else %}
+
+                            {{ child.author.name }}
+
+                            {% endif %}
+
+                        </cite>
+
+                        <span class="says">op</span>
+
+                        <a href="{{ post.link }}#comment-{{ child.id }}" title="">
+                            {{ child.date }} om {{ child.time }}
+                        </a>
+
+                        <span class="says">zegt</span>
+
+                    </div>
+
+                    {% if child.approved %}
+
+                        {{ child.content | replace({'<iframe': '<div class="video-wrapper"><iframe', '</iframe>': '</iframe></div>', '<table>': '<table class="table">', '<img': '<img class="img-responsive"'})}}
+
+                    {% else %}
+
+                        <p>
+                            Deze reactie wacht op goedkeuring
+                        </p>
+
+                    {% endif %}
+
+                </div>
 
             </div>
 

@@ -18,6 +18,13 @@ class MyTimberSite extends TimberSite
         parent::__construct();
     }
 
+    /**
+    * Add a variable to the context
+    *
+    * @param string $context
+    *
+    * @return $context
+    */
     public function add_to_context($context)
     {
         $context['menu'] = new TimberMenu('main');
@@ -25,6 +32,13 @@ class MyTimberSite extends TimberSite
         return $context;
     }
 
+    /**
+    * Add functions to twig
+    *
+    * @param string $twig
+    *
+    * @return $twig
+    */
     public function add_to_twig($twig)
     {
         $twig->addFunction(
@@ -66,6 +80,13 @@ class MyTimberSite extends TimberSite
         return $twig;
     }
 
+    /**
+    * Inline a css file in html
+    *
+    * @param string $path Path to a css file
+    *
+    * @return css
+    */
     public function include_critical_css($path)
     {
         $path = get_template_directory() . '/' . $path;
@@ -78,6 +99,13 @@ class MyTimberSite extends TimberSite
         }
     }
 
+    /**
+    * Inline an svg file in html
+    *
+    * @param string $path Path to a svg file
+    *
+    * @return svg
+    */
     public function include_svg($path)
     {
         $path = get_template_directory() . '/' . $path;
@@ -89,6 +117,13 @@ class MyTimberSite extends TimberSite
         }
     }
 
+    /**
+    * Inline a javascript file in html
+    *
+    * @param string $path Path to a javascript file
+    *
+    * @return javascript
+    */
     public function include_js($path)
     {
         $path = get_template_directory() . '/' . $path;
