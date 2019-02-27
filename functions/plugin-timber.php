@@ -94,6 +94,7 @@ class MyTimberSite extends TimberSite
         if (file_exists($path)) {
             $css = file_get_contents($path);
             $css = str_replace('/fonts/', get_bloginfo('stylesheet_directory') . '/fonts/', $css);
+            $css = str_replace('/images/', get_bloginfo('stylesheet_directory') . '/images/', $css);
 
             return $css;
         }
