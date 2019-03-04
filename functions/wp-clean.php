@@ -28,7 +28,6 @@ remove_action('admin_print_styles', 'print_emoji_styles');
 
 function disable_embeds_init()
 {
-
     // Remove the REST API endpoint.
     remove_action('rest_api_init', 'wp_oembed_register_route');
 
@@ -43,6 +42,16 @@ function disable_embeds_init()
     remove_action('wp_head', 'wp_oembed_add_host_js');
 }
 add_action('init', 'disable_embeds_init', 9999);
+
+
+/**
+ * Dequeue Gutenberg block styles
+ */
+function my_custom_scripts() {
+    wp_dequeue_style( 'wp-block-library' );
+
+}
+add_action( 'wp_enqueue_scripts', 'my_custom_scripts' );
 
 
 /* Remove the recent comments css
