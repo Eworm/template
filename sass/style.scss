@@ -2,8 +2,8 @@
 // No styles should be included here, only imports of other (smaller) parts
 
 /*!
-Theme Name: Timber template
-Theme URI: http://www.clienturl.nl
+Theme Name: Bordjevol
+Theme URI: http://www.bordjevol.nl
 Author: Wout Mager
 Author URI: http://www.woutmager.nl
 Version: 1.0
@@ -39,30 +39,23 @@ Version: 1.0
 // Styling of reusable, modular parts of the design
 @import 'modules/symbols';                   // Hiding the svg symbol sprite
 @import 'modules/mainmenu';                  // The main menu, probably the only nav
-@import 'modules/search-form';               // A search form
+// @import 'modules/search-form';               // A search form
 @import 'modules/aside';                     // Aside
 @import 'modules/aside__section';            // A section item in an aside
 @import 'modules/pagemenu';                  // Page submenu
 @import 'modules/tables';                    // Normal and responsive table styles
 @import 'modules/forms';                     // Input and button styles
-@import 'modules/breadcrumbs';               // Breadcrumbs styling
+// @import 'modules/breadcrumbs';               // Breadcrumbs styling
 @import 'modules/post';                      // A single blogpost or searchresult
-@import 'modules/comments';                  // Comment styles
-@import 'modules/header-image';              // A custom wordpress header
+// @import 'modules/comments';                  // Comment styles
+// @import 'modules/header-image';              // A custom wordpress header
 @import 'modules/images';                    // Aligned images and captions
-@import 'modules/paging';                    // Previous, next and numbers
-@import 'modules/search-results';            // For custom search results
-@import 'modules/vcard';                     // Vcard styles
+// @import 'modules/paging';                    // Previous, next and numbers
+// @import 'modules/search-results';            // For custom search results
+// @import 'modules/vcard';                     // Vcard styles
 @import 'modules/helpers';                   // Helper classes
 @import 'modules/buttons';                   // Several buttons
 @import 'modules/video-wrapper';             // Making embedded iframes responsive
 @import 'modules/blazy';                     // Lazy loading
-@import 'modules/easy-autocomplete';         // Default autocomplete styles
+// @import 'modules/easy-autocomplete';         // Default autocomplete styles
 @import 'modules/print';                     // Simple print stylesheet
-
-// Optional Woocommerce modules
-@import 'modules/woocommerce-cart';                  // Woo cart
-@import 'modules/woocommerce-checkout';              // Woo checkout page
-@import 'modules/woocommerce-product-excerpt';       // Woo single product excerpt
-@import 'modules/woocommerce-product';               // Woo product detail
-@import 'modules/woocommerce-thankyou';              // Woo thanks page
