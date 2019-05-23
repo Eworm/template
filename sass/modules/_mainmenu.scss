@@ -69,6 +69,20 @@
             }
         }
     }
+
+    &:hover,
+    &:focus {
+
+        @media (min-width: $mq--lap) {
+        }
+
+        + .sub-menu {
+            opacity: 1;
+            z-index: 300;
+            pointer-events: all;
+            top: 100%;
+        }
+    }
 }
 
 .show-sub {
@@ -145,84 +159,58 @@
 }
 
 .sub-menu {
-    width: 200%;
-    height: 0;
-    max-height: 110px;
+    min-width: 200px;
+    width: 100%;
     margin: 0;
     padding: 0;
+    list-style: none;
     position: relative;
-    z-index: 1100;
-    float: left;
-    overflow: auto;
-    border: 0;
-    background: darken($color--gray-13, 5%);
-    transition: all .15s cubic-bezier(.075, .085, .075, 1.175);
+    transition: all .25s ease;
+
+    @media (max-width: $mq--lap) {
+        margin-bottom: pt(1);
+    }
 
     @media (min-width: $mq--lap) {
+        width: auto;
+        padding-top: pt(.5);
         position: absolute;
-        top: 100%;
-        left: 0;
-        border: 1px solid $border;
+        top: calc(100% + #{pt(1)});
+        left: pt(1);
         background: $color--white;
-    }
-
-    .active-sub & {
-        height: 110px;
-        border-bottom: 1px solid $border;
-        opacity: 1;
-    }
-
-    .current_page_parent &,
-    .current-menu-parent & {
-
-        @media (min-width: $mq--lap) {
-            display: none;
-        }
-    }
-
-    .current_page_ancestor &,
-    .current-menu-item & {
-
-        @media (min-width: $mq--lap) {
-            display: none;
-        }
-    }
-
-    .current_page_ancestor .menu-item & {
-        display: none;
-    }
-
-    .current_page_ancestor .current_page_ancestor & {
-        display: block;
-    }
-
-    // When hoverin
-    .show-sub & {
-        display: block;
+        opacity: 0;
+        z-index: -1;
+        pointer-events: none;
+        box-shadow: rgba($color--black, .14) 0 0 4px;
     }
 
     .menu-item {
+        width: 100%;
+        display: block;
 
-        &:nth-child(2n+1) {
-            border-right: 1px solid $color--white;
+        @media (max-width: $mq--lap) {
+            padding-left: pt(2);
         }
 
         a {
-            border-bottom: 1px solid $color--white;
-            background: $color--gray-13;
+            width: 100%;
+            padding: pt(.5) pt(1);
+            display: block;
 
             @media (min-width: $mq--lap) {
-                padding: 8px pt(2);
-                border: 0;
-                border-bottom: 1px solid $border;
-                background: transparent;
+                padding: pt(.75) pt(1.75);
                 color: $body;
                 white-space: nowrap;
+                background: $color--white;
             }
 
             &:hover,
             &:focus {
-                background: $border;
+                color: $link
+            }
+
+            &:after {
+                display: none;
             }
         }
 
@@ -235,14 +223,5 @@
                 }
             }
         }
-    }
-
-    &.active-sub {
-        display: block !important;
-        float: left;
-    }
-
-    &.closed-sub {
-        display: none !important;
     }
 }
