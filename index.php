@@ -89,7 +89,7 @@ else if (is_search())
 else if (is_author())
 {
 
-    $context['post'] = new TimberPost();
+    $context['author'] = (get_query_var('author_name')) ? get_user_by('slug', get_query_var('author_name')) : get_userdata(get_query_var('author'));
     $template = ['author.twig'];
 
 }
