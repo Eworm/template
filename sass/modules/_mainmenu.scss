@@ -37,8 +37,6 @@
     display: inline-block;
 
     .sub-menu {
-        left: -100%;
-        display: none;
     }
 
     @media (min-width: $mq--lap) {
@@ -67,29 +65,26 @@
 
             @media (min-width: $mq--lap) {
             }
+
+            + .sub-menu {
+                opacity: 1;
+                z-index: 300;
+                pointer-events: all;
+                top: 100%;
+            }
         }
     }
 
     &:hover,
-    &:focus {
+    &:focus,
+    &:focus-within {
 
-        @media (min-width: $mq--lap) {
-        }
-
-        + .sub-menu {
+        .sub-menu {
             opacity: 1;
             z-index: 300;
             pointer-events: all;
             top: 100%;
         }
-    }
-}
-
-.show-sub {
-    display: block;
-
-    > a {
-        background: $border;
     }
 }
 
@@ -124,15 +119,6 @@
         &:after {
         }
     }
-
-    .sub-menu {
-
-        a {
-
-            &:after {
-            }
-        }
-    }
 }
 
 .current_page_ancestor {
@@ -144,20 +130,8 @@
     }
 }
 
-.sub-enter {
 
-    > a {
-        @media (min-width: $mq--lap) {
-            background: $border;
-        }
-    }
-}
-
-
-// The sub-menu menu
-.has-submenu {
-}
-
+// The sub-menu
 .sub-menu {
     min-width: 200px;
     width: 100%;
