@@ -3,7 +3,6 @@ var gulp = require('gulp'),
     neat = require('bourbon-neat').includePaths;
 
 
-
 // Source paths
 var src_paths = {
     css: 'sass/**/*.scss',
@@ -16,7 +15,6 @@ var src_paths = {
 };
 
 
-
 // Destination paths
 var dest_paths = {
     css: '.',
@@ -25,9 +23,9 @@ var dest_paths = {
 };
 
 
-
 // CSS using SASS
-gulp.task('css', function() {
+// gulp.task('css', function() {
+function css(done) {
     gulp.src(src_paths.css)
 
         .pipe(plugins.plumber({
@@ -40,7 +38,6 @@ gulp.task('css', function() {
         }))
 
         .pipe(plugins.autoprefixer({
-            browsers: ['last 2 versions', 'ie 10'],
             cascade: false
         }))
 
@@ -52,12 +49,14 @@ gulp.task('css', function() {
         .pipe(plugins.notify({
             message: 'Css complete!'
         }))
-});
 
+        done();
+};
 
 
 // Javascript
-gulp.task('javascript', function() {
+// gulp.task('javascript', function() {
+function javascript(done) {
 
     gulp.src([
             'node_modules/blazy/blazy.js',
@@ -98,12 +97,13 @@ gulp.task('javascript', function() {
         .pipe(plugins.notify({
             message: 'Labloader minified complete!'
         }))
-});
 
+        done();
+};
 
 
 // SVG sprite
-gulp.task('sprite', function() {
+function sprite(done) {
 
     return gulp.src(src_paths.sprite)
 
@@ -136,27 +136,31 @@ gulp.task('sprite', function() {
             message: 'Sprite complete!'
         }))
 
-});
+        done();
 
+};
 
 
 // SCSS lint
-gulp.task('lint', function() {
+function lint(done) {
     return gulp.src(src_paths.css)
         .pipe(plugins.scssLint())
-});
+
+    done();
+};
 
 
-
-// Watch
-gulp.task('watch', function(ev) {
-    plugins.livereload.listen();
-    gulp.watch(src_paths.css, ['css']);
-    gulp.watch(src_paths.javascript, ['javascript']);
-    gulp.watch(src_paths.sprite, ['sprite']);
-});
+// Watch files
+function watchFiles() {
+    gulp.watch(src_paths.css, css);
+    gulp.watch(src_paths.javascript, javascript);
+    gulp.watch(src_paths.sprite, sprite);
+}
 
 
-
-// Default
-gulp.task('default', ['watch']);
+// Export tasks
+exports.lint = lint;
+exports.css = css;
+exports.javascript = javascript;
+exports.sprite = sprite;
+exports.default = watchFiles;
