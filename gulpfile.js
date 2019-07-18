@@ -50,7 +50,7 @@ function css(done) {
             message: 'Css complete!'
         }))
 
-        done();
+    done();
 };
 
 
@@ -97,7 +97,7 @@ function javascript(done) {
             message: 'Labloader minified complete!'
         }))
 
-        done();
+    done();
 };
 
 
@@ -135,7 +135,7 @@ function sprite(done) {
             message: 'Sprite complete!'
         }))
 
-        done();
+    done();
 
 };
 
