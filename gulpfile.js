@@ -1,28 +1,27 @@
-var gulp                = require('gulp'),
-    plugins             = require('gulp-load-plugins')(),
-    neat                = require('bourbon-neat').includePaths,
-    critical            = require('critical').stream;
+var gulp = require('gulp'),
+    plugins = require('gulp-load-plugins')(),
+    neat = require('bourbon-neat').includePaths;
 
 
 
 // Source paths
 var src_paths = {
-    css:                'sass/**/*.scss',
-    autoprefixer:       '*.css',
-    sprite:             'images-src/sprite/**/*.svg',
-    labjs:              ['node_modules/labjs/LAB.min.js',
-                            'js-src/base/lab-loader.js'
-                        ],
-    javascript:         'js-src/**/*.*'
+    css: 'sass/**/*.scss',
+    autoprefixer: '*.css',
+    sprite: 'images-src/sprite/**/*.svg',
+    labjs: ['node_modules/labjs/LAB.min.js',
+        'js-src/base/lab-loader.js'
+    ],
+    javascript: 'js-src/**/*.*'
 };
 
 
 
 // Destination paths
 var dest_paths = {
-    css:                '.',
-    images:             'images',
-    javascript:         'js'
+    css: '.',
+    images: 'images',
+    javascript: 'js'
 };
 
 
@@ -78,7 +77,7 @@ gulp.task('javascript', function() {
             errorHandler: plugins.notify.onError('Error: <%= error.message %>')
         }))
         .pipe(plugins.concat('functions.min.js'))
-        .pipe(plugins.uglify())
+        .pipe(plugins.terser())
         .pipe(gulp.dest(dest_paths.javascript))
 
         .pipe(plugins.notify({
@@ -92,7 +91,7 @@ gulp.task('javascript', function() {
         }))
 
         .pipe(plugins.concat('lab.min.js'))
-        .pipe(plugins.uglify())
+        .pipe(plugins.terser())
         .pipe(gulp.dest(dest_paths.javascript))
 
         .pipe(plugins.livereload())

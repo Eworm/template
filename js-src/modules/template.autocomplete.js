@@ -10,8 +10,7 @@ var template = window.template || {};
 
         var options = {
             url: function(phrase) {
-                console.log(ajaxurl + '?action=wm_autocomplete&phrase=' + phrase);
-                return ajaxurl + '?action=wm_autocomplete&phrase=' + phrase;
+                return `${ajaxurl}?action=wm_autocomplete&phrase=${phrase}`;
             },
             getValue: 'title',
             requestDelay: 500,
@@ -31,7 +30,7 @@ var template = window.template || {};
                 }
             }
         };
-        $('#searchform__field').easyAutocomplete(options);
+        jQuery('#searchform__field').easyAutocomplete(options);
 
     };
 
