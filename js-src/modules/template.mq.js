@@ -8,7 +8,7 @@ var template = window.template || {};
     mq.observe = function(query, callback)
     {
 
-        var mm = window.matchMedia(query);
+        const mm = window.matchMedia(query);
 
         mm.addListener(callback); //Execute each time media query will be reached
         callback(mm); //Execute on load

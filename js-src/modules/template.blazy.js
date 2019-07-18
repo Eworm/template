@@ -5,12 +5,12 @@ var template = window.template || {};
 (function(blazy)
 {
 
-    var _blazy;
+    let _blazy;
 
     blazy.init = function()
     {
 
-    	_setupBlazy();
+        _setupBlazy();
 
     };
 
@@ -41,7 +41,7 @@ var template = window.template || {};
     function _setupBlazy()
     {
 
-    	_blazy = new Blazy();
+        _blazy = new Blazy();
 
     };
 

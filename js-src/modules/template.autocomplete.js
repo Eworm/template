@@ -8,7 +8,7 @@ var template = window.template || {};
     autocomplete.init = function()
     {
 
-        var options = {
+        const options = {
             url: function(phrase) {
                 return `${ajaxurl}?action=wm_autocomplete&phrase=${phrase}`;
             },

@@ -1,15 +1,15 @@
 jQuery(function()
 {
 
-	var template = window.template || {};
+    const template = window.template || {};
 
-	for (var i in template)
-	{
+    for (let i in template)
+    {
 
-	    if ('init' in template[i]) {
-	        template[i].init();
-	    }
+        if ('init' in template[i]) {
+            template[i].init();
+        }
 
-	}
+    }
 
 });

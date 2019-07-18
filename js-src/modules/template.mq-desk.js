@@ -8,7 +8,7 @@ var template = window.template || {};
     mqdesk.init = function()
     {
 
-    	template.mq.observe('all and (max-width: 60.625em)', _handleMq);
+        template.mq.observe('all and (max-width: 60.625em)', _handleMq);
 
     };
 

@@ -83,7 +83,7 @@ var template = window.template || {};
     {
 
         // Add the google maps api only when we want it to via labjs
-        if ($('#js-map_address').length > 0) {
+        if (jQuery('#js-map_address').length > 0) {
             $L = $L
                 .script('//maps.googleapis.com/maps/api/js?key=[ADD YOUR OWN API KEY]&callback=template.googlemap.initialize').wait();
         }

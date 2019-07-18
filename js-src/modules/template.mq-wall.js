@@ -8,7 +8,7 @@ var template = window.template || {};
     mqwall.init = function()
     {
 
-    	template.mq.observe('all and (max-width: 73.125em)', _handleMq);
+        template.mq.observe('all and (max-width: 73.125em)', _handleMq);
 
     };
 
