@@ -1,10 +1,10 @@
-var gulp = require('gulp'),
+const gulp = require('gulp'),
     plugins = require('gulp-load-plugins')(),
     neat = require('bourbon-neat').includePaths;
 
 
 // Source paths
-var src_paths = {
+const src_paths = {
     css: 'sass/**/*.scss',
     autoprefixer: '*.css',
     sprite: 'images-src/sprite/**/*.svg',
@@ -16,7 +16,7 @@ var src_paths = {
 
 
 // Destination paths
-var dest_paths = {
+const dest_paths = {
     css: '.',
     images: 'images',
     javascript: 'js'
