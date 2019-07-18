@@ -1,6 +1,7 @@
 const gulp = require('gulp'),
     plugins = require('gulp-load-plugins')(),
-    neat = require('bourbon-neat').includePaths;
+    neat = require('bourbon-neat').includePaths,
+    livereload = require('gulp-livereload');
 
 
 // Source paths
@@ -24,7 +25,6 @@ const dest_paths = {
 
 
 // CSS using SASS
-// gulp.task('css', function() {
 function css(done) {
     gulp.src(src_paths.css)
 
@@ -55,7 +55,6 @@ function css(done) {
 
 
 // Javascript
-// gulp.task('javascript', function() {
 function javascript(done) {
 
     gulp.src([
@@ -152,6 +151,7 @@ function lint(done) {
 
 // Watch files
 function watchFiles() {
+    livereload.listen();
     gulp.watch(src_paths.css, css);
     gulp.watch(src_paths.javascript, javascript);
     gulp.watch(src_paths.sprite, sprite);
