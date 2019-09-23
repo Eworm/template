@@ -1,0 +1,76 @@
+// The cart table
+.cart {
+    width: 100%;
+
+    tr {
+
+        th,
+        td {
+            padding: pt(1) pt(2);
+
+            &:first-child {
+                padding-left: 0;
+            }
+
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+    }
+
+    tbody {
+
+        tr {
+
+            &:first-child {
+
+                td {
+                    padding-top: pt(3)
+                }
+            }
+        }
+    }
+
+    th {
+        text-align: left;
+        font-weight: normal;
+        font-size: pt(3);
+
+        &.text--right {
+            text-align: right;
+        }
+    }
+
+    td {
+        vertical-align: top;
+        text-align: left;
+
+        &.text--right {
+            text-align: right;
+        }
+    }
+
+    img {
+        max-width: pt(16);
+        height: pt(16);
+        margin: 0;
+        object-fit: cover;
+    }
+
+    .quantity {
+
+        .screen-reader-text {
+            @include screenreader--hide()
+        }
+    }
+
+    .qty {
+        width: pt(10);
+        margin-bottom: pt(1);
+    }
+
+    .cart-action {
+        margin: 0;
+        padding: 0;
+    }
+}

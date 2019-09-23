@@ -1,0 +1,49 @@
+// Checkout page
+.woocommerce-checkout {
+
+    .col-1,
+    .col-2 {
+    }
+
+    h3 {
+
+    }
+
+    label {
+    }
+
+    .required {
+    }
+}
+
+// Products table
+.shop_table {
+
+    thead {
+    }
+}
+
+.place-order {
+    margin-bottom: 0;
+}
+
+.woocommerce-terms-and-conditions-wrapper {
+    margin-bottom: pt(2);
+}
+
+.woocommerce-checkout-review-order-table {
+
+    tbody,
+    tfoot {
+
+        tr {
+
+            td {
+
+                &:nth-child(2) {
+                    text-align: right;
+                }
+            }
+        }
+    }
+}
