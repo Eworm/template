@@ -17,6 +17,8 @@ include_once(get_stylesheet_directory() . '/functions/wp-image-sizes.php');
 include_once(get_stylesheet_directory() . '/functions/wp-options.php');
 include_once(get_stylesheet_directory() . '/functions/wp-widgets.php');
 include_once(get_stylesheet_directory() . '/functions/wp_admin-menu.php');
+include_once(get_stylesheet_directory() . '/includes/woo-support.php');
+include_once(get_stylesheet_directory() . '/includes/woo.php');
 
 
 /* Register menu's
