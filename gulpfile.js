@@ -58,9 +58,9 @@ function css(done) {
 function javascript(done) {
 
     gulp.src([
-            'node_modules/blazy/blazy.js',
+            'node_modules/vanilla-lazyload/dist/lazyload.js',
             'node_modules/easy-autocomplete/dist/jquery.easy-autocomplete.js',
-            'js-src/modules/template.blazy.js',
+            'js-src/modules/template.lazyload.js',
             'js-src/modules/template.autocomplete.js',
             'js-src/modules/template.googlemaps.js',
             'js-src/modules/template.mq.js',

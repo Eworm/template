@@ -1,0 +1,11 @@
+img:not([src]) {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.25s;
+}
+/* Fixes Firefox anomaly during image load */
+@-moz-document url-prefix() {
+    img:-moz-loading {
+        visibility: hidden;
+    }
+}
