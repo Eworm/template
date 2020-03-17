@@ -37,7 +37,7 @@
                             <label class="label" for="contact_name">
                                 Naam
                             </label>
-                            <input type="text" id="contact_name" name="contact_name" required {% if contact_name %} value="{{ contact_name }}" {% endif %}>
+                            <input type="text" id="contact_name" name="contact_name" required="required" {% if contact_name %} value="{{ contact_name }}" {% endif %}>
 
                             {% if contact_name_error %}
                                 Dit veld is verplicht
@@ -50,7 +50,7 @@
                             <label class="label" for="contact_contact">
                                 E-mailadres
                             </label>
-                            <input type="email" id="contact_contact" name="contact_contact" required {% if contact_contact %} value="{{ contact_contact }}" {% endif %}>
+                            <input type="email" id="contact_contact" name="contact_contact" required="required" {% if contact_contact %} value="{{ contact_contact }}" {% endif %}>
 
                             {% if contact_contact_error %}
                                 Dit veld is verplicht
@@ -63,8 +63,9 @@
                             <label class="label" for="contact_info">
                                 Je bericht
                             </label>
-                            <textarea id="contact_info" name="contact_info" required>
-                                {% if contact_info %}{{ contact_info }}{% endif %}
+                            <textarea id="contact_info" name="contact_info" required="required">
+                                {% if contact_info %}{{ contact_info }}
+                                {% endif %}
                             </textarea>
 
                             {% if contact_info_error %}
@@ -91,15 +92,19 @@
 
         <aside role="complementary">
 
-            <script>
-                var company_address = [
-                    {
-                        location: "Kerklaan 30b, Haren"
-                    }
-                ];
-            </script>
+            <div class="aside">
 
-            <div id="js-map_address" style="width: 100%; height: 400px;"></div>
+                <script>
+                    var company_address = [
+                        {
+                            location: "Kerklaan 30b, Haren"
+                        }
+                    ];
+                </script>
+
+                <div id="js-map_address" style="width: 100%; height: 400px;"></div>
+
+            </div>
 
         </aside>
 

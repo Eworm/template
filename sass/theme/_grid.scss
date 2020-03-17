@@ -1,0 +1,27 @@
+// Grid variables
+$site--max-width: 1024px;      // The max-size of the site.
+
+//
+.container {
+    width: 100%;
+    max-width: $site--max-width;
+    margin: 0 auto;
+    clear: both;
+
+    @media (max-width: $mq--lap) {
+        padding-right: pt(2);
+        padding-left: pt(2);
+    }
+}
+
+// Content
+// .l-c {
+//     @extend %column;
+//     grid: auto-flow / 70%;
+// }
+
+// Content + sidebar
+.l-cs {
+    @extend %column;
+    grid: auto-flow / auto minmax(#{pt(30)}, 30%);
+}

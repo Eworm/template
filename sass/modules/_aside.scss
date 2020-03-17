@@ -1,2 +1,7 @@
 .aside {
+
+    @media (min-width: $mq--lap) {
+        position: sticky;
+        top: 0;
+    }
 }

@@ -89,3 +89,17 @@
 %btn-primary {
     background: grey;
 }
+
+//
+%column {
+
+    @media (max-width: $mq--lap) {
+        margin-bottom: pt(4);
+    }
+
+    @media (min-width: $mq--lap) {
+        display: grid;
+        grid-gap: pt(3);
+        grid-auto-flow: dense;
+    }
+}

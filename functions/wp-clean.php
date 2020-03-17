@@ -44,16 +44,6 @@ function disable_embeds_init()
 add_action('init', 'disable_embeds_init', 9999);
 
 
-/**
- * Dequeue Gutenberg block styles
- */
-function my_custom_scripts() {
-    wp_dequeue_style( 'wp-block-library' );
-
-}
-add_action( 'wp_enqueue_scripts', 'my_custom_scripts' );
-
-
 /* Remove the recent comments css
 ==================================================================================================================================*/
 function remove_recent_comments_style()
@@ -62,3 +52,12 @@ function remove_recent_comments_style()
     remove_action('wp_head', array($wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style'));
 }
 add_action('widgets_init', 'remove_recent_comments_style');
+
+
+/* Remove Gutenberg Block Library CSS from loading on the frontend
+==================================================================================================================================*/
+function smartwp_remove_wp_block_library_css(){
+    wp_dequeue_style( 'wp-block-library' );
+    wp_dequeue_style( 'wp-block-library-theme' );
+}
+add_action( 'wp_enqueue_scripts', 'smartwp_remove_wp_block_library_css' );
