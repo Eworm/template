@@ -29,8 +29,7 @@
             <!-- Modern favicons: http://thenewcode.com/28/Making-And-Deploying-SVG-Favicons -->
             <!-- Use http://realfavicongenerator.net/ for all other root icons -->
             <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-            <link rel="icon" type="image/png" href="/favicon.png">
-            <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+            <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,{{ include_fav('favicon.svg') }}">
             <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
             <link rel="manifest" href="/site.webmanifest">
             <meta name="msapplication-TileColor" content="#000000">
@@ -45,7 +44,7 @@
             <!-- Include the above the fold css and replace all relative urls with the theme url -->
             <!-- Consider inlining all css if it's below 50kb, as used in AMP: https://www.ampproject.org/learn/how-amp-works/ -->
             <style>
-                {{ include_critical_css('style.css') }}
+                {{include_critical_css('style.css')}}
             </style>
 
             <!-- Script suggestion from google on how to insert the stylesheet -->
@@ -57,7 +56,6 @@
 
                 // Inlining labjs removes a request and adds only a few kb's to the html
                 {{ include_js('js/lab.min.js') }}
-
             </script>
 
         {% endblock head %}

@@ -36,7 +36,6 @@
         "vanilla-lazyload": "^12.3.0"
     },
     "browserslist": [
-        "last 2 versions",
-        "ie 10"
+        "last 2 versions"
     ]
 }

@@ -69,6 +69,18 @@ class MyTimberSite extends TimberSite
 
             new Twig_SimpleFunction(
 
+                'include_fav',
+                [$this, 'include_fav'],
+                ['is_safe' => ['html']]
+
+            )
+
+        );
+
+        $twig->addFunction(
+
+            new Twig_SimpleFunction(
+
                 'include_js',
                 [$this, 'include_js'],
                 ['is_safe' => ['html']]
@@ -115,6 +127,23 @@ class MyTimberSite extends TimberSite
             $svg = file_get_contents($path);
 
             return $svg;
+        }
+    }
+
+    /**
+    * Inline an svg file in html
+    *
+    * @param string $path Path to a svg file
+    *
+    * @return svg
+    */
+    public function include_fav($path)
+    {
+
+        if (file_exists($path)) {
+            $svg = file_get_contents($path);
+            $svg_decoded = str_replace(array('<', '>', '#', '"'), array('%3C', '%3E', '%23', "'"), $svg);
+            return $svg_decoded;
         }
     }
 
