@@ -12,17 +12,15 @@ Version: 1.0
 
 // Theme variables
 @import 'sass-extras/functions';            // Useful functions
-// @import 'import-now';                       // Neat path is defined in the Gulp file (line 45)
+@import 'import-now';                       // 
 @import 'theme/colors';                     // Colors
 @import 'theme/settings';                   // Global settings
 @import 'sass-extras/extendables';          // Useful extensions
 @import 'theme/grid';                       // CSS grid
-// @import 'neat';                             // Neat path is defined in the Gulp file (line 45)
 
 
 // Sass functions, extendables & mixins.
 @import 'theme/type';                       // Font variables
-// @import 'sass-extras/neat';                 // Base grid variables for Neat
 @import 'sass-extras/mixins';               // Useful mixins
 
 

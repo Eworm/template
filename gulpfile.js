@@ -1,6 +1,5 @@
 const gulp = require('gulp'),
     plugins = require('gulp-load-plugins')(),
-    neat = require('bourbon-neat').includePaths,
     livereload = require('gulp-livereload');
 
 
@@ -34,7 +33,7 @@ function css(done) {
 
         .pipe(plugins.sass({
             outputStyle: 'compressed',
-            includePaths: ['node_modules/normalize-scss/sass/normalize', neat]
+            includePaths: ['node_modules/normalize-scss/sass/normalize']
         }))
 
         .pipe(plugins.autoprefixer({
