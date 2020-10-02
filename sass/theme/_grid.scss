@@ -5,12 +5,12 @@ $site--max-width: 1024px;      // The max-size of the site.
 .container {
     width: 100%;
     max-width: $site--max-width;
+    padding-right: pt(2);
+    padding-left: pt(2);
     margin: 0 auto;
     clear: both;
 
     @media (max-width: $mq--lap) {
-        padding-right: pt(2);
-        padding-left: pt(2);
     }
 }
 
