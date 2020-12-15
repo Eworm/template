@@ -20,7 +20,6 @@
     }
 
     @media (min-width: $mq--lap) {
-        float: left;
     }
 
     &__img {
@@ -37,6 +36,5 @@
     @media (min-width: $mq--lap) {
         margin: 0;
         display: block;
-        float: left;
     }
 }

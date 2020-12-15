@@ -12,7 +12,6 @@
 %formrow {
     width: 100%;
     margin-bottom: pt(2);
-    float: left;
     clear: both;
 
     @media (min-width: $mq--lap) {
@@ -46,7 +45,6 @@
 %post {
     width: 100%;
     margin-bottom: pt(4);
-    float: left;
     opacity: 1;
     transition: opacity .2s ease;
 
@@ -71,7 +69,6 @@
             margin-right: pt(2);
             position: relative;
             display: block;
-            float: left;
             overflow: hidden;
 
             img {

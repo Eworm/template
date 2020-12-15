@@ -1,12 +1,12 @@
 // Container for comments
 .comments-area {
     margin-top: pt(4);
-    
+
     ol {
         margin: 0;
         padding: 0;
         list-style-type: none;
-        
+
         ol {
             margin-top: pt(2);
         }
@@ -26,7 +26,6 @@
     width: 100%;
     padding: pt(2) 0;
     position: relative;
-    float: left;
     border-bottom: 2px solid $border;
     background: transparent;
 
@@ -73,7 +72,6 @@
 // The author name
 .comment__author {
     width: 100%;
-    float: left;
     font-weight: bold;
     line-height: 32px;
 
@@ -192,7 +190,7 @@
 
 //
 .comment-form {
-    
+
     p {
         margin-top: 0;
         margin-bottom: pt(2);

@@ -6,9 +6,9 @@
     border-spacing: 0;
 
     tr {
-        
+
         &:last-child {
-            
+
             th,
             td {
                 border-bottom: 0;
@@ -27,9 +27,9 @@
     th {
         background-color: $border;
     }
-    
-    
-    
+
+
+
     // Responsive table
     &--responsive {
         position: relative;
@@ -45,7 +45,6 @@
 
         thead {
             display: block;
-            float: left;
             border: 1px solid $border;
             vertical-align: middle;
 

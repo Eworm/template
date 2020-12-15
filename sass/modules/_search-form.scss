@@ -28,7 +28,6 @@
             width: 30%;
             padding: 0;
             display: block;
-            float: left;
             clear: none;
             background: transparent;
             text-align: left;
@@ -42,7 +41,6 @@
 
             @media (min-width: $mq--lap) {
                 width: 70%;
-                float: left;
             }
         }
     }

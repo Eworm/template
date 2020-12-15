@@ -5,13 +5,11 @@
     list-style-type: none;
 
     > li {
-        float: left;
 
         > a {
             margin-right: pt(1);
             padding: pt(1) pt(2);
             display: block;
-            float: left;
             border: 1px solid $border;
             color: $body;
             text-decoration: none;
@@ -21,40 +19,39 @@
                 background: $border;
             }
         }
-        
+
         > span {
             margin-right: pt(1);
             padding: pt(1) pt(2);
             display: block;
-            float: left;
             border: 1px solid transparent;
             color: $body;
             text-decoration: none;
         }
     }
 
-    
+
     // Next & prev
     &__navigation {
-    
+
         &--prev {
         }
-    
+
         &--next {
         }
     }
-    
-    
+
+
     // A list item
     &__number {
         display: none;
-    
+
         @media (min-width: $mq--lap) {
             display: block;
         }
-        
+
         &--active {
-        
+
             > a {
                 background: $border;
             }

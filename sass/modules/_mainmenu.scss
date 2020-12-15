@@ -7,7 +7,6 @@
     @media (min-width: $mq--lap) {
         width: 100%;
         height: auto;
-        float: left;
     }
 }
 
@@ -18,7 +17,6 @@
     margin: 0;
     padding: 0;
     display: block;
-    float: left;
     overflow-x: auto;
     background: $nav-bg;
     list-style-type: none;
@@ -41,7 +39,6 @@
 
     @media (min-width: $mq--lap) {
         position: relative;
-        float: left;
     }
 
     > a {
@@ -56,7 +53,6 @@
         @media (min-width: $mq--lap) {
             padding: pt(2) pt(4);
             position: relative;
-            float: left;
         }
 
         &:hover,

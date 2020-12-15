@@ -1,4 +1,4 @@
-// Lazy loading: https://www.andreaverlicchi.eu/lazyload/
+// Lazy loading: https://www.andreaverlicchi.eu/vanilla-lazyload/
 var template = window.template || {};
 template.lazyload = {};
 

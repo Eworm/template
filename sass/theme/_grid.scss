@@ -15,10 +15,10 @@ $site--max-width: 1400px;      // The max-size of the site.
 }
 
 // Content
-// .l-c {
-//     @extend %column;
-//     grid: auto-flow / 70%;
-// }
+.l-c {
+    @extend %column;
+    grid: auto-flow / 70%;
+}
 
 // Content + sidebar
 .l-cs {

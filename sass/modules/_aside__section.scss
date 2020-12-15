@@ -3,7 +3,6 @@
     width: 100%;
     margin-bottom: pt(2);
     padding: pt(2);
-    float: left;
     border: 1px solid $border;
     word-break: break-word;
 
@@ -36,22 +35,21 @@
     }
 
     iframe {
-        float: left;
     }
-    
-    
+
+
     // Sidebar section title
     &__header {
         margin: 0 0 pt(1);
         font-weight: bold;
         font-size: $fs-def;
-    
+
         @media (min-width: $mq--lap) {
         }
-    
+
         a {
             text-decoration: none;
-    
+
             &:hover,
             &:focus {
                 text-decoration: underline;
