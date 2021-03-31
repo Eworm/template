@@ -8,22 +8,21 @@
 
             <div class="main__content">
 
-                {% do action('woocommerce_before_single_product') %}
+                {% do
+                    action('woocommerce_before_single_product') %}
 
-                <article itemscope itemtype="http://schema.org/Product" class="single-product-details {{ post.class }}">
+                <article itemscope="itemscope" itemtype="http://schema.org/Product" class="single-product-details {{ post.class }}">
 
                     <div class="single-product-details__images">
 
-                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                            data-src="{{ post.thumbnail.src('shop_single') }}"
-                            class="b-lazy "
-                            alt="{{ post.title }}">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ post.thumbnail.src('shop_single') }}" class="b-lazy " alt="{{ post.title }}">
 
                     </div>
 
                     <div class="single-product-details__summary entry-summary">
 
-                        {% do action('woocommerce_single_product_summary') %}
+                        {% do
+                            action('woocommerce_single_product_summary') %}
 
                     </div>
 
@@ -31,7 +30,8 @@
 
                 </article>
 
-                {% do action('woocommerce_after_single_product') %}
+                {% do
+                    action('woocommerce_after_single_product') %}
 
             </div>
 
@@ -39,4 +39,4 @@
 
     </div>
 
-{% endblock  %}
+{% endblock %}

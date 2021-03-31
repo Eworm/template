@@ -34,7 +34,7 @@
             $products_array['url'] = get_permalink($product_id);
 
             // Delete button
-            $myarray['delete_permalink'] = esc_url(wc_get_cart_remove_url( $cart_item_key ));
+            $myarray['delete_permalink'] = esc_url(wc_get_cart_remove_url($cart_item_key));
             $products_array['delete_productid'] = esc_attr($product_id);
             $products_array['delete_sku'] = esc_attr($_product->get_sku());
 
@@ -68,13 +68,13 @@
             if ($_product->is_sold_individually()) {
                 $product_quantity = sprintf('1 <input type="hidden" name="cart[%s][qty]" value="1">', $cart_item_key);
             } else {
-                $product_quantity = woocommerce_quantity_input( array(
+                $product_quantity = woocommerce_quantity_input(array(
                     'input_name'   => "cart[{$cart_item_key}][qty]",
                     'input_value'  => $cart_item['quantity'],
                     'max_value'    => $_product->get_max_purchase_quantity(),
                     'min_value'    => '0',
                     'product_name' => $_product->get_name(),
-                ), $_product, false );
+                ), $_product, false);
             }
             $products_array['quantity'] = apply_filters('woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item);
 
