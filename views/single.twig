@@ -2,157 +2,36 @@
 
 {% block content %}
 
-    <div class="l-cs">
-
-        <main role="main">
-
-            <h1 class="post__header single-post__header">
-                {{ post.title }}
-            </h1>
-
-            <div class="post__meta">
-
-                <a href="{{ post.author.link }}" title="Alle berichten van {{ post.author.name }}">
-                    {{ post.author.name }}
-                </a>
-
+    <section class="light">
+        <div class="container">
+            <a href="/blog" class="button-back">Terug</a>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <br><br>
+                    <img src="{{ post.thumbnail.src | resize(700, auto) }}" class="img-responsive">
+                    <br><br>
+                </div>
             </div>
-
-            {% if post.password_required %}
-
-                <div class="post__entry">
-
-                    <p>
-                        Deze content is beveiligd met een wachtwoord.
-                    </p>
-
-                    <form class="signupform" action="{{site.link}}/wp-login.php?action=postpass" method="post">
-
-                        <fieldset>
-
-                            <div class="form-row">
-                                <label for="pwbox-{{post.ID}}">Wachtwoord:</label>
-                                <input class="password-box" name="post_password" id="pwbox-{{post.ID}}" type="password" placeholder="Password" size="20" maxlength="20">
-                            </div>
-
-                            <div class="form-row">
-                                <button class="btn btn--primary" type="submit" name="Submit">
-                                    Wachtwoord opgeven
-                                </button>
-                            </div>
-
-                        </fieldset>
-
-                    </form>
-
+            <div>
+                <div class="blog-date">
+                    {{ post.date | date('j F Y') }}
                 </div>
-
-            {% else %}
-
-                <div class="post__entry">
-
+                <h3 class="blogtitle">{{ post.title }}</h3>
+                <div class="blogtext">
                     {{ post.content | replace({'<iframe': '<div class="video-wrapper"><iframe', '</iframe>': '</iframe></div>', '<table>': '<table class="table">'})}}
-
-                    {% if post.thumbnail %}
-
-                        <img
-                            src="{{ post.thumbnail.src }}"
-                            srcset="{{ post.thumbnail.src | retina(1) }} 1x,
-                        {{ post.thumbnail.src | retina(2) }}  2x,
-                        {{ post.thumbnail.src | retina(3) }}  3x,
-                        {{ post.thumbnail.src | retina(4) }}  4x"
-                            class="img-responsive"
-                            alt="{{ post.thumbnail.alt }}">
-
-                    {% endif %}
-
+                    <p class="special">
+                        <img src="{{ Image(post.meta('afbeelding')).src }}">
+                    </p>
+                    {{ post.meta('content_2') }}
+                    <p class="special">
+                        <img src="{{ Image(post.meta('afbeelding_2')).src }}">
+                    </p>
+                    {{ post.meta('content_3') }}
                 </div>
-
-                <div class="post__meta">
-
-                    <time datetime="{{ post.date | date('Y-m-d') }}" pubdate="pubdate">
-
-                        <a href="{{ post.link }}" title="Directe link naar {{ item.title }}">
-
-                            {{ post.date }}
-
-                        </a>
-
-                    </time>
-
-                    {% if post.edit_link %}
-
-                        <br>
-
-                        <a href="{{ post.edit_link }}" title="">
-                            Aanpassen
-                        </a>
-
-                    {% endif %}
-
-                    <br>
-
-                    {% for category in post.categories %}
-
-                        <a href="{{ category.link }}">{{ category }}</a>
-
-                        {% if (loop.last == false) %}
-                            ,
-                        {% endif %}
-
-                    {% endfor %}
-
-                    <br>
-
-                    {% for tag in post.tags %}
-
-                        <a href="{{ tag.link }}">{{ tag }}</a>
-
-                        {% if (loop.last == false) %}
-                            ,
-                        {% endif %}
-
-                    {% endfor %}
-
-                </div>
-
-                {% if post.comment_status == 'open' %}
-
-                    <div class="comments-area">
-
-                        <h2 class="comments-area__header">
-                            {{ post.get_comment_count }}
-                            Reacties
-                        </h2>
-
-                        <ol class="comments-area__list">
-
-                            {% for comment in post.comments %}
-                                {% include 'modules/comment.twig' %}
-                            {% endfor %}
-
-                        </ol>
-
-                    </div>
-
-                    {{ post.comment_form }}
-
-                {% endif %}
-
-            {% endif %}
-
-        </main>
-
-        <aside role="complementary">
-
-            <h3>
-                Sidebar
-            </h3>
-
-            {% include 'sidebar.twig' %}
-
-        </aside>
-
-    </div>
+                <a href="/blog" class="button-back" style="margin-top: 30px;">Terug</a>
+            </div>
+            <hr class="brown">
+        </div>
+    </section>
 
 {% endblock %}

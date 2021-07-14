@@ -6,6 +6,7 @@ if (is_front_page())
 {
 
     $context['post'] = new TimberPost();
+    $context['options'] = get_fields('options');
     $template = ['home.twig'];
 
 }
@@ -26,13 +27,10 @@ else if (is_home())
     $posts_query = array(
         'post_type' =>      'post',
         'orderby' =>        'date',
-        'post_status' =>    'publish',
-        'paged' =>          $paged
+        'post_status' =>    'publish'
     );
 
     $context['posts'] = Timber::get_posts($posts_query);
-    $context['pagination'] = Timber::get_pagination(4);
-    // $context['dynamic_sidebar'] = Timber::get_widgets('1');
     $template = ['blog.twig'];
 
 }
@@ -41,7 +39,6 @@ else if (is_single())
 {
 
     $context['post'] = new TimberPost();
-    // $context['dynamic_sidebar'] = Timber::get_widgets('1');
     $template = ['single.twig'];
 
 }

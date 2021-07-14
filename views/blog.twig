@@ -2,38 +2,25 @@
 
 {% block content %}
 
-    <div class="l-cs">
+    <section class="light">
+        <div class="container">
+            <h1>{{ post.title }}</h1>
+            <br><br>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
 
-        <main role="main">
+                <div class="main__content">
 
-            <h1 class="main__header">
-
-                {{ post.title }}
-
-            </h1>
-
-            <div class="main__content">
-
-                {% for item in posts %}
-                    {% include 'modules/post-excerpt.twig' %}
-                {% endfor %}
-
-                {% include 'modules/pagination.twig' %}
+                    {% for item in posts %}
+                        {% include 'modules/post-excerpt.twig' %}
+                    {% endfor %}
+                </div>
 
             </div>
 
-        </main>
+        </div>
 
-        <aside role="complementary">
-
-            <h3>
-                Sidebar
-            </h3>
-
-            {% include 'sidebar.twig' %}
-
-        </aside>
-
-    </div>
+    </section>
 
 {% endblock %}

@@ -1,9 +1,10 @@
 <?php
 /*
-Template Name: Contact
+Template Name: Bierkaart
 */
 
     $context = Timber::get_context();
     $context['post'] = new TimberPost();
-    $template = ['page-contact.twig'];
+    $context['options'] = get_fields('options');
+    $template = ['page-bierkaart.twig'];
     Timber::render($template, $context);

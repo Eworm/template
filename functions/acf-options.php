@@ -13,5 +13,8 @@ function my_acf_show_admin($show)
 /* Add ACF options page
 ==================================================================================================================================*/
 if (function_exists('acf_add_options_page')) {
-    // acf_add_options_page(array('menu_title' => 'Algemene opties'));
+    acf_add_options_page(array(
+        'page_title' => 'Bieren enzo',
+        'menu_title' => 'Bieren enzo'
+    ));
 }

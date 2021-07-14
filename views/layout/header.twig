@@ -1,62 +1,42 @@
-<header class="l-header" role="banner">
-
-    <div class="container">
-
-        <div>
-
-            <a href="{{ site.link }}" class="logo" rel="home" title="Terug naar de homepage">
-
-                <svg class="logo__img">
-                    <title>
-                        {{ site.name }}
-                    </title>
-                    <use xlink:href="#general--logo"/>
-                </svg>
-
+<div class="header">
+    <div class="menu-holder">
+        <div class="logo">
+            <a href="/">
+                <img src="{{ site.theme.link }}/static/img/logo.png">
             </a>
-
-            <p class="cp">
-
-                {{ site.description }}
-
-            </p>
-
-            <nav class="mainmenu" role="navigation">
-
-                <ul class="main-menu">
-
-                    {% for item in menu.get_items %}
-
-                        <li class="nav-main-item {{item.classes | join(' ')}}">
-
-                            <a class="nav-main-link" href="{{item.link}}">{{item.title}}</a>
-
-                            {% if item.get_children %}
-
-                                <ul class="nav-drop">
-
-                                    {% for child in item.get_children %}
-
-                                        <!-- <li class="nav-drop-item"> <a href="{{child.link}}">{{child.title}}</a> </li> -->
-
-                                    {% endfor %}
-
-                                </ul>
-
-                            {% endif %}
-
-                        </li>
-
-                    {% endfor %}
-
-                </ul>
-
-            </nav>
-
         </div>
-
-        {% include 'modules/searchform.twig' %}
-
+        <div class="links-left">
+            <a href="/">Home</a>
+            <a href="about">About</a>
+            <a href="agenda">Agenda</a>
+            <a href="blog">Blog</a>
+        </div>
+        <div class="links-right">
+            <a href="bierkaart">Bierkaart</a>
+            <a href="bierwinkel">Bierwinkel</a>
+            <a href="contact">Contact</a>
+        </div>
+        <div class="cross">
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
     </div>
-
-</header>
+    <div class="menu-icon">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+        MENU
+    </div>
+    <div class="language-chooser">
+        <div class="language-selected">
+            NL
+            <i class="fa fa-chevron-down" style="font-size: 11px;"></i>
+        </div>
+        <div class="mout-dropdown">
+            <div>
+                <a href="/en/">
+                    EN
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="header-spacing"></div>
+</div>

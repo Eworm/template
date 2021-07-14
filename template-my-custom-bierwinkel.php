@@ -1,9 +1,9 @@
 <?php
 /*
-Template Name: Contact
+Template Name: Bierwinkel
 */
 
     $context = Timber::get_context();
     $context['post'] = new TimberPost();
-    $template = ['page-contact.twig'];
+    $template = ['page-bierwinkel.twig'];
     Timber::render($template, $context);

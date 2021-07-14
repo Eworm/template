@@ -1,0 +1,68 @@
+{% extends "base/base.twig" %}
+
+{% block content %}
+
+    <section class="light">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>{{ post.title }}</h1>
+                    <br>
+                    <br>
+                </div>
+            </div>
+
+            {% for item in posts %}
+
+                {% if loop.index % 2 == 1 %}
+                    <div class="row">
+                    {% endif %}
+
+                    <div class="col-md-6">
+                        <div class="agenda" data-seconds="1577836800">
+                            <div class="row">
+                                <div class="col-sm-3" style="text-align: center;">
+                                    <div class="agenda-icon">
+                                        <div class="agenda-background">
+                                            <img src="{{ site.theme.link }}/static/img/agenda.png"/>
+                                        </div>
+                                        <div class="agenda-content">
+                                            <div>{{ item.datum | date('j') }}</div>
+                                            <div>{{ item.datum | date('M y') }}</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-sm-9">
+                                    <h3>{{ item.title }}</h3>
+                                    <p>
+                                        {{ item.preview.read_more('') }}
+                                    </p>
+                                    <div class="agenda-location">
+                                        Proeflokaal MOUT
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {% if loop.index % 2 == 0 %}
+                    </div>
+                {% endif %}
+
+            {% endfor %}
+
+            <script>
+                var items = document.querySelectorAll('.agenda');
+                for (var i = 0; i < items.length; i++) {
+                    if (parseInt(items[i].getAttribute('data-seconds')) * 1000 < Date.now()) {
+                        items[i].style.opacity = "0.5";
+                    }
+                }
+            </script>
+
+        </div>
+    </section>
+
+{% endblock %}

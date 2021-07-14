@@ -1,77 +1,13 @@
-<article class="post {{ item.class }}">
-
-    <h1 class="post__header">
-
-        <a href="{{ item.link }}" title="Directe link naar {{ item.title }}">
-
-            {{ item.title }}
-
-        </a>
-
-    </h1>
-
-    <div class="post__entry">
-
-        {% if item.thumbnail %}
-
-            <a href="{{ item.link }}" title="Directe link naar {{ item.title }}">
-
-                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ item.thumbnail.src | resize(100, 100) }}" class="post-thumbnail b-lazy" alt="{{ item.thumbnail.alt }}">
-
-            </a>
-
-        {% endif %}
-
-        {{ item.preview(50, false, "") }}
-
+<a class="col-md-4 no-padding col-sm-6" href="{{ item.link }}">
+    <div class="square">
+        <div class="background" style="background-image:URL({{ item.thumbnail.src | resize(700, 700) }});"></div>
+        <div class="content">
+            <div class="vilt">
+                <img src="{{ site.theme.link }}/static/img/vilt-empty-0.png"/>
+            </div>
+            <div class="vilt-title">
+                {{ item.title }}
+            </div>
+        </div>
     </div>
-
-    <div class="post__meta">
-
-        <time datetime="{{ item.date | date('Y-m-d') }}" pubdate="pubdate">
-
-            <a href="{{ item.link }}" title="Directe link naar {{ item.title }}">
-
-                {{ item.date }}
-
-            </a>
-
-        </time>
-
-        <br>
-
-        {% if item.edit_link %}
-
-            <a href="{{ item.edit_link }}" title="Dit artikel aanpassen">
-                Aanpassen
-            </a>
-
-            <br>
-
-        {% endif %}
-
-        {% for category in item.categories %}
-
-            <a href="{{ category.link }}">{{ category }}</a>
-
-            {% if (loop.last == false) %}
-                ,
-            {% endif %}
-
-        {% endfor %}
-
-        <br>
-
-        {% for tag in item.tags %}
-
-            <a href="{{ tag.link }}">{{ tag }}</a>
-
-            {% if (loop.last == false) %}
-                ,
-            {% endif %}
-
-        {% endfor %}
-
-    </div>
-
-</article>
+</a>

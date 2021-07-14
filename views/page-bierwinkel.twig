@@ -1,0 +1,42 @@
+{% extends "base/base.twig" %}
+
+{% block content %}
+
+    <div class="full-size-banner">
+        <div class="banner-inner" style="width: 100%; left: 0%;">
+
+            <div class="banner-single" style="width: 100.0%">
+                <div class="banner-background" style="background-image:URL('/wp-content/uploads/2021/07/IMG_2422_MNah8d0.jpeg');" data-image="/wp-content/uploads/2021/07/IMG_2422_MNah8d0.jpeg"></div>
+                <div class="banner-content">
+                    <div class="banner-logo"></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="banner-bullets">
+
+            <div class="banner-bullet"></div>
+
+        </div>
+    </div>
+    <script>
+        var bannerCount = 1;
+        var bannerSize = 100.0;
+    </script>
+    <script src="{{ site.theme.link }}/static/js/beershop.js"></script>
+
+    <section class="light">
+        <div class="container">
+            <div class="row reveal">
+                <div class="col-md-6">
+                    <img src="/wp-content/uploads/2021/07/Bierwinkel_p8M7jkp.jpg" class="img-responsive" style="margin-top: 20px; margin-bottom: 20px;">
+                </div>
+                <div class="col-md-6">
+                    {{ post.content }}
+                </div>
+            </div>
+            <hr class="brown">
+        </div>
+    </section>
+
+{% endblock %}

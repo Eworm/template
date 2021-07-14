@@ -2,24 +2,153 @@
 
 {% block content %}
 
-    <div class="l-cs">
+    <div class="full-size-banner">
+        <div class="banner-inner" style="width: 200%; left: 0%;">
 
-        <main role="main">
-
-            <h1 class="main__header">
-
-                {{ post.title }}
-
-            </h1>
-
-            <div class="main__content">
-
-                {{ post.content }}
-
+            <div class="banner-single" style="width: 50.0%">
+                <div class="banner-background" style="background-image:URL('/wp-content/uploads/2021/07/Banner_home.jpeg');" data-image="/wp-content/uploads/2021/07/Banner_home.jpeg"></div>
+                <div class="banner-content">
+                    <div class="banner-logo"></div>
+                </div>
             </div>
 
-        </main>
+            <div class="banner-single" style="width: 50.0%">
+                <div class="banner-background" style="background-image:URL('/wp-content/uploads/2021/07/php69inKsPM.jpeg');" data-image="/wp-content/uploads/2021/07/php69inKsPM.jpeg"></div>
+                <div class="banner-content">
+                    <div class="banner-logo"></div>
+                </div>
+            </div>
 
+        </div>
+        <div class="banner-bullets">
+
+            <div class="banner-bullet"></div>
+            <div class="banner-bullet"></div>
+
+        </div>
+    </div>
+    <script>
+        var bannerCount = 2;
+        var bannerSize = 50.0;
+    </script>
+    <script src="{{ site.theme.link }}/static/js/index.js"></script>
+    <section class="light">
+        <div class="container">
+            <div class="row reveal">
+                <div class="col-md-6">
+                    <img src="/wp-content/uploads/2021/07/Bierzaak_aDHmTK0.jpg" class="img-responsive" style="margin-top: 20px; margin-bottom: 20px;">
+                </div>
+                <div class="col-md-6">
+                    {{ post.content }}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="blue parallax" data-image="/wp-content/uploads/2021/07/phpztkIEMPM_RLU494f.jpg">
+        <div class="content">
+            <span class="reveal">
+                <p>NEDERLANDSE BIEREN:<br>VERRASSEND EN UNIEK
+                </p>
+            </span>
+        </div>
+    </section>
+    <section class="brown">
+        <div class="ring">
+            <div class="container">
+                <h1>Nieuwste Bieren</h1>
+                <div class="brewer-spacing"></div>
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <div class="row reveal">
+                            <div class="col-md-4">
+                                <img src="{{ options.logo_1.sizes.medium }}" class="img-responsive">
+                            </div>
+                            <div class="col-md-8">
+                                <h3>{{ options.bier_1 }}</h3>
+                                <p>
+                                    {{ options.beschrijving_bier_1 }}
+                                </p>
+                                <hr class="brewer">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="row reveal">
+                            <div class="col-md-4">
+                                <img src="{{ options.logo_2.sizes.medium }}" class="img-responsive">
+                            </div>
+                            <div class="col-md-8">
+                                <h3>{{ options.bier_2 }}</h3>
+                                <p>
+                                    {{ options.beschrijving_bier_2 }}
+                                </p>
+                                <hr class="brewer">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <h3 align="center" class="reveal">Bekijk
+                    <a href="/bierkaart">hier</a>
+                    de volledige lijst met bieren</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="clean">
+        <div class="clearfix">
+            <a href="{{ options.url }}" class="left w50 block blue promotion-wrapper">
+                <div class="promotion-div reveal">
+                    <div class="promotion-bottle">
+                        <img src="{{ site.theme.link }}/static/img/bottle.png"/>
+                    </div>
+                    <div class="promotion-content">
+                        <div class="pc-header">
+                            Bier<br>
+                            van de week
+                        </div>
+                        <div class="pc-name">
+                            {{ options.titel }}
+                        </div>
+                        <div class="pc-brewer">
+                            {{ options.brouwer }}
+                        </div>
+                        <div class="pc-price">
+                            <div class="pc-price-side pc-price-big">
+                                {{ options.hele_euros }}
+                            </div>
+                            <div class="pc-price-side">
+                                <div>
+                                    ,{{ options.halve_euros }}
+                                </div>
+                                <div>
+                                    EUR
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <div class="left w50 block gray">
+                <div class="reserveren-div reveal">
+                    <h1>Proefplankjes</h1>
+                    <p>
+                        <p>Kun je maar moeilijk kiezen uit onze tien taps? Van zondag tot en met donderdag krijg je bij ons voor €8,70 een proefplankje! Vier proefglaasjes, zorgvuldig geselecteerd en toegelicht door ons personeel. Kom langs en maak elke week kennis met onze
+                            nieuwste tapbieren.&nbsp;</p>
+                    </p>
+                    <div class="reserveren-email">
+                        <a href="mailto:INFO@PROEFLOKAALMOUT.NL">INFO@PROEFLOKAALMOUT.NL</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="vimeo">
+        <iframe src="https://player.vimeo.com/video/100402798" frameborder="0" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowfullscreen"></iframe>
     </div>
 
 {% endblock %}

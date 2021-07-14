@@ -1,16 +1,77 @@
-<footer class="l-footer" role="contentinfo">
-
-    <div class="container">
-
-        <div>
-
-            &copy;
-            {{ function('date', 'Y') }}
-
-        </div>
-
+<div class="footer">
+    <div class="social-media">
+        <span>Social Media:</span>
+        <a href="http://www.twitter.com/proeflokaalmout" target="_blank">
+            <i class="fa fa-twitter-square" aria-hidden="true"></i>
+        </a>
+        <a href="http://www.facebook.com/proeflokaalmout" target="_blank">
+            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+        </a>
+        <a href="http://www.instagram.com/proeflokaal_mout" target="_blank">
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a href="https://untappd.com/v/proeflokaal-mout/5542329" target="_blank" class="untappd">
+            <img src='{{ site.theme.link }}/static/img/untappd.png' data-normal="{{ site.theme.link }}/static/img/untappd.png" data-hover="{{ site.theme.link }}/static/img/untappd_hover.png">
+        </a>
+        <script>
+            $(".untappd").hover(function() {
+                var img = $(this).find('img');
+                img.attr('src', img.attr('data-hover'));
+            }, function() {
+                var img = $(this).find('img');
+                img.attr('src', img.attr('data-normal'));
+            });
+        </script>
     </div>
+    <div class="bottom">
+        <div class="background"></div>
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h4>Openingstijden:</h4>
+                        <div>
+                            <p>Ma: gesloten<br/>Di: gesloten<br/>Wo: 15:00 - 20:00<br/>Do: 15:00 - 20:00<br/>Vr: 15:00 - 20:00<br/>Za: 14:00 - 20:00<br/>Zo: 14:00 - 20:00</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>Contact:</h4>
+                        <div>
+                            <a href="mailto:INFO@PROEFLOKAALMOUT.NL">
+                                <p>INFO@PROEFLOKAALMOUT.NL</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="tel:050 204 1350">
+                                <p>050 204 1350</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>KVK:</h4>
+                        <div>
+                            <p>62032887</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>Adres:</h4>
+                        <div>
+                            <p>Gedempte Zuiderdiep 43</p>
+                        </div>
+                        <div>
+                            <p>9711 HB GRONINGEN</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-</footer>
-
-{{ wp_footer }}
+<script src="{{ site.theme.link }}/static/js/jquery.parallax.js"></script>
+<script src="{{ site.theme.link }}/static/js/reveal.js"></script>
+<script>
+    window.sr = ScrollReveal().reveal('.reveal');
+</script>
+<script src="{{ site.theme.link }}/static/js/main.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>

@@ -2,112 +2,34 @@
 
 {% block content %}
 
-    <div class="l-cs">
-
-        <main class="main main--plus-aside" role="main">
-
-            <h1 class="main__header">
-
-                {{ post.title }}
-
-            </h1>
-
-            <div class="main__content">
-
-                {{ post.content }}
-
-                <form action="#body" method="post" id="js-contact-form" {% if email_sent %} class="form-sent" {% endif %}>
-
-                    {{ nonce }}
-
-                    <input type="hidden" name="submitted" id="submitted" value="true">
-
-                    {% if email_sent %}
-
-                        <div id="form-message" class="succes">
-                            Je bericht is verzonden!
-                        </div>
-
-                    {% endif %}
-
-                    <fieldset>
-
-                        <div class="form-row">
-
-                            <label class="label" for="contact_name">
-                                Naam
-                            </label>
-                            <input type="text" id="contact_name" name="contact_name" required="required" {% if contact_name %} value="{{ contact_name }}" {% endif %}>
-
-                            {% if contact_name_error %}
-                                Dit veld is verplicht
-                            {% endif %}
-
-                        </div>
-
-                        <div class="form-row">
-
-                            <label class="label" for="contact_contact">
-                                E-mailadres
-                            </label>
-                            <input type="email" id="contact_contact" name="contact_contact" required="required" {% if contact_contact %} value="{{ contact_contact }}" {% endif %}>
-
-                            {% if contact_contact_error %}
-                                Dit veld is verplicht
-                            {% endif %}
-
-                        </div>
-
-                        <div class="form-row">
-
-                            <label class="label" for="contact_info">
-                                Je bericht
-                            </label>
-                            <textarea id="contact_info" name="contact_info" required="required">
-                                {% if contact_info %}{{ contact_info }}
-                                {% endif %}
-                            </textarea>
-
-                            {% if contact_info_error %}
-                                Dit veld is verplicht
-                            {% endif %}
-
-                        </div>
-
-                        <div class="form-row">
-
-                            <button type="submit" class="btn btn--primary">
-                                Verstuur bericht
-                            </button>
-
-                        </div>
-
-                    </fieldset>
-
-                </form>
-
+    <section class="light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1>{{ post.title }}</h1>
+                    <div style="padding: 20px 0px;">
+                        <h3>Bereikbaarheid &amp; openingstijden</h3>
+                        <p>
+                            <p>
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2389.155332684436!2d6.565387316090193!3d53.21506317995176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c9cd53fce4cfff%3A0xb2c2bfa929de10c9!2sProeflokaal+MOUT!5e0!3m2!1snl!2snl!4v1478640728450"
+                                    padding-left="10px"
+                                    allowfullscreen=""
+                                    padding-right:=""
+                                    10px;=""
+                                    width="100%"
+                                    height="300"
+                                    frameborder="10"
+                                    align="middle">&lt;span id="selection-marker-1" class="redactor-selection-marker" data-verified="redactor</iframe>
+                            </p>
+                            <br>
+                            {{ post.content }}
+                        </p>
+                    </div>
+                </div>
             </div>
-
-        </main>
-
-        <aside role="complementary">
-
-            <div class="aside">
-
-                <script>
-                    var company_address = [
-                        {
-                            location: "Kerklaan 30b, Haren"
-                        }
-                    ];
-                </script>
-
-                <div id="js-map_address" style="width: 100%; height: 400px;"></div>
-
-            </div>
-
-        </aside>
-
-    </div>
+            <hr class="brown">
+        </div>
+    </section>
 
 {% endblock %}
