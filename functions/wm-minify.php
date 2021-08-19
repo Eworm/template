@@ -97,10 +97,6 @@ class WP_HTML_Compression
     public function parseHTML($html)
     {
         $this->html = $this->minifyHTML($html);
-
-        if ($this->info_comment) {
-            $this->html .= "\n" . $this->bottomComment($html, $this->html);
-        }
     }
 
     protected function removeWhiteSpace($str)

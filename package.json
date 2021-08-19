@@ -35,6 +35,8 @@
         "vanilla-lazyload": "^17.1.2"
     },
     "browserslist": [
-        "last 2 versions"
+        "> 0.5%",
+        "last 2 versions",
+        "not dead"
     ]
 }
