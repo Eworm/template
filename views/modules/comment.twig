@@ -4,7 +4,7 @@
 
         <div class="comment__author vcard">
 
-            <img  src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ comment.author.avatar }}" class="b-lazy avatar photo">
+            <img loading="lazy" data-src="{{ comment.author.avatar }}" class="lazy avatar photo" width="90" height="90">
 
         </div>
 
@@ -40,7 +40,7 @@
 
             {% if comment.approved %}
 
-                {{ comment.content | replace({'<iframe': '<div class="video-wrapper"><iframe', '</iframe>': '</iframe></div>', '<table>': '<table class="table">', '<img': '<img class="img-responsive"'})}}
+                {{ comment.content | replace({'<iframe': '<div class="video-wrapper"><iframe', '</iframe>': '</iframe></div>', '<table>': '<table class="table">', '<img': '<img loading="lazy" class="lazy img-responsive"'})}}
 
             {% else %}
 
@@ -66,7 +66,7 @@
 
                 <div class="comment__author vcard">
 
-                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ child.avatar }}" class="avatar photo b-lazy">
+                    <img loading="lazy" data-src="{{ child.avatar }}" class="avatar photo lazy" width="90" height="90">
 
                 </div>
 
@@ -102,7 +102,7 @@
 
                     {% if child.approved %}
 
-                        {{ child.content | replace({'<iframe': '<div class="video-wrapper"><iframe', '</iframe>': '</iframe></div>', '<table>': '<table class="table">', '<img': '<img class="img-responsive"'})}}
+                        {{ child.content | replace({'<iframe': '<div class="video-wrapper"><iframe', '</iframe>': '</iframe></div>', '<table>': '<table class="table">', '<img': '<img loading=lazy class="lazy img-responsive"'})}}
 
                     {% else %}
 

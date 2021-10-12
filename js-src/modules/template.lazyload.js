@@ -12,11 +12,9 @@ template.lazyload = {};
 
     };
 
-    lazyload.update = function()
-    {
+    lazyload.update = function() {
 
-        if (_lazyLoadInstance)
-        {
+        if (_lazyLoadInstance) {
             _lazyLoadInstance.update();
         }
 
@@ -24,9 +22,26 @@ template.lazyload = {};
 
     function _setupLazy() {
 
-        _lazyLoadInstance = new LazyLoad({
-            elements_selector: '.lazy'
-        });
+        // Use native lazyloading if available
+        // Use the javascript solution otherwise
+        // Remember to set image width & height!
+        // https://web.dev/browser-level-image-lazy-loading/
+        if ('loading' in HTMLImageElement.prototype) {
+            const images = document.querySelectorAll('img[loading="lazy"]');
+            images.forEach(img => {
+                if (img.dataset.src) {
+                    img.src = img.dataset.src;
+                }
+                if (img.dataset.srcset) {
+                    img.srcset = img.dataset.srcset;
+                }
+            });
+        } else {
+            _lazyLoadInstance = new LazyLoad({
+                elements_selector: '.lazy'
+            });
+        }
+
 
     };
 
