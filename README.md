@@ -2,30 +2,27 @@ This project uses open-source software to work more efficient. You'll need to in
 
 # Necessary global software
 
-**1:** Nodejs: <http://nodejs.org/>
+**1:** Nodejs: <https://nodejs.org/en/>
 
-**2:** Gulp: <http://gulpjs.com/>
+**2:** NPM: <https://www.npmjs.com/>
 
-**3:** Yarn: <https://yarnpkg.com/lang/en/>
-
-**4:** SASS: <http://sass-lang.com/install>
+**3:** SASS: <https://sass-lang.com/>
 
 # After installing the above software you need to install some dependencies. These files aren't in the repo to keep it clean. These dependencies are installed in the project directory
 
-**5:** Add dependencies: `yarn install`. This command adds a node_modules directory which you _really_ should gitignore.
+**4:** Add dependencies: `npm install`. This command adds a node_modules directory which you _really_ should gitignore.
 
-**6:** Add these lines to your global gitignore:
+**5:** Add these lines to your global gitignore:
 
 ```
 node_modules
-.sass-cache
 ```
 
 **All done!**
 
 # Editing javascript, stylesheet, and images
 
-The easiest way to start is to navigate to the project dir and run `gulp` in a terminal window. This executes the standard gulp watch task. This task keeps an eye on the javascript and sass files and compiles svg sprite files. You should read the gulpfile to see what other tasks there are.
+The easiest way to start is to navigate to the project dir and run `npm run watch:all` in a terminal window. This executes the standard gulp watch task. This task keeps an eye on the javascript and sass files and compiles svg sprite files. You should read the gulpfile to see what other tasks there are.
 
 ## The directories
 
@@ -33,11 +30,11 @@ The easiest way to start is to navigate to the project dir and run `gulp` in a t
 
 **Fonts** Use this dir for webfonts.
 
-**Images** The images-src dir is used for original files. `gulp sprite` generates an svg symbol sprite from svg's located in the sprite dir.
+**Images** The images-src dir is used for original files. `npm run build:sprite` generates an svg symbol sprite from svg's located in the sprite dir.
 
-**Javascript** The js-src dir is used for your own javascript files. `gulp javascript` combines & minifies these files (and optional npm files) and puts the resulting file in the js dir.
+**Javascript** The js-src dir is used for your own javascript files. `npm run build:js` combines & minifies these files (and optional npm files) and puts the resulting file in the js dir.
 
-**SASS** All sass files are conveniently located in the sass dir. Use `gulp css` to combine them. The structure of the subdirs is based on <https://smacss.com/>. There's a gulp task `gulp lint` which you can use to check your scss against the hidden yml file.
+**SASS** All sass files are located in the sass dir. Use `npm run build:css` to combine them. The structure of the subdirs is based on <https://smacss.com/>.
 
 ## Timber
 
@@ -50,4 +47,4 @@ Timber (<https://www.upstatement.com/timber/>) is an awesome way of making your 
 
 # The php side of things
 
-All php functions are split in seperate files (with handy filenames) and are included in /includes.
+All php functions are split in seperate files (with handy filenames) and are included in /functions.
