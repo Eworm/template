@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "private": true,
     "description": "blabla",
-    "homepage": "http://www.woutmager.nl",
+    "homepage": "https://www.woutmager.nl",
     "scripts": {
         "scss": "node-sass --source-map=false --include-path node_modules/normalize-scss/sass/normalize --output-style compressed -o . sass/style.scss",
         "autoprefixer": "postcss -u autoprefixer --no-map -r style.css",
