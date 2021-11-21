@@ -11,7 +11,7 @@
         "watch:css": "onchange 'sass/**/*.scss' -- npm run build:css",
         "build:js": "terser node_modules/vanilla-lazyload/dist/lazyload.js node_modules/easy-autocomplete/dist/jquery.easy-autocomplete.js js-src/modules/template.lazyload.js js-src/modules/template.autocomplete.js js-src/modules/template.googlemaps.js js-src/modules/template.mq.js js-src/modules/template.mq-palm.js js-src/modules/template.mq-lap.js js-src/modules/template.mq-desk.js js-src/modules/template.mq-wall.js js-src/modules/template.mq-cinema.js js-src/base/template.init.js -o js/functions.min.js && notify --message 'JS 🤘'",
         "watch:js": "onchange 'js-src/**/*.js' -- npm run build:js",
-        "build:lab": "uglifyjs js-src/vendor/LABjs/LAB.js js-src/base/lab-loader.js -o js/lab.min.js",
+        "build:lab": "terser js-src/vendor/LABjs/LAB.js js-src/base/lab-loader.js -o js/lab.min.js",
         "build:sprite": "svg-sprite --config=./attrs-sprite.json --svg-xmldecl=false --symbol --symbol-dest=images --svg-rootattrs --symbol-sprite='sprite.svg' images-src/sprite/**/*.svg && notify --message 'Sprite 🤘'",
         "watch:sprite": "onchange 'images-src/sprite/**/*.svg' -- npm run build:svg",
         "watch:all": "npm-run-all --parallel watch:css watch:js watch:sprite"
