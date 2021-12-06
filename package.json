@@ -13,7 +13,7 @@
         "watch:js": "onchange 'js-src/**/*.js' -- npm run build:js",
         "build:lab": "terser js-src/vendor/LABjs/LAB.js js-src/base/lab-loader.js -o js/lab.min.js",
         "build:sprite": "svg-sprite --config=./attrs-sprite.json --svg-xmldecl=false --symbol --symbol-dest=images --svg-rootattrs --symbol-sprite='sprite.svg' images-src/sprite/**/*.svg && notify --message 'Sprite 🤘'",
-        "watch:sprite": "onchange 'images-src/sprite/**/*.svg' -- npm run build:svg",
+        "watch:sprite": "onchange 'images-src/sprite/**/*.svg' -- npm run build:sprite",
         "watch:all": "npm-run-all --parallel watch:css watch:js watch:sprite"
     },
     "devDependencies": {
