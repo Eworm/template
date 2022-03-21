@@ -56,8 +56,10 @@ add_action('widgets_init', 'remove_recent_comments_style');
 
 /* Remove Gutenberg Block Library CSS from loading on the frontend
 ==================================================================================================================================*/
-function smartwp_remove_wp_block_library_css(){
-    wp_dequeue_style( 'wp-block-library' );
-    wp_dequeue_style( 'wp-block-library-theme' );
+function smartwp_remove_wp_block_library_css()
+{
+    wp_dequeue_style('wp-block-library');
+    wp_dequeue_style('wp-block-library-theme');
+    wp_dequeue_style('global-styles');
 }
-add_action( 'wp_enqueue_scripts', 'smartwp_remove_wp_block_library_css' );
+add_action('wp_enqueue_scripts', 'smartwp_remove_wp_block_library_css');
