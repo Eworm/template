@@ -5,28 +5,16 @@
     "description": "blabla",
     "homepage": "https://www.woutmager.nl",
     "scripts": {
-        "scss": "sass --load-path node_modules/normalize-scss/sass/normalize --style compressed -o sass/style.scss style.css",
-        "autoprefixer": "postcss -u autoprefixer --no-map -r style.css",
-        "build:css": "npm run scss && npm run autoprefixer && notify --message 'SASS 🤘'",
-        "watch:css": "onchange 'sass/**/*.scss' -- npm run build:css",
-        "build:js": "terser node_modules/vanilla-lazyload/dist/lazyload.js node_modules/easy-autocomplete/dist/jquery.easy-autocomplete.js js-src/modules/template.lazyload.js js-src/modules/template.autocomplete.js js-src/modules/template.googlemaps.js js-src/modules/template.mq.js js-src/modules/template.mq-palm.js js-src/modules/template.mq-lap.js js-src/modules/template.mq-desk.js js-src/modules/template.mq-wall.js js-src/modules/template.mq-cinema.js js-src/base/template.init.js -o js/functions.min.js && notify --message 'JS 🤘'",
-        "watch:js": "onchange 'js-src/**/*.js' -- npm run build:js",
-        "build:lab": "terser js-src/vendor/LABjs/LAB.js js-src/base/lab-loader.js -o js/lab.min.js",
-        "build:sprite": "svg-sprite --config=./attrs-sprite.json --svg-xmldecl=false --symbol --symbol-dest=images --svg-rootattrs --symbol-sprite='sprite.svg' images-src/sprite/**/*.svg && notify --message 'Sprite 🤘'",
-        "watch:sprite": "onchange 'images-src/sprite/**/*.svg' -- npm run build:sprite",
-        "watch:all": "npm-run-all --parallel watch:css watch:js watch:sprite"
+        "dev": "npm run development",
+        "development": "mix",
+        "prod": "mix --production",
+        "watch": "mix watch"
     },
     "devDependencies": {
-        "autoprefixer": "^10.3.7",
-        "node-notifier-cli": "^2.0.0",
-        "npm-run-all": "^4.1.5",
-        "onchange": "^7.1.0",
-        "postcss": "^8.3.9",
-        "postcss-cli": "^9.0.1",
+        "laravel-mix": "^6.0.48",
         "sass": "^1.49.9",
-        "svg-sprite": "^1.5.3",
-        "terser": "^5.9.0",
-        "vinyl": "^2.2.1"
+        "sass-loader": "^12.6.0",
+        "svg-spritemap-webpack-plugin": "^4.4.0"
     },
     "main": "index.js",
     "repository": "git@github.com:Eworm/template.git",
@@ -36,10 +24,5 @@
         "easy-autocomplete": "^1.3.5",
         "normalize-scss": "^7.0.1",
         "vanilla-lazyload": "^17.5.0"
-    },
-    "browserslist": [
-        "> 0.5%",
-        "last 2 versions",
-        "not dead"
-    ]
+    }
 }
