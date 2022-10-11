@@ -14,7 +14,7 @@
         "laravel-mix": "^6.0.48",
         "sass": "^1.49.9",
         "sass-loader": "^12.6.0",
-        "svg-spritemap-webpack-plugin": "^4.4.0"
+        "svg-spritemap-webpack-plugin": "^4.5.0"
     },
     "main": "index.js",
     "repository": "git@github.com:Eworm/template.git",
