@@ -39,10 +39,11 @@ mix.options({
                             'images/sprite.svg',
                         chunk: {
                             name:
-                                'content/themes/project/assets/dist/icons/spritemap'
+                                'js/spritemap',
                         }
                     }
                 }
             )
         ]
     })
+    .version()
