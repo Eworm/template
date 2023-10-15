@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // Convert px to em
 // Only use this for media queries
 @function em($pixels, $context: 16px) {
@@ -9,7 +11,7 @@
         $context: $context * 1px;
     }
 
-    @return $pixels / $context * 1em;
+    @return math.div($pixels, $context) * 1em;
 }
 
 

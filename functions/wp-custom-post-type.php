@@ -36,39 +36,9 @@ function cpt_register()
         'supports'              => array('title', 'editor', 'excerpt', 'comments'),
         'map_meta_cap'          => true,
         'has_archive'           => true,
-        'slug'                  => 'cpt'
+        'slug'                  => 'cpt',
+        'taxonomies'            => array('category')
       );
 
     register_post_type('cpt', $args);
 }
-
-
-/* CPT Taxonomies
-==================================================================================================================================*/
-function create_cpt_taxonomies()
-{
-    $labels = array(
-        'name'              => _x('Categorieën', 'taxonomy general name'),
-        'singular_name'     => _x('Categorie', 'taxonomy singular name'),
-        'search_items'      => __('Categorieën doorzoeken'),
-        'all_items'         => __('All Categories'),
-        'parent_item'       => __('Parent Category'),
-        'parent_item_colon' => __('Parent Category:'),
-        'edit_item'         => __('Edit Category'),
-        'update_item'       => __('Update Category'),
-        'add_new_item'      => __('Add New Category'),
-        'new_item_name'     => __('New Category Name'),
-        'menu_name'         => __('Categories'),
-    );
-
-    $args = array(
-        'hierarchical'      => true, // Set this to 'false' for non-hierarchical taxonomy (like tags)
-        'show_ui'           => true,
-        'show_admin_column' => true,
-        'query_var'         => true,
-        'rewrite'           => array( 'slug' => 'mediatheek' ),
-    );
-
-    register_taxonomy('create_cpt_taxonomies', array( 'mediatheek' ), $args);
-}
-add_action('init', 'create_cpt_taxonomies', 0);
