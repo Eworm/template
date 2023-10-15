@@ -12,7 +12,7 @@ Version: 1.0
 
 // Theme variables
 @import 'sass-extras/functions';            // Useful functions
-@import 'node_modules/normalize-scss/sass/normalize/import-now';                       //
+@import 'node_modules/modern-normalize/modern-normalize';
 @import 'theme/colors';                     // Colors
 @import 'theme/settings';                   // Global settings
 @import 'sass-extras/extendables';          // Useful extensions

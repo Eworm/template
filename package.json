@@ -22,7 +22,7 @@
     "license": "MIT",
     "dependencies": {
         "easy-autocomplete": "^1.3.5",
-        "normalize-scss": "^7.0.1",
+        "modern-normalize": "^2.0.0",
         "vanilla-lazyload": "^17.5.0"
     }
 }
