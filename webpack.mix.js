@@ -12,9 +12,7 @@ mix.options({
     .setResourceRoot('/')
     .sass('sass/style.scss', path.resolve('/'))
     .combine([
-        'node_modules/vanilla-lazyload/dist/lazyload.js',
         'node_modules/easy-autocomplete/dist/jquery.easy-autocomplete.js',
-        'js-src/modules/template.lazyload.js',
         'js-src/modules/template.autocomplete.js',
         'js-src/modules/template.googlemaps.js',
         'js-src/modules/template.mq.js',
