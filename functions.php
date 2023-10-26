@@ -1,5 +1,10 @@
 <?php
 
+// Load Composer dependencies.
+require_once __DIR__ . '/vendor/autoload.php';
+
+$timber = new Timber\Timber();
+
 /* Includes
 ==================================================================================================================================*/
 include_once(get_stylesheet_directory() . '/functions/acf-options.php');
