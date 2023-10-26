@@ -27,12 +27,6 @@ function template_register_required_plugins()
         ),
 
         array(
-            'name'      => 'Timber',
-            'slug'      => 'timber-library',
-            'required'  => true,
-        ),
-
-        array(
             'name'      => 'Classic editor',
             'slug'      => 'classic-editor',
             'required'  => true,
