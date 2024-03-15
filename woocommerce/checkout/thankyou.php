@@ -16,7 +16,7 @@
  */
 
     $context = Timber::get_context();
-    $context['post'] = new TimberPost();
+    $context['post'] = Timber::get_post();
 
     if ($order) :
 

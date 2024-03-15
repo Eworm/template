@@ -16,7 +16,7 @@
  */
 
     $context = Timber::get_context();
-    $context['post'] = new TimberPost();
+    $context['post'] = Timber::get_post();
     $context['products'] = [];
 
     foreach (WC()->cart->get_cart() as $cart_item_key => $cart_item) {

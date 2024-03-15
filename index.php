@@ -5,7 +5,7 @@ $context = Timber::get_context();
 if (is_front_page())
 {
 
-    $context['post'] = new TimberPost();
+    $context['post'] = Timber::get_post();
     $template = ['home.twig'];
 
 }
@@ -13,7 +13,7 @@ if (is_front_page())
 else if (is_page())
 {
 
-    $context['post'] = new TimberPost();
+    $context['post'] = Timber::get_post();
     $template = ['page.twig'];
 
 }
@@ -21,7 +21,7 @@ else if (is_page())
 else if (is_home())
 {
 
-    $context['post'] = new TimberPost();
+    $context['post'] = Timber::get_post();
 
     $posts_query = array(
         'post_type' =>      'post',
@@ -40,7 +40,7 @@ else if (is_home())
 else if (is_single())
 {
 
-    $context['post'] = new TimberPost();
+    $context['post'] = Timber::get_post();
     // $context['dynamic_sidebar'] = Timber::get_widgets('1');
     $template = ['single.twig'];
 
@@ -49,7 +49,7 @@ else if (is_single())
 else if (is_post_type_archive())
 {
 
-    $context['post'] = new TimberPost();
+    $context['post'] = Timber::get_post();
     $context['posts'] = Timber::get_posts();
     $template = ['archive.twig'];
 
@@ -58,7 +58,7 @@ else if (is_post_type_archive())
 else if (is_category())
 {
 
-    $context['post'] = new TimberPost();
+    $context['post'] = Timber::get_post();
     $context['posts'] = Timber::get_posts();
     $context['title'] = single_cat_title('', false);
     $template = ['category.twig'];
@@ -68,7 +68,7 @@ else if (is_category())
 else if (is_tag())
 {
 
-    $context['post'] = new TimberPost();
+    $context['post'] = Timber::get_post();
     $context['posts'] = Timber::get_posts();
     $context['title'] = single_cat_title('', false);
     $template = ['tag.twig'];
@@ -78,7 +78,7 @@ else if (is_tag())
 else if (is_search())
 {
 
-    $context['post'] = new TimberPost();
+    $context['post'] = Timber::get_post();
     $context['posts'] = Timber::get_posts();
     $context['pagination'] = Timber::get_pagination(4);
     $context['searchterm'] = get_search_query();

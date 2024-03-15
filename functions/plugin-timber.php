@@ -44,7 +44,7 @@ class MyTimberSite extends \Timber
     {
         $twig->addFunction(
 
-            new Twig_SimpleFunction(
+            new Twig\TwigFunction(
 
                 'include_critical_css',
                 [$this, 'include_critical_css'],
@@ -56,7 +56,7 @@ class MyTimberSite extends \Timber
 
         $twig->addFunction(
 
-            new Twig_SimpleFunction(
+            new Twig\TwigFunction(
 
                 'include_svg',
                 [$this, 'include_svg'],
@@ -68,7 +68,7 @@ class MyTimberSite extends \Timber
 
         $twig->addFunction(
 
-            new Twig_SimpleFunction(
+            new Twig\TwigFunction(
 
                 'include_fav',
                 [$this, 'include_fav'],
@@ -80,7 +80,7 @@ class MyTimberSite extends \Timber
 
         $twig->addFunction(
 
-            new Twig_SimpleFunction(
+            new Twig\TwigFunction(
 
                 'include_js',
                 [$this, 'include_js'],

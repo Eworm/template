@@ -4,6 +4,6 @@ Template Name: Winkelmand
 */
 
     $context = Timber::get_context();
-    $context['post'] = new TimberPost();
+    $context['post'] = Timber::get_post();
     $template = ['page-cart.twig'];
     Timber::render($template, $context);
