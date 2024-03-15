@@ -8,7 +8,7 @@ if (!class_exists('Timber')) {
     return;
 }
 
-class MyTimberSite extends TimberSite
+class MyTimberSite extends \Timber
 {
     public function __construct()
     {
@@ -27,7 +27,8 @@ class MyTimberSite extends TimberSite
     */
     public function add_to_context($context)
     {
-        $context['menu'] = new TimberMenu('main');
+        // $context['menu'] = new TimberMenu('main');
+        $context['menu'] = Timber::get_menu('main');
 
         return $context;
     }
