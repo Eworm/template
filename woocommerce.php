@@ -6,7 +6,7 @@ if (! class_exists('Timber')) {
     return;
 }
 
-$context            = Timber::get_context();
+$context            = Timber::context();
 $context['cart']    = WC()->cart->get_cart_contents_count();
 
 

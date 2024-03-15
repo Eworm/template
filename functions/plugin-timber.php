@@ -12,8 +12,8 @@ class MyTimberSite extends \Timber
 {
     public function __construct()
     {
-        add_filter('timber_context', array($this, 'add_to_context'));
-        add_filter('get_twig', array($this, 'add_to_twig'));
+        add_filter('timber/context', array($this, 'add_to_context'));
+        add_filter('timber/twig', array($this, 'add_to_twig'));
 
         parent::__construct();
     }

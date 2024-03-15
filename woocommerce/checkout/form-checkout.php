@@ -15,7 +15,7 @@
  * @version 3.5.0
  */
 
-    $context = Timber::get_context();
+    $context = Timber::context();
     $context['post'] = Timber::get_post();
     $context['action'] = esc_url(wc_get_checkout_url());
     $context['checkout'] = $checkout;

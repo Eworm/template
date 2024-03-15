@@ -15,7 +15,7 @@
  * @version 3.8.0
  */
 
-    $context = Timber::get_context();
+    $context = Timber::context();
     $context['post'] = Timber::get_post();
     $context['products'] = [];
 

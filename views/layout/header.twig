@@ -31,11 +31,11 @@
 
                             <a class="nav-main-link" href="{{item.link}}">{{item.title}}</a>
 
-                            {% if item.get_children %}
+                            {% if item.children %}
 
                                 <ul class="nav-drop">
 
-                                    {% for child in item.get_children %}
+                                    {% for child in item.children %}
 
                                         <li class="nav-drop-item"> <a href="{{child.link}}">{{child.title}}</a> </li>
 

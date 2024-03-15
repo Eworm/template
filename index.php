@@ -1,6 +1,6 @@
 <?php
 
-$context = Timber::get_context();
+$context = Timber::context();
 
 if (is_front_page())
 {
@@ -31,7 +31,6 @@ else if (is_home())
     );
 
     $context['posts'] = Timber::get_posts($posts_query);
-    $context['pagination'] = Timber::get_pagination(4);
     // $context['dynamic_sidebar'] = Timber::get_widgets('1');
     $template = ['blog.twig'];
 
@@ -80,7 +79,6 @@ else if (is_search())
 
     $context['post'] = Timber::get_post();
     $context['posts'] = Timber::get_posts();
-    $context['pagination'] = Timber::get_pagination(4);
     $context['searchterm'] = get_search_query();
     $template = ['search.twig'];
 

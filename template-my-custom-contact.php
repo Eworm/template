@@ -3,7 +3,7 @@
 Template Name: Contactformulier
 */
 
-    $context = Timber::get_context();
+    $context = Timber::context();
     $context['post'] = Timber::get_post();
     $context['nonce'] = wp_nonce_field('#body', 'site_nonce', true, false);
     $template = ['page-contact.twig'];
