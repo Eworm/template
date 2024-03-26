@@ -90,6 +90,17 @@ class MyTimberSite extends \Timber
 
         );
 
+        $twig->addFunction(
+
+            new Twig\TwigFunction(
+
+                'is_woo',
+                [$this, 'is_woo']
+
+            )
+
+        );
+
         return $twig;
     }
 
@@ -164,6 +175,27 @@ class MyTimberSite extends \Timber
             $script = str_replace('/js/', get_bloginfo('stylesheet_directory') . '/js/', $script);
 
             return $script;
+        }
+    }
+
+    /**
+    * If is woo
+    *
+    * @return boolean
+    */
+    public function is_woo()
+    {
+        if (is_woocommerce()) {
+            return is_woocommerce();
+        }
+        if (is_cart()) {
+            return is_cart();
+        }
+        if (is_checkout()) {
+            return is_checkout();
+        }
+        if (is_account_page()) {
+            return is_account_page();
         }
     }
 }
