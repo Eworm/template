@@ -8,8 +8,7 @@
 
             <div class="main__content">
 
-                {% do
-                    action('woocommerce_before_single_product') %}
+                {% do action('woocommerce_before_single_product') %}
 
                 <article itemscope="itemscope" itemtype="http://schema.org/Product" class="single-product-details {{ post.class }}">
 
@@ -21,8 +20,7 @@
 
                     <div class="single-product-details__summary entry-summary">
 
-                        {% do
-                            action('woocommerce_single_product_summary') %}
+                        {% do action('woocommerce_single_product_summary') %}
 
                     </div>
 
@@ -30,8 +28,7 @@
 
                 </article>
 
-                {% do
-                    action('woocommerce_after_single_product') %}
+                {% do action('woocommerce_after_single_product') %}
 
             </div>
 

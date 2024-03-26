@@ -12,13 +12,11 @@
 
             <div class="main__content">
 
-                {% do
-                    action('woocommerce_before_cart') %}
+                {% do action('woocommerce_before_cart') %}
 
                 <form class="woocommerce-cart-form" action="{{ action }}" method="post">
 
-                    {% do
-                        action('woocommerce_before_cart_table') %}
+                    {% do action('woocommerce_before_cart_table') %}
 
                     <table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
 
@@ -35,8 +33,7 @@
 
                         <tbody>
 
-                            {% do
-                                action('woocommerce_before_cart_contents') %}
+                            {% do action('woocommerce_before_cart_contents') %}
 
                             {% for product in products %}
 
@@ -75,15 +72,13 @@
 
                             {% endfor %}
 
-                            {% do
-                                action('woocommerce_cart_contents') %}
+                            {% do action('woocommerce_cart_contents') %}
 
                             <tr>
 
                                 <td colspan="6" class="actions">
 
-                                    {% do
-                                        action('woocommerce_cart_actions') %}
+                                    {% do action('woocommerce_cart_actions') %}
 
                                     {{ nonce }}
 
@@ -91,15 +86,13 @@
 
                             </tr>
 
-                            {% do
-                                action('woocommerce_after_cart_contents') %}
+                            {% do action('woocommerce_after_cart_contents') %}
 
                         </tbody>
 
                     </table>
 
-                    {% do
-                        action('woocommerce_after_cart_table') %}
+                    {% do action('woocommerce_after_cart_table') %}
 
                 </form>
 
@@ -109,13 +102,11 @@
 
         <aside role="complementary" class="sidebar">
 
-            {% do
-                action('woocommerce_cart_collaterals') %}
+            {% do action('woocommerce_cart_collaterals') %}
 
         </aside>
 
-        {% do
-            action('woocommerce_after_cart') %}
+        {% do action('woocommerce_after_cart') %}
 
     </div>
 

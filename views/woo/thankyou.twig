@@ -93,10 +93,8 @@
 
                                 </section>
 
-                                {% do
-                                    action('woocommerce_thankyou_'.payment_method, order_id) %}
-                                {% do
-                                    action('woocommerce_thankyou', order_id) %}
+                                {% do action('woocommerce_thankyou_'.payment_method, order_id) %}
+                                {% do action('woocommerce_thankyou', order_id) %}
 
                             </div>
 

@@ -16,29 +16,25 @@
 
                     {% if show_fields == true %}
 
-                        {% do
-                            action('woocommerce_checkout_before_customer_details') %}
+                        {% do action('woocommerce_checkout_before_customer_details') %}
 
                         <div class="col2-set" id="customer_details">
 
                             <div class="col-1">
 
-                                {% do
-                                    action('woocommerce_checkout_billing') %}
+                                {% do action('woocommerce_checkout_billing') %}
 
                             </div>
 
                             <div class="col-2">
 
-                                {% do
-                                    action('woocommerce_checkout_shipping') %}
+                                {% do action('woocommerce_checkout_shipping') %}
 
                             </div>
 
                         </div>
 
-                        {% do
-                            action('woocommerce_checkout_after_customer_details') %}
+                        {% do action('woocommerce_checkout_after_customer_details') %}
 
                     {% endif %}
 
@@ -50,23 +46,19 @@
 
                 <h3 id="order_review_heading">Je bestelling</h3>
 
-                {% do
-                    action('woocommerce_checkout_before_order_review') %}
+                {% do action('woocommerce_checkout_before_order_review') %}
 
                 <div id="order_review" class="woocommerce-checkout-review-order">
 
-                    {% do
-                        action('woocommerce_checkout_order_review') %}
+                    {% do action('woocommerce_checkout_order_review') %}
 
                 </div>
 
-                {% do
-                    action('woocommerce_checkout_after_order_review') %}
+                {% do action('woocommerce_checkout_after_order_review') %}
 
             </aside>
 
-            {% do
-                action('woocommerce_after_checkout_form', checkout) %}
+            {% do action('woocommerce_after_checkout_form', checkout) %}
 
         </div>
 
