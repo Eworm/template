@@ -29,7 +29,7 @@
 
                         <li class="nav-main-item {{item.classes | join(' ')}}">
 
-                            <a class="nav-main-link" href="{{item.link}}">{{item.title}}</a>
+                            <a class="nav-main-link" href="{{ item.link }}" title="Direct naar {{ item.title }}">{{ item.title }}</a>
 
                             {% if item.children %}
 
@@ -37,7 +37,7 @@
 
                                     {% for child in item.children %}
 
-                                        <li class="nav-drop-item"> <a href="{{child.link}}">{{child.title}}</a> </li>
+                                        <li class="nav-drop-item"><a href="{{ child.link }}" title="Direct naar {{ child.title }}">{{ child.title }}</a></li>
 
                                     {% endfor %}
 
