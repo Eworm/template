@@ -34,7 +34,7 @@
     position: relative;
     display: inline-block;
 
-    .sub-menu {
+    .nav-drop {
     }
 
     @media (min-width: $mq--lap) {
@@ -62,7 +62,7 @@
             @media (min-width: $mq--lap) {
             }
 
-            + .sub-menu {
+            + .nav-drop {
                 opacity: 1;
                 z-index: 300;
                 pointer-events: all;
@@ -75,7 +75,7 @@
     &:focus,
     &:focus-within {
 
-        .sub-menu {
+        .nav-drop {
             opacity: 1;
             z-index: 300;
             pointer-events: all;
@@ -127,7 +127,7 @@
 }
 
 
-// The sub-menu
+// The nav-drop
 .nav-drop {
     min-width: 200px;
     width: 100%;
