@@ -1,3 +1,7 @@
+@use "../sass-extras/functions";
+@use "colors";
+@use "settings";
+
 // Define font families here.
 // For practical browser support use woff2 & woff. See https://css-tricks.com/snippets/css/using-font-face/
 // This is a good font-face generator: https://www.fontsquirrel.com/tools/webfont-generator
@@ -15,8 +19,8 @@
 
 // Font sizes & related stuff
 $lh: 1.8;                        // Default line height. Use unitless line-heights! https://css-tricks.com/almanac/properties/l/line-height/
-$fs-def: pt(2);                  // Font size - default
-$fs-meta: pt(1.5);               // Font size - meta
+$fs-def: functions.pt(2);                  // Font size - default
+$fs-meta: functions.pt(1.5);               // Font size - meta
 
 
 // Define font families here
@@ -52,9 +56,9 @@ h5 {
 
 // Code snippet
 code {
-    padding-right: pt(1);
-    padding-left: pt(1);
+    padding-right: functions.pt(1);
+    padding-left: functions.pt(1);
     display: inline-block;
-    background: rgba($mute, .25);
-    border-radius: $radius;
+    background: rgba(colors.$mute, .25);
+    border-radius: settings.$radius;
 }

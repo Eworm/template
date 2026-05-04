@@ -1,7 +1,11 @@
+@use "../sass-extras/functions";
+@use "../theme/colors";
+@use "../theme/settings";
+
 // These styles are for custom breadcrumbs
 .breadcrumbs {
     width: 100%;
-    margin: 0 0 pt(4);
+    margin: 0 0 functions.pt(4);
     padding: 0;
     list-style-type: none;
 
@@ -9,21 +13,21 @@
     }
 
     a {
-        margin-right: pt(4);
-        padding-right: pt(4);
+        margin-right: functions.pt(4);
+        padding-right: functions.pt(4);
         position: relative;
         display: block;
         text-decoration: none;
         transition: all .15s ease;
 
-        @media (min-width: $mq--lap) {
-            margin-right: pt(2);
-            padding-right: pt(2);
+        @media (min-width: settings.$mq--lap) {
+            margin-right: functions.pt(2);
+            padding-right: functions.pt(2);
         }
 
         &:hover,
         &:focus {
-            color: $body;
+            color: colors.$body;
             text-decoration: underline;
         }
 

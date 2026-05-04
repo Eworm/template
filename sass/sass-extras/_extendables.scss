@@ -1,21 +1,25 @@
+@use "../theme/colors";
+@use "../theme/settings";
+@use "../sass-extras/functions";
+
 // Images used in posts
 %postimage {
     width: 100%;
     height: auto;
-    margin: pt(2) 0;
+    margin: functions.pt(2) 0;
     display: block;
     border-radius: 0;
-    box-shadow: $shadow;
+    box-shadow: settings.$shadow;
 }
 
 // Row in a form
 %formrow {
     width: 100%;
-    margin-bottom: pt(2);
+    margin-bottom: functions.pt(2);
     clear: both;
 
-    @media (min-width: $mq--lap) {
-        margin-bottom: pt(4);
+    @media (min-width: settings.$mq--lap) {
+        margin-bottom: functions.pt(4);
     }
 
     &:last-child {
@@ -23,15 +27,15 @@
 
     &.error {
         margin-bottom: 0;
-        padding: pt(2);
-        border-radius: $radius;
+        padding: functions.pt(2);
+        border-radius: settings.$radius;
         border-top-right-radius: 0;
         border-top-left-radius: 0;
-        box-shadow: $shadow;
-        background: $alert;
-        color: $color--white;
+        box-shadow: settings.$shadow;
+        background: colors.$alert;
+        color: colors.$color--white;
 
-        @media (min-width: $mq--lap) {
+        @media (min-width: settings.$mq--lap) {
             width: 50%;
         }
     }
@@ -44,7 +48,7 @@
 // Post summary
 %post {
     width: 100%;
-    margin-bottom: pt(4);
+    margin-bottom: functions.pt(4);
     opacity: 1;
     transition: opacity .2s ease;
 
@@ -63,10 +67,10 @@
     .post-thumb {
         display: none;
 
-        @media (min-width: $mq--lap) {
+        @media (min-width: settings.$mq--lap) {
             width: 87px;
             height: 68px;
-            margin-right: pt(2);
+            margin-right: functions.pt(2);
             position: relative;
             display: block;
             overflow: hidden;
@@ -90,13 +94,13 @@
 //
 %column {
 
-    @media (max-width: $mq--lap) {
-        margin-bottom: pt(4);
+    @media (max-width: settings.$mq--lap) {
+        margin-bottom: functions.pt(4);
     }
 
-    @media (min-width: $mq--lap) {
+    @media (min-width: settings.$mq--lap) {
         display: grid;
-        grid-gap: pt(3);
+        grid-gap: functions.pt(3);
         grid-auto-flow: dense;
     }
 }

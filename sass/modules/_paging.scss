@@ -1,3 +1,7 @@
+@use "../sass-extras/functions";
+@use "../theme/colors";
+@use "../theme/settings";
+
 // Unordered list
 .paging {
     margin: 0;
@@ -7,25 +11,25 @@
     > li {
 
         > a {
-            margin-right: pt(1);
-            padding: pt(1) pt(2);
+            margin-right: functions.pt(1);
+            padding: functions.pt(1) functions.pt(2);
             display: block;
-            border: 1px solid $border;
-            color: $body;
+            border: 1px solid colors.$border;
+            color: colors.$body;
             text-decoration: none;
 
             &:hover,
             &:focus {
-                background: $border;
+                background: colors.$border;
             }
         }
 
         > span {
-            margin-right: pt(1);
-            padding: pt(1) pt(2);
+            margin-right: functions.pt(1);
+            padding: functions.pt(1) functions.pt(2);
             display: block;
             border: 1px solid transparent;
-            color: $body;
+            color: colors.$body;
             text-decoration: none;
         }
     }
@@ -46,14 +50,14 @@
     &__number {
         display: none;
 
-        @media (min-width: $mq--lap) {
+        @media (min-width: settings.$mq--lap) {
             display: block;
         }
 
         &--active {
 
             > a {
-                background: $border;
+                background: colors.$border;
             }
         }
     }

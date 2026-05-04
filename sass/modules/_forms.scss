@@ -1,14 +1,20 @@
+@use "../sass-extras/extendables";
+@use "../sass-extras/functions";
+@use "../theme/colors";
+@use "../theme/settings";
+@use "../theme/type";
+
 // Input sizes
 input,
 textarea {
     width: 100%;
-    padding: pt(1);
-    font-size: $fs-def;
-    font-family: $ff--def;
+    padding: functions.pt(1);
+    font-size: type.$fs-def;
+    font-family: type.$ff--def;
 }
 
 textarea {
-    height: pt(12);
+    height: functions.pt(12);
 }
 
 input[type="file"] {
@@ -22,7 +28,7 @@ input[type="radio"] {
 
 input[type="submit"] {
 
-    @media (min-width: $mq--lap) {
+    @media (min-width: settings.$mq--lap) {
         width: auto;
     }
 }
@@ -48,7 +54,7 @@ fieldset {
     clear: both;
     border: 0;
 
-    @media (min-width: $mq--lap) {
+    @media (min-width: settings.$mq--lap) {
         width: 100%;
     }
 }
@@ -61,7 +67,7 @@ fieldset {
     // Form field explanation. Using a small element is preferrable
     .input-exp {
         display: block;
-        font-size: $fs-meta;
+        font-size: type.$fs-meta;
     }
 }
 
@@ -89,7 +95,7 @@ label,
     position: relative;
 
     > input {
-        margin-right: pt(1);
+        margin-right: functions.pt(1);
         flex-shrink: 0;
     }
 }
@@ -104,8 +110,8 @@ label,
 
 // Required style
 .req {
-    font-size: $fs-def;
-    color: $mute;
+    font-size: type.$fs-def;
+    color: colors.$mute;
 }
 
 
@@ -122,7 +128,7 @@ label,
     margin: 0;
     padding: 0;
     display: block;
-    color: $error;
+    color: colors.$error;
 
     > li {
         margin: 0;

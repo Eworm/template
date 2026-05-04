@@ -1,8 +1,13 @@
+@use "../sass-extras/functions";
+@use "../theme/colors";
+@use "../theme/settings";
+@use "../theme/type";
+
 // Regular table
 .table {
     width: 100%;
-    margin: pt(4) 0;
-    border: 1px solid $border;
+    margin: functions.pt(4) 0;
+    border: 1px solid colors.$border;
     border-spacing: 0;
 
     tr {
@@ -18,14 +23,14 @@
 
     th,
     td {
-        padding: pt(1);
-        border-bottom: 1px solid $border;
+        padding: functions.pt(1);
+        border-bottom: 1px solid colors.$border;
         text-align: left;
         vertical-align: top;
     }
 
     th {
-        background-color: $border;
+        background-color: colors.$border;
     }
 
 
@@ -39,16 +44,16 @@
         border-spacing: 0;
         border-collapse: collapse;
 
-        @media (min-width: $mq--lap) {
+        @media (min-width: settings.$mq--lap) {
             display: table;
         }
 
         thead {
             display: block;
-            border: 1px solid $border;
+            border: 1px solid colors.$border;
             vertical-align: middle;
 
-            @media (min-width: $mq--lap) {
+            @media (min-width: settings.$mq--lap) {
                 display: table-header-group;
                 float: none;
             }
@@ -56,7 +61,7 @@
             tr {
                 display: block;
 
-                @media (min-width: $mq--lap) {
+                @media (min-width: settings.$mq--lap) {
                     display: table-row;
                     border-right: 0;
                 }
@@ -64,17 +69,17 @@
 
             th {
                 display: block;
-                border-bottom: 1px solid $border;
+                border-bottom: 1px solid colors.$border;
 
-                @media (min-width: $mq--lap) {
+                @media (min-width: settings.$mq--lap) {
                     display: table-cell;
                 }
 
                 &:last-child {
                     border-bottom: 0;
 
-                    @media (min-width: $mq--lap) {
-                        border-bottom: 1px solid $border;
+                    @media (min-width: settings.$mq--lap) {
+                        border-bottom: 1px solid colors.$border;
                     }
                 }
             }
@@ -89,11 +94,11 @@
             white-space: nowrap;
             word-wrap: normal;
 
-            @media (min-width: $mq--lap) {
+            @media (min-width: settings.$mq--lap) {
                 display: table-row-group;
                 overflow: visible;
-                border: 1px solid $border;
-                font-size: $fs-def;
+                border: 1px solid colors.$border;
+                font-size: type.$fs-def;
                 white-space: normal;
                 word-wrap: break-word;
             }
@@ -101,12 +106,12 @@
 
         tr {
             display: inline-block;
-            border: 1px solid $border;
+            border: 1px solid colors.$border;
             border-left: 0;
-            font-size: $fs-def;
+            font-size: type.$fs-def;
             vertical-align: top;
 
-            @media (min-width: $mq--lap) {
+            @media (min-width: settings.$mq--lap) {
                 margin: 0;
                 display: table-row;
                 border-right: 0;
@@ -115,17 +120,17 @@
             th,
             td {
                 display: block;
-                border-bottom: 1px solid $border;
+                border-bottom: 1px solid colors.$border;
 
-                @media (min-width: $mq--lap) {
+                @media (min-width: settings.$mq--lap) {
                     display: table-cell;
                 }
 
                 &:last-child {
                     border-bottom: 0;
 
-                    @media (min-width: $mq--lap) {
-                        border-bottom: 1px solid $border;
+                    @media (min-width: settings.$mq--lap) {
+                        border-bottom: 1px solid colors.$border;
                     }
                 }
             }

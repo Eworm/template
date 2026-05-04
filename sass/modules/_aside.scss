@@ -1,6 +1,8 @@
+@use "../theme/settings";
+
 .aside {
 
-    @media (min-width: $mq--lap) {
+    @media (min-width: settings.$mq--lap) {
         position: sticky;
         top: 0;
     }

@@ -1,3 +1,6 @@
+@use "../sass-extras/functions";
+@use "../sass-extras/mixins";
+
 // The cart table
 .cart {
     width: 100%;
@@ -6,7 +9,7 @@
 
         th,
         td {
-            padding: pt(1) pt(2);
+            padding: functions.pt(1) functions.pt(2);
 
             &:first-child {
                 padding-left: 0;
@@ -25,7 +28,7 @@
             &:first-child {
 
                 td {
-                    padding-top: pt(3)
+                    padding-top: functions.pt(3)
                 }
             }
         }
@@ -34,7 +37,7 @@
     th {
         text-align: left;
         font-weight: normal;
-        font-size: pt(3);
+        font-size: functions.pt(3);
 
         &.text--right {
             text-align: right;
@@ -51,8 +54,8 @@
     }
 
     img {
-        max-width: pt(16);
-        height: pt(16);
+        max-width: functions.pt(16);
+        height: functions.pt(16);
         margin: 0;
         object-fit: cover;
     }
@@ -60,13 +63,13 @@
     .quantity {
 
         .screen-reader-text {
-            @include screenreader--hide()
+            @include mixins.screenreader--hide()
         }
     }
 
     .qty {
-        width: pt(10);
-        margin-bottom: pt(1);
+        width: functions.pt(10);
+        margin-bottom: functions.pt(1);
     }
 
     .cart-action {

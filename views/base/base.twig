@@ -52,7 +52,9 @@
                 var ajaxurl = "{{ site.url }}/wp-admin/admin-ajax.php";
 
                 // Inlining labjs removes a request and adds only a few kb's to the html
-                {{ include_js('js/lab.min.js') }}
+                {{ include_js('js-src/vendor/LABjs/LAB.js') }}
+                {{ include_js('js-src/base/lab-loader.js') }}
+
             </script>
 
         {% endblock head %}

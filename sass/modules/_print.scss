@@ -1,3 +1,5 @@
+@use "../theme/colors";
+
 // Simple print stylesheet
 
 @media print {
@@ -5,7 +7,7 @@
     * {
         background: transparent !important;
         // Black prints faster: h5bp.com/s
-        color: $color--black !important;
+        color: colors.$color--black !important;
         text-shadow: none !important;
         filter: none !important;
     }

@@ -1,11 +1,15 @@
+@use "../sass-extras/functions";
+@use "../theme/colors";
+@use "../theme/settings";
+
 // Site header
 .l-header {
-    padding-top: pt(2);
-    padding-bottom: pt(2);
-    border-bottom: 1px solid $border;
+    padding-top: functions.pt(2);
+    padding-bottom: functions.pt(2);
+    border-bottom: 1px solid colors.$border;
 
-    @media (min-width: $mq--lap) {
-        background: $body-bg;
+    @media (min-width: settings.$mq--lap) {
+        background: colors.$body-bg;
     }
 }
 
@@ -16,10 +20,10 @@
     height: 40px;
     display: block;
 
-    @media (min-width: $mq--palm) {
+    @media (min-width: settings.$mq--palm) {
     }
 
-    @media (min-width: $mq--lap) {
+    @media (min-width: settings.$mq--lap) {
     }
 
     &__img {
@@ -33,7 +37,7 @@
 .cp {
     display: none;
 
-    @media (min-width: $mq--lap) {
+    @media (min-width: settings.$mq--lap) {
         margin: 0;
         display: block;
     }

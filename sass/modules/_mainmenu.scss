@@ -1,10 +1,14 @@
+@use "../sass-extras/functions";
+@use "../theme/colors";
+@use "../theme/settings";
+
 // The menu
 .mainmenu {
 
-    @media (min-width: $mq--palm) {
+    @media (min-width: settings.$mq--palm) {
     }
 
-    @media (min-width: $mq--lap) {
+    @media (min-width: settings.$mq--lap) {
         width: 100%;
         height: auto;
     }
@@ -18,12 +22,12 @@
     padding: 0;
     display: block;
     overflow-x: auto;
-    background: $nav-bg;
+    background: colors.$nav-bg;
     list-style-type: none;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
 
-    @media (min-width: $mq--lap) {
+    @media (min-width: settings.$mq--lap) {
         border-top: 0;
     }
 }
@@ -37,29 +41,29 @@
     .nav-drop {
     }
 
-    @media (min-width: $mq--lap) {
+    @media (min-width: settings.$mq--lap) {
         position: relative;
     }
 
     > a {
-        padding: pt(2);
+        padding: functions.pt(2);
         display: inline-block;
         text-decoration: none;
         transition: all .15s ease-out;
 
-        @media (min-width: $mq--palm) {
+        @media (min-width: settings.$mq--palm) {
         }
 
-        @media (min-width: $mq--lap) {
-            padding: pt(2) pt(4);
+        @media (min-width: settings.$mq--lap) {
+            padding: functions.pt(2) functions.pt(4);
             position: relative;
         }
 
         &:hover,
         &:focus {
-            background: $border;
+            background: colors.$border;
 
-            @media (min-width: $mq--lap) {
+            @media (min-width: settings.$mq--lap) {
             }
 
             + .nav-drop {
@@ -92,10 +96,10 @@
 .current_page_parent {
 
     a {
-        background: $mute;
+        background: colors.$mute;
     }
 
-    @media (min-width: $mq--lap) {
+    @media (min-width: settings.$mq--lap) {
     }
 }
 
@@ -110,7 +114,7 @@
         }
     }
 
-    @media (min-width: $mq--lap) {
+    @media (min-width: settings.$mq--lap) {
 
         &:after {
         }
@@ -119,7 +123,7 @@
 
 .current_page_ancestor {
 
-    @media (min-width: $mq--lap) {
+    @media (min-width: settings.$mq--lap) {
 
         a {
         }
@@ -137,46 +141,46 @@
     position: relative;
     transition: all .25s ease;
 
-    @media (max-width: $mq--lap) {
-        margin-bottom: pt(1);
+    @media (max-width: settings.$mq--lap) {
+        margin-bottom: functions.pt(1);
     }
 
-    @media (min-width: $mq--lap) {
+    @media (min-width: settings.$mq--lap) {
         width: auto;
-        padding-top: pt(.5);
+        padding-top: functions.pt(.5);
         position: absolute;
-        top: calc(100% + #{pt(1)});
-        left: pt(1);
-        background: $color--white;
+        top: calc(100% + #{functions.pt(1)});
+        left: functions.pt(1);
+        background: colors.$color--white;
         opacity: 0;
         z-index: -1;
         pointer-events: none;
-        box-shadow: rgba($color--black, .14) 0 0 4px;
+        box-shadow: rgba(colors.$color--black, .14) 0 0 4px;
     }
 
     .nav-drop-item {
         width: 100%;
         display: block;
 
-        @media (max-width: $mq--lap) {
-            padding-left: pt(2);
+        @media (max-width: settings.$mq--lap) {
+            padding-left: functions.pt(2);
         }
 
         a {
             width: 100%;
-            padding: pt(.5) pt(1);
+            padding: functions.pt(.5) functions.pt(1);
             display: block;
 
-            @media (min-width: $mq--lap) {
-                padding: pt(.75) pt(1.75);
-                color: $body;
+            @media (min-width: settings.$mq--lap) {
+                padding: functions.pt(.75) functions.pt(1.75);
+                color: colors.$body;
                 white-space: nowrap;
-                background: $color--white;
+                background: colors.$color--white;
             }
 
             &:hover,
             &:focus {
-                color: $link
+                color: colors.$link
             }
 
             &:after {
@@ -188,7 +192,7 @@
 
             a {
 
-                @media (min-width: $mq--lap) {
+                @media (min-width: settings.$mq--lap) {
                     border: 0;
                 }
             }

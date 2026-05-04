@@ -1,3 +1,8 @@
+@use "../sass-extras/extendables";
+@use "../sass-extras/functions";
+@use "../theme/colors";
+@use "../theme/settings";
+
 // Single post
 .post {
     @extend %post;
@@ -19,7 +24,7 @@
     }
 
     .single-post__header {
-        margin-bottom: pt(4);
+        margin-bottom: functions.pt(4);
     }
 
 
@@ -33,7 +38,7 @@
     &-nav {
         text-align: center;
 
-        @media (min-width: $mq--lap) {
+        @media (min-width: settings.$mq--lap) {
             text-align: left;
         }
     }
@@ -41,19 +46,19 @@
 
     // Post meta
     &__meta {
-        color: $mute;
+        color: colors.$mute;
 
         .single-post & {
-            margin-top: pt(1)
+            margin-top: functions.pt(1)
         }
 
         a {
-            color: $mute;
+            color: colors.$mute;
             text-decoration: none;
 
             &:hover,
             &:focus {
-                color: $mute--hover;
+                color: colors.$mute--hover;
                 text-decoration: underline;
             }
         }

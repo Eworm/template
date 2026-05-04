@@ -1,9 +1,12 @@
+@use "../sass-extras/functions";
+@use "../theme/settings";
+
 // Custom WP header image
 .header-image {
-    margin-bottom: pt(4);
+    margin-bottom: functions.pt(4);
     border-radius: 0;
 
-    @media (min-width: $mq--lap) {
+    @media (min-width: settings.$mq--lap) {
         width: 100%;
     }
 }

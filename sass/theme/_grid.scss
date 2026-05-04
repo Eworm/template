@@ -1,3 +1,7 @@
+@use "../sass-extras/extendables";
+@use "../sass-extras/functions";
+@use "settings";
+
 // Grid variables
 $site--max-width: 1400px;      // The max-size of the site.
 
@@ -5,12 +9,12 @@ $site--max-width: 1400px;      // The max-size of the site.
 .container {
     width: 100%;
     max-width: $site--max-width;
-    padding-right: pt(2);
-    padding-left: pt(2);
+    padding-right: functions.pt(2);
+    padding-left: functions.pt(2);
     margin: 0 auto;
     clear: both;
 
-    @media (max-width: $mq--lap) {
+    @media (max-width: settings.$mq--lap) {
     }
 }
 
@@ -23,5 +27,5 @@ $site--max-width: 1400px;      // The max-size of the site.
 // Content + sidebar
 .l-cs {
     @extend %column;
-    grid: auto-flow / auto minmax(#{pt(30)}, 30%);
+    grid: auto-flow / auto minmax(#{functions.pt(30)}, 30%);
 }

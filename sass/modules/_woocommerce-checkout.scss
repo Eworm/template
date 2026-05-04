@@ -1,3 +1,5 @@
+@use "../sass-extras/functions";
+
 // Checkout page
 .woocommerce-checkout {
 
@@ -28,7 +30,7 @@
 }
 
 .woocommerce-terms-and-conditions-wrapper {
-    margin-bottom: pt(2);
+    margin-bottom: functions.pt(2);
 }
 
 .woocommerce-checkout-review-order-table {

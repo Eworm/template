@@ -1,10 +1,12 @@
+@use "../sass-extras/functions";
+
 // Thank you - order details
 .woocommerce-order-details {
 
     &__title {
-        margin: 0 0 pt(2);
-        padding-bottom: pt(1);
-        font-size: pt(3);
+        margin: 0 0 functions.pt(2);
+        padding-bottom: functions.pt(1);
+        font-size: functions.pt(3);
         border-bottom: 1px solid;
     }
 
@@ -24,9 +26,9 @@
 .woocommerce-order-overview {
 
     &__title {
-        margin: 0 0 pt(2);
-        padding-bottom: pt(1);
-        font-size: pt(3);
+        margin: 0 0 functions.pt(2);
+        padding-bottom: functions.pt(1);
+        font-size: functions.pt(3);
         border-bottom: 1px solid;
     }
 }
@@ -35,9 +37,9 @@
 .woocommerce-customer-details {
 
     .woocommerce-column__title {
-        margin: 0 0 pt(2);
-        padding-bottom: pt(1);
-        font-size: pt(3);
+        margin: 0 0 functions.pt(2);
+        padding-bottom: functions.pt(1);
+        font-size: functions.pt(3);
         border-bottom: 1px solid;
     }
 

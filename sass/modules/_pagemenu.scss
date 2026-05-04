@@ -1,11 +1,15 @@
+@use "../sass-extras/functions";
+@use "../theme/colors";
+@use "../theme/settings";
+
 // The menu holding siblings on a page
 .pagemenu {
 
-    @media (min-width: $mq--lap) {
-        margin-bottom: pt(4);
+    @media (min-width: settings.$mq--lap) {
+        margin-bottom: functions.pt(4);
         display: block;
         clear: none;
-        border: 1px solid $border;
+        border: 1px solid colors.$border;
     }
 
     ul {
@@ -13,9 +17,9 @@
         margin: 0;
         padding: 0;
         display: inline-block;
-        border: 1px solid $border;
+        border: 1px solid colors.$border;
 
-        @media (min-width: $mq--lap) {
+        @media (min-width: settings.$mq--lap) {
             border: 0;
         }
     }
@@ -27,7 +31,7 @@
         display: block;
         background: transparent;
 
-        @media (min-width: $mq--lap) {
+        @media (min-width: settings.$mq--lap) {
             margin-bottom: 0;
         }
 
@@ -40,24 +44,24 @@
     }
 
     a {
-        padding: pt(2);
+        padding: functions.pt(2);
         display: block;
 
-        @media (min-width: $mq--lap) {
-            border-bottom: 1px solid $border;
+        @media (min-width: settings.$mq--lap) {
+            border-bottom: 1px solid colors.$border;
             background: transparent;
         }
 
         &:hover,
         &:focus {
-            background: $border;
+            background: colors.$border;
         }
     }
 
     .current_page_item {
 
         a {
-            background: $border;
+            background: colors.$border;
         }
     }
 }

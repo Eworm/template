@@ -1,7 +1,11 @@
+@use "../sass-extras/functions";
+@use "../sass-extras/mixins";
+@use "../theme/settings";
+
 // The form
 .searchform {
     width: 100%;
-    padding: pt(2);
+    padding: functions.pt(2);
     position: relative;
     display: none;
     clear: both;
@@ -17,14 +21,14 @@
 
     // Hiding the label, but not for screenreaders
     &__container__label {
-        @include screenreader--hide;
+        @include mixins.screenreader--hide;
     }
 
 
     // When in header
     .l-header & {
 
-        @media (min-width: $mq--lap) {
+        @media (min-width: settings.$mq--lap) {
             width: 30%;
             padding: 0;
             display: block;
@@ -39,7 +43,7 @@
             width: 100%;
             clear: both;
 
-            @media (min-width: $mq--lap) {
+            @media (min-width: settings.$mq--lap) {
                 width: 70%;
             }
         }

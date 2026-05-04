@@ -5,16 +5,17 @@
     "description": "blabla",
     "homepage": "https://www.woutmager.nl",
     "scripts": {
-        "dev": "npm run development",
-        "development": "mix",
-        "prod": "mix --production",
-        "watch": "mix watch"
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "watch": "vite build --watch"
     },
     "devDependencies": {
-        "laravel-mix": "^6.0.48",
+        "@spiriit/vite-plugin-svg-spritemap": "^7.0.0",
+        "esbuild": "^0.28.0",
         "sass": "^1.49.9",
-        "sass-loader": "^12.6.0",
-        "svg-spritemap-webpack-plugin": "^4.4.0"
+        "terser": "^5.46.2",
+        "vite": "^8.0.0"
     },
     "main": "index.js",
     "repository": "git@github.com:Eworm/template.git",

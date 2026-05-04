@@ -11,55 +11,55 @@ Version: 1.0
 
 
 // Theme variables
-@import 'sass-extras/functions';            // Useful functions
-@import 'node_modules/modern-normalize/modern-normalize';
-@import 'theme/colors';                     // Colors
-@import 'theme/settings';                   // Global settings
-@import 'sass-extras/extendables';          // Useful extensions
-@import 'theme/grid';                       // CSS grid
+@use 'sass-extras/functions';            // Useful functions
+@use '../node_modules/modern-normalize/modern-normalize';
+@use 'theme/colors';                     // Colors
+@use 'theme/settings';                   // Global settings
+@use 'sass-extras/extendables';          // Useful extensions
+@use 'theme/grid';                       // CSS grid
 
 
 // Sass functions, extendables & mixins.
-@import 'theme/type';                       // Font variables
-@import 'sass-extras/mixins';               // Useful mixins
+@use 'theme/type';                       // Font variables
+@use 'sass-extras/mixins';               // Useful mixins
 
 
 // Base styles
-@import 'base/base';                        // Base styles
+@use 'base/base';                        // Base styles
 
 
 // Styling of page sections that contain modules
-@import 'layout/header';                    // Site header
-@import 'layout/main';                      // Main content of the site
-@import 'layout/doormat';                   // Site doormat
-@import 'layout/footer';                    // Site footer
+@use 'layout/header';                    // Site header
+@use 'layout/main';                      // Main content of the site
+@use 'layout/doormat';                   // Site doormat
+@use 'layout/footer';                    // Site footer
 
 
 // Styling of reusable, modular parts of the design
-@import 'modules/symbols';                   // Hiding the svg symbol sprite
-@import 'modules/mainmenu';                  // The main menu, probably the only nav
-@import 'modules/search-form';               // A search form
-@import 'modules/aside';                     // Aside
-@import 'modules/aside__section';            // A section item in an aside
-@import 'modules/pagemenu';                  // Page submenu
-@import 'modules/tables';                    // Normal and responsive table styles
-@import 'modules/forms';                     // Input and button styles
-@import 'modules/breadcrumbs';               // Breadcrumbs styling
-@import 'modules/post';                      // A single blogpost or searchresult
-@import 'modules/comments';                  // Comment styles
-@import 'modules/header-image';              // A custom wordpress header
-@import 'modules/images';                    // Aligned images and captions
-@import 'modules/paging';                    // Previous, next and numbers
-@import 'modules/search-results';            // For custom search results
-@import 'modules/helpers';                   // Helper classes
-@import 'modules/buttons';                   // Several buttons
-@import 'modules/video-wrapper';             // Making embedded iframes responsive
-@import 'modules/easy-autocomplete';         // Default autocomplete styles
-@import 'modules/print';                     // Simple print stylesheet
+@use 'modules/symbols';                   // Hiding the svg symbol sprite
+@use 'modules/mainmenu';                  // The main menu, probably the only nav
+@use 'modules/search-form';               // A search form
+@use 'modules/aside';                     // Aside
+@use 'modules/aside__section';            // A section item in an aside
+@use 'modules/pagemenu';                  // Page submenu
+@use 'modules/tables';                    // Normal and responsive table styles
+@use 'modules/forms';                     // Input and button styles
+@use 'modules/breadcrumbs';               // Breadcrumbs styling
+@use 'modules/post';                      // A single blogpost or searchresult
+@use 'modules/comments';                  // Comment styles
+@use 'modules/header-image';              // A custom wordpress header
+@use 'modules/images';                    // Aligned images and captions
+@use 'modules/paging';                    // Previous, next and numbers
+@use 'modules/search-results';            // For custom search results
+@use 'modules/helpers';                   // Helper classes
+@use 'modules/buttons';                   // Several buttons
+@use 'modules/video-wrapper';             // Making embedded iframes responsive
+@use 'modules/easy-autocomplete';         // Default autocomplete styles
+@use 'modules/print';                     // Simple print stylesheet
 
 // Optional Woocommerce modules
-@import 'modules/woocommerce-cart';                  // Woo cart
-@import 'modules/woocommerce-checkout';              // Woo checkout page
-@import 'modules/woocommerce-product-excerpt';       // Woo single product excerpt
-@import 'modules/woocommerce-product';               // Woo product detail
-@import 'modules/woocommerce-thankyou';              // Woo thanks page
+@use 'modules/woocommerce-cart';                  // Woo cart
+@use 'modules/woocommerce-checkout';              // Woo checkout page
+@use 'modules/woocommerce-product-excerpt';       // Woo single product excerpt
+@use 'modules/woocommerce-product';               // Woo product detail
+@use 'modules/woocommerce-thankyou';              // Woo thanks page

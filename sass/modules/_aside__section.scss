@@ -1,21 +1,26 @@
+@use "../sass-extras/functions";
+@use "../theme/colors";
+@use "../theme/settings";
+@use "../theme/type";
+
 // Section in a sidebar
 .aside__section {
     width: 100%;
-    margin-bottom: pt(2);
-    padding: pt(2);
-    border: 1px solid $border;
+    margin-bottom: functions.pt(2);
+    padding: functions.pt(2);
+    border: 1px solid colors.$border;
     word-break: break-word;
 
-    @media (min-width: $mq--lap) {
-        margin-bottom: pt(4);
-        padding: pt(2);
+    @media (min-width: settings.$mq--lap) {
+        margin-bottom: functions.pt(4);
+        padding: functions.pt(2);
     }
 
     &:last-child {
     }
 
     img {
-        margin-bottom: pt(2);
+        margin-bottom: functions.pt(2);
         border-radius: 0;
     }
 
@@ -40,11 +45,11 @@
 
     // Sidebar section title
     &__header {
-        margin: 0 0 pt(1);
+        margin: 0 0 functions.pt(1);
         font-weight: bold;
-        font-size: $fs-def;
+        font-size: type.$fs-def;
 
-        @media (min-width: $mq--lap) {
+        @media (min-width: settings.$mq--lap) {
         }
 
         a {

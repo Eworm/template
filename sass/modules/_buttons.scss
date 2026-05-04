@@ -1,3 +1,7 @@
+@use "../sass-extras/functions";
+@use "../theme/settings";
+@use "../sass-extras/extendables";
+
 // A button
 .btn {
     width: 100%;
@@ -6,7 +10,7 @@
     text-decoration: none;
     cursor: pointer;
 
-    @media (min-width: $mq--lap) {
+    @media (min-width: settings.$mq--lap) {
         width: auto;
     }
 
@@ -24,8 +28,8 @@
 
     &--block {
         width: 100%;
-        padding-right: pt(1);
-        padding-left: pt(1);
+        padding-right: functions.pt(1);
+        padding-left: functions.pt(1);
         display: block;
     }
 }

@@ -1,11 +1,17 @@
+@use "../sass-extras/extendables";
+@use "../sass-extras/functions";
+@use "../theme/colors";
+@use "../theme/settings";
+@use "../theme/type";
+
 // WP image align classes
 .alignnone {
     @extend %postimage;
 
-    @media (min-width: $mq--palm) {
+    @media (min-width: settings.$mq--palm) {
         width: auto;
         max-width: 100%;
-        margin: pt(4) pt(4) pt(4) 0;
+        margin: functions.pt(4) functions.pt(4) functions.pt(4) 0;
     }
 }
 
@@ -13,8 +19,8 @@
 div.aligncenter {
     @extend %postimage;
 
-    @media (min-width: $mq--palm) {
-        margin: pt(4) auto;
+    @media (min-width: settings.$mq--palm) {
+        margin: functions.pt(4) auto;
         display: block;
     }
 }
@@ -22,9 +28,9 @@ div.aligncenter {
 .alignright {
     @extend %postimage;
 
-    @media (min-width: $mq--palm) {
+    @media (min-width: settings.$mq--palm) {
         width: auto;
-        margin: 0 0 pt(4) pt(4);
+        margin: 0 0 functions.pt(4) functions.pt(4);
         float: right;
     }
 }
@@ -32,9 +38,9 @@ div.aligncenter {
 .alignleft {
     @extend %postimage;
 
-    @media (min-width: $mq--palm) {
+    @media (min-width: settings.$mq--palm) {
         width: auto;
-        margin: 0 pt(4) pt(4) 0;
+        margin: 0 functions.pt(4) functions.pt(4) 0;
         float: left;
     }
 }
@@ -44,33 +50,33 @@ a img {
 
     &.alignright {
 
-        @media (min-width: $mq--palm) {
+        @media (min-width: settings.$mq--palm) {
             width: auto;
-            margin: pt(4) 0 pt(4) pt(4);
+            margin: functions.pt(4) 0 functions.pt(4) functions.pt(4);
             float: right;
         }
     }
 
     &.alignnone {
 
-        @media (min-width: $mq--palm) {
+        @media (min-width: settings.$mq--palm) {
             width: auto;
-            margin: pt(4) pt(4) pt(4) 0;
+            margin: functions.pt(4) functions.pt(4) functions.pt(4) 0;
         }
     }
 
     &.alignleft {
 
-        @media (min-width: $mq--palm) {
+        @media (min-width: settings.$mq--palm) {
             width: auto;
-            margin: pt(4) pt(4) pt(4) 0;
+            margin: functions.pt(4) functions.pt(4) functions.pt(4) 0;
             float: left;
         }
     }
 
     &.aligncenter {
 
-        @media (min-width: $mq--palm) {
+        @media (min-width: settings.$mq--palm) {
             margin-right: auto;
             margin-left: auto;
             display: block;
@@ -82,59 +88,59 @@ a img {
 // WP images with a caption
 .wp-caption {
     @extend %postimage;
-    margin: pt(2) 0;
-    padding: pt(2);
-    border: 1px solid $border;
+    margin: functions.pt(2) 0;
+    padding: functions.pt(2);
+    border: 1px solid colors.$border;
     border-radius: 0;
-    background: $color--white;
+    background: colors.$color--white;
     text-align: center;
 
     img {
         width: 100%;
         height: auto;
         max-width: 100%;
-        margin: 0 0 pt(2);
+        margin: 0 0 functions.pt(2);
         padding: 0;
         display: block;
         border: 0 none;
 
-        @media (min-width: $mq--palm) {
+        @media (min-width: settings.$mq--palm) {
             max-width: auto;
         }
     }
 
-    @media (min-width: $mq--palm) {
+    @media (min-width: settings.$mq--palm) {
         width: auto;
         max-width: none;
     }
 
     p.wp-caption-text {
-        margin: pt(2) 0 0;
+        margin: functions.pt(2) 0 0;
         display: block;
-        font-size: $fs-meta;
+        font-size: type.$fs-meta;
     }
 
 
     &.alignnone {
 
-        @media (min-width: $mq--palm) {
+        @media (min-width: settings.$mq--palm) {
             width: auto !important;
             max-width: 100% !important;
-            margin: pt(4) 0;
+            margin: functions.pt(4) 0;
         }
     }
 
     &.alignleft {
 
-        @media (min-width: $mq--palm) {
-            margin: 0 pt(4) pt(4) 0;
+        @media (min-width: settings.$mq--palm) {
+            margin: 0 functions.pt(4) functions.pt(4) 0;
         }
     }
 
     &.alignright {
 
-        @media (min-width: $mq--palm) {
-            margin: 0 0 pt(4) pt(4);
+        @media (min-width: settings.$mq--palm) {
+            margin: 0 0 functions.pt(4) functions.pt(4);
         }
     }
 }
@@ -144,13 +150,13 @@ a img {
 .post-thumbnail {
     @extend %postimage;
 
-    @media (min-width: $mq--palm) {
+    @media (min-width: settings.$mq--palm) {
         width: auto;
-        margin: pt(4) 0;
+        margin: functions.pt(4) 0;
     }
 
-    @media (min-width: $mq--palm) {
-        margin: 0 0 pt(4) pt(4);
+    @media (min-width: settings.$mq--palm) {
+        margin: 0 0 functions.pt(4) functions.pt(4);
         float: right;
     }
 }

@@ -1,28 +1,32 @@
+@use "../sass-extras/functions";
+@use "../theme/settings";
+@use "../theme/type";
+
 // Main content on a page
 .l-main {
-    padding-top: pt(2);
-    padding-bottom: pt(2);
+    padding-top: functions.pt(2);
+    padding-bottom: functions.pt(2);
 
-    @media (min-width: $mq--lap) {
-        padding-top: pt(4);
-        padding-bottom: pt(4);
+    @media (min-width: settings.$mq--lap) {
+        padding-top: functions.pt(4);
+        padding-bottom: functions.pt(4);
     }
 }
 
 .main {
-    margin-bottom: pt(2);
+    margin-bottom: functions.pt(2);
 
-    @media (min-width: $mq--lap) {
+    @media (min-width: settings.$mq--lap) {
     }
 
     // Page title
     &__header {
-        margin: 0 0 pt(2);
+        margin: 0 0 functions.pt(2);
         font-weight: normal;
-        font-size: $h1;
+        font-size: type.$h1;
 
-        @media (min-width: $mq--lap) {
-            margin-bottom: pt(4);
+        @media (min-width: settings.$mq--lap) {
+            margin-bottom: functions.pt(4);
         }
     }
 
@@ -45,33 +49,33 @@
         }
 
         > h2 {
-            margin: 0 0 pt(2);
-            font-size: $h2;
+            margin: 0 0 functions.pt(2);
+            font-size: type.$h2;
         }
 
         > h3 {
-            margin: 0 0 pt(1);
-            font-size: $h3;
+            margin: 0 0 functions.pt(1);
+            font-size: type.$h3;
         }
 
         > h4 {
-            margin: 0 0 pt(1);
-            font-size: $h4;
+            margin: 0 0 functions.pt(1);
+            font-size: type.$h4;
         }
 
         > h5 {
-            margin: 0 0 pt(1);
-            font-size: $fs-def;
+            margin: 0 0 functions.pt(1);
+            font-size: type.$fs-def;
         }
 
         > p,
         > ol
         > table
         > ul {
-            margin: 0 0 pt(2);
+            margin: 0 0 functions.pt(2);
 
-            @media (min-width: $mq--lap) {
-                margin-bottom: pt(4);
+            @media (min-width: settings.$mq--lap) {
+                margin-bottom: functions.pt(4);
             }
 
             &:last-child {

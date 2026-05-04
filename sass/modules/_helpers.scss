@@ -1,3 +1,5 @@
+@use "../sass-extras/mixins";
+
 // Text align helpers
 .text {
 
@@ -21,6 +23,6 @@
 .is {
 
     &--hidden {
-        @include screenreader--hide();
+        @include mixins.screenreader--hide();
     }
 }

@@ -1,0 +1,39 @@
+{
+  "fonts/lato-regular.woff": {
+    "file": "fonts/lato-regular.woff",
+    "src": "fonts/lato-regular.woff"
+  },
+  "fonts/lato-regular.woff2": {
+    "file": "fonts/lato-regular.woff2",
+    "src": "fonts/lato-regular.woff2"
+  },
+  "js-src/base/lab-loader.js": {
+    "file": "js/lab.min.B-ibeM2L.js",
+    "name": "lab",
+    "src": "js-src/base/lab-loader.js",
+    "isEntry": true
+  },
+  "js-src/base/template.init.js": {
+    "file": "js/functions.min.BYBpi5O1.js",
+    "name": "functions",
+    "src": "js-src/base/template.init.js",
+    "isEntry": true
+  },
+  "sass/style.scss": {
+    "file": "style.css",
+    "name": "style",
+    "names": [
+      "style.css"
+    ],
+    "src": "sass/style.scss",
+    "isEntry": true,
+    "assets": [
+      "fonts/lato-regular.woff2",
+      "fonts/lato-regular.woff"
+    ]
+  },
+  "spritemap.svg": {
+    "file": "images/sprite.svg",
+    "src": "spritemap.svg"
+  }
+}

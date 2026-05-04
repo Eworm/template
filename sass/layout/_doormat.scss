@@ -1,6 +1,9 @@
+@use "../sass-extras/functions";
+@use "../theme/colors";
+
 // The site doormat
 .l-doormat {
-    padding-top: pt(2);
-    padding-bottom: pt(2);
-    border-top: 1px solid $border;
+    padding-top: functions.pt(2);
+    padding-bottom: functions.pt(2);
+    border-top: 1px solid colors.$border;
 }

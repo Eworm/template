@@ -1,3 +1,7 @@
+@use "../sass-extras/functions";
+@use "../theme/colors";
+@use "../sass-extras/extendables";
+
 .single-product-details {
 
 
@@ -19,20 +23,20 @@
 
         .stock {
             margin: 0;
-            padding: pt(.25) pt(1);
+            padding: functions.pt(.25) functions.pt(1);
             display: inline-block;
 
             &.out-of-stock {
-                color: $alert;
+                color: colors.$alert;
                 text-transform: uppercase;
-                font-size: pt(3);
+                font-size: functions.pt(3);
                 vertical-align: sub;
             }
         }
 
         // Cart form
         .cart {
-            margin-top: pt(4);
+            margin-top: functions.pt(4);
             display: flex;
 
             .quantity {

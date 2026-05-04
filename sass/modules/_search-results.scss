@@ -1,8 +1,10 @@
+@use "../sass-extras/extendables";
+
 // Single search result
 .search-result {
     @extend %post;
-    
-    
+
+
     // Result title
     &__header {
     }
